@@ -25,7 +25,7 @@
 ### Milestone 2: Plugging it In (The Checklist is Boss)
 **The Checklist:** Provide a step-by-step visual diagram (or 30-second looping video on a tablet) showing the left motor plugging into Port A, and right motor into Port B.
 * **Teacher Interaction:** "What does the picture show for the left wheel?" 
-* *[Verification: Papakostas & Sidiropoulos (2021) - Deflecting authority to the diagram reduces interpersonal anxiety].*
+* *[Verification: Berrezueta-Guzmán & Pau (2021) - Robot-assisted task guidance reduces interpersonal anxiety while maintaining task adherence].*
 
 ### Milestone 3: Tangible Coding (Physical-to-Digital Interleaving)
 **The Code Snippet:** Do not make them code from scratch. Provide a 3-line block of code on their screen:

@@ -63,9 +63,8 @@
     - DOI: 10.1109/access.2021.3093233
     - When a robotic system guides students through tasks via visual milestones, task adherence dramatically increases vs. teacher verbal commands.
 
-15. **Papakostas, G.A. & Sidiropoulos, G. (2021).** "Social Robots in Special Education: A Systematic Review." *Electronics.*
-    - DOI: 10.3390/electronics10121398
-    - Robots provide predictable, non-judgmental interaction that reduces anxiety and oppositional behavior compared to human-to-human instruction.
+15. ~~**Papakostas, G.A. & Sidiropoulos, G. (2021).** "Social Robots in Special Education: A Systematic Review." *Electronics.*~~
+    - **REMOVED 2026-04-10 (Phase C re-audit).** The "non-human mediator" framing previously attributed to this review was flagged in the Phase B re-audit as an inference across the review's constituent studies rather than an explicit synthesis by the reviewers themselves. The claim this citation was supporting is equally well supported by Berrezueta-Guzmán et al. (2021) (entries 13–14) and Cibrian et al. (2021) (entry 16), which cite direct empirical studies. See Verification_Log.md row 15 for the full rationale.
 
 16. **Cibrian, F.L. & Lakes, K.D. (2021).** "The Potential for Emerging Technologies to Support Self-Regulation in Children with ADHD: A Literature Review." *International Journal of Child-Computer Interaction.*
     - DOI: 10.1016/j.ijcci.2021.100421
@@ -75,9 +74,9 @@
     - DOI: https://link.springer.com/article/10.1007/s10209-023-01065-z
     - Scoping review of 33 studies. LEGO Mindstorms kits (WeDo, NXT, EV3) were the most-used robots (13 studies). Only 2 robots were specifically developed for children with special needs; the rest are off-the-shelf.
 
-18. **Kuzmina, O., & Romero, M. (2025).** "Study of Divergent Thinking and Task Performance in Children with ADHD Through a Modular Robotic Task." *Australian Journal of Learning Difficulties* (Taylor & Francis).
+18. **Kuzmina, O., & Romero, M. (2025).** "Study of Divergent Thinking and Task Performance in Children with ADHD Through a Modular Robotic Task." *Australian Journal of Learning Difficulties*, 30(2), 169–186 (Taylor & Francis).
     - DOI: https://doi.org/10.1080/19404158.2025.2567849
-    - Children with ADHD (aged 9-14) using the CreaCube modular robotic task showed distinct exploratory patterns; demonstrates potential of robotics-based tasks for creative problem-solving in ADHD.
+    - Children with ADHD (aged 9–14) assembled the CreaCube modular robotic task (four pre-made Cubelets cubes); the study's quantitative hypotheses that ADHD children would score higher on divergent-thinking measures (fluency, flexibility, originality) were not statistically supported. The one behavioral observation relevant to hands-on instruction: five of seven ADHD participants spontaneously used a think-aloud verbalization strategy during the task (none of the neurotypical children did), which the authors interpret — in light of Corkum et al. (2008) — as a self-regulation strategy.
 
 19. **"Education Technology for Students with ADHD in Secondary School: Preliminary Results of a Single-Case Study." (~2024).** *Springer.*
     - DOI: https://link.springer.com/chapter/10.1007/978-3-032-01632-4_27

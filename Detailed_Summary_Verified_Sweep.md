@@ -6,7 +6,7 @@ This document breaks down the core findings from the 100% verified OpenAlex acad
 ---
 
 ## 1. The "Non-Human Mediator" Effect
-**Source Research:** *Papakostas & Sidiropoulos (2021); Berrezueta-Guzmán & Pau (2021)*
+**Source Research:** *Berrezueta-Guzmán & Pau (2021); Cibrian et al. (2022)*
 
 **The Science:** 
 For students with Oppositional Defiant Disorder (ODD), severe ADHD, or trauma, human-to-human instruction is often neurologically perceived as a demand, a threat, or a source of judgment. The research proves that when a "system" (a robot, a software prompt, or a visual checklist) guides the student through a task, task adherence skyrockets because the power dynamic and social anxiety are completely removed.

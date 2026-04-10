@@ -27,7 +27,7 @@ Everything below serves that goal.
 
 ## PART 1: THE SESSION ROUTINE (Same Every Time)
 
-The single most supported finding across trauma, ADHD, anxiety, and EBD research is that **predictable routines reduce behavioral incidents and anxiety** (Watson et al., 2025; Sadin, 2022; Harrison et al., 2019). Every workshop session should follow the same sequence. Students should be able to predict what happens next without asking you.
+The single most supported finding across trauma, ADHD, anxiety, and EBD research is that **predictable routines reduce behavioral incidents and anxiety** (Watson et al., 2025; Koslouski et al., 2023; Harrison et al., 2019). Every workshop session should follow the same sequence. Students should be able to predict what happens next without asking you.
 
 ### Suggested Session Structure (for a ~60–90 min session)
 
@@ -42,7 +42,7 @@ The single most supported finding across trauma, ADHD, anxiety, and EBD research
 | **7. Close-Out Circle** | 5 min | Each student says ONE thing: "Today I worked on ___" or "I got stuck on ___." | Listen. Validate. Don't problem-solve here — just acknowledge. |
 
 **Why this structure matters:**
-- Predictability reduces anxiety and need for teacher direction (Sadin, 2022)
+- Predictability reduces anxiety and need for teacher direction (Koslouski et al., 2023)
 - Chunked time blocks with a break support ADHD attention spans (Harrison et al., 2019)
 - The close-out builds self-awareness and language for self-monitoring (Harrison et al., 2019 — self-management is evidence-based for ADHD)
 - Arrival board check is an **antecedent strategy** — it sets the student up to know what to do BEFORE they need to ask you
@@ -198,7 +198,7 @@ This section maps specific EBD-related challenges to design features. **Note:** 
 
 ### Challenge: Anxiety / Perfectionism / Fear of Failure (common in anxiety, OCD)
 
-**What research says:** Predictability reduces anxiety. Multiple ways to demonstrate learning reduce pressure (Sadin, 2022; Boardman, 2025)
+**What research says:** Predictability reduces anxiety. Multiple ways to demonstrate learning reduce pressure (Koslouski et al., 2023; Boardman, 2025)
 
 **Workshop design:**
 - Same routine every session — no surprises
@@ -221,7 +221,7 @@ This section maps specific EBD-related challenges to design features. **Note:** 
 
 ### Challenge: Emotional Dysregulation / Outbursts (common in trauma, ADHD, ODD)
 
-**What research says:** Trauma-informed environments provide safety and co-regulation (Watson et al., 2025; Sadin, 2022)
+**What research says:** Trauma-informed environments provide safety and co-regulation (Watson et al., 2025; Koslouski et al., 2023)
 
 **Workshop design:**
 - Designate a **cool-down area** in the workshop (a chair near the back, away from tools, with something calming — a fidget, a book, a sketch pad). Make it available to everyone, not just "that kid."
@@ -358,6 +358,6 @@ Everything else can be added gradually.
 
 ---
 
-*Framework based on synthesis of: Smale-Jacobse et al. (2019), Mitchell et al. (2019), Taylor et al. (2024), Culclasure et al. (2019), Billingsley et al. (2018), Harrison et al. (2019), Cumming et al. (2024), Watson et al. (2025), Sadin (2022), Boardman (2025), Sciacca (2025). See Detailed_Article_Summaries.md for full article reviews.*
+*Framework based on synthesis of: Smale-Jacobse et al. (2019), Mitchell et al. (2019), Taylor et al. (2024), Culclasure et al. (2019), Billingsley et al. (2018), Harrison et al. (2019), Cumming et al. (2024), Watson et al. (2025), Koslouski et al. (2023), Boardman (2025), Sciacca (2025). See Detailed_Article_Summaries.md for full article reviews.*
 
 *Compiled April 2026. Use professional judgment — adapt freely.*

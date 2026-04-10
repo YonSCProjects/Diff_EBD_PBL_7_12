@@ -33,13 +33,13 @@ Consolidated from all three clusters. Phase B will select and refine ~6–10 of 
 
 ### Executive function, stress, and scaffolding
 
-1. **Stress degrades executive function; predictable routine protects it.** EF is a state that collapses under stress, not a stable trait. Session routines must be identical across sessions, with any change announced in advance. *(Cumming 2024; Sadin 2022; Watson 2025; Koslouski 2023; Harrison 2019 ADHD)*
+1. **Stress degrades executive function; predictable routine protects it.** EF is a state that collapses under stress, not a stable trait. Session routines must be identical across sessions, with any change announced in advance. *(Cumming 2024; Koslouski 2023; Watson 2025; Harrison 2019 ADHD)* [Sadin 2022 removed in Phase C re-audit — book, not verifiable]
 
 2. **External cognitive scaffolds bypass working memory and flexibility deficits.** Task cards, visual schedules, reference sheets, and checklists let students access EF without needing intact EF first — and practicing with the scaffold is how EF improves. *(Rosen, Boyle, Cariss, & Forchelli 2014; Cumming 2024; Thomas & Karuppali 2022)*
 
 3. **Embedded, individualized scaffolding beats generic, decontextualized skills training.** Scaffolds must mirror task demands and adapt to individual profiles. *(Rosen et al. 2014; Belland 2017a; Cumming 2024)*
 
-4. **Scaffolding yields larger effects in PBL than in problem-based learning (g = 0.71 vs. g = 0.37); scaffolds do NOT need to be faded.** Persistent scaffolding works — the field's instinct to "fade supports" is not empirically mandatory. *(Belland 2017a; Boardman & Coleman 2025)*
+4. **Scaffolding yields larger effects in project-based learning contexts than in problem-based learning; scaffolds do NOT need to be faded.** Belland et al. (2017a) meta-analysis reports an overall effect of g = 0.46, with scaffolding producing directionally stronger effects in PBL than in problem-based learning (z = 6.08, p < .01). Persistent scaffolding works — the field's instinct to "fade supports" is not empirically mandatory. *(Belland 2017a; Boardman & Coleman 2025)* [Phase C re-audit correction: the previous "g = 0.71 vs. g = 0.37" numbers were not found in Belland 2017a full text; g = 0.46 is the actual overall effect, with the directional PBL finding reported as z, not a subset g.]
 
 ### Autonomy, choice, and ODD-safe design
 
@@ -51,11 +51,11 @@ Consolidated from all three clusters. Phase B will select and refine ~6–10 of 
 
 ### Tangible, embodied, physical-first learning
 
-8. **Concrete → Representational → Abstract (CRA) sequence is prerequisite for students with disabilities and ADHD.** They cannot skip the concrete phase. Manipulatives → drawings → symbols/equations. Multi-modal output (build, draw, speak, perform) allows diverse learners to demonstrate understanding. *(Hwang & Taylor 2016; Kuzmina & Romero 2025; Belland 2017a; Israel et al. 2015)*
+8. **Concrete → Representational → Abstract (CRA) sequence is prerequisite for students with disabilities and ADHD.** They cannot skip the concrete phase. Manipulatives → drawings → symbols/equations. Multi-modal output (build, draw, speak, perform) allows diverse learners to demonstrate understanding. *(Hwang & Taylor 2016; Belland 2017a; Israel et al. 2015)* [Kuzmina & Romero 2025 removed 2026-04-10 during Phase C Kuzmina review: the paper does not test or support CRA; citing it here was inferential overreach. The paper's relevance is narrowly to the think-aloud self-regulation observation, not to the CRA sequence.]
 
-9. **Modular, tangible robotics (vs. pre-made) enable agency, creativity, and self-regulation.** LEGO Mindstorms, Cubelets, modular platforms align with constructionist learning theory. Pre-made robots limit creativity. Directly argues for Arduino/ESP32 over closed educational platforms. *(Kuzmina & Romero 2025; Díaz-Boladeras 2025; Israel et al. 2015)*
+9. **Modular, tangible robotics (vs. pre-made) enable agency, creativity, and self-regulation.** LEGO Mindstorms, Cubelets, modular platforms align with constructionist learning theory. Pre-made robots limit creativity. Directly argues for Arduino/ESP32 over closed educational platforms. *(Díaz-Boladeras 2025; Israel et al. 2015)* [Kuzmina & Romero 2025 removed 2026-04-10 during Phase C Kuzmina review: the paper's study used pre-made Cubelets (not open construction), and its quantitative hypotheses that children with ADHD would show higher divergent-thinking scores were NOT statistically supported. Citing Kuzmina here to support "modular tangible robotics enable creativity" is doubly contradicted — CreaCube is exactly the pre-made platform the principle argues against, and the paper's own findings do not support the principle's claim about creativity. The principle statement itself may also need softening; the paper's null result is specifically relevant to it.]
 
-10. **"Non-human mediator" effect — robots and structured systems reduce anxiety while maintaining accountability.** The emotional distance of a task card or robotic system vs. a human teacher reduces demand perception. "Body doubling" (presence of another entity) helps ADHD students reduce procrastination. *(Berrezueta-Guzmán 2021a, 2021b; Cibrian 2022; O'Connell 2024; Papakostas 2021)*
+10. **"Non-human mediator" effect — robots and structured systems reduce anxiety while maintaining accountability.** The emotional distance of a task card or robotic system vs. a human teacher reduces demand perception. "Body doubling" (presence of another entity) helps ADHD students reduce procrastination. *(Berrezueta-Guzmán 2021a, 2021b; Cibrian 2022; O'Connell 2024)* [Papakostas 2021 removed in Phase C re-audit — the framing was an inference across the review's constituent studies, not a synthesis by Papakostas themselves]
 
 ### Movement, physical exercise, and regulation
 
@@ -179,8 +179,8 @@ Aggregated from all three clusters. Each will be flagged in the master document'
 **Finding: zero substantive hits.** The only mention of "aircraft flying" was a metaphorical usage in CAST 2018's scaffolding-as-apprenticeship discussion. No paper in the corpus contains educational research on aerial robotics, drone construction, flight-STEM pedagogy, or quadcopter-based learning for any population — neurotypical or neurodivergent.
 
 **Implication for Project 8 (Quadcopter):** The capstone project has no direct research base in the verified corpus. It rests on inferential extension from:
-- Ground robotics for ADHD/EBD (Berrezueta-Guzmán 2021a, 2021b; Papakostas 2021; Cibrian 2022; O'Connell 2024)
-- Modular, tangible, student-built STEM (Kuzmina & Romero 2025; Guneysu Ozgur 2020; Israel et al. 2015)
+- Ground robotics for ADHD/EBD (Berrezueta-Guzmán 2021a, 2021b; Cibrian 2022; O'Connell 2024)
+- Modular, tangible, student-built STEM (Guneysu Ozgur 2020; Israel et al. 2015) [Kuzmina & Romero 2025 removed 2026-04-10 during Phase C Kuzmina review: CreaCube is a pre-fab Cubelets assembly puzzle, not student-built construction in the Arduino sense; the paper does not support this category]
 - Scaffolded computational thinking (Belland 2017a, 2017b; Hwang & Taylor 2016)
 - Makerspace learning for EBD (Gomez 2019)
 

@@ -15,7 +15,7 @@
 7. [Harrison et al. (2019) — ADHD Classroom Interventions: Evidence-Based Review](#7-harrison-et-al-2019)
 8. [Cumming et al. (2025) — Stress, Executive Function & EBD in Middle School](#8-cumming-et-al-2025)
 9. [Watson et al. (2025) — Trauma-Informed Approaches in Schools: Critical Review](#9-watson-et-al-2025)
-10. [Sadin (2022) — Trauma-Informed Teaching and IEPs](#10-sadin-2022)
+10. [Sadin (2022) — REMOVED in Phase C, substituted with Koslouski et al. (2023)](#10-sadin-2022)
 11. [Boardman (2025) — Scaffolding in PBL for Diverse High Schoolers](#11-boardman-2025)
 12. [Sciacca (2025) — Teacher Experiences: PBL with EBD Students](#12-sciacca-2025)
 13. [Cross-Cutting Implications & Practical Framework](#cross-cutting-implications)
@@ -361,7 +361,9 @@ The most current and rigorous review of trauma-informed approaches (TIA) in scho
 
 ---
 
-## 10. Sadin (2022)
+## 10. Sadin (2022) — REMOVED in Phase C
+
+> **⚠ Section removed during Phase C re-audit (2026-04-10).** Sadin is a book and could not be full-text-verified in the Phase C audit (classified as CANNOT VERIFY by the cluster B agent). Per Yon's decision, Sadin has been substituted throughout the project with **Koslouski, Stark & Chafouleas (2023)** (verified row 50) and **Watson & Astor (2025)** (verified row 46), which together cover the same claims about predictable, safe environments supporting trauma-informed practice. The original summary content is retained below for historical continuity but should NOT be relied on for master document content. See `Verification_Log.md` row 67 and `Phase_B_Reaudit_Log.md` for the full decision record.
 
 ### **"Trauma-Informed Teaching and IEPs: Strategies for Building Student Resilience"**
 - **Publisher:** Book, 2022
@@ -470,7 +472,7 @@ Based on the synthesis of all 12 articles, the following framework emerges:
 | **Differentiation by readiness** | Smale-Jacobse (2019): d = +0.509 | Tiered project tasks, scaffolded materials |
 | **Student choice** | Billingsley (2018): LD/EBD students predict own best method | Choice of topic, method, product, team role |
 | **Executive function scaffolding** | Cumming (2025): EF mediates stress → behavior | Checklists, visual timers, chunked deadlines |
-| **Trauma-informed design** | Watson (2025), Sadin (2022): integrate with DI | Safety, predictability, empowerment within PBL |
+| **Trauma-informed design** | Watson (2025), Koslouski et al. (2023): integrate with DI | Safety, predictability, empowerment within PBL |
 | **ADHD-specific supports** | Harrison (2019): self-management + antecedent strategies | Self-monitoring tools, reduced transitions, immediate feedback |
 | **Behavioral integration** | Taylor (2024): PBL reduces problem behavior | Embed behavioral expectations INTO project norms |
 
@@ -589,7 +591,7 @@ PHASE 4: PRESENT & REFLECT (2–3 days)
 
 9. Watson, S., et al. (2025). A critical review of empirical support for trauma-informed approaches in schools and a call for conceptual, empirical and practice integration. *Review of Education*. https://doi.org/10.1002/rev3.70025
 
-10. Sadin, M. (2022). *Trauma-informed teaching and IEPs: Strategies for building student resilience*. Routledge.
+10. ~~Sadin, M. (2022). *Trauma-informed teaching and IEPs: Strategies for building student resilience*. Routledge.~~ **REMOVED 2026-04-10 (Phase C re-audit).** Sadin is a book and was not verifiable in the Phase C audit. Substituted throughout the project with Koslouski, Stark & Chafouleas (2023) and Watson & Astor (2025). See Verification_Log.md row 67.
 
 11. Boardman, A.G. (2025). High school students' experiences with scaffolding in project-based learning. *Journal of Adolescent & Adult Literacy*. https://doi.org/10.1002/jaal.70018
 

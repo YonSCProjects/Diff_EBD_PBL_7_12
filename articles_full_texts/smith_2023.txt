@@ -1,0 +1,241 @@
+Academic Motivation Decreases Across Adolescence for Youth With and Without Attention-Deficit/Hyperactivity Disorder: Effects of Motivation on Academic Success
+
+Zoe R. Smith, Marcus Flax, Stephen P. Becker, Joshua Langberg
+
+Journal of Child Psychology and Psychiatry, 64(9), 1303-1313
+Published: 2023 (September)
+DOI: 10.1111/jcpp.13815
+Epub: 2023 May 10
+Accepted: 22 March 2023
+
+Sources: Scribd (https://www.scribd.com/document/975156903/), PubMed (https://pubmed.ncbi.nlm.nih.gov/37164935/), Loyola University Chicago Research Portal (https://scholars.luc.edu/en/publications/academic-motivation-decreases-across-adolescence-for-youth-with-a-2/)
+Open Access: Hybrid (publisher OA listed but direct PDF blocked; full text obtained via Scribd)
+
+AUTHOR AFFILIATIONS
+¹Psychology Department, Loyola University Chicago, Chicago, IL, USA
+²Division of Behavioral Medicine and Clinical Psychology, Cincinnati Children's Hospital Medical Center, Cincinnati, OH, USA
+³Department of Pediatrics, University of Cincinnati College of Medicine, Cincinnati, OH, USA
+⁴Graduate School of Applied and Professional Psychology, Rutgers University, New Brunswick, NJ, USA
+
+Correspondence: Zoe R. Smith, Psychology Department, Loyola University Chicago, 1032 W. Sheridan Rd, Chicago IL 60660, USA; Email: zsmith5@luc.edu
+
+Funding: Award numbers R305A160126 from the Institute of Education Sciences (IES), U.S. Department of Education.
+Conflicts: None declared.
+
+KEYWORDS
+Attention-deficit/hyperactivity disorder; self-determination theory; amotivation; intrinsic motivation; extrinsic motivation; academic success
+
+ABSTRACT
+
+Background: This longitudinal study examined growth trajectories of academic motivation in youth with and without attention-deficit/hyperactivity disorder (ADHD) across the important developmental transition from middle school to high school, and associations with academic success. Consistent with self-determination theory (SDT) of motivation, trajectories of amotivation, extrinsic motivation, and intrinsic motivation were modeled.
+
+Methods: The study included a robust multi-method, multi-source assessment of academic outcomes, including homework performance ratings; reading and mathematics standardized test scores; and grade point average (GPA) obtained from school records. Participants included 302 adolescents (ages 12–14; M_age = 13.20) in eighth grade who were specifically recruited so that approximately half (n = 162) were diagnosed with ADHD and 140 adolescents comprising a comparison sample without ADHD. The sample was predominantly White (81.80%), with 7.90% identifying as bi/multiracial, 5.30% identifying as Black/African American, 4.60% identifying as Asian, and 0.30% identifying as Indigenous/Alaskan.
+
+Results: Adolescents with ADHD had worse academic motivation at all timepoints. Growth curve analyses indicated the academic motivation of adolescents without ADHD decreased at faster rates across the transition to high school compared to adolescents with ADHD. However, for adolescents with ADHD, amotivation, extrinsic motivation, and intrinsic motivation each predicted GPA, with higher extrinsic and intrinsic motivation also predicting better homework performance and different aspects of math performance, whereas for youth without ADHD, only amotivation and extrinsic motivation predicted GPA.
+
+Conclusions: Intervention and school policy implications are discussed, including the importance of fostering autonomy and internal motivation, and consideration of whether current ADHD interventions primarily foster extrinsic motivation.
+
+INTRODUCTION
+
+Attention-deficit/hyperactivity disorder (ADHD) is a prevalent neurobehavioral condition characterized by symptoms of inattention and/or hyperactivity/impulsivity. Academic impairment is one of the most prevalent and problematic domains of impairment associated with ADHD (Arnold et al., 2020). This is particularly true during the secondary school years when many adolescents with ADHD experience low and failing grades and high rates of school dropout. Prominent theoretical models of ADHD (e.g., Dual-Pathway, Unifying Theory) hypothesize that motivational deficits, particularly as related to pursuing long-term goals, play a role in explaining educational impairment (Barkley, 1997; Sonuga-Barke, 2005). To help increase motivation to complete tasks, many studies have shown external rewards motivate youth with ADHD (Luman, Oosterlaan, & Sergaeant, 2005). Consistent with these findings, most evidence-based treatments for ADHD across the life span operate by making external rewards available to help motivate youth to engage in productive behavior (e.g., classroom contingency management; self-managed reward systems like watching a favorite show after accomplishing task; Ramsay, 2020) even in environments that are not structured well for neurodiversity. However, most of the evidence about motivation and ADHD is cross-sectional and little is known about how trajectories of motivation change over time. Further, motivation is a multifaceted construct; thus, it is important to understand which aspects of motivation are most strongly associated with educational outcomes (Smith & Langberg, 2018).
+
+Self-Determination Theory of Motivation
+
+Self-determination theory (SDT) is a prominent motivational theory with a robust evidence-base. As outlined in Morsink, Van der Oord, Antrop, Danckaerts, and Scheres (2021), SDT has significant potential to further the field's understanding of why ADHD behaviors occur and to inform the application of treatments. SDT separates motivation into amotivation, intrinsic motivation, and extrinsic motivation. Amotivation is characterized by disorganized motivation with little regulation of goal directed behavior and a general state of discouragement and apathy. Intrinsic motivation can be thought of as autonomous engagement in an action, whereas extrinsic is engaging in an action for a reward or feeling pushed to do so (Morsink et al., 2021). Understanding motivation as a multidimensional construct may help ensure that ADHD treatments do not solely encourage a certain behavior, but also foster a sense of autonomy and well-being for completing that action. Importantly, the broader motivation literature tells us that each form of motivation is associated with different outcomes (Howard, Bureau, Guay, Chong, & Ryan, 2021). Howard et al. (2021) published a meta-analysis of SDT of motivation and associations with student outcomes, including 344 samples (N = 223,209). Findings highlighted that aspects of intrinsic motivation are associated with task persistence, student success, and well-being, whereas motivation driven by a desire to obtain rewards or avoid punishment was not. Amotivation was related to low performance on multiple task and persistence-related outcomes. It is unclear whether these results apply to students with ADHD. This is concerning given that many behavioral treatments provide external motivators and rewards to engage youth with ADHD in behaviors with the hope that they will experience success and foster intrinsic motivation. Clinically speaking, when parents of youth with ADHD are asked about treatment goals, they commonly answer, "I want my child to be motivated to do these things without me having to tell them" and youth with ADHD share, "I want to be able to do this work without my parents 'nagging' me." If these are indeed goals of treatment, it is important to understand how motivation presents in individuals with ADHD, changes over time, and is associated with educational outcomes.
+
+Adolescence is a developmental period characterized by increased demands for autonomy. Further, academic demands rapidly increase during the secondary school years and academic outcomes have significant consequences (e.g., graduation, college admission). Indeed, studies of academic specific motivation find decreases across adolescence, particularly following transitions (Madjar, Cohen, & Shoval, 2018). This study found over that the transition to middle school, students reported a greater decline in mastery goals and an increase in performance-approach goals. Similarly, using an accelerated longitudinal design with 600 students, Gnambs and Hanfstingl (2016) assessed motivation using a SDT framework and found a significant decline in intrinsic academic motivation during adolescence. It is unclear how trajectories of amotivation, intrinsic and extrinsic motivation change during this time for students with ADHD and how this impacts academic outcomes. It is possible that given repeated use of external rewards in ADHD interventions, trajectories of intrinsic motivation decline even more than in general student samples (Lemos & Verıssimo, 2014). Although longitudinal studies have not been published, cross-sectional data demonstrate the importance of academic motivation during this period. In this same sample but at baseline when participants were in eighth grade, Smith et al. (2020) found that adolescents with ADHD had higher amotivation and lower intrinsic, and extrinsic motivation with moderate effect size differences relative to a comparison group. Further, each aspect of motivation was uniquely associated with academic success for eighth grade students with and without ADHD. Amotivation was the most robust predictor of academic outcomes, which is interesting since disorganization and difficulties with self-regulation are core aspects of ADHD (Barkley, 1997; Sergeant, 2000) and amotivation is characterized as disorganized motivation patterns. Understanding which aspects of motivation are longitudinally associated with academic outcomes may help create clinical and educational support systems for youth with and without ADHD in academic success.
+
+Present Study
+
+The purpose of the present study is to longitudinally evaluate trajectories of amotivation, intrinsic, and extrinsic academic motivation across the transition from middle to high school; five timepoints from the beginning of eighth to the middle of tenth grade. This study will compare academic motivation trajectories of adolescents with and without ADHD and evaluate associations between trajectories and academic outcomes in tenth grade. Comprehensive assessment of academic outcomes was completed, including standardized reading and math scores, GPA, and homework performance. Medication use and sex were significantly different by group, so were included as covariates (see Becker et al., 2019; Langberg et al., 2019), while IQ was included due to moderate association with all variables in the analyses. This study uses a strong multi-method, multi-source design with academic motivation (self-report) predicting three objective metrics (GPA, reading, math) and teacher- and parent-report of homework performance. We hypothesized that academic motivation would decline over the secondary school years, with the trajectory being steeper for adolescents with ADHD. We predicted that like Smith et al. (2020), amotivation would be the most robust predictor of outcomes for adolescents with ADHD.
+
+METHODS
+
+Participants
+
+Participants included 302 adolescents (ages 12–14) in eighth grade who were recruited from local public schools across two sites located in the Southeastern and Midwestern United States. The sample was specifically recruited so that approximately half (n = 162) was diagnosed with ADHD (120 with predominantly inattentive presentation, 42 with combined presentation; females = 35.2%), with remaining participants (n = 140; females = 55.7%) comprising a comparison sample without ADHD. The sample was predominantly White (81.80%), with 7.90% identifying as bi/multiracial, 5.30% identifying as Black/African-American, 4.60% identifying as Asian, and 0.30% identifying as Indigenous/Alaskan.
+
+Procedures
+
+This study was approved by the institutional review boards (IRB) at Cincinnati Children's Hospital Medical Center and Virginia Commonwealth University. The current study uses data from five timepoints: fall of 8th grade (T1), spring of 8th grade (T2), fall of 9th grade (T3), spring of 9th grade (T4), and fall/winter of 10th grade, except for report card grades which were collected at the end of 10th grade (T5). Parents contacted the research staff in response to recruitment materials and were administered a phone screen to determine initial study eligibility. Parents provided written consent and adolescents provided assent at the first visit. See Becker et al., 2019 and Langberg et al., 2019 for further information.
+
+ADHD Diagnosis
+
+All participants underwent a comprehensive ADHD diagnostic evaluation in accordance with criteria of the Fifth Edition of the Diagnostic and Statistical Manual for Mental Disorders (DSM-5; APA, 2013). To be eligible for participation in the ADHD group, adolescents were required to meet all DSM-5 criteria for either the ADHD combined presentation or predominantly inattentive presentation. Participants meeting criteria for ADHD predominantly hyperactive–impulsive presentation were not included in the broader study given the low prevalence of this presentation in adolescence and ongoing concerns about its validity after early elementary school (Willcutt et al., 2012).
+
+Comparison Group
+
+Participants were included in the comparison (i.e., non-ADHD) group if the parent endorsed fewer than four symptoms of ADHD using the clinical interview. All participants were assessed for common comorbid mental health conditions. Adolescents who met criteria for other common comorbid conditions (e.g., anxiety, depression) but not ADHD were eligible for inclusion in the comparison group.
+
+Measures
+
+Parents reported on youth's demographics, including sex, race, age, and medication at baseline.
+
+Children's Interview for Psychiatric Syndromes (ChIPS)
+The ChIPS (Weller, Weller, Fristad, Rooney, & Schecter, 2000) is a structured diagnostic interview for administration to parents and youth. All participants were assessed for ADHD, major depressive disorder, persistent depressive disorder, generalized anxiety disorder, social anxiety disorder, separation anxiety disorder, post-traumatic stress disorder, obsessive–compulsive disorder, conduct disorder, and oppositional defiant disorder. The ChIPS has shown high internal consistency, test–retest reliability, and convergent validity.
+
+Wechsler Abbreviated Scale of Intelligence–Second Edition
+Adolescents' FSIQ was estimated by the Matrix Reasoning and Vocabulary subtests (Wechsler, 2011). This two-subtest short form has been found to be a reliable and valid estimate of FSIQ (Sattler, 2008). In the present study, FSIQ was used as a covariate in analyses.
+
+Academic Motivation
+The Academic Motivation Scale (AMS) is a self-report measure of 28 items reporting on different aspects of academic motivation (Vallerand et al., 1992). A seven-point Likert scale is used (e.g., 1 = Does not correspond at all, 4 = Corresponds moderately, 7 = Corresponds exactly). This measure includes a total score for Amotivation, Intrinsic Motivation, and Extrinsic Motivation. For the present study, the internal consistencies for the subscales were Amotivation α = .80, .79, .83, .88, .85, Intrinsic Motivation α = .95, .95, .93, .95, .96 and Extrinsic Motivation α = .93, .92, .95, .93, .90 at T1, T2, T3, T4, and T5, respectively. For growth curves, T1–T5 were used.
+
+Academic Outcomes
+
+Homework Performance: The Homework Performance Questionnaire (HPQ; Power et al., 2015) was completed by parents and teachers at T5. For teacher-report, there were 19 items and for parent-report 23 items, both of which use a five-point scale, each with corresponding percentages to indicate the amount of time a given behavior occurs. Items were worded in the positive so that 90%–100% of the time indicates that the student does that behavior consistently well. The HPQ has demonstrated high internal consistency (α = .85–.91) and convergent validity with other measures of homework (Power et al., 2015). Internal consistency was α = .91 for parents and α = .82 for teachers. Correlations between raters was r = .34.
+
+Math: Adolescent mathematics fluency and ability to complete increasingly difficult math problems was assessed using the WIAT-III (Wechsler, 2009). Math Fluency is a timed test assessing ability to complete basic math problems (addition, subtraction, and multiplication), whereas numeric operations allow students to move at their own pace and solve increasingly difficult math problems. The standard scores for both math fluency and numerical operations were used, which has a mean of 100 and standard deviation of 15.
+
+Reading: Adolescent reading accuracy and decoding was assessed using the WIAT-III (Wechsler, 2009). Two separate reading subtests were administered. The Word Reading subtest has adolescents read words from a card, while Pseudoword Decoding has adolescents read nonsense words as if they were real words. The Basic Reading standard score, which is generated upon the summed performance of these subtests, was used in analyses. For the WIAT-III Basic Reading standard score, there is a mean of 100 and standard deviation of 15.
+
+Grade Point Average (GPA): Final academic year report cards were obtained. All grades were converted into a composite GPA based on core subject areas (English/Language Arts, Social Studies, Math, Science) with a range from 0.0 to 4.0 (0.0 = F, 4.0 = A).
+
+Analytic Plan
+
+Growth curves were modeled using Mplus version 8 (Muthén & Muthén, 1998–2017) to examine how motivation changes across time. Group status (ADHD vs. comparison) was used as the grouping variable to examine whether amotivation, extrinsic motivation, and intrinsic motivation differed between youth with and without ADHD over time. To examine whether the three aspects of motivation predicted academic outcomes, we tested whether a linear, quadratic, or piecewise (knot point as students enter high school) model would best fit the data. Linear random and fixed effects growth curve models were significantly better fitting (change in comparative fit index (CFI) > .01 and root mean square error of approximation (RMSEA) < .01). Model fit statistics compared the model with paths free to vary across the groups versus fixed to be equal across groups. Full information maximum likelihood (FIML) was used to address missing data, which used all observed information to estimate parameters. Various fit indices were used to examine goodness of fit, including CFI (ideal study criterion ≥ 0.95; acceptable study criterion ≥ 0.80) and RMSEA (ideal study criterion ≤ 0.05; acceptable study criterion ≤ 0.08; Hu & Bentler, 1999; Kline, 2011). All academic outcome variables were included in each model along with covariates of IQ, sex, and ADHD medication status.
+
+RESULTS
+
+All data had skewness and kurtosis values between -2 and 2 and variance inflation factors below 5 with no significant outliers. Missing data at baseline was low, with less than 1% of data missing except for GPA (13.6% missing) and teacher-reported homework performance (12.2%). As is typical in longitudinal work, some attrition occurred, though there were no significant differences on variables of interest. For all motivation data, missing data was at 1% for T1, 5.6% at T2, 8.2% at T3, 9.9% at T4, and 12.8% at T5. For outcomes at T5, missing data for parent-reported homework performance was 11.8%, for teacher-reported homework performance was 30.9%, reading 19.7%, numeric operations and math fluency was 19.4%, and GPA was 23.4%. FIML uses the available data to estimate missing data and is appropriate to use for this level of missing data.
+
+Motivation Growth Curves by Group
+
+For each aspect of motivation, group status (ADHD/comparison) was significant and models with group status were better fitting (CFI < .01, RMSEA > .01). Thus, subsequent analyses included the grouping variable. Both adolescents with and without ADHD showed a decrease in intrinsic (b_ADHD = .50; b_Comparison = .76) and extrinsic (b_A = .46, p < .001; b_C = .67) motivation over time, but decreased at different rates. Adolescents with ADHD did not show change in amotivation (b = .02) whereas comparison youth showed an increase (b = .26).
+
+Academic Motivation in Relation to Academic Functioning by Group
+
+Model fit statistics confirmed that allowing paths to be free across groups resulted in significantly better fit than fixing paths across groups. Thus, we compared groups within the analyses.
+
+Extrinsic Motivation
+Without grouping variable, model fit was poor (RMSEA = .08, CFI = .80, TLI = .67, SRMR = .09). Including the grouping variable, model fit was excellent (RMSEA = .05 CFI = .98 TLI = .96 SRMR = .04).
+ADHD: Intercept = 3.89*** Slope = .46***
+Comparison: Intercept = 5.90*** Slope = .67**
+
+| Predictors         | ADHD Intercept | ADHD Slope | Comparison Intercept | Comparison Slope |
+|--------------------|----------------|------------|----------------------|------------------|
+| HPQ Teacher        | .05            | .11        | .12                  | .32              |
+| HPQ Parent         | .05            | .32**      | .24*                 | .07              |
+| Reading            | .12            | .01        | .08                  | .01              |
+| Math Fluency       | .04            | .22*       | .10                  | .11              |
+| Numeric Operations | .08            | .12        | .15                  | .05              |
+| GPA                | .25**          | .34***     | .23                  | .64***           |
+| Covariates IQ      | .04            | .04        |                      |                  |
+| Sex                | .14            | .06        |                      |                  |
+| Medication         | .04            | .04        |                      |                  |
+
+Intrinsic Motivation
+Without grouping variable, model fit was poor (RMSEA = .09, CFI = .77, TLI = .76, SRMR = .10). Model fit was excellent with grouping (RMSEA = .03 CFI = .99 TLI = .98 SRMR = .04).
+ADHD Intercept = 3.04*** Slope = .50***
+Comparison: Intercept = 3.65*** Slope = .76***
+
+| Predictors         | ADHD Intercept | ADHD Slope | Comparison Intercept | Comparison Slope |
+|--------------------|----------------|------------|----------------------|------------------|
+| HPQ Teacher        | .11            | .27        | .14                  | .30              |
+| HPQ Parent         | .02            | .63***     | .36***               | .13              |
+| Reading            | .10            | .08        | .10                  | .03              |
+| Math Fluency       | .02            | .23        | .17                  | .19              |
+| Numeric Operations | .13            | .29*       | .15                  | .26              |
+| GPA                | .21            | .39**      | .18                  | .29              |
+| Covariates IQ      | .03            | .01        |                      |                  |
+| Sex                | .13            | .01        |                      |                  |
+| Medication         | .02            | .01        |                      |                  |
+
+Amotivation
+Without grouping variable, model fit was poor (RMSEA = .11, CFI = .70, TLI = .65, SRMR = .08). Model fit was excellent to adequate with grouping (RMSEA = .05 CFI = .97 TLI = .94 SRMR = .05).
+ADHD: Intercept = 2.35*** Slope = .02
+Comparison: Intercept = 2.60*** Slope = .26*
+
+| Predictors         | ADHD Intercept | ADHD Slope | Comparison Intercept | Comparison Slope |
+|--------------------|----------------|------------|----------------------|------------------|
+| HPQ Teacher        | .33**          | .19        | .33*                 | .01              |
+| HPQ Parent         | .28**          | .05        | .41***               | .04              |
+| Reading            | .01            | .05        | .01                  | .09              |
+| Math Fluency       | .14            | .05        | .18                  | .19              |
+| Numeric Operations | .35**          | .09        | .12                  | .16              |
+| GPA                | .39***         | .28*       | .21                  | .38**            |
+| Covariates IQ      | .17*           | .02        |                      |                  |
+| Sex                | .06            | .09        |                      |                  |
+| Medication         | .08            | .01        |                      |                  |
+
+Note. p < .05 = *, p < .01 = **, p < .001 = ***.
+
+DISCUSSION
+
+Examining growth trajectories of academic motivation across secondary school allows further understanding of how motivation changes and how that change may affect academic success for youth with and without ADHD. As expected, both youth with and without ADHD decreased on academic extrinsic and intrinsic motivation, but surprisingly, only youth without ADHD increased on amotivation while amotivation for youth with ADHD stayed stable from 8th to 10th grade. In fact, youth without ADHD showed almost the same levels of amotivation than youth with ADHD, with only a small difference in effect sizes. In addition, contrary to hypotheses, youth without ADHD decreased in academic motivation at faster rates (intrinsic = .67, extrinsic = .76, amotivation = .26) than youth with ADHD (intrinsic = .46, extrinsic = .50, amotivation = .02), yet, consistent with prior cross-sectional work (Smith et al., 2020) youth with ADHD remained higher on amotivation and lower on intrinsic and extrinsic motivation than their peers across all time points. It is possible that the steeper slopes for youth without ADHD are due to having more room to change across this time. This can be seen by the intercepts, as youth without ADHD start higher on motivation (and lower on amotivation), allowing slopes to increase or decrease at faster rates.
+
+Academic Outcomes
+
+GPA: In 8th grade, higher extrinsic motivation and lower amotivation were both associated with better GPA for youth with ADHD. Interestingly, for youth in the comparison group GPA was not associated with any aspect of motivation in 8th grade. For the comparison group, higher extrinsic motivation strongly predicting higher GPA and lower amotivation moderately predicting higher GPA. For youth with ADHD, GPA was the only outcome that all three aspects of motivation predicted, with intrinsic motivation being the strongest predictor of GPA. GPA being the most common academic outcome (and only one for comparison youth) may reflect that, since GPA is a culmination of learning activities (e.g., all subjects, all types of activities such as tests, homework, and projects), multiple areas of motivation are needed for a higher GPA. It is surprising, however, that GPA was not predicted by intrinsic motivation for comparison youth, as that has been cited as a strong indicator of academic achievement for typically developing youth (Easton, Johnson, & Sartain, 2017). When students who already feel competent in their academic skills (i.e., comparison group) are given reinforcers such as grades, intrinsic motivation may be undermined (Easton et al., 2017).
+
+Homework Performance: In 8th grade, lower amotivation was moderately associated with both teacher and parent-reported homework performance for youth with and without ADHD. This suggests that parents and teachers at this milestone age (last year of middle school) are focused on increasing goal setting and motivation toward homework. For youth without ADHD, higher intrinsic and extrinsic motivation were also moderately to weakly associated with better parent-reported homework performance, which was not the case for youth with ADHD. It may be that the high levels of amotivation in 8th grade for both adolescents with and without ADHD takes parents' focus, while typically developing adolescents, who have fewer negative interactions with parents than adolescents with ADHD (Markel & Wiener, 2014), may have the room and energy to foster different aspects of motivation toward homework completion. Change in intrinsic motivation strongly and extrinsic motivation moderately predicted parent-reported homework performance for youth with ADHD but no change in motivation over time predicted homework performance for youth without ADHD. This might indicate that at home, parents are fostering autonomy support for their youth with ADHD to complete homework as their adolescents get older (Langberg et al., 2018; Morsink et al., 2021; Patall et al., 2018).
+
+Reading: For both groups, no aspect of motivation was associated with reading in 8th grade nor did change in motivation over time predict later reading success. This was surprising, as prior longitudinal research examining youth with and without ADHD found strong connections with intrinsic motivation and reading (Lee & Zentall, 2017), but, when grouped with other academic outcomes, this study did not reflect those findings for youth without ADHD. There are multiple possibilities for why intrinsic motivation did not predict reading performance in this study. One may be due to the measurement of reading used, as basic reading scores reflect word reading accuracy and not comprehension, which may be a better measurement for youth in secondary school. In addition, most work has examined intrinsic motivation in school-aged children (ages 5–11; Toste et al., 2020), while this study examined the important developmental period of adolescence and the transition to high school. It could be that, by the time students reach adolescence, intrinsic motivation may not be a key driver of work completion. This would reflect the SDT, where school context (e.g., performance and test-driven environment) affects student internal motives (e.g., needs, cognitions, emotions), leading to motivated actions that are driven by external motivators (e.g., grades and parent/teacher expectations; Morsink et al., 2021). Thus, youth without ADHD may 'learn out' of intrinsic motivation by the time they are in early high school because of the context in which our students learn (e.g., test-score driven environment, privileges for individuals who test well).
+
+Mathematics: For youth with ADHD, higher levels of extrinsic motivation and intrinsic motivation both predicted better homework performance and higher GPA but differed on the two aspects of math examined in this study. Extrinsic motivation predicted math fluency, the ability to complete simple math problems during a timed task, while intrinsic motivation predicted better outcomes on numeric operations, an independent math worksheet with increasingly difficult problems. It is possible that creating timed tasks for youth with ADHD adds a level of urgency and may feel like an external motivator (e.g., poor grade if do not complete quickly), but to succeed on a task that is self-driven and self-paced, internal motivation is needed for academic success. Interventions could focus on increasing motivation to persevere with math tasks that are both time related (e.g., timed quizzes) and self-directed (e.g., homework, classwork).
+
+Academic Motivators: Extrinsic motivation for both groups played a significant role in academic success. For youth with ADHD, this may be partially due to the types of treatments developed for them... To fully examine the SDT, however, further work needs to include basic psychological needs of autonomy, relatedness, and competence as mediators, examine outcomes outside of academic success (e.g., well-being, healthcare utilization; Morsink et al., 2021), and expand our definition and measurement of academic success.
+
+Limitations: 
+1. This study is not representative of students who attend school in under-resourced school districts. 
+2. Social determinants of health and well-being (e.g., housing, discrimination, food insecurity, safety in school) affect youth motivation and academic success but were not examined explicitly. 
+3. Although not examined explicitly, based on demographic characteristics, most participants were not coping with these factors of oppression. 
+4. Research must prioritize youth that experience life inequities to fully understand how to help youth across school districts. 
+5. Measures of academic success need to be broadened (e.g., reading comprehension rather than accuracy; critical thinking measures). 
+6. Important to understand how aspects of mental health affect motivation, as mental health is heterogeneous.
+
+CONCLUSIONS
+
+In conclusion, this study used a longitudinal design to understand changes in motivation across an important developmental period, finding motivation decreases across the transition from middle school to high school for adolescents with and without ADHD. Multiple aspects of change in this motivation predicted academic success, suggesting areas of intervention to increase these academic outcomes. As suggested by Morsink et al. (2021), academic outcomes should not be the sole focus of research that examines academic motivation, so future work should include how well-being is affected by motivation as well as how basic psychological needs affect motivation.
+
+KEY POINTS
+- Adolescents with and without ADHD report lower levels of academic motivation from 8th to 10th grade, though youth with ADHD still report lower levels of motivation than their peers.
+- The change in motivation affects academic success for both adolescents with and without ADHD; however, adolescents with ADHD show more associations with motivation predicting homework performance, mathematics, and GPA.
+- For both youth with and without ADHD, GPA was the most common academic outcome predicted, which may reflect that GPA is a culmination of learning activities, so multiple areas of motivation may be needed for a higher GPA.
+- Extrinsic motivators like GPA may undermine the effectiveness of intrinsic motivation for typically developing youth.
+- Interventions may benefit from including treatment that fosters autonomy growth like motivational interviewing.
+
+REFERENCES
+
+American Psychiatric Association (APA). (2013). Diagnostic and statistical manual of mental disorders (5th edn). Arlington, VA: Author.
+Arnold, L.E., Hodgkins, P., Kahle, J., Madhoo, M., & Kewley, G. (2020). Long-term outcomes of ADHD: Academic achievement and performance. Journal of Attention Disorders, 24(1), 73–85.
+Barkley, R.A. (1997). Behavioral inhibition, sustained attention, and executive functions: Constructing a unifying theory of ADHD. Psychological Bulletin, 21, 65–94.
+Becker, S.P., Langberg, J.M., Eadeh, H.M., Isaacson, P.A., & Bourchtein, E. (2019). Sleep and daytime sleepiness in adolescents with and without ADHD: Difference across ratings, daily diary, and actigraphy. Journal of Child Psychology and Psychiatry, 60, 1021–1031.
+Boyer, B.E., Geurts, H.M., Prins, P.J., & Van der Oord, S. (2015). Two novel CBTs for adolescents with ADHD: The value of planning skills. European Child & Adolescent Psychiatry, 24, 1075–1090.
+Breaux, R.P., et al. (2018). The importance of therapeutic processes in school-based psychosocial treatment of homework problems in adolescents with ADHD. Journal of Consulting and Clinical Psychology, 86(5), 427–438.
+Burton, K.D., et al. (2006). The differential effects of intrinsic and identified motivation on well-being and performance. Journal of Personality and Social Psychology, 91, 750–762.
+Easton, J.Q., Johnson, E., & Sartain, L. (2017). The predictive power of ninth-grade GPA. Chicago, IL: University of Chicago Consortium on School Research.
+Elmelid, A., et al. (2015). Depressive symptoms, anxiety and academic motivation in youth. Journal of Adolescence, 45(1), 174–182.
+Gnambs, T., & Hanfstingl, B. (2016). The decline of academic motivation during adolescence. Educational Psychology, 36(9), 1691–1705.
+Howard, J.L., Bureau, J., Guay, F., Chong, J., & Ryan, R.M. (2021). Student motivation and associated outcomes: A meta-analysis from self-determination theory. Perspectives on Psychological Science, 16, 1300–1323.
+Hu, L.T., & Bentler, P.M. (1999). Cutoff criteria for fit indexes in covariance structure analysis. Structural Equation Modeling, 6, 1–55.
+Iznardo, M., et al. (2020). The effectiveness of daily behavior report cards for children with ADHD: A meta-analysis. Journal of Attention Disorders, 24, 1623–1636.
+Jennings, J.L., & Bearak, J.M. (2014). "Teaching to the test" in the NCLB era. Educational Researcher, 43, 381–389.
+Kline, R. (2011). Principles and practice of structural equation modeling (3rd edn). New York, NY: Guilford Press.
+Langberg, J.M., et al. (2019). Intraindividual variability of sleep in adolescents with and without ADHD. Journal of Child Psychology and Psychiatry, 60, 1219–1229.
+Langberg, J.M., et al. (2018). Overcoming the research-to-practice gap: A randomized trial with students with ADHD. Journal of Consulting and Clinical Psychology, 86, 39–55.
+Lee, J., & Zentall, S.S. (2017). Reading motivation and later reading achievement for students with reading disabilities and comparison groups (ADHD and typical). Contemporary Educational Psychology, 50, 60–71.
+Lemos, M.S., & Verıssimo, L. (2014). The relationships between intrinsic motivation, extrinsic motivation, and achievement. Procedia-Social and Behavioral Sciences, 112, 930–938.
+Luman, M., Oosterlaan, J., & Sergaeant, J.A. (2005). The impact of reinforcement contingencies on AD/HD. Clinical Psychology Review, 25, 183–213.
+Madjar, N., Cohen, V., & Shoval, G. (2018). Longitudinal analysis of the trajectories of academic and social motivation across the transition from elementary to middle school. Educational Psychology, 38, 221–247.
+Malone, C.M., Wycoff, K., & Turner, E.A. (2022). Applying a MTSS framework to address racism and promote mental health for racial/ethnic minoritized youth. Psychology in the Schools, 59, 2438–2452.
+Markel, C., & Wiener, J. (2014). Attribution processes in parent–adolescent conflict in families of adolescents with and without ADHD. Canadian Journal of Behavioural Science, 46, 40–48.
+Morsink, S., Van der Oord, S., Antrop, I., Danckaerts, M., & Scheres, A. (2021). Studying motivation in ADHD: The role of internal motives and the relevance of self determination theory. Journal of Attention Disorders, 26, 1139–1158.
+Muthén, L.K., & Muthén, B.O. (1998–2012). Mplus user's guide (7th edn). Los Angeles: Muthén & Muthén.
+Patall, E.A., et al. (2018). Daily autonomy supporting or thwarting and students' motivation and engagement in the high school science classroom. Journal of Educational Psychology, 110, 269–288.
+Paulus, F.W., Ohmann, S., & Popow, C. (2016). Practitioner Review: School-based interventions in child mental health. Journal of Child Psychology and Psychiatry, 57, 1337–1359.
+Pfiffner, L.J., et al. (2007). A randomized, controlled trial of integrated home-school behavioral treatment for ADHD. Journal of the American Academy of Child & Adolescent Psychiatry, 46, 1041–1050.
+Power, T.J., et al. (2015). Examining the validity of the homework performance questionnaire: Multi-informant assessment. School Psychology Quarterly, 30, 260–275.
+Ramsay, J.R. (2020). Rethinking adult ADHD: Helping clients turn intentions into actions. Washington DC: American Psychological Association.
+Sattler, J.M. (2008). Assessment of children: Cognitive foundations (5th edn). San Diego, CA: Jerome M. Sattler.
+Sergeant, J. (2000). The cognitive-energetic model: An empirical approach to ADHD. Neuroscience and Biobehavioral Reviews, 24, 7–12.
+Sibley, M.H., et al. (2016). Parent-teen behavior therapy + motivational interviewing for adolescents with ADHD. Journal of Consulting and Clinical Psychology, 84, 699–712.
+Smith, Z.R., Breaux, R.P., Green, C.D., & Langberg, J.M. (2019). Evaluation of the interplay between homework motivation and sluggish cognitive tempo in youth with ADHD. Journal of Attention Disorders, 23(11), 1262–1273.
+Smith, Z.R., & Langberg, J.M. (2018). Review of the evidence for motivation deficits in youth with ADHD and their associations with functional outcomes. Clinical Child and Family Psychology Review, 21, 500–526.
+Smith, Z.R., Langberg, J.M., Cusick, C.N., Green, C.D., & Becker, S.P. (2020). Academic motivation deficits in adolescents with ADHD and associations with academic functioning. Journal of Abnormal Child Psychology, 48, 237–249.
+Sonuga-Barke, E.J. (2005). Causal models of ADHD: From common simple deficits to multiple developmental pathways. Biological Psychiatry, 57, 1231–1238.
+Toste, J.R., et al. (2020). A meta-analytic review of the relations between motivation and reading achievement for K–12 students. Review of Educational Research, 90, 420–456.
+Vallerand, R.J., et al. (1992). The academic motivation scale. Educational and Psychological Measurement, 52, 1003–1017.
+Wechsler, D. (2009). Wechsler individual achievement test (WIAT-III). San Antonio, TX: Pearson.
+Wechsler, D. (2011). Wechsler abbreviated scale of intelligence (WASI-II). San Antonio, TX: Pearson.
+Weller, E.B., et al. (2000). Children's interview for psychiatric syndromes (ChIPS). Journal of the American Academy of Child & Adolescent Psychiatry, 39, 76–84.
+Willcutt, E.G., et al. (2012). Validity of DSM-IV ADHD symptom dimensions and subtypes. Journal of Abnormal Psychology, 121(4), 991–1010.

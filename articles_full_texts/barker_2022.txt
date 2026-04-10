@@ -1,0 +1,1477 @@
+INTERNATIONAL JOURNAL of SPECIAL EDUCATION
+
+2022, 37(1), 85-98
+
+A review of evidence based practices to support students
+with oppositional defiant disorder in classroom settings
+
+Conor Barker1, Jenn de Lugt2
+1
+
+Department of Psychology & Faculty of Education, Mount Saint Vincent University, Nova Scotia, Canada
+2
+
+Faculty of Education, University of Regina, Regina, Canada
+
+HOW TO CITE:
+Barker, C., de Lugt, J. (2022).
+A review of evidence based
+practices to support students
+with oppositional defiant disorder
+in classroom settings.
+International Journal
+of Special Education, 37(1), 85-98
+CORRESPONDING AUTHOR:
+Conor Barker;
+conor.barker1@msvu.ca
+DOI:
+https://doi.org/10.52291/ijse.2022.37.29
+
+ABSTRACT:
+The purpose of this systemic review of empirical research was to investigate
+available evidence-based interventions for use with students with oppositional defiant disorder (ODD) in general classroom settings. ODD is a specific
+disorder characterised by angry/irritable mood, argumentative/defiant behavior, and vindictiveness. Often ODD is hidden in the extant literature, as it is
+categorized under the umbrella term emotional and behavioral disorders (EBD)
+along with sometimes non-related disorders (attention-disorders, mood disorders, anxious disorders). This review of 26 articles focused on interventions
+for students whose behaviours were characteristic of ODD in classroom settings. While much of the research regarding the treatment of ODD consists
+of clinical strategies (e.g., family therapy, exercise programs, and community
+supports), it is essential that teachers have strategies to support students with
+ODD in inclusive general education classroom settings. Three main types of
+interventions emerged from this review: functional behaviour analysis, group
+contingency, and self-monitoring strategies. A number of other non-categorical strategies are also presented and discussed. Percentages of nonoverlapping
+data (PND) were calculated to explore the effect of these interventions in
+improving adaptive behavior, and in decreasing disruptive behavior. The resulting review provides recommendations and strategies for how teachers can
+support students with ODD in their classrooms.
+
+COPYRIGHT STATEMENT:
+Copyright: © 2022 Authors.
+Open access publication under
+the terms and conditions
+of the Creative Commons
+Attribution (CC BY)
+license (http://creativecommons.
+org/licenses/by/4.0/).
+www.internationalsped.com
+
+Keywords: oppositional defiant disorder; classroom interventions; inclusive
+education; behavioural interventions; emotional and behavioural
+disorders
+85
+
+A review of evidence based practices to support students ...
+
+INTRODUCTION
+In increasing rates, schools and classrooms are seeing a
+greater incidence of Oppositional Defiant Disorder (ODD)
+in their classrooms (Barcalow, 2006; McLean & Dixon,
+2013). Students with ODD are often excluded from general classroom settings when teachers are not equipped with
+evidenced-based interventions that can support their learning needs. The current literature provides a great number
+of intervention and evidence-based treatments for students
+with ODD, however, a great deal of these studies focus on
+family or out-patient supports that can not be applied by
+teachers in inclusive classroom settings. This paper reviews
+the extant research related to interventions used or administered by classroom-based teachers in order to promote
+the inclusion of students with ODD.
+CONTEXT
+For this review, ODD is defined as per the Diagnostic
+and Statistical Manual, 5th Edition (DSM-V; American
+Psychiatric Association (APA), 2013). ODD is a disorder
+which first presents in childhood, and is characterised by
+irritable mood and affect as well as oppositional behavior.
+ODD occurs in approximately 3.3% of the population and
+is more prevalent in males before adolescence, but is equally prevalent among males and females after adolescence
+(APA, 2013). ODD occurs across cultures, races, and
+ethnicities (APA, 2013). ODD is often classified in the
+research as a disruptive behavior, emotional and behavioral
+disorder, and is often used interchangeably with Conduct
+Disorder; even though ODD is characterized by a specific
+set of symptoms. Generally speaking, symptoms of ODD
+can consist of anger/irritability, and non-compliance, and
+more often than not are specific to one authority figure or
+one specific environment (Gadow & Drabick, 2012).
+Oppositional Defiant Disorder is characterized by
+persistent oppositional behaviour evident over the course
+of six months or more (APA, 2013). The DSM-V describes the disorder across three symptomology subtypes: Angry/Irritable Mood, Argumentative/Defiant
+behavior, and Vindictiveness. Children diagnosed with
+ODD must have at least four identified symptoms present for a minimum of six months. Symptoms must be
+beyond what is expected in normal child development
+(e.g., refusal behaviours of a three-year-old going to bed
+might not qualify, but refusal to come to a parent when
+called may qualify). These symptoms must be associated with some form of functional deficit (e.g., issues of
+oppositional behaviour must impact social or academic
+Doi: https://doi.org/10.52291/ijse.2022.37.29
+
+IJSE 2022, 37(1), 85-98
+functioning). The severity is indicated by the number of
+environments affected by the behavioral issues; for example, a mild severity would indicate that the behaviours
+only impact one environment, a moderate severity would
+indicate two environments, and a severe severity would
+indicate three or more environments (APA, 2013).
+ODD should be distinguished from other disorders,
+including: Conduct Disorder (a more severe conduct
+problem associated with breaking social rules and norms);
+Attention-Deficit/Hyperactivity Disorder (behaviours related to reduced sustained attention); Depressive and Bipolar Disorders (behaviours attributed to negative affect);
+Disruptive Mood Dysregulation Disorder (a chronic and
+severe mood disorder); Intermittent Explosive Disorder
+(characterized by a greater degree of anger); Intellectual
+Disabilities (behaviours related to not understanding or
+not being able to negotiate the environment); Language
+Disorders (behaviours associated with poor communication skills); or Social Anxiety Disorder (behaviours that
+result from a fear of social situations). While there may
+be situations where ODD would be comorbid with another disorder (e.g., ADHD), the symptomology to be
+classified as ODD would have to be in excess of that of
+the other disorder (APA, 2013).
+Present research has moved towards the use of Emotional or Behavioural Disorders (EBD) when describing
+students with oppositional behaviours in school (Merrell
+& Walker, 2004). This term is not without controversy, as
+it tends to both oversimplify and overcomplicate discussions on how to define and support students with EBD in
+the classroom (see Kauffman, 2015, for a full discussion).
+This concern does not only apply to educational settings,
+as clinical research rarely distinguishes between Conduct
+Disorder and ODD, labelling both as behaviour disorders, even as their symptoms, course, and development
+appear to be distinct (Dinolfo & Malti, 2013). Further,
+researchers have suggested that such confusion results in
+misunderstandings due to discrepancies between research
+and clinical practice (McFarland et al., 2016). As such,
+the use of the term EBD further muddies the waters when
+looking for ways to support students with oppositional or
+defiant disorders as they are grouped together under one
+label even if their etiology may be quite different.
+Students with ODD are frequently in our schools,
+and can present significant challenges to teachers, administrators, parents, and other students in general education settings. A commonly considered solution is to
+simply exclude these students from regular classrooms
+and schools, given the disruptive nature of their behaviors. Evans & Lester (2012) reviewed current practices of
+86
+
+Conor Barker, Jenn de Lugt
+
+zero-tolerance policies in schools, wherein students who
+display disruptive behaviours are given mandatory consequences that are prescribed by a school code of conduct,
+or in some cases legislation. Zero-tolerance often leads to
+the expulsion of students from classrooms and schools,
+at times for only one behavioral occurrence. Evans and
+Lester argued that students with EBD are unfairly impacted by these policies, as their individual needs are not
+being considered. Further, the impact of these policies
+contributes to the school-to-prison trajectories (i.e., students who are consistently in trouble at school end up
+within the criminal justice system). The authors further
+suggested that schools should view behaviour as a mode
+of communication (recognizing student frustration and
+a lack of ability to resolve the situation (e.g., Greene,
+2014); consider the purpose of discipline (is it educative?
+Or is it an attempt to control the student?); employ an
+interdisciplinary approach (involving different stakeholders and specialists); foster safe and respectful school
+environments (allowing all children to thrive); and become proactive at facilitating system change, including
+advocating against zero-tolerance policies which are not
+supported by research as an effective practice.
+Oppositional Defiant Disorder can be best considered
+to be an interactional disorder (APA, 2013; Barkley &
+Benton, 2013). This is to say that the symptoms of ODD
+largely occur within a relationship between the child and
+another person, within a social context. Generally speaking, children with ODD rebel against any attempt to
+modify or influence their behavior, both positively (e.g.,
+using rewards) or negatively (e.g., using punishments;
+Barkley & Benton, 2013). In both instances, the child
+would see this as a manipulation, and will act in a way
+that counters the person trying to modify their behavior.
+It is also interesting to note that most cases of ODD, do
+not appear in all settings, except in the most severe of
+cases; as such, modifications and differences in the environment can be effective in the remediation of ODD.
+Purpose
+Of particular interest to teachers and school-based psychologists, is determining what interventions best support students with ODD. A great deal of clinical research
+has been conducted to determine best practices of clinical
+intervention, including individual and family therapies,
+exercise programs (e.g., Folino et al., 2014), and community supports, however, teachers are at a loss with what to
+do in their classrooms, especially if families do not have
+access, resources, or desire to participate in out-patient
+style therapies. Thus, this review of the literature intends
+www.internationalsped.com
+
+IJSE 2022, 37(1), 85-98
+to explore the current research regarding what teachers
+can do to support students with ODD in the classroom.
+METHODOLOGY
+Using the quality indicators for conducting systemic reviews for behavioural disorders (Maggin et al., 2017), a
+review of published articles was undertaken in order to
+answer the research question: “What evidence-based interventions have been validated in classroom settings to
+support students with ODD?” The systemic review involved establishing the eligibility criteria, conducting a
+systemic search, determining the sample to be reviewed,
+and subsequent analysis as described below.
+Eligibility Criteria
+A preliminary review of the available literature found
+that it was difficult to find research that was specific to
+ODD in classroom settings, as such, the eligibility criteria for the present study was broadened in order to generate applicable findings. To be included in the study,
+the journal article had to describe an original research
+study conducted within a classroom setting by a teacher
+(either classroom or special education). The study had to
+focus on challenges presented by students either being
+identified as having a diagnosis of Oppositional Defiant
+Disorder or used the keyword “Oppositional Defiant
+Disorder” in their search criteria. The students under
+study must have displayed symptoms consistent with the
+disorder (e.g., Angry/Irritable Mood, Argumentative/
+Defiant Behavior, or Vindictiveness; APA, 2013). The
+studies were to be empirical in nature, providing some
+form of numerical or graphical data to illustrate efficacy.
+Furthermore, the studies had to utilize a strategy or intervention and present outcomes or performance data. The
+studies were not limited by time period.
+Some studies were excluded from this review. First,
+studies that did not clearly meet the above inclusion criteria were excluded. Secondly, studies that had an emphasis on another identified disorder (e.g., Attention
+Deficit Hyperactivity Disorder, Autism Spectrum Disorder, Anxiety Disorders, etc.) were excluded. Finally, research studies which reviewed several interventions, or
+were a meta-analysis, an opinion paper, or a review of the
+literature, were also excluded.
+Search Procedures:
+A systemic review of the literature was completed using
+the Education Resources Information Center (ERIC) and
+PsychInfo databases. Only published articles were includ87
+
+A review of evidence based practices to support students ...
+
+IJSE 2022, 37(1), 85-98
+
+ed in the review. English-language articles were reviewed
+without a limitation on publication year. The search was
+based on the following search string: ((Oppositional Defiant Disorder) OR (ODD) OR (Disruptive Behaviour
+Disorder) OR (Disruptive Behaviour Disorders)) AND
+(Classroom) AND ((Intervention) OR (Management)).
+Titles and abstracts were then reviewed to determine
+their appropriateness for the current review against the
+inclusion/exclusion criteria. The coders reviewed articles
+that met the inclusion criteria and reviewed the reference
+list for additional articles. The lead coder is an assistant
+professor of inclusive education. The secondary coder is
+an associate professor in inclusive education. Both coders
+are subject area experts, and collaborated to assure that
+relevant authors and articles were not omitted from the
+search.
+
+inclusion/exclusion criteria with 49 articles remaining.
+Of the 49 articles that were included in the study, further
+deeper reading of the articles indicated that some did not
+meet in inclusion/exclusion criteria (e.g., articles which
+relate to teacher practice rather than student outcomes,
+insufficient evidence to suggest possible ODD symptomology). This resulted in a final number of 26 articles that
+were used for the review. Each article was reviewed in
+terms of: (1) sample characteristics (e.g., number, setting,
+age range, percentage of female participants); (2) variables relevant to ODD (e.g., dependent and independent
+variables); (3) the nature of the intervention (e.g., type of
+intervention, format, delivery, and who it was delivered
+by); and (4) the outcomes and limitations as discussed in
+the article.
+
+Data Collection
+This search was concluded in 2017 and resulted in a total
+of 144 studies. These results were then limited to peer-reviewed and scholarly journal articles, reducing the number to 108 studies. These studies were reviewed by the
+lead coder, with titles and abstracts reviewed against the
+
+Analysis of Results
+A majority of the studies were single-subject research,
+and as such the percent of non-overlapping data (PND)
+was selected to provide a method to compare the interventions. PND is a method by which single subject
+research data can be tabulated and compared (Scruggs
+& Mastropieri, 1998). To calculate PND, the research-
+
+Fig. 1. Evidence based practices to support disruptive behavior
+Doi: https://doi.org/10.52291/ijse.2022.37.29
+
+88
+
+Conor Barker, Jenn de Lugt
+
+ers find the highest score in the baseline condition, and
+determine how many data points are above this score in
+the intervention or treatment condition. This number of
+points is divided by the total number of data points collected in the intervention condition (e.g., points above,
+plus, points below the highest baseline score). This score
+is multiplied by 100 to provide a percent of scores that
+were found to be above baseline. In cases where a decrease
+score is intended by the intervention, the lowest score in
+the baseline is used, and points below this baseline are
+included in the calculation. This method is used illustratively, and while a simple measure, it is comparable
+with other means of comparing different studies (Olive
+& Smith, 2005). PND was selected for its ease of calculation across multiple studies, and because it provides an
+at-a-glance summary of outcome and effectiveness.
+PND cannot be calculated for studies that do not include full disclosure of their data, or if only mean scores
+are provided. Also, in cases where the baseline behaviour
+occurs already at a maximum level in increasing studies
+(or at minimum level in decreasing studies), a PND cannot be calculated, as there is no evidence of change. For
+six studies it was not possible to calculate a PND. In cases where multiple data sets were provided, a mean PND
+calculation (M PND) was determined in order to provide
+a sense of the aggregate data. In terms of comparing the
+different interventions, a Weighted M PND is provided
+by multiplying the M PND of the original studies with
+the number of participants in that study, and then providing an average percentage based on the total number
+of participants within that pool. In terms of effect size,
+PND values of over 90% are noted to be a large effect,
+values from 70-90% represent a moderate effect, values
+from 50-70% represent a low effect, and less than 50% is
+ineffective (Scruggs & Mastropieri, 1998).
+RESULTS
+Participant Characteristics
+Twenty-six studies were found that met the criteria for
+inclusion in the present review. The studies ranged in
+publication date from 1986-2015, spanning nearly thirty
+years of research. A total of 664 participants were represented in these studies, with 19 studies including 1-10
+participants (n = 58), five studies having 11-100 participants (n=186), and two studies having over 100 participants (n = 420). Studies were from around the world
+but were predominantly from American school contexts.
+Many ethnic and cultural diversities were represented in
+the research findings. Female participants averaged apwww.internationalsped.com
+
+IJSE 2022, 37(1), 85-98
+proximately 20% of the sample, which is consistent with
+research indicating that males typically display more externalizing behaviours in classroom settings. Participants
+ranged in age from 5-17 years, providing a breadth of
+experiences from elementary to high school settings.
+Only four studies referred directly to ODD, while most
+categorized the problem behaviours as EBD as loosely
+defined in American IDEA legislation, but described the
+behaviour of the student under study as being either (1)
+angry-irritable; (2) argumentative/defiant; or (3) vindictive (consistent with APA criteria for ODD). In terms of
+settings, sixteen studies were conducted in general classroom settings, that is, inclusive settings with all children,
+while 10 studies were conducted in alternative, special
+education, or segregated programs.
+Variables
+For the purposes of this review, variables were classified
+in terms of adaptive behaviours (e.g., prosocial and expected behaviours of students in school), and disruptive
+behaviours (e.g., behaviours that are not acceptable or
+encouraged in a school environment). Examples of adaptive behaviour include on-task behaviour, compliance,
+academic engagement, time on task, active responding,
+and prosocial behaviour. Disruptive behaviour was a term
+used more consistently, although some studies used offtask behaviour, aggression, and behavioural impairment.
+Common “disruptive behaviours” included inappropriate calling out, work refusal, poor social interactions with
+peers, or tantruming.
+Intervention Procedures
+This review identified three main types of interventions
+for addressing disruptive behaviours used in classrooms
+settings: (1) Functional Behaviour Analysis (n = 9); (2)
+Group Contingency (n=5), and (3) self-monitoring strategies (n=4). Eight studies did not fall within these categories.
+Functional Behaviour Analysis. Functional Behaviour Analysis (FBA) is a process by which behaviour
+is assessed, hypotheses are made, baseline data collected,
+interventions are provided, intervention data is collected, and plans are revised based on the outcomes (Iwata et al., 1994). Functional Behaviour Analysis is based
+on behaviourist theory that posits that behaviour can be
+controlled through operant or classical conditioning of
+antecedent or consequential events (e.g., reward and/
+or punishment, reducing aversive stimuli by associating
+something more pleasurable). The theory behind FBA is
+that behaviour serves a function, either to meet a sensory,
+89
+
+A review of evidence based practices to support students ...
+
+IJSE 2022, 37(1), 85-98
+
+Table 1. Summary of FBA intervention studies for students with ODD or disruptive behavior in classroom settings
+Reference
+(Umbreit, 1995)
+
+Sample
+
+Intervention
+
+Dependent
+Variables
+
+n=1
+
+adaptive behavior
+
+M PND Across Settings, adaptive
+
+disruptive behavior
+
+behavior = 100%;
+
+general classroom
+
+age 8
+0% female
+(Ervin et al., 1998)
+
+PND
+
+Characteristics Setting
+
+n=2
+
+disruptive behavior = 100%
+general classroom
+
+on-task behavior
+
+age 13-14
+
+M PND Across subjects and settings =
+90%
+
+50% female
+(Hoff et al., 2005)
+
+n=1
+
+general classroom
+
+disruptive behavior
+
+age 12
+
+Final PND when hypothesis determined
+= 100%
+
+0% female
+(Kamps et al.,
+
+n=2
+
+2006)
+
+age 7
+
+compliance
+
+50% female
+
+disruptive behavior
+
+(Wright-Gallo et
+
+n=2
+
+al., 2006)
+
+age 12-14
+
+general classroom
+
+on-task data
+
+PND could not be calculated reliably.
+
+alternative classroom
+
+disruptive behavior
+
+PND could not be calculated reliably
+
+general classroom
+
+disruptive behavior
+
+M PND in antecedent change = 100%;
+in consequence change = 89%
+
+0% female
+(Restori et al.,
+
+n=8
+
+2007)
+
+age 10-11
+
+academic engage-
+
+50% female
+
+ment
+
+(Park & Scott,
+
+n=3
+
+2009)
+
+age 5-6
+
+alternative classroom
+
+disruptive behavior
+
+M PND for disruptive behavior (n=2) =
+
+on task behavior
+
+100%
+
+33% female
+(Nahgahgwon
+
+n=3
+
+et al., 2010)
+
+age 5-6
+
+PND on task behavior (n=1) = 89%
+general classroom
+
+on-task behavior
+
+M PND = 100%
+
+alternative classroom
+
+on-task behavior
+
+M PND = 100%
+
+Total N = 25
+
+Total General: 6
+
+Weighted M PND Across Studies:
+
+Age Range:
+
+Total Alt: 3
+
+Adaptive Behaviors Improvement: 97%
+
+0% female
+(Turton et al.,
+
+n=3
+
+2011)
+
+age 14-17
+0% female
+
+Total Studies = 9
+
+(5-17)
+28% Female
+
+escape, attention, or tangible desire. FBA was developed
+primarily for use with individuals with intellectual difficulties, however, it is increasingly being used in cases of
+students with disruptive behaviours in classroom settings.
+The present review found nine studies which focused
+on either improving adaptive behaviour or decreasing
+disruptive behaviour. A total of 25 cases were examined
+in these studies. They were applied across all school age
+groups (ages 5-17 years), and to a sample that includes
+28% female participants. The Weighted Mean PND
+was 97% for adaptive behaviour improvement across
+the studies, and 98% for disruptive behaviours decrease.
+Further, as two thirds of these studies were conducted in
+Doi: https://doi.org/10.52291/ijse.2022.37.29
+
+Disruptive Behaviors Reduction: 98%
+
+general classroom settings, and one-third in alternative
+classroom settings, it is a promising practice for the inclusive classroom.
+Group Contingency Plans. Group contingency interventions involve a group of students being rewarded
+for the presence of absence of behaviour within a group
+(Little et al., 2015)single-subject design, school-aged
+children; N = 50. Three types of group contingency
+interventions were found in this review. Group contingency plans utilize group dynamics and peer monitoring to increase compliance with school rules. Students
+are placed into groups or teams and challenged to meet
+school expectations.
+90
+
+Conor Barker, Jenn de Lugt
+
+IJSE 2022, 37(1), 85-98
+
+Table 2. Summary of group contingency intervention studies for students with ODD or disruptive behavior in classroom
+settings
+Reference
+(Wills et al., 2016)
+
+Sample
+
+Intervention
+
+Characteristics
+
+Setting
+
+n = 313
+
+general classroom
+
+age 6-12
+
+Dependent Variables
+
+PND
+
+on task behavior
+
+PND not calculated. On-task behavior
+
+disruptive behavior
+
+improved by 20% compared to
+
+24% female
+
+controls (from 60% to 80%) and
+disruptive behaviors decreased by
+10% (from 17% to 7%).
+
+(Cihak et al.,
+
+n = 19
+
+2009)
+
+age 8-9
+
+general classroom
+
+disruptive behavior
+
+PND = 100%
+
+general classroom
+
+on task behavior
+
+M PND = 97%
+
+general classroom
+
+on task behavior
+
+M PND on-task = 76%;
+
+disruptive behavior
+
+M PND disruptive 72%
+
+42% female
+(Kamps et al.,
+
+n = 107
+
+2011)
+
+age 5-10
+unknown %
+female
+
+(Kamps et al.,
+
+n=4
+
+2015)
+
+age 6-9
+25% female
+
+(Denune et al.,
+
+n = 14
+
+alternative
+
+on task behavior
+
+PND on-task = 81%;
+
+2015)
+
+age 12-15
+
+classroom
+
+off-task behavior
+
+PND off-task = 91%
+
+Total N = 457
+
+Total General: 4
+
+Weighted M PND Across Studies:
+
+Age Range:
+
+Total Alt: 1
+
+Adaptive Behaviors Improvement: 95%
+
+21% female
+Total Studies = 5
+
+(5-15)
+15% Female
+
+One group contingency intervention (Denune et
+al., 2015) is the “Good Behaviour Game” which was
+first described by Barrish et al. in 1969. In this game,
+the students have the opportunity to earn points when
+they demonstrate specific behaviours (e.g., sitting in seat,
+completing school work, respecting other students). The
+teacher would begin the class by reviewing the rules with
+the students. At teacher designated times, team points
+are awarded for the number of team members who are
+following the rules to a maximum of 4. Teams earning
+enough points, are given an immediate reward from a
+menu of selections (tangibles, such as gum, snacks, toys,
+etc.). In the second phase, they self-evaluated in addition
+to the teacher evaluation.
+The second series of studies completed by Kamps and
+colleagues (Kamps et al., 2011, 2015; Wills et al., 2016)
+focused on the use of the Class-Wide Function-Related
+Intervention program (CW-FIT). This program also involved the teaching of skills that were expected of the
+students. Secondly, the students were put into groups.
+At specified intervals, a tone would ring and the teacher
+would award points based on the observed behaviours.
+www.internationalsped.com
+
+Disruptive Behaviors Reduction: 94%
+
+Groups who reached a set target would receive a group
+reward from a selection of choices (e.g., 2 minutes extra
+recess, special game, special activity).
+In the third group contingency intervention, (Cihak et al., 2009), students were required to write notes
+(“tootles”) when prosocial behaviour was observed. The
+“Tootles” were to include the peer’s name, the observer’s
+name, what the peer did, and who the peer helped. Reinforcement was provided when the entire class submitted
+a certain number of “Tootles.”
+When the combined interventions were aggregated, the Weighted M PND indicated improvements in
+adaptive behaviours (WMPND = 95%) and a decrease
+in disruptive behaviours (WMPND = 94%) which suggests that group contingencies are a promising practice
+for students with ODD. The majority of this research has
+occurred in the last 10 years, and represents a total of 457
+subjects. The research has been largely completed within
+general settings (n=4), and one study was completed in
+an alternative setting (Denune et al., 2015).
+Self-Monitoring Strategies. Self-monitoring strategies are interventions which encourage students to reflect
+91
+
+A review of evidence based practices to support students ...
+
+IJSE 2022, 37(1), 85-98
+
+Table 3. Summary of self-monitoring intervention studies for students with ODD or disruptive behavior in classroom
+settings
+Reference
+(Kern et al., 1994)
+
+Sample
+
+Intervention
+
+Characteristics
+
+Setting
+
+n=6
+age 11-13
+
+Dependent Variables
+
+PND
+
+alternative
+
+on task behavior
+
+PND not calculated.
+
+classroom
+
+disruptive behavior
+
+Average increase in on-task behavior
+
+0% female
+
+from baseline = 18%.
+Disruptive behavior dropped to <1%
+from 4%.
+
+(Wilkinson, 2005)
+
+n=2
+
+general classroom adaptive behavior
+
+age 9-11
+
+M PND 100% at intervention, 88%
+at follow up.
+
+0% female
+(McGoey et al.,
+
+n=2
+
+2007)
+
+age 5-6
+
+general classroom disruptive behavior
+
+PND for (n=1) = 70%. Other case could
+not be calculated.
+
+0% female
+(Bruhn & Watt,
+
+n=2
+
+2012)
+
+age 13-14
+
+engagement,
+
+100% female
+
+disruptive behavior
+
+Total Studies = 4
+
+general classroom academic
+
+M PND for academic engagement =
+95% and disruptive behavior = 89%
+
+Total N = 12
+
+Total General: 3
+
+Weighted M PND Across Studies:
+
+Age Range:
+
+Total Alt: 1
+
+Adaptive Behaviors Improvement: 98%
+
+(5-14)
+17% Female
+
+Disruptive Behaviors Reduction: 83%
+
+on their own behaviour, while tracking changes over time
+(Snyder, 1979). The following four studies used different
+self-monitoring strategies to improve student behaviour
+and performance in school.
+McGoey et al., (2007) explored the effect of written
+notes to parents regarding their child’s behaviour. Three
+times a day, the teacher and the student would meet about
+the student’s behaviour. The student rated their day on a
+chart (smile, neutral, sad), and the teacher would provide
+feedback if they agreed or disagreed. This note was then
+sent home, with a request that positive behaviour reports
+be subsequently rewarded at home. The authors emphasized the importance of having the home and school coordinate efforts regarding behavioural expectations.
+Bruhn & Watt (2012) exposed students to a multicomponent self-monitoring program. This study focused
+on young adolescents in a regular classroom. During this
+program, the students rated themselves out of three on
+their adherence to the classroom expectations (i.e., did
+they follow all three stated expectations). The students
+then submitted their self-evaluations to the teacher, who
+also rated them. If the ratings were not consistent, the
+teacher and the student would conference to find an
+agreement. Teachers were also encouraged to provide immediate feedback as to whether students were on-task or
+off-task. If by the end of the day students had achieved an
+Doi: https://doi.org/10.52291/ijse.2022.37.29
+
+agreed upon score, a reward was selected from a menu of
+options. If consistently achieved over the week, a greater
+reward was offered.
+Wilkinson (2005) utilized a behavioural consultant
+who met with teachers and parents to discuss areas of
+behavioural challenge. Through this consultation behavioural targets were created for the children and presented to them. These goals were then rated by the students to monitor their progress towards the identified
+targets. Students with EBD were given one behavioural
+target for the 45-minute class in which the intervention
+was taking place. To support the students in achieving
+the behavioural target, the consultant would discuss with
+each student what the target behaviour would look like
+by developing examples and non-examples. Each time a
+bell rang, the students would mark, either a “yes” or “no”,
+depending on whether or not they were on target.
+The amalgamated results displayed on Table 3 demonstrate that self-monitoring strategies indicate promise;
+more so for increasing adaptive behaviours (GWPND
+= 98%), than for reducing disruptive behaviours (GWPND = 83%) for students with ODD. A limitation to
+evaluating this method is the relatively limited number
+of participants in these studies (n=12).
+Other Teaching Strategies. The following studies do
+not fall into the categories of interventions, they include
+92
+
+Conor Barker, Jenn de Lugt
+
+IJSE 2022, 37(1), 85-98
+
+Table 3. Summary of other intervention studies for students with ODD or disruptive behavior in classroom settings
+Reference
+
+Sample
+
+Intervention
+
+Characteristics
+
+Intervention
+
+Dependent
+
+Setting
+
+Variables
+
+PND
+
+(Rosenberg,
+
+n=5
+
+Token Economy
+
+alternative
+
+time on task
+
+M PND for on-task behaviors
+
+1986) *
+
+age 7-9
+
+with and without rule
+
+classroom
+
+disruptive
+
+82% with rule reminders, 56%
+
+0% female
+
+reminders
+
+behavior
+
+without.
+M PND for disruptive behavior
+91% with rule reminders, 76%
+without.
+
+(Stage, 1997)
+
+n = 36
+
+In-school suspension,
+
+alternative
+
+on-task behavior PND not calculated.
+
+age 12-17
+
+teacher feedback,
+
+classroom
+
+disruptive
+
+30% female
+
+problem solving
+
+behavior
+
+techniques.
+
+In school suspension did
+not seem to affect disruptive
+behavior.
+
+(Kamps et al.,
+
+n = 28
+
+Preventative
+
+general
+
+compliance
+
+1999)
+
+age 6-12
+
+strategies, social sills,
+
+classroom
+
+aggression
+
+7% female
+
+tutoring, behavior
+
+PND not calculated
+
+recess behaviors Study used a control group
+
+management programs
+
+to demonstrate moderate
+efficacy in these strategies.
+
+(Musser et al.,
+
+n=3
+
+Teaching strategies
+
+alternative
+
+disruptive
+
+2001) *
+
+age 8-10
+
+including rules,
+
+classroom
+
+behavior
+
+33% female
+
+proximity controls,
+
+M PND = 97%
+
+scripted language,
+token economy,
+mystery rewards.
+(Grskovic &
+
+n=4
+
+Life Space Crisis
+
+alternative
+
+disruptive
+
+Goetze,
+
+age 12-14
+
+Intervention
+
+classroom
+
+behavior
+
+2005) *
+
+50% female
+
+(Sutherland &
+
+n=4
+
+*Peer Tutoring
+
+alternative
+
+disruptive
+
+M PND not calculated for
+
+Snyder, 2007)
+
+age 11-13
+
+classroom
+
+behavior
+
+disruptive behavior, active
+
+active
+
+responding = 38%
+
+0% female
+
+M PND = 100%
+
+responding
+(Reinke et al.,
+
+n = 23
+
+*Incredible Years
+
+general
+
+disruptive
+
+M PND not calculated. T-tests
+
+2014)
+
+age 5-8
+
+Teacher Management
+
+classroom
+
+behavior
+
+indicate that IY-TMC had a
+
+30% female
+
+Classroom
+
+prosocial
+
+significant effect on disruptive
+
+Management Program
+
+behavior
+
+behavior, and reduction in
+reprimands.
+
+(Owens et al.,
+
+n = 66
+
+2012)
+
+age 5-10
+
+*Daily Report Card
+
+general
+
+behavioral
+
+classroom
+
+impairment
+
+13% female
+
+M PND not calculated.
+It appears that the report
+card improved behavior
+cumulatively over the fourmonth study.
+
+Total
+
+Total N = 169
+
+Total
+
+Range M PND Across Studies:
+
+Studies = 8
+
+Age Range:
+
+General: 3
+
+Adaptive Behaviors Improvement: 38-82%
+
+(5-17)
+
+Total Alt: 5
+
+19% Female
+www.internationalsped.com
+
+Disruptive Behaviors Reduction: 91-100%
+93
+
+A review of evidence based practices to support students ...
+
+IJSE 2022, 37(1), 85-98
+
+universal teaching practices, preventative practices, and
+different ways of responding to disruptive behaviours.
+The remaining eight studies focused more on teaching
+strategies broadly than on specific interventions. With
+the advent of Response to Intervention (RTI) strategies
+(see (Fuchs & Fuchs, 2006) a focus on good teaching
+practice is certainly warranted. Good teaching practice,
+including having class rules, providing consistent feedback to students, proximity control are all well known
+and often used in classrooms. Three studies focused on
+these universal skills. Skills taught included proactive
+teaching, feedback, token economies, social skills training, and tutoring. Each of these studies indicated a reduction in disruptive behaviour when these approaches
+and strategies were implemented.
+Other studies focused on setting conditions for students to experience success in school. Rosenberg (1986)
+reviewed the use of peer tutoring as a teaching strategy
+between students with identified emotional and behavioural difficulties, and while curricular outcomes were
+improved, minimal improvement was observed in adaptive and disruptive behavior.
+The remaining studies focused on teacher response
+to the disruptive behaviour. Stage (1997) found that in
+school suspensions had limited impact on the incidence
+of disruptive behaviours in high school students. Grskovic & Goetze (2005) explored problem solving conversations using the Life Space Crisis Intervention to allow the
+student to self-regulate before returning to the classroom,
+which demonstrated a large effect (M PND = 100%).
+Owens et al. (2012) reviewed a daily behavioural report
+card, indicating promising outcomes.
+
+2012; Goh & Bambara, 2012; Hurl et al., 2016)particularly students with or at risk for emotional and/or behavioral disorder (EBD. Our review does not suggest that
+FBA is the only intervention that demonstrates efficacy,
+but that it has most evidence in support of its use. Of the
+interventions reviewed, FBA takes the most amount of
+time and resources to implement effectively, while also
+being the method that is most suited to the individual
+student’s needs. As such, its use should be limited to the
+most severe of cases whenever possible, especially if other
+less onerous interventions could be used to similar effect.
+Group contingencies also demonstrate similar degrees
+of effectiveness. Other studies have shown that regardless
+of the type of group intervention used (independent or
+interdependent), significant effect sizes have been demonstrated (Little et al., 2015)single-subject design, schoolaged children; N = 50. This strategy may be particularly
+valuable for students with oppositional behaviour, as it
+reduces the direct involvement of a supervising teacher
+or educational assistant. Continual monitoring of inter-group dynamics would be an important consideration with the implementation of this strategy in order to
+minimize social difficulties that may arise. In addition to
+single-subject designs, group contingency strategies have
+been validated in large sample studies (e.g., Wills et al.,
+2016), further demonstrating that this strategy has a high
+promise for classroom teachers to implement.
+Self-monitoring strategies also indicate improved
+student performance in the classroom. In our review,
+self-monitoring strategies demonstrated an increase in
+adaptive skills, with less effect on disruptive behaviours.
+If self-monitoring can be used to promote other desirable
+behaviours (i.e., such as walking in the hallway instead of
+running) then they could, in turn, be effective in decreasing disruptive behaviours as well.
+One final note, is that this review included both general education and alternative education settings for intervention practices. While inclusive philosophy suggests
+all students should be supported within the general classroom setting, at time structural constraints and a lack of
+resources result in students being referred to alternative
+settings. Research does not indicate that interventions are
+more or less effective in general or alternative settings,
+rather, it is the smaller class size that seems to account for
+the majority of benefits evidenced in alternative settings
+as compared to general education classrooms (Flower et
+al., 2011)AE programs must utilize effective intervention
+practices for students to get the most out of the program
+and make appropriate behavioral changes. This review
+examined the literature base of behavioral interventions
+
+DISCUSSION
+This review intended to present the research documenting interventions for students with ODD that have been
+trialed in classroom settings. The present review found
+three categories of interventions practiced in schools and
+classrooms: (1) functional behavioural analysis, (2) group
+contingency plans, and (3) self-monitoring procedures.
+The reality of teaching today is that students with oppositional behaviours are often present in classrooms, and
+teachers must have tools that they can use in their classrooms to not only support the learning of the student
+with oppositional behaviour, but the entire class as well.
+In our review, FBA strategies demonstrated the strongest support (i.e., highest degree of PND, and greatest
+sample size). FBAs have been used widely across settings
+and student populations to good effect (Gage et al.,
+Doi: https://doi.org/10.52291/ijse.2022.37.29
+
+94
+
+Conor Barker, Jenn de Lugt
+
+implemented in AE settings from 1970-2010 to assess
+the inclusion of nine effective practices recommended for
+use in alternative settings (Tobin & Sprague, 2000; Nelson, Sprague, Jolivette, Smith, & Tobin, 2009. Our goal
+for this review was to support the inclusion of students
+with oppositional behaviours in general classroom settings, and these identified strategies demonstrate promising practices to support students with ODD in age-appropriate, general education classroom.
+From our professional and clinical roles, the following ideas continue to apply. No matter the intervention chosen, when working with students with ODD,
+employing evidence-based practices are important. It is
+critical to work as a team, and for teachers to be able to
+seek assistance from their administrators, school division
+specialists (e.g., psychologists, consultants, and counsellors), and teacher colleagues. While this review did not
+focus on external resources, clinical work with the family
+extends the continuum of care and further supports the
+student and should be used in conjunction with classroom-based strategies.
+Limitations
+One limitation was the limited data available specifically
+regarding students with ODD within school settings, and
+lack of specificity when addressing symptoms of ODD
+in classrooms. School-based interventions are limited, as
+noted that only four of the twenty-six articles used for
+this review specifically provided data for students with
+ODD, while the remainder needed to be inferred by the
+subject’s description by the authors across the symptoms
+of ODD as defined by the DSM-V. This issue is further
+complicated by the term EBD which also combines all
+other mental health concerns that children may face in
+schools (e.g., anxiety, depression, attention-deficit hyperactivity disorder, intermittent explosive disorder, phobias, trauma-based disorders, reactive attachment disorders, etc.). Oppositional behaviour is a specific subset
+that presents a unique challenge to schools and warrants
+a more in-depth review.
+
+www.internationalsped.com
+
+IJSE 2022, 37(1), 85-98
+The second limitation is the use of PND as a comparison calculation. While PND provides a measure of scores
+consistently above (or below) baseline, it does not exemplify the degree to which a change is made, as the number
+of measurements and consistency of measurement scales
+cannot be compared. More robust statistical analysis to
+determine the effect size would provide this information,
+however, as the purpose of this study was to examine
+the effects of interventions for use with oppositional behaviour, and very few studies targeted this population, a
+power analysis would not have been possible. What the
+PND does show is that some change occurs consistently
+with multiple trials, and therefore indicates a promising
+practice for teachers to use in their classroom settings.
+Future Research Directions
+First and foremost, we would advocate for more studies focused on students with ODD specifically. Given
+the occurrence of these disorders in regular classrooms,
+with ever decreasing resources for teachers to teach the
+curriculum while managing behaviour, this is an area of
+needed attention. A specific focus on what can be done
+at the classroom level is imperative; outside agency supports may not be available to children as a result of lack
+of access (in the case of rural schools) or lack of support
+(family or financial).
+Further, we would advocate for more single-case
+studies published in journals with interventions used in
+the field by school psychologists and teachers. This data,
+both successful and less-successful interventions would
+be invaluable in determining the best and most effective
+practices.
+
+ACKNOWLEDGEMENT
+None.
+DISCLOSURE STATEMENT
+No potential conflict of interest was reported by the authors.
+FUNDING
+None.
+
+95
+
+A review of evidence based practices to support students ...
+
+IJSE 2022, 37(1), 85-98
+
+REFERENCES
+American Psychiatric Association. (2013). Diagnostic and Statistical Manual of Mental Disorders (5th ed.). American Psychiatric
+Association.
+Barcalow, K. (2006). Oppositional defiant disorder: Information for school nurses. The Journal of School Nursing, 22(1), 9–16.
+https://doi.org/10.1177/10598405060220010301
+Barkley, R. A. & Benton, C. M. (2013). Your Defiant Child: Eight Steps to Better Behavior. Guilford Press.
+Bruhn, A. & Watt, S. (2012). Improving behavior by using multicomponent self-monitoring within a targeted reading intervention.
+Behavioral Disorders, 38(1), 3–17. https://doi.org/10.1177/019874291203800102
+Cihak, D. F., Kirk, E. R., & Boon, R. T. (2009). Effects of classwide positive peer “tootling” to reduce the disruptive classroom
+behaviors of elementary students with and without disabilities. Journal of Behavioral Education, 18(4), 267–278. https://doi.
+org/10.1007/s10864-009-9091-8
+Denune, H., Hawkins, R., Donovan, L., Mccoy, D., Hall, L., & Moeder, A. (2015). Combining self-monitoring and an interdependent
+group contingency to improve the behavior of sixth graders with EBD. Psychology in the Schools, 52(6), 562–577. https://
+doi.org/10.1002/pits.21846
+Dinolfo, C. & Malti, T. (2013). Interpretive understanding, sympathy, and moral emotion attribution in oppositional defiant disorder
+symptomatology. Child Psychiatry & Human Development, 44(5), 633–645. https://doi.org/10.1007/s10578-013-0357-y
+Ervin, R. A., DuPaul, G. J., Kern, L., & Friman, P. C. (1998). Classroom-based functional and adjunctive assessments: Proactive
+approaches to intervention selection for adolescents with attention deficit hyperactivity disorder. Journal of Applied Behavior
+Analysis, 31(1), 65–78. https://doi.org/10.1901/jaba.1998.31-65
+Evans, K. R. & Lester, J. N. (2012). Zero tolerance: Moving the conversation forward. Intervention in School and Clinic, 48(2),
+108–114. https://doi.org/10.1177/1053451212449735
+Flower, A., McDaniel, S. C., & Jolivette, K. (2011). A literature review of research quality and effective practices in alternative education settings. Education & Treatment of Children, 34(4), 489–510.
+Folino, A., Ducharme, J. M., & Greenwald, N. (2014). Temporal effects of antecedent exercise on students’ disruptive behaviors:
+An exploratory study. Journal of School Psychology, 52(5), 447–462. https://doi.org/10.1016/j.jsp.2014.07.002
+Fuchs, D. & Fuchs, L. S. (2006). Introduction to response to intervention: What, why, and how valid is it? Reading Research
+Quarterly, 41(1), 93–99.
+Gadow, K. D. & Drabick, D. A. G. (2012). Anger and irritability symptoms among youth with ODD: Cross-informant versus
+source-exclusive syndromes. Journal of Abnormal Child Psychology, 40(7), 1073–1085. https://doi.org/10.1007/s10802012-9637-4
+Gage, N. A., Lewis, T. J., & Stichter, J. P. (2012). Functional behavioral assessment-based interventions for students with or at risk
+for emotional and/or behavioral disorders in school: A hierarchical linear modeling meta-analysis. Behavioral Disorders, 37(2),
+55–77. https://doi.org/10.1177/019874291203700201
+Goh, A. E. & Bambara, L. M. (2012). Individualized positive behavior support in school settings: A meta-analysis. Remedial and
+Special Education, 33(5), 271–286. https://doi.org/10.1177/0741932510383990
+Greene, R. W. (2014). Lost at school: Why our kids with behavioral challenges are falling through the cracks and how we can help
+them. Scribner.
+Grskovic, J. A., & Goetze, H. (2005). An evaluation of the effects of life space crisis intervention on the challenging behavior of
+individual students. Reclaiming Children and Youth, 13(4), 231–235.
+Hoff, K. E., Ervin, R. A., & Friman, P. C. (2005). Refining Functional Behavioral Assessment: Analyzing the Separate and Combined
+Effects of Hypothesized Controlling Variables During Ongoing Classroom Routines. School Psychology Review, 34(1), 45–57.
+https://doi.org/10.1080/02796015.2005.12086274
+Hurl, K., Wightman, J., Haynes, S. N., & Virues-Ortega, J. (2016). Does a pre-intervention functional assessment increase intervention effectiveness? A meta-analysis of within-subject interrupted time-series studies. Clinical Psychology Review, 47,
+71–84. https://doi.org/10.1016/j.cpr.2016.05.003
+Iwata, B. A., Dorsey, M. F., Slifer, K. J., Bauman, K. E., & Richman, G. S. (1994). Toward a functional analysis of self-injury. Journal
+of Applied Behavior Analysis, 27(2), 197–209. https://doi.org/10.1901/jaba.1994.27-197
+Kamps, D., Conklin, C., & Wills, H. (2015). Use of self-management with the CW-FIT group contingency program. Education and
+Treatment of Children, 38, 1–32. https://doi.org/10.1353/etc.2015.0003
+Doi: https://doi.org/10.52291/ijse.2022.37.29
+
+96
+
+Conor Barker, Jenn de Lugt
+
+IJSE 2022, 37(1), 85-98
+
+Kamps, D., Kravits, T., Stolze, J., & Swaggart, B. (1999). Prevention strategies for at-risk students and students with EBD in urban elementary schools. Journal of Emotional and Behavioral Disorders, 7(3), 178–188. https://doi.org/10.1177/106342669900700306
+Kamps, D., Wendland, M., & Culpepper, M. (2006). Active teacher participation in functional behavior assessment for students
+with emotional and behavioral disorders risks in general education classrooms. Behavioral Disorders, 31(2), 128–146. https://
+doi.org/10.1177/019874290603100203
+Kamps, D., Wills, H. P., Heitzman-Powell, L., Laylin, J., Szoke, C., Petrillo, T., & Culey, A. (2011). Class-wide function-related
+intervention teams: Effects of group contingency programs in urban classrooms. Journal of Positive Behavior Interventions,
+13(3), 154–167. https://doi.org/10.1177/1098300711398935
+Kauffman, J. M. (2015). The ‘B’ in EBD is not just for bullying. Journal of Research in Special Educational Needs, 15(3), 167–175.
+https://doi.org/10.1111/1471-3802.12102
+Kern, L., Dunlap, G., Elfner, K., & Clarke, S. (1994). Use of a classwide self-management program to improve the behavior of
+students with emotional and behavioral disorders. Education & Treatment of Children, 17, 445–458.
+Little, S. G., Akin-Little, A., & O’Neill, K. (2015). Group contingency interventions with children—1980-2010: A meta-analysis.
+Behavior Modification, 39(2), 322–341. https://doi.org/10.1177/0145445514554393
+Maggin, D. M., Talbott, E., Van Acker, E. Y., & Kumm, S. (2017). Quality indicators for systematic reviews in behavioral disorders.
+Behavioral Disorders, 42(2), 52–64. https://doi.org/10.1177/0198742916688653
+McFarland, P., Sanders, J., & Hagen, B. (2016). Perspectives on the aetiology of ODD and CD: A grounded theory approach.
+Emotional and Behavioural Difficulties, 21(2), 241–256. https://doi.org/10.1080/13632752.2015.1120073
+McGoey, K. E., Prodan, T., & Condit, N. (2007). Examining the effects of teacher and self-evaluation of disruptive behavior via
+school-home notes for two young children in kindergarten. Journal of Early and Intensive Behavior Intervention, 4(1), 365–376.
+https://doi.org/10.1037/h0100349
+McLean, F. & Dixon, R. (2013). Are we doing enough? Assessing the needs of teachers in isolated schools with students with
+oppositional defiant disorder in mainstream classes. Education in Rural Australia, 20(2), 53–62. https://doi.org/10.3316/informit.624485013332593
+Merrell, K. W. & Walker, H. M. (2004). Deconstructing a definition: Social maladjustment versus emotional disturbance and moving
+the EBD field forward. Psychology in the Schools, 41(8), 899–910. https://doi.org/10.1002/pits.20046
+Musser, E. H., Bray, M. A., Kehle, T. J., & Jenson, W. R. (2001). Reducing disruptive behaviors in students with serious emotional
+disturbance. School Psychology Review, 30(2), 294–304. https://doi.org/10.1080/02796015.2001.12086117
+Nahgahgwon, K., Umbreit, J., Liaupsin, C., & Turton, A. (2010). Function-based planning for young children at risk for emotional
+and behavioral disorders. Education and Treatment of Children, 33, 537–559. https://doi.org/10.1353/etc.2010.0005
+Olive, M. L. & Smith, B. W. (2005). Effect size calculations and single subject designs. Educational Psychology, 25(2–3), 313–324.
+https://doi.org/10.1080/0144341042000301238
+Owens, J. S., Holdaway, A. S., Zoromski, A. K., Evans, S. W., Himawan, L. K., Girio-Herrera, E., & Murphy, C. E. (2012). Incremental benefits of a daily report card intervention over time for youth with disruptive behavior. Behavior Therapy, 43(4), 848–861.
+https://doi.org/10.1016/j.beth.2012.02.002
+Park, K. L. & Scott, T. M. (2009). Antecedent-based interventions for young children at risk for emotional and behavioral disorders.
+Behavioral Disorders, 34(4), 196–211. https://doi.org/10.1177/019874290903400402
+Reinke, W. M., Stormont, M., Herman, K. C., Wang, Z., Newcomer, L., & King, K. (2014). Use of coaching and behavior support
+planning for students with disruptive behavior within a universal classroom management program. Journal of Emotional and
+Behavioral Disorders, 22(2), 74–82. https://doi.org/10.1177/1063426613519820
+Restori, A. F., Gresham, F. M., Chang, T., Lee, H. B., & Laija-Rodriquez, W. (2007). Functional assessment-based interventions for children at-risk for emotional and behavioral disorders. The California School Psychologist, 12(1), 9–30. https://doi.
+org/10.1007/BF03340929
+Rosenberg, M. S. (1986). Maximizing the effectiveness of structured classroom management programs: Implementing rule-review procedures with disruptive and distractible students. Behavioral Disorders, 11(4), 239–248. http://dx.doi.
+org/10.1177/019874298601100405
+Scruggs, T. E. & Mastropieri, M. A. (1998). Summarizing single-subject research: Issues and applications. Behavior Modification,
+22(3), 221–242. https://doi.org/10.1177/01454455980223001
+Snyder, M. (1979). Self-monitoring processes. In L. Berkowitz (Ed.), Advances in Experimental Social Psychology (Vol. 12, pp.
+85–128). Academic Press. https://doi.org/10.1016/S0065-2601(08)60260-9
+www.internationalsped.com
+
+97
+
+A review of evidence based practices to support students ...
+
+IJSE 2022, 37(1), 85-98
+
+Stage, S. A. (1997). A preliminary investigation of the relationship between in-school suspension and the disruptive classroon
+behavior of students with behavioral disorders. Behavioral Disorders, 23(1), 57.
+Sutherland, K. S. & Snyder, A. (2007). Effects of reciprocal peer tutoring and self-graphing on reading fluency and classroom behavior of middle school students with emotional or behavioral disorders. Journal of Emotional and Behavioral Disorders, 15(2),
+103–118. https://doi.org/10.1177/10634266070150020101
+Turton, A. M., Umbreit, J., & Mathur, S. R. (2011). Systematic function-based intervention for adolescents with emotional and
+behavioral disorders in an alternative setting: Broadening the context. Behavioral Disorders, 36(2), 117–128. https://doi.
+org/10.1177/019874291103600203
+Umbreit, J. (1995). Functional assessment and intervention in a regular classroom setting for the disruptive behavior of a student with
+attention deficit hyperactivity disorder. Behavioral Disorders, 20(4), 267–278. http://dx.doi.org/10.1177/019874299502000407
+Wilkinson, L. A. (2005). An evaluation of conjoint behavioral consultation as a model for supporting students with emotional and behavioral difficulties in mainstream classrooms. Emotional and Behavioural Difficulties, 10(2), 119–136. https://doi.
+org/10.1177/1363275205054163
+Wills, H., Kamps, D., Fleming, K., & Hansen, B. (2016). Student and teacher outcomes of the class-wide function-related intervention team efficacy trial. Exceptional Children, 83(1), 58–76. https://doi.org/10.1177/0014402916658658
+Wright-Gallo, G. L., Higbee, T. S., Reagon, K. A., & Davey, B. J. (2006). Classroom-based functional analysis and intervention for
+students with emotional/behavioral disorders. Education and Treatment of Children, 29(3), 421–436.
+
+Doi: https://doi.org/10.52291/ijse.2022.37.29
+
+98
+
+

@@ -1,0 +1,584 @@
+Kittelman, A., Cohen Lissman, D., Strickland-Cohen, M. K., McGrath Kato, M., Flannery, K. B., Horner, R. H., Izzard, S., St. Joseph, S., & Mowery, A. (2024). CICO-Secondary: A Single-Case Experimental Study in High School. Journal of Positive Behavior Interventions, 26(2), 89–100. https://doi.org/10.1177/10983007231200542
+
+Source: Scribd upload by NicholJ (https://www.scribd.com/document/848903293/kittelman-et-al-2023-cico-secondary-a-single-case-experimental-study-in-high-school)
+
+---FULL TEXT---
+
+CICO-Secondary: Enhancing High School Behavior Support | PDF | Psychology | Behavioural Sciences
+
+0 ratings0% found this document useful (0 votes)
+171 views12 pages
+
+#
+
+CICO-Secondary: Enhancing High School Behavior Support
+
+This study evaluates the implementation of an adapted Check-in/Check-out (CICO-Secondary) intervention for high school students, focusing on its procedural fidelity and impact on academic engagement. Conducted with three ninth-grade students, the results indicate that CICO-Secondary can be effectively implemented and is associated with improved student engagement and perceived social validity. The findings suggest the need for further research to validate the intervention's effectiveness in typical high school settings.
+
+## Uploaded by
+NicholJ
+
+AI-enhanced title and description
+
+# 1200542
+
+research-article2023
+PBIXXX10.1177/10983007231200542Journal of Positive Behavior InterventionsKittelman et al.
+
+ Empirical Research
+Journal of Positive Behavior
+
+ CICO-Secondary: A Single-Case
+Interventions
+2024, Vol. 26(2) 89­–100
+© Hammill Institute on Disabilities 2023
+Experimental Study in High School Article reuse guidelines:
+[Link]/journals-permissions
+[Link]
+DOI: 10.1177/10983007231200542
+[Link]
+
+## Angus Kittelman, PhD1 , Dana Cohen Lissman, PhD, BCBA1,
+
+M. Kathleen Strickland-Cohen, PhD, BCBA-D2, Mimi McGrath Kato, MS1,
+K. Brigid Flannery, PhD1, Robert H. Horner, PhD1, Sara Izzard, MS1,
+Stephanie St. Joseph, PhD3, and Aaron Mowery, MS1
+ Abstract
+Check-in/check-out (CICO) is an evidence-based multicomponent intervention widely implemented in elementary
+and middle schools. The purpose of this study was to evaluate whether an adapted CICO intervention, with CICO
+components designed to be more developmentally appropriate for adolescents and contextually relevant for high schools,
+could be implemented with procedural fidelity and improve outcomes for students with and at risk for disabilities. The
+study included three ninth-grade students (two with Individualized Education Programs) in one U.S. public high school.
+We used a non-concurrent multiple baseline design conducted over two academic years during the COVID-19 pandemic
+to experimentally evaluate the effects of CICO-Secondary on student academic engagement. Results demonstrated that
+students participated with adequate procedural fidelity and that there was a functional relation between implementation
+of CICO-Secondary and improved student academic engagement. Students and school personnel also perceived CICO-
+Secondary to be socially valid. Implications for both future research and practice are discussed.
+
+ Keywords
+check-in/check-out, CICO, Tier 2, high school, positive behavioral interventions and supports, PBIS, single-case design
+
+ The need for effective behavior support for students with or and support (PBIS), as a framework for preventing challeng-
+at risk for disabilities in U.S. schools has never been greater. ing behavior and improving student outcomes (Horner et al.,
+Recent studies suggest that the COVID-19 pandemic has 2017). PBIS is designed to ensure that all students receive
+only exacerbated the challenge of effectively preventing the supports they need to be successful through three levels
+and addressing challenging student behavior (Hurwitz of support: Tier 1 (all students), Tier 2 (small groups with
+et al., 2022). For example, in a recent national survey, 7 in similar needs), and Tier 3 (students who require individual-
+10 teachers reported the biggest barrier to learning recovery ized support; Horner et al., 2017). Effective Tier 1 behavior
+as students have returned to schools following remote support focuses on creating safe, predictable, positive, and
+instruction has been increased rates of challenging behavior equitable school cultures that support learning and prevent
+(Khan Academy, 2022). These data are concerning because minor behavior challenges for all students (Gage et al.,
+research has consistently shown students who engage in 2020). However, even with effective Tier 1 behavior support
+persistent challenging behavior are at increased risk for aca- in place, some students will require additional support to
+demic failure, peer rejection, and, ultimately, high school experience success (Simonsen et al., 2015). Tier 2 behavior
+dropout (Algozzine et al., 2010; Wang & Fredricks, 2014). interventions are designed for students needing additional
+The effects of challenging behavior can be detrimental for support and with the organizational efficiency to make sup-
+high school students with disabilities, who are already sig- port feasible in general education settings (e.g., minimal
+nificantly more likely than their peers without disabilities to
+experience exclusionary discipline practices and less likely 1
+University of Oregon, Eugene, USA
+to complete high school (Schifter, 2016). 2
+The University of Utah, Salt Lake City, USA
+3
+May Institute, Randolph, MA, USA
+
+## Multi-Tiered Systems of Behavior Support Corresponding Author:
+
+Angus Kittelman, University of Missouri, 311J Townsend Hall, Columbia,
+in Schools MO 65211, USA.
+Email: anguskittelman@[Link]
+A growing number of schools are adopting multi-tiered sys-
+tems, such as school-wide positive behavior interventions Associate Editor: Paul Caldarella
+90 Journal of Positive Behavior Interventions 26(2)
+teacher effort). Well-designed Tier 2 interventions (a) are Feinberg, 2017; Swain-Bradway, 2009). Fallon and
+continuously available, (b) can be implemented efficiently Feinberg (2017) evaluated the effects of an adapted CICO
+across multiple students, and (c) do not require pulling stu- intervention in a therapeutic alternative education program
+dents out of core educational content to receive the interven- for three high school students. Using a single-case multiple
+tion (Hawken et al., 2009). To improve the effectiveness and baseline design, results showed a moderate increase in
+efficiency of Tier 2 interventions, schools and district teams teacher ratings of students’ meeting school-wide behavior
+also implement system-level supports. Tier 2 PBIS systems expectations. In addition, Swain-Bradway (2009) con-
+include (a) Tier 2 or Tier 2/3 combined leadership teams, (b) ducted an adapted CICO intervention by adding an aca-
+personnel with conceptual knowledge of behavioral theory, demic skill-building component (e.g., academic seminar)
+(c) student identification/screening systems, (d) data sys- for six high school students. Although procedural fidelity
+tems and data-based decision-making, (e) ongoing profes- for students across CICO components was low (< 50%),
+sional development, and (f) decision rules and procedures results from the non-concurrent multiple baseline design
+for fading Tier 2 support (Kittelman et al., 2023). showed moderate improvements in academic engagement
+for five of the six students. Although these studies provide
+support for the application of CICO with high school stu-
+Check-In/Check-Out in Schools
+dents, additional research is needed to validate CICO in
+One of the most commonly implemented Tier 2 behavioral typical high school settings and match CICO procedures to
+intervention in schools is Check-in/check-out (CICO; the developmental level of students and organizational
+Hawken et al., 2021). CICO is a multicomponent interven- structures of high school.
+tion designed to teach students self-regulation skills (i.e.,
+self-monitoring, self-assessment, goal setting, self-recruited
+feedback) to improve positive behaviors (e.g., academic
+CICO-Secondary
+engagement) and reduce challenging behavior (e.g., off-task, CICO-Secondary (Kato et al., 2023) is an adapted version of
+disruption). Several literature reviews (e.g., Bruhn et al., traditional CICO that preserves the core features of CICO,
+2014; Drevon et al., 2019; Wolfe et al., 2016) have shown while emphasizing the self-regulation focus of CICO and
+CICO to be effective at improving these behaviors for stu- adapting the intervention to align with the unique contextual
+dents with and without disabilities. Although CICO has features of high schools by adding: (a) an electronic Daily
+strong evidence of effectiveness in elementary and middle Progress Report (eDPR; see Figure 1) to increase user
+schools, CICO has not been studied extensively in high acceptability and overall efficiency, (b) student and teacher
+school settings (Drevon et al., 2019). training materials to emphasize a student-directed role, (c) a
+daily CICO protocol that emphasizes student self-regulation
+skills and self-recruitment of adult feedback, (d) student-
+Adapting CICO for High Schools directed self-evaluation with feedback on their accuracy, and
+For many students, the increased academic and social (e) more efficient home/school communication through
+demands in high school can lead to decreased school engage- automated electronic messaging to parents/guardians. Like
+ment and increased challenging behavior (McIntosh et al., traditional CICO, and prior to student participation, initial
+2008). Limited access to Tier 2 supports in high schools can conversations with parents/guardians include a description
+lead to an increase and escalation in student-challenging of CICO-Secondary and the roles of the student and parent/
+behaviors and result in exclusionary discipline consequences guardian (e.g., review progress reports, provide positive
+(e.g., office disciplinary referrals, suspensions; McIntosh feedback to their child). Parents/guardians receive regular
+et al., 2008). However, to be effective (especially in high progress reports from the school while students are partici-
+schools), interventions need to fit with the context (e.g., the pating. As an adjustment to account for the developmental
+environment, values, skills, and resources of the implement- age, progress reports are sent electronically (e.g., through
+ers; Horner et al., 2017), and there are a number of contex- the eDPR app or email) once per week to parents/guardians,
+tual variables (e.g., developmental age of students, complex unless it is determined that more frequent progress reports
+organizational structures) that need to be considered when are preferred or needed.
+designing and implementing Tier 2 interventions in high Kato et al. (2023) conducted a descriptive study with 23
+schools (Kittelman et al., 2018). Interventions, for example, students, their teachers, and five CICO coordinators in two
+need to be developmentally appropriate and socially valid high schools to measure student and school personnel daily
+for high school students. This includes an increased empha- procedural fidelity. Data showed teachers were able to pro-
+sis on student buy-in and increased opportunities for stu- vide high-quality feedback to students and higher daily pro-
+dents to self-monitor and self-regulate their own behaviors cedural fidelity scores by students were correlated with
+(Daniela, 2015; Wisner et al., 2010). teacher ratings of improved student outcomes. These pre-
+To date, there has been limited empirical research focus- liminary results provide evidence of usability and teacher
+ing on implementing CICO in high schools (Fallon & quality of implementation. However, research is needed to
+Kittelman et al. 91
+
+Figure 1. Example of the Student (Left) and Teacher (Right) Versions of the eDPR
+Note. The student’s self-ratings on the teacher version of the eDPR are presented in the smaller circles to the right for the teacher’s ratings for the
+teacher to see. eDPR = electronic Daily Progress Report.
+Copyright Educational and Community Supports, University of Oregon. Reprinted with permission from Educational and Community Supports,
+University of Oregon.
+
+examine whether implementation of CICO-Secondary is school years. According to data collected from the National
+functionally related to improved student outcomes. Center for Education Statistics for the 2021–22 school year,
+Therefore, the purpose of this experimental single-case the high school was located in a small city, was not Title I,
+study was to evaluate the following research questions: and included a student-to-teacher ratio of 22.56. The high
+school consisted of 1,343 students, with the majority being
+Research Question 1 (RQ1): Can CICO-Secondary be White (55.4%; n = 744) or Hispanic (31.8%; n = 427). The
+implemented with procedural fidelity by students and high school operated on a standard and alternating A-day
+school personnel? (Periods 1, 3, 5, 7) and B-day schedule (Periods 2, 4, 6, 8).
+Research Question 2 (RQ2): Is there a functional rela- Participants included three ninth-grade students, five general
+tion between implementation of CICO-Secondary and education teachers, and three CICO coordinators. As a
+improved student academic engagement and reduced requirement for CICO-Secondary implementation, the high
+disruptive behavior? school needed to have existing Tier 1 PBIS systems in place.
+Research Question 3 (RQ3): Is CICO-Secondary per- In October of the 2019–20 school year, the school Tier 1
+ceived as socially appropriate by high school students PBIS team completed the Tiered Fidelity Inventory
+and school personnel? (Algozzine et al., 2014), a validated measure of PBIS fidelity.
+Their Tier 1 fidelity score was 83% and Tier 2 fidelity score
+was 77%. A score of 70% or higher at Tier 1 is considered to
+Method be implementing at fidelity (Algozzine et al., 2014). During
+the study years, high school personnel were not implement-
+Setting and Participants ing other variations of CICO. Tier 2 teaming structures, stu-
+The study took place in one public high school located in the dent nomination systems, professional development systems,
+U.S. Pacific Northwest during the 2019–20 and 2021–22 and data systems were consistent across study years.
+92 Journal of Positive Behavior Interventions 26(2)
+
+ Classroom Disruption. Classroom disruption was defined Social Acceptability. To evaluate the social validity of
+as engaging in behaviors that interrupted academic activi- CICO-Secondary, students, teachers, and CICO coordina-
+ties and/or were distracting to teachers or peers. Examples tors completed the CICO-Secondary Acceptability Ques-
+included talking out of turn or interrupting, inappropriate tionnaire (available upon request) adapted from the CICO
+physical contact with peers, making excessive noise, or Program Acceptability Questionnaire (Hawken & Horner,
+displacing chairs. Students were recorded as being disrup- 2003), following intervention. The student and CICO
+tive if these behaviors occurred at any time during each coordinator versions of the questionnaire included nine
+10-s interval. items and the teacher version included eight items. Ques-
+tions assessed perceptions of the usability, likeability, and
+Interobserver Agreement. Direct observation data were col- perceived effectiveness of CICO-Secondary. For exam-
+lected by five research assistants that included four special ple, all participants were asked whether CICO-Secondary
+education doctoral students and one university faculty procedures were easy to use (or implement) and whether
+research member with over 25 years of research experi- the eDPR was simple to use and understandable. Response
+ence. In addition, two university research faculty members options items ranged from 1 (strongly disagree) to 6
+(first and third authors) collected interobserver agreement (strongly agree).
+(IOA) data.
+For both study years and prior to observations, data col-
+lectors were trained by the first author on data collection
+Procedures
+procedures by participating in two trainings (total 3 hr The study was conducted in the same high school over the
+each). Trainings included (a) reviewing the operational course of two school years due to the COVID-19 pandemic
+definitions for the two observed variables, (b) practicing (2019–20 and 2021–22). Baseline observations for Dan and
+observational data collection by watching recorded videos John began concurrently in February 2020 and intervention
+of classroom instruction, and (c) calculating and compar- observations ended in March 2020, due to school closures
+ing IOA and discussing disagreements. Data collectors from COVID-19 pandemic. Baseline observations for Tracy
+were required to reach 90% or greater IOA agreement with began in April 2022 and intervention observations ended
+the first author during each training. IOA during training June 2022 (1 week before school finals).
+sessions and throughout data collection was calculated The experimental evaluation of CICO-Secondary
+using exact interval-by-interval agreement. This included included three phases: (a) baseline, (b) CICO-Secondary
+adding the number of intervals with exact agreement and training for participants, and (c) CICO-Secondary imple-
+dividing by the total number of intervals and then multiply- mentation. The training for coordinators and teachers
+ing by 100%. During the study, if IOA fell below 85% for occurred at the beginning of each school year (2019–20 and
+either academic engagement or disruption, the first author 2021–22) and was delivered by university researchers. The
+and the data collector would meet after the observation to training for student participants, and a refresher for their
+review and discuss disagreements, review operational defi- classroom teachers, occurred after baseline observations
+nitions of academic engagement and disruption, and come and before intervention observations and was delivered by
+to consensus for how to code these behaviors for future the CICO coordinators.
+observations.
+IOA data were collected on at least 27% of all observa- Baseline. At the beginning of each school year, university
+tions across students and phases (baseline and intervention). researchers obtained consent from the CICO coordinators
+Overall IOA across all students and phases was 93.9% for for their participation. CICO coordinators, in collaboration
+academic engagement and 96% for classroom disruption. with university researchers, obtained parent/guardian con-
+For individual students, IOA was collected across 28.6% sent and student assent, and consent from classroom teach-
+(2/7) of baseline and 36.4% intervention observations (4/11) ers for conducting observations in their classroom and
+for Tracy. Her mean IOA for academic engagement was completing the CICO-Secondary Acceptability Question-
+92.6% and 93.1% for disruptive behavior. IOA was col- naire. Following approvals, data collectors began complet-
+lected across 33.3% (3/9) of baseline and 30% (3/10) of ing baseline observations of the students during alternating
+intervention observations for John. His mean IOA for aca- A-day and B-day class periods. The criteria for when to
+demic engagement was 93.6% and 96% for disruptive move to the intervention phase included conducting a mini-
+behavior. Last, IOA was collected across 37.5% of baseline mum of five observations per student with sufficient data
+(6/16) and 40% (2/5) in intervention observations for Dan. points necessary to document a pattern in responding across
+His mean IOA for academic engagement was 95.2% and the two observational variables (academic engagement and
+98.1% for disruptive behavior. classroom disruption).
+94 Journal of Positive Behavior Interventions 26(2)
+
+CICO-Secondary Training. CICO-Secondary training occurred academic engagement and classroom disruption in the
+at different timepoints for different participant groups. Spe- intervention phase. After intervention, CICO coordinators,
+cifically, at the beginning of the 2019–20 and 2021–22 teachers, and students were sent an email and link to com-
+school years, CICO coordinators and teachers received an plete the CICO-Secondary Acceptability Questionnaire.
+initial training on CICO-Secondary led by the university
+research team. For CICO coordinators, this included a
+45-min training including an overview of CICO-Secondary Experimental Design and Analysis
+components and an explanation of CICO coordinator We conducted descriptive statistics to evaluate whether
+responsibilities (e.g., training students on CICO-Secondary CICO-Secondary was implemented with high procedural
+procedures, checking in and out with students, using the fidelity and perceived as being socially valid. To address the
+eDPR [see Figure 1] to track daily progress, problem-solv- functional relation between CICO-Secondary and student
+ing with students on how to meet their daily and weekly behavior, an experimental non-concurrent multiple baseline
+goals, delivering student incentives). design (implemented with two students concurrently in
+Similar to the CICO coordinators, initial training for 2019–20 and one non-concurrent during 2021–22) was used
+teachers occurred at the beginning of each school year. The (Gast et al., 2018; Slocum et al., 2022). A functional relation
+20-min in-service training for teachers included describing (experimental control) is demonstrated in the non-concur-
+(a) CICO-Secondary and students for whom it is most suit- rent design if CICO-Secondary produced a desired change
+able, (b) the daily student and teacher cycles of participa- across behaviors at three different points in time (Slocum
+tion, (c) how to use the eDPR to rate student classroom et al., 2022). Visual analysis of the data within tiers (baseline
+behaviors, and (d) how to provide verbal and specific feed- and intervention) and across tiers (students) was used to
+back to students. In addition, after baseline observations evaluate whether a functional relation was demonstrated
+were completed for each student, CICO coordinators sent (Barton et al., 2018; Kratochwill et al., 2010). Visual analy-
+their teachers a reminder email on how to deliver the CICO- sis of the graphed data consists of analyzing level, trend,
+Secondary classroom components. variability, immediacy of effect, overlapping data across
+After baseline observations, CICO coordinators pro- phases, and consistency of data patterns across similar A and
+vided a 25–30 min orientation to each student individually B phases (Barton et al., 2018; Kratochwill et al., 2010).
+using the Student CICO-Secondary Training Protocol To quantify the effect of CICO-Secondary on academic
+Checklist developed by the university research team (avail- engagement and classroom disruption, we computed an
+able upon request). The orientation consisted of an over- effect size estimate using the between-case standardized
+view of CICO-Secondary purpose and procedures, along mean difference (BC-SMD; Pustejovsky et al., 2014;
+with instructions on and opportunities to practice (a) greet- Valentine et al., 2016). The BC-SMD uses a hierarchical
+ing teachers, (b) using the eDPR to log in, self-rating their linear modeling to calculate an effect size across partici-
+behavior, and accessing and reviewing teacher ratings, and pants within multiple baseline designs (Valentine et al.,
+(c) problem-solving when participating (e.g., what do you 2016). The BC-SMD computes an effect size suitable for
+do if teacher is talking to another student during check-out, single-case designs (d-statistic) which is equivalent to
+if eDPR is not working). Research team members con- Cohen’s d (d = 0.2 [small effectl], 0.5 [medium effect], 0.8
+ducted three observations of CICO coordinators to ensure [large effect]; Cohen, 1988). The BC-SMD effect size esti-
+all delivered the orientation to students with high imple- mate was conducted using the scdhlm web-based calculator
+mentation fidelity. (Version 0.5.2; Pustejovsky et al., 2021).
+
+## CICO-Secondary Implementation. After baseline data collec-
+
+tion and trainings, students and teachers began participating Results
+in the daily CICO-Secondary implementation cycles. Stu-
+CICO-Secondary Procedural Fidelity
+dents checked in at the beginning of the day with the CICO-
+Secondary coordinator, completed the classroom procedural Procedural fidelity data across the three students and across
+fidelity components using their eDPR in each of their four their eight class periods (including their two observation
+classes during the day, and checked out with CICO-Second- periods and six non-observation periods) are presented in
+ary coordinator at the end of the day. As designed within Table 1. The overall mean and range of procedural fidelity
+multiple baseline designs, student participation in CICO- for Tracy, John, and Dan were 70.9% (range[rng] = 50%–
+Secondary began at different points in time to avoid 100%), 77.5% (rng = 50%–100%), and 86.9% (rng =
+threats to the internal validity of the study (e.g., history, 50%–100%), respectively. CICO-Secondary elements most
+maturation, procedural infidelity; Gast et al., 2018). Similar likely to be implemented consistently across students were
+to baseline, data collectors conducted daily observations of Check-Ins (100%), Check-Outs (100%), teacher ratings
+Kittelman et al. 95
+Table 1. CICO-Secondary Procedural Fidelity Components Across Students and School Personnel.
+
+ Days of
+Student participation Check-in Greet teacher Self-rate Teacher rate Check-out
+Tracy 13 100% 62% 60% 73% 100%
+John 12 100% 62% 75% 79% 100%
+Dan 6 100% 72% 83% 83% 100%
+
+CICO = check-in/check-out.
+
+## (78%), student self-ratings (73%), and greeting teachers
+
+before class (65%). In addition, online Supplemental Table
+S1 provides a summary of the student procedural fidelity
+components, and online Supplemental Table S2 provides a
+summary of the student and teacher daily behavior ratings
+disaggregated across classroom periods. As shown in online
+Supplemental Table S1, there was variability in procedural
+fidelity scores across components and periods. Procedural
+fidelity scores were consistently high or low depending on
+certain classroom periods across students. For example, in
+Period 4, Tracy had high procedural fidelity for greeting
+teacher (100%), self-rating (86%), and obtaining teacher
+ratings (100%) and low procedural fidelity in Period 8
+(greeting teacher = 17%; self-rating = 33%; and teacher
+ratings = 33%).
+
+## Academic Engagement and Classroom
+
+Disruption
+Figure 2 presents the academic engagement and classroom
+disruption data for the three students. Although observers
+collected data on both academic engagement and class-
+room disruption throughout the study, due to low levels of
+classroom disruption observed across students during base-
+line and intervention (Tracy, baseline M = 4.3% and inter-
+vention M = 2.6%; John, baseline M = 9.8% and
+intervention M = 7.2%; Dan, baseline M = <1% and
+intervention M = 5.1%), we were unable to assess the
+effects of CICO-Secondary on disruptive behavior (see
+Figure 2). However, the within series analysis of basic
+effects demonstrates moderate and maintained improve-
+ments in academic engagement following implementation Figure 2. Percentage of Academic Engagement and Disruption
+for A-Days and B-Days Across Students
+of CICO-Secondary. Similarly, use of staggard baselines
+and across series stability at intervention points lends confi-
+dence to the documented effects (Kratochwill et al., 2010). effect was observed between implementation of CICO-Sec-
+Although comparison of overall phase patterns (mean, ondary and an increase in the mean level of her academic
+slope, variability) between baseline and intervention sup- engagement. In baseline, Tracy’s mean academic engage-
+port an effect for the intervention, the effects on academic ment was 55.6% (rng = 20%–91%). There was a decreas-
+engagement were more pronounced for A-Days with Tracy ing trend with high variability. An immediacy of effect was
+and John and B-Days with Dan. observed upon introduction with an increase in academic
+engagement. Tracy’s mean academic engagement was 75%
+Tracy. Data for Tracy are presented in the first tier of the (rng = 40.8%–94.1%) in intervention. Data trend was
+non-concurrent multiple baseline design (see Figure 2). stable with moderate levels of variability. For between
+Upon visual analysis of the graphed data, a moderate basic phase comparisons, there was reduced variability across
+96 Journal of Positive Behavior Interventions 26(2)
+combined A-Day and B-Day classrooms. As observed in Effect Size. Following visual analysis, to quantify the
+Figure 2, improvements in academic engagement were intervention effects, a BC-SMD effect size estimate was
+largely attributed to improvements in A-Day class period calculated to evaluate the impact of CICO-Secondary on
+with no overlapping data points. For classroom disruption, academic engagement and classroom disruption across
+a basic effect was not observed after implementation of three students. CICO-Secondary was found to have a
+CICO-Secondary when examining between phase compari- large effect on academic engagement (d-statistic = 1.05,
+sons for trend and level. There was minor reduced variabil- SE = 0.21; CI [0.63, 1.47]) and an insignificant effect on
+ity in classroom disruption in the last five observations in classroom disruption (d-statistic = –.01, SE = 0.23; CI
+intervention. [–0.48, 0.47]).
+
+## John. John’s academic engagement data are presented in the
+
+Social Validity of CICO-Secondary
+second tier of Figure 2. Visual analysis of the data indicated
+that CICO-Secondary had a small-to-moderate effect on Following participation, students, teachers, and coordi-
+increasing the student’s mean level of academic engage- nators completed the CICO-Secondary Acceptability
+ment during intervention. The student’s mean level of aca- Questionnaire (see Table 2). Overall, CICO-Secondary
+demic engagement in baseline was 53.2% (rng = components were rated as acceptable across students (M =
+5.8%–87.5%). Baseline data documented a slight increas- 5.37; rng = 4.33–6.00). The highest rated item was I found
+ing trend with moderate variability, with the exception of the eDPR simple to use and understandable (M = 6.00) and
+the first two observations. After implementation of CICO- lowest was Learning the self-regulation skills has helped
+Secondary, an immediacy of effect was observed in aca- me to manage my time and responsibilities at school (M =
+demic engagement. During intervention, John’s mean level 4.33). On average, teachers’ ratings were lower than stu-
+of academic engagement was 72.2% (rng = 52%–85.3%). dents (M = 4.73; rng = 3.67–5.50). The highest rated item
+There was a moderate level of variability during the first was I found the eDPR simple to use and understandable (M
+five observations followed by low variability for the last = 5.50) and lowest was CICO-Secondary has helped
+five observations with an increasing trend in academic increase my (or student) academic performance in class (M
+engagement. Similar to Tracy, for between-phase compari- = 3.67). Last, coordinator ratings were higher than teachers
+sons, there was reduced variability across combined A-Day but lower than students (M = 4.96; rng = 4.33–6.00). The
+and B-Day classrooms. With the exception of one outlying highest rated item for teachers was I understood my role
+data point in baseline, there were no overlapping data across and responsibilities after the orientation for the CICO-
+A-day observations between baseline and intervention. A Secondary (M = 6.00) and lowest were CICO-Secondary
+basic effect was not observed for classroom disruption has helped improve my (or student) positive behaviors in
+when examining between phase comparisons for trend, class (M = 4.33) and CICO-Secondary has helped increase
+level, or data variability. my (or student) academic performance in class (M = 4.33).
+
+## Dan. Dan’s academic engagement data are presented in the
+
+Discussion
+third tier of Figure 2. Based on visual analysis, CICO-Sec-
+ondary had a moderate effect on increasing the student’s The purpose of this study was to evaluate whether an adapted
+mean level of academic engagement. Dan’s mean academic CICO intervention could be implemented with procedural
+engagement in baseline was 45.1% (rng = 0%–84.1%). fidelity, show improved student outcomes, and be rated as
+There was a slight increasing trend in baseline with high socially valid by school personnel and students. Even though
+variability. After implementation of CICO-Secondary, there CICO-Secondary required high levels of student participa-
+was a small immediacy of effect with an increase in aca- tion (14 components per day), the three ninth-grade students
+demic engagement during the first observation in interven- were able to participate with moderate levels procedural
+tion. Dan’s mean level of academic in intervention was fidelity (Ms = 70.9% - 86.9% across students). Second,
+80.1% (rng = 71%–95.8%) and there was decreased and results from the non-concurrent multiple baseline design
+minor variability or trend across the five observations. demonstrated a functional relation between implementation
+Between-phase comparisons also demonstrated reduced of CICO-Secondary and an increase in classroom academic
+variability in academic engagement across combined class- engagement during intervention with an overall large effect
+rooms. There were overlapping data across baseline and across students. We hypothesize that the key mechanism of
+intervention in the A-day class but no overlapping data in change in academic engagement included students’ self-
+the B-day class. Last, a basic effect was not found between monitoring with self-delivered feedback and the increased
+CICO-Secondary and classroom disruption. Overall, rate of teacher praise for desired behavior in meeting
+between-phase comparisons showed little difference in school-wide behavior expectations. Neither a functional
+trend, level, or variability. relation, nor meaningful effect size, was found between the
+Kittelman et al. 97
+Table 2. Student, Teacher, and Coordinator Scores on CICO-Secondary Social Validity Questionnaire.
+
+## Students Teachers Coordinators
+
+## Question n M Rng n M Rng n M Rng
+
+I understood my role and responsibilities after the orientation for 3 5.00 4–6 3 5.00 3–6 3 6.00 6–6
+the CICO-Secondary
+CICO-Secondary has helped improve my (or student) positive 3 5.33 5–6 3 4.00 3–5 3 4.33 3–6
+behaviors in class
+CICO-Secondary has helped increase my (or student) academic 3 5.33 4–6 3 3.67 3–5 3 4.33 3–6
+performance in class
+Participating in CICO-Secondary was worth my time and effort 3 5.67 5–6 3 5.00 3–6 3 5.00 4–6
+The CICO-Secondary procedures were easy to use (or implement) 3 5.67 5–6 3 4.67 2–6 3 5.00 4–5
+I found it easy to complete the self-assessment with students and 3 5.33 4–6
+help them set goals, such as self-monitoring or recruiting teacher
+feedback
+I found the eDPR simple to use and understandable 3 6.00 6–6 2 5.50 5–6 3 5.33 5–6
+Learning the self-regulation skills has helped me to manage my time 3 4.33 4–5
+and responsibilities at school
+I would be willing to use CICO-Secondary again/with other students 3 5.67 5–6 3 5.00 3–6 3 4.67 4–6
+I would recommend CICO-Secondary to other students/teachers/ 3 5.33 4–6 3 5.00 3–6 3 4.67 4–6
+school personnel for students who may be struggling in school
+Note. Rng = Range; eDPR = electronic Daily Progress Report; CICO = Check-In/Check-Out.
+
+implementation of CICO-Secondary and decreased class- The moderate fidelity scores from this study were lower but
+room disruption. We hypothesize that this was likely to within the range of previous reported studies. For example,
+result of the small levels of classroom disruption observed Hawken et al. (2014) conducted a systematic literature
+across baseline and intervention phases across the students review of 28 studies (majority in elementary schools)
+(see Figure 2). In addition, social acceptability ratings were implementing CICO. Procedural fidelity scores for individ-
+on average highest by students (M = 5.37), followed by ual studies ranged from 71% to 98%. In addition, Klingbeil
+CICO coordinators (M = 4.96), and teachers (M = 4.73). et al. (2019) conducted a systematic review of CICO with
+The highest rated CICO-Secondary item by students, teach- function-modified variations. Of the 11 studies included in
+ers, and second highest by CICO coordinators was related to the review, procedural fidelity scores ranged from 59.9% to
+the usability and understandability of the eDPR. Last, all 93.4%. Likely explanations for why student procedural
+participants rated their willingness to participate in CICO- fidelity scores were lower for this study may be related to
+Secondary again as favorable (Ms = 4.67–5.67). the number of teachers and additional CICO-Secondary
+Although there is a large body of empirical studies dem- components. For example, in elementary school, it is com-
+onstrating positive effects of CICO for students with and mon for one teacher to be trained and implement CICO
+without disabilities in elementary and middle schools components at different times during the day for a student.
+(Hawken et al., 2014; Klingbeil et al., 2019; Wolfe et al., However, in high schools, between 6 and 8 teachers are
+2016), there is a dearth of empirical research demonstrating trained and often only have one opportunity to implement
+similar effects for students in high school settings (Bundock the CICO components per day, or every other day (e.g., A/B
+& Flannery, 2021; Swain-Bradway, 2009). The findings schedules), for each student. Second, a novel component of
+from this study support recommendations suggesting that CICO-Secondary included having students greet their
+purposeful adaptations are needed to make CICO compo- teachers before class. As shown in Supplemental Table S1,
+nents more developmentally appropriate for adolescents this component typically had lower scores across students
+and contextually feasible to implement in high schools and periods.
+(Kato et al., 2023; Bundock & Flannery, 2021; Kittelman
+et al., 2018). The current findings extend previous research
+Limitations and Implications for Future Research
+by presenting evidence of the effectiveness of these adapta-
+tions in producing positive outcomes for high school stu- Key limitations of this study are worth noting. First,
+dents with and at risk for disabilities. although the use of the non-concurrent multiple baseline
+Study findings related to student procedural fidelity also design allowed for the staggered start of student participa-
+have meaningful connections with previous CICO research. tion, due to the COVID-19 pandemic, there was a sizeable
+98 Journal of Positive Behavior Interventions 26(2)
+
+gap between the start of participation for John and Dan ratings on school-wide behavior expectations, we did not
+(February 2020) and for Tracy (April 2022). It was possible examine why students tended to rate themselves higher than
+for data collection to begin earlier during the 2021–22 their teachers for meeting daily behavior expectations.
+school year, but we waited until the novelty of students However, a future study could seek to answer this question
+returning to in-person learning subsided. Even though the and evaluate whether agreement among students and teach-
+intervention, school, and majority of CICO coordinators ers also increases the longer students and teachers participate
+were the same, it is possible history effects may have nega- in CICO-Secondary.
+tively or positively affected Tracy’s performance in CICO-
+Secondary. Relatedly, non-concurrent multiple baseline Implications for Practice
+designs are considered generally weaker because they can-
+not rule out possible coincidental events to the degree of Although CICO-Secondary shows promise for improving
+concurrent multiple baseline designs. However, greater lag student behavior and being perceived as socially accept-
+time between phases across participants does help to reduce able in high schools, it is important to note that adapta-
+possible threats that a specific coincidental event affected tions to CICO were not made to change the behavioral
+treatment effects across tiers and time (Slocum et al., mechanisms of the intervention (e.g., facilitate positive
+2022). A future single-case concurrent multiple baseline adult and student interactions, teach self-management),
+design study could help to control for possible history but to enhance (a) the delivery of the behavioral mecha-
+effects and enhance external validity. Also due to the nisms in high schools (e.g., change from paper point card
+COVID-19 pandemic, we were unable to collect student to electronic, send paper point cards home to parents/
+behavior maintenance data or extend intervention data col- guardians to sending automatic email updates) and (b)
+lection to obtain a minimum of three observations for all provide additional opportunities to increase behavior
+students in both A-Day and B-Day class periods during mechanisms (e.g., student self-assessment on point card,
+intervention (i.e., only two observations occurred in B-Day self-assessment and goal setting during CICOs). Therefore,
+period for Dan; see Figure 2). A future single-case or group as school personnel adapt CICO components, it is impor-
+experimental design could aim to evaluate whether CICO- tant these adaptations do not remove these mechanisms
+Secondary resulted in long-term improvements in aca- (e.g., decreasing frequency or quality of coordinator
+demic engagement and other outcomes (e.g., grades, grade CICOs with students) that are key for improving both
+point average). short- and long-term positive outcomes. Also, some adap-
+Another limitation is the lack of student race/ethnic diver- tations to increase usability and acceptability of CICO
+sity. This limitation could be addressed by conducting future components may not require sophisticated software (e.g.,
+experimental evaluations of CICO-Secondary with larger electronic point card). For example, school personnel
+student populations across different regions of the U.S. In could have students complete an electronic point card
+addition, although student progress reports were recorded through an electronic spreadsheet (e.g., Google Docs;
+and sent to parents/guardians, we did not collect social valid- Kittelman et al., 2018). Similarly, other CICO-Secondary
+ity data from parents/guardians to evaluate whether this mode components, such as student self-assessment and goal set-
+of communication was useful or valued. All parents/guard- ting during check-ins and check-outs, may not require
+ians were asked what mode of communication they preferred additional resources to deliver in high schools.
+(e.g., email, paper reports) but it is unclear whether they val-
+ued receiving these electronic updates, or to what extent they Declaration of Conflicting Interests
+reviewed them. A future qualitative could provide meaning- The author(s) declared no potential conflicts of interest with respect
+ful insights related to the perceived value of this mode of to the research, authorship, and/or publication of this article.
+communication and quality of the parent/guardian and stu-
+dent interactions. Finally, students participated in CICO- Funding
+Secondary components with varying levels of procedural The research reported here was supported by the Institute of
+fidelity (Supplemental Table S1) and tended to rate them- Education Sciences, U.S. Department of Education, through Grant
+selves, on average, higher than their teachers in meeting R305A180015 to University of Oregon. The opinions expressed
+school-wide behavior expectations (Supplemental Table S2). are those of the authors and do not represent views of the Institute
+This variation in daily procedural fidelity opens the door for or the U.S. Department of Education.
+future research to (a) evaluate the degree CICO-Secondary
+needs to be implemented with fidelity to produce improved ORCID iDs
+outcomes and (b) whether CICO-Secondary components Angus Kittelman [Link]
+should be weighted equally. Related to student versus teacher Aaron Mowery [Link]
+Kittelman et al. 99
+
+Pustejovsky, J. E., Hedges, L. V., & Shadish, W. R. (2014). dissertation]. ProQuest Dissertation and Theses Global.
+Design-comparable effect sizes in multiple baseline designs: (UMI No. 304979946).
+A general modeling framework. Journal of Educational Valentine, J. C., Tanner-Smith, E. E., Pustejovsky, J. E., & Lau, T.
+and Behavioral Statistics, 39(5), 368–393. [Link] S. (2016). Between-case standardized mean difference effect
+org/10.3102/1076998614547577 sizes for single-case designs: A primer and tutorial using the
+Schifter, L. A. (2016). Using survival analysis to understand grad- scdhlm web application. The Campbell Collaboration. https://
+uation of students with disabilities. Exceptional Children, [Link]/10.4073/cmdp.2016.1
+82(4), 479–496. [Link] Wang, M.-T., & Fredricks, J. A. (2014). The reciprocal links
+Simonsen, B., Myers, D., & Briere, D. E., III (2015). between school engagement, youth problem behaviors, and
+Comparing a behavioral check-in/check-out (CICO) inter- school dropout during adolescence. Child Development,
+vention to standard practice in an urban middle school 85(2), 722–737. [Link]
+setting using an experimental group design. Journal of Wisner, B. L., Jones, B., & Gwin, D. (2010). School-based medi-
+Positive Behavior Intervention, 13(1), 31–48. [Link] tation practices for adolescents: A resource for strengthening
+org/10.1177/1098300709359026 self-regulation, emotional coping, and self-esteem. Children
+Slocum, T. A., Pinkelman, S. E., Joslyn, P. R., & Nichols, B. & Schools, 32(3), 150–159. [Link]
+(2022). Threats to internal validity in multiple-baseline design cs/32.3.150
+variations. Perspectives on Behavior Science, 45, 619–638. Wolfe, K., Pyle, D., Charlton, C. T., Sabey, C. V., Lund, E.
+[Link] M., & Ross, S. W. (2016). A systematic review of the
+Swain-Bradway, J. L. (2009). An analysis of a secondary level empirical support for check-in check-out. Journal of
+intervention for high school students at risk of school fail- Positive Behavior Interventions, 18(2), 74–88. [Link]
+ure: The high school behavior education program [Doctoral org/10.1177/1098300715595957
+
+## Common questions
+Powered by AI
+
+### What experimental design was used to evaluate the effectiveness of CICO-Secondary, and how did this design contribute to the study's validity?
+
+The study used a non-concurrent multiple baseline design, implemented over two academic years, to evaluate the effectiveness of the CICO-Secondary intervention. This design involved starting the intervention at different times for each student to mitigate common threats to internal validity such as history and maturation. This staggered approach in introducing the intervention allowed for a clearer demonstration of cause-and-effect relationships, thereby providing strong evidence of a functional relation between the intervention and increased academic engagement. Visual analysis of data across baseline and intervention phases was utilized to affirm this functional relation .
+
+### What challenges might arise when implementing the CICO-Secondary intervention in high schools, and how were these addressed in the study?
+
+Challenges in implementing CICO-Secondary in high schools include the need for interventions to be contextually relevant and developmentally appropriate to address the unique needs of high school students. The study addressed these challenges by adapting CICO components to better fit high school settings and involved each stakeholder (students, teachers, coordinators) in the implementation process. The study also utilized frequent reminders and training for teachers and coordinators, used technology such as eDPR to facilitate self-monitoring, and collected feedback through social acceptability questionnaires to ensure that adaptations were effective and well-received .
+
+### What implications do the study findings have for educational policy and practice regarding behavioral interventions in high schools?
+
+The study findings imply that educational policies and practices should consider the necessity of adapting interventions like CICO to meet the developmental needs of high school students more effectively. Providing contextually relevant supports that improve academic engagement can reduce challenging behavior and reliance on exclusionary disciplinary practices. Policymakers might focus on the integration of such interventions within a school's existing framework to ensure they are robustly supported and systematically implemented, potentially improving both academic and social outcomes for students with and at risk for disabilities .
+
+### How was the CICO-Secondary intervention adapted to meet the developmental needs of high school students, and what were the outcomes of this adaptation?
+
+The CICO-Secondary intervention was adapted to be more developmentally appropriate for high school students by aligning it with the increased academic and social demands typical of this educational level. The adaptations included procedural components that were relevant and suitable for adolescents’ developmental stages, such as incorporating self-regulation skills like self-monitoring and goal setting. The outcomes showed that the intervention was implemented with procedural fidelity and led to improved student academic engagement, with a functional relation evident between the implementation of CICO-Secondary and increased engagement. These adaptations also increased the social validity of the intervention among students and school personnel .
+
+### In what ways did the study ensure procedural fidelity during the implementation of CICO-Secondary?
+
+To ensure procedural fidelity during the implementation of CICO-Secondary, the study used several strategies. These included providing a detailed orientation to students using the Student CICO-Secondary Training Protocol Checklist, conducting observations of CICO coordinators to ensure the consistency of orientation delivery, and collecting data on student participation and adherence to intervention components using the electronic Daily Progress Report (eDPR). Continuous observations were also conducted during the intervention phase to monitor classroom engagement and disruptions .
+
+### What factors contributed to the high social validity ratings of the CICO-Secondary intervention among students and school personnel?
+
+The high social validity ratings of the CICO-Secondary intervention can be attributed to several factors: the developmental appropriateness of the adapted components for high school students, the perceived usability and understandability of the electronic Daily Progress Report (eDPR), and the consistent support offered to students through feedback and self-monitoring practices. The participants also expressed a favorable willingness to participate in future CICO-Secondary implementations, indicating their overall positive reception and perceived utility of the intervention .
+
+### How does the adapted CICO-Secondary intervention address the issue of exclusionary discipline practices in high school settings?
+
+The adapted CICO-Secondary intervention addresses exclusionary discipline practices by increasing student engagement and reducing the likelihood of escalating challenging behaviors that often lead to disciplinary actions. By focusing on teaching self-regulation skills and fostering positive teacher-student interactions through structured check-ins and feedback, the intervention helps create a more supportive and inclusive school environment, reducing the reliance on exclusionary measures such as suspensions and disciplinary referrals .
+
+### What limitations should future research address to improve the implementation of CICO-Secondary in high schools?
+
+Future research should address limitations such as the small sample size and limited demographic diversity of the study participants to enhance the generalizability of findings. Additionally, expanding the intervention to include a broader range of behavioral outcomes beyond academic engagement, such as emotional or social skills, could provide a more comprehensive understanding of its impact. Investigating long-term effects of CICO-Secondary and strategies for sustaining engagement and adherence over time would also be valuable for future implementations .
+
+### How does visual data analysis contribute to understanding the effectiveness of interventions like CICO-Secondary in behavioral studies?
+
+Visual data analysis contributes significantly to understanding the effectiveness of interventions like CICO-Secondary by allowing researchers to observe patterns in data across different phases of the study. It involves analyzing levels, trends, variability, and consistency of data patterns across baseline and intervention phases, which helps in demonstrating a functional relation between the intervention and behavioral changes. This method allows for a nuanced understanding of how behavior is impacted immediately by an intervention and its stability over time .
+
+### What were the key components that contributed to increased academic engagement through the CICO-Secondary intervention based on the hypothesis presented?
+
+The key components hypothesized to contribute to increased academic engagement were students' self-monitoring with self-delivered feedback and the increased frequency of teacher praise for desired behaviors. These components facilitated students in meeting school-wide behavior expectations, thus enhancing their engagement with academic activities .

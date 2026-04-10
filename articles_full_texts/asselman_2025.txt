@@ -1,0 +1,2666 @@
+SOURCE: https://pure.uva.nl/ws/files/308961322/Adverse_childhood_experiences_and_internalizing_problems_and_externalizing_problems_of_students_with_emotional_and_behavioral_disorders_the_role_of_P.pdf
+TITLE: Adverse childhood experiences and internalizing problems and externalizing problems of students with emotional and behavioral disorders: the role of PTSD symptoms and executive functioning
+DOI: 10.1080/21683603.2025.2473897
+JOURNAL: International Journal of School & Educational Psychology, 13(2), 89-109
+
+UvA-DARE (Digital Academic Repository)
+Adverse childhood experiences and internalizing problems and externalizing
+problems of students with emotional and behavioral disorders
+the role of PTSD symptoms and executive functioning
+Asselman, M.W.; Offerman, E.C.P.; Koomen, H.M.Y.; Bolling, Floor; Hoeve, M.; Bosman, R.J.
+DOI
+10.1080/21683603.2025.2473897
+Publication date
+2025
+Document Version
+Proof
+Published in
+International Journal of School & Educational Psychology
+License
+CC BY-NC-ND
+Link to publication
+Citation for published version (APA):
+Asselman, M. W., Offerman, E. C. P., Koomen, H. M. Y., Bolling, F., Hoeve, M., & Bosman,
+R. J. (2025). Adverse childhood experiences and internalizing problems and externalizing
+problems of students with emotional and behavioral disorders: the role of PTSD symptoms
+and executive functioning. International Journal of School & Educational Psychology, 13(2),
+89-109. https://doi.org/10.1080/21683603.2025.2473897
+General rights
+It is not permitted to download or to forward/distribute the text or part of it without the consent of the author(s)
+and/or copyright holder(s), other than for strictly personal, individual use, unless the work is under an open
+content license (like Creative Commons).
+Disclaimer/Complaints regulations
+If you believe that digital publication of certain material infringes any of your rights or (privacy) interests, please
+let the Library know, stating your reasons. In case of a legitimate complaint, the Library will make the material
+inaccessible and/or remove it from the website. Please Ask the Library: https://uba.uva.nl/en/contact, or a letter
+to: Library of the University of Amsterdam, Secretariat, P.O. Box 19185, 1000 GD Amsterdam, The Netherlands.
+You will be contacted as soon as possible.
+Download date:10 Apr 2026
+
+Adverse childhood experiences and internalizing problems and externalizing 
+problems of students with emotional and behavioral disorders: the role of PTSD 
+symptoms and executive functioning
+M. W. Asselman
+a*, E. C. P. Offerman
+a*, H. M. Y. Koomen
+b, F. Bollinga, M. Hoeve
+b, and R. J. Bosman
+b
+aStichting Orion, Special Education, Amsterdam, The Netherlands; bResearch Institute Child Development and Education (RICDE), University of 
+Amsterdam, Amsterdam, The Netherlands
+ABSTRACT
+Since adverse childhood experiences (ACEs) seem highly prevalent for students with EBD, it is 
+important to understand how ACEs are related to their severe internalizing problems and externa­
+lizing problems. In this study, we assessed the mediating role of post traumatic stress (PTSD) 
+symptoms and executive functioning (EF) in the potential association between ACEs and inter­
+nalizing problems and externalizing problems. Participants were 174 students with EBD (mean age 
+11.58 years, 85.1% boys) in five urban separate special education (SE) schools. We conducted 
+multiple mediation modeling, examining pathways from ACEs (original and expanded framework) 
+via PTSD symptoms and EF to behavioral problems (internalizing and externalizing problems, 
+respectively). We used data from multiple sources, including self-reports, parent reports, and 
+school files. Overall, PTSD symptoms and self-reported EF fully mediated the association between 
+ACEs and internalizing problems and externalizing problems. Findings were consistent for both the 
+ten original ACEs as for the expanded ACE framework. Teachers’ perspectives of EF did not mediate 
+the association between ACEs and internalizing problems or externalizing problems. PTSD symp­
+toms and self-reported EF seem to play an important role in the pathway from ACEs to internalizing 
+problems and externalizing problems of students with EBD in separate SE schools.
+KEYWORDS 
+Emotional behavioral 
+disorders (EBD); adverse 
+childhood experiences 
+(ACEs); special education 
+schools; PTSD symptoms; 
+executive functioning; 
+trauma-informed
+Introduction
+The term emotional behavioral disorders (EBD) is used 
+to describe students with elevated levels of emotional, 
+behavioral or social difficulties compared to their peers 
+and are therefore often in need of special education (SE) 
+support (National Research Council and Institute of 
+Medicine, 2009; Popham et al., 2018). Despite SE ser­
+vices and additional mental health care support 
+(Offerman et al., 2022; Stoutjesdijk et al., 2012), schools 
+often struggle to fulfill the needs of these students 
+(Bradley et al., 2008) and long-term perspectives there­
+fore remain poor (e.g., Kauffman & Landrum, 2018; 
+Mitchell et al., 2019).
+Since adverse childhood experiences (ACEs) appear 
+to be highly prevalent in the lives of students with EBD 
+(Mueser & Taub, 2008; Offerman et al., 2022, 2025), 
+a trauma-informed perspective could advance our 
+understanding of their severe and persistent internaliz­
+ing problems and externalizing problems. ACEs are 
+broadly defined as single or chronic exposures in the 
+environment during childhood (0–18 years) that are 
+distressing, 
+potentially 
+harmful 
+and 
+traumatic 
+(Asmundson & Afifi, 2019; Felitti et al., 1998). An accu­
+mulation of ACEs could severely impact functions of the 
+brain that are crucial for self-regulation of emotions and 
+behavior (Nelson et al., 2020; Van der Kolk, 2003), 
+which are important aspects for educational outcomes, 
+and mental health (Robson et al., 2020). Dysfunctions of 
+the brain appear to be associated with symptoms of 
+a post-traumatic stress disorder (PTSD symptoms) on 
+the one hand and problems in executive functioning 
+(EF) on the other hand (De Bellis et al., 1999). 
+Therefore, PTSD symptoms and problems in EF could 
+play a key role in understanding the mechanisms of how 
+ACEs are potentially linked to internalizing problems 
+and externalizing problems of students with EBD, and 
+address new ways to support these students.
+Students with EBD
+Students with EBD experience a wide range of pro­
+blems, including internalizing problems (such as 
+CONTACT M. W. Asselman 
+m.asselman@orion.nl 
+Stichting Orion, Special Education, Bijlmerdreef 1289-2, 1103 TV, Amsterdam, The Netherlands
+*These authors contributed equally to this work.
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY 
+2025, VOL. 13, NO. 2, 89–109 
+https://doi.org/10.1080/21683603.2025.2473897
+© 2025 The Author(s). Published with license by Taylor & Francis Group, LLC.  
+This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial-NoDerivatives License (http://creativecommons.org/licenses/by-nc- 
+nd/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited, and is not altered, transformed, or built 
+upon in any way. The terms on which this article has been published allow the posting of the Accepted Manuscript in a repository by the author(s) or with their consent.
+
+anxiety, depression, negative self-image), externalizing 
+problems (such as aggression, and impulsivity), and 
+a high prevalence of psychiatric diagnoses (such as 
+attention deficit hyperactivity disorder (ADHD), autism 
+spectrum disorder (ASD) and oppositional defiant dis­
+order (ODD)). Furthermore, these students often 
+experience severe and persistent difficulties in building 
+or maintaining satisfactory interpersonal relationships 
+with peers and teachers (e.g., Kauffman & Landrum,  
+2018; Zweers, 2020).
+As stated by the United Nations, efforts are needed to 
+ensure that students with disabilities – such as EBD – 
+have equal access to quality education, access to inclu­
+sive and equitable education systems with lifelong 
+opportunities to learn (United Nations Department of 
+Economic and Social Affairs, 2018). To support students 
+with EBD, special educational services are often offered, 
+though globally definitions and criteria for SE services 
+vary widely, reflecting different educational systems, 
+cultural norms, and resources (Gagnon, 2022; Lopes,  
+2014). Even so, most Western countries provide 
+a continuum of SE services for students with EBD, 
+ranging from least to most restrictive, aiming to inte­
+grate students with disabilities into regular classrooms 
+whenever possible, and providing separate SE schools 
+for those with the most severe and persistent problems 
+(Individuals with Disabilities Education Act, 2004; 
+Kauffman & Landrum, 2018; McLeskey et al., 2012; 
+UNESCO, 1994).
+Currently, the identification rate of students with 
+EBD in the U.S. who receive special education services 
+under the category of ED is 0.7% of the school popula­
+tion age 3–21 years (National Center for Education 
+Statistics, 2024). In European countries (e.g., the UK, 
+Ireland), these numbers vary from 0.9% to 1.8% 
+(Popham et al., 2018). In other parts of the world data 
+on EBD students receiving SE services is less well docu­
+mented (Lopes, 2014). In the Netherlands, recent data 
+on the total number of students with EBD receiving 
+services along the SE continuum are not available. Yet, 
+1.35% of all Dutch students, aged 4–18 years, receive 
+education in separate SE schools for EBD (Ministerie 
+van Onderwijs, Cultuur en Wetenschap, 2023). After 
+placement, the great majority of these students remain 
+in SE schools (Breeman, 2015), in relatively small classes 
+of 10–15 students (Smeets, 2007), and with additional 
+support from paraprofessionals, school psychologists, 
+and youth mental healthcare (Offerman et al., 2022; 
+Zweers, 2020). Students from these separate SE schools 
+for EBD participated in this study.
+While progress has been made in EBD research over 
+the past 40 years, developing effective interventions for 
+students with the most complex needs continues to be 
+challenging on a global scale (Lloyd et al., 2019; 
+McKenna et al., 2021; Mitchell et al., 2019; Pollack 
+et al., 2024). Despite intensive support both in and out­
+side of school, students with EBD face increased risks of 
+early school dropout in the long term, just as reduced 
+school performance, juvenile offending, disconnection 
+from the community, and unemployment (Bradley 
+et al., 2008; Mendoza et al., 2020; Mitchell et al., 2019). 
+Furthermore, from a teacher’s perspective, although it is 
+well-established that high quality relationships are cru­
+cial for positive behavioral outcomes (Sabol & Pianta,  
+2012), teachers often struggle to fulfill the complex 
+relational needs of students with EBD, especially in 
+segregated SE settings (Little & Kobak, 2003). An 
+important challenge for teachers in segregated SE is 
+preventing a negative cycle of interaction with students, 
+where conflicts escalate externalizing behaviors, which 
+then leads to a further increase of conflicts (De Swart 
+et al., 2023). Research suggests that more adequate 
+training is needed for teachers to feel prepared for the 
+job (Billingsley et al., 2006; Bradley et al., 2008; De Swart 
+et al., 2023). Currently, teachers of students with EBD 
+report high levels of stress (Park & Shin, 2020), and 
+show higher attrition rates than other SE teachers 
+(Gilmour & Wehby, 2020). Both students’ and teachers’ 
+perspectives highlight the necessity for new approaches 
+to better understand and address the challenges of stu­
+dents with EBD, and inform educational policies and 
+daily practice. The critical role of trauma-informed 
+approaches are emphasized, as many students with 
+EBD are profoundly impacted by adverse childhood 
+experiences, and in need for nurturing and supportive 
+relationships (Lloyd et al., 2019; Pollack et al., 2024).
+ACEs and EBD
+Over the past years, a growing number of studies demon­
+strated that accumulating ACEs are associated with a wide 
+range of developmental health problems (Liming & Grube,  
+2018; Oh et al., 2018). In many studies, ACEs have been 
+operationalized in line with the early work of Felitti et al. 
+(1998), who described 10 “original” ACEs: physical abuse, 
+sexual abuse, emotional abuse, physical neglect, emotional 
+neglect, alcohol or substance abuse, mental health pro­
+blems, domestic violence, parent incarcerated, and paren­
+tal divorce. It has increasingly been recognized that there 
+are other ACEs, both within and outside the family, that 
+are important to take into account, such as bullying, pov­
+erty and community violence (Kalmakis & Chandler, 2014; 
+Portwood et al., 2021). Studies using such an expanded 
+framework proved to have similar outcomes as the original 
+framework (Cronholm et al., 2015; Portwood et al., 2021), 
+or, adding peer and community stressors, showed even 
+90
+M. W. ASSELMAN ET AL.
+
+better predictions of childrens’ mental health outcomes 
+(Finkelhor et al., 2013).
+Students with EBD – with internalizing and externa­
+lizing behavior as core problems – are, more than chil­
+dren without EBD, exposed to ACEs (Bethell et al.,  
+2016). In Dutch samples, ACEs appeared to be highly 
+prevalent among these students (Wassink - de Stigter 
+et al., 2024), compared to students in regular education 
+schools (Vink et al., 2019). Among students with EBD in 
+Dutch separate school facilities, all students (96.4% self- 
+report, 89.5% parent report, 95.3% school files) 
+appeared to be exposed to at least one ACE and more 
+than half of students (74.4% self-reports, 52.7% parent 
+reports, 59.9% school files) to four or more ACEs 
+(Offerman et al., 2022).
+In general populations, the accumulating effects of 
+ACEs on both internalizing problems and externalizing 
+problems has been well documented (Khanijahani & 
+Sualp, 2022; Scully et al., 2020). Subsequently, the need 
+for a deeper understanding of why identical environmental 
+experiences (e.g., ACEs) can result in different forms of 
+psychopathology in individuals has led to the emergence of 
+transdiagnostic approaches. For example, the transdiag­
+nostic model of risk and resilience of McLaughlin et al. 
+(2020) points out the importance of identifying core psy­
+chological and neurobiological mechanisms that link ACEs 
+to multiple forms of internalizing and externalizing psy­
+chopathology. Increasing insight into these core mechan­
+isms could help identify key targets for intervention, in 
+order to prevent or reduce negative effects of ACEs on 
+emotional and behavioral health (McLaughlin et al., 2020).
+Various scholars have analyzed factors and mechanisms 
+that may account for how and why ACEs lead to inter­
+nalizing problems and externalizing problems. It appears 
+that genes, gender, psychological resilience, social and 
+emotional information processing, parenting behavior, 
+parental emotional distress, and neighborhood support 
+are examples of factors that play a role in understanding 
+why some children who experience ACEs develop more 
+internalizing and externalizing problems than others 
+(Bethell et al., 2014; Khanijahani & Sualp, 2022; Schwartz 
+et al., 2019; Yang et al., 2022). Furthermore, a combination 
+of genes, gender and environmental factors increased the 
+chance of developing internalizing and externalizing pro­
+blems (Wright & Schwartz, 2021). However, for the educa­
+tional practice, more knowledge is needed on mechanisms 
+that are important specifically for school functioning and in 
+the school context. As students with EBD appear to experi­
+ence high rates of ACEs, trauma-informed theory could be 
+of additional value to understand the mechanisms that link 
+ACEs to their internalizing problems and externalizing 
+problems (see also Lloyd et al., 2019; Pollack et al., 2024).
+Trauma-informed theoretical framework
+Trauma-informed theories state that the impact of 
+ACEs on academic, emotional, and behavioral problems 
+could be understood from the negative effects of pro­
+longed stress on the functions of the body and the brain 
+(Nelson et al., 2020). In response to adverse events, 
+activation of the stress-response system helps children 
+to cope with their circumstances (Hornor, 2017). As the 
+body and brain is focused on survival, there is lower 
+activity in higher-region brain parts, associated with 
+abstract thinking and planning, whilst adrenaline and 
+cortisol are released to raise heartbeat, temperature and 
+muscle tension in order to fight, flight or freeze. Yet, 
+when faced with an accumulation of ACEs – especially 
+at a young age, for a longer period of time and without 
+sufficient social support – children’s stress responses 
+become chronically dysregulated (Hornor, 2017; 
+Nelson et al., 2020). Whereas a prolonged stress 
+response could be viewed as an adaptive and adequate 
+response to the child’s inadequate circumstances 
+(Marsman, 2021), chronic dysregulation of the stress 
+system is associated with dysfunctions of several brain 
+areas (Vaidya et al., 2024).
+PTSD symptoms
+Theoretically, it has been argued that chronic stress 
+affects the limbic system, location of both the amygdala 
+and the hippocampus, areas that are responsible for 
+processing emotional memories (Lupien et al., 2018). 
+Abnormalities in these areas could lead to higher sensi­
+tivity and reactivity to new stressors or could trigger 
+stimuli even if real danger is absent (Iacona & Johnson,  
+2018), and are particularly observed in people with 
+PTSD (De Bellis et al., 1999; Tupler & De Bellis, 2006). 
+Symptoms of PTSD include intrusions of frightening 
+events, persistent avoidance of stimuli associated with 
+traumatic event(s), negative alterations in cognitions 
+and mood and marked alterations in arousal and reac­
+tivity (American Psychiatric Association, 2013).
+In education, core symptoms of PTSD such as reex­
+periencing, hyperarousal, dissociation, sleep problems, 
+attention and memory problems, could substantially 
+interfere with school functioning, and are associated 
+with impaired educational performance over time 
+(Vilaplana-Pérez et al., 2020). PTSD symptoms can 
+cause classroom disruption and misunderstanding of 
+the students behavior by the teacher as – for students 
+with EBD – symptoms could easily be perceived as parts 
+of behavioral disorders (Mueser & Taub, 2008). More 
+knowledge on the role of ACEs and PTSD symptoms in 
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+91
+
+internalizing problems and externalizing problems of 
+students with EBD could help teachers reconceptualize 
+behavioral problems from a trauma-informed perspec­
+tive, enhance their compassion for the students’ pro­
+blem behavior (Anderson et al., 2022; Loomis et al.,  
+2023), and increase their capacity to respond in 
+a sensitive manner (Berger et al., 2021).
+Various empirical studies, both in general and clin­
+ical populations, have reported that an accumulation of 
+ACEs leads to an increased risk for PTSD symptoms 
+(Copeland et al., 2007; Darnell et al., 2019; McLaughlin 
+et al., 2013; Tabb et al., 2022). For example, Grasso et al. 
+(2009) found that in children with one type of maltreat­
+ment (sexual abuse, physical abuse, emotional maltreat­
+ment, domestic violence or physical neglect), 30% met 
+criteria of PTSD, whereas for children who were 
+exposed to four different types of maltreatment, 80% 
+met PTSD criteria. Furthermore, a systematic review on 
+studies in school-aged youth showed that PTSD symp­
+toms are associated with both internalizing problems 
+and externalizing problems (Perfect et al., 2016). In 
+addition, associations and high rates of comorbidity 
+were found between PTSD and various psychiatric dis­
+orders. These include more internalizing psychiatric 
+disorders anxiety disorders and mood disorders (Chiu 
+et al., 2024; Famularo et al., 1996), as well more exter­
+nalizing disorders as ADHD and conduct disorder 
+(Bernhard et al., 2018; Boodoo et al., 2022; Daud & 
+Rydelius, 2009; Famularo et al., 1996).
+Despite this, to our knowledge, the mediating role of 
+PTSD in the accumulating effects of ACEs on internaliz­
+ing and externalizing problems is less well understood. So 
+far, most studies have focused on associations between 
+a specific type of ACE and the mediating role that PTSD 
+symptoms could have on the associations between these 
+specific ACEs and internalizing problems and externaliz­
+ing problems. These studies showed that, in general youth 
+populations of preschool children, PTSD symptoms both 
+partially and fully mediated the association between 
+a specific type of ACE (maltreatment; intimate partner 
+violence) and internalizing problems and externalizing 
+problems (Miller et al., 2012; Milot et al., 2010). 
+Furthermore, in a school-aged sample Yoon et al. 
+(2016) found that PTSD symptoms mediated the effects 
+of witnessing violence at home on internalizing problems, 
+but not for externalizing problems.
+Executive functioning
+Chronic dysregulation of the stress system is also related to 
+dysfunctional development of the prefrontal cortex (Van  
+der Kolk, 2003), often seen in children with problems in EF 
+(Lund et al., 2020; Shonkoff et al., 2012). EF encompasses 
+a set of higher cognitive processes that facilitate planning 
+and goal-directed regulation of thoughts, emotions and 
+behavioral actions (Diamond, 2013). EF includes three 
+component processes: inhibitory control, working mem­
+ory, and cognitive flexibility (Diamond, 2013) and is con­
+sidered essential for navigating nearly all daily activities 
+(Blair & Diamond, 2008; Snyder et al., 2015).
+EF has been argued to have a strong influence on 
+academic learning (math, reading) and school success – 
+presumably even more than IQ – as they support goal- 
+directed problem solving, flexible adaptation to chan­
+ging circumstances, and intentional self-regulated learn­
+ing (Zelazo & Carlson, 2020). Moreover, impaired EF 
+could lead to developing problem behaviors in school, 
+such as inattentive and overactive behavior, as EF skills 
+are needed to sustain attentional focus, refrain from 
+responding impulsively, tolerate frustration and resist 
+distraction (Zelazo et al., 2016). More knowledge on the 
+specific role of ACEs and EF for internalizing and 
+externalizing problems in students with EBD, could 
+help teachers understand how behaviors of students 
+could be explained and how they can help improve EF 
+(Gagne & Nwadinobi, 2018; Muir et al., 2023; Samson 
+et al., 2024).
+A systematic review of Lund et al. (2020) revealed 
+that the dose–response relationship between the accu­
+mulation ACEs and EF deficits had not been explored. 
+Yet, for a number of specific ACEs, namely maternal 
+depression as and for maltreatment, associations with 
+EF deficits were found (Lund et al., 2020). More 
+recently, Op den Kelder et al. (2022) were among the 
+first studies to examine the associations between ACEs 
+(expanded framework) and EF. They found a long-term 
+effect of accumulating ACEs on later EF of children. 
+This association was found even though the children in 
+that study predominantly experienced “less severe” 
+trauma exposure, such as severe accidents rather than 
+maltreatment or neglect. Furthermore, consistent with 
+an earlier review of cross-sectional studies among pre- 
+school children (Schoemaker et al., 2013), a recent 
+meta-analysis revealed that EF in children may serve 
+as a predictive factor for a range of externalizing and 
+internalizing problems (Stucke & Doebel, 2024; Yang 
+et al., 2022). For ADHD and conduct problems, associa­
+tions were stronger in mixed and at-risk populations 
+than in general populations (Yang et al., 2022).
+For the mediating role of EF, a number of studies in 
+general and clinical samples of school-aged children, 
+showed the mediating effect of EF on the association 
+between maltreatment and both internalizing problems 
+92
+M. W. ASSELMAN ET AL.
+
+and externalizing problems (Heleniak et al., 2016; Wade 
+et al., 2019; Wei & Lü, 2023). However, Kent et al. (2022), 
+did not find a mediating effect of EF on the association 
+between maltreatment and disruptive behavior disorders. 
+Furthermore, Kent et al. (2022) and Wade et al. (2019) did 
+not find mediating effects of EF for older children (at age 
+16). Yet, for another specific ACE, namely poverty, 
+McNeilly et al. (2021) showed that EF mediated the asso­
+ciation between poverty and both internalizing problems 
+and externalizing problems.
+The present study
+To date, research has revealed associations between the 
+accumulation of ACEs and internalizing problems and 
+externalizing problems. For a more in depth under­
+standing on the underlying mechanisms between these 
+associations, both trauma-informed theory and empiri­
+cal research indicate that for educational practice, PTSD 
+symptoms and EF could be important mediators to 
+explore. This might be particularly of value for students 
+with EBD in separate SE schools, and their teachers, as 
+these students experience high numbers of ACEs and 
+struggle with the most severe internalizing and externa­
+lizing behavioral problems. Therefore, in the present 
+study, we examined the following questions regarding 
+this vulnerable population:
+(1) What are the associations between ACEs on the one 
+hand and PTSD symptoms, EF and internalizing 
+problems and externalizing problems on the other 
+hand?
+(2) Do PTSD symptoms mediate the associations 
+between ACEs and internalizing problems and 
+externalizing problems?
+(3) Does EF mediate the associations between ACEs 
+and internalizing problems and externalizing 
+problems?
+We expected that ACEs are associated with interna­
+lizing problems, externalizing problems (Nelson 
+et al., 2020; Scully et al., 2020), PTSD symptoms 
+(Alisic et al., 2014) and EF (Lund et al., 2020). 
+Furthermore, we expected that both PTSD symptoms 
+and EF are associated with internalizing problems, as 
+well as with externalizing problems (Perfect et al.,  
+2016; Yang et al., 2022). Finally, we expected that 
+PTSD symptoms and EF would mediate the associa­
+tions between ACEs and internalizing problems, as 
+well as for the associations between ACEs and exter­
+nalizing problems (Milot et al., 2010; Wei & Lü,  
+2023). We proposed the following theoretical media­
+tion models (Figure 1).
+Method
+Participants
+Our sample consisted of N = 174 students with EBD aged 
+8–18 years in five urban primary (65.5%) and secondary 
+(34.5%) separate SE schools. Students received the label of 
+PTSD symptoms
+Internalizing problems
+Externalizing problems
+Executive functioning
+ACEs
+Figure 1. A mediation model for ACEs, PTSD symptoms, executive functioning and EBD.
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+93
+
+EBD and SE eligibility through an evaluation procedure 
+by a regional authority based on a school report with 
+comprehensive testing results, often a psychiatric inter­
+view with child and parents, and the statement that the 
+required services and support for the students’ problems 
+could not be met in regular education schools (Wet op de 
+Expertisecentra, 2024).
+For this study, students (n = 169), their parents (n =  
+95), and SE teachers (n = 53) completed questionnaires. 
+School files (n = 172) were also included in the data- 
+collection. Student characteristics demonstrate that 
+almost the whole sample (98.8%) underwent at least 
+one psychological evaluation and met criteria for 
+a diagnosis according to the diagnostic and statistical 
+manual of mental disorders (DSM-IV or 5) (84.5%). In 
+41.4% of the students there was comorbidity of two or 
+more diagnoses. More than half of the students (54%) 
+used medication related to their DSM diagnoses. The 
+large majority of students received family-oriented care 
+(86.6%) and (mental health) care for their own problems 
+(97.9%), with a subset (15.1%) receiving trauma-related 
+care. On average, students had 9.7 care trajectories. The 
+majority of students in the sample started their school 
+careers in regular education schools (84.5%). All stu­
+dents had to switch to separate SE schools at some point 
+(M = 2.1 switches, range 1–10) (Table 1).
+Design and procedures
+The current study is part of an ongoing research project, 
+aimed at identifying factors that possibly influence the 
+onset and maintenance of emotional and behavioral pro­
+blems of students in Dutch urban separate SE schools for 
+EBD. We used a descriptive retrospective cross-sectional 
+design and a multi-informant perspective. Data were 
+collected between the years 2017 and 2020. The study 
+was approved by the Ethics Review Board of the 
+University of Amsterdam (2017-CDE-7603). We briefed 
+primary caregivers, teachers and students about the pro­
+ject and asked for active and documented informed con­
+sent. The consent rate of parents for child participation 
+was 35% (N = 174). Students filled in questionnaires dur­
+ing an individual assessment on a computer in the pre­
+sence of a trained professional. Parents reported about 
+their children at home, online or on paper if online was 
+not possible. The primary SE schools had almost no full- 
+time teachers. Therefore, per class we invited the teacher 
+who spent the greatest amount of time in the classroom 
+per week to take part in this research. In secondary SE 
+schools, we asked each student’s mentor to fill in the 
+questionnaires. These mentors are teachers who have 
+the additional task to build a warm and supportive 
+relationship with a student through one-on-one guidance 
+and encouragement besides their daily classroom inter­
+action. Furthermore, the mentor intensively collaborates 
+with parents and the healthcare professionals involved. 
+Additionally, for each participating student, their school 
+file was analyzed. For full information on participation 
+flowchart, adapted methods of assessment, and the school 
+file study, we refer to Offerman et al. (2022).
+Measurements
+ACEs
+To gain the best possible insight into the number of ACEs 
+of the students, we used a multi-informant perspective 
+(self-report, parent report, school files: Appendix A). 
+ACEs in the self-report and parent report were measured 
+by the Dutch version of the Life Events Checklist (LEC; 
+Diehle et al., 2013; Nader et al., 1996; Van Meijel et al.,  
+2013). The LEC is part of the Clinician-Administered 
+PTSD Scale for Children and Adolescents interview 
+(CAPS-CA), that can be administered for children aged 
+8 to 16 years. Additionally, students completed four ques­
+tions derived from an ACE questionnaire (Vink et al.,  
+Table 1. Characteristics of the sample (N = 174).
+Characteristics
+%
+M (SD)
+Range
+Sex
+Male
+85.1
+Female
+14.9
+Age
+Full sample
+11.58 (2.54)
+Primary special education
+10.08 (1.47)
+Secondary special education
+14.43 (1.45)
+IQ classification
+89.58 (17.85)
+49–137
+Mother’s country of birth
+Netherlands
+49.4
+Western country
+9.2
+Non-western country
+36.2
+Missing
+5.2
+Father’s country of birth
+Netherlands
+33.9
+Western country
+5.7
+Non-western country
+39.1
+Missing
+21.3
+Household composition
+Original household
+33.9
+Blended household
+8.0
+Single parent household
+43.7
+Other
+13.2
+Missing
+1.1
+Diagnostic classification according to 
+DSM-IV or 5
+Autism spectrum disorders*
+35.1
+Attention-deficit/hyperactivity disorder 35.1
+Oppositional defiant disorder
+16.1
+Disruptive behavior disorder NOS
+9.2
+Posttraumatic stress disorder
+6.3
+Specific learning disorder
+6.3
+Reactive attachment disorder
+5.7
+Borderline intellectual functioning
+5.7
+Other
+16.5
+*Includes one student diagnosed with a multiple complex developmental 
+disorder.
+94
+M. W. ASSELMAN ET AL.
+
+2016) to measure three household challenges that were 
+not represented in the LEC: parental substance abuse 
+(alcohol and drugs), parental mental health problems 
+and suicide or attempted suicide of a member of the 
+household (Bethell et al., 2017). To measure the internal 
+consistency of the LEC combined with the additional 
+ACE questions, we used Kuder-Richardson’s formula 
+(KR20) due to the dichotomous response categories (0/ 
+1). The internal consistency for self-report was very good 
+(KR20 = .81) and good (KR20 = .73) for parent report 
+(Sutrisno, 2016). We excluded participants when more 
+than two answers were missing (Offerman et al., 2022). 
+Therefore, four parent reports and no self-reports were 
+excluded.
+In addition, school files were analyzed and the num­
+ber and type of ACEs were coded. One of the first 
+authors developed a codebook that was used to score 
+the participating students’ school files. The codebook 
+comprised six dimensions, e.g., socio demographic 
+information, developmental history of the student 
+(e.g., ACEs, complex trauma symptoms), school and 
+healthcare trajectories. All available reports from pre­
+vious and current schools settings and care settings were 
+used, such as school progress reports, daily school jour­
+nals, diagnostic reports, psychiatric reports and youth 
+health care service reports. Four research assistants were 
+trained in how to use the codebook. Subsequently, 
+a total of 18 school files (10.5%) were separately scored 
+by the assistants and then discussed until consensus was 
+reached. With an agreement of 86.4%, the inter-rater 
+reliability for the complete codebook was considered as 
+good. Additionally, each coded ACE was checked for 
+accuracy based on the reported substantiation by 
+a different research assistant than the coder. Moreover, 
+we rated the quality of the school files using a low, 
+moderate and high score. Most school files appeared 
+to be of low (69.8%) or moderate (27.9%) quality.
+For the current study we only used the coded 
+number and type of ACEs from the school files. 
+The codebook included 10 ACEs from the original 
+ACEs framework (Felitti et al., 1998), 12 ACEs from 
+an expanded ACEs framework, and 3 ACEs that 
+could be scored as “other” e.g (Anda et al., 2006; 
+Asmundson & Afifi, 2019; Balistreri & Alvira- 
+Hammond, 2016). Each ACE item in the codebook 
+was scored and substantiated with text from the 
+school file. ACEs that were substantiated by official 
+reports, and ACEs that were reported in the school 
+files according to the operationalization in the code­
+book (unsubstantiated ACEs) were scored as pre­
+sent. If no information was found or the available 
+information did not match the operationalization, 
+the ACE was scored as absent (“00”).
+Based on the answers of all three informants, we 
+compiled a composite ACE variable for 10 ACEs 
+(ACE10) from the original framework and for an 
+expanded framework of 31 ACEs (ACE31). If at least 
+one of the informants indicated that an ACE either had 
+happened or was witnessed, a score of 1 was given for 
+that particular ACE. We directed all ACEs into cate­
+gories based on the work of Asmundson and Afifi 
+(2019).
+Internalizing problems and externalizing problems
+To measure the severity of emotional and behavioral 
+problems of students, we used the internalizing pro­
+blems and externalizing problems subscales of the 
+Brief Problem Monitor Youth (BPM-Y) (Achenbach 
+et al., 2011). The BPM-Y is an abbreviated version of 
+the Achenbach System of Empirically Based Assessment 
+instruments (ASEBA) (Achenbach & Rescorla, 2001; 
+Piper et al., 2014), for children aged 6–18 years, to rate 
+internalizing problems (six items) and externalizing 
+problems (seven items) with 0 = not true, 1 = somewhat 
+true or 2 = very true. Seven reports were missing and 
+therefore excluded. In a previous study, the BPM-Y 
+showed to have very good internal reliability (Hair 
+et al., 2015) for internalizing problems (Cronbach’s α  
+= .89) and externalizing problems (Cronbach’s α = .84) 
+(Rognstad et al., 2022). In our present study, the internal 
+reliability for internalizing problems was good 
+(Cronbach’s α = .78) and moderate for externalizing 
+problems (Cronbach’s α = .69) (Hair et al., 2015).
+PTSD symptoms
+We used the child version of the Children’s Revised 
+Impact of Event Scale (CRIES-13) to measure PTSD 
+symptoms of students. The CRIES-13 is designed for 
+children aged 8–18 and contains 13 items of PTSD symp­
+toms of which frequency during the past 7 days was 
+scored on a four-point scale 0 (not at all), 1 (rarely), 3 
+(sometimes) and 5 (often) (Perrin et al., 2005). We 
+excluded 28 reports due to more than two missing 
+answers, and one report because of an unreliable answer. 
+Previous studies showed good psychometric properties of 
+the CRIES-13 (Olff, 2005; Perrin et al., 2005; Verlinden 
+et al., 2014). In a Dutch clinical sample, Cronbach’s alpha 
+was .89 and test-retest reliability coefficient was .85 for the 
+total score on the CRIES-13 (Verlinden et al., 2014). In 
+our present study the Cronbach’s alpha can be considered 
+as very good (.86) (Hair et al., 2015).
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+95
+
+Executive functioning (EF)
+To measure the level of EF, we used the self-report and 
+teacher report version of the Behavior Rating Inventory 
+of Executive Function (BRIEF) screener (Gioia et al.,  
+2000). The BRIEF screener is an abbreviated version of 
+the complete BRIEF questionnaire, and has been devel­
+oped to provide a global picture of the level of EF in 
+health care and education. The BRIEF screener consists 
+of 14 items that can be scored on a three point scale 
+(never, sometimes, often). Examples of the self-report 
+items are “I have problems sitting still,” and “I have 
+trouble switching from one activity to another.” 
+Examples of the teacher report items are “Has trouble 
+remembering things even for a few minutes,” and “Does 
+not take initiative.” Higher scores indicate more EF 
+problems. Previously, the BRIEF screener showed inter­
+nal consistency of .81 for the child version, and .91 for 
+the teacher version (Huizinga & Smidts, 2016). In our 
+present study, Cronbach’s alphas were very good for 
+both self-report (.80) and teacher report (.88) (Hair 
+et al., 2015). Six self-reports and three teacher reports 
+were missing and therefore excluded in the analysis.
+Data analysis
+We used SPSS version 28 for descriptives and prelimin­
+ary analyses. First, we examined the correlations among 
+study variables, and the correlations among the covari­
+ates and study variables. Consistent with the findings of 
+Offerman et al. (2022), gender, age, family composition 
+and economic hardship correlated with ACEs. 
+Therefore, these were included as exogenous covariates. 
+We regarded the univariate skewness of 2.0 and higher 
+and kurtosis of 7.0 and higher as non-normality indica­
+tors (Curran et al., 1996). In addition, multivariate out­
+liers were detected using Mahalanobis distance, with 
+a cut off of p < .001. The values of all variables in this 
+study indicated normality and no outliers were detected.
+Second, we conducted multiple mediation modeling, 
+using Mplus version 7.31 (Muthén & Muthén, 
+1998–2013), in order to test our hypotheses using the 
+maximum likelihood estimation with a bootstrap techni­
+que of 1000 samples to obtain more accurate estimates of 
+direct, indirect and total effects. We tested mediation 
+hypotheses using the conditions of Baron and Kenny 
+(1986): a significant association between (a) predictors 
+and the mediators (EF, PTSD symptoms), (b) mediators 
+and outcome variables (internalizing problems and exter­
+nalizing problems), and (c) predictors (ACE10 and 
+ACE31) and the outcome variables. Also, (c’) the direct 
+effect of predictors on outcomes should change when 
+including the effect of the mediator. We stopped building 
+the model when one of the conditions was not met.
+Results
+Descriptives and correlations between study 
+variables
+Based on a multi-informant perspective (students, 
+parents, school files), we calculated the prevalence 
+of ACEs (original and expanded framework) 
+(Table 2). Almost all students were exposed to at 
+least one ACE (97.1% for original framework, 
+99.4% for expanded framework) with an average of 
+4.2 ACEs for the original framework and 10.2 ACEs 
+for our expanded framework. The majority of stu­
+dents were exposed to four or more ACEs (60.3% for 
+the original framework; 94.8% for the expanded fra­
+mework). Bullying (77%), physical abuse (84.5%), 
+emotional abuse (71.3%), traffic or other accidents 
+(73.6%) and the death of someone close (62.6%) were 
+most frequently reported (Appendix A).
+Table 3 summarizes the means, standard devia­
+tions, and bivariate correlations between the study 
+variables. For ACEs, we found significant positive 
+associations between the number of ACEs and all 
+study variables: PTSD symptoms, internalizing pro­
+blems and externalizing problems, and for both 
+teachers’ and self-report of EF. These associations 
+were 
+found 
+both 
+for 
+ACE10 
+and 
+ACE31. 
+Furthermore, 
+we 
+found 
+positive 
+associations 
+Table 2. Descriptive statistics and correlations for study variables.
+Variable
+n
+M
+SD
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+1. Sex
+174
+.15
+.36
+–
+2. Age
+174
+11.58
+2.54
+.03
+–
+3. Household composition
+135
+.56
+.50
+−.07
+−.02
+–
+4. Economic hardship
+172
+.20
+.40
+.07
+−.18*
+.07
+–
+5. 10 ACEs
+174
+4.15
+2.11
+.13
+−.24**
+.28**
+.25**
+–
+6. 31 ACEs
+174
+10.21
+4.50
+.09
+−.15*
+.21*
+.28**
+.84**
+–
+7. CRIES-13 total scorea
+145
+23.33
+15.65
+.11
+−.23**
+−.06
+.19*
+.32**
+.39**
+–
+8. BPM internalizing problemsa
+167
+2.30
+2.54
+.04
+.01
+−.08
+−.06
+.21**
+.19*
+.51**
+–
+9. BPM externalizing problemsa
+167
+3.66
+2.56
+−.01
+−.19*
+.11
+.02
+.29**
+.28**
+.34**
+.47**
+–
+10. BRIEF screener total scorea
+168
+23.42
+5.22
+−.03
+−.09
+.04
+.02
+.27**
+.28**
+.44**
+.50**
+.47**
+–
+11. BRIEF screener total scoreb
+171
+38.60
+7.62
+−.05
+−.21**
+−.08
+.14
+.24**
+.27**
+.27**
+.19*
+.27**
+.24**
+.–
+aStudents’ self-report. b Teacher report. 
+*p < .05. **p < .01.
+96
+M. W. ASSELMAN ET AL.
+
+between PTSD symptoms and internalizing pro­
+blems and externalizing problems, and self- 
+reported EF and internalizing problems and exter­
+nalizing problems. Also the teachers’ reports of EF 
+and internalizing problems and externalizing pro­
+blems were significantly associated.
+Mediation models
+Multiple mediation models
+We tested a total of eight mediation models to investi­
+gate whether EF and PTSD symptoms mediated the 
+associations between ACEs and students’ internalizing 
+problems and externalizing problems. Separate models 
+for ACEs using the original framework (ACE10) and 
+ACEs using the extended framework (ACE31). We also 
+tested separate models for teacher and student-reported 
+EF. PTSD symptoms were only measured using the 
+students’ perspective. Gender was not included as 
+a covariate as it did not correlate with either of the 
+study variables. Family composition and economic 
+hardship only correlated with the predictor and not 
+with other variables. Therefore, they were not included 
+in the models as covariates. Students’ age correlated 
+with all variables and was included in all mediation 
+models as an exogenous covariate.
+Mediation models of PTSD symptoms and 
+student-reported EF
+The total, total indirect, specific indirect, and direct 
+effects of all multiple mediation models where the stu­
+dent’s perspective of EF was included, are summarized 
+in Table 4. In the models of students’ internalizing 
+problems, it appeared that the total indirect effect was 
+significant in models of ACE10 (p < .001) and ACE31 (p  
+< .001). It appeared that EF significantly mediated the 
+associations between ACEs and internalizing problems 
+(ACE10, p = .011; ACE31, p = .008). 7.7% and 7.9% of 
+the variance was explained by EF, for ACE10 and 
+ACE31, respectively. In addition, students’ PTSD symp­
+toms also mediated the association between ACEs and 
+internalizing problems (ACE10, p = .001; ACE31, p  
+= .001). 13.3% and 17.7% of the variance was explained 
+by PTSD symptoms, for ACE10 and ACE31, respec­
+tively. The total explained variance of internalizing pro­
+blems was 37.0% and 37.3% for ACE10 and ACE31, 
+respectively.
+For externalizing problems, the total indirect effect of 
+both EF and PTSD symptoms was significant (ACE10, p  
+= .002; ACE31, p = .001). It appeared that EF significantly 
+mediated the associations between ACEs and externaliz­
+ing problems (ACE10, p = .013; ACE31, p = .011). The 
+explained variance of EF was 7.7% and 8.0% for ACE10 
+and ACE31, respectively. Students’ PTSD symptoms 
+separately did not significantly mediate the associations 
+between ACEs and externalizing problems. However, the 
+explained variance of PTSD symptoms was 14.0% for the 
+ACE10-model and 18.1% for the ACE31-model, which 
+was larger compared to EF. The total explained variance 
+of externalizing problems was 24.6% and 24.4% for 
+ACE10 and ACE31, respectively.
+Mediation models of PTSD symptoms and 
+teacher-reported EF
+The total, indirect, and direct effects of the models 
+regarding the teacher perspectives of EF were reported 
+in Table 5.1 In all models where EF from the teachers’ 
+perspective was included, it appeared that EF was not 
+directly associated with externalizing problems (B (SE)  
+= 0.04(0.03), p = .183) or internalizing problems (B(SE)  
+= 0.02 (0.03), p = .619). This means that assumptions for 
+the second step in our mediation analysis were not met. 
+We can therefore conclude that EF, when measured 
+from the teachers’ perspective, was not a significant 
+Table 3. Number of ACEs per framework.
+ACEs
+Original framework 
+10 ACEs 
+(%)
+Expanded framework 
+31 ACEs 
+(%)
+0
+2.9
+0.6
+1
+7.5
+0.6
+2
+13.8
+1.7
+3
+15.5
+2.3
+4–7
+52.2
+27.0
+≥8
+8.0
+67.7
+≥1
+97.1
+99.4
+≥4
+60.3
+94.8
+M (SD)
+4.15 (2.11)
+10.21 (4.50)
+Min/Max
+0–9
+0–25
+N = 174.
+1As most teachers rated more than one student, we used Type=complex in all models for teacher-reported EF to take into account the nesting of students in 
+teachers. The results of these models were largely the same as for the reported model.
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+97
+
+mediator in the associations between ACEs and self- 
+reported internalizing problems and externalizing 
+problems.
+In models where EF from the teachers’ perspective 
+was eventually excluded, it appeared that PTSD 
+symptoms significantly mediated the association 
+between ACEs and internalizing problems (ACE10, p  
+< .001; ACE31, p < .001), and between ACEs and exter­
+nalizing problems (ACE10, p = .007; ACE31, p = .006). 
+This was expected based on results reported in the 
+Table 4. Summary of total, indirect, and direct effects of ACEs (ACE10 and ACE31) on 
+externalizing behavior and internalizing behavior). Both mediators (PTSD symptoms 
+and executive functioning) were measured from the students’ perspectives. Statistics 
+of the final model were reported.
+Outcome variable
+Internalizing problems
+Predictor variable: ACE10
+B
+SE
+p
+Total effect
+0.32
+0.11
+.004**
+Total indirect effecta
+0.29
+0.07
+<.001**
+PTSD symptoms
+0.16
+0.05
+.001**
+Executive functioning – Student perspective
+0.13
+0.05
+.011*
+Direct effect ACE10–Internalizing problems
+0.04
+0.11
+.728
+Predictor variable: ACE31
+B
+SE
+p
+Total effect
+0.12
+0.05
+.026*
+Total indirect effecta
+0.15
+0.03
+<.001**
+PTSD symptoms
+0.09
+0.03
+.001**
+Executive functioning – Student perspective
+0.06
+0.02
+.008**
+Direct effect ACE31–Internalizing problems
+−0.03
+0.05
+.552
+Outcome variable
+Externalizing problems
+Predictor variable: ACE10
+B
+SE
+p
+Total effect
+0.31
+0.10
+.001*
+Total indirect effecta
+0.19
+0.06
+.002**
+PTSD symptoms
+0.09
+0.05
+.113
+Executive functioning – Student perspective
+0.10
+0.04
+.013*
+Direct effect ACE10–Externalizing problems
+0.13
+0.10
+.219
+Predictor variable: ACE31
+B
+SE
+p
+Total effect
+0.14
+0.05
+.003**
+Total indirect effecta
+0.09
+0.03
+.001**
+PTSD symptoms
+0.05
+0.03
+.100
+Executive functioning – Student perspective
+0.05
+0.02
+.011*
+Direct effect ACE31–Externalizing problems
+0.04
+0.05
+.368
+aReflects the combined indirect effects via PTSD symptoms and executive functioning. *p < .05. **p < .01.
+Table 5. Summary of total, indirect, and direct effects of ACEs (ACE10 and ACE31) on 
+externalizing problems and internalizing problems, mediated by PTSD symptoms. 
+Statistics of the final model were reported.
+Outcome variable
+Internalizing problems
+Predictor variable: ACE10
+B
+SE
+p
+Total effect
+0.32
+0.11
+.005**
+Indirect effect (PTSD symptoms)
+0.22
+0.06
+<.001**
+Direct effect ACE10–Internalizing problems
+0.10
+0.11
+.364
+Predictor variable: ACE31
+B
+SE
+p
+Total effect
+0.12
+0.05
+.027*
+Indirect effect (PTSD symptoms)
+0.12
+0.03
+<.001**
+Direct effect ACE31–Internalizing problems
+0
+0.06
+.911
+Outcome variable
+Externalizing problems
+Predictor variable: ACE10
+B
+SE
+p
+Total effect
+0.31
+0.10
+.001**
+Indirect effect (PTSD symptoms)
+0.14
+0.05
+.007**
+Direct effect ACE10–Externalizing problems
+0.17
+0.11
+.121
+Predictor variable: ACE31
+B
+SE
+p
+Total effect
+0.14
+0.05
+.003**
+Indirect effect (PTSD symptoms)
+0.08
+0.03
+.006**
+Direct effect ACE31–Externalizing problems
+0.06
+0.05
+.246
+*p < .05. **p < .01.
+98
+M. W. ASSELMAN ET AL.
+
+previous paragraph. The total explained variance for 
+internalizing problems was 26.7% and 26.5% for 
+ACE10 and ACE31, respectively. For externalizing pro­
+blems the total explained variance was 17.2% and 16.9% 
+for ACE10 and ACE31.
+Discussion
+In the current study we aimed to gain a better under­
+standing of the impact of ACEs on the internalizing pro­
+blems and externalizing problems of students with EBD in 
+separate SE schools. Therefore, we examined mediating 
+effects of PTSD symptoms and EF on the potential asso­
+ciations between ACEs and internalizing problems and 
+externalizing problems. Our results revealed high numbers 
+of ACEs in the lives of students with EBD in separate SE 
+schoolsSSES, with over 60% of the students being exposed 
+to four or more ACEs. When students experienced 
+a cumulative exposure to ACEs, we found more PTSD 
+symptoms, EF problems, internalizing problems, and 
+externalizing problems. Overall, we found that PTSD 
+symptoms and self-reported EF fully mediated the associa­
+tions between ACEs and both internalizing problems, and 
+externalizing problems. However, teacher-reported EF was 
+not significantly associated with internalizing problems 
+nor with externalizing problems. In conclusion, our study 
+suggests that PTSD symptoms and EF play a key role in the 
+pathway from ACEs to the severe internalizing problems 
+and externalizing problems of students with EBD in sepa­
+rate SE schools.
+Our study confirmed that students with EBD experi­
+ence higher numbers of ACEs compared to general popu­
+lations (Carlson et al., 2020; Hughes et al., 2017; Vink et al.,  
+2019). Consistent with studies in general populations, we 
+also found that cumulative exposure to ACEs is associated 
+with an increase in PTSD symptoms, EF problems, inter­
+nalizing problems, and externalizing problems (Copeland 
+et al., 2007; Khanijahani & Sualp, 2022; Op den Kelder 
+et al., 2022; Scully et al., 2020). As stated in the transdiag­
+nostic model of risk and resilience (McLaughlin et al.,  
+2020), this underlines the need to understand the mechan­
+isms that contribute to this association, in order to find 
+important pathways for intervention. So far, PTSD (Miller 
+et al., 2012; Milot et al., 2010) and EF (Heleniak et al., 2016; 
+McNeilly et al., 2021; Wade et al., 2019; Wei & Lü, 2023) 
+have been studied as separate mediators for single ACEs 
+such as maltreatment, neglect or poverty. Our study 
+demonstrated that for students with EBD in separate SE 
+schools, PTSD symptoms and self-reported EF fully 
+mediated the associations between accumulating ACEs 
+and both internalizing and externalizing problems.
+Therefore, in line with trauma-informed theory, our 
+study suggests that PTSD symptoms and EF play a key 
+role in the pathway from ACEs to the severe internaliz­
+ing problems and externalizing problems of students 
+with EBD in separate SE schools. This provides impor­
+tant insights for educational professionals. If educators’ 
+perspective on the severe emotional and behavioral pro­
+blems of their students widens toward the potential 
+impact of ACEs in terms of PTSD symptoms and EF, 
+it could increase their capacity to respond to students’ 
+trauma by adopting trauma-informed practices focusing 
+on stress-regulation and recovery (Berger et al., 2021).
+From our results, we can conclude that especially 
+PTSD symptoms were important for predicting students 
+internalizing problems, considering the larger explained 
+variance in all models. Therefore, findings suggest that 
+trauma symptoms play a more pronounced role in the 
+development of internalizing problems than EF and are 
+therefore a prioritized target in education and youth 
+health care for students with EBD.
+While our findings are overall in line with previous 
+studies, compared to different samples, we found some 
+differences for both mediators and externalizing problems. 
+For example, our findings contrasted those of Yoon et al. 
+(2016) who did not find a mediating effect of PTSD on the 
+association between violence at home and externalizing 
+problems in a school-aged sample. Possibly, this difference 
+could be explained by the lack of control for gender in this 
+study. Externalizing behavior might be a result of exposure 
+to violence particularly among boys (Ruchkin et al., 2007), 
+who are dominantly represented in our sample. Bernardes 
+et al. (2020) and Kent et al. (2022) did not find a mediating 
+effect of EF on the association between maltreatment on 
+the one hand and disruptive behavior disorders and anti­
+social personality disorder on the other hand. These dif­
+ferent findings could potentially be explained by the fact 
+that, in contrast to our sample, Bernardes et al. (2020) 
+found only a low rate of maltreatment, whereas effects on 
+EF would predominantly occur among individuals with 
+more prolonged stress responses, within samples with 
+higher rates of maltreatment (Bernardes et al., 2020). 
+Moreover, participants in the study of Kent et al. (2022) 
+were substantially older than in our study, which may have 
+hindered capturing changes in EF after maltreatment.
+Informants
+As mentioned, findings on the mediating role of EF did 
+not hold for teacher-reported EF, as in our mediating 
+models we did not find significant associations between 
+teacher-reported EF and either self-reported internaliz­
+ing problems or externalizing problems. Overall, there 
+appears to be low agreement between teachers’ and self- 
+reports of EF (Andersen et al., 2024). In our study, we 
+found even lower correlations between teacher- and 
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+99
+
+student EF reports than in Andersen et al. (2024). It 
+means that self-reports and teacher reports are highly 
+different and potentially provide unique perspectives in 
+understanding the role of EF as a mediator between 
+ACEs and internalizing problems and externalizing pro­
+blems. Future research could include such multiple per­
+spectives and additionally test competing models of 
+same-informant and cross-informant mediation.
+Limitations, strengths and future research
+Several limitations in our study should be noted. First, 
+our sample was relatively small, which restricts the gen­
+eralizability of our findings. Second, we expect to have 
+a potential underreport of ACEs and trauma-related 
+problems, as parents’ main reasons for refusal were 
+that their child already had experienced many diagnos­
+tic assessments and participation was expected to be too 
+stressful because of the child’s trauma (Offerman et al.,  
+2022). In addition, while using aggregated ACE scores 
+gave us the best possible estimation of the number of 
+ACEs, we cannot rule out underestimation for several 
+reasons. These include the fact that parents may not be 
+aware of all ACEs, or may have a feeling of shame that 
+have led to underreporting (Zelechoski et al., 2021), and 
+the fact that the quality of school files varied, not all 
+information on ACEs had been documented. 
+Furthermore, our study was limited due to a cross- 
+sectional and retrospective design. Therefore, state­
+ments about causal effects between variables could not 
+be made. Nevertheless, we view our study as a first step 
+toward a better understanding of the role of ACEs, 
+PTSD and EF in understanding internalizing problems 
+and externalizing problems in students with EBD. 
+Research among such a highly vulnerable population, 
+using a multi-informant perspective, is relatively scarce.
+Future research could explore the role of ACEs, 
+PTSD symptoms and EF in students with (less severe) 
+EBD in regular education settings as essential factors for 
+early intervention and prevention of high service needs 
+(Pollack et al., 2024). Currently, almost all students 
+within our sample experienced multiple school switches 
+and health care trajectories before referral to separate SE 
+schools. Although we did not find significant differences 
+for gender or for students in single parent households, 
+these factors remain important to be considered in 
+future research, as males and students from single par­
+ents households are greatly overrepresented among stu­
+dents with EBD, compared to a general population. 
+Furthermore, future research may also be directed at 
+exploring other potential mediators in the further 
+understanding of the onset and maintenance of inter­
+nalizing problems and externalizing problems after 
+ACEs, such as resilience (Bethell et al., 2014; Lackova 
+Rebicova et al., 2021; Yang et al., 2022), attachment or 
+close relationships with significant others (e.g., Baglivio 
+et al., 2020; Burstein et al., 2021; Hays-Grudo & Morris,  
+2020; Kobak et al., 2001), social processes such as coer­
+cive family interactions in the absence of positive social 
+interactions (Asmussen et al., 2020; Patterson et al.,  
+1998), and school connectedness (Yang et al., 2022).
+Lastly, while our study focused on underlying mechan­
+isms for the association between ACEs and internalizing 
+problems and externalizing problems in students with 
+EBD in separate SE schools, it is important that future 
+research will pay attention to predictors of their ACEs, for 
+example on the intergenerational transmission of paren­
+tal ACEs (Ma et al., 2022; Narayan et al., 2021; Racine 
+et al., 2023) and for what is called “the circle of adversity” 
+in which behavioral problems may be a precursor of 
+ACEs as well (Lugo-Candelas et al., 2021).
+Implications for practice
+Raising awareness among educational professionals on 
+the prevalence and impact of ACEs, and the crucial role 
+of PTSD symptoms and EF in understanding emotional 
+and behavioral problems, is a first and important step 
+toward finding new, trauma-informed, ways to support 
+students with EBD. Schoolwide trauma-informed 
+approaches encompass training educational profes­
+sionals on the impact of ACEs on development, and 
+finding ways to support their dysregulated students in 
+class. Trauma-informed approaches also address profes­
+sionals’ own emotional health and well-being by pro­
+moting self-care and organizational support, as the 
+professionals play a crucial role in fostering high- 
+quality relationships, and provide regulatory support 
+for their students who are impacted by ACEs and EBD 
+(Blodgett & Dorado, 2016).
+Furthermore, in daily practice, teachers could adopt 
+positive mental health practices to counterbalance the 
+overactive stress response system of their students and 
+reduce PTSD symptoms, and prompt a more resilient 
+baseline. Predictable daily structures, and behavioral 
+practices such as deep breathing, muscle relaxation and 
+mindfulness training are such examples (Samson et al.,  
+2024). Moreover, the importance of EF in understanding 
+internalizing problems and externalizing problems of 
+students with EBD, appeals to a need to include (stress) 
+regulation activities in education and youth mental health 
+support. Physical exercise, mindfulness, yoga and 
+100
+M. W. ASSELMAN ET AL.
+
+mediated play have proved to be effective in improving 
+EF and self-regulation and could have an important role 
+to reduce internalizing and externalizing problems, and 
+promote educational achievement for students with EBD 
+(Gagne & Nwadinobi, 2018; Muir et al., 2023).
+Based on our findings, it may be crucial to conduct early 
+assessment for both ACEs and PTSD symptoms in chil­
+dren with (emerging) EBD. It should be noted that in our 
+sample, prevalence rates of diagnosed PTSD (6.3%) were 
+much lower than other diagnoses such as ADHD (35.1%) 
+and autism spectrum disorders (35.1%). This could indi­
+cate that underdiagnosis and undertreatment of PTSD 
+symptoms could be an important issue for students with 
+EBD in separate SE schools. Based on our overall high 
+prevalence rates, we advise the assessment of a broad range 
+of ACEs, as they provide a wide understanding of the 
+circumstances students – and their parents – have lived 
+and survived in and potentially influence the way they 
+think, feel and behave. As students in our sample are 
+consequently exposed to ACEs within the family context, 
+we recommend that every assessment should include par­
+ental (rearing) stressors as well as family social circum­
+stances (debts, housing and work, social support).
+Early assessment could help to timely referral to 
+trauma treatment (EMDR, T-CBT, KID-NET), which 
+could play an important role in reducing internalizing 
+problems and externalizing problems and therefore 
+improving wellbeing for these students and their readi­
+ness to learn (Burback et al., 2024; Gutermann et al.,  
+2017; Karatzias et al., 2019; Lee et al., 2022). In recent 
+years, family-based trauma treatment has come forward 
+as a promising and potentially more effective way to 
+support both parents and children that suffer from the 
+effects of (intergenerational) trauma (Martin et al., 2019; 
+Mevissen et al., 2020; Mooren et al., 2023), that could 
+stop the cascade of problems and provide parents with 
+the support they need.
+Conclusion
+Our current study suggests that – through pathways of 
+PTSD symptoms and EF – ACEs play a key role in 
+understanding the severe internalizing problems and 
+externalizing problems of students with EBD in separate 
+SE schools. The strongest evidence was found for the 
+role of PTSD symptoms in the understanding of inter­
+nalizing problems. Our findings underscore the need of 
+a shift in perspective toward viewing emotional and 
+behavioral disorders as a coping mechanism to deal 
+with the adversity these students are confronted with 
+early in life (Marsman, 2021). From such a perspective, 
+family-based trauma-informed approaches in education 
+and care, with interventions specifically targeting PTSD 
+symptoms and EF deficit, could help to improve 
+students’ wellbeing and, ultimately, their outcomes.
+Acknowledgments
+The authors would like to thank Annette van der Poel for 
+supporting this project.
+Disclosure statement
+No potential conflict of interest was reported by the author(s).
+Funding
+This research received no external funding.
+Notes on contributors
+Michiel W. Asselman; (MSc) works as a scientist practitioner 
+at Stichting Orion, Amsterdam, a special education founda­
+tion and as a clinical child and youth psychologist. He is 
+a PhD candidate at the University of Amsterdam. His research 
+interests are trauma, attachment, (special) education and 
+families of children with severe emotional and behavioral 
+problems.
+Evelyne C.P. Offerman; (MSc) currently works as a scientist 
+practitioner at Stichting Orion, a special education foundation 
+in Amsterdam and is a PhD candidate at the University of 
+Amsterdam. Her research interests are adverse childhood 
+experiences, trauma-related problems, parental (mental) 
+health problems, intergenerational trauma and organizational 
+health in schools.
+Helma M.Y. Koomen; (PhD) is professor (emeritus) at the 
+Research Institute of Child Development and Education, 
+University of Amsterdam. Her main areas of expertise include 
+teacher–child relationships and professional pedagogical 
+practices in relation to emotional, behavioral, social, and aca­
+demic adjustment of children with and without special needs; 
+assessment and intervention of teacher–child relationships.
+Floor Bolling; (BSc) works as a researcher at Stichting Orion, 
+Amsterdam, a special education foundation in Amsterdam for 
+students with emotional behavioral disorders and/or intellec­
+tual disabilities and long-term illness. Her research interests 
+are adverse childhood experiences, special education, intellec­
+tual disabilities and school development.
+Machteld Hoeve; (PhD) is associate professor at the Research 
+Institute Child Development and Education, University of 
+Amsterdam. Her research focuses on the development of 
+juvenile delinquency, in particular risk factors of juvenile 
+delinquency such as family factors, and mental health pro­
+blems in juvenile justice youth.
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+101
+
+Rianne J. Bosman; (PhD) is assistant professor at the Research 
+Institute of Child Development and Education, University of 
+Amsterdam and works as a clinical psychologist. Her main 
+interests concern the antecedents and consequences of tea­
+cher–child relationships and interventions for improvement 
+of teacher–child relationships.
+ORCID
+M. W. Asselman 
+http://orcid.org/0000-0002-3338-4392
+E. C. P. Offerman 
+http://orcid.org/0000-0003-0044-7112
+H. M. Y. Koomen 
+http://orcid.org/0000-0001-9404-1855
+M. Hoeve 
+http://orcid.org/0000-0002-4487-5365
+R. J. Bosman 
+http://orcid.org/0000-0002-4263-1746
+Data availability statement
+The data presented in this study are available on request from 
+the corresponding author. The data are not publicly available 
+due to privacy.
+References
+Achenbach, T. M., McConaughy, S. H., Ivanova, M. Y., & 
+Rescorla, L. A. (2011). Manual for the ASEBA brief problem 
+monitor (BPM). ASEBA.
+Achenbach, T. M., & Rescorla, L. A. (2001). Manual for the 
+ASEBA school-age forms &profiles. University of Vermont, 
+Research Center for Children, Youth, & Families.
+Alisic, E., Zalta, A. K., Van Wesel, F., Larsen, S. E., 
+Hafstad, G. S., Hassanpour, K., & Smid, G. E. (2014). 
+Rates of post-traumatic stress disorder in trauma-exposed 
+children and adolescents: Meta-analysis. British Journal of 
+Psychiatry, 204(5), 335–340. https://doi.org/10.1192/bjp.bp. 
+113.131227  
+American Psychiatric Association. (2013). Diagnostic and sta­
+tistical manual of mental disorders (5th ed.) American 
+Psychiatric Publishing, Inc. https://doi.org/10.1176/appi. 
+books.9780890425596  
+Anda, R. F., Felitti, V. J., Bremner, J. D., Walker, J. D., 
+Whitfield, C. H., Perry, B. D., Dube, S. R., & Giles, W. H. 
+(2006). The enduring effects of abuse and related adverse 
+experiences in childhood: A convergence of evidence from 
+neurobiology and epidemiology. European Archives of 
+Psychiatry and Clinical Neuroscience, 256(3), 174–186.  
+https://doi.org/10.1007/s00406-005-0624-4  
+Andersen, A. C., Sund, A. M., Thomsen, P. H., Lydersen, S., 
+Haugan, A. L. J., & Nøvik, T. S. (2024). Executive function 
+measured by BRIEF in adolescents diagnosed and treated 
+for ADHD: Problem profiles and agreement between 
+informants. Child Neuropsychology, 30(1), 45–59. https:// 
+doi.org/10.1080/09297049.2023.2174506  
+Anderson, K. M., Haynes, J. D., Ilesanmi, I., & Conner, N. E. 
+(2022). Teacher professional development on trauma- 
+informed care: Tapping into students’ inner emotional 
+worlds. Journal of Education for Students Placed at Risk 
+(JESPAR), 27(1), 59–79. https://doi.org/10.1080/10824669. 
+2021.1977132  
+Asmundson, G. G. J. G., & Afifi, T. O. (Eds.). (2019). Adverse 
+childhood experiences: Using evidence to advance research, 
+practice, policy, and prevention. Elsevier.
+Asmussen, K., Fischer, F., Drayton, E., & McBride, T. (2020). 
+Adverse childhood experiences: What we know, what we 
+don’t know, and what should happen next. Early 
+Intervention Foundation, 18(3), 882–902. https://www.eif. 
+org.uk/report/adverse-childhood-experiences-what-we- 
+know-what-we-dont-know-and-what-should-happen-next 
+Baglivio, M. T., Wolff, K. T., DeLisi, M., & Jackowski, K. 
+(2020). The role of adverse childhood experiences (ACEs) 
+and psychopathic features on juvenile offending criminal 
+careers to age 18. Youth Violence and Juvenile Justice, 18(4), 
+337–364. https://doi.org/10.1177/1541204020927075  
+Balistreri, K. S., & Alvira-Hammond, M. (2016). Adverse 
+childhood experiences, family functioning and adolescent 
+health and emotional well-being. Public Health, 132, 72–78.  
+https://doi.org/10.1016/j.puhe.2015.10.034  
+Baron, R. M., & Kenny, D. A. (1986). The moderator-mediator 
+variable distinction in social psychological research: 
+Conceptual, strategic, and statistical considerations. Journal 
+of Personality & Social Psychology, 51(6), 1173. https://doi. 
+org/10.1037/0022-3514.51.6.1173  
+Berger, E., Bearsley, A., & Lever, M. (2021). Qualitative eva­
+luation of teacher trauma knowledge and response in 
+schools. Journal of Aggression, Maltreatment & Trauma, 
+30(8), 1041–1057. https://doi.org/10.1080/10926771.2020. 
+1806976  
+Bernardes, E. T., Manitto, A. M., Miguel, E. C., Pan, P. M., 
+Batistuzzo, M. C., Rohde, L. A., & Polanczyk, G. V. (2020). 
+Relationships between childhood maltreatment, impair­
+ment in executive functions and disruptive behavior dis­
+orders in a community sample of children. European Child 
+& Adolescent Psychiatry, 29(7), 969–978. https://doi.org/10. 
+1007/s00787-019-01408-3  
+Bernhard, A., Martinelli, A., Ackermann, K., Saure, D., & 
+Freitag, C. M. (2018). Association of trauma, posttraumatic 
+stress disorder and conduct disorder: A systematic review 
+and meta-analysis. Neuroscience & Biobehavioral Reviews, 
+91, 153–169. https://doi.org/10.1016/j.neubiorev.2016.12.019  
+Bethell, C. D., Carle, A., Hudziak, J., Gombojav, N., 
+Powers, K., Wade, R., & Braveman, P. (2017). Methods to 
+assess adverse childhood experiences of children and 
+families: Toward approaches to promote child well-being 
+in policy and practice. Academic Pediatrics, 17(7), S51–S69.  
+https://doi.org/10.1016/j.acap.2017.04.161  
+Bethell, C. D., Gombojav, N., Solloway, M., & Wissow, L. 
+(2016). Adverse childhood experiences, resilience and 
+mindfulness-based approaches: Common denominator 
+issues for children with emotional, mental, or behavioral 
+problems. Child & Adolescent Psychiatric Clinics, 25(2), 
+139–156. https://doi.org/10.1016/j.chc.2015.12.001  
+Bethell, C. D., Newacheck, P., Hawes, E., & Halfon, N. (2014). 
+Adverse childhood experiences: Assessing the impact on 
+health and school engagement and the mitigating role of 
+resilience. Health Affairs, 33(12), 2106–2115. https://doi. 
+org/10.1377/hlthaff.2014.0914  
+Billingsley, B. S., Fall, A.-M., & Williams, T. O., Jr. (2006). 
+Who is teaching students with emotional and behavioral 
+disorders? A profile and comparison to other special 
+102
+M. W. ASSELMAN ET AL.
+
+educators. Behavioral Disorders, 31(3), 252–264. https:// 
+doi.org/10.1177/019874290603100301  
+Blair, C., & Diamond, A. (2008). Biological processes in pre­
+vention and intervention: The promotion of self-regulation 
+as a means of preventing school failure. Development & 
+Psychopathology, 20(3), 899–911. https://doi.org/10.1017/ 
+S0954579408000436  
+Blodgett, C., & Dorado, J. (2016). A selected review of 
+trauma-informed school practice and alignment with edu­
+cational practice. (1–88). CLEAR Trauma Center. 
+University of California, 1. https://www.pacesconnection. 
+com/g/aces-in-education/fileSendAction/fcType/5/fcOid/ 
+478274755608928450/fodoid/478274755608928447/ 
+CLEAR-Trauma-Informed-Schools-White-Paper.pdf 
+Boodoo, R., Lagman, J. G., Jairath, B., & Baweja, R. (2022). 
+A review of ADHD and childhood trauma: Treatment 
+challenges and clinical guidance. Current Developmental 
+Disorders Reports, 9(4), 137–145. https://doi.org/10.1007/ 
+s40474-022-00256-2  
+Bradley, R., Doolittle, J., & Bartolotta, R. (2008). Building on 
+the data and adding to the discussion: The experiences and 
+outcomes of students with emotional disturbance. Journal 
+of Behavioral Education, 17, 4–23. https://doi.org/10.1007/ 
+s10864-007-9058-6  
+Breeman, L. D. (2015). A special need for others: Social class­
+room relationships and behavioral problems in children with 
+psychiatric disorders in special education [Doctoral disserta­
+tion]. Erasmus University Medical. http://hdl.handle.net/ 
+1765/77867 
+Burback, L., Brémault-Phillips, S., Nijdam, M. J., 
+McFarlane, A., & Vermetten, E. (2024). Treatment of post­
+traumatic stress disorder: A state-of-the-art review. Current 
+Neuropharmacology, 22(4), 557–635. https://doi.org/10. 
+2174/1570159X21666230428091433  
+Burstein, D., Yang, C., Johnson, K., Linkenbach, J., & Sege, R. 
+(2021). Transforming practice with HOPE (healthy out­
+comes from positive experiences). Maternal and Child 
+Health Journal, 25(7), 1019–1024. https://doi.org/10.1007/ 
+s10995-021-03173-9  
+Carlson, J. S., Yohannan, J., Darr, C. L., Turley, M. R., Larez, 
+N. A., & Perfect, M. M. (2020). Prevalence of adverse child­
+hood experiences in school-aged youth: A systematic 
+review (1990–2015). International Journal of School & 
+Educational Psychology, 8(Suppl 1), 2–23. https://doi.org/ 
+10.1080/21683603.2018.1548397 
+Chiu, H. T. S., Low, D. C. W., Chan, A. H. T., & Meiser- 
+Stedman, R. (2024). Relationship between anxiety sensitiv­
+ity and post-traumatic stress symptoms in trauma-exposed 
+adults: A meta-analysis. Journal of Anxiety Disorders, 103, 
+102857. https://doi.org/10.1016/j.janxdis.2024.102857  
+Copeland, W. E., Keeler, G., Angold, A., & Costello, E. J. 
+(2007). Traumatic events and posttraumatic stress in 
+childhood. Archives of General Psychiatry, 64(5), 577–584.  
+https://doi.org/10.1001/archpsyc.64.5.577  
+Cronholm, P. F., Forke, C. M., Wade, R., Bair-Merritt, M. H., 
+Davis, M., Harkins-Schwarz, M., Pachter, L. M., & 
+Fein, J. A. (2015). Adverse childhood experiences: 
+Expanding the concept of adversity. The American 
+Journal of Preventive Medicine, 49(3), 354–361. https:// 
+doi.org/10.1016/j.amepre.2015.02.001  
+Curran, P. J., West, S. G., & Finch, J. F. (1996). The robustness 
+of test statistics to nonnormality and specification error in 
+confirmatory factor analysis. Psychological Methods, 1(1), 
+16–29. https://doi.org/10.1037/1082-989X.1.1.16  
+Darnell, D., Flaster, A., Hendricks, K., Kerbrat, A., & 
+Comtois, K. A. (2019). Adolescent clinical populations 
+and associations between trauma and behavioral and emo­
+tional problems. Psychological Trauma: Theory, Research, 
+Practice, & Policy, 11(3), 266–273. https://doi.org/10.1037/ 
+tra0000371  
+Daud, A., & Rydelius, P. A. (2009). Comorbidity/Overlapping 
+between ADHD and PTSD in relation to IQ among chil­
+dren of traumatized/non-traumatized parents. Journal of 
+Attention Disorders, 13(2), 188–196. https://doi.org/10. 
+1177/1087054708326271  
+De Bellis, M. D., Keshavan, M. S., Clark, D. B., Casey, B. J., 
+Giedd, J. N., Boring, A. M., Frustaci, K., & Ryan, N. D. 
+(1999). 
+Developmental 
+traumatology: 
+II. 
+Brain 
+development. Biological Psychiatry, 45(10), 1271–1284.  
+https://doi.org/10.1016/S0006-3223(99)00045-1  
+De Swart, F., Burk, W. J., van Efferen, E., van der Stege, H., & 
+Scholte, R. H. J. (2023). The teachers’ role in behavioral 
+problems of pupils with EBD in special education: Teacher- 
+child relationships versus structure. Journal of Emotional 
+and Behavioral Disorders, 31(4), 260–271. https://doi.org/ 
+10.1177/10634266221119169  
+Diamond, A. (2013). Executive functions. Annual Review of 
+Psychology, 64(1), 135–168. https://doi.org/10.1146/ 
+annurev-psych-113011-143750  
+Diehle, J., de Roos, C., Boer, F., & Lindauer, R. J. L. (2013). A 
+cross-cultural validation of the clinician administered 
+PTSD scale for children and adolescents in a Dutch 
+population. European Journal of Psychotraumatology, 4(1), 
+19896. https://doi.org/10.3402/ejpt.v4i0.19896  
+Famularo, R., Fenton, T., Kinscherff, R., & Augustyn, M. 
+(1996). Psychiatric comorbidity in childhood post trau­
+matic stress disorder. Child Abuse and Neglect, 20(10), 
+953–961. https://doi.org/10.1016/0145-2134(96)00084-1  
+Felitti, V. J., Anda, R. F., Nordenberg, D., Williamson, D. F., 
+Spitz, A. M., Edwards, V., & Marks, J. S. (1998). 
+Relationship of childhood abuse and household dysfunc­
+tion to many of the leading causes of death in adults: The 
+adverse childhood experiences (ACE) study. The American 
+Journal of Preventive Medicine, 14(4), 245–258. https://doi. 
+org/10.1016/S0749-3797(98)00017-8  
+Finkelhor, D., Shattuck, A., Turner, H., & Hamby, S. (2013). 
+Improving the adverse childhood experiences study scale. 
+JAMA Pediatrics, 167(1), 70–75. https://doi.org/10.1001/ 
+jamapediatrics.2013.420  
+Gagne, J. R., & Nwadinobi, O. K. (2018). Self-control inter­
+ventions that benefit executive functioning and academic 
+outcomes in early and middle childhood. Early Education 
+& Development, 29(7), 971–987. https://doi.org/10.1080/ 
+10409289.2018.1496721  
+Gagnon, J. C. (2022). Inclusion in American and Finnish 
+schools: The neglect of youth with emotional and beha­
+vioral disorders. European Journal of Special Needs 
+Education, 
+37(4), 
+603–616. 
+https://doi.org/10.1080/ 
+08856257.2021.1929235  
+Gilmour, A. F., & Wehby, J. H. (2020). The association 
+between teaching students with disabilities and teacher 
+turnover. Journal of Educational Psychology, 112(5), 
+1042–1060. https://doi.org/10.1037/edu0000394  
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+103
+
+Gioia, G. A., Isquith, P. K., Guy, S. C., & Kenworthy, L. (2000). 
+Test review behavior rating inventory of executive function. 
+Child Neuropsychology, 6(3), 235–238. https://doi.org/10. 
+1076/chin.6.3.235.3152  
+Grasso, D., Boonsiri, J., Lipschitz, D., Guyer, A., Houshyar, S., 
+Douglas-Palumberi, H., Massey, J., & Kaufman, J. (2009). 
+Posttraumatic stress disorder: The missed diagnosis. Child 
+Welfare, 88(4), 157–176. https://www.ncbi.nlm.nih.gov/ 
+pmc/articles/PMC4158713/ 
+Gutermann, J., Schwartzkopff, L., & Steil, R. (2017). Meta- 
+analysis of the long-term treatment effects of psychological 
+interventions in youth with PTSD symptoms. Clinical Child 
+& Family Psychology Review, 20(4), 422–434. https://doi. 
+org/10.1007/s10567-017-0242-5  
+Hair, J. F., Jr., Celsi, M., Money, A. H., Samouel, P., & Page, M. 
+(2015). Essentials of business research methods (3rd ed.). 
+Routledge. https://doi.org/10.4324/9781315716862  
+Hays-Grudo, J., & Morris, A. S. (2020). Protective and com­
+pensatory experiences: The antidote to ACEs. In J. Hays- 
+Grudo & A. S. Morris (Eds.), Adverse and protective child­
+hood experiences: A developmental perspective (pp. 23–40). 
+American Psychological Association. https://doi.org/10. 
+1037/0000177-002  
+Heleniak, C., Jenness, J. L., Vander Stoep, A., McCauley, E., & 
+McLaughlin, K. A. (2016). Childhood maltreatment expo­
+sure 
+and 
+disruptions 
+in 
+emotion 
+regulation: 
+A transdiagnostic pathway to adolescent internalizing and 
+externalizing psychopathology. Cognitive Therapy and 
+Research, 40(3), 394–415. https://doi.org/10.1007/s10608- 
+015-9735-z  
+Hornor, G. (2017). Resilience. Journal of Pediatric Health 
+Care, 31(3), 384–390. https://doi.org/10.1016/j.pedhc. 
+2016.09.005  
+Hughes, K., Bellis, M. A., Hardcastle, K. A., Sethi, D., 
+Butchart, A., Mikton, C., Jones, L., & Dunne, M. P. 
+(2017). The effect of multiple adverse childhood experi­
+ences on health: A systematic review and meta-analysis. 
+Lancet Public Health, 2(8), e356–e366. https://doi.org/10. 
+1016/S2468-2667(17)30118-4  
+Huizinga, M., & Smidts, D. (2016). BRIEF-screener. 
+Vragenlijst voor snelle screening van executieve functies bij 
+kinderen en jongeren[BRIEF short form. Questionnaire for 
+fast screening of executive functioning of children and 
+adolescents]. Hogrefe Uitgevers.
+Iacona, J., & Johnson, S. (2018). Neurobiology of trauma and 
+mindfulness for children. Journal of Trauma Nursing: The 
+Official Journal of the Society of Trauma Nurses, 25(3), 
+187–191. https://doi.org/10.1097/JTN.0000000000000365  
+Individuals with Disabilities Education Act of 2004, Pub. 
+L. No. 108-446, 118 Stat. 2647. (2004).
+Kalmakis, K. A., & Chandler, G. E. (2014). Adverse childhood 
+experiences: Towards a clear conceptual meaning. Journal 
+of Advanced Nursing, 70(7), 1489–1501. https://doi.org/10. 
+1111/jan.12329  
+Karatzias, T., Murphy, P., Cloitre, M., Bisson, J., Roberts, N., 
+Shevlin, M., Hyland, P., Maercker, A., Ben-Ezra, M., 
+Coventry, P., Mason-Roberts, S., Bradley, A., & Hutton, P. 
+(2019). Psychological interventions for ICD-11 complex 
+PTSD symptoms: Systematic review and meta-analysis. 
+Psychological Medicine, 49(11), 1761–1775. https://doi. 
+org/10.1017/S0033291719000436  
+Kauffman, J. M., & Landrum, T. J. (2018). Characteristics of 
+emotional and behavioral disorders of children and youth 
+with disabilities (11th ed.). Pearson.
+Kent, K. R., Hopfer, C. J., Corley, R. P., & Stallings, M. C. 
+(2022). Executive functions as a mediator of childhood 
+maltreatment on adult psychopathology: A longitudinal 
+mediation analysis comparing maltreatment factor 
+models. Child Abuse and Neglect, 123, 105369. https://doi. 
+org/10.1016/j.chiabu.2021.105369  
+Khanijahani, A., & Sualp, K. (2022). Adverse childhood 
+experiences, neighborhood support, and internalizing and 
+externalizing mental disorders among 6-17 years old US 
+children: Evidence from a population-based study. 
+Community Mental Health Journal, 58(1), 166–178.  
+https://doi.org/10.1007/s10597-021-00808-7  
+Kobak, R., Little, M., Race, E., & Acosta, M. C. (2001). 
+Attachment disruptions in seriously emotionally disturbed 
+children: Implications for treatment. Attachment & Human 
+Development, 3(3), 243–258. https://doi.org/10.1080/ 
+14616730110096861  
+Lackova 
+Rebicova, 
+M., 
+Dankulincova 
+Veselska, 
+Z., 
+Husarova, D., Madarasova Geckova, A., Jansen, D. E., van 
+Dijk, J. P., & Reijneveld, S. A. (2021). Does resilience 
+mediate the association of adverse early childhood experi­
+ences with emotional and behavioural problems? 
+International Journal of Public Health, 66, 1604006.  
+https://doi.org/10.3389/ijph.2021.1604006  
+Lee, E., Faber, J., & Bowles, K. A. (2022). A review of trauma 
+specific treatments (TSTs) for posttraumatic stress disorder 
+(PTSD). Clinical Social Work Journal, 50(2), 147–159.  
+https://doi.org/10.1007/s10615-021-00816-w  
+Liming, K. W., & Grube, W. A. (2018). Wellbeing outcomes 
+for children exposed to multiple adverse experiences in 
+early childhood: A systematic review. Child & Adolescent 
+Social Work Journal, 35(4), 317–335. https://doi.org/10. 
+1007/s10560-018-0532-x  
+Little, M., & Kobak, R. (2003). Emotional security with tea­
+chers and children’s stress reactivity: A comparison of 
+special-education and regular-education classrooms. 
+Journal of Clinical Child & Adolescent Psychology, 32(1), 
+127–138. https://doi.org/10.1207/15374420360533121  
+Lloyd, B. P., Bruhn, A. L., Sutherland, K. S., & Bradshaw, C. P. 
+(2019). Progress and priorities in research to improve out­
+comes for students with or at risk for emotional and beha­
+vioral disorders. Behavioral Disorders, 44(2), 85–96. https:// 
+doi.org/10.1177/0198742918808485  
+Loomis, A. M., Curby, T. W., & Zinsser, K. M. (2023). Beyond 
+the behavior: Teachers’ trauma-informed attitudes relate to 
+lower expulsion risk among uninhibited preschoolers. 
+Children & Youth Services Review, 145, 106806. https:// 
+doi.org/10.1016/j.childyouth.2023.106806  
+Lopes, J. A. (2014). International perspectives in EBD: Critical 
+issues. In P. Garner, J. Kauffman, & J. Elliot (Eds.), The sage 
+handbook of emotional and behavioural difficulties (2nd ed., 
+pp. 9–20). Sage Publications.
+Lugo-Candelas, C., Corbeil, T., Wall, M., Posner, J., Bird, H., 
+Canino, G., Fisher, P. W., Suglia, S. F., & Duarte, C. S. 
+(2021). ADHD and risk for subsequent adverse childhood 
+experiences: Understanding the cycle of adversity. Journal 
+of Child Psychology and Psychiatry, 62(8), 971–978. https:// 
+doi.org/10.1111/jcpp.13352  
+104
+M. W. ASSELMAN ET AL.
+
+Lund, J. I., Toombs, E., Radford, A., Boles, K., & 
+Mushquash, C. (2020). Adverse childhood experiences 
+and 
+executive 
+function 
+difficulties 
+in 
+children: 
+A systematic review. Child Abuse and Neglect, 106, 
+104485. https://doi.org/10.1016/j.chiabu.2020.104485  
+Lupien S J, Juster R, Raymond C and Marin M. (2018). The 
+effects of chronic stress on the human brain: From neuro­
+toxicity, to vulnerability, to opportunity. Frontiers in 
+Neuroendocrinology, 49 91–105. 10.1016/j.yfrne.2018.02. 
+001  
+Ma, X., Biaggi, A., Sacchi, C., Lawrence, A. J., Chen, P.-J., 
+Pollard, R., Matter, M., Mackes, N., Hazelgrove, K., 
+Morgan, C., Harding, S., Simonelli, A., Schumann, G., 
+Pariante, C. M., Mehta, M., Montana, G., Rodriguez- 
+Mateos, A., Nosarti, C., & Dazzan, P. (2022). Mediators 
+and moderators in the relationship between maternal child­
+hood adversity and children’s emotional and behavioural 
+development: A systematic review and meta-analysis. 
+Psychological Medicine, 52(10), 1817–1837. https://doi. 
+org/10.1017/S0033291722001775  
+Marsman, A. (2021). Beyond dis-ease and dis-order: Exploring 
+the long-lasting impact of childhood adversity in relation to 
+mental 
+health 
+[Doctoral 
+dissertation, 
+Maastricht 
+University]. Ridderprint. https://doi.org/10.26481/dis. 
+20211103vm  
+Martin, C. G., Everett, Y., Skowron, E. A., & Zalewski, M. 
+(2019). The role of caregiver psychopathology in the treat­
+ment of childhood trauma with trauma-focused cognitive 
+behavioral therapy: A systematic review. Clinical Child & 
+Family Psychology Review, 22(3), 273–289. https://doi.org/ 
+10.1007/s10567-019-00290-4  
+McKenna, J. W., Brigham, F., Garwood, J., Zurawski, L., 
+Koc, M., Lavin, C., & Werunga, R. (2021). A systematic 
+review of intervention studies for young children with 
+emotional and behavioral disorders: Identifying the 
+research base. Journal of Research in Special Educational 
+Needs, 21(2), 120–145. https://doi.org/10.1111/1471-3802. 
+12505  
+McLaughlin, K. A., Colich, N. L., Rodman, A. M., & 
+Weissman, D. G. (2020). Mechanisms linking childhood 
+trauma exposure and psychopathology: A transdiagnostic 
+model of risk and resilience. BMC Medicine, 18(1), 96.  
+https://doi.org/10.1186/s12916-020-01561-6  
+McLaughlin, K. A., Koenen, K. C., Hill, E. D., Petukhova, M., 
+Sampson, N. A., Zaslavsky, A. M., & Kessler, R. C. (2013). 
+Trauma exposure and posttraumatic stress disorder in 
+a national sample of adolescents. Journal of the American 
+Academy of Child and Adolescent Psychiatry, 52(8), 
+815–830. https://doi.org/10.1016/j.jaac.2013.05.011  
+McLeskey, J., Landers, E., Williamson, P., & Hoppey, D. 
+(2012). Are we moving toward educating students with 
+disabilities in less restrictive settings? Journal of Special 
+Education, 
+46(3), 
+131–140. 
+https://doi.org/10.1177/ 
+0022466910376670  
+McNeilly, E. A., Peverill, M., Jung, J., & McLaughlin, K. A. 
+(2021). Executive function as a mechanism linking socio­
+economic status to internalizing and externalizing psycho­
+pathology in children and adolescents. Journal of 
+Adolescence, 89(1), 149–160. https://doi.org/10.1016/j.ado 
+lescence.2021.04.010  
+Mendoza, M., Blake, J. J., Marchbanks, M. P., III, & Ragan, K. 
+(2020). Race, gender, and disability and the risk for juvenile 
+justice contact. Journal of Special Education, 53(4), 
+226–235. https://doi.org/10.1177/0022466919845113  
+Mevissen, L., Ooms-Evers, M., Serra, M., de Jongh, A., & 
+Didden, R. (2020). Feasibility and potential effectiveness 
+of an intensive trauma-focused treatment programme for 
+families with PTSD and mild intellectual disability. 
+European Journal of Psychotraumatology, 11(1), 1777809.  
+https://doi.org/10.1080/20008198.2020.1777809  
+Miller, L. E., Howell, K. H., & Graham-Bermann, S. A. (2012). 
+Potential mediators of adjustment for preschool children 
+exposed to intimate partner violence. Child Abuse and 
+Neglect, 36(9), 671–675. https://doi.org/10.1016/j.chiabu. 
+2012.07.005  
+Milot, T., Éthier, L. S., St-Laurent, D., & Provost, M. A. (2010). 
+The role of trauma symptoms in the development of beha­
+vioral problems in maltreated preschoolers. Child Abuse 
+and Neglect, 34(4), 225–234. https://doi.org/10.1016/j. 
+chiabu.2009.07.006  
+Ministerie van Onderwijs, Cultuur en Wetenschap. (2023). 
+Leerlingaantallen. [Student numbers]. https://www.ocwin 
+cijfers.nl/themas/passend-onderwijs/leerlingaantallen#:~: 
+text=Ontwikkeling%20vso%20per%20cluster&text= 
+Cluster%204%20is%20van%202015,n%207%25(1.304% 
+20leerlingen )
+Mitchell, B. S., Kern, L., & Conroy, M. A. (2019). Supporting 
+students with emotional or behavioral disorders: State of 
+the field. Behavioral Disorders, 44(2), 70–84. https://doi. 
+org/10.1177/0198742918816518  
+Mooren, T., Van Ee, E., Hein, I., & Bala, J. (2023). Combatting 
+intergenerational effects of psychotrauma with multifamily 
+therapy. Frontiers in Psychiatry, 13, 867305. https://doi.org/ 
+10.3389/fpsyt.2022.867305  
+Mueser, K. T., & Taub, J. D. S. (2008). Trauma and PTSD 
+among adolescents with severe emotional disorders 
+involved in multiple service systems. Psychiatric Services, 
+59(6), 627–634. https://doi.org/10.1176/ps.2008.59.6.627  
+Muir, R. A., Howard, S. J., & Kervin, L. (2023). Interventions 
+and approaches targeting early self-regulation or executive 
+functioning in preschools: A systematic review. Educational 
+Psychology Review, 35(1), 27. https://doi.org/10.1007/ 
+s10648-023-09740-6  
+Muthén, L. K., & Muthén, B. O. (1998-2013). Mplus user’s 
+guide (7th ed.). Muthén & Muthén.
+Nader, K., Kriegler, K. A., Blake, D. D., Pynoos, R. S., 
+Newman, E., & Weathers, F. W. (1996). Clinician- 
+administered PTSD scale for children and adolescents 
+(CAPS-CA) [database record]. APA PsycTests. https://doi. 
+org/10.1037/t08962-000  
+Narayan, A. J., Lieberman, A. F., & Masten, A. S. (2021). 
+Intergenerational transmission and prevention of adverse 
+childhood experiences (ACEs). Clinical Psychology Review, 
+85. 101997. https://doi.org/10.1016/j.cpr.2021.101997  
+National Center for Education Statistics. (2024). Table 204.30. 
+Children 3 to 21 years old served under individuals with 
+disabilities Education Act (IDEA), part B, by type of disabil­
+ity: Selected years 1976-77 through 2023-24. U.S. 
+Department of Education. https://nces.ed.gov/programs/ 
+coe/indicator/cgg 
+National Research Council and Institute of Medicine. (2009). 
+Preventing mental, emotional, and behavioral disorders 
+among young people: Progress and possibilities. 
+Committee on the prevention of mental disorders and 
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+105
+
+substance abuse among children, youth, and young adults: 
+Research advances and promising interventions. In 
+M. E. O’Connell, T. Boat, & K. E. Warner (Eds.), Board 
+on children, youth, and families, division of behavioral and 
+social sciences and education. The National Academies 
+Press.
+Nelson, C. A., Bhutta, Z. A., Harris, N. B., Danese, A., & 
+Samara, M. (2020). Adversity in childhood is linked to 
+mental and physical health throughout life. BMJ, 371, 
+m304. https://doi.org/10.1136/bmj.m3048  
+Offerman, E. C. P., Asselman, M. W., Bolling, F., Helmond, P., 
+Stams, G. J. J. M., & Lindauer, R. J. L. (2022). Prevalence of 
+adverse childhood experiences in students with emotional 
+and behavioral disorders in special education schools from 
+a multi-informant perspective. International Journal of 
+Environmental Research and Public Health, 19(6), 3411.  
+https://doi.org/10.3390/ijerph19063411  
+Offerman, E. C. P., Asselman, M. W., Bolling, F., Stams, S. G. 
+J. J., Bosman, R. H. M., & Lindauer, L. R. J. (2025). 
+[Manuscript in preparation]. Research Institute Child 
+Development and Education (RICDE), University of 
+Amsterdam.
+Oh, D. L., Jerman, P., Silvério Marques, S., Koita, K., Purewal 
+Boparai, S. K., Burke Harris, N., & Bucci, M. (2018). 
+Systematic review of pediatric health outcomes associated 
+with childhood adversity. BMC Pediatrics, 18(1), 1–19.  
+https://doi.org/10.1186/s12887-018-1037-7  
+Olff, M. (2005). Dutch translation of the Children’s revised 
+impact of event scale (CRIES-13). Children and War 
+Foundation.
+Op den Kelder, R., Van den Akker, A. L., Ensink, J. B. M., 
+Geurts, H. M., Overbeek, G., de Rooij, S. R., 
+Vrijkotte, T. G. M., & Lindauer, R. J. L. (2022). 
+Longitudinal associations between trauma exposure and 
+executive functions in children: Findingsfrom a Dutch 
+birth cohort study. Research on Child and Adolescent 
+Psychopathology, 50(3), 1–14. https://doi.org/10.1007/ 
+s10802-021-00847-4  
+Park, E.-Y., & Shin, M. (2020). A meta-analysis of special 
+education teachers’ burnout. SAGE Open, 10(2). https:// 
+doi.org/10.1177/2158244020918297  
+Patterson, G. R., Reid, J. B., & Dishion, T. J. (1998). Antisocial 
+boys. In J. M. Jenkins, K. Oatley, & N. L. Stein (Eds.), 
+Human emotions: A reader (pp. 330–336). Blackwell 
+Publishing. (Reprinted from G. R. Patterson et al, 
+“Antisocial Boys,” Eugene, OR: Castalia, 1992, pp. 10-14).
+Perfect, M. M., Turley, M. R., Carlson, J. S., Yohanna, J., & 
+Saint Gilles, M. P. (2016). School-related outcomes of trau­
+matic event exposure and traumatic stress symptoms in 
+students: A systematic review of research from 1990 to 
+2015. School Mental Health, 8(1), 7–43. https://doi.org/10. 
+1007/s12310-016-9175-2  
+Perrin, S., Meiser-Stedman, R., & Smith, P. (2005). The 
+Children’s revised impact of event scale (CRIES): Validity 
+as a screening instrument for PTSD. Behavioural 
+andCognitive Psychotherapy, 33(4), 487–498. https://doi. 
+org/10.1017/S1352465805002419  
+Piper, B. J., Gray, H. M., Raber, J., & Birkett, M. A. (2014). 
+Reliability and validity of brief problem monitor, an 
+abbreviated form of the child behavior checklist. 
+Psychiatry and Clinical Neurosciences, 68(10), 759–767.  
+https://doi.org/10.1111/pcn.12188  
+Pollack, M. S., Lloyd, B. P., Doyle, L. E., Santini, M. A., & 
+Crowell, G. E. (2024). Are function-based interventions for 
+students with emotional/behavioral disorders trauma 
+informed? A systematic review. Behavior Analysis in Practice, 
+17(3), 1–18. https://doi.org/10.1007/s40617-023-00893-y  
+Popham, M., Counts, J., Ryan, J. B., & Katsiyannis, A. (2018). 
+A systematic review of self-regulation strategies to improve 
+academic outcomes of students with EBD. Journal of 
+Research in Special Educational Needs, 18(4), 239–253.  
+https://doi.org/10.1111/1471-3802.12408  
+Portwood, S. G., Lawler, M. J., & Roberts, M. C. (2021). 
+Science, practice, and policy related to adverse childhood 
+experiences: Framing the conversation. The American 
+Psychologist, 76(2), 181–187. https://doi.org/10.1037/ 
+amp0000809  
+Racine, N., Deneault, A. A., Thiemann, R., Turgeon, J., Zhu, J., 
+Cooke, J., & Madigan, S. (2023). Intergenerational trans­
+mission of parent adverse childhood experiences to child 
+outcomes: A systematic review and meta-analysis. Child 
+Abuse and Neglect, 106479. https://doi.org/10.1016/j. 
+chiabu.2023.106479  
+Robson, D. A., Allen, M. S., & Howard, S. J. (2020). Self- 
+regulation in childhood as a predictor of future outcomes: 
+A meta-analytic review. Psychological Bulletin, 146(4), 
+324–354. https://doi.org/10.1037/bul0000227  
+Rognstad, K., Helland, S. S., Neumer, S., Baardstu, S., & 
+Kjøbli, J. (2022). Short measures of youth psychopathology: 
+Psychometric properties of the brief problem monitor 
+(BPM) and behavior and feelings survey (BFS) in 
+a Norwegian clinical sample. Research Square. BMC 
+Psychology, 10(1). https://doi.org/10.1186/s40359-022- 
+00894-6  
+Ruchkin, V., Henrich, C. C., Jones, S. M., Vermeiren, R., & 
+Schwab-Stone, M. (2007). Violence exposure and psycho­
+pathology in urban youth: The mediating role of posttrau­
+matic stress. Journal of Abnormal Child Psychology, 35(4), 
+578–593. https://doi.org/10.1007/s10802-007-9114-7  
+Sabol, T. J., & Pianta, R. C. (2012). Recent trends in research 
+on teacher-child relationships. Attachment & Human 
+Development, 14(3), 213–231. https://doi.org/10.1080/ 
+14616734.2012.672262  
+Samson, J. A., Newkirk, T. R., & Teicher, M. H. (2024). 
+Practitioner review: Neurobiological consequences of 
+childhood maltreatment - clinical and therapeutic implica­
+tions for practitioners. Journal of Child Psychology and 
+Psychiatry, 65(3), 369–380. https://doi.org/10.1111/jcpp. 
+13883  
+Schoemaker, K., Mulder, H., Deković, M., & Matthys, W. 
+(2013). Executive functions in preschool children with 
+externalizing behavior problems: A meta-analysis. Journal 
+of Abnormal Child Psychology, 41(3), 457–471. https://doi. 
+org/10.1007/s10802-012-9684-x  
+Schwartz, J. A., Wright, E. M., & Valgardson, B. A. (2019). 
+Adverse childhood experiences and deleterious outcomes 
+in adulthood: A consideration of the simultaneous role of 
+genetic and environmental influences in two independent 
+106
+M. W. ASSELMAN ET AL.
+
+samples from the United States. Child Abuse and Neglect, 
+88, 420–431. https://doi.org/10.1016/j.chiabu.2018.12.022  
+Scully, C., McLaughlin, J., & Fitzgerald, A. (2020). The relation­
+ship between adverse childhood experiences, family func­
+tioning, and mental health problems among children and 
+adolescents: A systematic review. Journal of Family Therapy, 
+42(2), 291–316. https://doi.org/10.1111/1467-6427.12263  
+Shonkoff, J. P., Garner, A. S., Siegel, B. S., Dobbins, M. I., 
+Earls, M. F., Garner, A. S., McGuinn, L., Pascoe, J., 
+Wood, D. L., & Committee on Psychosocial Aspects of 
+Child and Family Health, Committee on Early Childhood, 
+Adoption, and Dependent Care, Section on Developmental 
+and Behavioral Pediatrics. (2012). The lifelong effects of 
+early childhood adversity and toxic stress. Pediatrics, 129 
+(1), e232–e246. https://doi.org/10.1542/peds.2011-2663  
+Smeets, E. (2007). Speciaal of apart. Onderzoek naar de 
+omvang van het speciaal onderwijs in Nederland en andere 
+Europese landen. [Special or separate. In Research into the 
+extent of special education in the Netherlands and other 
+European countries]. External research report. ITS - 
+Radboud Universiteit Nijmegen. https://hdl.handle.net/ 
+2066/211456 
+Snyder, H. R., Miyake, A., & Hankin, B. L. (2015). Advancing 
+understanding of executive function impairments and psy­
+chopathology: Bridging the gap between clinical and cog­
+nitive approaches. Frontiers in Psychology, 6, 132040.  
+https://doi.org/10.3389/fpsyg.2015.00328  
+Stoutjesdijk, R., Scholte, E. M., & Swaab, H. (2012). Special 
+needs characteristics of children with emotional and beha­
+vioral disorders that affect inclusion in regular education. 
+Journal of Emotional and Behavioral Disorders, 20(2), 
+92–104. https://doi.org/10.1177/1063426611421156  
+Stucke, N. J., & Doebel, S. (2024). Early childhood executive 
+function predicts concurrent and later social and beha­
+vioral 
+outcomes: 
+A 
+review 
+and 
+meta-analysis. 
+Psychological Bulletin, 150(10), 1178–1206. https://doi.org/ 
+10.1037/bul0000445  
+Sutrisno, H. (2016). An analysis of the mathematics school 
+examination test quality. Jurnal Riset Pendidikan 
+Matematika, 3(2), 162–177. https://doi.org/10.21831/jrpm. 
+v3i2.11984  
+Tabb, L. P., Rich, J. A., Waite, D., Alberto, C., Harris, E., 
+Gardner, J., Gentile, N., & Corbin, T. J. (2022). Examining 
+associations between adverse childhood experiences and 
+posttraumatic stress disorder symptoms among young sur­
+vivors of urban violence. Journal of Urban Health, 99(4), 
+669–679. https://doi.org/10.1007/s11524-022-00628-4  
+Tupler, L. A., & De Bellis, M. D. (2006). Segmented hippo­
+campal vol. In children and adolescents with posttraumatic 
+stress disorder. Biological psychiatry, 59(6), 523–529.  
+https://doi.org/10.1016/j.biopsych.2005.08.007  
+UNESCO. (1994). Salamanca statement and framework for 
+action on special needs education. World Conference on 
+Special Needs Education: Access and Quality, Salamanca, 
+Spain.
+United Nations Department of Economic and Social Affairs. 
+(2018). Disability and development report: Realizing the 
+sustainable development goals by, for and with persons 
+with disabilities. https://www.un.org/development/desa/dis 
+abilities/publication-disability-sdgs.html 
+Vaidya, N., Marquand, A. F., Nees, F., Siehl, S., & 
+Schumann, G. (2024). The impact of psychosocial adversity 
+on brain and behaviour: An overview of existing knowledge 
+and directions for future research. Molecular Psychiatry, 29 
+(10), 
+3245–3267. 
+https://doi.org/10.1038/s41380-024- 
+02556-y  
+Van der Kolk, B. A. (2003). The neurobiology of childhood 
+trauma and abuse. Child & Adolescent Psychiatric Clinics, 12 
+(2), 293–317. https://doi.org/10.1016/s1056-4993(03)00003-8  
+Van Meijel, E. P. M., Verlinden, E., Diehle, J., & 
+Lindauer, R. J. L. (2013). Clinician-administered PTSD 
+scale for children and adolescents (CAPS-CA), Dutch trans­
+lation. Bohn Stafleu van Loghum.
+Verlinden, E., van Meijel, E. P., Opmeer, B. C., Beer, R., de 
+Roos, C., Bicanic, I. A., Lamers-Winkelman, F., Olff, M., 
+Boer, F., & Lindauer, R. J. L. (2014). Characteristics of the 
+Children’s revised impact of event scale in a clinically 
+referred Dutch sample. Journal of Traumatic Stress, 27(3), 
+338–344. https://doi.org/10.1002/jts.21910  
+Vilaplana-Pérez, A., Sidorchuk, A., Pérez-Vigil, A., 
+Brander, G., Isoumura, K., Hesselmark, E., Sevilla- 
+Cermeño, L., Valdimarsdóttir, U. A., Song, H., 
+Jangmo, A., Kuja-Halkola, R., D’Onofrio, B. M., 
+Larsson, H., Garcia-Soriano, G., Mataix-Cols, D., & 
+Fernández de la Cruz, L. (2020). Assessment of posttrau­
+matic stress disorder and educational achievement in 
+Sweden. JAMA, 3(12), e2028477. https://doi.org/10.1001/ 
+jamanetworkopen.2020.28477  
+Vink, R. M., Pal, S., Eekhout, I., Pannebakker, F., & Mulder, T. 
+(2016). Ik heb al veel meegemaakt: Ingrijpende jeugdervaringen 
+(ACE) bij leerlingen in groep 7/8 van het regulier basisonderwijs 
+[I have experienced a lot: Adverse childhood experiences 
+(ACE) with students in class 7/8 in mainstream primary 
+education. (Report No. TNO2016R11157). TNO.
+Vink, R. M., van Dommelen, P., van der Pal, S. M., Eekhout, I., 
+Pannebakker, F. D., Velderman, M. K., Haagmans, M., 
+Mulder, T., & Dekker, M. (2019). Self-reported adverse 
+childhood experiences and quality of life among children 
+in the two last grades of Dutch elementary education. Child 
+Abuse and Neglect, 95, 104051. https://doi.org/10.1016/j. 
+chiabu.2019.104051  
+Wade, M., Zeanah, C. H., Fox, N. A., Tibu, F., Ciolan, L. E., & 
+Nelson, C. A. (2019). Stress sensitization among severely 
+neglected children and protection by social enrichment. 
+Nature Communications, 10(1), 5771. https://doi.org/10. 
+1038/s41467-019-13622-3  
+Wassink - de Stigter, R., Nelen, W. B. L., Delsing, M. J. M. H., 
+de Berk, A. M., Kooijmans, R., Offerman, E. C. P., 
+Asselman, M. W., Nijhof, K. S., Lindauer, R. J. L., & 
+Helmond, P. E. (2024). Implementing a school-wide 
+trauma-informed education approach: An evaluation of 
+Student-Outcomes 
+during 
+the 
+first 
+year 
+of 
+implementation. Journal of Child & Adolescent Trauma.  
+https://doi.org/10.1007/s40653-024-00663-0  
+Wei, X., & Lü, W. (2023). Childhood trauma and inter­
+nalizing and externalizing behavior problems among 
+adolescents: Role of executive function and life events 
+stress. Journal of Adolescence, 95(4), 740–750. https:// 
+doi.org/10.1002/jad.12150  
+Wet op de Expertisecentra. (2024). Toelaatbaarheidsverklaring, 
+artikel 40, achtste en tiende lid, van de Wet op de expertise­
+centra [Declaration of eligibility, Article 40, eighth and tenth 
+paragraph of the Expertise Centers Act]. https://wetten.over 
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+107
+
+heid.nl/BWBR0003420/2024-08-01/#HoofdstukI_ 
+TiteldeelII_Afdeling1_Paragraaf4_Artikel40 
+Wright, E. M., & Schwartz, J. A. (2021). The influence of 
+adverse childhood experiences on internalizing and exter­
+nalizing problems in early adulthood: Evidence of a gene × 
+environment × sex interaction. Child Abuse and Neglect, 
+114, 104962. https://doi.org/10.1016/j.chiabu.2021.104962  
+Yang, Y., Ma, X., Kelifa, M. O., Li, X., Chen, Z., & Wang, P. 
+(2022). The relationship between childhood abuse and 
+depression among adolescents: The mediating role of 
+school connectedness and psychological resilience. Child 
+Abuse and Neglect, 131, 105760. https://doi.org/10.1016/j. 
+chiabu.2022.105760  
+Yoon, S., Steigerwald, S., Holmes, M. R., & Perzynski, A. T. 
+(2016). Children’s exposure to violence: The underlying 
+effect of posttraumatic stress symptoms on behavior pro­
+blems. Journal of Traumatic Stress, 29(1), 72–79. https:// 
+doi.org/10.1002/jts.22063  
+Zelazo, P. D., Blair, C. B., & Willoughby, M. T. (2016). 
+Executive function: Implications for education (NCER 
+2017-2000). National Center for Education Research, 
+Institute of Education Sciences, U.S. Department of 
+Education. https://ies.ed.gov/ncer/pubs/20172000/pdf/ 
+20172000.pdf 
+Zelazo, P. D., & Carlson, S. M. (2020). The neurodevelopment 
+of executive function skills: Implications for academic 
+achievement gaps. Psychology and Neuroscience, 13(3), 
+273–298. https://doi.org/10.1037/pne0000208  
+Zelechoski, A. D., Cross, H. L., Luehrs, R., Freedle, A., 
+Bruick, S., Harrison, K., Hayrynen, A., Hrebic, L., 
+Dibley, E., & Will, K. (2021). Trauma assessment in 
+juvenile justice: Are we asking the right questions in 
+the right ways? Journal of Aggression, Maltreatment & 
+Trauma, 
+30(3), 
+324–346. 
+https://doi.org/10.1080/ 
+10926771.2020.1832167  
+Zweers, I. (2020). “Shape sorting” students for special educa­
+tion services? A study on placement choices and social- 
+emotional and academic functioning of students with 
+SEBD in inclusive and exclusive settings [Doctoral disserta­
+tion, Utrecht University]. Ridderprint. https://dspace. 
+library.uu.nl/bitstream/handle/1874/364518/Zweers.pdf? 
+sequence=1&isAllowed=y
+108
+M. W. ASSELMAN ET AL.
+
+Appendix A
+Prevalence and included informants for each 
+individual ACE per category
+Included ACEs
+Multi informant 
+(%) 
+N = 174
+Number of informants
+Students’ 
+self-reports 
+n = 169
+Parent reports 
+n = 95
+School files 
+n = 172
+Maltreatment
+96.0
+3
+1
+1
+1
+Abuse (total)
+91.4
+3
+1
+1
+1
+Physical abuse*
+84.5
+3
+1
+1
+1
+Emotional abuse*
+71.3
+3
+1
+1
+1
+Sexual abuse*
+22.4
+3
+1
+1
+1
+Neglect (total)
+59.8
+3
+1
+1
+1
+Physical/supervisory neglect*
+45.4
+3
+1
+1
+1
+Psychological neglect*
+20.7
+1
+0
+0
+1
+Medical neglect
+13.2
+1
+0
+0
+1
+Educational neglect
+8.0
+1
+0
+0
+1
+Domestic violence*
+47.7
+3
+1
+1
+1
+Household challenges
+91.4
+3
+1
+1
+1
+Death of someone close
+62.6
+3
+1
+1
+1
+Parental separation or divorce*
+47.7
+1
+0
+0
+1
+Parental mental health problems*
+36.8
+2
+1
+0
+1
+Separation from parents
+25.9
+1
+0
+0
+1
+Parental incarceration*
+22.4
+3
+1
+1
+1
+Forced into doing something (non-sexual)
+21.8
+2
+1
+1
+0
+Economic hardship
+20.1
+1
+0
+0
+1
+Many (sudden) relocations
+17.2
+1
+0
+0
+1
+Physical accident or physical illness of a parent
+17.2
+1
+0
+0
+1
+Parental substance abuse*
+17.2
+2
+1
+0
+1
+Parental absence
+9.2
+1
+0
+0
+1
+Household suicide (attempt)
+7.5
+2
+1
+0
+1
+Peer victimization
+77.0
+3
+1
+1
+1
+Bullying
+77.0
+3
+1
+1
+1
+Community stressors
+48.3
+3
+1
+1
+1
+≥3 school switches
+27.6
+1
+0
+0
+1
+Stalked
+22.4
+2
+1
+1
+0
+Victim of neighborhood violence
+19.5
+3
+1
+1
+1
+Experienced shooting
+12.1
+3
+1
+1
+1
+Accident
+73.6
+3
+1
+1
+1
+Traffic or other accident
+73.6
+3
+1
+1
+1
+Fire/explosion, natural disaster or exposure to 
+hazardous substances)
+33.9
+2
+1
+1
+0
+Other
+76.4
+3
+1
+1
+1
+Hurting someone severely
+50.6
+2
+1
+1
+0
+Other severe event
+39.1
+3
+1
+1
+1
+Serious illness/medical trauma
+29.9
+1
+0
+0
+1
+Witnessed other people injured or dead
+17.8
+2
+1
+1
+0
+*10 ACEs from the original framework.
+INTERNATIONAL JOURNAL OF SCHOOL & EDUCATIONAL PSYCHOLOGY
+109

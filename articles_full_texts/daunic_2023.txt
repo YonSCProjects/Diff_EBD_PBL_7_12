@@ -1,0 +1,193 @@
+Social-Emotional Learning Intervention for K–1 Students at Risk for Emotional and Behavioral Disorders: Mediation Effects of Social-Emotional Learning on School Adjustment
+
+Ann P. Daunic, PhD1, Burak Aydin, PhD2, Nancy L. Corbett, PhD1, Stephen W. Smith, PhD1, Delaney Boss, PhD1, and Emily Crews, EdS1
+
+1University of Florida, Gainesville, USA
+2Ege University, Izmir, Turkey
+
+Corresponding Author: Ann P. Daunic, 29 Washington St, Cambridge, NY 12816, USA.
+Email: adaunic@coe.ufl.edu
+
+Published in: Behavioral Disorders
+2023, Vol. 49(1) 17–30
+© Hammill Institute on Disabilities 2023
+DOI: 10.1177/01987429231185098
+
+ABSTRACT
+
+Education researchers, policy makers, and practitioners have emphasized the role that social-emotional learning and self-regulation play in children's adjustment and connection to school, particularly as they transition from pre-school to kindergarten and the primary grades. A pretest–posttest cluster-randomized efficacy trial of the Social-Emotional Learning Foundations (SELF) curriculum for kindergarten–first-grade students found positive main effects on assessments of self-regulation, social-emotional learning, social-emotional vocabulary, and general behavioral functioning. This study is a secondary analysis using structural equation modeling to explore whether SELF effects on school adjustment were mediated by its effects on language and/or self-regulation–related outcomes. Findings replicated direct effects of treatment but did not support hypothesized mediators. In contrast, direct effects of treatment on measures of competent school functioning and internalizing behavior were mediated by outcome effects on a standardized measure of social-emotional learning competence. Study findings underscore the fundamental importance of social-emotional learning to school success and suggest related measurement issues in social-emotional learning and topics for further research.
+
+Keywords: elementary age group, behavior disorders, emotional or behavioral disorders/disabilities, randomized trial experimental design, social-emotional learning interventions
+
+INTRODUCTION
+
+An increasing number of researchers and education stakeholders emphasize the role social-emotional learning (SEL) plays in children's adjustment and connection to school, particularly at the critical transition from pre-school to kindergarten (K) and the primary grades (Atwell et al., 2021; Nix et al., 2013; Rademacher et al., 2021). As such, successful school adjustment requires the development of self-regulatory skills (i.e., emotion awareness, social problem solving, building positive relationships) underlying healthy social, emotional, and behavioral functioning (Blair & Diamond, 2008; Riggs et al., 2006; Savina, 2021). Self-regulatory skill development contributes significantly to a child's social-cognitive and behavioral functioning (Cumming et al., 2022; Greenberg et al., 2017; McClelland & Cameron, 2012), and when these processes are underdeveloped, children may exhibit a variety of maladaptive behaviors, interfering with successful functioning in the school setting and elsewhere (Tyler et al., 2019).
+
+Social-emotional learning interventions have been linked to increased prosocial behavior, decreased substance use, increased emotional control, and less peer rejection (Durlak et al., 2011; Rogers, 2019). Interventions designed for primary grade students at risk for emotional and behavioral disorders (EBD), such as Early Risers (August et al., 2001), Incredible Years (Webster-Stratton, 2001; Webster-Stratton & Reid, 2018), and First Steps to Success (Walker et al., 1997), have evidenced positive effects on both academics and social-cognitive and behavioral functioning. Outcomes included reduction in externalizing behaviors (Nelson et al., 2009; Walker et al., 1997, 2009; Webster-Stratton & Reid, 2004), improved social relationships (August et al., 2002, 2003; Walker et al., 2009; Webster-Stratton & Reid, 2004), and more successful academic performance (August et al., 2002, 2003).
+
+Although social-emotional growth and academic learning are inextricably connected (Blair & Diamond, 2008; Darling-Hammond et al., 2020; Downer & Pianta, 2006), many school professionals continue to emphasize academic skills over growth in SEL (Bassok et al., 2016). Amid the current press to demonstrate continuous academic progress, a potential means of developing SEL is to integrate instruction into existing academic content areas such as English Language Arts. This integration enables teachers to address SEL and academics simultaneously and feasibly within the classroom setting.
+
+Language Development and Emotional and Behavioral Self-Regulation
+
+Beck and colleagues (2012) noted the demonstrated positive link between language development and emotion in children and the risk for poor social-emotional adjustment posed by early language problems, suggesting that early language interventions could potentially counteract emotional and social, as well as communicative difficulties. In addition, theorists have long considered the internalization of self-statements, or self-talk, to be fundamental to developing self-regulation (Mahoney, 1974; Meichenbaum, 1977). Use of self-talk requires SEL-related vocabulary to verbally identify and label emotions experienced. Enhancing children's SEL-related language and concomitantly their self-talk, therefore, can have a powerful effect on the ability to self-manage emotions and behavior (Greenberg et al., 2004). Moreover, Lemerise and Arsenio (2000) revealed the contribution of prior affective experiences to children's motivation and decision making in social or learning contexts, particularly in emotionally charged situations. Accordingly, opportunities to talk about emotional experiences help children use and internalize the SEL vocabulary essential to emotional and behavioral self-regulation (Domitrovich et al., 2007; Lochman et al., 1981).
+
+The Social-Emotional Learning Foundations Intervention
+
+The Social-Emotional Learning Foundations (SELF) Intervention is a K–Grade 1 curriculum for children at early risk for externalizing and internalizing behavior problems and ultimately, for receiving services for EBD (Daunic et al., 2013; Daunic, Corbett, Smith, Algina, et al., 2021). Through a carefully coordinated set of materials and pedagogy, SELF lessons promote children's use of SEL-related vocabulary, self-talk, and critical thinking through teacher modeling and language interactions (teacher–student and student–student) maximized in small-group instructional settings. Given the importance of social-emotional growth to school adjustment, the SELF curriculum helps provide a foundation for successful school-related outcomes with its emphasis on developing social-emotional language in support of emotional and behavioral self-regulation.
+
+Daunic et al. (2013) reported a preliminary version of SELF improved executive function, internalizing behavior, and school-related competence assessed by teachers. In addition, in another pilot study, Santiago-Poventud and colleagues (2015) found positive effects of SELF on expressive and receptive vocabulary regardless of baseline language skills. Most recently, in a pretest–posttest cluster-randomized efficacy trial (Daunic, Corbett, Smith, Algina, et al., 2021), SELF evidenced a significant positive impact on multiple outcomes for 1,154 K–Grade 1 students at risk for EBD, including standardized measures of SEL-related competencies, self-regulation, and school adjustment, and a researcher designed measure of SEL-related vocabulary.
+
+While SELF has demonstrated efficacy in prior studies, it is important to explore mechanisms contributing to its efficacy. Although many intervention studies discuss causal theory, few have conducted mediation analyses to test their proposed theoretical framework (Mercer et al., 2014). Mediation analyses would help identify mechanisms of change and thereby test theoretically derived hypotheses. Burns (2011) emphasized the importance of understanding underlying theory through explorations of mediating and moderating variables; this understanding broadens implications for both existing theories and future intervention development.
+
+Building on positive direct effects reported for the SELF intervention, we wanted to test whether hypothesized theoretical mechanisms of change were instrumental in promoting intervention effects on outcome variables related to successful school adjustment. Specifically, the theory of change proposed by Daunic, Corbett, Smith, Algina, and colleagues (2021) and aligned with those of other researchers (see Eisenberg et al., 2010; Nix et al., 2013; Tyler et al., 2019) suggests improving language skills and/or skills involving self-regulatory competence promotes successful adjustment to school. The hypothesized connections between SELF intervention components, mechanisms of change (mediators), and outcome variables are illustrated in Figure 1.
+
+Specifically, we asked the following research questions:
+RQ1. Were intervention effects on social-emotional and school adjustment outcomes mediated through direct effects on language development and/or self-regulation?
+RQ2. Were intervention effects indirectly mediated through language effects on self-regulation?
+
+These questions were theory-driven, as illustrated in Figure 1, and examined using a structural equation modeling (SEM) framework.
+
+In addition, to examine complex measurement structures such as those involved in our research questions, Asparouhov and Muthén (2009) and Marsh and colleagues (2014) suggested adding exploratory analyses. Therefore, the following question was added:
+RQ3. Is there a better fitting mediation model to determine the indirect effect of the intervention on school adjustment outcomes?
+
+METHOD
+
+Participants
+
+Over 3 years, researchers contacted administrators in 18 school districts via electronic mail and phone to recruit participants. Districts were within a 150-mile radius surrounding the southeastern U.S. state university in which the research project was located. We targeted elementary schools eligible for Title I funding (i.e., low-income families make up at least 40% of enrollment). Fifty-two schools within 11 school districts participated. These schools included 163 K and 141 first-grade classrooms, yielding a total of 1,154 students selected by teachers for study participation (627 K, 527 first grade). An average of 91.88% of selected participants across categories contributed to demographic data, presented in Table 1.
+
+Table 1. Student Demographic Characteristics for BAU and SELF Conditions.
+
+Characteristic | BAU n | BAU % | SELF n | SELF %
+Gender:
+Male | 319 | 62.9 | 350 | 61.5
+Female | 219 | 37.1 | 188 | 38.5
+Receiving free or reduced-price lunch | 371 | 81.0 | 416 | 82.4
+English language learner | 14 | 2.7 | 24 | 4.2
+IEP or section 504 plan | 107 | 21.1 | 110 | 19.3
+Race:
+White (non-Hispanic) | 306 | 60.4 | 379 | 66.6
+African American | 114 | 22.5 | 103 | 18.1
+Hispanic | 48 | 9.5 | 51 | 9.9
+Other race | 39 | 7.7 | 36 | 6.3
+
+Note. IEP = Individualized Education Program; BAU = business as usual; SELF = Social-Emotional Learning Foundations.
+
+Screening to Select Target Population
+
+To select target students prior to random assignment, participating K–Grade 1 teachers screened children in their class for risk of developing emotional or behavioral difficulties, ruling out those with school-identified intellectual disabilities, using the Systematic Screening for Behavior Disorders, Second Edition (SSBD; Walker & Severson, 1992), a cost-effective, validated, multiple-stage procedure. The SSBD distinguishes among students with externalizing behaviors, internalizing behaviors, emotional disturbances, and those with typical development (e.g., Walker et al., 1994) with coefficient alphas above .90 for the standardization sample (Walker et al., 1990). Specifically, researchers used the descriptions of internalizing and externalizing behavior problems provided by Stage 1 of the SSBD as a guide to help teachers select students who might benefit most from SELF if the school were randomized to the treatment condition.
+
+Parents of students in participating classrooms were provided an opportunity to opt-out of the initial class-wide screening, if desired, by signing and returning an information letter indicating their decision, a procedure approved by the university Institutional Review Board. A total of 246 students (approximately 4.5%) from 302 classrooms across 3 years of data collection opted out of the screening process. Teachers evaluated all students in their class (except for those whose parents opted out) and identified up to five students for internalizing and five for externalizing categories; teachers subsequently rank-ordered identified students based on the degree to which their behavior or characteristics aligned with the behavior profiles provided in Stage 2 of the SSBD and targeted the top three to four students in each category for possible inclusion in the participant sample. School and teacher participation was confirmed prior to randomization, and teachers and schools, regardless of group assignment, were compensated for their participation in the study. No school participated for more than 1 year.
+
+Random Assignment and Consent Procedures
+
+Each participating teacher obtained consent for at least two and no more than five students among those designated for possible study participation subsequent to screening. To comply with human participant protection, all teachers and research project staff involved in recruitment received training on the informed consent process. Following the consent process, schools were randomly assigned within districts to the SELF or BAU condition to ensure some schools in each district would be provided the SELF curriculum during their participation year; randomization at the school level addressed potential contamination between classrooms within schools. Random assignment was conducted using PROC PLAN in SAS 9.4 (SAS Institute, 2017). Personnel in schools assigned to BAU were informed they would be offered SELF, including professional development (PD) and related materials, following their year of participation in the study.
+
+Intervention Description
+
+SELF consists of 52 kindergarten lessons and 54 first-grade lessons lasting approximately 20 min each. Lessons for each grade are grouped within 17 SEL topics. The first 16 topics contain lessons using readily available children's storybooks selected for their SEL-related content. The topics are organized within five critical competencies identified by the Collaborative for Academic, Social, and Emotional Learning (CASEL): self-awareness, social awareness, self-management, relationship skills, and decision making (CASEL, 2021; Weissberg et al., 2015). SELF lesson strategies promote children's comprehension, use of SEL-related vocabulary, self-talk, critical thinking, and application of learned concepts to enable students at risk for EBD to engage actively in social problem solving. Structured as such, the SELF intervention provides an opportunity within the classroom setting to integrate SEL with K–1 literacy-related instruction.
+
+Each of the first 16 topics includes three lessons. The teacher introduces a new SEL topic weekly, reading the associated storybook to the whole class, prompting discussion and incorporating conventions of social learning activities, such as "turn and talk" with a partner. The first lesson is delivered whole-group to introduce vocabulary and SEL concepts to all students in the classroom, providing a context within which the teacher can reinforce learning throughout the school day. The second and third lessons in each topic are taught in a small-group setting to students identified as at risk for EBD, maximizing opportunities for language interactions and teacher modeling to help build self-regulation skills.
+
+In the second lesson of each topic, the teacher rereads the accompanying storybook using dialogic reading (DR), an interactive technique to enhance children's language and literacy skills (Whitehurst et al., 1994). DR provides a socially interactive context within which the teacher helps children learn and apply verbal and conceptual skills as they retell a story (Flynn, 2011). Teachers expand a child's response by rephrasing, adding information, and repeating the prompt. SELF lesson scripts integrate DR through teacher prompts asking children to (a) remember specific details or events related to feelings or behaviors, (b) respond using their own words, (c) relate story content to their experiences, and (d) consider the thoughts and feelings of others. The DR technique has been shown to increase vocabulary (Coogle et al., 2018; Opel et al., 2009) and expressive and receptive language skills (Simsek & Erdogan, 2015) and has been incorporated in individual, small-group, and whole-group instruction.
+
+In the third lesson per topic, students in the small group are asked to demonstrate use of selected SEL vocabulary and apply social-emotional concepts and skills in social problem-solving situations using a progression of strategies focused on regulating emotions and behavior. Taught sequentially, the strategies are Choices and Consequences, Breathe and Think (BAT), and Steps for Problem Solving. In the Choices and Consequences strategy, explicit steps help students incorporate self-talk as they remember to (a) Stop before I say or do something, (b) Think about my choices, (c) Think about the consequences, and (d) Make a choice. Similarly, the BAT strategy reminds them to (a) Take a deep breath and blow out the (e.g., anger), (b) Think about my choices and consequences, and (c) Make a choice. In Topic 17, the steps in the first two strategies are combined in the Steps for Problem Solving, and children have opportunities to practice these steps across multiple lessons.
+
+Prior to implementing SELF, all treatment teachers took part in two 6-hr days of PD during the fall of their participation year. The first included a description of SEL's conceptual foundations, and an introduction to SEL competencies and essential SELF lesson components. Day 2 was focused on curriculum implementation and pedagogical knowledge related to DR and targeted vocabulary instruction. Using video examples and discussion, teachers practiced each of the three lesson types (i.e., storybook reading with prompts, DR and vocabulary instruction, application activities). In addition to PD, research assistants visited treatment teachers' classrooms an average of once per week during SELF instruction to answer questions about lesson implementation and classroom management.
+
+Instrumentation
+
+The SELF Vocabulary Measure is a researcher-developed and individually administered measure to assess knowledge of SEL-related vocabulary (Santiago-Poventud et al., 2015). For each of 20 words assessed at each grade level, a member of the research team trained in administering the instrument asked student participants to (A) provide a definition, (B) use the word in an example, and (C) apply the word to answer a multiple-choice question with three options. Parts A and B were scored on a 3-point scale (2 = correct, 1 = partially correct, 0 = incorrect); Part C was scored as either 1 (correct) or 0 (incorrect). Cronbach's alphas derived from K–Grade 1 sample data at pretest were .802, .842, .734, and .918 for Parts A, B, C, and the total score, respectively.
+
+The SELF Language Measure is a researcher-developed and individually administered instrument designed to assess (a) ability to use SEL related language and (b) language development as measured by mean length of utterance in words (MLU-w; Daunic, Corbett, & Smith, 2021). A higher MLU-w value suggests more sophisticated linguistic proficiency (i.e., better language development; Barnes, 2010).
+
+Head-Toes-Knees-Shoulders (HTKS; Ponitz et al., 2008) is a direct measure of self-regulation for children ages 4 to 6 assessing how well they apply cognitive skills to their behavior. Trained assessors used a specified format, initially directing children to comply with instructions (e.g., "touch your head"). In subsequent trials, assessors direct participants to respond in an "opposite" way (e.g., to touch their head when directed to touch their toes), requiring children to pay attention, remember the rule, and inhibit the usual response. Students receive scores of 0 (incorrect), 1 (self-correct), or 2 (correct). Based on six practice opportunities (three for each part) and 20 trials, scores range from 0 to 52, with higher scores representing stronger abilities. The sample derived Cronbach's alpha for total HTKS scores at pretest was .949.
+
+The Behavior Rating Inventory of Executive Function–Second Edition (Gioia et al., 2015) is a standardized teacher-report measure to evaluate emotional and behavioral self-regulation. It contains 86 items contributing to three groups of subscales: Behavioral Regulation Index (BRI), Cognitive Regulation Index (CRI), and the Emotion Regulation Index (ERI). Sample-derived Cronbach's alphas for the BRI, CRI, and ERI were .957, .972, and .937, respectively, at pretest.
+
+The Devereux Student Strengths Assessment (DESSA; LeBuffe et al., 2008) is a 72-item, standardized, norm-referenced, teacher-report behavior rating scale measuring social-emotional competencies serving as protective factors for children in Grades K–8. Items are rated on a 5-point scale ranging from 0 (never) to 4 (very frequently) and organized into eight conceptually derived scales corresponding to key social-emotional competencies, including five that correspond to those encompassed in SELF: Self-Awareness, Social Awareness, Self-Management, Relationship Skills, and Decision Making. Cronbach's alpha was .981 for the total score at pretest.
+
+The Clinical Assessment of Behavior Teacher Rating Form (CAB-T; Bracken & Keith, 2004) is a behavior rating scale designed to aid in teachers' assessment of children who may need behavioral or educational intervention. The CAB-T consists of 70 questions used to produce scores for two clinical scales (internalizing behavior, externalizing behavior) and two adaptive scales (social skills, competence). Raters use a 5-point Likert-type scale.
+
+Assessment of Treatment Fidelity and Dosage
+
+Research assistants observed and coded the treatment fidelity of SELF instruction. Fidelity was evaluated by examining the percentage of prescribed lessons implemented as designed.
+
+Business as Usual Group Description
+
+BAU classrooms received typical district-provided instruction in their respective schools without additional SEL-focused interventions.
+
+Design and Analyses
+
+This study used a secondary analysis approach, drawing on data from the cluster-randomized efficacy trial (Daunic, Corbett, Smith, Algina, et al., 2021). The current study used structural equation modeling (SEM) to test hypothesized mediation pathways. All analyses were conducted using Mplus software (Muthén & Muthén, 1998-2019), which allowed modeling with multilevel data structures.
+
+RESULTS
+
+Table containing Statistics across Condition, BRIEF2, SELF, INT, EXT, SOC, COM, DM, RS, SAW, SM, SOA, DT variables at both pretest and posttest.
+
+Tests of Hypothesized Mediators Using Traditional SEM Analyses
+
+None of the mediation effects examined were statistically significant except for a marginally significant indirect intervention effect on the competence subscale of the CAB-T. Our analyses did show significant direct effects of treatment on CAB-T and DESSA subscales, consistent with prior results (Daunic, Corbett, Smith, Algina, et al., 2021).
+
+Table 4: Estimated direct and indirect effects for DESSA subscales and CAB-T subscales using complete cases and all available cases.
+
+Variable | Condition | SRMR | Direct effect | Indirect effect
+Competence | Complete | .00/.01/.13 | 2.58 (0.78)*** | 1.12 (.56)*
+External | Complete | .00/.01/.15 | 3.28 (0.68)*** | 0.41 (.38) ns
+Internal | Complete | .00/.01/.13 | 2.93 (0.55)*** | 0.33 (.31) ns
+Social skills | Complete | .00/.02/.15 | 3.83 (0.70)*** | 0.39 (.36) ns
+Dec. making | Complete | .00/.01/.14 | 1.73 (0.42)*** | 0.39 (.26) ns
+Rel. skills | Complete | .00/.01/.15 | 3.25 (0.55)*** | 0.15 (.17) ns
+Self-Awa | Complete | .00/.01/.12 | 2.77 (0.33)*** | 0.26 (.16) ns
+Self-Mng | Complete | .00/.01/.13 | 1.99 (0.55)*** | 0.51 (.33) ns
+Social Awa | Complete | .00/.01/.14 | 1.89 (0.48)*** | 0.38 (.24) ns
+
+Table 5: Estimated direct and indirect effects for CAB-T subscales using complete cases and all available cases.
+
+CAB subscale | Complete cases | SRMR | Direct effect | Indirect effect
+Competence | 1007 | .00/.00/.01 | 4.30 (0.76)*** | 2.36 (0.78)***
+Externalizing | 1,007 | .00/.01/.01 | 5.11 (0.83)*** | 0.35 (0.59) ns
+Internalizing | 1,007 | .00/.00/.05 | 4.29 (0.66)*** | 1.00 (0.47)*
+Social skills | 1,007 | .00/.01/.01 | 5.50 (0.78)*** | 0.86 (0.60) ns
+
+Results of Exploratory Analyses
+
+The exploratory analyses demonstrated that DESSA total score mediated the treatment effect on both the Competence and Internalizing subscales of the CAB-T. Indirect effect estimates were 2.36 for competence (p < .01) and 1.00 for internalizing behavior (p = .03). The SRMR values indicated acceptable fit for all levels.
+
+DISCUSSION
+
+Tests of Hypothesized Mediators
+
+The current study examined whether the SELF intervention's effects on school adjustment were mediated by its hypothesized mechanisms of change: language development and self-regulation-related outcomes. As in the primary trial (Daunic, Corbett, Smith, Algina, et al., 2021), significant direct effects of the SELF intervention were replicated on multiple outcomes. However, neither language development nor executive function/behavioral self-regulation was identified as a significant mediator of intervention effects on school adjustment. 
+
+Social Emotional Learning Language Use
+
+Possible explanations for the lack of significant mediation include limitations in the conceptualization or measurement of the mediators and/or outcomes. For example, the SELF Language Measure was designed to measure children's use of SEL vocabulary and language complexity, both of which are expected to be influenced by SELF instruction. However, assessors may have found it difficult to elicit emotional language responses from students without an emotionally loaded context.
+
+Self-Regulation
+
+The HTKS and BRIEF2 were used to measure self-regulation but may have captured different aspects of this construct. The HTKS is a direct, performance-based measure, while the BRIEF2 is a teacher-report measure. These different perspectives may have affected their sensitivity to change.
+
+Intervention Intensity
+
+Eligible students in the SELF condition received instruction in small-group settings, but many also received the initial whole-class lesson. The dosage of small-group instruction varied across students, which could affect mediation pathways.
+
+Implications of Exploratory Analyses
+
+The significant mediation of the DESSA total score on both the competence and internalizing subscales of the CAB-T (exploratory analyses) suggests that when SEL competence is adequately measured by standardized instruments, it can demonstrate a mediating role in connecting intervention to school adjustment.
+
+Limitations
+
+Several limitations are worth noting. First, missing data were addressed using all available cases and robust SEM estimators; however, the extent of missing data—which was higher at posttest—may have reduced power. Second, SRMR values indicated poor model fit at Level 3 (school level) for the hypothesized mediator models; this suggests classroom- and school-level factors not fully captured in the model may be influencing outcomes. Third, reliability of the assessment tools in this particular sample may have varied.
+
+Future Research
+
+Future research should examine alternative methods for measuring language as a mechanism of change—such as naturalistic language sampling in settings where emotional language use is more likely—and self-regulation assessments that are sensitive to change through brief interventions. Additionally, including parent/guardian reports and direct observation measures could add important perspectives.
+
+Conclusion
+
+The findings of this study underscore the fundamental importance of social-emotional learning to school success and add to a growing body of evidence demonstrating that the SELF intervention produces positive effects for K–Grade 1 students at risk for EBD. The significant indirect effect on school adjustment through a standardized measure of SEL competence in exploratory analyses suggests that the DESSA, a standardized SEL competence measure, may be a more sensitive measure of intervention change than individual SEL outcome measures. The finding also suggests that future SELF research should include measures that assess SEL competence as a whole rather than individual components.
+
+SOURCE: ERIC full text PDF
+DOI: 10.1177/01987429231185098
+URL: https://files.eric.ed.gov/fulltext/EJ1400110.pdf

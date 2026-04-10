@@ -1,0 +1,307 @@
+SOURCE: https://pmc.ncbi.nlm.nih.gov/articles/PMC6089534/
+TITLE: SCHOOL-RELATED OUTCOMES FROM A RANDOMIZED CONTROLLED TRIAL OF ADOLESCENT DEPRESSION PREVENTION PROGRAMS
+
+J Emot Behav Disord. Author manuscript; available in PMC: 2019 Sep 1.
+
+*Published in final edited form as: *J Emot Behav Disord. 2017 Jul 5;26(3):170–181. doi: 10.1177/1063426617717739
+
+# SCHOOL-RELATED OUTCOMES FROM A RANDOMIZED CONTROLLED TRIAL OF ADOLESCENT DEPRESSION PREVENTION PROGRAMS
+
+Alyssa E McCarthy
+
+^1^Department of Psychology, Rutgers, The State University of New Jersey, 152 Frelinghuysen Road, Piscataway Township, NJ 08854
+
+^1^, Jami F Young
+
+^2^Graduate School of Applied and Professional Psychology, Rutgers, The State University of New Jersey, 152 Frelinghuysen Road, Piscataway Township, NJ 08854
+
+^2^, Jessica S Benas
+
+^3^Graduate School of Applied and Professional Psychology, Rutgers, The State University of New Jersey, 152 Frelinghuysen Road, Piscataway Township, NJ 08854
+
+^3^, Robert J Gallop
+
+^4^Department of Mathematics, West Chester University, 25 University Avenue, West Chester, PA 19383
+
+^4^
+
+^1^Department of Psychology, Rutgers, The State University of New Jersey, 152 Frelinghuysen Road, Piscataway Township, NJ 08854
+
+^2^Graduate School of Applied and Professional Psychology, Rutgers, The State University of New Jersey, 152 Frelinghuysen Road, Piscataway Township, NJ 08854
+
+^3^Graduate School of Applied and Professional Psychology, Rutgers, The State University of New Jersey, 152 Frelinghuysen Road, Piscataway Township, NJ 08854
+
+^4^Department of Mathematics, West Chester University, 25 University Avenue, West Chester, PA 19383
+
+Issue date 2018 Sep.
+
+PMCID: PMC6089534  NIHMSID: NIHMS908146  PMID: 30116100
+
+The publisher's version of this article is available at J Emot Behav Disord
+
+## Abstract
+
+Previous research has demonstrated the effectiveness of school-based depression prevention programs in reducing depressive symptoms and improving functioning. This study examined whether these programs have positive effects on school-related outcomes. Students at 10 middle and high schools in New Jersey were randomized to weekly sessions of Interpersonal Psychotherapy – Adolescent Skills Training (IPT-AST) or group counseling (GC). Analyses examined whether there were intervention effects on participants’ grades, attendance rates, and disciplinary outcomes over approximately one year post-intervention. Although there were no significant main effects of intervention condition, moderation analyses indicated more favorable effects of IPT-AST among certain higher-risk subgroups (e.g., those from low-income families). Participants who experienced meaningful improvement in their depressive symptoms had significantly more positive outcomes on overall grades than those who did not experience meaningful improvement, regardless of intervention condition. Further research is needed to clarify the effects of depression prevention programs on these school-related outcomes.
+
+## Introduction
+
+Major depression is a highly prevalent condition, and rates of depression increase markedly during adolescence (Hankin et al., 1998). Depression during adolescence has been shown to significantly increase risk for adult depression, as well as other negative outcomes including failing out of school (Fergusson & Woodward, 2002; Pine, Cohen, Gurley, Brook, & Ma, 1998). Given the serious and enduring consequences of adolescent depression, prevention programs have received increased attention in recent years. In a recent meta-analysis of youth depression prevention programs, those targeted towards youth at increased risk had moderate and significant effects on depressive symptoms (Stice, Shaw, Bohon, Marti, & Rohde, 2009). Moreover, three targeted programs significantly reduced participants’ risk for a future depressive disorder (Garber et al., 2009; Stice et al., 2009; Young, Mufson, & Davies, 2006).
+
+Since Stice and colleagues’ (2009) meta-analysis, research on adolescent depression prevention programs has continued to be promising, with several studies finding significant effects on depressive symptoms (e.g., McCarty, Violette, Duong, Cruz, & McCauley, 2013; Rohde, Stice, Shaw, & Briere, 2013; Stice, Rohde, Gau, & Wade, 2010). Interpersonal Psychotherapy – Adolescent Skills Training (IPT-AST), which is the focus of the current study, has consistently demonstrated positive effects on depressive symptoms. IPT-AST is a group-based depression prevention program based on interpersonal psychotherapy for depressed adolescents. In two targeted prevention studies comparing IPT-AST to usual school counseling (Young et al., 2006; Young, Mufson, & Gallop, 2010), IPT-AST youth had significantly fewer depressive symptoms and were less likely to receive a depression diagnosis through six months post-intervention than youth in usual school counseling. In a study on universal implementations of IPT-AST and a cognitive-behavioral (CB) program, students who participated in IPT-AST or CB groups had significantly fewer depressive symptoms than students in a no-intervention control group (Horowitz, Garber, Ciesla, Young, & Mufson, 2007). Finally, the most recent examination of IPT-AST compared the intervention to group counseling (GC) and found that IPT-AST youth experienced greater reductions in depressive symptoms than GC youth in the six months following the program (Young et al., 2016).
+
+School-based services address many of the social and practical barriers to adolescent mental health care (American Academic of Pediatrics Committee on School Health, 2004). However, schools have a primary aim to educate students, and prevention programs require reallocation of the limited resources available to support that aim (Gottfredson & Gottfredson, 2002). Educators face tremendous pressure to produce certain levels of academic performance in core academic areas. Thus, if there is not sufficient evidence that prevention programs dovetail with that mission, educators may have limited incentive to support them (National Research Council & Institute of Medicine Committee on the Prevention of Mental Disorders and Substance Abuse Among Children Youth and Young Adults, 2009). To promote implementation of these programs in schools, researchers need to examine more than symptom-level changes and demonstrate an impact on educational functioning and other outcomes (Cuijpers, Beekman, & Reynolds, 2012).
+
+Research on the relationship between depression and academic functioning indicates that depression prevention programs may have positive effects on school-related outcomes. In a recent longitudinal study on 10- to 18-year-olds, Verboom and colleagues (2014) demonstrated a bidirectional relationship between depressive symptoms and academic performance. Similarly, Jaycox et al. (2009) found that depression in 13- to 18-year-olds predicted lower adolescent-reported academic efficacy and parent-reported school functioning six months later. Given these associations, it is interesting that there is minimal research on the school-related outcomes of depression prevention programs. Among studies on depression prevention programs, only two have examined school-related outcomes. In their study on a school-based group CB intervention for adolescents with elevated depressive symptoms (the Positive Thoughts and Action Program), McCarty et al. (2013) included student- and teacher-completed measures of subjective school problems, but they did not find significant intervention effects. In their study on IPT-AST in parochial high schools, however, Young, Kranzler, Glallop, and Mufson (2012) found that adolescents in IPT-AST were less likely to be asked to leave school for academic or behavioral reasons than adolescents who received usual care. In an additional set of analyses on that study, Haimm, Young, Sheshko, and Gallop (2013) found that – although there were no between-group differences in GPA – IPT-AST participants trended towards more favorable outcomes on rates of attendance and tardiness.
+
+Albeit somewhat limited, there is a more substantial body of research on the school-related outcomes from other types of school-based mental health prevention programs. In their meta-analysis on empirically-based school interventions aiming to improve academic and mental health functioning, Hoagwood et al. (2007) found that some universal programs had positive effects on academic outcomes. Among targeted programs, investigations of school-related outcomes have appeared mostly in research on externalizing problem interventions. Fast Track, for instance, is a multicomponent, multiyear intervention for students at risk of antisocial behavior. Positive academic outcomes, including better reading test scores and language arts grades, were demonstrated at the end of the first intervention year, but school-related effects dissipated by fourth grade (Conduct Problems Prevention Research Group, 1999, 2002, 2004). Thus, despite being an intensive intervention, students experienced school-related effects in certain areas, but not others. Moreover, these effects were not long-lasting.
+
+Developmental trends in academic performance must also be taken into account when interpreting program effects. Recent research has indicated that academic performance and school attendance rates decrease in the transition from middle to high school (Rosenkranz, de la Torre, Stevens, & Allensworth, 2014) as well as over the high school years (Balfanz & Byrnes, 2012; Roderick, Kelley-Kemple, Johnson, & Beechum, 2014). These and other findings demonstrate that adolescents normatively exhibit reductions in their academic engagement over time (Busteed, 2013). Students with depressive symptoms may be particularly susceptible to decreases due to symptom-related impairment and increased risk of depression onset (Horwath, Johnson, Klerman, & Weissman, 1992). Accordingly, school-related outcomes of depression prevention programs need to be considered in light of normative trajectories in grades and attendance rates during adolescence, as well as symptom-related impairments in those domains.
+
+The current study continued the search for evidence of school-related outcomes associated with depression prevention programs by examining the effects of two school-based depression prevention programs on grades, attendance rates, and disciplinary incidents from pre-intervention to approximately one year post-intervention. Results were intended to empower schools to make more informed decisions about whether to implement these programs by furthering understanding of the relationship between youth depression programs and school functioning.
+
+## Methods
+
+### Participants
+
+Data for this study came from the Depression Prevention Initiative (DPI), a randomized controlled trial (RCT) comparing IPT-AST to GC for adolescents at risk of depression.
+
+Participants were seventh to tenth grade students recruited from 10 middle and high schools in New Jersey. A two-stage screening process identified students with subthreshold depressive symptoms: (a) Students with parental consent and who provided assent completed a self-report measure of depressive symptoms (the Center for Epidemiologic Studies – Depression Scale [CES-D]; Radloff, 1977) and (b) students with elevated CES-D scores completed a structured diagnostic interview (the Schedule for Affective Disorders and Schizophrenia for School-Age Children; Kaufman, Birmaher, Brent, & Rao, 1997) to confirm the presence of subthreshold depression and exclude youth with more significant psychopathology. Within each school, eligible adolescents were stratified by sex and then randomized to an intervention condition using a computer-generated random number sequence. One hundred eighty-six students were randomized to IPT-AST (*n*=95) or GC (*n*=91). Eligibility and baseline evaluations typically took place in the fall, with groups starting in January through April and ending in March through June. The timing of follow-up assessments was determined by group end date. The current study includes school-related data collected through approximately one year post-intervention.
+
+### Interventions
+
+#### IPT-AST
+
+There were 18 IPT-AST groups in DPI, each including three to seven adolescents. IPT-AST is a manual-based depression prevention program focused on psychoeducation and interpersonal skill-building. IPT-AST was administered by research personnel and comprised of two individual pre-group sessions; eight weekly group sessions; an individual or dyadic (adolescent and parent) mid-group session; and four individual booster sessions over the six months following the group. Ratings by an experienced IPT-AST clinician indicated that IPT-AST was generally delivered with fidelity, and therapist competence was satisfactory. The components of IPT-AST and measures of fidelity and competency are described in more detail in the paper on DPI’s main outcomes (Young et al., 2016).
+
+#### GC
+
+There were 16 GC groups in DPI, each including two to eight adolescents. The GC intervention was intended to emulate the group programs typically offered in schools. However, in order to provide a stringent control condition, the frequency and duration of GC matched that of IPT-AST. Thus, GC participants received more intensive care than adolescents usually received in these schools. GC was administered by school counselors and consisted of a pre-group session; eight weekly group sessions; a mid-group session; and four booster sessions. Reports on the Therapy Procedures Checklist (Weersing, Weisz, & Donenberg, 2002) indicated that cognitive techniques were used most frequently, followed by psychodynamic techniques (Young et al., 2016).
+
+### Measures
+
+Grades, attendance, and disciplinary incidents were selected as outcome measures because they are broadly used, objective indicators of school-related functioning and performance (Hoagwood et al., 2007). At the end of each academic year, research personnel obtained records of each student’s grades, attendance, and disciplinary incidents. Data were organized into quarterly time points pre- and post-intervention. Pre-intervention data came from the academic quarter that ended most immediately before the student started attending groups, and data for the first post-intervention time point came from the academic quarter that ended most immediately after the student’s group ended – an average of 0.97 (standard deviation [*SD*]=0.55) months after the final group session. Data from four subsequent academic quarters were also included in analyses as the second through fifth post-intervention time points. Those academic quarters ended an average of 4.66 (*SD*=1.59), 8.35 (*SD*=0.69), 10.66 (*SD*=0.61), and 13.04 (*SD*=0.54) months after the final group session, respectively.
+
+#### Grades
+
+Grades for each class were available on a zero- to 100-point scale. To detect changes in overall academic performance, a mean score including all grades (i.e., core academic and elective subjects) was calculated for analysis. In accordance with prior intervention studies examining changes in academic performance (Conduct Problems Prevention Research Group, 1999), separate analyses were conducted for the core academic subjects of math and English language arts (ELA). For interpretive purposes, the outcome variables for overall, math, and ELA grades were calculated as change scores from pre-intervention values.
+
+#### Attendance
+
+The total numbers of absences and tardies in each academic quarter were entered for analysis. Two districts provided attendance data for the full academic year rather than by quarter. For students in those districts, the total numbers of absences and tardies each year were divided by four. Those numbers were entered in the last possible time point of each academic year. The outcome variable for absences was calculated as a change score from the number of absences during the pre-intervention quarter. Due to the statistical analyses required for tardies (described below) and the presence of non-integers from the two districts that only provided attendance data on a yearly basis, the outcome variable for tardies was rounded to the nearest integer for the number of tardies during each academic quarter.
+
+#### Disciplinary incidents
+
+School disciplinary records included a description of each school staff-reported incident, the date of each incident, and the action taken by school staff in response to it. The total numbers of disciplinary incidents (a) in the academic quarter preceding the intervention and (b) in the entire post-intervention period were calculated for analysis.
+
+### Data Analysis
+
+#### Grades and attendance
+
+Mixed-model analysis of variance (MMANOVA) was used to analyze grade and attendance outcomes (Schwarz, 1993). MMANOVA accounted for the clustered nature of the data, wherein participants were nested within groups, which were nested within intervention arms, while accommodating participants’ repeated assessments over time. In addition, MMANOVA allows flexibility in modeling the covariance matrix over repeated assessments and accommodates missing data. Because MMANOVA requires approximately normal distribution of dependent variables, outcome measures were assessed for normality using Shapiro-Wilk tests (Shapiro & Wilk, 1965). Only tardies remained non-normally distributed when Box-Cox transformations were applied (Box & Cox, 1964). To accommodate this, outcomes on tardies were examined with generalized linear mixed models (GLMM) (Wolfinger & O'Connell, 1993). In MMANOVA and GLMM models, the relevant value pre-intervention in each model (e.g., overall grades in the academic quarter pre-intervention) was used as a covariate. Demographic variables were also included as covariates. Analyses examined: (a) the average effect of intervention condition, (b) the overall effect of time point, and (c) the interaction between intervention condition and time point. For this study, the analyses of interest were those assessing the effects of intervention condition and intervention condition by time point. Linear contrasts were also used to examine between-condition differences within time points.
+
+#### Disciplinary incidents
+
+The majority (61%) of students did not have a disciplinary incident post-intervention. Among those who did have an incident, 54% had one or two and 46% had three or more. Due to their low frequency, disciplinary incidents were examined over the entire post-intervention period rather by academic quarter. Thus, it was only possible to test for a between-group difference in rates of disciplinary incidents over the post-intervention period; the effect of intervention condition by time point was not examined.
+
+Given the non-independence of disciplinary incidents (Gregory, Cornell, & Fan, 2011), an ordinal scale was expected to be less biased than a simple count. As a result, ordinal regression (Scott, Goldberg, & Mayo, 1997) was used. Students were divided into three groups for the analysis: no disciplinary incidents, one or two disciplinary incidents, and three or more disciplinary incidents. Along with demographic variables, the number of disciplinary incidents in the academic quarter pre-intervention was included as a covariate.
+
+#### Moderator and predictor effects
+
+Moderation analyses were conducted to test whether pre-intervention values or demographic characteristics significantly moderated outcomes on grades, absence rates, or disciplinary incidents. Analyses examined the interaction between each variable and intervention condition in predicting outcomes by incorporating each interaction into the relevant statistical model. An additional question of interest was whether change in depressive symptoms, regardless of intervention condition, predicted school-related outcomes. To explore this, meaningful change in depressive symptoms was examined as a predictor of grades, attendance, and disciplinary incidents. Meaningful change in depressive symptoms was indicated when participants had at least a 50% reduction in their CES-D (Radloff, 1997) score from baseline to six months post-intervention (i.e., through the end of booster sessions). Overall, 65 (35%) DPI participants (38 [40%] in IPT-AST and 27 [30%] in GC) experienced at least a 50% improvement on the measure (Young et al., 2016).
+
+### Hypotheses
+
+Due to the small body of research on school-related outcomes from depression prevention programs, this study was exploratory in nature. Based on the results from one previous study examining the school-related effects of IPT-AST compared to usual school counseling (Haimm et al., 2013; Young et al., 2012), it was hypothesized that IPT-AST and GC would not have significantly different outcomes on grades, but that IPT-AST would have superior effects on attendance rates and disciplinary incidents. Regarding moderator effects, it was hypothesized that there may be greater intervention effects among students who had initially lower grades or higher rates of absences, tardies, or disciplinary incidents. Finally, it was hypothesized that students who experienced meaningful decreases in their depressive symptoms may have more favorable school-related outcomes, regardless of intervention condition.
+
+## Results
+
+### Participant Information
+
+#### Demographic characteristics
+
+Among the 186 participants in the study, the sample included 124 (67%) females and 62 (33%) males. Pre-intervention, students were a mean of 14.21 (*SD*=1.22) years old. In the academic year of the intervention, 67 participants (36%) were in seventh grade, 37 participants (20%) were in eighth grade, 51 participants (27%) were in ninth grade, and 31 participants (17%) were in tenth grade. Seventy-one participants (38%) were White/non-Hispanic and 115 (62%) were from an ethnic or racial minority group (71 [38%] Hispanic, 37 [20%] African-American, eight [4%] Asian, and 15 [8%] other or mixed race). According to parent reports, participants were from families with a wide range of annual incomes (less than US$10,000: *n*=11 [6%]; between US$10,000 and US$24,999: *n*=21 [11%]; between US$25,000 and US$59,999: *n*=44 [24%]; between US$60,000 and US$89,999: *n*=27 [15%]; between US$90,000 and US$179,999: *n*=60 [32%]; US$180,000 and above: *n*=22 [12%]).
+
+#### Data retention
+
+For academic and disciplinary outcomes, the rates of valid data were generally high, ranging from 88% (*n*=164) to 99% (*n*=185) of the total sample across all time points. The amount of valid data on attendance outcomes was somewhat lower at certain time points due to two school districts only providing absence and tardy data for each full academic year (74% [*n*=137] to 94% [*n*=174]). However, pattern-mixture models indicated that results were not sensitive to missing data patterns. In addition, IPT-AST and GC did not have significantly different rates of missing data on any variable at any time point.
+
+#### Descriptive outcomes
+
+Table 1 displays participants’ mean grades, attendance rates, and numbers of disciplinary incidents across all academic quarters in the study period. Means in the table are not adjusted for covariates. The table includes results for the full sample and within conditions.
+
+##### Table 1.
+
+Mean grades, attendance rates, and disciplinary incidents across the pre- and post-intervention academic quarters
+
+| |Pre- Intervention Mean (*SD*)|First Post- Intervention Mean (*SD*)|Second Post- Intervention Mean (*SD*)|Third Post- Intervention Mean (*SD*)|Fourth Post- Intervention Mean (*SD*)|Fifth Post- Intervention Mean (*SD*)|
+|--|--|--|--|--|--|--|
+|**Overall Grades**| | | | | | |
+|IPT-AST|84.64 (7.33)|82.88 (8.59)|83.42 (7.83)|83.42 (8.40)|82.98 (8.74)|83.08 (8.98)|
+|GC|84.04 (8.75)|82.31 (9.81)|83.36 (9.67)|85.18 (8.07)|83.71 (8.68)|83.66 (9.32)|
+|*Full Sample*|84.35 (8.04)|82.60 (9.18)|83.39 (8.77)|84.28 (8.26)|83.34 (8.69)|83.37 (9.13)|
+|**Math Grades**| | | | | | |
+|IPT-AST|81.31 (10.51)|80.12 (11.63)|79.02 (12.01)|78.99 (11.55)|78.71 (11.52)|78.50 (12.69)|
+|GC|81.41 (11.42)|79.17 (12.44)|80.36 (11.10)|80.53 (11.98)|79.55 (12.26)|78.95 (14.24)|
+|*Full Sample*|81.36 (10.94)|79.65 (12.01)|79.70 (11.55)|79.75 (11.75)|79.13 (11.86)|78.72 (13.44)|
+|**ELA Grades**| | | | | | |
+|IPT-AST|80.62 (11.96)|79.64 (12.28)|79.57 (12.34)|79.68 (12.26)|79.26 (12.25)|78.62 (14.32)|
+|GC|80.51 (11.15)|79.53 (13.15)|79.45 (12.16)|81.50 (11.87)|80.40 (11.83)|80.95 (12.32)|
+|*Full Sample*|80.57 (11.54)|79.59 (12.68)|79.51 (12.22)|80.57 (12.07)|79.82 (12.02)|79.77 (13.38)|
+|**Absences**| | | | | | |
+|IPT-AST|1.94 (3.05)|2.11 (2.99)|1.99 (2.52)|1.98 (2.51)|2.10 (2.49)|2.15 (2.19)|
+|GC|2.02 (2.65)|2.40 (2.39)|2.28 (4.00)|2.04 (4.14)|2.82 (6.05)|2.19 (4.49)|
+|*Full Sample*|1.98 (2.84)|2.25 (2.71)|2.13 (3.30)|2.01 (3.40)|2.46 (4.61)|2.17 (3.49)|
+|**Tardies**| | | | | | |
+|IPT-AST|1.23 (3.24)|1.32 (2.36)|1.15 (1.99)|2.23 (3.93)|2.24 (4.56)|1.63 (2.72)|
+|GC|1.10 (2.18)|1.27 (2.97)|1.37 (3.86)|1.61 (3.42)|1.70 (2.91)|1.65 (3.04)|
+|*Full Sample*|1.17 (2.76)|1.29 (2.67)|1.26 (3.02)|1.92 (3.69)|1.97 (3.82)|1.64 (2.87)|
+|**Disciplinary Incidents**| | | | | | |
+|IPT-AST|0.14 (0.48)|0.18 (0.72)|0.13 (0.46)|0.49 (0.96)|0.42 (1.12)|0.36 (1.00)|
+|GC|0.37 (1.19)|0.42 (0.18)|0.21 (0.73)|0.21 (0.63)|0.36 (1.26)|0.32 (0.96)|
+|*Full Sample*|0.25 (0.91)|0.30 (0.98)|0.17 (0.60)|0.35 (0.83)|0.39 (1.19)|0.34 (0.98)|
+
+### Intervention Effects
+
+#### Grades
+
+As shown in Table 2, MMANOVAs indicated that neither intervention condition nor the interaction between intervention condition and time point significantly predicted participants’ overall, math, or ELA grades during the post-intervention period. Linear contrasts also demonstrated that there were not significant effects of intervention condition within any specific post-intervention time points.
+
+##### Table 2.
+
+Effects of condition, time point, and the interaction between condition and time point on participants’ grade and attendance outcomes in the post-intervention period
+
+| |Numerator *df*|Denominator *df*|*F*-value|*p-*value|
+|--|--|--|--|--|
+|**Overall Grades**^a^^b^| | | | |
+|Condition|1|187|0.11|0.74|
+|Time Point|4|674|2.36|0.05|
+|Condition by Time Point|4|670|0.41|0.80|
+|**Math Grades**^a^^b^| | | | |
+|Condition|1|187|0.05|0.82|
+|Time Point|4|676|1.34|0.25|
+|Condition by Time Point|4|672|0.37|0.83|
+|**ELA Grades**^a^^b^| | | | |
+|Condition|1|176|0.27|0.60|
+|Time Point|4|663|0.26|0.91|
+|Condition by Time Point|4|655|0.36|0.84|
+|**Absences**^a^^b^| | | | |
+|Condition|1|169|0.00|1.00|
+|Time Point|4|573|1.38|0.24|
+|Condition by Time Point|4|570|1.31|0.26|
+|**Tardies**^b^^c^| | | | |
+|Condition|4|731|1.37|0.24|
+|Time Point|4|731|4.15|0.002|
+|Condition by Time Point|1|727|0.43|0.79|
+
+^a^
+Analyzed with mixed model analyses of variance.
+
+^b^
+Covariates were relevant value pre-intervention, age pre-intervention, sex, ethnicity, and family income.
+
+^c^
+Analyzed with generalized linear mixed models.
+
+#### Attendance
+
+As shown in Table 2, neither intervention condition nor the interaction between intervention condition and time point significantly predicted changes in absence or tardy rates during the post-intervention period. Linear contrasts also indicated that outcomes on absences rates were not significantly different for IPT-AST and GC participants within any individual post-intervention time points.
+
+#### Disciplinary incidents
+
+According to ordinal regression analyses, there was not a significant effect of intervention condition on rates of disciplinary incidents post-intervention. Among participants with valid data, 51% (*n*=48) of IPT-AST participants and 57% (*n*=52) of GC participants had zero disciplinary incidents during the post-intervention period. Seventeen percent (*n*=16) of IPT-AST participants and 20% (*n*=18) of GC participants had one or two disciplinary incidents, and 19% (*n*=18) of IPT-AST participants and 12% (*n*=11) of GC participants had three or more disciplinary incidents.
+
+### Moderator and Predictor Effects
+
+Moderation analyses examined whether values pre-intervention, age pre-intervention, sex, ethnicity, or family income moderated the effects of intervention condition on grades, attendance, or disciplinary outcomes. Change in depressive symptoms was also examined as an independent predictor of outcomes on grades, attendance, and disciplinary incidents. Models produced estimated means (*EM*s) adjusted for the relevant value pre-intervention, time point, and within-participation correlation attributable to repeated measures.
+
+#### Overall Grades
+
+Overall grades pre-intervention, age pre-intervention, sex, and ethnicity did not moderate the effects of intervention condition on overall grades post-intervention. Family income, however, was a significant moderator (*F*[5, 176]=2.81, *p*=0.02), indicating that differences between IPT-AST and GC participants’ outcomes on overall grades varied as a function of family income. Among families with a gross income of less than US$10,000 per year, IPT-AST participants improved by an *EM* of 3.09% (standard error [*SE*]=2.27%) across the post-intervention period, while GC participants decreased by an *EM* of 4.12% (*SE*=1.78%) over that time. This difference of 7.20% (*SE*=2.85%) favoring IPT-AST was statistically significant (*F*[1, 164]=6.41, *p*=0.01). Among families with a gross income ranging from US$25,000 to US$59,999 per year, on the other hand, IPT-AST participants decreased by an *EM* of 2.63% (*SE*=0.91%), while GC participants only decreased by an *EM* of 0.05% (*SE*=1.08%). This smaller difference of 2.58% (*SE*=1.40%) favoring GC was marginally significant (*F*[1, 166]=3.41, *p*=0.07). Changes in overall grades did not significantly differ between IPT-AST and GC participants in any of the other income groups.
+
+Change in depressive symptoms was a significant predictor of outcomes on overall grades (*F*[1, 176]=6.71, *p*=0.01); on average, academic outcomes were significantly more favorable among participants who experienced meaningful improvements in their depressive symptoms over the intervention period (*EM* change=−0.07% [*SE*=0.59%]) than those who did not experience a meaningful reduction in their symptoms (*EM* change=−1.96% [*SE*=0.42%]).
+
+#### Math grades
+
+Math grades pre-intervention, sex, ethnicity, and family income did not moderate the effects of intervention condition on math grades post-intervention, and change in depressive symptoms did not predict outcomes on math grades. Age pre-intervention was a marginally significant moderator of intervention effects (*F*[1, 189]=3.04, *p*=0.08), indicating that differences between IPT-AST and GC participants’ outcomes on math grades varied as a function of their age. For interpretive purposes, the sample was divided based on whether participants were in middle or high school during the intervention year. Middle school students had more favorable outcomes on math grades than high school students overall (*EM* change= −2.06% [*SE*=0.76%] vs. *EM* change=−3.09% [*SE*=0.85%]). However, among IPT-AST participants, outcomes were very similar for the middle and high school subgroups, and actually slightly more favorable for high school students (*EM* change=−2.43% [*SE*=1.05%] vs. *EM* change=−2.34% [*SE*=1.20%]). Among GC participants, on the other hand, high school students had larger decreases than middle school students (*EM* change=−3.84% [*SE*=1.20%] vs. *EM* change=−1.69% [*SE*=1.07%]). While middle school IPT-AST participants had somewhat less favorable outcomes, high school IPT-AST participants had more favorable outcomes. This result suggests that IPT-AST may have prevented against normative age-related deterioration in math grades (Rosenkranz et al., 2014). Although providing some clarification on age-related intervention effects, these between-group comparisons were not statistically significant.
+
+#### ELA grades
+
+ELA grades pre-intervention, age pre-intervention, sex, ethnicity, and family income did not moderate the effects of intervention condition on ELA grades post-intervention. Change in depressive symptoms did not predict outcomes on ELA grades.
+
+#### Absences
+
+Neither number of absences pre-intervention, age pre-intervention, sex, ethnicity, nor family income moderated intervention condition effects on number of absences post-intervention. Change in depressive symptoms did not predict outcomes on absence rates.
+
+#### Tardies
+
+Neither age pre-intervention, sex, ethnicity, nor family income moderated the effects of intervention condition on number of tardies post-intervention. In addition, change in depressive symptoms did not predict outcomes on tardies. However, number of tardies pre-intervention was a marginally significant moderator of intervention condition effects (*F*[1, 730]=2.99, *p*=0.08). For interpretive purposes, the sample was divided into three groups by number of tardies during the pre-intervention quarter: zero tardies (60% of participants); one tardy (19% of participants); and two or more tardies (21% of participants). IPT-AST participants who had zero tardies or one tardy during the pre-intervention quarter had slightly higher tardy rates than their GC counterparts over the post-intervention period (zero tardies pre-intervention: IPT-AST *EM*=0.85 [*SE*=0.17] vs. GC *EM*=0.58 [*SE*=0.13]; one tardy pre-intervention: IPT-AST *EM*=1.24 [*SE*=0.40] vs. GC *EM*=0.82 [*SE*=0.27]). In contrast, IPT-AST participants who had two or more tardies during the pre-intervention quarter had fewer tardies than those GC participants over the post-intervention period (IPT-AST *EM*=4.07 [*SE*=1.14] vs. GC *EM*=4.61 [*SE*=1.18]). Although informative, none of these differences reached statistical significance.
+
+#### Disciplinary incidents
+
+Neither number of disciplinary incidents pre-intervention, age pre-intervention, sex, ethnicity, nor family income moderated the effects of intervention condition on number of disciplinary incidents post-intervention. Change in depressive symptoms did not predict outcomes on disciplinary incidents.
+
+## Discussion
+
+This study aimed to examine the effects of two adolescent depression prevention programs on school performance and functioning. Despite calls to broaden the outcomes examined in intervention research (Cuijpers et al., 2012) and evidence for an association between depressive symptoms and lower academic functioning (e.g., Jones, 2008), there has been minimal research on whether youth depression prevention programs have school-related effects (Haimm et al., 2013; McCarty et al., 2013; Young et al., 2012). Examination of objective indicators has been even more limited; in fact, only one known study has included such variables (Haimm et al., 2013; Young et al., 2012). Thus, the current study aimed to assess whether the superior depression-related effects of IPT-AST compared to GC (Young et al., 2016) translated to more favorable school-related outcomes.
+
+### Effects of Intervention Condition
+
+For grades, it was hypothesized that IPT-AST and GC participants would not have significantly different outcomes over the post-intervention period. This hypothesis was confirmed, in that there were no intervention effects on overall, math, or ELA grades over the post-intervention period.
+
+For attendance rates, it was hypothesized that findings would be similar to those of Haimm and colleagues (2013), who found that adolescents who participated in IPT-AST trended toward significantly more favorable attendance outcomes than those who received usual school counseling. However, this effect was not replicated – there were no effects of intervention condition on absence or tardy rates post-intervention.
+
+For disciplinary incidents, the hypothesis that IPT-AST participants would have more favorable disciplinary outcomes than GC participants was based on Young et al.’s (2012) finding that parochial school students who received IPT-AST were less likely than students who received usual school counseling to be asked to leave school for academic or behavioral reasons. Again, this finding was not replicated, as there was not a significant effect of intervention condition on total number of disciplinary incidents post-intervention. It is possible that this lack of replication is due to this study’s disciplinary outcome variable including all disciplinary incidents and actions, while Young and colleagues (2012) specifically examined more serious problems for which students were asked to leave school. Post hoc analyses did not indicate significant between-condition differences in rates of more serious disciplinary incidents (i.e., those resulting in out-of-school suspensions), but it is possible that intervention effects would emerge over a longer follow-up period (e.g., 18 months, as used by Young et al. [2012]). Thus, in future studies, it may be important to extend the follow-up period and target attention towards more serious disciplinary incidents.
+
+Despite IPT-AST having more favorable depression-related outcomes (Young et al., 2016), the lack of intervention effects on school-related outcomes is not entirely surprising. These results reflect those of studies on many other school-based mental health interventions which did not have positive academic outcomes compared to their control conditions (McCarty et al., 2013; Skryabina, Taylor, & Stallard, 2016). The interventions that have had positive impacts on academic performance have tended to be more intensive, involving students’ parents and teachers and having longer durations (Hoagwood et al., 2007). Even among such programs, effects have been mixed, only appearing on certain measures and tending to diminish over time (Arbuthnot, 1992; Conduct Problems Prevention Research Group, 1999, 2002, 2004; Hoagwood et al., 2007). As a result, it may be unreasonable to expect significant intervention effects from a brief program such as IPT-AST.
+
+It is also possible that this study’s lack of intervention effects is due to GC’s rigor as a control condition. Compared to Young and colleagues’ trial comparing IPT-AST with usual school counseling (Young et al., 2010), GC was a stringent control condition; GC groups met as frequently as IPT-AST groups, and several GC leaders followed evidence-based protocols (Young et al., 2016). Moreover, GC leaders were school staff, while IPT-AST leaders were research personnel, and receiving care from a member of the school community may have enhanced participants’ sense of support and/or accountability at school. Given that school connectedness is closely linked to students’ academic and behavioral outcomes (Anderman, 2002; Sánchez, Colón, & Esparza, 2005), enhanced school connectedness among GC participants may have positively impacted their academic performance.
+
+Studies that have demonstrated intervention effects on school-related outcomes have tended to include control conditions that were not matched with their experimental conditions in frequency and intensity (e.g., no-intervention or treatment-as-usual control conditions) (Conduct Problems Prevention Research Group, 1999; Young et al., 2010). Such control conditions prevent intervention effects from being specifically attributed to differences in content. Without a no-intervention control group, it is difficult to disentangle whether there was a lack of intervention effects because (a) neither IPT-AST nor GC had school-related effects or (b) GC was a rigorous control condition and both interventions had positive effects.
+
+### Moderator and Predictor Effects
+
+Moderation analyses produced several key findings that indicated that certain demographic characteristics and behavioral patterns pre-intervention interacted differently with IPT-AST and GC in predicting school-related outcomes. For example, family income moderated intervention effects on overall grades, wherein outcomes were significantly different for IPT-AST and GC participants in the lowest income group. In that subgroup, IPT-AST participants’ overall grades post-intervention were higher than pre-intervention, while GC participants’ overall grades were lower than pre-intervention. Among participants from families with a gross income ranging from US$25,000 to US$59,999, however, outcomes were more favorable for GC participants at a marginally significant level. Although both IPT-AST and GC participants in that subgroup experienced decreases in their overall grades from pre- to post-intervention, GC participants had smaller decreases. Outcomes were not different among other subgroups. These results suggest that IPT-AST may specifically benefit the academic performance of adolescents from low-income families, a finding that aligns with previous research which found that IPT-AST had positive effects on the school functioning of inner city youth (Young et al., 2012). However, given the small number of participants in the lowest income bracket, it is recommended that this finding is replicated in future research.
+
+Results indicated that age pre-intervention was a marginally significant moderator of the effects of intervention condition on math grades. For interpretive purposes, the sample was divided based on whether students were in middle or high school during the intervention year. Within IPT-AST, outcomes on math grades were very similar for middle and high school students, and actually slightly more favorable for high school students. Within GC, however, outcomes were considerably worse among high school students than middle school students. Across interventions, IPT-AST was associated with slightly less favorable outcomes for middle school students but slightly more favorable outcomes for high school students. These findings suggest that IPT-AST may be protective against age-related decreases in math performance (Rosenkranz et al., 2014), although the lack of significant between-group differences indicates that these effects are modest and replication is needed.
+
+Finally, number of tardies during the pre-intervention quarter was a marginally significant moderator of intervention effects on tardies over the post-intervention period. Among participants with few (i.e., zero or one) tardies pre-intervention, average rates of tardies post-intervention were also low, although IPT-AST participants had slightly higher rates than GC participants. In contrast, among participants with more tardies pre-intervention (i.e., two or more), average rates of tardies post-intervention were also higher, but IPT-AST participants had lower rates than their GC counterparts. Thus, among participants with more problematic behavior in this domain, IPT-AST was associated with more favorable outcomes. Cumulatively, moderation findings indicate that IPT-AST was associated with more positive effects than GC among certain higher-risk subgroups. This should be explored in future research.
+
+Based on the established association between depressive symptoms and school functioning (e.g., Jones, 2008), it was hypothesized that meaningful decreases in depressive symptoms (i.e., at least a 50% score reduction on the CES-D) during the course of the intervention would predict more favorable school-related outcomes, regardless of intervention condition. For overall academic performance, this hypothesis was supported: Youth who experienced meaningful improvements in their depression symptoms had significantly more favorable outcomes on their overall grades than participants who did not experience such improvement. This is an encouraging result in support of these depression prevention interventions; when IPT-AST or GC achieved its primary aim to reduce depressive symptoms, benefits generalized to academic performance.
+
+Interestingly, the effect of change in depressive symptoms did not hold for any other outcomes. The lack of effects on math and ELA grades suggests that effects on overall grades were primarily driven by responders’ outcomes in other subject areas. This may be due to educators’ particular emphasis on performance in math and ELA, as those subjects are the focus of standardized testing. Moreover, the lack of effects on attendance and disciplinary outcomes suggests that depressive symptoms, particularly at the subthreshold level, may be more closely associated with academic performance than school-related functioning in other domains.
+
+### Academic Outcomes Compared to Adolescents in Chicago Public Schools
+
+Over the course of this study, participants exhibited some small decreases in their academic performance. This raised questions about how their outcomes compared to other adolescents’ trajectories in academic performance. Research has indicated that student engagement decreases with each additional year students are in school (Busteed, 2013), a trend that is presumably associated with negative effects on academic achievement. Although research examining adolescents’ achievement trajectories is quite limited, it was possible to contextualize this study’s findings by examining a cohort of Chicago Public School students who were tracked across their transition from eighth to ninth grade. While DPI participants had some decreases in their grades over the study period (overall: -0.98%, math: −2.64%, ELA: −0.80%), they were considerably smaller than those of Chicago Public School students (overall: −5.75%, math: −4.67%, ELA: −5.00%) (Rosenkranz et al., 2014). Despite being a single comparison to an underperforming school district (Illinois State Board of Education, 2014), this provides preliminary support for the possibility that IPT-AST and GC prevented against the reductions in academic performance that have been documented in other school districts.
+
+### Limitations
+
+Although methodologically rigorous, this study had several limitations. The study lacked a no-intervention control condition or data on non-participating students in the study’s schools. It was therefore challenging to assess whether IPT-AST and GC had preventive effects on adolescents’ school performance and functioning. Because there was not a no-intervention control condition, it is unknown whether the lack of intervention effects indicates that the programs had limited impact on school-related outcomes or that they both had positive effects.
+
+A second limitation involved the relatively small number of participants in certain income brackets. In the lowest income bracket, for example, there were only 11 participants. Thus, the finding that income moderated intervention effects on overall grades must be interpreted with caution.
+
+Furthermore, to a varying extent, the academic quarter used as the first post-intervention time point overlapped with intervention groups. This academic quarter was included in analyses to ensure any short-term effects were captured, but there may not have been sufficient time for intervention effects to materialize in the short time frame between the end of the prevention groups and the end of this academic quarter. For this reason, four additional post-intervention time points were included in analyses. It does not appear that the lack of intervention effects can be attributed to the overlap between the intervention and first post-intervention time point, as intervention effects were consistent across all five post-intervention time points.
+
+It is also important to note that use of paper records from 10 schools necessitated flexibility in data entry methods and caused some data to be missing. In particular, attendance data in two school districts was only provided on a yearly basis. Although the statistical analyses for absences accommodated that missing data, the analyses for tardies did not, and students in those two districts were excluded from the tardy analyses. As a result, these findings should be interpreted cautiously. However, statistical analyses indicated that data on all outcomes were missing at random, meaning that intervention effects were not biased by missing data.
+
+Finally, although this study examined many indicators of academic performance and school functioning, it was not comprehensive. Although grades are a useful measure of academic performance, they are imperfect and vary across teachers, schools, and years (Ziomek & Svec, 1995). It is possible that significant intervention effects occurred on school-related measures that were not included in this study, such as standardized test scores or retention rates. Although this study’s cumulative findings render this unlikely, the possibility cannot be ruled out. Consequently, researchers conducting future studies in this area may be advised to examine those measures in addition to those used in this study. Ultimately, the field would benefit from establishing a common set of objective school-related metrics to be included in all research studies on youth mental health interventions; this would facilitate systematic program comparisons and allow for meta-analyses.
+
+### Summary and Conclusions
+
+Overall, this study provided mixed results on how two depression prevention programs impacted academic performance and school functioning. Results on academic outcomes were more positive than those on attendance rates and disciplinary incidents, suggesting such programs may have stronger effects on academic performance than other school behaviors.
+
+Similar to many other studies on school-based mental health programs (Hoagwood et al., 2007), there were no significant effects of intervention condition on school-related outcomes. However, IPT-AST was associated with greater effects among certain higher-risk subgroups (e.g., adolescents from low-income families), suggesting IPT-AST may be particularly beneficial for specific populations that require more support. Thus, for organizations prioritizing school-related outcomes, resources for evidence-based interventions such as IPT-AST may be best directed towards certain subgroups of adolescents at risk of depression. Yet, given that the study was underpowered for moderator analyses, further research is needed to determine which subgroups of youth might benefit more or less from specific prevention programs.
+
+Across groups, participants who reported meaningful improvements in their depressive symptoms had better academic outcomes overall. This finding indicates that when depression prevention programs meet their primary objective to decrease depressive symptoms, the benefits are often broader than symptoms alone – participants also fare better in the important realm of academic achievement.
+
+Although this study had some encouraging findings, it does not suggest that depression prevention programs are the panacea for school performance and functioning among adolescents at risk of depression. In the nascent stage of this research, school-related effects have appeared to be modest and variable across outcomes (Haimm et al., 2013; McCarty et al., 2013; Young et al., 2012). Given the inconsistency of findings, depression prevention researchers should continue to examine program effects on objective measures of school performance and functioning. Positive findings may provide an important means of advocating for the provision of depression prevention programs in schools. However, if additional research on these programs continues to produce similar results on school-related variables, it will suggest that they are too brief and targeted to impact these secondary outcomes. Given these programs’ specific focus on mental health, it may be unreasonable to expect significant effects on academic performance or school functioning. Mental health programs with school-related effects have tended to include multiple components (e.g., universal and selective interventions; academic tutoring) (Conduct Problems Prevention Research Group, 1999; Hoagwood et al., 2007). Thus, future research should aim to clarify which components of those programs have positive school-related effects. It may be helpful to incorporate such components into depression prevention programs in order to make them more appealing to schools. At the same time, mental health outcomes should be further emphasized as intrinsically important, particularly as the focus of education shifts from academic achievement alone to promoting the healthy development of the whole child (ASCD & Centers for Disease Control & Prevention, 2014).
+
+## Contributor Information
+
+Alyssa E. McCarthy, Department of Psychology, Rutgers, The State University of New Jersey, 152 Frelinghuysen Road, Piscataway Township, NJ 08854
+
+Jami F. Young, Graduate School of Applied and Professional Psychology, Rutgers, The State University of New Jersey, 152 Frelinghuysen Road, Piscataway Township, NJ 08854
+
+Jessica S. Benas, Graduate School of Applied and Professional Psychology, Rutgers, The State University of New Jersey, 152 Frelinghuysen Road, Piscataway Township, NJ 08854
+
+Robert J. Gallop, Department of Mathematics, West Chester University, 25 University Avenue, West Chester, PA 19383

@@ -1,0 +1,230 @@
+TITLE: Assessment of a Robotic Assistant for Supporting Homework Activities of Children With ADHD
+
+AUTHORS: Jonnathan Berrezueta-Guzman(1,2); Iván Pau(1); María-Luisa Martín-Ruiz(1); Nuria Máximo-Bocanegra(3)
+
+AFFILIATIONS:
+(1) Departamento de Ingeniería Telemática y Electrónica, Universidad Politécnica de Madrid, 28031 Madrid, Spain
+(2) Department of Research and Project Management, CEDIA, Cuenca 010203, Ecuador
+(3) Department of Physiotherapy, Occupational Therapy, Rehabilitation, and Physical Medicine, Faculty of Health Sciences, Rey Juan Carlos University, 28922 Madrid, Spain
+
+Corresponding author: Iván Pau
+
+JOURNAL: IEEE Access
+YEAR: 2021
+VOLUME: 9, pp. 93450-93465
+DOI: https://doi.org/10.1109/ACCESS.2021.3093233
+Received: May 11, 2021
+Accepted: June 24, 2021
+Date of publication: June 28, 2021
+Date of current version: July 7, 2021
+Electronic ISSN: 2169-3536
+
+License: This work is licensed under a Creative Commons Attribution 4.0 License.
+
+Funding: Supported by the UNESCO Chair - Support Technologies for Educational Inclusion to develop the second version of the Atent@ robot in its laboratory at the Universidad Politécnica Salesiana.
+
+SOURCE: Scribd document (https://www.scribd.com/document/927211811/Assessment-of-a-Robotic-Assistant-for-Supporting-Homework-Activities-of-Children-With-ADHD)
+
+---
+
+ABSTRACT
+
+Robotics, Artificial Intelligence (AI), and the Internet of Things (IoT) support various processes in many scenarios of modern life such as e-health and psychological treatments. This article presents the design, development, implementation, and assessment of a Robotic Assistant (RA), named "Atent@", as a support tool in the homework activities of children with Attention Deficit Hyperactivity Disorder (ADHD). Interacting with the children the RA helps them correct their bad habits and misbehavior caused by the disorder. Its features and functionalities were designed by therapists, implementing AI algorithms to process information and make decisions in real-time to help children to be focused on their homework. This RA interacts with smart objects deployed at home, which are associated with the activity under observation (desk and chair). This solution allows therapists to receive more accurate information about the homework sessions inside the home. At the same time, remote interaction with the child is made possible (through the RA) to provide new instructions and support him/her along with the sessions. This RA is a significant evolution of an earlier version. All the improvements brought to the project by the modifications in technical and qualitative features are explained. Furthermore, the experiment and its results are presented to illustrate the clinical potential. This project shows that the RA can not only make observations with a high degree of precision like an expert (teacher/therapist) but also positively influences the homework performance of children with and without ADHD.
+
+INDEX TERMS: ADHD, ambient assisted living, ambient intelligence, educational robots, human–robot interaction, the Internet of Things, intelligent robots, mobile robots, programming environments, robotic assistants, smart-home, therapeutic robot.
+
+---
+
+I. INTRODUCTION
+
+A. Objective
+
+This paper presents the assessment of a robotic assistant aimed at providing therapeutic support in the performance of homework by children with ADHD. The RA is an evolution of an earlier version that entails improving the overall functional and mechanical features, the interaction subsystem, and acquired information. All the improvements have been made according to the knowledge acquired in the previous version of the RA and the provided feedback by therapists, parents, and children. The assessment consists of an experiment aimed at demonstrating its viability in clinical settings, comparing its monitoring performance to that of an expert in the field.
+
+Robotic assistance, aimed at performing complicated tasks in different fields, has taken off exponentially in the last five years. In healthcare, RAs contribute to support complicated tasks and have generated a radical change, showing unimagined possibilities in their application in various fields.
+
+B. ADHD Background
+
+ADHD is a developmental disorder of self-control, manifested by problems around attention span, impulse control, and hyperactivity at a high level. This disorder represents a real problem for children as well as a real obstacle in the development of daily activities at home or in school. In the long term, ADHD could be heart-related.
+
+ADHD characteristics:
+1) Inattention refers to the inability to voluntarily maintain attention throughout the development of a task. The focus of attention is constantly changing which prevents the completion of tasks, requiring great mental effort.
+2) Hyperactivity refers to the inability to hold still in situations where it is appropriate to do so. They are restless, move hands and feet constantly and find it difficult to sit.
+3) Impulsivity refers to the impossibility of waiting and responding to stimuli at the right time. It leads to disorder and distractions in academic tasks.
+
+ADHD subtypes:
+1) ADHD combined type: Presenting both attention deficits and hyperactivity.
+2) ADHD type with predominance of attention deficit.
+3) ADHD predominantly hyperactive-impulsive type.
+
+Associated Disorders:
+A high percentage of ADHD cases are usually associated simultaneously with other disorders:
+1) Oppositional Defiant Disorder (ODD): prevalence of comorbidity between 40-50%
+2) Anxiety disorders: present in 25-35% of ADHD cases
+3) Depressive disorders
+4) Learning disorder: 8-39% have a reading disorder and 12-30% have a calculation disorder
+5) Autism spectrum disorder (ASD): 33% of children with ASD present inattentive ADHD symptoms
+
+B. Structure of the Article
+
+The continued development of the project is shown as the background. The Smart-home environment, combining robotic assistance and IoT to support ADHD therapy processes inside the patient's home is described. Background on ADHD, state of the art, development process, experiment and results are included.
+
+---
+
+II. RELATED WORK AND STATE OF THE ART
+
+Several robotic assistants have been developed to support ADHD therapies. Related works include:
+
+- NAO robot-based systems: Used in multiple projects as assistive technology employing a toy/game robotic approach. However, NAO-based projects require a programmer to supervise during all sessions, limiting their clinical applicability.
+- KIP3 (robotic companion): A social robotic device for students with ADHD providing immediate feedback for inattention or impulsivity events. Its principal limitation is that it requires a tablet interface.
+- RAKMA (Robot-assisted Kinematic Measure for ADHD): Investigates clinical effectiveness of robot-assisted kinematic measurement for ADHD.
+- Pepper robot: Used for ADHD support, adapts to patient profiles using AI. Also requires programmer presence during sessions.
+
+Key Differentiators of Atent@ compared to related works:
+1. According to robotic functionality: Atent@ is programmed following therapist recommendations without requiring programmer supervision during sessions.
+2. According to information collection: Atent@ allows therapists to monitor (remotely) the child's behavior in real-time during homework sessions, providing more accurate information from the real homework environment (inside the home).
+3. The shape and functionalities of Atent@ do not represent a source of distraction for the child.
+
+---
+
+III. SMART-HOME ENVIRONMENT AND SYSTEM ARCHITECTURE
+
+The Smart-Home environment combines:
+1. Smart objects: Intelligent desk and chair that detect ADHD-associated behavioral parameters
+   - DISTRACTIONS: Calculated from acquired data through smart things (playing with chair, leaving desk, etc.)
+   - HYPERACTIVENESS: Calculated based on frequency of distractions, pauses, and assistance calls
+
+2. Robotic Assistant (Atent@): The second version robot that interacts with the Smart-home environment
+
+3. Cloud computing: Machine learning algorithm in the cloud to predict future homework behavior
+
+4. Remote therapist/parent monitoring: Real-time access to child's behavior during homework sessions
+
+The system architecture enables:
+- Real-time monitoring of homework session behavior
+- Remote interaction between therapist/parent and child through the RA
+- Data collection for longitudinal behavior tracking
+- AI-based behavior prediction for future sessions
+
+---
+
+IV. ROBOTIC ASSISTANT (ATENT@) - SECOND VERSION
+
+A. Hardware Improvements (Second Version vs. First Version)
+
+Table 1 shows the electronic comparison between RA versions. Key improvements include:
+- Reduced weight
+- Improved mobility
+- Enhanced sensors
+- Better communication capabilities
+- Reduced production cost (22% reduction)
+- Reduced production time (37% reduction)
+
+Table 3 shows design feature comparisons. Key improvements:
+- Improved physical design
+- Enhanced interaction capabilities
+- Better integration with smart home environment
+
+B. Mechanical Design
+
+The second version of the RA features electrical components as shown in Figure 2. The robot is designed to:
+- Be positioned on the child's workstation
+- Not serve as a source of distraction
+- Interact naturally with the child during homework
+
+C. AI Algorithm for Interaction Process
+
+The interaction process is based on rules governing:
+- Detection of child's mood (Table 4: Set of rules for interaction in the determination of child's mood)
+- Assistance interactions (Table 7: Set of rules for assistance interaction)
+- Sorting pending and new tasks (Table 9: Set of rules for sorting pending and new tasks)
+
+The interaction sequence during a homework session:
+1. Child begins homework session
+2. RA monitors behavior through smart objects
+3. RA identifies behavioral events (distractions, hyperactivity, task completion)
+4. RA responds with appropriate interventions based on rule-based AI
+5. At end of session: RA sends motivational message; parents/therapists receive session summary
+
+D. Session Flow (Figure 4 - Diagram of child-robot interaction)
+
+The interaction process includes:
+- Task assignment and organization
+- Real-time behavioral monitoring
+- Corrective interventions for off-task behavior
+- Task completion tracking
+- Motivational feedback
+- Session data transmission to cloud for analysis
+
+---
+
+V. EXPERIMENT
+
+A. Study Design
+
+The experiment was conducted in a controlled academic scenario (homework context) to test the RA with smart objects with children. The experiment focused on:
+- Comparing RA monitoring performance to expert (therapist) monitoring
+- Assessing the impact of the RA on homework performance
+
+B. Sample Preparation
+
+Prior to experimentation, parents signed informed consent for their children to participate.
+
+Table 12 shows the division of the sample group by age and diagnosis of ADHD:
+- Children with confirmed ADHD diagnosis
+- Children with suspected ADHD
+- Children without ADHD (control group)
+
+The sample included 3 children with suspected ADHD who presented a profile with combined ADHD (presenting both attention deficits and hyperactivity).
+
+C. Experimental Protocol
+
+Table 13 shows the distribution of tasks in the experiment plan. Math homework tasks were distributed throughout the week, not exceeding 70 minutes of work time per session. Tasks were aligned with children's knowledge level.
+
+The experiment was conducted in a center outside the lab (academic scenario), with both the RA and smart objects deployed within the center.
+
+D. Data Collection
+
+The experiment collected:
+- Behavioral event data from smart objects (distractions, hyperactiveness)
+- Expert observer ratings of the same behavioral events
+- Task completion data
+- Session duration data
+
+---
+
+VI. RESULTS
+
+Key Results:
+1. The RA made observations with a high degree of precision comparable to an expert (teacher/therapist)
+2. The RA positively influenced the homework performance of children with and without ADHD
+3. The cost of materials used to build the second version was reduced by 22%
+4. Production time was reduced by 37%
+5. The RA's weight was reduced by 45% from the first version
+6. Children showed engagement with the RA during homework sessions
+
+The results demonstrate the clinical potential of the Atent@ robotic assistant as a support tool for children with ADHD during homework activities.
+
+---
+
+CONCLUSIONS
+
+This article presented the assessment of the second version of the Atent@ robotic assistant for supporting homework activities of children with ADHD. Key conclusions:
+
+1. The RA can make observations with comparable precision to expert observers, validating its monitoring capability
+2. The RA positively influences homework performance, suggesting therapeutic benefit beyond monitoring
+3. Technical improvements in the second version (reduced weight, cost, and production time) enhance practical viability
+4. The Smart-home environment integrating the RA with smart objects provides a comprehensive solution for home-based ADHD support
+5. The system enables remote therapist oversight, overcoming a key limitation of traditional ADHD interventions
+
+Future work will focus on:
+- Larger clinical trials with children formally diagnosed with ADHD
+- Long-term effectiveness studies
+- Integration with advanced AI for improved behavior prediction
+- Exploration of the RA's potential in other ADHD-related contexts
+
+---
+
+NOTE ON SOURCE
+
+This article is published in IEEE Access as open access under Creative Commons Attribution 4.0 License. Full text available through IEEE Xplore (https://ieeexplore.ieee.org/document/9459595) and via the DOI (https://doi.org/10.1109/ACCESS.2021.3093233).

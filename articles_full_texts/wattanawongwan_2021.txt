@@ -1,0 +1,201 @@
+Cooperative Learning Strategies for Building Relationship Skills in Students With Emotional and Behavioral Disorders
+
+Sanikan Wattanawongwan, PhD, BCBA-D1, S. D. Smith, PhD2, and Kimberly J. Vannest, PhD3
+
+1Texas A&M University, College Station, USA
+2Southeast Missouri State University, Cape Girardeau, USA
+3University of Vermont, Burlington, USA
+
+Corresponding Author: Sanikan Wattanawongwan, Department of Educational Psychology, Texas A&M University, 4225 TAMU, Ross Street, College Station, TX 77843, USA.
+Email: swattanawongwan@tamu.edu
+
+Published in: Beyond Behavior
+2021, Vol. 30(1) 32–40
+© Hammill Institute on Disabilities 2021
+DOI: 10.1177/1074295621997599
+
+ABSTRACT
+
+Cooperative group activities in classrooms provide an opportunity for children to learn and demonstrate relationship skills, particularly when clear expectations and explicit instruction are provided. Relationship skills are one of the five competency areas of social and emotional learning. This article provides directions and illustrations for using cooperative group activities to improve the relationship skills of students with or at risk for emotional and behavioral disorders.
+
+Keywords: cooperative, social skills, relationship skills, classroom management strategies, social and emotional learning, collaboration, problem-solving, socially responsible behavior
+
+INTRODUCTION / VIGNETTE
+
+Ms. Marx notices problems with student-to-student interactions in her fourth grade classroom but remains unsure of how to accurately describe the problems or how to address them. Ms. Marx also knows teacher judgment may have a bias or lack reference to the larger population outside of the classroom, school, or community. She wants to teach relationship skills but feels pressure to maximize academic instructional time. As a veteran teacher, Ms. Marx frequently uses cooperative learning strategies when teaching academics. It occurs to her that explicitly teaching cooperation strategies within the learning groups could promote relationship skills and provide opportunities for the demonstration of discrete social-emotional behaviors in the context of academics.
+
+David is a student in Ms. Marx's class who seems to promote conflict in the classroom, resist group activities, and disrupt learning activities by refusing to work with others. Ms. Marx has heard David say, "I don't like to work with them," "They always tease me," or "I know no one likes me in this class." Ms. Marx has previously addressed these problems with David by using functional behavior assessment data to implement a list of interventions, including providing choice for assignments, giving nongroup work options, supporting contingencies, and using reinforcers for successful group work behavior. Ms. Marx has also worked with the other students by precorrecting and reminding peers to be friendly and patient, providing lessons on tolerance, reading books to the class about including students with disabilities, and providing concrete suggestions on how to make friends. However, these strategies require 1:1 intervention and ongoing monitoring and, although the strategies support David in class, he is no closer to demonstrating success in independent or unaided cooperative group activities. In addition, David is becoming prompt dependent and wants to know "what he will get" if he makes a choice to work in the group. The other students have also begun to ask what they will get for working in the group. Ms. Marx feels frustrated that classroom instructional time is taken away to continue to manage David and to orchestrate successful interactions. Ms. Marx worries that David may not have a teacher next year who can do the same. She wonders whether there is a way to teach skills and create natural contingencies that would support positive relationships. It seems to her that the students in the class with strong relationship skills get better at relationships, whereas those with poor skills get worse. Ideally, Ms. Marx would like to address these problems without encroaching on instructional time or further stigmatizing David as problematic. Ms. Marx decides to enhance their current practice of cooperative learning groups.
+
+BACKGROUND
+
+Relationship skills support healthy and positive relationships between people in society (Weissberg et al., 2015). They are one of the five social emotional learning (SEL) competencies, which also include self-awareness, self-management, social awareness, and responsible decision making (Collaborative for Academic, Social, and Emotional Learning [CASEL], 2018; www.casel.org). Relationship skills encourage collaboration, problem solving, and socially responsible behavior (Beland, 2007; Weissberg et al., 2015) and are tied to positive school success and social outcomes (Konishi & Wong, 2018). Relationship skills help students succeed academically and behaviorally across settings from childhood to young adulthood (Durlak et al., 2011; Jones, 2013; Weissberg et al., 2015). There are at least 95 studies investigating the benefit of relationship skills for students of different language, ethnicity, culture, gender, social class, and ability (Johnson et al., 2007).
+
+Improved relationship skills help prevent and reduce bullying in classrooms (Bridgeland et al., 2013). Furthermore, relationship skills are socially valid, with about 95% of all teachers believing relationship skills benefit all students and improve student skills for working together and reducing conflict (Cooper, 2017). Hutzel and colleagues (2010) noted that strong relationship skills improve student productivity and the willingness to engage in difficult tasks, as well as increase students' sense of personal responsibility. Conversely, students with poor relationship skills are more likely to be at risk for destructive behavior than students who have social support and strong peer relationships (Hutzel et al., 2010). The cooperation component of relationship skills is noted as absent for many students with emotional and behavioral disorders (EBD; Hoffman et al., 2015). Parents and educators describe uncooperative behaviors for students with EBD as refusals, lack of compromise, and/or oppositional behavior.
+
+Students with EBD may demonstrate negative relationships with peers by acting aggressively, bullying, or violating classroom norms and expectations (Normand et al., 2010). Students with EBD, including those demonstrating internalizing problems such as anxiety, depression, and withdrawal behaviors, are likely to experience increased peer rejection and opportunities for victimization and bullying (Trach et al., 2018). Moreover, the literature reports students with EBD have deficits in social competence and interpersonal relationship skills with their teachers, peers, and parents (Landrum et al., 2003). While all students can benefit academically and socially when peer relationship skills are strong, teaching relationship skills like cooperation is often a low instructional priority and can be difficult to accomplish in instructional environments.
+
+Cooperative learning is a type of research-based peer-mediated intervention (PMI) generally described as efficient and effective (Dunn et al., 2017). In a number of studies, cooperative learning activities demonstrated improved outcomes for students (Akcay, 2016; Araban et al., 2012; Ghufron & Ermawati, 2018). Teachers and peers of students with EBD should be involved with each step of cooperative learning to enhance their social skills in the classroom (Bridgeland et al., 2013). However, simple grouping of students without explicit instruction is unlikely to promote skill-building, particularly for individuals with disabilities who are differentially affected by a lack of direct instruction. In this article, we provide directions and illustrations for teaching cooperation skills through cooperative learning group activities as an intervention to improve relationship skills for children with EBD.
+
+Initial Evaluation Process of Relationship Skills for Students
+
+Table 1. Relationship Skill Evaluation Tools.
+
+Scale/Evaluation tool | Indicators/Characteristics | Population | Administration method
+Civic Participation Skills (Chi, Jastrzab, & Melchior, 2006) | Conflict resolution skills; Development of participation and leadership skills; Communication; Group membership | Elementary; Middle school; Grades 3–8 | Self-report questionnaire
+Classroom Climate Scale | Student–student relationships; Student–teacher relationships; Awareness/reporting | Middle school; Grades 6–8 and their teachers | Self-report questionnaire
+Conflict Resolution—Individual Protective Factors Index | Conflict resolution skills; Cooperation skills; Development of participant and leadership skills; Self-control/impulsivity | Middle school; High school | Parent/Teacher self-report questionnaire
+Parent–Child Relationship Inventory (PCRI; Gerard, 1994) | Attitude about parent–child and family relationships; Communication, involvement, limit setting, and autonomy | Preschoolers through adolescents | Parents–child self-reported
+Social Competence and Behavior Evaluation (SCBE-30) | Social competence; Anger aggression; Anxiety-withdrawal | Ages 2.5–6 years | Self-report questionnaire
+Social Competence Scale for Teenagers | Development of participant and leadership skills | Middle school; High school; Ages 12–17 years | Self-report questionnaire
+
+COOPERATIVE LEARNING
+
+Macpherson (1999/2015) reported that cooperative learning "is part of a group of teaching/learning techniques where students interact with each other to acquire and practice the elements of a subject matter and to meet common learning goals" (p. 1). Cooperative learning is one of the PMIs with efficacy for building relationship skills for students with EBD (Mitchell et al., 2003). PMIs are a research-based practice that have demonstrated positive effects across a number of academic and social variables (Dunn et al., 2017; Haast et al., 2019; Herpratiwi et al., 2018). PMIs are strategies that create opportunities for peers to promote social behaviors for all students, including children with disabilities (Haas et al., 2019; Ryan et al., 2008). Some examples include peer modeling, peer monitoring, peer network strategies, peer tutoring, classwide peer tutoring (CWPT), peer-assisted learning strategies (PALS), classwide student tutoring teams, peer mentoring, and cooperative learning (Dunn et al., 2017; Ryan et al., 2004).
+
+Cooperative learning has five essential components: positive interdependence, individual accountability, face-to-face promotive interaction, social skills, and group processing (Meisinger et al., 2004; see Table 2). Cooperative activities are instructional strategies implemented and administered by classroom teachers (Durlak et al., 2011). Learning outcomes promoted by cooperative learning strategies include efforts to achieve positive relationships among peers, and students' psychological adjustment and social competence (see Figure 2; Johnson et al., 2007). The main content of cooperative learning is positive interdependence that promotes students working collaboratively in a group to share ideas and support success. Then, positive interdependence appears in promotive interaction, which is encouraging peers to achieve the group goal.
+
+Students with EBD benefit in academic achievement, social skills, appropriate behaviors, and relationship skills by learning through cooperative activities (Durlak et al., 2011; Sutherland et al., 2000). PMI studies have shown improvement in relational skills for students with EBD (Blake et al., 2000; Christopher et al., 1991; Cochran et al., 1993; Kamps et al., 1999, 2000; Locke & Fuchs, 1995). Cooperative learning helps students with EBD interact, build understanding, and exchange information with their peers by creating positive interpersonal relationships, effective communication, and conflict resolution skills (Kaya et al., 2015). Furthermore, psychological health benefits including self-esteem and social skills development have been exhibited (Herpratiwi et al., 2018; Johnson et al., 2007).
+
+Table 2. Five Elements of Cooperative Learning.
+
+Element | Students must: | What to look for:
+1. Positive interdependence "Engaging to personal success as well as the group member's success." | Clearly define and work toward common goals; Encourage to benefit each individual and support other's effort in the group; Have personal and group commitment of completing their endeavor; Recognize that the success of individual members affects other members of the group | Teacher provides opportunities that students can learn to help, support, and encourage each other's effort in the group
+2. Individual accountability "Contributing an equitable share of the work with respect to the group goal." | Complete group work independently, but share and contribute work for the whole group work; Help the group reach its goal; Learn together as a whole group to perform better as an individual | Teacher allows students to give feedback from their individual work with respect to the group goal
+3. Face-to-face promotive interaction "Supporting other members' efforts to learn." | Promote each other's success and learning by face-to-face interaction; Support, encourage, and help each other; Explain how to solve problems; Include reflection on learning and problem-solving | Teacher instructs students on how to use positive words to promote their peers in the group
+4. Social skills "Developing interpersonal and social skills to work with others such as communication, leadership, and problem-solving skills." | Communicate, manage conflict, be motivated, and have effective leadership; Make decisions together and be able to make leadership decisions; Build trust | Teacher sets up the activity so that students in the group can work together to make a decision and solve the problems
+5. Group processing "Analyzing how well they were working and contributing work in the group." | Discuss achieving and maintaining effective working relationships between group members; Recognize the positive, and identify problems and solutions | Teacher leads students and allows them to state their process of the success in their group work
+
+USING COOPERATIVE LEARNING STRATEGIES IN THE CLASSROOM
+
+Cooperative learning strategies require suitable tasks for group work, positive interdependence, attention and class time from the teacher, small numbers of members (2–5 members), and guidance from the teacher during the process. Implementation of activities for cooperative learning includes the generic instructional steps of planning, introducing, monitoring, assessing, and processing (Johnson et al., 2007).
+
+Table 3. Resources of Additional Information on Social and Emotional Learning (SEL).
+
+Name | Description | Link
+The CASEL Guide to Schoolwide SEL | Guidance of step-by-step and test tools to support educators implement SEL | https://schoolguide.casel.org/
+The CASEL Program Guides | Guidance to select well-designed SEL programs for preschool to high school | https://casel.org/guide/
+SEL Assessment Guide | Resources for implementation teams about SEL assessment guide in PreK–12 grade settings | https://measuringsel.casel.org/access-assessment-guide/
+SEL 101 for Parents | A video information for parents on SEL | https://www.youtube.com/watch?v=y2d0da6BZW
+CASEL's District Resource Center | Guidance online tools to support SEL implementation in districts | https://drc.casel.org/
+State Guidance Documents | The resources from partner states to help teacher integrate SEL | https://casel.org/csi-resources/
+Making the Case for SEL | PowerPoint of the information of SEL presented in an easy-to-understand way | https://docs.google.com/presentation/d/1Tb9WundNcsURexo2RTvVGVIVlzD_q9i6Vv4jcNtqZjI/edit
+District Financial Sustainability | Resources for financially sustaining districtwide SEL initiative | http://financialsustainability.casel.org/
+
+Step 1: Planning
+
+The planning stage consists of determining the specific techniques or assessments that will be used. In this step, students with EBD should be grouped with peers who are familiar and who know how to interact with students with EBD.
+
+Ms. Marx hears about SEL in school-based professional development, teacher book clubs, and professional learning communities (PLCs). During Ms. Marx's master's program, she learned that there are differences and not all are equally supported as empirically-based concepts. Ms. Marx decides to look for valid assessments of the "relationship skills" to better understand student and classroom problems prior to planning strategies or interventions. She chooses the Student Observation Checklist of Civic Skills and Behaviors for Fourth and Fifth Grades to rate and group students based on the categories of personal responsibility, caring for others and for community, and leadership. Ms. Marx selects the project the students will be working on as a group (e.g., the water cycle), determines the goal/outcome of the project (e.g., create a science comic strip that explains the water cycle), and establishes which cooperative skills are needed to achieve the goal (e.g., communication skills, perspective-taking skills, conflict resolution skills). Ms. Marx follows each step by using the checklist of cooperative learning strategies implementation integrity (see Table 4 for an integrity checklist).
+
+Table 4. A Checklist of Cooperative Learning Strategies Implementation Integrity.
+
+Step of strategies | Task lists | Yes (+)/No (−)
+Step 1: Planning | Determine the specific techniques/assessments to be used; Group students with EBD with peers who are familiar and know how to interact with students with EBD
+Step 2: Introducing | Explain the tasks and expectations to all students; Define the required strategies, positive interdependence, and individual accountability; Make sure all students, including those with EBD, understand the specific activity for group collaboration
+Step 3: Monitoring | Collect observation data in class; Provide task support and increase students' group skills; Give descriptive feedback and redirection to students; Provide peer assistance to each student with EBD; Ensure that students with EBD have an opportunity to participant in giving feedback
+Step 4: Assessing | Provide assessment during the task and after completing the task to check understanding of work; Provide preassessment/postassessment to students with EBD with necessary accommodations (frequent breaks, small group, check for understanding, etc.)
+Step 5: Processing | Ensure students discuss how they are working and achieving their goals and rate their individual performance; Encourage to set the goals to improve their work; Encourage students with EBD to discuss and provide opinions to rate their performance; Provide structured questions/task analysis checklist if necessary
+
+Step 2: Introducing
+
+In this step, the tasks and expectations will be explained to all the students. The required strategies, positive interdependence, and individual accountability will be defined. It is essential that the teacher ensures that all students, including those with EBD, understand exactly what is expected of them.
+
+After teaching the whole group lesson on the basics of the water cycle, Ms. Marx divides the class into predetermined groups. Ms. Marx explains the assignment and provides the expectations regarding the necessary cooperative skills, including taking turns to talk, showing positive body language, and what to say when disagreeing with a peer. Ms. Marx provides additional instruction and opportunities to role play to the group that includes David.
+
+Step 3: Monitoring
+
+The monitoring stage consists of collecting observation data, providing support with feedback and redirection to increase the students' group skills, and ensuring that students with EBD are participating in peer assistance. The teacher also ensures that the students with EBD have the opportunity to give feedback.
+
+As the groups work on the project, Ms. Marx walks around the room and provides feedback, such as "Nice job listening to your group members," "Thank you for using positive body language," and "I see you are working together to finish the assignment." Ms. Marx also uses the language taught as a component of the cooperative skills to provide redirection. For example, "Remember to use the words we learned to discuss a disagreement," or "You are talking when your group member is talking. Remember to take turns." Ms. Marx spends time in each group actively supervising, listening, answering questions, and observing how they are working together, especially David. At times, as part of the monitoring process, Ms. Marx takes data on which cooperative skills are used and how frequently. Furthermore, Ms. Marx uses a checklist about verbal behavior to evaluate how often David engages with peers.
+
+Step 4: Assessing
+
+In this step, assessment is provided during the task and after completion of the task to check for understanding. Students with EBD may need additional accommodations, such as frequent breaks or smaller group sizes.
+
+After the group works on the project, Ms. Marx wants to make sure that students understand the lesson. Ms. Marx uses a variety of group assessment and self-assessment to determine the grade during the task and after completing the task. In addition to evaluating the water cycle project for accuracy, Ms. Marx reassesses the students with the Student Observation Checklist of Civic Skills and Behaviors for Fourth and Fifth Grades. She found that some students, including David, increased their levels of interpersonal relationship skills. The relationship-related problems (e.g., arguing, bullying, or not talking to each other) have occurred less frequently in class. She believes that students are likely to be more engaged in learning and are more actively involved in group activities.
+
+Step 5: Processing
+
+The final step is for students to process the task or activity. Students should discuss and evaluate how they work together and set goals to improve their work. Additional encouragement to participate in the processing phase may be required for students with EBD. It may be helpful to provide structured questions or task analysis checklists.
+
+Once the assignment is complete, Ms. Marx leads a class discussion in which students talk about what worked well and what they can do differently to improve their performance during group work. Ms. Marx provides opportunities for David to share his thoughts and rate his performance. Ms. Marx records results on the implementation integrity checklist to monitor implementation.
+
+CONCLUSION
+
+Cooperative learning can address both academic and relational skill development and provides a natural, classroom context within which students with EBD can practice and develop relationship skills. Given the well-documented deficits in relationship skills for students with EBD, educators can address these concerns through structuring collaborative work that explicitly teaches and reinforces the five elements of cooperative learning: positive interdependence, individual accountability, face-to-face promotive interaction, social skills, and group processing. As illustrated through Ms. Marx's approach with David, when students with EBD are purposefully grouped and explicitly taught cooperative skills within group tasks, they have increased opportunities to demonstrate relationship skills and experience the social benefits of collaboration. Practitioners should assess relationship skills first, then plan, introduce, monitor, assess, and process cooperative learning activities using the implementation integrity checklist provided in this article.
+
+REFERENCES
+
+Akcay, H. (2016). Attitudes toward science and technology in cooperative learning based on project. International Journal of Scientific Research and Innovative Technology, 3(4), 58–63.
+
+Araban, M., Zarani, F., Parsafar, P., & Farahmand, V. (2012). Effectiveness of cooperative learning strategy on social skills, emotional development and academic achievement of grade-3 elementary school students. Journal of Education, 6(3), 65–74.
+
+Beland, K. (2007). Caring school community. Developmental Studies Center.
+
+Blake, C., Wang, W., Cartledge, G., & Gardner, R. (2000). Middle school students with serious emotional disturbances serve as social skills trainers and reinforcers for peers with SED. Behavioral Disorders, 25(4), 280–298.
+
+Bridgeland, J., Bruce, M., & Hariharan, A. (2013). The missing piece: A national teacher survey on how social and emotional learning can empower children and transform schools. Civic Enterprises.
+
+Christopher, J. S., Nangle, D. W., & Hansen, D. J. (1993). Social skills interventions with adolescents: Current issues and procedures. Behavior Modification, 17(3), 314–338. https://doi.org/10.1177/01454455930173004
+
+Cochran, L., Feng, H., Cartledge, G., & Hamilton, S. (1993). The effects of cross-age tutoring on the academic achievement, social behaviors, and self-perceptions of low achieving African American males with behavioral disorders. Behavioral Disorders, 18(4), 292–302.
+
+Collaborative for Academic, Social, and Emotional Learning [CASEL]. (2018). Core SEL competencies. https://casel.org/core-competencies/
+
+Cooper, D. K. (2017). Teaching the whole child: The role of relationship skills in academic achievement. Journal of Teacher Education, 68(1), 14–26.
+
+Dunn, M. E., Shelnut, J., Ryan, J. B., & Katsiyannis, A. (2017). A systematic review of peer-mediated interventions on the academic achievement of students with emotional/behavioral disorders. Education and Treatment of Children, 40(4), 497–524.
+
+Durlak, J. A., Weissberg, R. P., Dymnicki, A. B., Taylor, R. D., & Schellinger, K. B. (2011). The impact of enhancing students' social and emotional learning: A meta-analysis of school-based universal interventions. Child Development, 82(1), 405–432.
+
+Ghufron, M. N., & Ermawati, S. (2018). The strengths and weaknesses of cooperative learning and problem-based learning in EFL writing class: Teachers and students' perspectives. International Journal of Instruction, 11(4), 657–672.
+
+Haas, A., Vannest, K., & Smith, S. D. (2019). Utilizing peers to support academic learning for children with Autism Spectrum Disorder. Behavior Analysis in Practice, 12(3), 734–740.
+
+Herpratiwi, Darsono, Sasmiati, & Pujiyatli. (2018). Cooperative learning and learning achievement in social science subjects for sociable students. Eurasian Journal of Educational Research, 75, 81–98.
+
+Hoffman, E. M., McLaughlin, M. J., & Hammond, B. R. (2015). Using Torey Hayden's teacher stories to teach relationship skills in special education teacher preparation. Teacher Education Quarterly, 42(2), 65–85.
+
+Hutchins, N. S., Burke, M. D., Bowman-Perrott, L., Tarlow, K. R., & Hatton, H. (2019). The effects of social skills interventions for students with EBD and ASD: A single-case meta-analysis. Behavior Modification, 44(5), 773–794.
+
+Hutzel, K., Russell, R., & Gross, J. (2010). Eighth-graders as role models: A service-learning art collaboration for social and emotional learning. Art Education, 63(4), 12–18.
+
+Johnson, D. W., Johnson, R. T., & Smith, K. (2007). The state of cooperative learning in postsecondary and professional settings. Educational Psychology Review, 19, 15–29. https://doi.org/10.1007/s10648-006-9038-8
+
+Jones, D. R. (2013). Examining the impact of a positive behavior support program and direct instruction of social and emotional skills on the externalizing behavior of adolescents with emotional and behavioral disorders [Unpublished doctoral dissertation]. University of Mississippi.
+
+Kamps, D. M., Barbetta, P. M., Leonard, B. R., & Delquadri, J. (1999). Classwide peer tutoring: An integration strategy to improve reading skills and promote peer interactions among students with autism and general education peers. Journal of Applied Behavior Analysis, 27(1), 49–61.
+
+Kamps, D., Kravits, T., Stolze, J., & Swaggart, B. (2000). Prevention strategies for at-risk students and students with EBD in urban elementary schools. Journal of Emotional and Behavioral Disorders, 7(3), 178–188.
+
+Kaya, H., Ünsal, A., Şengül, Ö., & Doğan, M. (2015). Cooperative learning approach in nursing education. Journal of Theoretical and Applied Information Technology, 74(2), 237–246.
+
+Konishi, C., & Wong, T. K. Y. (2018). Relationships and school success: From a social-emotional learning perspective. In B. Christoph & C. Phelps (Eds.), The psychology of school belonging. Springer.
+
+Landrum, T. J., Tankersley, M., & Kauffman, J. M. (2003). What is special about special education for students with emotional or behavioral disorders? Journal of Special Education, 37(3), 148–156.
+
+Locke, W. R., & Fuchs, L. S. (1995). Effects of peer-mediated reading instruction on the on-task behavior and social interactions of children with behavior disorders. Journal of Emotional and Behavioral Disorders, 3(2), 92–99.
+
+Lynch, S. A., & Simpson, C. G. (2010). Social skills: Laying the foundation for success. Dimensions of Early Childhood, 38(2), 3–12.
+
+Macpherson, K. (1999/2015). Cooperative learning group activities for college courses: A resource for instructors. Kwantlen Polytechnic University.
+
+Meisinger, E. B., Schwanenflugel, P. J., Bradley, B. A., & Stahl, S. A. (2004). Interaction quality during partner reading. Journal of Literacy Research, 36(2), 111–140.
+
+Mitchell, B. S., Hirn, R. G., & Lewis, T. J. (2017). Enhancing effective classroom management in schools: Structures for changing teacher behavior. Teacher Education and Special Education, 40(2), 140–153.
+
+Normand, S., Schneider, B. H., Lee, M. D., Maisonneuve, M.-F., Kuehn, S. M., & Robaey, P. (2010). How do children with ADHD (mis)manage their real-life dyadic friendships? A multi-method investigation. Journal of Abnormal Child Psychology, 39(2), 293–305.
+
+Ryan, J. B., Pierce, C. D., & Mooney, P. (2008). Evidence-based teaching strategies for students with EBD. Beyond Behavior, 17(3), 22–29.
+
+Ryan, J. B., Reid, R., & Epstein, M. H. (2004). Peer-mediated intervention studies on academic achievement for students with EBD: A review. Remedial and Special Education, 25(6), 330–341.
+
+Sutherland, K. S., Wehby, J. H., & Yoder, P. J. (2002). Examination of the relationship between teacher praise and opportunities for students with EBD to respond to academic requests. Journal of Emotional and Behavioral Disorders, 10(1), 5–13.
+
+Trach, J., Hymel, S., Waterhouse, T., & Neale, K. (2010). Bystander responses to school bullying: A cross-sectional investigation of grade and sex differences. Canadian Journal of School Psychology, 25(1), 114–130.
+
+Weissberg, R. P., Durlak, J. A., Domitrovich, C. E., & Gullotta, T. P. (2015). Social and emotional learning: Past, present, and future. In J. A. Durlak, C. E. Domitrovich, R. P. Weissberg, & T. P. Gullotta (Eds.), Handbook of social and emotional learning: Research and practice (pp. 3–19). Guilford Press.
+
+SOURCE: Scribd (public document)
+DOI: 10.1177/1074295621997599
+URL: https://www.scribd.com/document/815267476/T-Cooperative-Learning-Strategies-for-Building-Relationship-Skills-in-Students-With-Emotional-and-Behavioral-Disorders

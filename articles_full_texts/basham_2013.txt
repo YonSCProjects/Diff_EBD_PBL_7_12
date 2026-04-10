@@ -1,0 +1,37 @@
+ARTICLE: Understanding STEM Education and Supporting Students through Universal Design for Learning
+
+AUTHORS: James D. Basham; Matthew T. Marino
+
+JOURNAL: TEACHING Exceptional Children
+VOLUME: v45 n4, p8-15
+DATE: March-April 2013
+DOI: 10.1177/004005991304500401
+ERIC Number: EJ1008516
+ISSN: 0040-0599
+Publisher: Council for Exceptional Children
+
+ABSTRACT:
+Despite an increased national focus on science, technology, engineering, and mathematics (STEM) instruction, students with high incidence disabilities continue to struggle with STEM content at both the K-12 and postsecondary levels. As a result, very few students with disabilities pursue STEM careers. This article provides K-12 special education and general education teachers with fundamental information about the current STEM education initiative. It describes how the Universal Design for Learning framework can be utilized to engage students and increase the accessibility of STEM curricular materials. The article includes instruction and assessment strategies that can be used across a wide range of learners. (Contains 1 table and 1 figure.)
+
+DESCRIPTORS:
+- Disabilities
+- Access to Education
+- Elementary Secondary Education
+- STEM Education
+- Special Education
+- Regular and Special Education Relationship
+- Science Education
+- Technology Education
+- Engineering Education
+- Mathematics Education
+
+PUBLICATION TYPE: Journal Article; Report - Descriptive
+PEER REVIEWED: Yes
+LANGUAGE: English
+EDUCATION LEVEL: Elementary Secondary Education
+
+SUMMARY OF CONTENT (from secondary sources):
+The article examines how the Universal Design for Learning (UDL) framework can enhance STEM education for students with disabilities. The methodology involved a detailed examination of existing literature and educational practices to identify effective strategies for integrating UDL into STEM curricula. Key findings indicated that students with disabilities often struggle with STEM content due to factors such as limited prior knowledge and difficulty expressing experiences effectively. The results demonstrated that incorporating UDL principles into STEM curricula could significantly enhance accessibility and engagement for students with disabilities. By using multiple means of representation, expression, and engagement, teachers can create more inclusive learning environments that cater to the diverse needs of their students. The article includes instruction and assessment strategies that can be used across a wide range of learners.
+
+NOTE: Full text is paywalled via Sage Journals/Teaching Exceptional Children. This record contains the full abstract and article metadata from ERIC (EJ1008516). Full text available via institutional subscription to TEACHING Exceptional Children journal.
+Source: https://eric.ed.gov/?id=EJ1008516

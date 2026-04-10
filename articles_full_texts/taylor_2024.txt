@@ -1,0 +1,134 @@
+The Effects of Project-Based Learning on Student Behavior and Teacher Burnout in an Emotional/Behavioral Support Classroom
+
+Jonte' C. Taylor, L. Meghan Allen, Jared Van, Michele Moohr
+
+Journal of Emotional and Behavioral Disorders
+2024, Vol. 32(2)
+Article first published online: March 27, 2024
+Issue published: June 2024
+DOI: 10.1177/10634266241235933
+
+Source: https://journals.sagepub.com/doi/10.1177/10634266241235933
+Open Access: Yes (hybrid OA)
+
+ABSTRACT
+
+Teaching is one of the most stressful occupations in the United States. This is especially true for teachers who are responsible for meeting the complex needs of students with emotional and behavioral disorders (EBD). Teachers who teach students with EBD are more likely to experience burnout than teachers who teach students with other disabilities or those without disabilities. Project-based learning (PBL) is an evidence-based practice that has shown effectiveness in increasing academic and behavioral outcomes for students with and without disabilities. The current study examined the effects of a PBL unit on student behavior and teacher and paraprofessional burnout in an emotional/behavioral support classroom. Using a multiple baseline across participants design with four students, results indicated that on-task behavior increased substantially for all four participants during the PBL intervention phase. Additionally, pre- and post-survey data indicated that both the teacher and paraprofessional had improved job satisfaction following the PBL unit. Limitations and implications for practice and future research are discussed.
+
+SECTION HEADINGS AND CONTENT
+
+Project-Based Learning
+
+Project-based learning (PBL) is an educational approach in which students engage in an extended, student-centered investigation to answer a challenging question or problem. PBL incorporates real-world problems and authentic learning experiences that require students to apply academic content knowledge. The Buck Institute for Education (now PBLWorks) developed a framework for high-quality PBL (HQPBL) that includes eight essential project design elements: (1) Knowledge, Understanding, and Skill; (2) Challenge, Problem, or Question; (3) Sustained Inquiry; (4) Authenticity; (5) Student Voice; (6) Reflection; (7) Critique & Revision; and (8) Public Product.
+
+Project-Based Learning and Students With Disabilities
+
+Students with disabilities, including those with EBD, have benefited from PBL. PBL offers multiple means of engagement, representation, and expression—consistent with Universal Design for Learning (UDL) principles—and may be particularly beneficial for students who struggle with traditional didactic instruction.
+
+Purpose of the Current Study
+
+The purpose of the current study was to examine the effects of a PBL unit on (a) on-task behavior for four students with EBD in an emotional/behavioral support classroom, and (b) job satisfaction (proxy for burnout) for one teacher and one paraprofessional.
+
+METHOD
+
+Participants and Setting
+
+The study took place in a K-12 emotional/behavioral support classroom. Four male students (Eric, Stanley, Kenneth, Kyle) with EBD in middle school participated, each identified with EBD or behavioral/emotional disorders.
+
+Intervention
+
+The PBL unit was implemented based on the Buck Institute for Education's HQPBL framework. The PBL criteria included:
+- Knowledge, Understanding, and Skill: Students learn key knowledge from standards and skills including critical thinking/problem solving, collaboration, and self-management
+- Challenge, Problem, or Question: Students devise problem to solve or a question to answer using an open-ended or driving question(s)
+- Sustained Inquiry: Students follow in-depth process over time, where students generate questions, find, and use resources, ask further questions, and develop their own answers
+- Authenticity: Student use real-world context, real-world processes, tools, and quality standards, and connected to students' own concerns, interests, and identities
+- Student Voice: Students make choices about the products they create, how they work, and how they use their time, guided by the teacher
+- Reflection: Students reflect on what and how they are learning, and on the project's design and implementation
+- Critique & Revision: Students give and receive feedback on their work, in order to revise their ideas and products or conduct further inquiry
+- Public Product: Students demonstrate what they learn by creating a product that is presented or offered to people beyond the classroom
+
+Dependent Variable
+
+On-task behavior was the primary dependent variable, measured via interval recording. Teacher and paraprofessional job satisfaction was measured using a modified version of the Teacher Job Satisfaction Survey, with items rated 1 (strongly agree) to 5 (strongly disagree).
+
+Procedure
+
+Pre-Intervention: Baseline data were collected on student on-task behavior. Teacher and paraprofessional completed pre-survey on job satisfaction.
+
+Intervention: The PBL unit was implemented across several weeks. The teacher implemented the HQPBL framework, and students worked on a community-focused driving question.
+
+Experimental Design and Data Analysis
+
+A multiple baseline across participants design was used. Visual analysis, effect size analysis (WC-SMD and BC-SMD), and descriptive analysis were employed.
+
+Visual Analysis criteria included: level, trend, variability, overlap, immediacy, and consistency.
+
+Effect Size Analysis: WC-SMD and BC-SMD were calculated. BC-SMD is analogous to Cohen's d. Interpretations: small effect (d = 0.2), medium effect (d = 0.5), and large effect (d = 0.8).
+
+Interobserver Agreement was collected throughout the study.
+
+Treatment Integrity data were collected to ensure PBL implementation fidelity.
+
+Social Validity was assessed using a modified version of the Intervention Rating Profile. The teacher had a mean of 5.69 (SD = 0.47) and the paraprofessional had a mean of 4.78 (SD = 0.67).
+
+RESULTS
+
+Visual Analyses
+
+| Participants | Level   | Trend    | Variability | Overlap | Immediacy | Consistency | FR/Effects |
+|--------------|---------|----------|-------------|---------|-----------|-------------|------------|
+| Eric         | +39.36  | positive | 96%; yes    | 5%; yes | +14       |             |            |
+| Stanley      | +33.76  | positive | 100%; yes   | 0%; yes | +27.70    |             |            |
+| Kenneth      | +38.20  | positive | 100%; yes   | 0%; yes | +19.30    |             |            |
+| Kyle         | +32.10  | positive | 100%; yes   | 10%; yes| +19.66    |             |            |
+| Across Students | Absolute | 5     |             |         |           |             |            |
+
+Effect Size Analyses
+
+BC-SMD met the criteria for showing a large effect (SE = 0.5085; 95% confidence interval [1.7030, 3.8076]).
+
+| Participants | ES    | Baseline SD | 95% CI          | SE   |
+|--------------|-------|-------------|-----------------|------|
+| Eric         | 4.70  | 6.69        | [1.96, 7.44]    | 1.40 |
+| Stanley      | 7.42  | 4.22        | [4.22, 10.61]   | 1.63 |
+| Kenneth      | 3.89  | 9.28        | [2.44, 5.35]    | 0.74 |
+| Kyle         | 3.81  | 8.17        | [2.49, 5.12]    | 0.67 |
+
+Note: ES = effect size; SE = standard error.
+
+Descriptive Analysis
+
+Teacher job satisfaction improved from pre- to post-intervention. Prior to the intervention:
+- Positive questions (1, 2, and 3): teacher rated M = 3 (SD = 1), paraprofessional M = 4.33 (SD = 0.58)
+- Negative questions (4 and 5): teacher M = 2 (SD = 0), paraprofessional M = 1 (SD = 0)
+Both the teacher and paraprofessional indicated low job satisfaction at baseline.
+
+At the conclusion of the study, job satisfaction showed marked improvements:
+- Teacher: positive questions M = 1.66 (SD = 0.58); negative questions M = 4 (SD = 0)
+- Paraprofessional: positive questions M = 2 (SD = 0); negative questions M = 3.50 (SD = 0.71)
+
+DISCUSSION
+
+Project-Based Learning Instruction
+
+Results demonstrated that PBL increased on-task behavior for all four students with EBD. The large effect sizes indicate meaningful improvements in student engagement. The sustained inquiry component of PBL appeared particularly beneficial for maintaining student motivation and on-task behavior.
+
+Instructor Job Satisfaction
+
+Both the teacher and paraprofessional demonstrated improved job satisfaction from pre- to post-intervention. This finding suggests that PBL may serve as a protective factor against teacher burnout in EBD settings. The authentic and student-centered nature of PBL may reduce stress by providing more meaningful instructional experiences.
+
+Limitations
+
+The study has several limitations: (1) single-case design limits generalizability; (2) small sample size; (3) limited information on fidelity across all PBL criteria; (4) reliance on a brief job satisfaction measure rather than a validated burnout instrument; (5) the study was conducted in a single classroom with a single teacher and paraprofessional.
+
+CONCLUSION
+
+The findings suggest that PBL can be an effective instructional approach for students with EBD, resulting in improved on-task behavior and enhanced teacher and paraprofessional job satisfaction. Future research should examine PBL across larger samples, diverse educational settings, and longer intervention periods.
+
+REFERENCES
+
+Behavioral Disorders, 42(2), 41–51. https://doi.org/10.1177/0198742916688644
+Emotional and Behavioural Difficulties, 15(1), 5–14. https://doi.org/10.1080/13632750903512365
+International Research in Geographical and Environmental Education, 23(3), 213–227. https://doi.org/10.1080/10382046.2014.927167
+Journal of Learning Disabilities, 41(3), 251–262. http://doi.org/10.1177/0022219408315815
+Educational Research Review, 12(1), 30–44. https://doi.org/10.1016/j.edurev.2014.05.003

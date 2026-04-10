@@ -1,0 +1,113 @@
+Gersib, J. A., & Mason, S. (2023). A Meta-Analysis of Behavior Interventions for Students With Emotional-Behavioral Disorders in Self-Contained Settings. Behavioral Disorders, 48(4), 269–283. https://doi.org/10.1177/01987429231160285
+
+Source: Extracted from Sage Journals search result snippet (https://journals.sagepub.com/doi/10.1177/01987429231160285)
+NOTE: Full text not available open access; content below assembled from search result snippets. Paywalled at SAGE Publications. ERIC record: EJ1384551.
+
+---FULL TEXT (PARTIAL - FROM SAGE SEARCH SNIPPETS)---
+
+A Meta-Analysis of Behavior Interventions for Students With Emotional-Behavioral Disorders in Self-Contained Settings
+
+Jenna A. Gersib, Sarah Mason
+Behavioral Disorders, 2023, Vol. 48(4), 269–283
+DOI: 10.1177/01987429231160285
+
+## Abstract
+
+Students with emotional-behavioral disorders (EBDs) often learn in alternative classroom settings to provide more intensive instruction that meets their educational needs. Although research has demonstrated promise for several behavior intervention practices in general education settings, the generalizability of these practices to more restricted environments is unknown. Thus, this meta-analysis aimed to examine the class-wide behavior interventions tested in self-contained learning environments for students with EBDs. Studies investigating behavioral interventions in alternative elementary settings were systematically screened. Fifteen studies with 20 effect sizes met inclusion criteria and results from each study were synthesized. An estimated average effect was calculated (g = 0.93, SE = 0.16), demonstrating that tested interventions are typically effective in self-contained learning environments to improve student behaviors. A thematic analysis and multi-level meta-regression were conducted to determine which elements are most beneficial to students in these unique learning environments. Results indicated that interventions that included relational supports, such as daily parent communication, differentially benefited students (B = 1.26, SE = 0.15). Limitations include the small number of studies meeting inclusion criteria that have investigated behavior interventions in self-contained settings and the need for improved research quality. Implications suggest support for adapting standardized practice elements, such as group contingencies, to improve student behaviors in multiple learning environments.
+
+## Study Purpose
+
+The following research questions were addressed:
+Research Question 1 (RQ1): What are the effects of class-wide behavior interventions on behavioral outcomes for students with EBD in self-contained settings?
+Research Question 2 (RQ2): To what extent do the features of class-wide interventions in self-contained settings moderate the behavior outcomes of students with EBD?
+Research Question 3 (RQ3): What is the methodological quality of the studies reported on class-wide interventions for students with EBD?
+
+behavioral interventions as targeted programs that focus on changing a behavior affecting a student's ability to learn.
+Class-wide behavioral interventions target decreasing unpreferred behavior or increasing preferred behaviors for all the students in a particular classroom environment.
+Self-contained settings are special education classrooms, separate schools, residential facilities, or hospital settings working specifically with students with EBDs, where students learn for 50% or more of their day.
+
+## Search Methods
+
+The initial search yielded 2,145 records, completed in October 2020. After deduplicating, 1,869 unique entries remained. Title and abstract screening identified 205 studies that underwent a full-text review. The first author searched the table of contents of the following journals from 2015 to 2020 based on their appearance in the full-text eligible articles: Behavioral Disorders, Exceptional Children, Journal of Applied Behavior Analysis, Journal of Behavior Education, Journal of Emotional & Behavioral Disorders, and Journal of Positive Behavior Interventions. The first author conducted a forward and backward search on each article included in the full-text screening.
+
+## Features of Intervention
+
+### Highly structured classroom environment
+structure, predictability, established behavioral expectations, rules, limit setting, response-cost, and time-out.
+
+### Focus on positive strategies
+positive, tangible, or differential reinforcers, praise, rewards, choice, and pre-correction.
+
+### Social-emotional learning instruction
+social skills, behavior rehearsal, self and anger-management, psychoeducation, training for setbacks, review goals and progress, assigning and reviewing homework, and promote behavior competence.
+
+### Applied behavior strategies
+modeling, narrating behaviors, planned ignoring, instructive feedback, visual cueing, error correction, instructive feedback, Premack statements, behavior momentum, instructional antecedent, and functional behavioral analyses.
+
+### Classroom engagement
+opportunities to respond, active supervision and monitoring, academic engagement, effective academic instruction, instructional feedback, and scaffolding instruction.
+
+### Relational component
+parent collaboration and involvement, teacher–student relationship building, adult mentors; peer tutoring, and supportive learning opportunities.
+
+## Results
+
+Table 1. Included Studies with Effect Sizes
+
+|Citation|SC setting|Intervention|N (boys)|Grade|Design|Dependent variables|ES (SE)|NAP|
+|--|--|--|--|--|--|--|--|--|
+|Cameron (2011)|Class|Calm Carrel|46 (40)|4–6|RM|Behavior Rating Scale|0.31 (0.41)|—|
+|Dalton (2020)|Class|Level system|19 (16)|1–6|MB|On-task behavior; Disruptive behavior; Work completion|1.22 (0.35); −1.94 (0.26); 0.83 (0.21)|0.91; 0.95; 0.73|
+|Diachuk (1991)|Class|Peer mediation|6 (6)|2–3|MB|Life Event Scale|−1.63 (0.66)|—|
+|Flowers (2016)|School|GBG + video modeling|16 (15)|1–6|MB|Engagement; Off-task behavior|1.22 (0.31); −1.47 (0.30)|0.95; 0.96|
+|Grskovic et al. (2004)|Outpatient|ABR—time out|12 (11)|2–6|MB|Frequency of time out|−1.04 (0.30)|0.93|
+|Kern et al. (1994)|Class|Self-management|6 (6)|5–6|MB|On-task behavior; Disruptive behavior|1.04 (0.14); −0.33 (0.14)|0.68|
+|Murphy et al. (2019)|School|GBG + social skills|22 (-)|K-6|MB|Engagement; Disruptive behavior|0.78 (0.32); −0.59 (0.30)|0.83; 0.87|
+|Nakayama (2008)|Class|Strong Kids social skills|21 (20)|3–5|RM|SEL knowledge; EBD symptoms; Social skills|0.94 (0.32); −0.10 (0.31); 0.32 (0.31)|—; —; —|
+|Ramirez et al. (2019)|School|Group contingency|22 (19)|K-6|MB|Engagement; Off-task behavior|0.17 (0.43); −1.15 (0.34)|0.59; 0.90|
+|Rubow et al. (2018)|School|GBG|14 (11)|4–5|R|Student disruption|−5.33 (1.45)|1.00|
+|Sutherland et al. (2000)|Class|BSP|9 (7)|5|R|On-task behavior|—|0.92|
+|Sutherland et al. (2003)|Class|OTR|9 (8)|3–6|R|On-task behavior; Disruptive behavior|—; —|0.99; 0.85|
+|Sy et al. (2016)|School|GBG|19 (16)|4–5|MB|Disruptive behavior|−1.34 (0.34)|0.89|
+|Weeden et al. (2016)|Class|CW-FIT|6 (5)|1–3|R|On-task behavior|1.80 (0.57)|0.98|
+|White & Bailey (1990)|Class|Sit and watch|14 (14)|4–5|MB|Disruptive behavior|—|1.00|
+
+Note. SC = self-contained, MB = multiple baseline design, RM = repeated measures; R = reversal, ABR = active response beads, GBG = good behavior game; BSP = behavior-specific praise; OTR = opportunities to respond; CW-FIT = class-wide functional intervention team; NAP = nonoverlap of all pairs; EBD = emotional-behavioral disorders; SEL = social-emotional learning.
+
+### Effects of Interventions
+
+Effect size k = 12, n = 20, Estimate = 0.93 (SE = 0.16), df = 19, 95% CI = [0.59, 1.26], demonstrating an educationally meaningful and significant intervention effect (p < .001; WWC, 2020).
+
+### Moderator Analysis
+
+|Study characteristic|B|SE|df|p|95% CI|
+|--|--|--|--|--|--|
+|Intercept|1.07|0.27|1.27|0.11|[−0.08, 2.22]|
+|Structured classroom|0.66|0.26|2.42|0.08|[−0.30, 1.61]|
+|Positive strategies|0.17|0.23|1.30|0.64|[−0.95, 1.29]|
+|Social-emotional learning instruction|−0.86|0.67|1.79|0.34|[−1.98, 1.29]|
+|Applied behavior|−0.70|0.71|1.32|0.47|[−1.66, 0.26]|
+|Engagement|−1.23|1.08|3.43|0.33|[−4.31, 1.86]|
+|Relational component|1.26|0.15|1.60|0.03*|[−1.03, 3.54]|
+
+The only covariate in the model that demonstrated significance was the incorporation of a specific relational component (β = 1.26, SE = 0.15, p < .05). Specifically, the inclusion of a particular relational component involving peers or family members contributed to better classroom behavioral outcomes.
+
+Within group contingencies (k = 6), four studies examined the effects of the GBG and additional component effects, such as the use of video modeling or adding a specific social skills component. One study examined a class-wide functional intervention team (CW-FIT), a multilevel group contingency that combines self-management with functional assessment elements. The self-management study involved implementing a self-monitoring checklist with students where they marked their progress every 5 min. The social skill curriculum, Strong Kids, included 12 weekly lessons focusing on fostering emotional resilience. Dalton (2020) explored the utility of a level system which allows students access to more freedom and choices after successfully demonstrating mastery in class levels.
+
+## Discussion
+
+The estimated average effect of g = 0.93 (SE = 0.16), and individually reported effect sizes were large, yielding moderate to large effects. Although not a direct comparison, the difference in these results could suggest that students in general education settings are more responsive to class-wide behavioral interventions than students with EBDs in self-contained settings. As many of the intervention components were similar, it might not be surprising, given the placement of students in self-contained settings suggests the need these students have for more intensive interventions than what is typically found in Tier 1 universal supports.
+
+### Features of the Interventions
+Praise was the most common positive strategy implemented in the interventions (k = 11). Other positive strategies documented included the use of differential reinforcers and rewards. Many studies (k = 13) also included procedures contributing toward a highly structured environment. Studies discussed examples of providing structure through clear rules and expectations and behavior management systems.
+
+Within the moderator analysis, 15 effect sizes were coded as highly structured, contributing to a nonsignificant yet positive impact (β = 0.66, SE = 0.26). Explicit SEL instruction was another common strategy documented in 10 studies. Six of these studies taught self-regulation and self-management strategies. Regulation strategies included incorporating break cards and a calm-down area. The SEL instruction had a nonsignificant moderating role (β = −0.86, SE = 0.67).
+
+The only covariate in the model that demonstrated significance was the incorporation of a specific relational component (β = 1.26, SE = 0.15, p < .05). Specifically, the inclusion of a particular relational component involving peers or family members contributed to better classroom behavioral outcomes.
+
+### Limitations
+The small number of studies meeting inclusion criteria that have investigated behavior interventions in self-contained settings and the need for improved research quality.
+
+### Implications for Research and Practice
+Implications suggest support for adapting standardized practice elements, such as group contingencies, to improve student behaviors in multiple learning environments.
+

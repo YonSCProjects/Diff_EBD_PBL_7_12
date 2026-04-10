@@ -1,0 +1,94 @@
+Executive Function, Perceived Stress, and Academic Performance Among Middle Schoolers With and Without Behavior Problems
+
+Michelle M. Cumming, PhD; Rachel Oblath, PhD; Yuxi Qiu, PhD; Stacy L. Frazier, PhD; Philip David Zelazo, PhD; Helen Flores, EdS; Jeehyun Park, MSci
+
+Published in: Remedial and Special Education, v45 n2 p85-100, 2024
+DOI: https://doi.org/10.1177/07419325231176762
+First published online: 2023 (print publication 2024)
+ERIC: EJ1417094; ED628795
+
+ABSTRACT
+
+Students with emotional and behavioral disorders (EBD) characteristically experience academic difficulties. There is growing evidence that the continuum from academic competence to underachievement is partially explained by executive function (EF; neurocognitive attention-regulation processes) and stress. Yet, there is scarce research investigating these relationships among students with or at risk for EBD, especially during the elevated stress and risk period of middle school, and particularly among racially/ethnically under-represented groups. Therefore, with 118 U.S. middle schoolers with or at risk for EBD and typical peers (70% Hispanic/Latinx; 25% Black), we examined group differences and relationships among perceived family, peer, and school stress, EF, and academic outcomes. When compared with their typical peers, students with or at risk for EBD scored lower on EF and academic tasks. For all students, higher EF predicted better academic functioning. Perceived stress was directly and negatively related with EF and indirectly associated with academic outcomes via EF.
+
+Keywords: emotional and behavioral disorders, executive function, academic outcomes, perceived stress
+
+INTRODUCTION
+
+Middle school is a period of vulnerability in which interconnected neurocognitive executive function (EF) skills and stress-related variables may have lasting implications for academic outcomes, particularly for students identified with emotional and behavioral problems (e.g., Cumming, Zelazo, et al., 2022). As mandated by federal law (Individuals with Disabilities Education Improvement Act [IDEA], 2004), students with emotional and behavioral disorders (EBD) must be provided quality school-based supports to meet their needs. Yet, despite existing services, students with EBD make limited progress not only socially and behaviorally, but also academically (Bradley et al., 2008; Kauffman & Landrum, 2018). Students with EBD place below the 25th percentile in reading, math, and written expression (Lane et al., 2008) and tend to not increase in academic achievement over time (Gage et al., 2017). By secondary school, their academic performance gap typically increases to a 3.5-grade-level deficit compared with typically developing peers (Adamson & Lewis, 2017).
+
+EF Is Pivotal to Student Academic Achievement
+
+EF is an overarching term for an interrelated set of neurocognitive attention-regulation processes that underlie goal-directed behavior (Miyake et al., 2000). Growing consensus holds that EF comprises at least three unique yet interconnected processes: working memory, cognitive flexibility, and inhibitory control. These skills, respectively, permit students to keep information in mind, switch gears for goal-directed behavior, and control impulses—skills crucial to learning and success in school.
+
+Academic Competence: Considering EF and Perceived Stress
+
+Although EF provides a foundation for academic competence, day-to-day academic functioning likely depends on interactions among EF skills and environmental stressors. According to Blair's (2014) psychobiological model of self-regulation, EF skills interact with more automatic, bottom-up responses to stimulation associated with emotion and the physiological response to stress. Prolonged exposure to situations perceived as threatening or uncontrollable can have a damaging impact on prefrontal cortex development and related EF skills (Carrion & Wong, 2012; Lupien et al., 2009).
+
+PURPOSE
+
+This study examined:
+(a) differences in perceived stress, EF performance, and academic outcomes between racially and ethnically diverse students with behavioral difficulties and comparison peers without behavioral difficulties
+(b) direct and indirect effects among perceived stress, student EF, and academic outcomes
+
+Hypothesis 1: Students with or at risk for EBD would score lower than comparison peers on EF and academic competence and report higher perceived stress.
+Hypothesis 2: Perceived stress would predict academic outcomes, both directly and indirectly through EF.
+
+METHODS
+
+Sample and Setting
+
+118 sixth- and seventh-grade students and 27 of their teachers from six schools in a large urban school district (southeastern United States). Mean age: 12.2 years (SD = 0.87). 45% classified with primary disability (33% EBD, 9% SLD, 3% other). 69.5% male, 69.5% Latinx/Hispanic, 24.6% Black, 32.2% White. 86.2% received free/reduced-price lunch.
+
+Measures
+
+Behavior Screener: Strengths and Difficulties Questionnaire (SDQ; Goodman, 1997). Students scoring ≥12 on total difficulties scale were identified at risk for EBD.
+
+Perceived Stress: Response to Stress Questionnaire (Connor-Smith et al., 2000). Three subscales: family (12 items), school (10 items), peers (9 items). Internal consistency α=.80 (family), .86 (school), .85 (peer).
+
+Executive Function: NIH Toolbox iPad app. Three EF processes:
+- Working memory (number sequencing recall task)
+- Inhibitory control (flanker task)
+- Cognitive flexibility (dimensional change card sort task)
+
+Academic Outcomes: i-Ready ELA and math scores; grade point averages.
+
+Analyses
+
+One-factor between-subjects ANOVAs for group differences. Structural equation modeling (SEM) for direct and indirect effects. Analysis conducted in Mplus 8.4.
+
+RESULTS
+
+Aim 1: Group Differences (Table 2)
+
+EF: Students with or at-risk for EBD scored significantly lower than comparison peers on working memory (η²=.11) and cognitive flexibility (η²=.05). No group difference for inhibitory control.
+
+Academics: Behavior group performed lower on math grade (η²=.04), i-Ready ELA (η²=.14), and i-Ready math (η²=.15).
+
+Perceived Stress: No significant group differences in perceived family, school, or peer stress.
+
+Aim 2: Direct and Indirect Effects
+
+Modified measurement model showed adequate fit (χ²(31)=42.98, p=.075, RMSEA=.06, CFI=.94, TLI=.92).
+
+Key findings from structural model:
+- EF significantly predicted both academic outcomes (ELA β=.61, p<.001; math β=.65, p<.001)
+- Perceived stress was directly and negatively associated with EF (β=−.34, p=.005)
+- Perceived stress was indirectly associated with academic outcomes via EF (ELA: β=−.21; math: β=−.22)
+
+DISCUSSION
+
+Findings support that:
+1. Students with or at-risk for EBD had lower working memory and cognitive flexibility compared to typical peers, aligning with mental health research on EF as a transdiagnostic risk factor.
+2. Higher EF predicted better academic functioning for all students, supporting EF's foundational role in learning.
+3. Perceived stress was directly and negatively related with EF and indirectly associated with academic outcomes via EF.
+
+The absence of group differences in perceived stress was unexpected. This may reflect a broader societal issue—all students in urban, under-resourced schools with high crime rates experienced elevated stress, regardless of EBD status.
+
+CONCLUSION
+
+This study provides evidence that EF and perceived stress are key contributors to academic performance for middle schoolers with or at risk for EBD. The findings underscore the importance of addressing both EF development and stress reduction in school-based interventions for students with EBD.
+
+Corresponding Author: Michelle M. Cumming, Teaching and Learning, Florida International University, 11200 S.W. 8th St., Miami, FL 33199, USA. Email: michelle.cumming@fiu.edu
+
+Funding: Institute of Education Sciences (R324B190030)

@@ -1,0 +1,144 @@
+Robots for inclusive classrooms: a scoping review
+
+Marta Díaz-Boladeras; Ada Claver i Díaz; García-Sánchez (et al.)
+
+Published in: Universal Access in the Information Society, 2023 (online)/2025 (print)
+DOI: https://doi.org/10.1007/s10209-023-01065-z
+First published online: November 14, 2023
+
+ABSTRACT
+
+Robot-based activities have been proven to be a valuable tool for children with learning and developmental disabilities. However, their feasibility in general educational environments needs further exploration. This scoping review provides a critical examination of robot-based learning experiences involving children with disabilities, implemented either in mainstream schools or in specialized centers in order to gain insight into their potential to support inclusion. For this purpose, a search was conducted in the multidisciplinary Scopus and WoS databases, completed with Dialnet database. Based on PRISMA guidelines for literature reviews, we limited the systematic analysis to 33 papers published after 2009 that contain information on the instructional design and details of how the activities were implemented. On the other hand, studies reporting interventions with robots for clinical purposes were excluded as well as papers focused exclusively on technical developments. Content analysis shows that most experiences lead to improvements in terms of educational goals and/or stakeholders' satisfaction. However, the analysis also reported issues that may hinder the adoption of these practices in general classrooms and integrated education services. The reported difficulties include the lack of stability and autonomy of the robots used, the need for aids and adaptations to enable children with sensory and physical impairments to interact easily with the robots, and the requirement of technical support with system's setup, implementation and maintenance. We conclude that robots and robotics are a powerful tool to address the needs of diverse learners who are included in mainstream classrooms.
+
+1. INTRODUCTION
+
+Inclusive education means that all learners attend schools in their own neighborhoods in general, age-appropriate classes where they are able to learn, contribute and participate together in all aspects of school life in a shared learning environment. Educational robotics are used worldwide as learning tools but are not so widespread in inclusive education. Although there is already a large corpus of experiences with "assistive robotics" for children with disabilities, more research needs to be conducted on the potential of robotics as a teaching tool in inclusive classrooms.
+
+According to Pliasa et al. [9] inclusive education has three main goals: (1) guarantee a quality education based on personalized instruction; (2) provide a rich, supportive social environment; (3) provide all children with technology-related ability and computational thinking (CT).
+
+Related systematic reviews include: Papakostas et al. [14] and González-González et al. [15] on rehabilitation and healthcare; Belpaeme et al. [16] on social robots; Pivetti et al. [13] on learning experiences where children program robots; Tlili et al. [8] and Miguel Cruz et al. [17] on robot performance and technical challenges.
+
+2. METHODS
+
+2.1 Scope and Research Questions
+
+RQ1: What population does the robot-based learning activity target? What types of special needs are addressed?
+RQ2: What robot or robotic platform is used?
+RQ3: What robot-based activities are implemented?
+RQ4: How inclusive are the activities, or could they be?
+
+2.2 Eligibility Criteria
+
+Inclusion: (1) robots for educational purposes for learners early childhood to secondary education; (2) at least one child with special educational needs; (3) detailed instructional design; (4) published after 2009 in peer-reviewed journals or conferences in English or Spanish.
+
+Exclusion: (1) robots for therapy/rehabilitation only; (2) no children with special needs; (3) educational/assistive tech other than robots; (4) reviews or theoretical papers; (5) studies focused exclusively on robot design/development; (6) no description of main teaching-learning experience components.
+
+2.3 Sources and Search Strategy
+
+Databases: Scopus, Web of Science (WoS), Dialnet
+Search rule: robot* AND educat* AND ("Down syndrome" OR "cerebral palsy" OR ADHD OR "learning disabilities" OR "children with disabilities" OR "special needs" OR impairment)
+Total records obtained: 435 (153 from WoS, 270 from Scopus, 12 from Dialnet); 99 duplicates removed
+Final dataset: 33 studies (21 journal papers, 12 conference papers)
+
+2.4 Selection of Studies
+
+Authors 1 and 2 screened 77 articles by title and abstract, then independently assessed full texts for eligibility. Final dataset: 33 documents.
+
+2.5 Statistical and Bibliometric Data
+
+33 studies; total citations: 235; average citations per item: 7.12; h-index: 11. Countries with most authors: Canada (8), UK and Italy (6), Netherlands and Spain (4), Greece and Portugal (3).
+
+3. RESULTS
+
+3.1 Children
+
+Participants ranged from 1 to 84, ages 18 months to 20 years. Girls are underrepresented in the studies. Disabilities included: ASD, ADHD, hearing loss, cerebral palsy, motor deficiencies, cognitive disabilities, Down syndrome, and multiple disabilities.
+
+3.2 Robots
+
+12 different robots used, in 7 categories:
+- LEGO Mindstorms (EV3, NXT, WeDo, RCX): 13 studies—most used
+- NAO: 5 studies—most used social robot
+- DASH, Bee-Bot, Codi-Oruga, KIBO: 7 studies
+- Daisy Robot, Cellulo: controlled without programming
+- KASPAR: 1 study (designed for children with special needs)
+- IROMEC: 5 studies (designed for children with special needs)
+- ZORA (NAO adaptation): various studies
+
+Robot roles: tutor/teacher, peer/playmate, pupil (child teaches robot)
+
+3.3 Learning Activities
+
+3.3.1 Setting
+16 studies in mainstream schools; 9 in special education schools; 3 in therapy centers; 3 in hospital-based schools; 1 in research lab; 1 in rehabilitation center; 1 unspecified
+
+3.3.2 Educational Goals
+(1) STEM and computational thinking (CT) — 23 studies
+(2) Communication and social interaction — 12 studies
+(3) Physical development
+(4) Language
+(5) Play
+(6) Mathematics
+(7) Engagement
+(8) Artistic expression
+(9) Other cognitive developments
+
+3.3.3 Scenarios, Social Context and Activities
+Five learning scenarios:
+1. Creative/constructive: designing and building robots
+2. Programming: implementing control programs
+3. Controlling the robot: via speech, touch, manipulation, gestures
+4. Social interaction: communicative channels
+5. Play: intrinsically motivating activities
+
+Social context: 11 individual; 2 pairs; 10 group; 10 multiple structures
+
+3.3.4 Practitioners Involved
+- 11 studies: general teacher alone or with support
+- 9 studies: special education teachers
+- 9 studies: required technical experts (IT specialists, engineers)
+- 19 studies: clinical practitioners (psychotherapists, speech therapists, OTs)
+- 16 studies: other specialists (coaches, researchers, teaching assistants)
+
+3.3.5 Duration
+Sessions range: 1 to 30; most frequent 3–6 sessions (15 studies)
+Time span: <1 month to full school year; 15 studies unspecified
+Duration: 15–30 min to 3 days; 11 studies unspecified
+
+3.3.6 Outcomes
+Most experiences led to improvements in educational goals and/or stakeholder satisfaction. Key outcomes:
+- Robots as tangible cognitive tools improving motor skills, spatial reasoning, abstract concepts
+- Improved communication and social skills during shared robot activities
+- Transfer of skills to other disciplines and everyday activities
+- No detrimental effects on non-disabled children in mixed groups
+
+3.3.7 Lessons Learned
+
+Opportunities:
+- Robots are engaging for all children regardless of ability
+- Non-judgmental, shared responsibility environments boost participation
+- Scalability of challenges and autonomy support diverse learners
+- Teachers can personalize instruction for different learning styles
+
+Technical Challenges:
+- Stability and autonomy issues with NAO and other robots
+- Voice recognition problems in speech-based interactions
+- Visual impairment barriers for spatial programming activities
+
+Recommendations:
+- At least two teachers present for complex robot activities
+- Prior training for children before classroom activities
+- Flexible communication environments (voice first, then blocks)
+
+4. DISCUSSION
+
+RQ1: Children with diverse disabilities (ages 2-19) all benefit from robots in education.
+RQ2: Wide range of robotic platforms; toy-like tangible robots preferred for youngest learners and cognitive impairments.
+RQ3: Wide array of instructional designs from 20-min free play to formal multi-month programs.
+RQ4: Robot-based practices show promise for fostering inclusion; outcomes in participation, curriculum access, and inclusion are promising.
+
+5. CONCLUSION
+
+Robots and robotics are a powerful tool to address the needs of diverse learners in mainstream classrooms. This review presents evidence of good practices and recommendations for successful implementation of robot-based activities in inclusive educational settings.
+
+References: 33 key studies including Van den Havel et al. (ZORA robot), Pliasa et al. (Daisy Robot/ASD), Martí (IROMEC storytelling), Metatla et al. (Ozobot co-design with visual impairment), Encarnação et al. (AT systems).

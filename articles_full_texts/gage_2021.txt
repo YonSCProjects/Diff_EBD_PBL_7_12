@@ -1,0 +1,38 @@
+ARTICLE: High School Students With Emotional and Behavioral Disorders Perceptions of School Climate
+
+AUTHORS: Nicholas A. Gage; Dennis A. Kramer; Kaci Ellis
+
+JOURNAL: Journal of Disability Policy Studies
+VOLUME: 32
+PAGES: 83-94
+YEAR: 2020 (published online June 26, 2020; in print 2021)
+DOI: 10.1177/1044207320934800
+Corpus ID (Semantic Scholar): 225798525
+
+ABSTRACT:
+Students with emotional and behavioral disorders (EBDs), particularly those in high school, present myriad challenges for educators. Although research suggests that students with EBDs experience schooling differently than their peers, few studies have examined differences in perceptions of school climate. School climate is a multidimensional construct consisting of students' perceptions of physical and social school environments. To address this gap, we leveraged school climate data from more than 350,000 high school students, including more than 5,000 with or at risk for EBDs, in Georgia. We estimated a series of multilevel models and found that students with or at risk for EBDs consistently report more negative perceptions of school climate than their peers across all school climate domains. We also examined whether individualized education program (IEP) services affected perceptions for students with EBDs, finding more positive perceptions for some domains for students with IEP services for EBDs compared with students with EBDs, but no IEP services. Implications and limitations are then discussed.
+
+FIELDS: Psychology, Education
+
+CITATIONS: 8 total (1 Highly Influential Citation, 4 Background Citations)
+
+BibTeX:
+@article{Gage2020HighSS,
+  title={High School Students With Emotional and Behavioral Disorders Perceptions of School Climate},
+  author={Nicholas A. Gage and Dennis A. Kramer and Kaci Ellis},
+  journal={Journal of Disability Policy Studies},
+  year={2020},
+  volume={32},
+  pages={83 - 94},
+  url={https://api.semanticscholar.org/CorpusID:225798525}
+}
+
+SELECTED CITING PAPERS:
+1. Gwozdzik & Stiefel (2023). "Do Perceptions of School Climate Improve in High School for Students With Disabilities?" American Educational Research Journal.
+2. Hunt et al. (2023). "Students with disabilities' perceptions of school climate: A systematic review." School Psychology International.
+3. Adams & Roach (2023). "School Climate From the Perspective of Black Girls With and Without Disabilities." School Psychology Review.
+4. Welsh et al. (2024). "Examining student perceptions of school climate, school personnel, and school discipline." Journal of School Psychology.
+5. Collins et al. (2023). "No Safe Space: School Climate Experiences of Black Boys With and Without Emotional and Behavioral Disorders." (Highly Influential)
+
+NOTE: Full text is paywalled (Sage Journals/Journal of Disability Policy Studies). This record contains the complete abstract and metadata. Note: The task citation listed "Gage et al. (2021)" but Semantic Scholar records the publication date as June 26, 2020 (Volume 32, pages 83-94, published in Journal of Disability Policy Studies).
+Source: https://www.semanticscholar.org/paper/High-School-Students-With-Emotional-and-Behavioral-Gage-Kramer/85a0e0c5268f293d3460b2566d4a10440404c609

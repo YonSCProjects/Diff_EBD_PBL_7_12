@@ -1,0 +1,1402 @@
+SOURCE: https://d-nb.info/1371397791/34
+TITLE: RESEARCH
+
+RESEARCH
+Child Psychiatry & Human Development
+https://doi.org/10.1007/s10578-025-01846-y
+Pérez-Vigil et al. [6] used a Swedish nationwide cohort 
+including over 15,000 individuals with OCD showed that the 
+diagnosis was associated with significantly worse academic 
+performance across the lifespan. Specifically, compared to 
+unaffected individuals, people with OCD were 30–60% less 
+likely to pass all core and additional school courses at the 
+end of their compulsory education, 47–61% less likely to 
+access upper secondary education, 43% less likely to finish 
+upper secondary education, 72% less likely to start a univer­
+sity degree, 59% less likely to finish a university degree, and 
+52% less likely to finish postgraduate education. The results 
+were similar when people with OCD were compared to their 
+unaffected siblings, indicating that the difficulties were not 
+due to factors shared within the family, such as parental edu­
+cational level or parental psychopathology. Additionally, the 
+impact on academic performance was more notable in those 
+individuals who had received their first OCD diagnosis in 
+childhood [6].
+Although the evidence is currently scarce, some stud­
+ies have described the extent to which some children with 
+OCD may require additional school support, such as spe­
+cific accommodations or special education classes. In a 
+small study including 30 youth with OCD recruited from 
+a specialist clinic, 48% had received remedial help (i.e., 
+Introduction
+Obsessive-compulsive disorder (OCD) is a relatively preva­
+lent mental disorder which usually has an early age of onset 
+[1, 2]. By definition, OCD is associated with substantial dis­
+tress and impairment in several areas of functioning, includ­
+ing family life and social activities [1]. The symptoms of 
+OCD and associated comorbidities are also known to have 
+a negative impact on school functioning [3, 4, 5], including 
+difficulties concentrating during lessons, doing homework 
+or even attending school. This impairment has the poten­
+tial to severely affect the long-term academic and profes­
+sional opportunities of these young people [6]. In the largest 
+study to date examining educational attainment in OCD, 
+ 
+ Lorena Fernández de la Cruz
+lorena.fernandez.de.la.cruz@ki.se
+1 
+Centre for Psychiatry Research, Department of Clinical 
+Neuroscience, Karolinska Institutet, Stockholm, Sweden
+2 
+Stockholm Health Care Services, Region Stockholm, 
+Stockholm, Sweden
+3 
+Department of Clinical Sciences, Lunds Universitet, Lund, 
+Sweden
+Abstract
+School-related functional impairment is common in children and adolescents with obsessive-compulsive disorder (OCD). 
+However, little is known about the characteristics of youth with OCD who struggle in school, whether these struggles 
+interfere with treatment outcomes, and whether treatment improves school-related function. Among 385 youth with OCD 
+at a specialist clinic (mean age [sd] = 13.7 [2.5]; 63.1% girls), 21.6% had partial or no school attendance at intake. Among 
+those who received specialist treatment (n = 322), clinical outcomes were similar in those with no or partial attendance 
+vs. those with full attendance, although the latter group needed fewer treatment sessions and were less likely to take psy­
+chotropic medication. At post-treatment, 10.5% still had partial or no school attendance, and 22.8% of youths and 33.3% 
+of parents reported significant school impairment, regardless of response status. Some youth with OCD may benefit from 
+specific supported education and return to school strategies to complement regular evidence-based interventions.
+Keywords Obsessive-compulsive disorder · Functional impairment · School function · Education · Treatment outcomes
+Accepted: 24 April 2025
+© The Author(s) 2025
+The Impact of Pediatric Obsessive-Compulsive Disorder on School 
+Attendance and School Functioning: A Case for Supported Education
+Lorena Fernández de la Cruz1,2 · Daniel Rautio1,2 · Frida Wickberg2 · Cecilia Gordan2 · Maria Silverberg-Mörse2 · 
+David Mataix-Cols1,2,3
+1 3
+
+Child Psychiatry & Human Development
+instructional support or assistance in the classroom), 40% 
+were in a special education class, and 7% had repeated a 
+grade [7]. In another study, Abramovitch et al. [8] showed 
+that 118 children and adolescents with OCD, compared to 
+a sample of 142 controls without OCD, were significantly 
+more likely to be in a special education class (10% vs. 1%, 
+respectively) and receive extra help in school (64% vs. 4%, 
+respectively). Among those with OCD, symptom severity 
+was associated with a higher likelihood of receiving these 
+school accommodations. However, school accommodations 
+usually require for the pupils to attend school. To our knowl­
+edge, there are no published data on the extent of school 
+attendance (i.e., school days missed) in young people with 
+OCD. Investigating this variable is crucial given that school 
+attendance has a major effect on the child’s social and emo­
+tional well-being and on school performance [9, 10].
+Other important questions that have not been empirically 
+addressed are (1) whether children with poor school atten­
+dance benefit from treatment as much as other children fully 
+engaged in school, and (2) whether school attendance and 
+school impairment improve after the successful treatment 
+of OCD. The first question is important because we do not 
+know if these children with poor school function require 
+additional treatment. The second question is clinically rel­
+evant because if evidence-based treatments for OCD are not 
+sufficient to improve school functioning, this would justify 
+the need for additional, more targeted interventions that 
+focus on this specific area [11].
+The aims of this study were three-fold. First, we aimed 
+to describe the school attendance and school impairment of 
+a sample of 385 treatment-seeking children and adolescents 
+diagnosed with OCD in a specialist obsessive-compulsive 
+and related disorders clinic. Second, we aimed to compare 
+the sociodemographic and clinical characteristics of youth 
+with OCD with full school attendance vs. those with par­
+tial or no school attendance. And third, for the subgroup of 
+individuals undertaking treatment at the clinic, we exam­
+ined whether their level of school attendance was associ­
+ated with their treatment outcomes, and whether the level 
+of school attendance and school impairment improved after 
+receiving treatment.
+Methods
+Setting and Procedures
+All participants had been referred to the specialist OCD and 
+Related Disorders Clinic for Children and Adolescents in 
+Stockholm, Sweden. The clinic accepts referrals from the 
+Stockholm region, and occasionally other parts of Sweden 
+and the Nordic countries. Upon referral to the clinic, all 
+families are invited to participate in research and for their 
+routinely collected clinical data to be used for research pur­
+poses. The study was approved by the Stockholm Regional 
+Ethical Review Board. All participants and their families 
+(parents or legal guardians) provided informed consent to 
+participate.
+Participants in the study had a diagnosis of OCD accord­
+ing to the diagnostic criteria in the Diagnostic and Statisti­
+cal Manual of Mental Disorders, 5th edition (DSM-5) [1]. 
+The diagnosis was established in the routine initial clinical 
+assessment at the clinic. Assessments are about 3 h long and 
+are conducted by experienced clinical psychologists. The 
+assessments include a general battery of questions about 
+development, sociodemographic and clinical characteris­
+tics, semi-structured clinical interviews to establish the pri­
+mary diagnosis and associated comorbidities, and a series 
+of general and disorder-specific clinician-administered, 
+self-reported, and parent-reported measures (see Measures 
+section). The information collected during the initial assess­
+ments is then discussed in a multidisciplinary team meeting, 
+including clinical psychologists and child and adolescent 
+psychiatrists, who collaboratively decide on the diagnosis 
+and treatment plan (or alternative plan of action; e.g., refer­
+ral to another service).
+Measures
+All measures were collected at baseline and, for those 
+undertaking treatment at the clinic, also at post-treatment. 
+Exceptions were the diagnostic semi-structured interviews 
+(see section below) and the two questions about school 
+accommodations, which were only done at baseline, but 
+not at post-treatment, and the Clinical Global Impression-
+Improvement (CGI-I) and the classification of participants 
+into treatment responders and remitters, that were only done 
+at post-treatment for those that had been on treatment.
+Semi-Structured Interviews
+The diagnosis of OCD, as well as other obsessive-compul­
+sive-related comorbidities, was formally evaluated with a 
+semi-structured interview based on the Structured Clini­
+cal Interview for DSM-IV (SCID-I) (34) adapted by our 
+research group to align with the more recent DSM-5 criteria 
+for obsessive-compulsive and related disorders. The pres­
+ence of other psychiatric comorbidities was assessed with 
+the standardized diagnostic interview Mini International 
+Neuropsychiatric Interview for Children and Adolescents 
+(MINI-KID) (35).
+1 3
+
+Child Psychiatry & Human Development
+Clinician-rated Measures
+The Children’s Yale-Brown Obsessive Compulsive Scale 
+(CY-BOCS) is a clinician-rated, semi-structured interview 
+which is used to assess the severity of the OCD symptoms 
+[12]. It consists of five severity items for both obsessions 
+and compulsions, with a total OCD severity score ranging 
+from 0 to 40. The CY-BOCS has shown good reliability as 
+well as good convergent and discriminant validity [13]. We 
+used the empirically established benchmarks by Cervin et 
+al. [14] to classify the individuals into different levels of 
+symptom severity according to their baseline CY-BOCS 
+score.
+The Clinical Global Impression-Severity (CGI-S) is a 
+one-item clinician rating of symptom severity. It is rated 
+on a seven-point scale ranging from 1 (no symptoms) to 
+7 (extremely severe symptoms) [15]. The CGI-I is a one-
+item clinician rating of symptom severity change from the 
+baseline assessment. This scale ranges from 1 (very much 
+improved) to 7 (very much worse) [16].
+Treatment response was defined as a ≥ 35% reduction on 
+the CY-BOCS from baseline to post-treatment plus a CGI-I 
+score of 1 or 2, while remission was defined as a total score 
+of ≤ 12 at post-treatment plus a CGI-S rating of 1 or 2 [17].
+The Children’s Global Assessment Scale (CGAS) is a 
+clinician-rated measure of global functioning that comprises 
+one item (ranging from 1 to 100; higher scores indicate bet­
+ter functioning). The CGAS has shown high reliability as 
+well as discriminant and concurrent validity [18].
+Self- and Parent-rated Measures
+The Obsessive Compulsive Inventory – Child Version (OCI-
+CV) is a self-reported measure of OCD symptom severity in 
+children and adolescents. Both the total score and the sub­
+scales of the OCI-CV have good internal consistency and 
+test-retest reliability, as well as good convergent and dis­
+criminant validity [19].
+Family accommodation of the OCD symptoms was mea­
+sured with the Family Accommodation Scale – Self-rated 
+(FAS-SR). The FAS-SR is a 19-item parent-reported mea­
+sure that assesses the degree to which parents accommo­
+date their child’s OCD symptoms. The FAS-SR has shown 
+excellent internal consistency, strong agreement with the 
+FAS – Interviewer Rated, and expected convergence with 
+criterion measures [20].
+Self-reported depressive symptoms were assessed by 
+the Short Mood and Feeling Questionnaire, child version 
+(SMFQ-C) and its parent reported version (SMFQ-P). The 
+scales consist of 13 items and have shown good psycho­
+metric properties, including satisfying to good internal 
+consistency, good convergent, concurrent, and criterion 
+validity, and sensitivity to change [21, 22, 23].
+The self-reported Work and Social Adjustment Scale–
+Youth (WSAS-Y) and Parent (WSAS-P) versions were used 
+to assess functional impairment in five areas (i.e., school/
+work, daily situations, social activities, leisure activities, 
+and relationships) as a result of the participants’ OCD 
+symptoms. Items range from 0 (‘not at all’) to 8 (‘severely 
+impaired’), with total scores ranging from 0 to 40. The 
+instruments have demonstrated excellent psychometric 
+properties, with high internal consistency, good convergent 
+and divergent validity, and sensitivity to change [24]. In the 
+current paper, we used scores ≥ 4 in the school/work item 
+as the cut-off to represent significant school impairment. 
+This arbitrary cut-off was chosen because it translates into 
+the problem (i.e., OCD) “definitely” affecting the school 
+area and this was judged to be a clinically relevant level of 
+impairment.
+School-related Questions
+The battery of questions administered at baseline included 
+3 items related to school impairment. The first question 
+enquired about the estimated school attendance in the last 
+month, and responses were grouped in 5 intervals of 20% 
+(i.e., 0–20%, 21–40%, 41–60%, 61–80%, and 81–100% 
+attendance). For the purpose of the present study, the inter­
+val 81–100% attendance was coded as full school atten­
+dance (i.e., attendance of at least 4 days a week during the 
+past month), while the remaining intervals were grouped 
+together and coded as partial or no school attendance (i.e., 
+missing school more than one day a week during the past 
+month). These groupings were made taking into account 
+how the information was collected (in intervals of 20% 
+attendance during the past month), our sample size, and pre­
+vious definitions of problematic or chronic school absentee­
+ism. Specifically, missing 10% or more of the school year 
+(approximately 18 days in a 180-day school year) has been 
+a widely accepted threshold [25, 26].
+The other two school-related questions focused on school 
+support and accommodations: “does the child have any 
+school support measures or is he/she in an adapted class? If 
+so, what measures?” and “does the child have any learning 
+difficulties, for example, does he/she need any support in 
+school? If so, what support?”
+Treatment
+The treatment received at the clinic was multimodal, con­
+sisting of cognitive-behavior therapy (CBT) and medi­
+cation, when deemed necessary by the clinical team. The 
+CBT treatment followed a manualized protocol delivered 
+1 3
+
+Child Psychiatry & Human Development
+school attendance at the baseline assessment, as this was 
+the main outcome in this study (n = 20 were on a school 
+break [e.g., summer holiday] and n = 5 had a missing value 
+in this variable). Hence, the final study sample included 385 
+participants.
+The sample consisted of young people with a mean age 
+of 13.7 years (SD, 2.5; range, 7–17) who were mainly girls 
+(n = 243; 63.1%). Most participants (n = 202; 52.5%) were 
+on the moderate range of OCD symptom severity. About 
+half (n = 193; 50.8%) had at least one additional psychiatric 
+disorder. The most common comorbidities were attention-
+deficit/hyperactivity disorder (ADHD), autism spectrum 
+disorder (ASD), anxiety disorders, and depression. Baseline 
+characteristics of the full sample are presented in Table 1.
+Baseline School Attendance, School Impairment, 
+and School Accommodations
+Among the 385 individuals in the sample, 302 (78.4%) were 
+classified as having full school attendance (i.e., attending 
+over 80%), while 83 (21.6%) were classified as having par­
+tial or no school attendance. Among the latter, 36 (9.3%) 
+had a school attendance from 61 to 80%, 19 (4.9%) from 41 
+to 60%, 6 (1.6%) from 21 to 40%, and 22 (5.7%) of partici­
+pants had minimal school attendance (i.e., from 0 to 20%, 
+corresponding to attendance of one day or less a week dur­
+ing the last month).
+Those with partial or no school attendance were signifi­
+cantly more likely to be girls, have more psychiatric comor­
+bidities, including neurodevelopmental disorders (i.e., ASD 
+and ADHD) and depression, and be on psychotropic medi­
+cation. They also had significantly more severe scores on 
+clinician-rated symptom severity (CY-BOCS and CGI-S) 
+– but not self-rated severity (OCI-CV), more family accom­
+modation (FAS-SR), depression (SMFQ-C and SMFQ-P), 
+and worse functioning (CGAS, WSAS-Y, and WSAS-P). As 
+expected, the largest between-group difference within the 
+WSAS scales was in the school/work item (Table 1).
+According to their scores on the WSAS-Y and WSAS-P, 
+196 of the youth (59.8%) and 261 of the parents (73.1%) 
+reported significant school impairment (i.e., scores ≥ 4). 
+Among participants with full school attendance, these num­
+bers were 136 (52.3%) for the youth (WSAS-Y) and 190 
+(67.6%) for the parents (WSAS-P). The respective num­
+bers for those with partial or no school attendance were 60 
+(88.2%) and 71 (93.4%). The differences by school atten­
+dance status were statistically significant for both the young 
+people (χ2=28.93, p < 0.001) and the parents (χ2=20.26, 
+p < 0.001) (Fig. 1).
+A total of 118 (33.0%) individuals reported to have 
+school accommodations or receive support in school. 
+Accommodations were significantly more frequent in the 
+in 16 sessions [27, 28]. Usually, sessions lasted one hour 
+and were conducted weekly. Patients could also be offered 
+intensive (e.g., several hours per day) clinic-based or home-
+based sessions (for homebound patients), based on the ther­
+apists’ judgement and the families’ preferences. Sessions 
+were delivered by clinical psychologists with extensive 
+experience in treating pediatric OCD or clinical psycholo­
+gists in training under close supervision. The CBT treatment 
+included varying degrees of parental/carer involvement, 
+depending on the case formulation. Initial sessions were 
+devoted to psychoeducation about OCD, mid-treatment 
+sessions were primarily focused on graded exposure with 
+response prevention (both therapist-assisted in vivo expo­
+sure with response prevention and as between-session 
+assignments), and the final sessions included strategies for 
+relapse prevention and maintenance of gains.
+Participants could also receive pharmacological treat­
+ment for their OCD and other comorbid symptoms/disor­
+ders, which was prescribed (or modified after the initial 
+assessment or during treatment) by experienced child and 
+adolescent psychiatrists at the clinic, according to treatment 
+guidelines [29] and clinical judgement.
+Statistical Analyses
+Means and standard deviations, or frequencies and percent­
+ages, were used to describe the characteristics of the sample. 
+Student’s t tests or Chi-square tests, as appropriate, were 
+used to examine group differences. For those who undertook 
+treatment at the clinic and had repeated outcome measures, 
+mixed-effects regression models with maximum likelihood 
+estimation of parameters were implemented. All models 
+included fixed effects of time (baseline and post-treatment), 
+school attendance status (partial or no attendance and full 
+attendance), and the interaction time × school attendance 
+status. A random intercept was also added to account for 
+the variances between and within participants. Alpha lev­
+els (two-tailed) were set to p < 0.05. All analyses were per­
+formed using Stata 15.1 (StataCorp LLC).
+Results
+Participants
+From November 2019 to November 2024, 428 individuals 
+were assessed at the clinic who had OCD as the main diag­
+nosis requiring treatment and had provided written consent 
+for their data to be used for research purposes. Of these, 
+43 records were excluded due to being returning patients 
+(i.e., they had done more than one initial assessment at the 
+clinic) (n = 18) or because they had missing information on 
+1 3
+
+Child Psychiatry & Human Development
+Table 1 Baseline characteristics of the total study sample, and by school attendance status
+Variable (available n)
+Total study 
+sample
+(n = 385)
+Full school 
+attendance
+(n = 302)
+Partial or no school 
+attendance
+(n = 83)
+Statistics
+t / χ2
+p
+Age at initial assessment (385), mean (sd)
+13.74
+2.53
+13.69
+2.63
+13.92
+2.17
+− 0.72
+0.470
+Self-reported age of OCD onset (361), mean (sd)
+10.99
+2.68
+10.92
+2.78
+11.25
+2.49
+− 0.93
+0.352
+Gender (385), n (%)a
+6.73
+0.035*
+Girl
+243
+63.12
+186
+61.59
+57
+68.67
+Boy
+137
+35.58
+114
+37.75
+23
+27.71
+Other
+5
+1.30
+2
+0.66
+3
+3.61
+Comorbid mental disorders (380), n (%)
+193
+50.79
+134
+44.97
+59
+71.95
+18.73
+< 0.001***
+Autism spectrum disorder
+72
+18.95
+46
+15.44
+26
+31.71
+11.09
+0.001**
+ADHD
+96
+25.26
+68
+22.82
+28
+34.15
+4.37
+0.037*
+Depression
+36
+9.47
+23
+7.72
+13
+15.85
+4.96
+0.026*
+Anxiety disordersb
+37
+9.74
+27
+9.06
+10
+12.20
+0.72
+0.396
+Other
+45
+11.84
+37
+12.42
+8
+9.76
+0.44
+0.509
+On medication at intake (380), n (%)
+189
+49.74
+132
+44.30
+57
+69.51
+16.36
+< 0.001***
+Antidepressants
+123
+32.37
+86
+28.86
+37
+45.12
+7.77
+0.005**
+Antipsychotics
+22
+5.79
+11
+3.69
+11
+13.41
+11.15
+0.001**
+ADHD medication
+46
+12.11
+34
+11.41
+12
+14.63
+0.63
+0.428
+Other medication
+109
+28.68
+69
+23.15
+40
+48.78
+20.64
+< 0.001***
+Support in school (358), n (%)
+118
+32.96
+82
+29.18
+36
+46.75
+8.45
+0.004**
+Learning difficulties (358), n (%)
+106
+29.61
+79
+28.11
+27
+35.06
+1.40
+0.237
+CY-BOCS (385), mean (sd)
+22.48
+4.19
+21.80
+3.79
+24.94
+4.68
+− 6.33
+< 0.001***
+Subclinical, n (%)
+6
+1.56
+5
+1.66
+1
+1.20
+0.09
+0.769
+Mild, n (%)
+155
+40.26
+137
+45.36
+18
+21.69
+15.18
+< 0.001***
+Moderate, n (%)
+202
+52.47
+155
+51.32
+47
+56.63
+0.73
+0.392
+Severe, n (%)
+22
+5.71
+5
+1.66
+17
+20.48
+42.83
+< 0.001***
+CGI-S (383), mean (sd)
+4.32
+0.78
+4.23
+0.65
+4.65
+1.09
+− 4.37
+< 0.001***
+CGAS (384), mean (sd)
+51.40
+5.80
+52.58
+4.86
+47.10
+6.84
+8.28
+< 0.001***
+OCI-CV (322), mean (sd)
+19.09
+8.06
+18.74
+8.07
+20.43
+7.94
+− 1.53
+0.127
+FAS-SR (349), mean (sd)
+24.93
+17.75
+22.51
+16.78
+33.79
+18.48
+− 5.04
+< 0.001***
+SMFQ-C (326), mean (sd)
+10.29
+6.20
+9.42
+5.89
+13.64
+6.24
+− 5.17
+< 0.001***
+SMFQ-P (357), mean (sd)
+10.51
+5.97
+9.75
+5.80
+13.33
+5.75
+− 4.78
+< 0.001***
+WSAS-Y (328), mean (sd)
+17.19
+8.70
+15.86
+7.95
+22.28
+9.59
+− 5.67
+< 0.001***
+School or work
+4.18
+2.36
+3.65
+2.17
+6.24
+1.92
+− 8.98
+< 0.001***
+Everyday functioning
+3.81
+2.55
+3.60
+2.41
+4.62
+2.91
+− 2.96
+0.003**
+Social activities
+3.44
+2.42
+3.15
+2.27
+4.53
+2.67
+− 4.30
+< 0.001***
+Spare time
+2.60
+2.36
+2.59
+2.36
+2.65
+2.39
+− 0.18
+0.856
+Family activities
+3.16
+2.39
+2.88
+2.21
+4.25
+2.74
+− 4.32
+< 0.001***
+WSAS-P (357), mean (sd)
+19.94
+9.12
+18.40
+8.59
+25.62
+8.82
+− 6.46
+< 0.001***
+School or work
+4.83
+2.24
+4.34
+2.12
+6.67
+1.64
+− 8.92
+< 0.001***
+Everyday functioning
+4.22
+2.56
+4.00
+2.51
+5.07
+2.55
+− 3.28
+0.001**
+Social activities
+4.38
+2.47
+4.04
+2.40
+5.63
+2.31
+− 5.16
+< 0.001***
+Spare time
+2.55
+2.34
+2.36
+2.25
+3.28
+2.54
+− 3.07
+0.002**
+Family activities
+3.94
+2.51
+3.66
+2.47
+4.97
+2.37
+− 4.14
+< 0.001***
+* p < 0.05; ** p < 0.01; *** p < 0.001
+a This difference became non-significant when the minority of participants belonging to the ‘Other’ gender category were excluded and only 
+those identifying as girls and boys were retained (χ2=2.34, p = 0.126). bIncludes social phobia, specific phobia, generalized anxiety disorder, 
+panic disorder, post-traumatic stress disorder, and anxiety disorders not otherwise specified.
+Abbreviations: ADHD, attention-deficit/hyperactivity disorder; CGAS, Children’s Global Assessment Scale; CGI-I, Clinical Global Impression 
+– Improvement; CGI-S, Clinical Global Impression – Severity; CY-BOCS-A, Yale-Brown Obsessive-Compulsive Scale – Children version; 
+FAS-SR, Family Accommodation Scale – Self Rated; OCI-CV, Obsessive Compulsive Inventory – Child Version; SMFQ-C, Short Mood and 
+Feeling Questionnaire, Child Version; SMFQ-P, Short Mood and Feeling Questionnaire, Parent Version; WSAS-P, Work, Social and Adjust­
+ment Scale – Parent Version; WSAS-Y, Work, Social and Adjustment Scale–Youth Version
+1 3
+
+Child Psychiatry & Human Development
+post-treatment data available. Of these, 320 had informa­
+tion on treatment format (regular vs. intensive) and num­
+ber of sessions attended. A total of 153 (47.8%) individuals 
+undertook intensive treatment. The mean number of ses­
+sions for the whole group was 15.8 (sd = 8.3, range 1–73). 
+Characteristics of this subgroup were very similar to those 
+in the group without available post-treatment data, aside 
+from a slight difference in OCD symptom severity at the 
+intake, showing slightly lower CY-BOCS scores in those 
+with no available post-treatment data compared to those 
+with available data (means [SD] = 21.4 [4.4] vs. 22.7 [4.1]; 
+t-test=-2.22, p = 0.027) (Supplementary Table 1).
+Raw means and standard deviations for all study out­
+comes are presented in Supplementary Table 2. The means 
+and standard errors from the mixed-effect regression models 
+are reported in Table 2. The models showed a significant 
+main effect of time on all treatment outcomes, denoting a 
+reduction of OCD-related and comorbid symptoms (CY-
+BOCS, CGI-S, OCI-CV, FAS-SR, SMFQ-C, SMFQ-P) and 
+an improvement in functioning (CGAS, WSAS-Y, WSAS-
+P), regardless of school attendance. There were also sig­
+nificant main effects of group in all measures (except for 
+the OCI-CV), reflecting the higher baseline scores of the 
+individuals in the partial or no school attendance group at 
+baseline. The interaction time × school attendance status 
+reached significance for the CY-BOCS, the FAS-SR, the 
+SMFQ-C, the SMFQ-P, the WSAS-Y, and the WSAS-P 
+group that reported partial or no school attendance, com­
+pared to the group with full attendance (n = 36 [46.8%] vs. 
+n = 82 [29.2%], respectively; χ2=8.45, p = 0.004). Accom­
+modations in the whole group included attending special 
+education class or school (n = 32; 27.1%), accommodations 
+related to their comorbid neurodevelopmental disorders 
+(e.g., ADHD or ASD) (n = 29; 24.6%), having an extra per­
+son in school for support (n = 17; 14.4%), having shorter 
+school days (n = 11; 9.3%), and other or unspecified accom­
+modations (n = 29; 24.6%), including for example a spe­
+cial placement in the classroom, regular meetings with the 
+school counsellor or school psychologist, special food, and 
+other accommodations related to the OCD symptoms (e.g., 
+being able to leave the classroom to wash hands).
+Another 106 (29.6%) of the total sample reported having 
+learning difficulties (e.g., issues with concentration, difficul­
+ties with reading, difficulties with math-related tasks) that 
+required school support. These were similarly distributed 
+between the youth with full school attendance and youth 
+with partial or no school attendance (n = 79 [28.1%] vs. 
+n = 27 [35.1%], respectively; χ2=1.40, p = 0.237).
+Effect of Baseline School Attendance on OCD 
+Treatment Outcomes
+Of the initial sample of 385 participants, 322 (83.6%) 
+received treatment for OCD at the clinic and had 
+Fig. 1 Percentage of participants 
+classified as having significant 
+school impairment (scores ≥ 4 in 
+the school/work item of the Work 
+and Social Adjustment Scale, 
+Youth and Parent versions) at 
+baseline and at post-treatment, 
+according to their school atten­
+dance status
+ 
+1 3
+
+Child Psychiatry & Human Development
+respectively; χ2=0.29, p = 0.587; remitters: n = 108 [42.4%] 
+vs. n = 21 [32.8%], respectively; χ2=1.93, p = 0.164).
+A total of 29 individuals (17.4%) receiving regular CBT 
+had partial or no school attendance, compared to 35 indi­
+viduals (22.9%) who received intensive CBT (χ2 = 1.52, 
+p = 0.218). By the end of treatment, a total of 17 individu­
+als (11.1%) who received regular CBT and 12 (9.8%) who 
+received intensive CBT still had partial or no school atten­
+dance (χ2 = 0.13, p = 0.715). Importantly, individuals with 
+partial or no school attendance had received significantly 
+more CBT sessions than those with full school attendance 
+(19.2 vs. 14.9 sessions, respectively; t-test=-3.80, p < 0.001) 
+and they were also more likely to be on psychotropic 
+(Table 2). These results indicate that, although those with 
+partial or no school attendance started with higher baseline 
+scores, both groups improved to a similar degree by the end 
+of the treatment. This is illustrated in Fig. 2, which graphi­
+cally represents the baseline and post-treatment CY-BOCS 
+scores in both groups.
+In line with the results from the models, there were no 
+statistically significant between-group differences in the 
+proportion of participants classified as treatment respond­
+ers and remitters at post-treatment, when comparing those 
+with full school attendance and those with partial or no 
+attendance (responders: n = 186 [73.2%] vs. n = 49 [76.6%], 
+Table 2 Results from the mixed-effect regression models in the subsample of individuals with obsessive-compulsive disorder with post-treatment 
+data (n = 322)
+Variable
+Full school 
+attendance 
+(n = 258)
+Partial or no 
+school atten­
+dance (n = 64)
+Main effect of time
+Main effect of group
+Time x group interaction 
+effects
+Measure
+Mean
+SE
+Mean
+SE
+Coefficient (CI)
+Coefficient (CI)
+Coefficient (CI)
+CY-BOCS
+− 11.57 (− 12.26 to 
+− 10.88)***
+3.14 (2.02 to 4.25)***
+− 2.20 (− 3.73 to − 0.68)**
+Baseline
+21.80
+0.26
+24.94
+0.50
+Post-treatment
+10.24
+0.28
+11.17
+0.57
+CGI-S
+− 1.67 (− 1.80 to − 1.53)***
+0.42 (0.20 to 0.63)***
+− 0.09 (− 0.39 to 0.21)
+Baseline
+4.23
+0.05
+4.65
+0.10
+Post-treatment
+2.56
+0.05
+2.89
+0.11
+CGAS
+7.13 (6.23 to 8.03)***
+− 5.49 (− 7.13 to 
+− 3.84)***
+0.03 (− 1.96 to 2.02)
+Baseline
+52.58
+0.39
+47.10
+0.74
+Post-treatment
+59.72
+0.41
+54.26
+0.82
+OCI-CV
+− 7.20 (− 8.44 to − 5.97)***
+1.68 (− 0.39 to 3.75)
+− 1.73 (-4.34 to 0.88)
+Baseline
+18.75
+0.48
+20.43
+0.94
+Post-treatment
+11.55
+0.62
+11.50
+1.15
+FAS-SR
+− 14.94 (− 17.36 to 
+− 12.53)***
+11.15 (7.38 to 14.93)*** − 8.34 (− 13.54 to 
+− 3.14)**
+Baseline
+22.57
+0.89
+33.73
+1.71
+Post-treatment
+7.63
+1.11
+10.44
+2.13
+SMFQ-C
+− 2.50 (− 3.34 to − 1.66)***
+4.12 (2.53 to 5.70)***
+− 2.27 (− 4.07 to − 0.47)*
+Baseline
+9.42
+0.37
+13.54
+0.72
+Post-treatment
+6.92
+0.45
+8.77
+0.86
+SMFQ-P
+− 4.23 (4.99 to − 3.48)***
+3.54 (2.17 to 4.91)***
+− 1.98 (3.60 to 0.35)*
+Baseline
+9.75
+0.32
+13.29
+0.62
+Post-treatment
+5.52
+0.39
+7.08
+0.74
+WSAS-Y
+− 7.27 (− 8.74 to − 5.81)***
+6.41 (4.32 to 8.50)***
+− 5.25 (− 8.38 to − 2.13)**
+Baseline
+15.86
+0.49
+22.28
+0.95
+Post-treatment
+8.59
+0.65
+9.75
+1.20
+WSAS-P
+− 8.08 (− 9.43 to − 6.74)***
+7.24 (5.15 to 9.33)***
+− 4.03 (− 6.94 to 1.12)**
+Baseline
+18.41
+0.49
+25.65
+0.95
+Post-treatment
+10.32
+0.60
+13.54
+1.16
+* p < 0.05; ** p < 0.01; *** p < 0.001
+Abbreviations: CGAS, Children’s Global Assessment Scale; CGI-I, Clinical Global Impression – Improvement; CGI-S, Clinical Global Impres­
+sion – Severity; CI, confidence interval; CY-BOCS-A, Yale-Brown Obsessive-Compulsive Scale – Children version; FAS-SR, Family Accom­
+modation Scale – Self Rated; OCI-CV, Obsessive Compulsive Inventory – Child Version; SE, standard error; SMFQ-C, Short Mood and Feeling 
+Questionnaire, Child Version; SMFQ-P, Short Mood and Feeling Questionnaire, Parent Version; WSAS-P, Work, Social and Adjustment Scale 
+– Parent Version; WSAS-Y, Work, Social and Adjustment Scale–Youth Version
+1 3
+
+Child Psychiatry & Human Development
+and the parents. McNemar’s tests comparing the paired pro­
+portions of school impairment pre- to post-treatment were 
+statistically significant (WSAS-Y: McNemar’s χ2=4.36, 
+p = 0.037; WSAS-P: McNemar’s χ2=14.57, p < 0.001), indi­
+cating lower levels of impairment at the end of the treatment. 
+However, of those with available data, a total of 45 (22.8%) 
+youth (WSAS-Y) and 76 (33.3%) parents (WSAS-P) still 
+presented with significant school impairment at the end of 
+the treatment. Ten (52.6%) youth and 11 (55.0%) parents 
+with partial or no school attendance at post-treatment still 
+reported school impairment at this timepoint, compared to 
+24 (17.5%) youth and 50 (29.8%) parents among those with 
+full school attendance at the end of treatment (χ2=12.07, 
+p = 0.001 and χ2=5.19, p = 0.023; respectively) (Fig. 1).
+Discussion
+This study included 385 children and adolescents diagnosed 
+with OCD attending a specialist obsessive-compulsive and 
+related disorders clinic. Around 22% of the sample was not 
+attending school or had partial school attendance at intake. 
+This is a considerable proportion, considering that the mean 
+age of the sample was around 13–14 years, which are years 
+of compulsory education in Sweden (up to approximately 
+age 16). In line with previous, smaller studies in children 
+and adolescents with OCD [7, 8], our figures also showed 
+that around one third of the children and adolescents needed 
+school accommodations and support. These accommoda­
+tions were present in about 30% of those with full school 
+attendance and 47% of children with poor attendance, indi­
+cating that even those fully engaged in school required extra 
+support. The accommodations were several, varying from 
+medication at post-treatment (n = 51 [79.7%] vs. n = 124 
+[48.6%]; χ2=19.93, p < 0.001).
+Effect of OCD Treatment on Post-treatment School 
+Attendance and School Impairment
+Of 385 participants with data on school attendance at base­
+line, 276 (71.7%) had available data on school attendance 
+at post-treatment. The number of youth with partial or no 
+school attendance decreased from 83/385 (21.6%) at base­
+line to 29/276 (10.5%) at post-treatment. A McNemar’s test 
+comparing the paired proportions of school attendance pre- 
+to post-treatment was statistically significant (McNemar’s 
+χ2=144.6, p < 0.001), indicating an increase of full school 
+attendance. However, among those with partial or no school 
+attendance at baseline with available data at post-treatment, 
+almost 40% still reported to have partial or no school atten­
+dance at the end of the treatment (n = 18/47, 38.3%). Among 
+youth with full school attendance at baseline, the vast major­
+ity (n = 218/229, 95.2%) still had full school attendance at 
+the end of treatment.
+The proportion of individuals with partial or no school 
+attendance at post-treatment was similar among treatment 
+responders and non-responders (n = 22, 10.7% vs. n = 6, 
+8.6%, respectively; χ2=2.27, p = 0.606). The same was true 
+for remitters and non-remitters (n = 9, 7.8% and n = 19, 
+12.0%; χ2=1.29, p = 0.256). This suggests that school atten­
+dance status and response or remission status were some­
+what independent outcomes.
+Additionally, the school/work items in the WSAS-Y and 
+the WSAS-P were examined. Results showed that school 
+impairment (i.e., scores ≥ 4) decreased throughout the course 
+of the treatment, as reported by both the youth with OCD 
+Fig. 2 Graphical representation of 
+the Children’s Yale-Brown Obses­
+sive Compulsive Scale (CY-BOCS) 
+across the two assessment points. 
+Error bars indicate 95% confidence 
+intervals
+ 
+1 3
+
+Child Psychiatry & Human Development
+40% of those that reported partial or no school attendance at 
+baseline still were not able to go back to full-time schooling 
+by the end of the treatment. Moreover, a significant propor­
+tion of both parents and children still reported significant 
+impairment scores in the school domain at this timepoint. 
+Previous studies have suggested that, although CBT is a 
+powerful treatment, reduction in symptom severity is not 
+necessarily associated with improvements in other life 
+domains [11]. Hence, it seems that a more holistic interven­
+tion approach including a specific focus on supporting these 
+youth in school may be required [11]. Indeed, interventions 
+specifically targeting the educational needs of students with 
+psychiatric disorders have shown a positive impact on the 
+academic functioning of these populations [32]. However, 
+there is limited evidence for these interventions given that 
+empirical studies are few and of moderate quality [32]. 
+Hence, methodologically sound studies on supported edu­
+cation and return to school strategies for youth with OCD 
+who struggle in school are warranted.
+Strengths and Limitations
+The study included a large and well-characterized sample of 
+children and adolescents with OCD consecutively referred 
+to a specialist clinic, with no exclusion criteria. We used 
+validated, gold standard instruments and collected informa­
+tion on a wide range of clinically relevant aspects. How­
+ever, the study should also be interpreted in light of some 
+limitations. First, the school attendance variable was not 
+verified by the school but was self-reported by the parents 
+and recorded by the corresponding clinician in intervals of 
+20%. This was later recoded as a binary variable (full school 
+attendance vs. partial or no school attendance), which may 
+have resulted in some loss of information. In youth that 
+had reduced their schedule or had shorter school days as a 
+form of school accommodation, parents and clinicians often 
+regarded their attendance as full, as this accommodation had 
+been previously agreed with the school. Hence, it might be 
+that, at least for some of the individuals in the sample, the 
+school attendance was overestimated. Second, we did not 
+have a control group. Therefore, we cannot conclude that 
+the described school-related functional impairment is asso­
+ciated with the diagnosis of OCD or the concurrent psychi­
+atric disorders in the sample. Similarly, we cannot conclude 
+that the observed clinical improvements were due to the 
+multimodal treatment. Third, the data used in the study were 
+collected over a period of around five years, which may 
+have resulted in some heterogeneity in the data collection 
+and data loss in different parts of the process. Finally, our 
+results may not generalize to non-specialist clinics. None­
+theless, it is important to note that the sample encompassed 
+all levels of OCD symptom severity, with over 40% being 
+having shorter school days to attending a special education 
+class. This highlights that different children with OCD and 
+associated comorbidities will have different needs (in form 
+and degree) and that it is important to evaluate each particu­
+lar case and provide individualized solutions.
+Youth with poor school attendance were more likely to be 
+girls, had more psychiatric comorbidities, were more likely 
+to be on medication already at intake, and presented with 
+more severe clinical symptomatology and general impair­
+ment. Hence, it could be hypothesized that the distress and 
+impairment caused by the OCD symptoms, as well as the 
+associated comorbidities (e.g., anxiety, low mood), led to 
+school avoidance. Indeed, previous literature has shown 
+that mental disorders and related stressors place exces­
+sive demands on young people, which leads them to avoid 
+school as a coping mechanism [30, 31].
+In our sample, about 60%, according to the young peo­
+ple, or 73%, according to the parental report, were classified 
+as having significant school impairment. As expected, this 
+was a lot more pronounced in youth with poor school atten­
+dance, compared to those with full attendance. Hence, most 
+individuals in our large sample, regardless of the informant 
+or the degree of engagement in school, presented with sig­
+nificant school impairment, mirroring previous reports on 
+pediatric OCD samples [3, 4, 5].
+Although we did not have data on school performance, 
+we can hypothesize that the reported school-related func­
+tional impairment is likely to translate into lower grades, 
+as we have previously reported in OCD [6]. Hence, it is 
+important to consider this impairment when treating OCD 
+to ensure that youths with OCD fulfill their educational 
+potential and are able to develop academic and professional 
+careers of their choice.
+One positive result from our study was that school 
+struggles did not necessarily interfere with OCD treatment 
+outcomes. The proportion of treatment responders and 
+remitters was similar in youths with limited vs. full school 
+attendance. However, it is important to note that children 
+and adolescents with limited school attendance received 
+more CBT sessions and more medication, which may sug­
+gest that they were either more complex to begin with or 
+that they required a higher dose of treatment to achieve 
+comparable results. Also, it is likely that some of the time in 
+the sessions was spent motivating the youth to attend school 
+and talking about the school difficulties with both the youth 
+and the parents.
+Interestingly, although the multimodal treatment was 
+overall successful at improving OCD symptom severity 
+(about three fourths of participants were classified as treat­
+ment responders, regardless of their school attendance at 
+baseline) and the proportion of youth with full school atten­
+dance increased from baseline to post-treatment, almost 
+1 3
+
+Child Psychiatry & Human Development
+use, you will need to obtain permission directly from the copyright 
+holder. To view a copy of this licence, visit ​h​t​t​p​:​/​/​c​r​e​a​t​i​v​e​c​o​m​m​o​n​s​.​o​
+r​g​/​l​i​c​e​n​s​e​s​/​b​y​/​4​.​0​/.
+References
+1. 
+American Psychiatric Association (2013) The diagnostic and sta­
+tistical manual of mental disorders, fifth edition (DSM-5). Ameri­
+can Psychiatric Association
+2. 
+Ruscio AM, Stein DJ, Chiu WT, Kessler RC (2010) The epidemi­
+ology of obsessive-compulsive disorder in the National comor­
+bidity survey replication. Mol Psychiatry 15(1):53–63. ​h​t​t​p​s​:​/​/​d​o​
+i​.​o​r​g​/​1​0​.​1​0​3​8​/​m​p​.​2​0​0​8​.​9​4
+3. 
+du Plessis LJ, Lochner C, Louw D, Hendricks G, Bowles S, 
+Fischer M et al (2022) A comprehensive view of functional 
+impairment in children and adolescents with obsessive-compul­
+sive disorder adds value. Early Interv Psychiatry 16(9):994–1001. ​
+h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​1​1​/​e​i​p​.​1​3​2​4​1
+4. 
+Piacentini J, Bergman RL, Keller M, McCracken J (2003) Func­
+tional impairment in children and adolescents with obsessive-
+compulsive disorder. J Child Adolesc Psychopharmacol 13(Suppl 
+1):S61–S69. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​8​9​/​1​0​4​4​5​4​6​0​3​3​2​2​1​2​6​3​5​9
+5. 
+Valderhaug R, Ivarsson T (2005) Functional impairment in clini­
+cal samples of Norwegian and Swedish children and adolescents 
+with obsessive-compulsive disorder. Eur Child Adolesc Psychia­
+try 14(3):164–173. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​7​/​s​0​0​7​8​7​-​0​0​5​-​0​4​5​6​-​9
+6. 
+Pérez-Vigil A, Fernández de la Cruz L, Brander G, Isomura K, 
+Jangmo A, Feldman I et al (2018) Association of obsessive-com­
+pulsive disorder with objective indicators of educational attain­
+ment: A nationwide register-based sibling control study. JAMA 
+Psychiatry 75(1):47–55. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​1​/​j​a​m​a​p​s​y​c​h​i​a​t​r​y​.​
+2​0​1​7​.​3​5​2​3
+7. 
+Geller DA, Biederman J, Griffin S, Jones J, Lefkowitz TR (1996) 
+Comorbidity of juvenile obsessive-compulsive disorder with dis­
+ruptive behavior disorders. J Am Acad Child Adolesc Psychiatry 
+35(12):1637–1646. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​9​7​/​0​0​0​0​4​5​8​3​-​1​9​9​6​1​2​0​0​
+0​-​0​0​0​1​6
+8. 
+Abramovitch A, Duncan B, Schuyler M, Geller DA (2024) The 
+psychosocial and educational burden of obsessive-compulsive 
+disorder in youth. J Affect Disord 367:678–685. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​
+0​.​1​0​1​6​/​j​.​j​a​d​.​2​0​2​4​.​0​9​.​0​2​2
+9. 
+Ansari A, Hofkens TL, Pianta RC (2020) Absenteeism in the first 
+decade of education forecasts civic engagement and educational 
+and socioeconomic prospects in young adulthood. J Youth Ado­
+lesc 49(9):1835–1848. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​7​/​s​1​0​9​6​4​-​0​2​0​-​0​1​2​7​
+2​-​4
+10. Roby DE (2004) Research on school attendance and student 
+achievement: A study of Ohio schools. Educ Res Q 28(1):3–16
+11. Mataix-Cols D, Fernández de la Cruz L, Rück C (2020) When 
+improving symptoms is not enough-is it time for next-generation 
+interventions for obsessive-compulsive disorder? JAMA Psychia­
+try 77(1):9–10. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​1​/​j​a​m​a​p​s​y​c​h​i​a​t​r​y​.​2​0​1​9​.​2​3​3​
+5
+12. Scahill L, Riddle MA, McSwiggin-Hardin M, Ort SI, King RA, 
+Goodman WK et al (1997) Children’s Yale-Brown obsessive 
+compulsive scale: reliability and validity. J Am Acad Child Ado­
+lesc Psychiatry 36(6):844–852. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​9​7​/​0​0​0​0​4​5​8​
+3​-​1​9​9​7​0​6​0​0​0​-​0​0​0​2​3
+13. Gallant J, Storch EA, Merlo LJ, Ricketts ED, Geffken GR, Good­
+man WK et al (2008) Convergent and discriminant validity of 
+the children’s Yale-Brown obsessive compulsive Scale-Symptom 
+checklist. J Anxiety Disord 22(8):1369–1376. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​
+0​1​6​/​j​.​j​a​n​x​d​i​s​.​2​0​0​8​.​0​1​.​0​1​7
+classified as having mild OCD. In the same way, results may 
+not generalize to other countries with different educational 
+systems. For example, the Swedish school system allows 
+for accommodations, even in mainstream schools, which 
+may translate into better attendance or better performance 
+compared to more rigid contexts.
+Conclusions
+School-related functional impairment is common in chil­
+dren and adolescents with OCD. About 22% of our well-
+characterized sample of almost 400 youth with OCD 
+presented with partial or no school attendance at intake. 
+Despite substantial improvement of OCD symptom severity 
+and associated features with treatment, a significant propor­
+tion of youth still had poor school attendance and reported 
+significant school impairment after treatment. Children and 
+adolescents with OCD who struggle at school may benefit 
+from specific supported education and return to school strat­
+egies to completement regular evidence-based interventions 
+focused on symptom reduction.
+Supplementary 
+Information The 
+online 
+version 
+contains 
+supplementary material available at ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​7​/​s​1​0​5​7​8​-​0​
+2​5​-​0​1​8​4​6​-​y.
+Author Contributions L.F.C., D.R., and D.M.C. conceived and de­
+signed the study. L.F.C. wrote the original draft. D.R. performed the 
+analyses. All authors contributed intellectually and approved the final 
+version of the manuscript.
+Funding Open access funding provided by Karolinska Institute.
+Data Availability Patient data supporting this study cannot be made 
+publicly available due to ethical and legal restrictions.
+Declarations
+Competing Interests L.F.C. receives royalties for contributing ar­
+ticles to UpToDate and Wolters Kluwer Health and personal fees for 
+editorial work from Elsevier, all outside the submitted work. D.M.C. 
+receives royalties for contributing articles to UpToDate and Wolters 
+Kluwer Health, occasional payments from funding agencies as an ex­
+ternal grant reviewer, and is part owner of Scandinavian E-Health, AB, 
+all outside the submitted work. All other authors report no competing 
+interests.
+Open Access  This article is licensed under a Creative Commons 
+Attribution 4.0 International License, which permits use, sharing, 
+adaptation, distribution and reproduction in any medium or format, 
+as long as you give appropriate credit to the original author(s) and the 
+source, provide a link to the Creative Commons licence, and indicate 
+if changes were made. The images or other third party material in this 
+article are included in the article’s Creative Commons licence, unless 
+indicated otherwise in a credit line to the material. If material is not 
+included in the article’s Creative Commons licence and your intended 
+use is not permitted by statutory regulation or exceeds the permitted 
+1 3
+
+Child Psychiatry & Human Development
+versions: psychometric evaluation of a brief measure of func­
+tional impairment in young people. Child Psychiatry Hum Dev 
+51(3):453–460. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​7​/​s​1​0​5​7​8​-​0​2​0​-​0​0​9​5​6​-​z
+25. Gottfried MA (2014) Chronic absenteeism and its effects on stu­
+dents’ academic and socioemotional outcomes. J Educ Students 
+Plac 19(2):53–75. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​8​0​/​1​0​8​2​4​6​6​9​.​2​0​1​4​.​9​6​2​6​9​
+6
+26. Balfanz R, Byrnes V (2012) The importance of being in school: A 
+report on absenteeism in the Nation’s public schools. Johns Hop­
+kins University
+27. Turner CM, Mataix-Cols D, Lovell K, Krebs G, Lang K, Byford 
+S et al (2014) Telephone cognitive-behavioral therapy for ado­
+lescents with obsessive-compulsive disorder: A randomized con­
+trolled non-inferiority trial. J Am Acad Child Adolesc Psychiatry 
+53(12):1298–307e2. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​6​/​j​.​j​a​a​c​.​2​0​1​4​.​0​9​.​0​1​2
+28. Mataix-Cols D, Turner C, Monzani B, Isomura K, Murphy C, 
+Krebs G et al (2014) Cognitive-behavioural therapy with post-
+session D-cycloserine augmentation for paediatric obsessive-
+compulsive disorder: pilot randomised controlled trial. Br J 
+Psychiatry 204(1):77–78. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​9​2​/​b​j​p​.​b​p​.​1​1​3​.​1​2​6​
+2​8​4
+29. Barn- och ungdomspsykiatri [Child and Adolescent Mental 
+Health Services] Region Stockholm (2021) Instruktion för barn- 
+och Ungdomspsykiatrisk läkemedelsbehandling [Instructions 
+for pharmacological treatment in child and adolescent psychia­
+try]. Barn- och ungdomspsykiatri [Child and Adolescent Mental 
+Health Services] Region Stockholm
+30. Knollmann M, Knoll S, Reissner V, Metzelaars J, Hebebrand J 
+(2010) School avoidance from the point of view of child and ado­
+lescent psychiatry: symptomatology, development, course, and 
+treatment. Dtsch Arztebl Int 107(4):43–49. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​3​2​
+3​8​/​a​r​z​t​e​b​l​.​2​0​1​0​.​0​0​4​3
+31. Reissner V, Jost D, Krahn U, Knollmann M, Weschenfelder AK, 
+Neumann A et al (2015) The treatment of school avoidance in 
+children and adolescents with psychiatric illness. Dtsch Arztebl 
+Int 112(39):655–662. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​3​2​3​8​/​a​r​z​t​e​b​l​.​2​0​1​5​.​0​6​5​5
+32. Hofstra J, van der Velde J, Farkas M, Korevaar L, Buttner S 
+(2023) Supported education for students with psychiatric dis­
+abilities: A systematic review of effectiveness studies from 2009 
+to 2021. Psychiatr Rehabil J 46(3):173–184. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​
+3​7​/​p​r​j​0​0​0​0​5​2​8
+Publisher’s Note Springer Nature remains neutral with regard to juris­
+dictional claims in published maps and institutional affiliations.
+14. Cervin M, OCD Severity Benchmark Consortium, Mataix-Cols D 
+(2022) Empirical severity benchmarks for obsessive-compulsive 
+disorder across the lifespan. World Psychiatry 21(2):315–316. ​h​t​t​
+p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​2​/​w​p​s​.​2​0​9​8​4
+15. Busner J, Targum SD (2007) The clinical global impressions 
+scale: applying a research tool in clinical practice. Psychiatry 
+(Edgmont) 4(7):28–37
+16. National Institute of Mental Health (1976) ECDEU assessment 
+manual for psychopharmacology. US Department of Health 
+Administation, National Institute of Mental Health, Psychophar­
+macology Research Branch, Division of Extramural Research 
+Programs, Rockville, Md.
+17. Mataix-Cols D, Fernández de la Cruz L, Nordsletten AE, Len­
+hard F, Isomura K, Simpson HB (2016) Towards an international 
+expert consensus for defining treatment response, remission, 
+recovery and relapse in obsessive-compulsive disorder. World 
+Psychiatry 15(1):80–81. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​2​/​w​p​s​.​2​0​2​9​9
+18. Shaffer D, Gould MS, Brasic J, Ambrosini P, Fisher P, Bird H et 
+al (1983) A children’s global assessment scale (CGAS). Arch Gen 
+Psychiatry 40(11):1228–1231. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​1​/​a​r​c​h​p​s​y​c​.​1​
+9​8​3​.​0​1​7​9​0​1​0​0​0​7​4​0​1​0
+19. Foa EB, Coles M, Huppert JD, Pasupuleti RV, Franklin ME, 
+March J (2010) Development and validation of a child version of 
+the obsessive compulsive inventory. Behav Ther 41(1):121–132. ​
+h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​6​/​j​.​b​e​t​h​.​2​0​0​9​.​0​2​.​0​0​1
+20. Pinto A, Van Noppen B, Calvocoressi L (2013) Development and 
+preliminary psychometric evaluation of a self-rated version of the 
+family accommodation scale for Obsessive-Compulsive disorder. 
+J Obsessive Compuls Relat Disord 2(4):457–465. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​
+1​0​.​1​0​1​6​/​j​.​j​o​c​r​d​.​2​0​1​2​.​0​6​.​0​0​1
+21. Burleson Daviss W, Birmaher B, Melhem NA, Axelson DA, 
+Michaels SM, Brent DA (2006) Criterion validity of the mood 
+and feelings questionnaire for depressive episodes in clinic and 
+non-clinic subjects. J Child Psychol Psychiatry 47(9):927–934. ​h​
+t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​1​1​/​j​.​1​4​6​9​-​7​6​1​0​.​2​0​0​6​.​0​1​6​4​6​.​x
+22. Rhew IC, Simpson K, Tracy M, Lymp J, McCauley E, Tsuang 
+D et al (2010) Criterion validity of the short mood and feelings 
+questionnaire and one- and two-item depression screens in young 
+adolescents. Child Adolesc Psychiatry Ment Health 4(1):8. ​h​t​t​p​s​:​
+/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​8​6​/​1​7​5​3​-​2​0​0​0​-​4​-​8
+23. Thabrew H, Stasiak K, Bavin L-M, Frampton C, Merry S (2018) 
+Validation of the mood and feelings questionnaire (MFQ) and 
+short mood and feelings questionnaire (SMFQ) in new Zea­
+land help-seeking adolescents. Int J Methods Psychiatr Res 
+27(3):e1610. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​2​/​m​p​r​.​1​6​1​0
+24. Jassi A, Lenhard F, Krebs G, Gumpert M, Jolstedt M, Andrén P et 
+al (2020) The work and social adjustment scale, youth and parent 
+1 3

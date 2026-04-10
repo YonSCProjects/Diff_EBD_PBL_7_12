@@ -1,0 +1,197 @@
+SOURCE: https://doi.org/10.1007/s35834-024-00458-1
+TITLE: Adolescent depression in school: risk factors and consequences on school functioning - Zeitschrift für Bildungsforschung
+
+## Abstract
+
+Adolescents spend most of their formative years in school, making it an important context to consider when investigating crises. A personal crisis that often has its onset during adolescence is depression. To gain a better understanding of depression in school, we explore possible individual and school-related risk factors and outcomes of depressive symptoms in line with current etiology models. First, we investigate the intersection of possible demographic risk factors of depression (female gender, immigration background, SES). Second, we explore school-related factors (conscientiousness, parental expectations, social inclusion) that might be associated with students’ depressive symptoms, and whether depressive symptoms mediate the effects of these school-related factors on school-functioning (grades, test anxiety). The representative data was collected in 30 Austrian secondary schools in a survey study with three waves. The sample consisted of 1874 12th-grade students from 93 classes. We used well-established self-report scales for all constructs that showed good reliability and students’ mean grades on the most recent tests. Analyses were pre-registered. In general, students experienced heightened depressive symptoms. More specifically, calculating a dummy-coded regression, we found female students with an immigration background and low SES to be the most burdened. The results of the mediation model showed depressive symptoms to partially mediate the association of conscientiousness, social inclusion, and parental expectations with test anxiety; this was not observed for grades. Furthermore, we only found conscientiousness to be positively associated with grades. Directions for future research and implications are discussed.
+
+### Similar content being viewed by others
+
+## 1 Introduction
+
+Adolescence is a period shaped by drastic changes (Gilmore & Meersand, 2014), which increase the vulnerabilities of young people and make adolescence a critical period regarding the development of psychiatric disorders (Shorey et al., 2022). Depression often manifests during adolescence, and depressive symptoms are prevalent among this age group (B. Hankin et al., 1998; Shorey et al., 2022). Based on this, depression or the experience of depressive symptoms might represent a personal crisis that shapes adolescent lives. As students spend most of their formative years at school, it is essential to consider this context when investigating crises and students’ functioning despite crises. While previous research has identified possible demographic risk factors for developing depression, research evaluating the impact of gender, immigration background, and socioeconomic status within an intersectional framework is rare.
+
+Moreover, there has been little research into school-related antecedents and consequences of students’ depressive symptoms, which also considers the classroom context, students’ characteristics, and the influence of parenting (Beesdo-Baum & Wittchen, 2020). A closer investigation of depressive symptoms will yield a better understanding of mental health in school and consequently informs and urges a better implementation of mental health education in teacher training, which is currently limited (Graham et al., 2011). Based on this, the aim of the present longitudinal study is two-fold: to identify risk groups for depression by applying an intersectional paradigm and to examine possible school-related protective and risk factors for depressive symptoms among adolescent students and their consequent school functioning.
+
+## 2 Theoretical background
+
+### 2.1 Adolescent depression
+
+Unipolar depressive disorder is a psychiatric disorder that has its onset in adolescence and often persists into adulthood (Bayer & Sanson, 2003; B. Hankin et al., 1998). With 8% of those aged 10–19 suffering from depression and 34% experiencing elevated depressive symptoms, this affective disorder is quite common among adolescents, and the prevalence of elevated depressive symptoms has risen in the last decade (Daumiller et al., 2023; Shorey et al., 2022). Depression is among the leading causes of morbidity and mortality among adolescents (Merry et al., 2004; World Health Organization, 2021).
+
+Despite the importance of understanding the pathogenesis of adolescent depression, it is difficult to fully comprehend the mechanisms underlying the disorder due to the variety of contributing factors and the range of clinical presentations (Beirão et al., 2020; Thapar et al., 2012). Standard etiology models, however, posit an interplay of personal risk and protective factors. These then interact with current stressors, which may lead to depression or heightened depressive symptoms. Such factors can be biological, somatic, psychological, or social (Broerman, 2020; Schotte et al., 2006). The model that functions as the basis of our study is the heuristic etiology model by Beesdo-Baum and Wittchen (2020). This model considers the vulnerabilities, triggers, modifying factors, and consequences of depression. Adapting this model to the school context, thereby considering different determining facets of students’ lives (i.e., parents, classroom, and personality), and in line with the model’s proposed vulnerabilities, we examine gender, socioeconomic status (SES), immigration background, conscientiousness, parental expectations, and social relatedness as school-related risk and protective factors of depressive symptoms among secondary school students. School functioning, in terms of test anxiety and grades, is investigated as an acute consequence of depression.
+
+### 2.2 Demographic risk factors for depression
+
+Demographic factors that often have been researched as factors in depression include gender, SES, and immigration background. An extensive body of literature highlights that female gender is a risk factor for depression from puberty onwards (Salk et al., 2017; Shorey et al., 2022), with females being twice as likely to experience heightened depressive symptoms (OR = 1.95; Salk et al., 2017). Besides female gender, low SES has also frequently been found to be associated with heightened depressive symptoms among both adolescents and adults (Cao et al., 2021; Hoebel et al., 2017). Evidence of the relationship between immigration background and depression is mixed. However, a recent meta-analysis reported that immigration background is correlated with poor mental health among adolescents (for an overview, see Dimitrova et al., 2016). Considering immigration background in the Austrian school context, students with first languages other than German face additional obstacles (Khakpour, 2022), which could impact their mental health.
+
+Researchers have already explored if individuals at the intersection of marginalized social identities are at greater risk for depression (Patil et al., 2018). However, most of these studies only included two group memberships. The few studies which examined SES and immigration background found support for the *double jeopardy hypothesis*, which posits that risk factors have a cumulative effect (for an overview, see Duinhof et al., 2020). The *intersectional invisibility theory* (Purdie-Vaughns & Eibach, 2008) suggests that female adolescents with an immigration background may be at a higher risk of experiencing depressive symptoms. However, findings are mixed (Curtis et al., 2018); while some studies found females with an immigration background to experience more mental health problems (K. L. W. Smith et al., 2007), others found males with an immigration background to experience more internalizing problems (Fandrem et al., 2009) or no differences by gender at all (Duinhof et al., 2020).
+
+### 2.3 School-related risk factors for depression
+
+Alongside examining the demographic risk factors for developing depressive symptoms, other individual factors and the social context must also be considered (Beesdo-Baum & Wittchen, 2020; Broerman, 2020). As adolescents spend a significant amount of time in school, this is an important context to consider when studying depressive symptoms, including exploring school-related risk or protective factors for adolescent depression. To acknowledge the influence of the classroom, parents, and students’ personality, we focus on social relatedness, parental expectations, and students’ conscientiousness.
+
+A leading theory that conceptualizes student well-being is the *Self-Determination Theory* (Ryan & Deci, 2017). According to this theory, social relatedness is a basic psychological need that leads to higher student motivation and well-being, if fulfilled. In line with this assumption, relatedness has been found to be associated with lower depression scores (Anderman, 2002; Joyce & Early, 2014) and even negatively predicted depression symptoms one year later (Shochet et al., 2006).
+
+While not being present at school, parents still significantly influence their child’s school life. While parental expectations can affect their children’s academic achievement (Pinquart & Ebeling, 2020), they might also exhibit great pressure, leading to low student well-being. In line with this, Ma and colleagues (2018) found high parental expectations to be positively associated with depressive symptoms among adolescent students.
+
+Students’ personality traits are robust predictors of many important life outcomes (Soto, 2019), with conscientiousness displaying the most robust positive patterns in terms of academic achievement (Spielmann et al., 2022) while also acting as a protective factor for depression (Hakulinen et al., 2015; Kotov et al., 2010; Kushner et al., 2012). Among socially withdrawn students, conscientiousness was even found to be a buffering factor for depressive symptoms (K. A. Smith et al., 2017). As such, it may be the most essential personality trait to consider when studying depression in the school context.
+
+### 2.4 Depressive symptoms and school functioning
+
+Within the school context, the impact of students’ depressive symptoms on their school functioning is of great interest. School functioning means adaptive academic outcomes, including academic achievement, motivation, participation, and positive emotions (Bardach et al., 2022). Previous research has shown that depression is likely to have a detrimental effect on school functioning (Logan et al., 2009; Jaycox et al., 2009). To understand the impact of depressive symptoms on school, we investigate school functioning in terms of academic achievement (i.e., grades) and test anxiety as acute consequences of depression (Beesdo-Baum & Wittchen, 2020).
+
+A well-established comorbidity of depression is anxiety, which is closely linked to test anxiety (B. L. Hankin et al., 2016; Putwain et al., 2021). Indeed, despite scarce research, test anxiety has been reported as being positively associated with depression (Owens et al., 2012). Depressive symptoms were repeatedly found to be related to poor academic performance in previous studies (Maurizi et al., 2013; Owens et al., 2012).
+
+While studies have investigated the relationship between depression and test anxiety among various samples, the study design was predominantly cross-sectional. Moreover, studies that investigated the association of multiple indicators of school functioning with depression investigated this either longitudinally with qualitative interviews or cross-sectionally with otherwise burdened samples (e.g., chronic pain). Therefore, more research is needed to better understand how depression relates to school functioning.
+
+### 2.5 The present study
+
+In this longitudinal study, based on standard etiology models (Beesdo-Baum & Wittchen, 2020), we aim to examine the prevalence of depressive symptoms among secondary school students in Austria while considering the complex relationship of depression with school functioning.
+
+Firstly, we apply an intersectional paradigm to investigate possible demographic risk factors of depression. Building on previous research (e.g., Cao et al., 2021; Dimitrova et al., 2016; J. S. Hyde & Mezulis, 2020), we assume female gender, low SES (in terms of parents’ educational background) and immigration background (indicated by having a first language other than German) to be risk factors for experiencing depressive symptoms. Applying an intersectional framework, we hypothesize that female students with low SES and an immigration background are most at risk for experiencing depressive symptoms, while male students with high SES and without an immigration background are least at risk (Hypothesis 1).
+
+Secondly, based on previous literature, the present study focuses on possible antecedents and consequences of students’ depressive symptoms. With this in mind, we assume a mediation model with depressive symptoms as a mediator (see Figure S1). More specifically, we assume direct effects of parental expectations, social relatedness, and conscientiousness on depressive symptoms, as well as indirect effects on school functioning mediated via depressive symptoms. We assume conscientiousness and social relatedness to be negatively associated and parental expectations to be positively associated with students’ depression scores (H2a–c). We hypothesize conscientiousness and social relatedness to be negatively associated and parental expectations to be positively associated with test anxiety (H3a–c). We assume conscientiousness and social relatedness to be positively associated and parental expectations to be negatively associated with grades (H4a–c). We further predict students’ depression scores to be positively associated with test anxiety (H5a) and negatively associated with grades (H5b). Lastly, we hypothesize that students’ depression scores mediate the effects of conscientiousness, social relatedness, and parental expectations on test anxiety (H6a–c) and academic grades (H7a–c).
+
+## 3 Method
+
+### 3.1 Sample and procedures
+
+Our preregistered study (see https://osf.io/4zg65; deviations in the statistical analyses are documented and explained in section C of the Supplementary Information) used data from three waves (April 2022, October 2022, March/April 2023) of a research project, examining school success factors in Austrian secondary schools (https://osf.io/ucvh5). Schools (“Gymnasium”) were recruited by the Austrian Federal Ministry of Education, Science, and Research to provide a representative sample at the school level; representativeness was supported by similar distributions of schools across states in our sample and the population (see Supplementary Information A, Table S2; please see Appendix A (https://osf.io/wpn6d) for further information on the sampling procedure). Participants did not receive any compensation or payment. The study was approved by the Ethics Committee of the University of Vienna (00724). In total, 1935 students participated in at least one data collection wave.
+
+In all three waves, students filled out online questionnaires (QualtricsXM) during regular classroom hours, supervised by trained research assistants, after giving written informed consent and permission for data processing. The data of 61 students whose classroom environment changed between waves one and two were excluded. Consequently, the final sample consisted of 1874 secondary school students in the 12th grade (*M* ~age~ = 17.09 *SD* = 0.80, 59.8% female, 1.1% diverse) from 93 classes in 30 Austrian schools.
+
+### 3.2 Measures
+
+Responses were given on a 5-point rating scale (from 1 “not true at all” to 5 “totally true”) for all variables except depressive symptoms, which were assessed as a formative measure, with answers ranging from 0 to 3.
+
+#### 3.2.1 General demographic information
+
+Demographic data were collected in wave one or, if missing, in the following waves. Students indicated their gender as male, female, diverse, or “no indication”. Immigration background was operationalized as the most often spoken language at home (= first language). Socioeconomic background was operationalized as the highest level of education of the student’s parents (= educational background), ranging from 1 (tertiary education) to 7 (primary school).
+
+#### 3.2.2 Protective and risk factors
+
+Students’ *conscientiousness* was measured in wave one with a four-item scale from the Big‑5 short assessment scale (BFI‑K; Rammstedt & John, 2005; \(\upomega\) = 0.769; sample item: “I complete tasks thoroughly.”).
+
+Students perceived *social inclusion* within the class was measured as an indicator for social relatedness at wave one using four (gender-sensitive adapted) items from a scale originating from the LAU 7 project by Lehmann et al. (1999) (\(\upomega\) = 0.841; “My classmates like me just the way I am.”).
+
+Students’ perceptions of their *parents’ educational expectations* for them were assessed in wave two with a five-item scale by Marjoribanks (2002) (\(\upomega\) = 0.875; “My parents only consider outstanding performance to be good enough.”).
+
+#### 3.2.3 Depressive symptoms
+
+We assessed students’ *depressive symptoms* in wave two using eight items from the German version of the Patient Health Questionnaire (PHQ‑D; Löwe et al., 2002). The PHQ‑D measures several common indicators for a depressive disorder. However, due to its sensitive nature, we excluded item 9, which assesses suicidality and thoughts about self-harming behavior. As suicidal ideation was found to not differentiate between adolescents in clinical and community samples, the exclusion of this item should not reduce the informative value (Radez et al., 2021). Students indicated how often they experienced the mentioned symptoms on a scale ranging from 0 (“never”) to 3 (“almost every day”) over the last two weeks (“Little interest or pleasure in doing things”). Answers were summed up to generate a total score per individual.
+
+#### 3.2.4 School functioning
+
+Students’ *grades* were assessed in wave three using their most recent test grades in Mathematics, German, and English. Grades were combined over all three subjects, with higher values indicating higher achievement.
+
+*Test anxiety* was also assessed in wave three, using the short four-item version of the Achievement Emotions Questionnaire (AEQ‑S, Bieleke et al., 2021). Students were asked to indicate how they usually feel during a test in the subject English (\(\upomega\) = 0.884; sample item: “I am very nervous.”).
+
+### 3.3 Statistical analyses
+
+We used several statistics programs based on their functionality (R Core Team, 2023; SPSS 29; Mplus 8.7). In preliminary analyses (SPSS), we assessed group differences in depressive symptoms for binary gender (0 = male, 1 = female) and first language (0 = German, 1 = non-German) using t‑tests. We recoded educational background into only three categories (0 = low, 1 = average, 2 = high) and conducted ANOVA and post hoc tests using the Bonferroni correction. Further, using a Bayesian dummy-coded regression with weakly informative priors, we analyzed differences in depressive symptoms dependent on increasing risk factors. Considering the nested data structure, we checked intraclass correlations (*ICCs*) and design effect values and found high *ICCs* and design effect values for grades (see Table 1). The dimensionality of all scales was assessed with CFAs in Mplus, using the robust maximum likelihood estimator (MLR) and the complex design option to control for the nested data structure. Goodness-of-fit for all models was assessed with common indicators (CFI, TLI, RMSEA, SRMR). Guidelines suggested by Hu and Bentler (1999) give cutoff scores for excellent and adequate fit, respectively: CFI and TLI > 0.95 and 0.90; RMSEA and SRMR < 0.06 and 0.08.
+
+To test H2–H7, we estimated a multivariate two-level mediated structural equation model in Mplus and included binary gender, first language, and educational background as control variables for the mediator. To control for the nested data structure (= class level), we used a multilevel approach, but as we were solely interested in the subjective perceptions of students, the model was specified only on the individual level. As bootstrapping is not implemented for multilevel models in Mplus, we used the Bayesian Markov Chain Monte Carlo (MCMC) estimation method with the program’s default setting of non-informative priors. We requested eight chains with a minimum of 10.000 iterations for the Gibbs sampler, specified BCONVERGENCE = 0.002, and assessed convergence through trace plots for every parameter as well as a Potential Scale Reduction criterion of less than 1.004 (Gelman & Rubin, 1992; Zitzmann et al., 2021). The Potential Scale Reduction was approximated via the effective sample size using the formula by Zitzmann and colleagues (2021). All variables were group-mean centered. Missing values on the item level were handled with FIML in the CFAs and with Bayesian estimation in the main model.
+
+## 4 Results
+
+### 4.1 Descriptive statistics and group differences in depressive symptoms
+
+Table 1 shows bivariate correlations and descriptive statistics. Adhering to the cut-off scores (Löwe et al., 2002), average scores for depressive symptoms in our sample indicate mild depression. However, since we removed one item, the maximum range is lower than the original PHQ‑D, which leads to a potential underestimation of depressive symptoms in our sample. Figure S2 shows the distribution of scores, ranging over the whole score spectrum.
+
+T‑tests showed more pronounced depressive symptoms for female students and students whose first language is not German. Results from ANOVA showed significant differences in educational background (see Table 2). Post hoc tests revealed significantly higher depression scores for students whose parents only completed primary education compared to students with parents who graduated in secondary (*p* < 0.001) or tertiary education (*p* < 0.001). Depression scores between secondary and tertiary education did not differ significantly (*p* = 0.184).
+
+For intersectional comparisons, we grouped students into 12 groups representing each possible combination of categories from the three demographic variables (gender, first language, educational background). For the Bayesian dummy-coded regression, male students with first language German and with parents that had more than compulsory education were set as intercept (*B* ~0~ = 6.59, *SD* = 0.38, 95% CI = [5.83, 7.34]), serving as the reference group for all comparisons as this group inherits no risk factors from the three considered variables. Results showed that all female students experienced considerably higher depressive symptoms than the reference group, regardless of the other factors (see Table 3). As expected, female participants with a first language other than German and whose parents did not complete compulsory education were most burdened (*B* = 7.55, *SD* = 1.27, 95% CI = [5.07, 10.06], BF > 100), supporting our H1. However, it is important to note that group sizes varied to a large extent, which caused higher uncertainty in estimating some differences (like for the group male—low—non-German). A more extensive explanation of the results can be found in the Supplementary Information B (“Explanation of Bayesian dummy-coded regression and its results”).
+
+### 4.2 Antecedents and consequences of depressive symptoms
+
+The results of the CFA models revealed excellent fit indices for all scales (see Table S1 in the Supplementary Information A). The coefficients of all direct and indirect effects from our main model are presented in Table 4. Regarding direct effects, results indicate that conscientiousness is significantly negatively associated with depressive symptoms (*β* = −0.26, standardized posterior standard deviation PSD = 0.03), and positively associated with test anxiety (*β* = 0.24, PSD = 0.04) and grades (*β* = 0.33, PSD = 0.04), supporting H2a and H4a, but not H3a. These associations can be interpreted as small to medium effects (Cohen, 1988; Gignac & Szodorai, 2016).
+
+Social inclusion showed statistically significant negative associations with depressive symptoms (*β* = −0.10, PSD = 0.03) and test anxiety (*β* = −0.11, PSD = 0.04) but no relation to grades (*β* = 0.07, PSD = 0.04), supporting only H2b and H3b. Perceived parental expectations were only significantly positively related to depressive symptoms (*β* = 0.19, PSD = 0.03), supporting H2c. Regarding the mediator variable, depressive symptoms were significantly associated with test anxiety (*β* = 0.30, PSD = 0.03), showing a medium to large positive effect and, therefore, supporting H5a. Unexpectedly, they were unrelated to grades (*β* = −0.07, PSD = 0.04).
+
+Regarding indirect effects, depressive symptoms partially mediated the effects of conscientiousness (*β* = −0.08), social inclusion (*β* = −0.03), and parental expectations (*β* = 0.06) on test anxiety, supporting H6a–c. No significant indirect effects were found for grades.
+
+## 5 Discussion
+
+### 5.1 Who is most affected by depressive symptoms?
+
+Numerous studies have identified female gender (Salk et al., 2017), low SES (Cao et al., 2021; Hoebel et al., 2017), and immigration background (Dimitrova et al., 2016; Duinhof et al., 2020) as risk factors for depression from puberty onwards. With the rise of *intersectionality theory* (Crenshaw, 1989), research has started to consider the intersection of social categories in the pathogenesis of depression. However, research has rarely examined more than two categories simultaneously (Duinhof et al., 2020; Patil et al., 2018).
+
+We found that students experienced heightened depressive symptoms in general, with a mean score of 9.43 (*SD* = 5.87) and a median of 9.00. According to the cut-off criteria of the PHQ‑D, values of 5–9 indicate a mild depression and 10–14 a moderate depression (Kroenke et al., 2001). We excluded one item from our measurement, making our interpretation more conservative. The relatively high values in symptom severity emphasize adolescence as a vulnerable period for experiencing depressive symptoms (Daumiller et al., 2023; B. Hankin et al., 1998; Shorey et al., 2022) and highlight the importance of raising awareness of students’ mental health.
+
+In line with our hypothesis (H1), we found female students with low SES and an immigration background to experience more depressive symptoms than the reference group. As the diagnostic categories of the PHQ‑D consist of 5‑point increments (Kroenke et al., 2001) and the mean difference was 7.556 points, this finding shows that the students who have multiple risk factors are, on average, one diagnostic category more burdened than the reference group. However, our results must be interpreted cautiously as the standard deviations are large, and extreme groups consist of small samples, making the analysis more sensitive to the specified priors (van de Schoot et al., 2014). Even though we used Bayesian estimation that handles small sample sizes better than ML-estimators in many cases (McNeish, 2016), this limitation becomes especially apparent in the male, low SES, and no immigration background group (*n* = 6). Despite having 6.25 points higher depression scores than the reference group, there is no evidence that this difference is of relevance (BF = 0.428). In contrast, the evidence for the female, high SES, and no immigration background group was highly relevant (BF > 100), with an average of 3.66 points higher depression scores than the reference group.
+
+In line with previous research highlighting female gender to be an important risk factor (Salk et al., 2017), we found female students, regardless of their SES and immigration background, to experience higher depression scores than male students with high SES and no immigration background, which served as the reference group. Within the male subgroup, only students with low SES and an immigration background experienced more severe depressive symptoms than the reference group. This finding illustrates the importance of concurrently investigating more than one demographic category.
+
+### 5.2 Depressive symptoms in school: Risk factors and outcomes
+
+Consistent with current literature (Anderman, 2002; Hakulinen et al., 2015; Joyce & Early, 2014; Kotov et al., 2010; Kushner et al., 2012; Ma et al., 2018; Shochet et al., 2006) and our hypotheses (H2a–c), we found that conscientiousness and social relatedness were negatively related to depressive symptoms, while parental expectations were positively associated with depressive symptoms. These findings indicate that conscientious students who feel socially related and whose parents do not pressure them to excel are less prone to experience depression. Contrary to previous research (von der Embse et al., 2018) and our hypothesis (H3a), we found conscientiousness positively associated with test anxiety. This might be due to conscientious students being more perfectionistic and consequently experiencing higher test anxiety (Burcaş & Creţu, 2021; Stoeber et al., 2009). Conversely, less conscientious students could be less concerned with test requirements and, therefore, develop less anxiety. In line with previous research (B. L. Hankin et al., 2016; Putwain et al., 2021), depressive symptoms were found to be associated with higher levels of test anxiety, which mirrors the close association between depression and anxiety. We also found that depressive symptoms partially mediate the effects of social relatedness and conscientiousness on test anxiety and that they fully mediate the effect of parental expectations on test anxiety. This emphasizes the need to consider not only school-related factors to enhance school functioning, but also students’ mental health.
+
+As depression is considered to impact achievement negatively and to be related to test anxiety (Maurizi et al., 2013; Owens et al., 2012), we also investigated the influence of depressive symptoms on students’ school functioning in terms of achievement (i.e., grades) and test anxiety (H5a–b). Contrary to previous research (Maurizi et al., 2013; Owens et al., 2012) and H5b, depressive symptoms were not associated with grades. The measurement time gap might explain this since depressive symptoms were measured in the fall, and grades were measured in the spring. Within this period, students experiencing depressive symptoms may have developed coping mechanisms. Research has also shown that adolescents with mild depressive symptoms (PHQ-D ≥ 5) are particularly affected by seasonal effects (Lukmanji et al., 2020) and may have had reduced depressive symptoms by the time we measured grades. However, it is also essential to acknowledge that the sample may have predominantly consisted of high achievers since they were at the end of their school careers despite also facing many additional obstacles during the COVID-19 pandemic. This indicates that they might have already developed good coping strategies for high school functioning despite crises, which might have also mitigated the negative impact of depressive symptoms on their grades.
+
+### 5.3 Strengths, limitations, and future directions
+
+The present study applied a longitudinal design using a large representative sample of Austrian students at the end of their school career to investigate depressive symptoms within the school context. Despite the present study’s strengths, some limitations are present. First, despite the large sample, the subgroups included in our Bayesian dummy coded regression were small. While Bayesian analysis allows smaller sample sizes than Frequentist analysis, small samples make the analysis more sensitive to the chosen weakly informative priors (van de Schoot et al., 2014). Second, although the data was collected at different time points, it is still correlational and does not allow causal interpretation. Third, participating students attended only one school type, limiting generalizability as students from different school types might have different backgrounds and experiences. Fourth, while we investigated the intersection of previously identified demographic risk factors, we included two of the predominantly researched social identity categories (i.e., gender and SES; Harari & Lee, 2021), excluding other relevant social identities (e.g., sexual orientation). Moreover, due to a low number of students identifying as non-binary (~1%), we investigated gender as binary and thereby excluded queer youth, who might be especially at risk for depression (Gower et al., 2022; Hall, 2018). Fifth, we used an indicator of immigration background, which did not distinguish members of language minorities who are native to Austria and did not differentiate immigration generation status, which was previously found to have different associations with depression (Peña et al., 2008).
+
+With depressive symptoms and depression being one of the leading causes of mortality and morbidity in adolescence (Merry et al., 2004; Shorey et al., 2022; World Health Organization, 2021) and with the high and rising numbers of adolescents experiencing such symptoms, more research on adolescent depression in school is needed to identify possible school-based intervention strategies. Future research investigating mental health among students should apply an intersectional approach that considers understudied social identity categories, e.g., queer youth and immigration generation status (Harari & Lee, 2021). Moreover, future studies should investigate the depression-achievement link more closely and examine the coping strategies students apply during crises.
+
+Aside from future research, it is also of utmost importance to include mental health education in teacher training and continuing education, which is currently limited in various countries (Graham et al., 2011), including Austria. Further development of teacher training is essential because teachers play a crucial role in identifying and managing students’ psychological issues (Papandrea & Winefield, 2011) while their knowledge about mental disorders is often insufficient (Ekornes, 2015; Papandrea & Winefield, 2011). Training programs and mandatory education integration are needed to address this, and the network between psychologists and schools must be strengthened. Short-term support can include well-prepared information brochures for teachers, for example, on the identification or intervention for depression.
+
+## Data availability
+
+Data will be made available on reasonable request by the last author.
+
+## References
+
+### Funding
+
+This paper was written as part of the Identification of School Success Factors in General Secondary Schools project (principal investigator, Marko Lüftenegger) which was funded by the Austrian Federal Ministry of Education, Science and Research.
+
+## Funding
+
+Open access funding provided by University of Vienna.
+
+## Author information
+
+### Authors and Affiliations
+Authors
+
+### Corresponding author
+
+## Ethics declarations
+
+### Conflict of interest
+
+F. Fassl, J. Muth, M. Hofleitner and M. Lüftenegger declare that they have no competing interests.
+
+## Additional information
+
+### Publisher’s Note
+
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+## Supplementary Information
+
+### 35834_2024_458_MOESM1_ESM.docx (download DOCX )
+
+The supplementary material contains further tables and figures as well as a detailed explanation of Bayesian dummy-coded regression and its results and elaborations on deviations from preregistration.
+
+## Rights and permissions
+
+Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted manuscript version of this article is solely governed by the terms of such publishing agreement and applicable law.
+
+**Open Access** Dieser Artikel wird unter der Creative Commons Namensnennung 4.0 International Lizenz veröffentlicht, welche die Nutzung, Vervielfältigung, Bearbeitung, Verbreitung und Wiedergabe in jeglichem Medium und Format erlaubt, sofern Sie den/die ursprünglichen Autor(en) und die Quelle ordnungsgemäß nennen, einen Link zur Creative Commons Lizenz beifügen und angeben, ob Änderungen vorgenommen wurden. Die in diesem Artikel enthaltenen Bilder und sonstiges Drittmaterial unterliegen ebenfalls der genannten Creative Commons Lizenz, sofern sich aus der Abbildungslegende nichts anderes ergibt. Sofern das betreffende Material nicht unter der genannten Creative Commons Lizenz steht und die betreffende Handlung nicht nach gesetzlichen Vorschriften erlaubt ist, ist für die oben aufgeführten Weiterverwendungen des Materials die Einwilligung des jeweiligen Rechteinhabers einzuholen. Weitere Details zur Lizenz entnehmen Sie bitte der Lizenzinformation auf http://creativecommons.org/licenses/by/4.0/deed.de.
+
+## About this article
+
+### Cite this article
+
+Fassl, F., Muth, J., Hofleitner, M. *et al.* Adolescent depression in school: risk factors and consequences on school functioning. *Z f Bildungsforsch* **15**, 175–192 (2025). https://doi.org/10.1007/s35834-024-00458-1
+
+- Received:
+- Revised:
+- Accepted:
+- Published:
+- Version of record:
+- Issue date:
+- DOI: https://doi.org/10.1007/s35834-024-00458-1

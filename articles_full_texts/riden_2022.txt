@@ -1,0 +1,169 @@
+Evidence-Based Behavior Management Strategies for Students With or at Risk of EBD: A Mega Review of the Literature
+
+Benjamin S. Riden, PhD, BCBA-D1, Skip Kumm, PhD2, and Daniel M. Maggin, PhD3
+
+1James Madison University, Harrisonburg, VA, USA
+2Elmhurst Community School District 205, IL, USA
+3University of Illinois Chicago, USA
+
+Corresponding Author: Benjamin S. Riden, James Madison University, Memorial Hall 3130E, Harrisonburg, VA 22807, USA. Email: ridenbs@jmu
+Associate Editor: Eric Common
+
+Published in: Remedial and Special Education
+2022, Vol. 43(4) 255–269
+© Hammill Institute on Disabilities 2021
+DOI: 10.1177/07419325211047947
+
+ABSTRACT
+
+Evidence-based practices (EBPs) are strategies shown through rigorous experimentation to be effective when implemented as designed by educators in the field. The purpose of this review is to (a) describe the state and quality of evidence-based reviews and meta-analyses of studies on classroom and behavior management interventions for students with emotional and behavioral disorders (EBDs) and (b) summarize practices that can be deemed evidence-based. We identified 50 meta-analytic or systematic reviews encompassing 20 interventions implemented solely or in part with students with EBD. In total, our review identified eight interventions classified as EBPs for supporting students labeled with EBD in the meta-analytic literature. Implications for future research are presented.
+
+Keywords: EBD, behavior, EBP, meta-analysis, systematic review
+
+LITERATURE REVIEW
+
+Researchers have consistently documented the academic and social challenges experienced by students with emotional and behavioral disorders (EBDs; Lewis et al., 2019). In response to these concerns, scholars emphasize the need to select and implement evidence-based behavior management practices that support students with EBD and establish and maintain an environment conducive to effective instruction and successful learning (Lloyd et al., 2019). Forness et al. (2012) note that EBD refers to a range of emotional, behavioral, and psychiatric disorders that adversely affect academic, behavioral, and social functioning in school settings. Implementing evidence-based behavior management strategies is essential to support teaching and learning for students with EBD, although it remains perhaps the most persistent challenge teachers confront (Mitchell et al., 2019). For instance, teachers of students with EBD frequently report behavior management as a primary source of professional stress and a contributor to departure from the profession (Flower et al., 2017). The reasons teachers struggle with behavior management vary, with researchers citing characteristics of the individual, intervention, and organization as variables influencing the success of a particular management strategy. Because successful implementation depends on many factors, there is an emphasis placed on selecting the method with the greatest empirical support.
+
+Undergirding behavior management research on students with EBD is an assumption of a range of evidence-based practices (EBPs) available for school personnel to select and implement. Indeed, many scholars assert there is strong evidence for various classroom strategies for students with EBD (Lewis, 2016). Although there are certainly effective behavior management practices and principles from which to draw (Zaheer et al., 2019), the assumption these strategies and practices have been validated for use with a population whose needs are as intense as those students with EBD requires systematic investigation and confirmation.
+
+IDENTIFYING EBP
+
+For the better part of two decades, special education researchers have emphasized the identification and implementation of EBPs (Spencer et al., 2012). With the maturation of the EBP movement in special education, there is greater appreciation for the conditions and procedures for establishing a practice as evidence-based (Maggin, Talbott, et al., 2017). For instance, research on behavior management practices and strategies began with an emphasis on descriptive, observational studies to identify approaches effective teachers use in their classrooms (Gage et al., 2018). Although informative and useful, descriptive research provides limited information on whether a particular practice leads to changes in valued outcomes such as increases in student academic engagement or decreases in disruptive behaviors. In contrast, experimental research designs are used to examine student performance under conditions in which the management strategy is implemented (Lloyd et al., 2019).
+
+The pivotal role of experimental research within an EBP perspective cannot be overstated. Notably, however, EBPs require more than a single demonstration of an effect within a single research study. Rather, researchers interested in EBP emphasize the concept of replication, which requires demonstrating the effectiveness of a practice across time points, participants, settings, and various other variables (Moeyaert et al., 2018). Inherent within the notion of replication is the need for multiple researchers to conduct experimental studies examining similarly defined independent and dependent variables (Maggin, Lane, et al., 2017). Because of the importance of replication to EBPs, there is a need to summarize studies using systematic and replicable procedures to ensure the most credible assessments of a given practice are made. As such, researchers in special education use systematic reviews and meta-analyses to provide a transparent and reproducible approach for collating the research on interventions and strategies to assess the strength of the underlying research base and make recommendations to practitioners (Talbott et al., 2018).
+
+STUDY PURPOSE
+
+The purpose of this review is to (a) describe the state of systematic reviews and meta-analyses of classroom and behavior management intervention studies for students with EBD and (b) summarize practices that can be deemed evidence-based through application of quality indicators. Given challenges associated with delineating this population of students (Algozzine, 2017), studies were included if any participants were identified with EBD. The following research questions guided our research:
+
+Research Question 1 (RQ1): What classroom behavior management strategies have been reviewed, by systematic review or meta-analysis, addressing behavioral needs of students with EBD?
+
+Research Question 2 (RQ2): What was the prevalence of students with EBD in these reviews?
+
+Research Question 3 (RQ3): Which interventions did authors of primary reviews designate as evidence-based?
+
+METHOD
+
+Study Identification Procedure
+
+We identified systematic reviews and meta-analyses for this article using the following procedures. We defined systematic review as any article that systematically identified, selected, evaluated, and synthesized primary studies on this population to provide an exhaustive summary of the scholarly literature (Miller & Brewer, 2003). Conversely, we considered meta-analysis a statistical technique to combine data from the examined individual research studies and use the pooled data to come to new statistical conclusions (Craighead & Nemeroff, 2004). The search was limited to reviews published between 1980 and December 2019. Because systematic review and meta-analytic procedures were developed only a short time prior and not widely used (Smith & Glass, 1977), the research team determined this date range would provide an opportunity to identify the full range of eligible reviews. To identify reviews that met the eligibility criteria, the research team implemented the following three steps.
+
+Step 1. First, we located peer-reviewed articles and dissertations through a search of electronic databases, including PsycINFO, Educational Resources Information Center (ERIC), and ProQuest Educational Journals. Searches were conducted using the Boolean phrase: "systematic review" OR "meta-analysis" AND "classroom" OR "school" AND "management" OR "behavior management" OR "behavior* intervention"; "systematic review" OR "meta-analysis" AND "classroom" OR "school" AND "management" OR "intervention" AND "EBD" OR "emotional behavioral disorder" OR "ED" OR "emotional disturbance." In addition, we set the limitation that articles and dissertations were written in English. The initial search yielded 3,000+ potential systematic reviews. The third author independently replicated the electronic search resulting in the same number of potential systematic reviews. After initial screening using the procedures described below, the research team conducted a hand search of the following journals to identify potential reviews not identified in electronic databases: Behavioral Disorders, Education and Treatment of Children, Journal of Positive Behavior Interventions, and School Psychology Review, resulting in an additional nine articles being added to the initial identification of potential reviews for inclusion. The reason we did not identify these articles through the electronic search is they did not mention EBD, challenging behavior, systematic, or meta-review in the title or abstracts. We conducted the hand search electronically by clicking each journal's table of contents volume by volume and reviewing each article's title, abstract, and method section to identify any potential missed articles. We chose to conduct a hand search in these journals because they are the primary outlets for publishing reviews on behavioral interventions for students with EBD.
+
+TABLE 1. Review Characteristics.
+
+[Table includes: Intervention, Authors, No. of studies, Research designs, No. of participants, % EBD, DV, Setting, Grade]
+
+Behavior contracts: Bowman-Perrott et al. (2015) - 18 SCD studies; 58-S participants; ENNP % EBD; AE, DB; PK-
+Behavior-specific praise: Moore et al. (2019) - 11 GD/SCD; 20-S, 12-C; 41%; AE, DB; GE, SP; K-
+Behavior-specific praise: Royer et al. (2018) - 6 SCD; 231; 2%; AE, DB; K-
+CICO: Drevon et al. (2019) - 37 GD/SCD; 36-G, 144-S; ENNP; AE, DB; AS, GE, SP; K-
+CICO: Hawken et al. (2014) - 28 GD/SCD; 566-G, 171-S; ENNP; AE, DB; K-
+CICO: Klingbeil et al. (2019) - 11 GD/SCD; 9-G, 32-S; 5%; AE, DB; K-
+CICO: Maggin et al. (2015) - 22 GD/SCD; 79-S; 11%; AE, DB; AS, GE, SP; K-
+CICO: Wolfe et al. (2016) - 16 GD/SCD; 42-G, 66-S; 10%; AE, DB; AS, GE, SP; K-
+Cooperative learning: Sutherland et al. (2000) - 8 GD/SCD; 327-G, 41-S; 24%; AE, DB; AS, GE, SP; 3-
+Function-based interventions: Common et al. (2017) - 18 SCD; 28-S; ENNP; AE, DB; AS, GE, SP; K-
+Function-based interventions: Gage et al. (2012) - 69 SCD; 146-S; 38%; AE, DB; GE, SP; PK-
+Function-based interventions: Lane et al. (1999) - 19 SCD; 62-S; 36%; AE, DB; PK-
+Function-based interventions: Lane et al. (2009) - 12 SCD; ENNP; ENNP; -; 6-
+Function-based interventions: Lloyd et al. (2016) - 39 SCD; 88-S; 23%; DB; GE, SP; K-
+Function-based interventions: Wood et al. (2015) - 12 SCD; 23-S; ENNP; AE, DB; PK-
+Goal setting: A. L. Bruhn et al. (2016) - 40 GD/SCD; 1,X; 6%; DB; K-
+Good behavior game: Bowman-Perrott et al. (2016) - 22 SCD; 1,580-S; 6%; DB; AS, GE, SP; PK-
+Group contingency: Maggin, Pustejovsky, et al. (2012) - 27 SCD; ENNP; 33%; AE, DB; GE, SP; K-
+Group contingency: Maggin et al. (2017) - 40 SCD; ENNP; 37%; AE, DB; GE, SP; K-
+High probability request: Common, Bross, et al. (2019) - 22 SCD; 51-S; 20%; AE, DB; AS, GE, SP; K-
+High probability request: Lee (2005) - 28 SCD; 68-S; 15%; AE, DB; AS, GE, SP; PK-
+Instructional choice: Royer et al. (2017) - 26 GD/SCD; 1,218-G, 75-S; 1%; AE, DB; AS, GE, SP; K-
+Instructional choice: Shogren et al. (2004) - 13 SCD; 30; 17%; DB; AS, GE, SP; K-
+Peer-mediated interventions: Bowman-Perrott et al. (2013) - 20 SCD; 128-S; 43%; AE, DB; PK-
+Peer-mediated interventions: Dart et al. (2014) - 29 SCD; 73-S; 4%; AE, DB; GE, SP; PK-
+Peer-mediated interventions: Dunn et al. (2017) - 24 GD/SCD; 244; 100%; AE, DB; AS, GE, SP; PK-
+Peer-mediated interventions: Watts et al. (2019) - 15 GD/SCD; 436; 59%; AE, DB; AS, GE, SP; 2-
+Self-determination: Carter et al. (2011) - 81 GD/SCD; 16,XXX; ENNP; AE, DB; GE, SP; K-
+Self-management: Briesch and Briesch (2016) - 47 SCD; 159-S; 13%; AE, DB; GE, SP; K-
+Self-management: Briesch and Chafouleas (2009) - 30 SCD; 106-S; 50%; AE, DB; GE, SP; K-
+Self-management: Bruhn et al. (2015) - 41 GD/SCD; 49-G, 182-S; 27%; AE, DB; AS, GE, SP; K-
+Self-management: Busacca et al. (2015) - 31 SCD; 70-S; 7%; AE, DB; GE; K-
+Self-management: Hughes et al. (1989) - 11 GD/SCD; 31-G, 12-S; ENNP; AE, DB; GE, SP; 3-
+Self-management: Maggin et al. (2013) - 39 SCD; 106-S; 50%; AE, DB; GE, SP; K-
+Self-management: Nelson et al. (1991) - 17 GD/SCD; 85; ENNP; AE, DB; PK-
+SRSD for writing: Ennis and Jolivette (2014) - 14 GD/SCD; 177; 80%; AE, DB; AS, GE, SP; 2-
+Social skills: Hutchins et al. (2019) - 24 SCD; 78-S; 39%; DB; GE, SP; PK-
+Social skills: Mathur et al. (1998) - 64 SCD; 283-S; 63%; DB; PK-
+Social skills: Schloss et al. (1986) - 25 GD/SCD; 266; 36%; AE, DB; -
+Social skills: Zaragoza et al. (1991) - 27 GD/SCD; 863; 14%; AE, DB; AS, GE, SP; K-
+Task sequencing: Knowles et al. (2015) - 11 GD/SCD; 32-GD, 22-S; 100%; AE, DB; AS, GE, SP; K-
+Teacher-directed OTR: Common, Lane, et al. (2019) - 21 GD/SCD; 52-G, 166-S; 2%; AE, DB; GE, SP; K-
+Teacher-directed OTR: Leahy et al. (2019) - 12 SCD; 78-S; 12%; AE, DB; GE, SP; K-
+Teacher-directed OTR: MacSuga-Gage and Simonsen (2015) - 15 GD/SCD; 52-G, 120-S; 9%; AE, DB; GE, SP; K-
+Time-out: Vegas et al. (2007) - 15 SCD; 25-S; ENNP; DB; AS, GE, SP; PK-
+Token economies: Maggin et al. (2011) - 25 SCD; 67-S, 23-C; ENNP; AE, DB; AS, GE, SP; -
+Token economies: Soares et al. (2016) - 28 SCD; 90-S; ENNP; AE, DB; GE, SP; PK-
+Video modeling: Baker et al. (2009) - 16 GD/SCD; 26-G, 67-S; ENNP; AE, DB; AS, GE, SP; K-
+Video modeling: Losinski et al. (2016) - 14 SCD; 45-S; 100%; -; AS, GE, SP; K-
+Video modeling: Seok et al. (2018) - 8 SCD; 44; 80%; AE, DB; GE, SP; K-
+
+Note: DV = dependent variable; EBD = emotional and behavioral disorder; SCD = single-case design; S = number of participants in single-case studies; ENNP = exact numbers not provided; AE = academic engagement; DB = disruptive behavior; PK = pre-kindergarten; GD = group design; C = number of classes; GE = general education; SP = special education setting; K = kindergarten; CICO = check-in/check-out; G = number of participants in group design studies; AS = alternative settings; SRSD = self-regulated strategy development; OTR = opportunities to respond.
+
+TABLE 2. Evaluation of Evidence-Based Practices.
+
+[Table includes: Intervention, Authors, MA, ES reported, ES strength, Evidence-based]
+
+CICO: Klingbeil et al. (2019) - MA: Yes (WWC); ES: No; -; Evidence-based: Yes
+CICO: Maggin et al. (2015) - MA: Yes (WWC); ES: Yes; Moderate; Evidence-based: Yes
+CICO: Wolfe et al. (2016) - MA: Yes (quality indicators); ES: Yes; Moderate; Evidence-based: Yes
+FABI: Gage et al. (2012) - MA: Yes (quality indicators); ES: Yes; Moderate; Evidence-based: Yes
+Group contingency: Maggin et al. (2012) - MA: Yes (WWC); ES: Yes; Moderate; Evidence-based: Yes
+Group contingency: Maggin, Pustejovsky, et al. (2017) - MA: Yes (WWC); ES: Yes; Large; Evidence-based: Yes
+Peer-mediated: Dunn et al. (2017) - MA: Yes (CEC); ES: Yes; Large; Evidence-based: Yes
+Self-management: Busacca et al. (2015) - MA: Yes (WWC); ES: Yes; Large; Evidence-based: Yes
+Self-management: Maggin et al. (2013) - MA: Yes (WWC); ES: Yes; Moderate; Evidence-based: Yes
+SRSD for writing: Ennis and Jolivette (2014) - MA: Yes (quality indicators); ES: Yes; Moderate; Evidence-based: Yes
+Token economy: Soares et al. (2016) - MA: Yes (quality indicators); ES: Yes; Large; Evidence-based: Yes
+Video modeling: Seok et al. (2018) - MA: Yes (CEC); ES: No; -; Evidence-based: Yes
+
+Cohen's kappa: k = .96, k = .96, k = .85, k = 1
+
+RESULTS
+
+Results of the systematic review process revealed 50 eligible reviews of 20 separate practices, of which eight were identified by at least one review team as evidence-based. The EBPs represent a range of instructional and management supports that include classroom-specific strategies such as group contingencies and those requiring planning and coordination outside of the classroom, such as CICO and FABI. While there appears to be support for some strategies, the review revealed variable results within particular practices and low prevalence of students with EBD represented across reviews. Moreover, we found a range of methods for evaluating the methodological quality and indexing the magnitude of effect for those reviews, including SCRD.
+
+Evidence Base
+
+Interventions were deemed evidence-based if the authors of the included reviews assessed designated the interventions as such. Out of the 20 identified interventions we identified in the included reviews, only eight interventions (40%) met the criteria to be classified as an EBP by at least one of the authors of the included reviews. CICO was identified by two research teams (Maggin et al., 2015; Wolfe et al., 2016) as an EBP. Gage and colleagues (2012) identified FABI as an EBP. Group contingencies have also been classified as EBPs via two research teams (Maggin et al., 2012, Maggin, Pustejovsky, et al., 2017). Peer-mediated interventions (Dunn et al., 2017) and self-management (Busacca et al., 2015; Maggin et al., 2013) are both considered EBPs. Ennis and Jolivette (2014) identified SRSD as an EBP when focusing on writing skills but also included dependent variables in their review (e.g., engaged time, on-task behavior, and problem behavior). Soares et al. (2016) classified token economies as an EBP. Finally, Seok et al. (2018) reviewed video modeling and identified the practice as evidence-based. The remaining 12 practices (60%) did not have sufficient evidence to be classified as evidence-based.
+
+Effect Size
+
+We recorded the effect size metric and the reported effect size from each paper where the authors reported them. Effect sizes were reported in 32 (64%) reviews, with the remaining 18 reviews (36%) either providing narrative reviews or applying quality indicators to determine if the studies included in their reviews met methodological rigor. Reported effect sizes were percentage of nonoverlapping data (n = 14), Tau-U (n = 12), standardized mean difference (n = 8), improved rate difference (n = 4), Cohen's d (n = 6), percentage of all nonoverlapping data (n = 1), and log response ratio (n = 1). Although a range of effect sizes were reported, the characterizations generally supported moderate (n = 21) or large (n = 8), with the remaining indicating a small effect (n = 3).
+
+DISCUSSION
+
+The purpose of this review was twofold: (a) describe the state and quality of evidence-based reviews and meta-analyses of articles of classroom and behavior management interventions for students with EBD and (b) summarize those practices that can be deemed evidence-based to inform both research and practice on recommended strategies and areas for future research. We systematically reviewed the articles to determine characteristics of the student participants sampled, if a methodological assessment was used to assess rigor of the included studies, and the strength of results based on reported statistical analyses. Results of the systematic review process revealed 50 eligible reviews of 20 separate practices, of which eight were identified by at least one review team as evidence-based.
+
+Evidence-Based Practices
+
+Results of our review revealed eight practices as having enough empirical support to warrant classification as evidence-based. As noted, the breadth of practices encompasses interventions designed for specific classrooms and more intensive approaches requiring coordination and planning across several school personnel. Notably, those interventions deemed low-intensity strategies such as praise, OTR, and behavioral contracting lacked or had mixed empirical support to warrant classification as evidence-based due to the number of participants not meeting the threshold for the studies to be part of the process. Currently, the research on these interventions requires continued rigorous experimental evaluations and more consistent and stronger effects to meet the threshold for an EBP. It is important to note the results of the articles suggest these interventions as promising strategies, and teacher use remains acceptable and recommended. We categorized the following interventions as promising (which include those with mixed results) because the results from the primary reviews indicate varying levels of effectiveness. Those interventions include praise, OTR, behavior contracting, cooperative learning, goal setting, good behavior game, high probability requests, instructional choice, self-determination, social skills, and time-out. Given the differences in the contexts associated with the EBPs, school personnel must consider the purpose, procedures, and targets of each intervention when considering its implementation.
+
+Prevalence of Students With EBD
+
+The present review identified a range of practices for teachers and other school personnel to select from when implementing behavioral interventions. However, approximately one quarter of the students included in the reviews were identified as having EBD. These numbers are higher than prevalence estimates, indicating approximately 20% of the student population has at least a mild EBD (Forness et al., 2012). For instance, Bruhn et al. (2014) found the experimental research on goal setting interventions included three students with EBD, with most studies focused on students determined to be at risk for EBD. Because students with EBD likely require intensification of practices, there appears a need to increase the research with students identified with these disorders to determine which practices are most effective in supporting their educational needs.
+
+Method for Evaluating Rigor and Index Effect
+
+Results of this review identified eight practices with sufficient empirical support to warrant classification as evidence-based. It is notable, however, the support for various practices varied across the reviews. For instance, there were discrepancies between the review author's evidence determinations for CICO, FABI, peer-mediated interventions, self-management, token economies, and video modeling. The varied evaluations for these practices are likely due to a range of reasons, including the search procedures used, the method used to evaluate the rigor of studies, and differences in inclusion and exclusion criteria (Talbott et al., 2018). In addition, recent research has highlighted the differences in evidence evaluations based on the rubric used to assess methodological rigor (Maggin, Pustejovsky, et al., 2017). Consistent with previous research, the review authors employed myriad rubrics, protocols, and checklists to evaluate the rigor of studies. Although evaluating methodological rigor is critical for determining if a particular strategy or practice is evidence-based, the use of such broad method raises questions about the validity of the recommendations. Researchers suggest the variation in criteria and scoring procedures across frameworks might contribute to different conclusions and practice recommendations (Zimmerman et al., 2018). As such, there is a need for continued conceptual and empirical efforts to determine those criteria and procedures needed to make accurate determinations about the quality of evidence. Moreover, review authors should consider research questions and the intent of their research when selecting a rubric to support the collection of methodological information. Making connections between the selection of a particular evaluation rubric and the purpose of the review would assist readers to better interpret review findings.
+
+As with the method used to evaluate methodological quality, the research reviews included in this article used a range of effect size metrics to represent the magnitude of effect. Consistent with previously reported findings for SCRD (Vannest et al., 2018), most of the authors used overlap metrics to index intervention effects, with the percentage of non-overlapping data (PND) and Tau-U method being the most commonly reported. Similar to coding methodological rigor, increased standardization in the method used would assist researchers and practitioners to more readily interpret reviews.
+
+Implications for Practitioners
+
+The results of the current review provide support for a variety of classroom management strategies for students with EBD. Importantly, the strategies identified represent methods across a continuum of intensity, with those easily incorporated into a variety of routines, including OTR and praise, and methods for students requiring more intensive supports such as functional assessment strategies. Given the intensive academic and behavioral challenges associated with students with EBD (Mitchell et al., 2019), school personnel must consider the purpose and procedures of each strategy to most effectively support students with intensive behavioral challenges. For instance, praise represents a low-intensity strategy useful for reinforcing discrete, well-specified classroom expectations (Zaheer et al., 2019), whereas CICO represents a multistep contingency management intervention applied throughout the school day (Maggin et al., 2015). The breadth of evidence-based management options requires practitioners to weigh the most appropriate applications of each to ensure a comprehensive, multifaceted, and, ultimately, more effective approach. That is, school personnel must not conflate a determination of a practice as evidence-based as addressing similar outcomes but rather must consider the conditions under which the intervention is expected to work. Most likely, an effective approach to classroom management for students with EBD would draw on procedures across the intensity continuum and implemented in tandem to support the full range of behavioral challenges exhibited.
+
+Limitations and Future Direction
+
+Results of this mega-review should be interpreted with caution due to the following limitations. First, several articles included in our findings had a low prevalence of students identified as having an EBD. One factor for the low prevalence of students with EBD in the primary articles is the overall low prevalence of students identified as having EBD under federal guidelines. We suggest researchers conducting future reviews include a broader search to identify more studies with students identified with EBD to better represent outcomes for this population. Second, reviews were coded on a number of variables, but variability in reporting of study characteristics (e.g., gender, race/ethnicity) limited additional analyses. We encourage greater transparency in reporting for future systematic reviews and meta-analyses.
+
+SOURCE: Studocu (public upload from Binghamton University coursework)
+DOI: 10.1177/07419325211047947
+URL: https://www.studocu.com/en-us/document/binghamton-university/issues-in-education/evidence-based-behavior-management-strategies-for-students-with-ebd/120645120

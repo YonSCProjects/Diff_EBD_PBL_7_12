@@ -1,0 +1,89 @@
+ARTICLE: Design and Evaluation of a Socially Assistive Robot Schoolwork Companion for College Students with ADHD
+
+AUTHORS:
+- Amy O'Connell, University of Southern California, Los Angeles, USA (ao71627@usc.edu)
+- Ashveen Banga, University of Southern California, Los Angeles, USA
+- Jennifer Ayissi, University of Southern California, Los Angeles, USA
+- Nikki Yaminrafie, University of Southern California, Los Angeles, USA
+- Ellen Ko, University of Southern California, Los Angeles, USA
+- Andrew Le, University of Southern California, Los Angeles, USA
+- Bailey Cislowski, University of Southern California, Los Angeles, USA
+- Maja Matarić, University of Southern California, Los Angeles, USA
+
+YEAR: 2024
+LICENSE: CC BY-NC-SA 4.0
+arXiv: 2401.06289v1 [cs.RO] 11 Jan 2024
+SOURCE: https://arxiv.org/html/2401.06289v1
+KEYWORDS: socially assistive robotics, ADHD, body doubling
+
+---
+
+ABSTRACT:
+College students with ADHD respond positively to simple socially assistive robots (SARs) that monitor attention and provide non-verbal feedback, but studies have been done only in brief in-lab sessions. We present an initial design and evaluation of an in-dorm SAR study companion for college students with ADHD. This work represents the introductory stages of an ongoing user-centered, participatory design process. In a three-week within-subjects user study, university students (N=11) with self-reported symptoms of adult ADHD had a SAR study companion in their dorm room for two weeks and a computer-based system for one week. Toward developing SARs for long-term, in-dorm use, we focus on 1) evaluating the usability and desire for SAR study companions by college students with ADHD, and 2) collecting participant feedback about the SAR design and functionality. Participants responded positively to the robot; after one week of regular use, 91% (10 of 11) chose to continue using the robot voluntarily in the second week.
+
+---
+
+1. INTRODUCTION
+
+College is challenging for all students, but especially for students with Attention Deficit Hyperactivity Disorder (ADHD). Students with ADHD experience more difficulty adjusting to college and lower performance than their peers without ADHD, evidenced by lower GPAs and graduation rates (Blase et al., 2009). This work seeks to develop an in-dorm SAR study companion that performs idle motions to passively support college students with ADHD during schoolwork tasks. Through a three-week, within-subjects study, we evaluated schoolwork habits in a sample (N=11) of college students with clinically significant symptoms of ADHD who had a socially assistive robot study companion placed in their dorm rooms. The three study conditions involved a fixed study time requirement (250 min) without a robot, the same amount with a robot, and optional no minimum study time with a robot.
+
+91% of participants used the system at least once in the third condition when not required to do so, indicating that in-dorm SAR study companions are viable tools for a subset of students with ADHD. The system had an average score of 83.86 on the System Usability Scale (SUS) (Bangor et al., 2008), and there was a strong correlation between participants' SUS scores and the amount of time they studied with the robot beyond the required amount.
+
+---
+
+2. RELATED WORK
+
+2.1. Procrastination and Executive Functions in College Students with ADHD
+
+Studies of undergraduate students with ADHD show a positive correlation between ADHD symptoms of inattention and general procrastination (Niermann and Scheres, 2014), mediated by executive functions (EFs) (Bolden and Fillauer, 2020). EFs are a set of cognitive processes involved in taking self-directed actions that contribute to self-regulation; they include planning, emotional and motivational regulation, goal-directed actions, and inhibition (Barkley, 2012). College students with ADHD self-report procrastination and related difficulties, such as delaying getting started on tasks and doing unrelated activities, as well as anxiety in response to procrastination (Gray et al., 2016).
+
+One strategy to support students with ADHD may involve using the presence of others to accomplish tasks, referred to by the neurodivergent (ND) community as "body doubling." Despite receiving extensive media attention, body doubling has appeared in only a few peer-reviewed publications (Ogrodnik et al., 2023; Eagle et al., 2023). In a recent study, Eagle et al. (2023) investigated how ND individuals define and use body doubling and proposed it as a way for assistive technology to support task completion/initiation for ND individuals. They collected survey responses from 220 participants (139 identified as having ADHD) to form a community-sourced definition of body doubling: "having someone in the room (n = 127) or on a call/chat (n = 27) in order to accomplish a task (n = 65) or be productive (n = 38). The second person may be doing a different task (n = 65) or a similar one (n = 13), and it is a form of accountability (n = 23) and helps you stay on task (n = 21)" (Eagle et al., 2023).
+
+2.2. Social Facilitation and Inhibition
+
+Improved performance resulting from the presence of other individuals relates to the theory of social facilitation. This theory, first described by Triplett (1898), then Allport (1924), suggests that people perform better on low-complexity tasks when the task is performed alongside another person but perform worse on high-complexity tasks under the same condition (social inhibition). Zajonc later proposed the drive theory of social facilitation, stating that the mere presence of another person brings about enhanced drive and elicits dominant responses (Zajonc, 1965).
+
+Riether et al. (2012) conducted a study measuring participant performance on simple and complex tasks in the presence of a human, an anthropomorphic robot, and alone, and found that participants performed significantly better with a robot than alone. There was no significant difference in performance between the robot and human conditions.
+
+2.3. Designing for Users with ADHD
+
+The methodology is informed by the recommendations of Spiel, Williams, Hornecker, and Good (2022) on user-centered and participatory design for populations with ADHD: (1) involving four researchers (50%) that identify as part of the intended user population, and (2) testing a low-fidelity version of the interaction among a sample of college students with ADHD symptoms to get comprehensive feedback.
+
+2.4. Technologies for Students with ADHD
+
+Fewer studies have explored the applications of SARs for students with ADHD. Berrezueta-Guzman et al. (2021) created Atent@, a Robotic Assistant (RA), and a smart home environment that utilized data from two IoT devices (chair and desk) to support children with ADHD in their homework activities. Zuckerman et al. (2016) designed Kip3, a social robotic device that employs a tablet-based Continuous Performance Test (CPT) to assess inattention and impulsivity in college students with ADHD.
+
+---
+
+3. METHODS
+
+3.1. Research Questions
+
+RQ1: Will college students with ADHD find a SAR useful as a study companion, as measured by quantitative surveys and voluntary use?
+RQ2: What features of the system will students with ADHD like and dislike during study sessions? How would students like the robot to behave, and how common are those preferences among students?
+RQ3: What features could be added to make the robot study companion more useful to students with ADHD?
+
+3.2. SAR Study Companion System
+
+The Blossom open-source 3D-printed robotics research platform (Suguitan and Hoffman, 2019) was used. The entire system consisted of a Blossom robot, a tabletop tripod and webcam, and a Raspberry Pi 4 computer connected to a 7-inch touch screen display. A simple user interface allowed the participant to start, pause, continue, and end schoolwork sessions.
+
+3.3. Interaction Design
+
+During an active schoolwork session, the touch screen displays a 25-minute timer (consistent with the Pomodoro technique commonly used by students with ADHD). The robot performed idle motions (gaze shift, posture sway, sigh) to maintain a lifelike and friendly presence during sessions.
+
+3.4. In-Dorm User Study
+
+Study Design — Three-week within-subjects:
+- Condition A: 250 min minimum schoolwork with no robot
+- Condition B: Minimum 50 min/day (5 days) with robot, webcam active
+- Condition C: No minimum sessions, optional webcam cover
+
+Participants: N=12 recruited; 11 completed. Ages 18–25 (M=21, SD=2.31). 6 Female, 5 Male. 7 Asian, 1 African-American, 2 Hispanic Latino, 1 undisclosed. 7 Bachelor's, 4 Master's.
+
+Inclusion criteria: enrolled university student, 18+, normal or corrected vision/hearing, English proficient, private workspace, ASRS score ≥4.
+
+---
+
+[Note: Full results, discussion, and conclusion sections available at https://arxiv.org/html/2401.06289v1]
+
+Retrieved: Full text from arXiv preprint 2401.06289v1 (open access).

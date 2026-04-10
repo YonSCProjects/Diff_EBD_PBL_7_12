@@ -1,0 +1,33 @@
+ARTICLE: Education Technology for Students with ADHD in Secondary School: Preliminary Results of a Single-Case Study
+
+AUTHORS: Ivan Traina (corresponding author)
+EDITORS: K. Mavrou; P. Encarnação
+
+BOOK TITLE: Technology for Inclusion and Participation for All: Recent Achievements and Future Directions. AAATE 2025.
+PUBLISHER: Springer, Cham
+PRINT ISBN: 978-3-032-01631-7
+ONLINE ISBN: 978-3-032-01632-4
+DOI: https://doi.org/10.1007/978-3-032-01632-4_27
+COPYRIGHT: © 2025 The Author(s), under exclusive license to Springer Nature Switzerland AG
+eBOOK PACKAGES: Biomedical and Life Sciences (R0); Springer Nature Proceedings excluding Computer Science
+
+FULL CITATION:
+Traina, I. (2025). Education Technology for Students with ADHD in Secondary School: Preliminary Results of a Single-Case Study. In: Mavrou, K., Encarnação, P. (eds) Technology for Inclusion and Participation for All: Recent Achievements and Future Directions. AAATE 2025. Springer, Cham. https://doi.org/10.1007/978-3-032-01632-4_27
+
+ABSTRACT:
+This paper presents preliminary findings from a single-case study investigating inclusive learning through an education technology addressed to students with Attention Deficit and Hyperactivity Disorder (ADHD) enrolled in secondary schools. The study's objective was to explore the potential of technology to mitigate challenging behaviors and enhance attention, collaboration, and self-control among students with ADHD. Furthermore, the study concentrated on the impact of learning coding through the education platform, encompassing the development of positive social and relational skills. The methodology employed is grounded in naturalistic observations and qualitative data analysis. While the data collection process continues, certain intriguing outcomes emerged from interactions with teachers and students involved, suggesting potential future research directions on the application of education technology to students with ADHD.
+
+METHODOLOGY: Naturalistic observations and qualitative data analysis (single-case study)
+
+NOTES:
+- Study objective: explore potential of technology to mitigate challenging behaviors and enhance attention, collaboration, and self-control in ADHD students
+- Focused on impact of learning coding through an education platform
+- Encompasses development of positive social and relational skills
+- Data from questionnaires will be analyzed at conclusion of intervention
+- Conference proceedings chapter from AAATE 2025 conference
+- Note: The task listed year as "2024" but the DOI and copyright confirm publication year is 2025
+
+SOURCE: Springer DOI page
+Retrieved from: https://doi.org/10.1007/978-3-032-01632-4_27
+
+NOTE: Full text is paywalled (Springer). This record contains the complete abstract and bibliographic metadata. Full text available via institutional subscription or purchase.

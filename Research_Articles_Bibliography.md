@@ -75,8 +75,8 @@
     - DOI: https://link.springer.com/article/10.1007/s10209-023-01065-z
     - Scoping review of 33 studies. LEGO Mindstorms kits (WeDo, NXT, EV3) were the most-used robots (13 studies). Only 2 robots were specifically developed for children with special needs; the rest are off-the-shelf.
 
-18. **"Study of Divergent Thinking and Task Performance in Children with ADHD Through a Modular Robotic Task." (2025).** *Australasian Journal of Special and Inclusive Education* (Taylor & Francis).
-    - DOI: https://www.tandfonline.com/doi/full/10.1080/19404158.2025.2567849
+18. **Kuzmina, O., & Romero, M. (2025).** "Study of Divergent Thinking and Task Performance in Children with ADHD Through a Modular Robotic Task." *Australian Journal of Learning Difficulties* (Taylor & Francis).
+    - DOI: https://doi.org/10.1080/19404158.2025.2567849
     - Children with ADHD (aged 9-14) using the CreaCube modular robotic task showed distinct exploratory patterns; demonstrates potential of robotics-based tasks for creative problem-solving in ADHD.
 
 19. **"Education Technology for Students with ADHD in Secondary School: Preliminary Results of a Single-Case Study." (~2024).** *Springer.*
@@ -120,15 +120,15 @@
     - DOI: https://journals.sagepub.com/doi/10.1177/07419325241265973
     - Executive function degrades rapidly when perceived stress exceeds threshold, leading to behavioral dysregulation. This is capacity failure, not willful misbehavior. Independence capacity fluctuates with daily stress state.
 
-29. **"Efficacy of Non-Pharmacological Interventions on Executive Functions in Children and Adolescents with ADHD: A Systematic Review and Meta-Analysis." (2023).** *Psychiatry Research* (Elsevier).
-    - DOI: https://www.sciencedirect.com/science/article/pii/S1876201823002484
+29. **Qiu, H., Liang, X., Wang, P., Zhang, H., & Shum, D.H.K. (2023).** "Efficacy of Non-Pharmacological Interventions on Executive Functions in Children and Adolescents with ADHD: A Systematic Review and Meta-Analysis." *Asian Journal of Psychiatry*, 87, 103692.
+    - DOI: https://doi.org/10.1016/j.ajp.2023.103692
     - Significant moderate-to-large effects on overall executive functions; physical exercise, cognitive training, and EF-specific curricula were particularly beneficial.
 
-30. **"The Efficacy of Visual Activity Schedule Intervention in Reducing Problem Behaviors in Children with ADHD Between the Age of 5 and 12 Years: A Systematic Review." (2022).** *PubMed.*
-    - Link: https://pubmed.ncbi.nlm.nih.gov/35035237/
+30. **Thomas, N., & Karuppali, S. (2022).** "The Efficacy of Visual Activity Schedule Intervention in Reducing Problem Behaviors in Children with Attention-Deficit/Hyperactivity Disorder Between the Age of 5 and 12 Years: A Systematic Review." *Journal of the Korean Academy of Child and Adolescent Psychiatry*, 33(1), 2–15.
+    - DOI: https://doi.org/10.5765/jkacap.210021
     - Visual timers associated with significant reductions in inattentive and motor instability behaviors. Effects pronounced for children at higher risk for ADHD.
 
-31. **"Scaffolding Executive Function Processes for Students." (2017).** *Journal of Emotional and Behavioral Disorders.* ERIC: EJ1168865.
+31. **Rosen, S.M., Boyle, J.R., Cariss, K., & Forchelli, G.A. (2014).** "Changing How We Think, Changing How We Learn: Scaffolding Executive Function Processes for Students With Learning Disabilities." *Learning Disabilities: A Multidisciplinary Journal*, 20(4), 165–176. ERIC: EJ1168865.
     - PDF: https://files.eric.ed.gov/fulltext/EJ1168865.pdf
     - Strategic note-taking intervention served as scaffold opening new pathways for struggling students to access executive functions and flexibly deploy cognitive strategies.
 
@@ -144,12 +144,12 @@
     - DOI: https://journals.sagepub.com/doi/abs/10.1177/0731948718768512
     - When EBD/LD students chose *how* they received instruction (not just what), engagement and task completion improved. Choice itself reduced problem behavior by transferring ownership.
 
-34. **Ziernwald, L., Hillmayr, D., & Holzberger, D. (2022).** "Promoting High-Achieving Students Through Differentiated Instruction in Mixed-Ability Classrooms — A Systematic Review." *Journal for the Education of the Gifted* (SAGE).
-    - DOI: https://journals.sagepub.com/doi/10.1177/1932202X221112931
+34. **Ziernwald, L., Hillmayr, D., & Holzberger, D. (2022).** "Promoting High-Achieving Students Through Differentiated Instruction in Mixed-Ability Classrooms — A Systematic Review." *Journal of Advanced Academics* (SAGE).
+    - DOI: https://doi.org/10.1177/1932202X221112931
     - DI in mixed-ability secondary classrooms along readiness, interest, and profile axes.
 
-35. **"Australian Teachers and School Leaders' Use of Differentiated Learning Experiences as Responsive Teaching for Students with ADHD." (2023).** *ResearchGate.*
-    - Link: https://www.researchgate.net/publication/369490306
+35. **Gibbs, K. (2023).** "Australian teachers and school leaders' use of differentiated learning experiences as responsive teaching for students with ADHD." *Emotional and Behavioural Difficulties*, 28(1), 18–31 (Taylor & Francis).
+    - DOI: https://doi.org/10.1080/13632752.2023.2194131
     - Implications for teacher competency in autonomy-supportive differentiation for ADHD students.
 
 ---
@@ -208,8 +208,8 @@
     - DOI: https://journals.sagepub.com/doi/10.1177/10870547211050948
     - ADHD research needs to include internal motives as mediators; warns of negative effects when external reinforcers undermine intrinsic motivation.
 
-47. **Smith, Z.R. & Langberg, J.M. (2020).** "Academic Motivation Deficits in Adolescents with ADHD and Associations with Academic Functioning." *Research on Child and Adolescent Psychopathology* (Springer).
-    - DOI: https://link.springer.com/article/10.1007/s10802-019-00601-x
+47. **Smith, Z.R., Langberg, J.M., Cusick, C.N., Green, C.D., & Becker, S.P. (2020).** "Academic Motivation Deficits in Adolescents with ADHD and Associations with Academic Functioning." *Journal of Abnormal Child Psychology* (Springer). (Journal was renamed *Research on Child and Adolescent Psychopathology* in 2021.)
+    - DOI: https://doi.org/10.1007/s10802-019-00601-x
     - Adolescents with ADHD showed significant motivational deficits across intrinsic motivation (d=0.49), extrinsic motivation (d=0.43), and amotivation (d=0.42). Higher intrinsic motivation predicted higher reading scores.
 
 48. **"Academic Motivation Decreases Across Adolescence for Youth With and Without ADHD: Effects of Motivation on Academic Success." Smith et al. (2023).** *Journal of Child Psychology and Psychiatry* (Wiley).
@@ -224,12 +224,12 @@
     - DOI: https://journals.sagepub.com/doi/abs/10.1177/1048371317708326
     - Practical overview of ODD characteristics and classroom strategies for educators.
 
-50. **Kaur, M., Floyd, A., & Balta, A.-M. (2022).** "Oppositional Defiant Disorder: Evidence-Based Review of Behavioral Treatment Programs." *Current Psychiatry* (SAGE).
-    - DOI: https://journals.sagepub.com/doi/10.12788/acp.0056
+50. **Kaur, M., Floyd, A., & Balta, A.-M. (2022).** "Oppositional Defiant Disorder: Evidence-Based Review of Behavioral Treatment Programs." *Annals of Clinical Psychiatry*.
+    - DOI: https://doi.org/10.12788/acp.0056
     - Abundant evidence supporting behavioral treatment programs for ODD and disruptive behavior disorders.
 
-51. **"A Review of Evidence-Based Practices to Support Students with Oppositional Defiant Disorder in Classroom Settings." (2022).** *ResearchGate.*
-    - Link: https://www.researchgate.net/publication/362875719
+51. **Barker, C., & de Lugt, J. (2022).** "A Review of Evidence-Based Practices to Support Students with Oppositional Defiant Disorder in Classroom Settings." *International Journal of Special Education*, 37(1), 85–98.
+    - Link: https://internationalsped.com/ijse/article/view/47
     - Environmental modifications and differentiated learning effective for ODD remediation.
 
 ---
@@ -356,8 +356,8 @@
 
 ## Q. SCHOOL CLIMATE & TEACHER FACTORS
 
-75. **Gage, N.A., Kramer, D.A., & Ellis, K. (2021).** "High School Students With EBD: Perceptions of School Climate." *Journal of Emotional and Behavioral Disorders* (SAGE).
-    - DOI: https://journals.sagepub.com/doi/10.1177/1044207320934800
+75. **Gage, N.A., Kramer II, D.A., & Ellis, K. (2021).** "High School Students With Emotional and Behavioral Disorders Perceptions of School Climate." *Journal of Disability Policy Studies* (SAGE).
+    - DOI: https://doi.org/10.1177/1044207320934800
     - How EBD students perceive school climate — important for understanding motivation and relational context.
 
 76. **Gilmour, A.F., Sandilos, L.E., Pilny, W.V., Schwartz, S., & Wehby, J.H. (2022).** "Teaching Students With Emotional/Behavioral Disorders: Teachers' Burnout Profiles and Classroom Management." *Journal of Emotional and Behavioral Disorders* (SAGE).

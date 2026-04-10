@@ -1,0 +1,111 @@
+ARTICLE: Understanding and responding to the effects of trauma in the classroom: A primer for educators
+AUTHORS: Jessica B. Koslouski, Kristabel Stark, Sandra M. Chafouleas
+JOURNAL: Social and Emotional Learning: Research, Practice, and Policy
+YEAR: 2023
+VOLUME: 1
+ARTICLE NUMBER: 100004
+DOI: https://doi.org/10.1016/j.sel.2023.100004
+PII: S2773233923000049
+LICENSE: CC-BY-NC-ND (Open Access)
+ACCESS STATUS: Abstract + substantial content retrieved; full HTML/PDF blocked by ScienceDirect robots policy despite open access license. No preprint/repository version found.
+
+SOURCE URLS:
+- DOAJ: https://doaj.org/article/1bde79b275a94282a245f95d6d1123a4
+- ScienceDirect (blocked): https://www.sciencedirect.com/science/article/pii/S2773233923000049
+- OpenAlex: https://openalex.org/W4386228128
+- Author page (Koslouski): https://education.uconn.edu/person/jessica-koslouski/
+- CSCH summary/Q&A: https://csch.uconn.edu/wp-content/uploads/sites/2206/2023/12/Tips-for-Addressing-Trauma-and-Learning-January-2024.pdf
+
+==========================================================================
+ABSTRACT
+==========================================================================
+
+Although nearly half of U.S. students have experienced a potentially traumatic event (Bethell et al., 2017), educators are not routinely trained in trauma or trauma-informed practices (Hobbs et al., 2019; Koslouski & Stark, 2021; National Council of State Education Associations, 2019). Yet, trauma can have profound negative impacts on students' social, emotional, and behavioral needs. Thus, this primer introduces educators to the prevalence of trauma in PreK-12 students' lives, the effects of trauma on students' development, and proactive and responsive strategies that adults can use to support students who have experienced trauma. We provide several vignettes to help educators understand varied presentations of trauma and the range of trauma-informed practices that can benefit students. We also address educators' relationships with caregivers and describe strategies for mitigating the toll secondary traumatic stress (Figley, 1995) can take on educators. Throughout, we aim to build educators' understanding, empathy, and agency for their work supporting students affected by trauma.
+
+==========================================================================
+KEYWORDS
+==========================================================================
+Trauma-informed education; PreK-12; Secondary traumatic stress; Trauma-informed practices; Educator training; Compassion fatigue
+
+==========================================================================
+AUTHOR AFFILIATIONS
+==========================================================================
+- Jessica B. Koslouski: University of Connecticut, Storrs, CT, United States (corresponding author)
+  ORCID: https://orcid.org/0000-0002-7728-2515
+- Kristabel Stark: University of Maryland, College Park, United States
+  ORCID: https://orcid.org/0000-0002-4975-3826
+- Sandra M. Chafouleas: University of Connecticut, Storrs, CT, United States
+  ORCID: https://orcid.org/0000-0001-7166-1365
+
+==========================================================================
+ARTICLE OVERVIEW AND KEY CONTENT (from CSCH Q&A and related sources)
+==========================================================================
+
+The article was described by the authors themselves in a Q&A published by the UConn Center for School and Child Health (CSCH):
+
+PURPOSE AND MOTIVATION:
+- Authors Jessica Koslouski, Sandra Chafouleas (CSCH, UConn), and Kristabel Stark (University of Vermont) wrote the article to help educators learn about the effects of trauma in the classroom.
+- The article is intended as an accessible resource that builds educators' understanding of trauma's effects on students' learning and behavior.
+
+KEY THEMES AND CONTENT:
+
+1. PREVALENCE OF TRAUMA:
+- Nearly half of US students have experienced a potentially traumatic event.
+- Although not all students will experience trauma as a result, those who do may have substantial challenges with learning and behavior.
+- There are many evidence-based strategies to support students exposed to trauma.
+
+2. VIGNETTES:
+- The paper includes five vignettes based on compilations of students the authors have worked with.
+- These vignettes illustrate various student trauma responses in the classroom.
+- Ranging from stunned silence to violence and aggression, the vignettes illustrate student behavior (what we see) and how trauma (what we may not see) is linked to that behavior.
+
+3. STRATEGIES FOR EDUCATORS:
+- The paper shares many strategies that address key challenges for students who have experienced trauma.
+- Focus is on ongoing, incremental shifts to strengthen practice.
+- Educators are invited to recognize strategies they are already using.
+
+4. SECONDARY TRAUMATIC STRESS:
+- The paper also shares strategies for educators to reduce potential for secondary traumatic stress.
+- This work is described as crucial to remaining healthy and effective when working with students who have experienced trauma.
+
+5. EDUCATOR EMPOWERMENT:
+- Authors aim to validate educators for their hard work.
+- Goal is for educators to gain a deeper understanding of student behaviors they are seeing.
+- Educators should feel empowered to incorporate new trauma-informed strategies into their practice.
+
+6. CAREGIVER RELATIONSHIPS:
+- The primer addresses educators' relationships with caregivers.
+- Describes strategies for managing those relationships in the context of trauma.
+
+==========================================================================
+ARTICLE CONTEXT (from citing papers and search summaries)
+==========================================================================
+
+From Boston University trauma-informed guide (sites.bu.edu):
+"Koslouski and their colleagues (2023) describe the effects trauma has on children in classroom settings and provide strategies for teachers to respond to trauma response in children. In their article, they provide the context that nearly half of the students have experienced traumatic events and that educators are not yet equipped to provide trauma-informed practices. They discuss how trauma can have extremely negative impacts on children's social, emotional, behavioral, and learning needs, and that it disrupts the brain's development in areas of executive functioning. They discuss chronic trauma leading to trauma responses making the brain go into 'survival mode' – fight, flight, or freeze response. They also make the argument that trauma-informed care is beneficial for all students regardless of trauma history. Koslouski (2023) drives the importance of having a 'toolkit' of strategies to foster behavioral [support]."
+
+From Wyoming NGA Literature Review:
+Abstract: "Although nearly half of U.S. students have experienced a potentially traumatic event (Bethell et al., 2017), educators are not routinely trained in trauma or trauma-informed practices (Hobbs et al., 2019; Koslouski & Stark, 2021; National Council of State Education Associations, 2019). Yet, trauma can have profound negative impacts on students' social, emotional, and behavioral needs. Thus, this primer introduces educators to the prevalence of trauma in PreK-12 student's lives, the effects of trauma on student's development, and proactive and responsive strategies that adults can use to support students who have experienced trauma. We provide several vignettes to help educators understand varied presentations of trauma and the range of trauma-informed practices that can benefit students. We also address educator's relationships with caregivers and describe strategies for mitigating the toll secondary traumatic stress (Figley, 1995) can take on educators. Throughout, we aim to build educators' understanding, empathy, and agency for their work supporting students affected by trauma."
+
+==========================================================================
+CITATION METRICS (OpenAlex, as of 2026)
+==========================================================================
+- Total citations: 26 (as of March 2026)
+- Citation percentile: 96-100th percentile for its year
+- FWCI (Field-Weighted Citation Impact): 8.28 (significantly above field average)
+- By year: 2023: 3 citations; 2024: 7 citations; 2025: 14 citations; 2026: 2 citations
+
+==========================================================================
+RELATED WORK BY SAME AUTHORS (for context)
+==========================================================================
+
+Koslouski, J. B. & Stark, K. (2021). Promoting learning for students experiencing adversity and trauma: The everyday, yet profound, actions of teachers. The Elementary School Journal, 121(3), 430-453. https://doi.org/10.1086/712606
+
+Koslouski, J. B. & Chafouleas, S. M. (2022). Key considerations in delivering trauma-informed professional learning for educators. Frontiers in Education, 7:853020. https://doi.org/10.3389/feduc.2022.853020
+
+Koslouski, J. B. (2022). Developing empathy and support for students with the "most challenging behaviors:" Mixed-methods outcomes of professional development in trauma-informed teaching practices. Frontiers in Education, 7:1005887. https://doi.org/10.3389/feduc.2022.1005887
+
+==========================================================================
+NOTE ON ACCESS
+==========================================================================
+This article is published open access (CC-BY-NC-ND) in Social and Emotional Learning: Research, Practice, and Policy (Elsevier/DOAJ). The full text HTML and PDF are hosted exclusively on ScienceDirect. Despite the open access license, ScienceDirect's robots.txt disallows automated access, preventing direct retrieval of the complete article body. No preprint, accepted manuscript, or institutional repository version was found in Europe PMC, PubMed Central, OpenCommons UConn, or other repositories. The content above represents the complete abstract and all substantive information retrievable from authorized secondary sources.

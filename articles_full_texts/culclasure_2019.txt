@@ -1,0 +1,2667 @@
+Interdisciplinary Journal of Problem-Based Learning
+Volume 13
+Issue 2 Unpacking the Role of Assessment in
+Problem- and Project-Based Learning
+
+Article 5
+
+Published online: 8-30-2019
+
+Project-Based Learning (Pjbl) in Three Southeastern Public
+Schools: Academic, Behavioral, and Social-Emotional Outcomes
+Brooke T. Culclasure
+Furman University, brooke.culclasure@furman.edu
+
+Kyle C. Longest
+Furman University, kyle.longest@furman.edu
+
+Troy M. Terry
+Furman University, troy.terry@ung.edu
+
+IJPBL is Published in Open Access Format through the Generous Support of the Teaching
+Academy at Purdue University, the School of Education at Indiana University, and the Jeannine
+Rainbolt College of Education at the University of Oklahoma.
+Recommended Citation
+Culclasure, B. T. , Longest, K. C. , & Terry, T. M. (2019). Project-Based Learning (Pjbl) in Three Southeastern
+Public Schools: Academic, Behavioral, and Social-Emotional Outcomes. Interdisciplinary Journal of
+Problem-Based Learning, 13(2).
+Available at: https://doi.org/10.7771/1541-5015.1842
+
+This document has been made available through Purdue e-Pubs, a service of the Purdue University Libraries.
+Please contact epubs@purdue.edu for additional information.
+This is an Open Access journal. This means that it uses a funding model that does not charge readers or their
+institutions for access. Readers may freely read, download, copy, distribute, print, search, or link to the full texts of
+articles. This journal is covered under the CC BY-NC-ND license.
+
+The Interdisciplinary Journal of
+
+Problem-based Learning
+SPECIAL ISSUE: UNPACKING THE ROLE OF ASSESSMENT
+IN PROBLEM- AND PROJECT-BASED LEARNING
+
+Project-Based Learning (Pjbl) in Three
+Southeastern Public Schools:
+Academic, Behavioral, and Social-Emotional Outcomes
+Brooke T. Culclasure, Kyle C. Longest, and Troy M. Terry (Furman University)
+
+ABSTRACT
+Project-based learning (PjBL) as a PK–12 instructional model is growing nationwide. PjBL is seen as a mechanism to deliver
+academic content in a more engaging way for students and in a way that stresses the development of skills critical to success
+in the 21st-century workforce. Because of its increasing popularity and the disparate breadth of research around the model,
+a study of PjBL in three southeastern public schools was conducted during academic years 2015–2016 and 2016–2017. This
+study attempted to better understand how PjBL was implemented in schools and to explore the impact of PjBL on schools,
+teachers, and students. Data collection included classroom observations, educator surveys, student surveys, and an analysis
+of academic and behavioral outcomes and a subset of social-emotional skills. Findings did not reveal consistent significant differences in the performances of PjBL and non-PjBL demographically matched students on academic and behavioral
+outcomes. PjBL students did, however, perform better on inventories of social-emotional skills. In addition, while PjBL
+implementation challenges are apparent, perceptions of students and educators of the impact and possibilities of PjBL are
+quite positive.
+Keywords: project-based learning, academic outcomes, behavioral outcomes, social-emotional outcomes, deeper learning skills
+
+Introduction and Literature Review
+Defining PjBL
+Clearly defining what constitutes PjBL is difficult (Condliffe,
+2017; Thomas, 2000). Most recently, the Buck Institute for
+Education has devised what it calls “Gold Standard PjBL”
+that defines PjBL by student learning goals, essential project design elements, and PjBL teaching practices. It stresses
+that PjBL should develop key knowledge and understanding
+of academic curricula in students while cultivating career
+readiness skills. Project designs must: be centered around a
+challenging problem or question; require sustained inquiry
+that lasts beyond a few days; be authentic with real-world
+
+engagement; allow students some degree of autonomy and
+encourage student voice and choice; include formal reflection pieces; involve critique and revision with feedback from
+peers, real-world actors, and teachers; and conclude with a
+public product, whether that be a tangible model or presentation on possible solutions or answers to the problem or
+question, with the audience including invested community
+members (Larmer & Mergendoller, 2015). Other researchers
+also have proposed key design principles necessary for PjBL,
+with some focusing on the application of PjBL in certain
+subject areas (Darling-Hammond et al., 2008; Grant, 2002;
+Krajcik & Shin, 2014; Parker et al., 2013; Parker et al., 2011;
+Ravitz, 2010; Thomas, 2000).
+
+September 2019 | Volume 13 | Issue 2
+http://dx.doi.org/10.7771/1541-5015.1842
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+PjBL and Student Outcomes
+Various studies have investigated the ways in which PjBL can
+influence student performance in specific curriculum areas.
+Summers and Dickinson (2012) conducted a study to compare the social studies and college and career readiness success rates of high school students in a PjBL technology high
+school and a traditional high school. This four-year longitudinal study found that PjBI students scored higher on social
+studies standardized tests and had higher levels of promotion to the next grade level than did traditional students.
+Mergendoller, Maxwell, and Bellisimo (2006) compared the
+effectiveness of PjBL and traditional instructional approaches
+in developing high school students’ macroeconomics knowledge in the context of their verbal ability, interest in economics, preference for group work, and problem-solving
+efficacy. Results showed that PjBL increased students’ macroeconomic competencies compared to traditional methods. Furthermore, the study found that students with low to
+midrange verbal abilities learned more in PjBL classes than
+they did in lecture or discussion classes. Additionally, PjBL
+students with high motivation to learn macroeconomics
+learned more than similarly motivated students in traditional
+classrooms. Another study examined the impact of PjBL
+on the ability of high achieving high schoolers in Israel to
+design and implement solutions for technology-based problems. The experimental group included 60 high-achieving
+students involved in PjBL and the control group was comprised of 60 similar students from technology high schools.
+Pre- and post-tests showed a faster rate of improvement in
+technological knowledge for students engaged in PjBL compared to those in traditional classes. Other results showed
+positive changes in attitude toward technology and higher
+levels of performance in design skills among PjBL students
+(Mioduser & Betzer, 2007).
+PjBL is also thought to develop students’ cognitive and
+affective skills while being a way to equalize student outcomes. Alacapinar (2008) used qualitative and quantitative
+analysis, including a video-recorded semistructured interview, to study PjBL students in comparison to a control group
+of students. Results indicated that PjBL students had a higher
+cognitive domain and reported that PjBL enriched their creativity while enhancing their ability to collaborate in trusting relationships with peers. Another study found benefits of
+PjBL in urban public school STEM instruction. Geier et al.
+(2008) followed approximately 5,000 students in two cohorts
+of seventh and eighth graders in the Detroit Public Schools.
+PjBL students showed significantly higher pass rates on the
+state standardized science test as well as increases in their
+science content understanding and process skills compared
+to nonmatched control group peers. These gains remained
+2 | www.ijpbl.org (ISSN 1541-5015)
+
+Pjbl in Three Southeastern Public Schools
+up to a year and a half after students’ participation in PjBL.
+Higher levels of participation in the project-based curriculum also were associated with higher achievement scores.
+Additionally, Kanter and Konstantopoulos (2010) found
+that PjBL science curriculum improved science achievement
+among minority students, although not improving their
+personal attitudes and future interests in science. Research
+also has looked to PjBL as a way to help ESL students gain
+proficient English abilities while building knowledge and
+language skills in the content areas (Eslami & Garver, 2013).
+Other studies also have pointed to the benefits of PjBL on
+students with disabilities (Parsi, 2017). This research provides
+evidence for the argument that PjBL may equalize opportunities and outcomes for disadvantaged students, especially in
+areas where they have previously been underrepresented.
+PjBL Models
+The New Tech Network (NTN) Design is a model that uses
+PjBL as its primary pedagogical approach. A small number
+of past studies have investigated the efficacy of the NTN
+design. A 2013 case study of one NTN school suggested that
+the application of PjBL created an instructional environment
+that positively impacted student learning, relationships, and
+technology use and appeared to improve student self-efficacy
+(Lynch et al., 2013). Academic achievement and college and
+career readiness outcomes also were analyzed as a part of a
+federal Investment in Innovation project evaluation between
+2015 and 2017. The study concluded, in its last year with the
+largest number of students included, that NTN ninth graders outperformed demographically similar control students
+on end-of-course mathematics and English Language Arts
+(ELA) assessments and that, while there were null findings
+on some outcomes, NTN 11th graders outperformed control students on ACT composite scores and on workforce
+skills outcomes measured by ACT WorkKeys (Culclasure,
+Odell, & Stocks, 2017). Further, a mixed-methods study
+conducted by the American Institutes for Research (2014)
+analyzed the aggregate outcomes of 10 schools implementing deeper learning practices, one of which was an NTN
+school implementing PjBL. The study concluded that, compared to similar students in non–deeper learning schools,
+treatment students scored higher on all three reading, mathematics, and science PISA assessments; scored higher on the
+state ELA and mathematics tests; reported higher levels of
+interpersonal and intrapersonal competencies, such as collaboration, academic engagement, motivation to learn, and
+self-efficacy; and were more likely to graduate from high
+school on time, enroll in four-year postsecondary institutions, and enroll in selective institutions (Huberman, Bitter,
+Anthony, & O’Day, 2014). More recently, the 2018 internal
+NTN Report on School and Student Success reported a 94%
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+high school graduation rate among students in NTN schools
+with an 83% persistence rate in college of NTN graduates at
+two- and four-year institutions.
+Gaps in Research
+The variances within the literature review evidences specific outcomes of PjBL in some key content areas and with
+some specific subsets of students. it also describes a common
+definition of PjBL and its successful implementation across
+the literature. However, the research does not provide any
+study that seeks to examine pedagogy and learning outcomes
+across the entire K–12 academic spectrum by observing an
+elementary, middle, and high school using the same tools,
+methods, and surveys independent of one content area or
+area of emphasis. The following study attempts to articulate
+such a methodological approach.
+
+Study Design, Research Questions,
+and Conceptual Framework
+This two-year study took place in three southeastern United
+States public schools—one elementary school, one middle
+school, and one high school. Enrollment for the elementary school was 645 students with 48% being female and
+52% being male. Approximately 6% were black or African
+American, 83% were Caucasian, and 2% were Hispanic or
+Latino. Its poverty index was 66%. Enrollment for the middle school was 860 students with 48% being female and
+52% being male. Approximately 56% were black or African
+American, 36% were Caucasian, and 4% were Hispanic or
+Latino. Its poverty index was 58%. Enrollment for the high
+school was 857 with 50% being female and 50% being male.
+Approximately 41% were black or African American, 48%
+were Caucasian, and 8% were Hispanic or Latino. Its poverty
+index was 67%.
+Data collection was multifaceted and included an analysis
+of student academic and behavioral outcomes, such as standardized test scores and number of discipline incidents, and
+a subset of social-emotional outcomes, such as development
+of communication and collaboration skills, as well as classroom observations and surveys to explore PjBL implementation and perception of impact.
+Researchers sought to answer the following questions
+during this study:
+1. To what extent are three public schools in the southeastern United States implementing PjBL with fidelity
+to PjBL best practices and pedagogy as defined in the
+literature?
+
+3 | www.ijpbl.org (ISSN 1541-5015)
+
+Pjbl in Three Southeastern Public Schools
+2. How do students learning in three PjBL public schools
+in the southeastern United States perform on assessments of a subset of social-emotional outcomes? How
+do the performances of these students differ from that
+of a normed sample?
+3. To what extent do demographically similar students
+learning in three PjBL public schools in the southeastern United States differ from students learning in traditional settings on academic and behavioral outcomes?
+4. What are educator and student perceptions in three
+public schools in the southeastern United States of the
+impact of PjBL?
+In order to conceptualize PjBL and how the current study
+is measuring the expected outcomes of PjBL implementation, see Figure 1 for the project logic model. The assumptions at the top of the logic model frame the expected overall
+outcome of implementation of PjBL with fidelity. The inputs
+sections on the left side of the logic model define the critical components of PjBL, as described in the literature, along
+with the inputs measurement tools used in the current study.
+The third and fourth blocks define the key social-emotional
+outcomes expected with implementation of PjBL and the
+measurement tools used in the current study. The fourth
+block displays the student performance or academic outcomes expected with the implementation of PjBL, and the
+block to the far right describes the overall impact of implementation of PjBL with fidelity.
+
+Methods and Results
+Because methods of data collection and analysis were varied
+for each of these research questions, they are addressed separately in the section that follows.
+
+Research Question One: Implementation Fidelity
+Methods. Participating schools’ fidelity to the PjBL model
+was measured by results from randomly selected classroom
+observations and by teacher and student survey findings.
+Observations were conducted in 12 classrooms—four at the
+elementary school level, four at the middle school level, and
+four at the high school level. PjBL content area experts across
+the state served as classroom observers after in-depth training on the instrument and protocol. The instrument utilized
+during classroom observations was written by researchers
+and PjBL experts using the most recent research, and also was
+used in a PjBL state certification program to train educators
+on authentic PjBL implementation. Prior to use in this study,
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Assumptions
+Project-Based Learning [PjBL] is an educational practice that, if implemented with fidelity to best
+practices and with in-depth training and ongoing professional development, leads to better development
+of the knowledge, skills and characteristics necessary for students to improve academic performance,
+ensure success in college and the workplace, and foster life-long learning
+Inputs
+Principal Trained in PjBL
+Practices and Delivery
+
+Teachers Trained in PjBL
+Practices and Delivery
+
+Inputs:
+Measurement
+Tools
+
+Principal
+Implementation
+Surveys
+
+Skills and
+Characteristics
+Measurable Outcomes
+
+Skills and
+Characteristics
+Measurement Tools
+
+Increased Development
+of Creativity and
+Innovation
+
+Multiple Student
+Groupings Used During
+Class Activities
+
+Increased Development
+of Critical Thinking
+and Problem
+Solving Skills
+Classroom
+Observations
+
+Increased Development
+of Collaboration
+and Teamwork
+
+Teachers
+Working in Teams
+Fully Developed RealWorld Projects Aligned
+With State Standards
+
+Improved
+Performance on
+DESSA Assessment
+
+Increased Student
+Proficiency Levels on
+Standardized Tests
+
+Teacher Surveys
+
+A learning environment that leads
+to better development of the skills
+and characteristics necessary
+for students to
+improve academic
+performance, help
+ensure success
+in college and
+the workplace,
+and foster lifelong learning
+
+Increased Development
+of Self-Direction
+
+Involved Community
+Partners (Project
+Development, Project
+Presentations)
+Permeation of PjBl
+Practices Across All
+Learning Platforms
+
+Overall
+Impact of PjBL
+
+Increased Student
+Measure of
+Academic Progress
+(MAP) Test Gains
+
+PjBL-Related Materials
+in Classrooms
+Classroom Arrangement
+Conducive to MultiArrangements
+and Groupings
+
+Student
+Performance
+Measurable
+
+Student Survey
+
+School/Classroom
+Equipped with
+Integrative Technology
+
+Increased Development
+of Interpersonal Skills
+
+Decreased Student
+Disciplinary
+Referrals, In-School
+Suspension Rates,
+and Out-of-School
+Suspension Rates
+
+Figure 1. Logic model for the project-based learning study.
+
+4 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+the observation instrument was piloted and calibrated, and
+interrater reliability was established. The observation instrument included a five-item checklist based on the observer’s
+initial impression of the classroom environment, as well as a
+formal rubric of performance criteria based on six key PjBL
+strategies including: authentic inquiry; academic rigor of
+content standards; applied learning and collaborative problem-solving; exploring the need to know; connecting to an
+audience; and authentic assessment that includes reflection
+and revision. Once classroom observations were conducted,
+results were scored in a way that provided individual scores
+
+School 1
+School 2
+School 3
+Avg Score
+
+Teachers
+Facilitating
+Not Lecturing
+88%
+100%
+85%
+91%
+
+Multiple
+Student
+Groupings
+100%
+88%
+90%
+93%
+
+for the observer’s “first impression” and for the observed performance criteria. These two scores were then combined to
+form a total score for each classroom observed. Please see
+Appendix A for the classroom-level observation instrument
+and protocol utilized by researchers to assess PjBL implementation fidelity.
+Results. After analyzing data from classroom observations, researchers concluded that two of the schools were
+at mid- to high-range PjBL implementation and one was at
+low- to mid-level of implementation. Table 1 and Table 2 display a breakdown of results.
+
+PjBL-Related
+Materials
+Evident
+100%
+100%
+67%
+89%
+
+Environment
+Functionally
+Suited to PjBL
+100%
+100%
+95%
+98%
+
+Students
+Engaged
+
+Total Score
+
+100%
+100%
+80%
+93%
+
+98%
+98%
+84%
+
+*Percentages above were derived from the ratio of points earned (meets expectations = 5; approaches expectations = 2.5; does not meet
+expectations = 0)/possible total points.
+
+Table 1. PjBL “first impression” checklist scores by level and item.
+
+Planning for Authentic Academic
+Applied
+StandardsInquiry
+Rigor of Learning and
+Based PjBL
+Standards Collaborative
+Instruction
+ProblemSolving
+School 1
+75%
+88%
+100%
+75%
+School 2
+88%
+88%
+100%
+100%
+School 3
+67%
+82%
+87%
+85%
+Avg Score
+77%
+86%
+96%
+87%
+
+Exploring Connecting
+the Need
+to an
+to Know
+Audience
+100%
+100%
+86%
+96%
+
+88%
+75%
+66%
+81%
+
+Authentic
+Assessment
+Includes
+Reflection
+and Revision
+88%
+75%
+80%
+81%
+
+Total
+Score
+
+88%
+89%
+79%
+
+*Percentages above were derived from the ratio of points earned (meets expectations = 5; approaches expectations = 2.5; does not meet
+expectations = 0)/possible total points.
+
+Table 2. PjBL observation rubric scores by level and performance criteria.
+
+5 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+While there was variation among schools, particularly
+in school 3, Tables 1 and 2 show that the most challenging
+aspects of authentic implementation for the three schools in
+aggregate was planning for standards-based PjBL instruction
+and authentic assessment of student work. Alternatively, the
+academic rigor of the standards and exploring the need to
+know scored particularly high in aggregate.
+While implementation findings show that the three study
+schools were making varying but steady progress implementing authentic PjBl in academic year 2015–2016, there
+were several stumbling blocks in academic year 2016–2017
+that resulted in two of the schools ceasing implementation
+by the end of the academic year. Informal interviews subsequently conducted with school principals revealed that the
+main reasons for ceasing implementation included the pressure associated with testing, the minimal amount of district
+support provided for PjBl implementation, and the lack of
+full understanding of the PjBL model and the complexities
+of implementation.
+
+Research Question Two: Social-Emotional Outcomes
+Methods. In order to measure social-emotional outcomes,
+teachers who were randomly selected for classroom observation also were asked to complete the Deveraux Student
+Strengths Assessment (DESSA) on each of their students
+at the end of the academic year. The DESSA is a validated,
+online teacher inventory that measures eight social-emotional competencies identified in research as essential to
+a child’s success in school and life: self-awareness; social
+awareness; self-management; relationships skills; goaldirected behavior; personal responsibility; decision-making;
+and optimistic thinking (LeBuffe, Shapiro, & Naglieri, 2009).
+The DESSA includes 72 items and is a standardized, normreferenced behavior rating scale that assesses the socialemotional competencies that serve as protective factors
+for children in kindergarten through the eighth grade. The
+standardization sample used to make this comparison consisted of children who are representative of the U.S. population with respect to gender, race, Hispanic ethnicity, region
+of residence, and poverty status. Please see Appendix B for
+technical information about the DESSA. Due to implementation issues described above, data on social-emotional outcomes was only collected during academic year 2015–2016.
+Additionally, the DESSA only was administered to elementary and middle school students since it is not validated for
+use with high school students. The total number of students
+assessed at all grade levels was 181.
+Results. In terms of scoring, a high T-score (60 and
+above) on a competency indicates that this competency
+is a “strength” for that student. A T-score between 41 and
+6 | www.ijpbl.org (ISSN 1541-5015)
+
+Pjbl in Three Southeastern Public Schools
+59 is described as being “typical” for a student of that age.
+Low T-scores (40 and below) mean that students are lacking in that particular competency. Each T-score is a standard
+score set to have a mean of 50 and standard deviation of 10
+(LeBuffe et al., 2009). Percentile scores, which also are provided, compare the child’s behavior to that of other children
+that age who have been rated using the DESSA.
+The combined social-emotional composite score (average of all eight competencies measured) of students rated in
+this study is 52 of 60 possible points, with a percentile score
+of 56%. Raw scores are converted to percentile scores using
+the appropriate norms tables. Percentile scores compare the
+child’s behavior to that of other children who have been rated
+using the DESSA. The percentile score indicates the percentage of children in the standardization sample who earned the
+same or lower raw score.
+Thus, when compared to other similar aged children
+across the country rated using the DESSA, the majority of
+students at participating elementary and middle schools
+scored higher that other students nationwide. Figure 2 displays the breakdown for the study sample.
+The DESSA also breaks out scores by competency. Table 3
+displays a breakdown of scores by competency, followed by
+a description of the competencies and how students in the
+study fared on each competency.
+Personal Responsibility. Personal responsibility is the
+tendency to be careful and reliable in one’s actions and in
+contributing to group efforts. At PjBL elementary and
+middle schools in the study, 30% of the students who were
+assessed received a “strength” rating for this competency;
+52% received a “typical” rating. The average educator score
+for this competency was 52. From the standardization sample, 55% earned the same or lower score.
+Optimistic Thinking. Optimistic thinking is a child’s
+attitude of confidence, hopefulness, and positive thinking
+regarding herself/himself and her/his life situations in the
+past, present, and future. At Oakland Elementary, 30% of the
+students who were assessed received a “strength” rating for
+this competency; 52% received a “typical” rating. The average
+educator score for this competency was 53. From the standardization sample, 54% earned the same or lower score.
+Goal-Directed Behavior. Goal-directed behavior is
+defined as a child’s initiation of, and persistence in completing, tasks of varying difficulty. At Oakland Elementary, 28%
+of the students who were assessed received a “strength” rating for this competency; 48% received a “typical” rating. The
+average educator score for this competency was 50. From the
+standardization sample, 50% earned the same or lower score.
+Social Awareness. Defined as the capacity to interact
+with others in a way that shows respect for their ideas and
+behaviors, social awareness recognizes one’s impact on them,
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Need
+18%
+
+Strength
+29%
+
+Typical
+53%
+
+Optimistic
+Thinking
+
+Goal Directed
+Behavior
+
+Social
+Awareness
+
+Decision-Making
+
+Relationship
+Skills
+
+Self-Awareness
+
+SelfManagement
+
+Social-Emotional
+Composite
+
+Average
+Educator T-Score
+Percentile Score
+Students With
+“Strength” Ratings
+Students With
+“Typical” Ratings
+Students With
+“Need” Ratings
+
+Personal
+Responsibility
+
+Figure 2. PjBL student’s DESSA overall scores summary.
+
+52
+
+52
+
+50
+
+54
+
+53
+
+53
+
+52
+
+53
+
+52
+
+55%
+
+54%
+
+50%
+
+59%
+
+57%
+
+58%
+
+56%
+
+58%
+
+56%
+
+29%
+
+30%
+
+28%
+
+41%
+
+33%
+
+35%
+
+28%
+
+32%
+
+29%
+
+52%
+
+52%
+
+48%
+
+39%
+
+54%
+
+48%
+
+59%
+
+51%
+
+53%
+
+19%
+
+18%
+
+25%
+
+20%
+
+13%
+
+18%
+
+13%
+
+17%
+
+18%
+
+Table 3. DESSA competencies scores summary.
+
+7 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+and uses cooperation and tolerance in social situations. At
+selected PjBL elementary and middle schools, 41% of the
+students who were assessed received a “strength” rating for
+this competency; 39% received a “typical” rating. The average
+educator score for this competency was 54. From the standardization sample, 59% earned the same or lower score.
+Decision-Making. Decision-making is a child’s approach
+to problem solving that involves learning from others and
+from her/his own previous experiences, using her/his values to guide her/his action, and accepting responsibility for
+her/his decisions. At selected PjBL elementary and middle
+schools, 33% of the students who were assessed received
+a “strength” rating for this competency; 46% received a
+“typical” rating. The average educator score for this competency was 53. From the standardization sample, 57% earned
+the same or lower score.
+Relationship Skills. Relationship skills measure a child’s
+consistent performance of socially acceptable actions that
+promote and maintain positive connections with others. At
+Oakland Elementary, 67% of the students who were assessed
+received a “strength” rating for this competency; 48%
+received a “typical” rating. The average educator score for
+this competency was 53. From the standardization sample,
+58% earned the same or lower score.
+Self-Awareness. Self-awareness is a child’s realistic understanding of her/his strengths and limitations and consistent
+desire for self-improvement. At selected PjBL elementary
+and middle schools, 28% of the students who were assessed
+received a “strength” rating on this competency; 59% received
+a “typical” rating. The average educator score for this competency was 52. From the standardization sample, 56% earned
+the same or lower score.
+Self-Management. Self-management measures success in
+controlling emotions and behaviors and in completing a task
+or succeeding in a new or challenging situation. At Oakland
+Elementary, 32% of the students who were assessed received a
+“strength” rating for this competency; 50% received a typical
+
+PjBL Students
+ELA PASS Scores
+Mathematics PASS Scores
+
+1616.328
+1614.683
+
+rating. The average educator score for this competency was
+53. From the standardization sample, 58% earned the same
+or lower score.
+Each DESSA T-score is a standard score set to have a mean
+of 50 and standard deviation of 10. Like the percentile scores,
+T-scores are based on the ratings received by the children in
+the standardization sample. In contrast to percentile scores,
+however, DESSA T-scores have the same meaning throughout their range. Educators provided the highest T-score
+ratings for social awareness and the lowest ratings for goaldirected behavior.
+
+Research Question Three:
+Academic and Behavioral Outcomes
+Methods. Academic and behavioral outcomes were assessed
+by analyzing and comparing English Language Arts (ELA)
+and mathematics state standardized test scores, along with
+out-of-school suspension (OSS), in-school suspension (ISS),
+and behavioral referral numbers for grades three through
+eight. Researchers requested and received these data from
+the state department of education, which houses these data in
+the state’s PowerSchool database. For mathematics, ELA, and
+the behavioral outcomes, researchers conducted an exactmatched, case-control sample. This “exact matching” procedure is widely used by statisticians in studies such as this one
+(Iacus, King, & Porro, 2011, 2012). The 1,421 eligible PjBL
+students were matched to a non-PjBL student on the basis
+of grade, poverty indicator, race, special education indicator,
+English as a second language indicator, and gender. The control cases were selected at random among eligible matches.
+Therefore, researchers examined the percentage of students
+in each category across and within schools during the observation window. Because of the implementation issues in
+two of the three schools during 2016–2017, this academic
+year was excluded from academic and behavioral outcomes
+
+Control NonPjBL Students
+1616.728
+1617.59
+
+Difference
+-.399
+-2.907
+
+p < .05; p < .01; p < .001
+
+Table 4. Unconditional differences in academic outcomes.
+
+8 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+analyses. After the matching procedure was completed, average ELA scores, mathematics scores, and behavioral reports
+were calculated for each group. The statistical significance
+between these averages was tested using an independent
+samples t-test in Stata 15. The differences were also tested
+using ordinary least squares regression with a robust estimator to adjust for unobserved similarities at the school level
+(Rogers, 1983).
+Results. Researchers found no statistically significant
+differences in ELA and mathematics state standardized test
+scores for PjBL students as compared to demographically
+matched non-PjBL students. The average ELA score for PjBL
+students was 1,616 (SD = 174), while for non-PjBL students
+it was 1,617 (SD = 174). Similarly, the average mathematics score for PjBL students was 1,615 (SD = 170) and 1,617
+(SD = 171) for non-PjBL students. Neither of these differences were statistically significant at p < .05. Table 4 displays
+a breakdown of academic outcomes.
+There was, however, a significant PjBL advantage (a
+greater number) with OSS and referral numbers, but a disadvantage (a smaller number) with ISS numbers when comparing similar PjBL and non-PjBL students. Students in PjBL
+schools had significantly greater in-school suspensions but
+significantly fewer out-of-school suspensions. Specifically,
+PjBL students averaged .686 (SD = 1.711) in-school suspensions per year, compared to non-PjBL students who averaged
+only .398 (SD = 1.267) such suspensions per year. For out-ofschool suspensions, PjBL students averaged .170 (SD = .646)
+per year, compared to non-PjBL students who averaged .267
+(SD = 1.030) per year. PjBL students had significantly lower
+discipline incident reports, averaging .996 (SD = 2.271) per
+year compared to non-PjBL students’ average of 1.224 (SD
+= 3.318). While all of these differences do achieve statistical
+significance at the p < .05 level, the magnitude of these differences is very small, all being less than 1 suspension or report.
+Note that the overall averages on these behavioral issues is
+relatively low, so even such minor differences could be meaningful. Table 5 displays a breakdown of behavioral outcomes.
+
+Number of In-School
+Suspension
+Number of Out-of-School
+Suspensions
+Discipline Incident Reports
+
+Research Question Four:
+Student and Educator Perceptions
+Methods. Perceptions of the impact of PjBL were evaluated using an anonymous online survey distributed to both
+educators and students. Nearly 100 educators responded
+to the educator survey, yielding a response rate of 63%. Of
+these, 26 were elementary school teachers, 38 were middle
+school teachers, and 34 were high school teachers. For students, in elementary school, an anonymous student survey
+was administered to third and fourth graders; in middle
+school, it was administered to students in grades six, seven,
+and eight; and in high school it was administered to ninth
+and tenth graders. Over 850 students responded to the survey. Of these, 210 were elementary school students, 586 were
+middle school students, and 81 were high school students.
+See Appendix C for the student survey instrument and
+Appendix D for the teacher survey instrument.
+Results. The majority of students had a positive opinion
+of PjBl; they reported that they had more of a say in their
+learning when participating in PjBl and that they learned
+more when participating in PjBl compared to non-PjBl. In
+general, most students enjoyed PjBl and felt excited about
+participating in PjBl in the classroom. Additionally, most students reported that participating in PjBl helped them respect
+people who have different opinions and work through conflict in a peaceful way. They also reported feeling comfortable presenting their work in front of other people, having
+the ability to manage their time, setting realistic goals for
+themselves, and learning important problem-solving skills
+because of their participation in PjBl. Most students reported
+that their teachers were using PjBl as the primary teaching
+method most or all of the time and were being taught using
+PjBL for two years or more. PjBL was reported as being most
+widely used by science teachers, and most infrequently used
+by foreign language teachers. Figure 3 provides a snapshot of
+student perceptions of PjBL.
+
+PjBL Students
+
+Control Non-PjBL Students
+
+Difference
+
+.686
+
+.352
+
+.334***
+
+.170
+
+.251
+
+-.081**
+
+.996
+
+1.185
+
+.189*
+
+*p < .05; **p < .01; ***p < .001
+
+Table 5. Unconditional differences in behavioral outcomes.
+9 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+84%
+
+Pjbl in Three Southeastern Public Schools
+
+81%
+71%
+
+68%
+
+21%
+10%
+
+11%
+
+6%
+
+Helps me learn
+more in school
+
+17%
+
+11%
+
+9%
+
+Helps me show
+Helps me feel excited
+what I have learned
+about learning
+Agree
+
+Disagree
+
+I don’t know
+
+12%
+
+Helps me feel like
+I have a say in
+my learning
+
+Figure 3. Student perceptions of PjBL’s effectiveness on learning.
+
+56%
+51%
+
+24%
+
+49%
+
+27%
+
+24%
+
+50%
+
+49%
+
+27%
+
+27%
+
+21%
+
+27%
+
+24%
+20%
+
+16%
+
+1%
+
+0% 0%
+
+Apply/use
+information
+
+0%
+
+Work in groups
+Much better
+
+Better
+
+3%
+
+0%
+
+3%
+
+0% 0%
+
+Communicate
+with others
+
+Express creativity
+while learning
+
+No different
+
+Worse
+
+0%
+
+Think deeply
+and critically
+
+Much worse
+
+Figure 4. Educator perceptions of the influence of PjBL on student
+development when compared to other pedagogical approaches.
+
+10 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+51%
+
+Pjbl in Three Southeastern Public Schools
+
+49%
+44%
+
+41%
+34%
+
+32%
+27%
+
+32%
+25%
+
+24%
+
+24%
+
+15%
+
+1% 0%
+
+Student
+achievement
+
+0% 0%
+
+Student
+participation
+Much better
+
+Better
+
+0% 0%
+
+Student enthusiasm
+for course material
+No different
+
+Worse
+
+0% 0%
+
+Student
+motivation
+Much worse
+
+Figure 5. Educator perceptions of the influence of PjBL on student
+engagement when compared to other pedagogical approaches.
+
+Similarly, most teachers had a positive opinion of PjBL
+and the majority were in favor of using PjBL in the classroom
+and/or school-wide implementation. Many teachers agreed
+to some extent that PjBL made them a more effective teacher
+and that student achievement, participation, and application
+of information were better with PjBL than other instructional methods they had tried. Teachers generally reported
+that participating in PjBL helped their students learn skills
+and characteristics, such as collaboration and teamwork,
+critical thinking and problem solving, creativity and innovation, self-direction, and interpersonal skills. Figures 4 and 5
+provide a snapshot of educator perceptions of PjBL.
+Regarding training, most teachers reported that they were
+trained by their schools in PjBL and felt prepared to deliver
+it to their students. The majority of teachers reported that
+their school had a well-articulated vision for PjBL and that
+their principals were very supportive of the PjBL approach.
+Teachers reported that lack of time, competing state priorities, and completing district priorities were the three biggest
+barriers to effective PjBL implementation.
+
+Discussion
+An analysis of academic and behavioral outcomes during
+2015–2016, when all schools were implementing, did not
+reveal consistent significant differences in the performances
+of PjBL and non-PjBL matched students. This finding differs
+from the findings of many prior studies of PjBL academic
+outcomes. In this study PjBL students did, however, perform
+11 | www.ijpbl.org (ISSN 1541-5015)
+
+better on inventories of social-emotional skills that same
+academic year than students in the normed sample. In addition, perceptions of students and educators of the impact and
+possibilities of PjBL were quite positive, while some challenges to implementation were identified. Regarding the null
+finding around academic and behavioral outcomes, it could
+be that as schools move into deeper and more sophisticated
+PjBL implementation, differences in these outcomes may
+become apparent. Or, possibly, it could take more time for
+strategies such as PjBL to begin to show dividends in student test scores, as has been seen with the New Tech model,
+while more immediate results are seen for social-emotional
+measures. It also could be that this state’s standardized tests
+do not measure as well the constructs that are most benefited by PjBL. Furthermore, because of the implementation
+challenges with the study schools, measurement of academic
+and behavioral outcomes only took place during one academic year, which does not allow measurement of growth
+or multiple points of measurement. Measurement over time
+is needed and during consistent periods of implementation
+that, ideally, are in the high implementation phase.
+
+Limitations of the Study
+Like any evaluation of this kind, this study was not without
+its limitations. The biggest limitation was that only one year
+of data collection could be used for academic, behavioral,
+and social-emotional outcomes measurement, since implementation issues in year two of the study essentially ceased
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+PjBL implementation at two of the three study schools. The
+second year of the study, consequently, was used to explore
+the issues and challenges at the root of what made PjBL
+implementation so challenging for the schools and difficult
+to sustain, which proved to be valuable data for schools, districts, and other educators looking to implement PjBL.
+Another limitation of the study was that the academic and
+behavioral outcomes analysis was not a randomized controlled trial (RCT), the gold standard for research studies of
+model efficacy, as it was impossible to randomly assign students to the PjBL treatment. Thus, the research team used
+what it thought was the second-best method, a quasi-experimental design that matched treatment and comparison samples in order to ensure baseline equivalence. Even though the
+design did not utilize the RCT design, the research team calculated baseline equivalence before the study commenced to
+help ensure apples-to-apples comparisons of students.
+Another limitation of this study related to the DESSA,
+which was used to measure social-emotional outcomes.
+While the DESSA is a validated instrument and widely used
+to measure the social-emotional outcomes of interest in this
+study, it is a teacher inventory, which comes with challenges
+in terms of subjectivity and interrater reliability. A last notable limitation of this study was that the student and educator
+surveys used were not validated instruments or administered
+to a comparison group of students or educators. Thus, only
+perceptions of the impact of PjBL could be reported.
+
+Suggestions for Future Research
+While quality studies exist, there are few studies of PjBL
+implementation and efficacy when considering the number
+of students learning in PjBL classrooms and the popularity
+of project-based learning. Because of this, there is a need
+for more measurement in order to establish a solid research
+base and to provide valuable information about implementation. In addition, because the model is so focused on socialemotional and workforce outcomes, researchers need to find
+more ways to undertake this type of measurement. It is hard
+and many times expensive to do right, but it is critical given
+the skills and dispositions required of a 21st-century high
+school graduate. Future studies need to test ways to measure
+these types of outcomes and integrate findings into schools
+in useful ways. Lastly, this study highlights the challenges
+and difficulties of PjBL implementation and of sustaining
+PjBL implementation in schools. Future studies need to delve
+more into the challenges and opportunities of PjBL implementation so that school ripe for PjBL can be properly identified, adequate preparation can be made to ensure a smooth
+transition to PjBL, potential issues can be anticipated, and
+pitfalls can be avoided, thus ensuring more successful and
+sustainable implementation.
+12 | www.ijpbl.org (ISSN 1541-5015)
+
+Pjbl in Three Southeastern Public Schools
+
+References
+Alacapinar, F. (2008). Effectiveness of project-based learning. Eurasian Journal of Educational Research, (33), 17–34.
+Bracken, B. A. (1987). Limitations of preschool instruments
+and standards for minimal levels of technical adequacy.
+Journal of Psychoeducational Assessment, 5, 313–326.
+Condliffe, B. (2017). Project-based learning: A literature
+review. Working Paper. MDRC.
+Culclasure, B., Odell, M., & Stocks, E. (2017). New Tech Network interim evaluation report: Project years 2013–14,
+2014–15, and 2015–16 i3 and expanded evaluation samples. Greenville, SC: Furman University.
+Darling-Hammond, L., Barron, B., Pearson, P. D., Schoenfeld, A., Stage, E., Zimmerman, T., . . . Chen, M. (2008).
+Powerful learning: What we know about teaching for
+understanding. San Francisco, CA: Jossey-Bass.
+Eslami, Z., & Garver, R. (2013). English language learners
+and project-based learning. In R. M. Capraro, M. M. Capraro, & J. R. Morgan (Eds.), STEM project-based learning:
+An integrated science, technology, engineering, and mathematics (STEM) approach (pp. 119–128). Rotterdam: Sense
+Publishers.
+Geier, R., Blumenfeld, P. C., Marx, R. W., Krajcik, J. S.,
+Fishman, B., Soloway, E., & Clay-Chambers, J. (2008).
+Standardized test outcomes for students engaged in
+inquiry-based science curricula in the context of urban
+reform. Journal of Research in Science Teaching, 45(8),
+922–939.
+Grant, M. M. (2002). Getting a grip on project-based learning: Theory, cases, and recommendations. Journal of
+Research on Technology in Education, 65–98.
+Huberman, M., Bitter, C., Anthony, J., & O’Day, J. (2014).
+The shape of deeper learning: Strategies, structures, and cultures in deeper learning network high schools. Report for
+the American Institutes for Research (AIR): The Research
+Alliance for New York City Schools. New York, NY.
+Iacus, S. M., King, G., & Porro, G. (2011). Multivariate matching methods that are monotonic imbalance
+bounding. Journal of the American Statistical Association, 106(493), 345–361.
+Iacus, S. M., King, G., & Porro, G. (2012). Causal inference without balance checking: Coarsened exact matching. Political Analysis, 20(1): 1–24.
+Kanter, D. E., & Konstantopoulos, S. (2010). The impact of
+a project-based science curriculum on minority student
+achievement, attitudes, and careers: The effects of teacher
+content and pedagogical content knowledge and inquirybased practices. Science Education, 94(5), 855–887.
+Krajcik, J. S., & Shin, N. (2014). Project-based learning. In R.
+K. Sawyer (Ed.), The Cambridge handbook of the learning
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+sciences (pp. 275–297). New York, NY: Cambridge University Press.
+Larmer, J., & Mergendoller, J. (2015). Gold standard PjBL:
+Essential project design elements (by BIE). Project based
+learning | BIE. Retrieved September 25, 2018, from
+http://www.bie.org/object/document/gold_standard_pbl
+_essential_project_design_elements
+LeBuffe, P. A., Shapiro, V. B., & Naglieri, J. A. (2009). Devereux
+student strengths assessment: A measure of social-emotional
+competencies of children in kindergarten through eighth
+grade. Lewisville, NC: Kaplan Early Learning.
+Lynch, S., Peters-Burton, E., Spillane, N., Behrend, T., Ross,
+K., House, A., & Han, E. (2013). A policy-relevant instrumental case study of an inclusive STEM-focused high
+school: Manor New Tech High. International Journal of
+Education in Mathematics, Science and Technology, 5, 1.
+Mergendoller, J., Maxwell, N., & Bellisimo, Y. (2006). The
+effectiveness of problem-based instruction: A comparative study of instructional methods and student characteristics. Interdisciplinary Journal of Problem-Based Learning,
+1(2), 49–69.
+Mioduser, D., & Betzer, N. (2007). The contribution of project-based-learning to high-achievers’ acquisition of technological knowledge and skills. International Journal of
+Technology and Design Education, 18(1), 59–77.
+Parker, W. C., Lo, J., Yeo, A. J., Valencia, S. W., Nguyen, D.,
+Abbott, R. D., . . . Vye, N. J. (2013). Beyond breadthspeed-test: Toward deeper knowing and engagement in
+an advanced placement course. American Educational
+Research Journal, 50(6), 1424–1459.
+Parker, W., Mosborg, S., Bransford, J., Vye, N., Wilkerson,
+J., & Abbott, R. (2011). Rethinking advanced high school
+coursework: Tackling the depth/breadth tension in the AP
+US government and politics course. Journal of Curriculum
+
+13 | www.ijpbl.org (ISSN 1541-5015)
+
+Pjbl in Three Southeastern Public Schools
+Studies, 43(4), 533–559.
+Parsi, A. (2017). Experiences in practice: The role of projectbased learning at Warren New Tech High School. National
+Center for Learning Disabilities.
+Ravitz, J. (2010). Beyond changing culture in small high
+schools: Reform models and changing instruction with
+project-based learning. Peabody Journal of Education, 85,
+290–312.
+Rogers, W. H. (1983). Analyzing complex survey data. Santa
+Monica, CA: Rand Corporation..
+Summers, E. J., & Dickinson, G. (2012). A longitudinal
+investigation of project-based instruction and student
+achievement in high school social studies. Interdisciplinary Journal of Problem-Based Learning, 6(1), 82–103.
+Thomas, J. W. (2000). A review of research on project-based
+learning.
+Brooke T. Culclasure is the Riley Institute at Furman
+University’s research director. She manages several largescale research projects and currently serves as principal
+investigator of studies related to Montessori education, New
+Tech schools, and project-based learning.
+Kyle C. Longest is an associate professor and chair of the
+Department of Sociology at Furman University. His work
+seeks to understand how adolescents manage the transition
+to young adulthood, with a focus on religious and education
+trajectories.
+Troy M. Terry is the executive director of Graduate and
+Evening Studies at Furman University and a clinical professor
+of educational leadership. A former high school teacher and
+middle and elementary school principal, his main research
+interests are inquiry-based learning and curriculum, school
+law, and literacy.
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Does Not Meet
+Expectations
+
+Description
+
+Approaches
+Expectations
+
+Meets
+Expectations
+
+APPENDIX A
+
+Observer Notes/Comments
+
+Teachers generally are facilitating, not lecturing
+Multiple student groupings (project teams, small
+group instruction, etc.) are observed
+PjBL-related materials are evident in classroom (project rubrics, driving questions)
+Classroom environment/arrangement is functionally
+suited to PjBL
+Students are engaged
+PjBL Classroom Five Point “First Impression” Checklist
+
+Observation Instruments
+
+14 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Performance
+Task
+
+Rating Guidelines
+Approaches
+Meets Expectations
+Expectations
+
+Planning for
+standardsbased PjBL
+and content
+instruction
+
+Planning process demonstrates
+teacher knowledge,
+understanding, and
+application of PjBL
+concepts, research,
+and best practices.
+Well-researched
+teacher plans meet
+or exceed all six
+categories of PjBL
+learning strategies.
+
+Planning process
+somewhat demonstrates teacher
+knowledge, understanding, and
+application of PjBL
+concepts, research,
+and best practices.
+Teacher plans meet
+some of the six
+categories of PjBL
+learning strategies.
+
+Authentic i
+nquiry
+
+Observation and
+document review
+indicate that students in this classroom go through
+an extended process
+of inquiry in “realworld” activities
+seeking solutions to
+complex problems,
+questions, or challenges. Students
+exhibit agency in
+this process.
+
+It is somewhat
+evident by observation and document
+review that students
+in this classroom
+go through an
+extended process of
+inquiry in “realworld” activities
+seeking solutions
+to complex problems, questions, or
+challenges.
+
+It is not evident by
+observation and
+document review
+that students in
+this classroom
+go through an
+extended process
+of inquiry in “realworld” activities
+seeking solutions
+to complex problems, questions, or
+challenges.
+
+☐ Meets
+Expectations
+☐ Approaches
+Expectations
+☐ Does Not Meet
+Expectations
+☐ Unable to Rate
+
+Academic
+rigor of
+content
+standards
+
+Document review or
+teacher comments
+indicate that projects
+clearly are derived
+from specific content
+area standards that
+demand rigorous learning.
+
+Document review
+indicates that
+projects are somewhat derived from
+specific content
+area standards that
+demand rigorous learning.
+
+Document review
+indicates that
+projects are not
+derived from specific content area
+standards that
+demand rigorous learning.
+
+☐ Meets
+Expectations
+☐ Approaches
+Expectations
+☐ Does Not Meet
+Expectations
+☐ Unable to Rate
+
+15 | www.ijpbl.org (ISSN 1541-5015)
+
+Does Not Meet
+Expectations
+Planning process
+does not demonstrate teacher
+knowledge,
+understanding,
+and application
+of PjBL concepts,
+research, and best
+practices. Teacher
+plans meet few
+or none of the
+six categories of
+PjBL learning
+strategies.
+
+Observer Rating
+(check one)
+
+Notes/Comments
+
+☐ Meets
+Expectations
+☐ Approaches
+Expectations
+☐ Does Not Meet
+Expectations
+☐ Unable to Rate
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+Performance
+Task
+
+Rating Guidelines
+Approaches
+Meets Expectations
+Expectations
+
+Applied
+learning and
+collaborative problem-solving
+
+Observation indicates that students
+apply new skills and
+knowledge toward
+solution development at a high level.
+Students work in
+groups/teams and
+use higher-order
+thinking skills and
+advanced organizational skills.
+Technology integration, time management, and other
+“real-world skills”
+are clearly evident.
+
+Observation indicates that there
+is some evidence
+that students apply
+new skills and
+knowledge toward
+solution development at a high
+level. Students may
+work in groups/
+teams, but the use of
+higher-order thinking skills, advanced
+organizational skills,
+technology integration, and other
+“real-world skills” is
+not clearly evident.
+
+Observation shows
+teacher facilitates
+students as they
+conduct independent research,
+gather information from authentic
+Exploring the
+sources, and collect
+need to know
+and record data.
+Documentation
+clearly shows that
+students do fieldbased or experiential
+research in “realworld” contexts.
+
+Observation shows
+there is some
+evidence that
+teacher facilitates
+students as they
+conduct independent research,
+gather information
+from authentic
+sources, and collect
+and record data.
+Documentation
+may show that students do field-based
+or experiential
+research in “realworld” contexts.
+
+16 | www.ijpbl.org (ISSN 1541-5015)
+
+Pjbl in Three Southeastern Public Schools
+
+Does Not Meet
+Expectations
+Observation indicates that there is
+no evidence that
+students apply
+new skills and
+knowledge toward
+solution development at a high
+level. Students
+may work in
+groups and/or
+teams, but there
+is no evidence of
+the use of higherorder thinking
+skills, advanced
+organizational
+skills, student
+self- management,
+technology integration, and other
+“real-world skills.”
+Observation does
+not show teacher
+facilitates students
+as they conduct
+independent
+research, gather
+information from
+authentic sources,
+and collect and
+record data.
+Documentation
+does not show
+that students
+do field-based
+or experiential
+research in “realworld” contexts.
+
+Observer Rating
+(check one)
+
+Notes/Comments
+
+☐ Meets
+Expectations
+☐ Approaches
+Expectations
+☐ Does Not Meet
+Expectations
+☐ Unable to Rate
+
+☐ Meets
+Expectations
+☐ Approaches
+Expectations
+☐ Does Not Meet
+Expectations
+☐ Unable to Rate
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+Performance
+Task
+
+Connecting
+to
+an audience
+
+Authentic
+assessment
+that includes
+reflection
+and revision
+
+Rating Guidelines
+Approaches
+Meets Expectations
+Expectations
+
+Does Not Meet
+Expectations
+Observation and
+Observation and
+Observation and
+document review
+document review
+document review
+do not indicate
+indicate that stushow some evidence
+that students in
+dents in this classthat students in this
+this classroom
+room present their
+classroom present
+present their
+work to others
+their work to others
+work to others
+and are provided
+and are provided
+or are provided
+opportunities to
+opportunities to
+opportunities to
+observe and work
+observe and work
+observe and work
+alongside adults in
+alongside adults in
+alongside adults
+“real-world” set“real-world” setin “real-world”
+tings relevant to
+tings relevant to
+settings relevant
+their projects.
+their projects.
+to their projects.
+Observation
+Observation and
+Observation and
+and document
+document review
+document review
+review indicate
+indicate clear eviindicate some
+no evidence that:
+dence that: teachers evidence that:
+teachers engage in
+engage in ongoing
+teachers engage in
+ongoing formative
+formative and/or
+ongoing formative
+and/or summasummative assessand/or summative assessment of
+ment of students;
+tive assessment of
+students; students
+students are assessed students; students
+are assessed in
+in authentic manners are assessed in
+authentic mansuch as portfolios
+authentic manners
+ners such as
+and presentations;
+such as portfolios
+portfolios and
+and, in exceptional
+and presentapresentations; and
+cases, students
+tions; and students
+students estabestablish assessment establish assessment
+lish assessment
+criteria and their
+criteria and their
+criteria and their
+own assessment
+own assessment
+own assessment
+opportunities.
+opportunities.
+opportunities.
+
+17 | www.ijpbl.org (ISSN 1541-5015)
+
+Pjbl in Three Southeastern Public Schools
+Observer Rating
+(check one)
+
+Notes/Comments
+
+☐ Meets
+Expectations
+☐ Approaches
+Expectations
+☐ Does Not Meet
+Expectations
+☐ Unable to Rate
+
+☐ Meets
+Expectations
+☐ Approaches
+Expectations
+☐ Does Not Meet
+Expectations
+☐ Unable to Rate
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+APPENDIX B
+Deveraux Student Strengths
+Assessment Technical Information
+The DESSA is a 72-item, standardized, norm-referenced
+behavior rating scale that assesses the social-emotional
+competencies that serve as protective factors for children in
+kindergarten through the eighth grade. The DESSA can be
+completed by parents/guardians, teachers, or staff at schools
+and child-serving agencies, including after-school, social
+service, and mental health programs. The assessment is
+entirely strength-based, meaning that the items query positive behaviors (e.g., get along with others) rather than maladaptive ones (e.g., annoy others). The DESSA is organized
+into conceptually derived scales that provide information
+about eight key social-emotional competencies. Standard
+scores can be used to calibrate each child’s competence in
+each of the eight dimensions and guide school/programwide, class-wide, and individual strategies to promote those
+competencies. For each item, the rater is asked to indicate
+on a five-point scale how often the student engaged in each
+behavior over the past four weeks.
+
+Northeast
+South
+Midwest
+West
+Total
+U.S. %1
+
+American
+Indian/
+Alaska Native
+n
+%
+9
+1.7
+16
+1.8
+3
+0.6
+13
+2.6
+41
+1.9
+1.2
+
+Asian
+n
+7
+22
+12
+24
+65
+
+%
+1.3
+2.5
+2.2
+4.7
+3.0
+4.0
+
+The DESSA was developed to meet or exceed professional
+standards for a high-quality, well-developed assessment
+instrument. The standardization sample; internal, interrater, and test-retest reliabilities; and content, construct, and
+criterion validity evidence are discussed at length in the
+DESSA manual.
+The DESSA standardization sample consists of 2,500 children who are representative of the
+U.S. population with respect to gender, race (see Table
+B-1), Hispanic ethnicity, region of residence, and poverty status.
+As shown in Table B-2, the internal consistency (alpha
+coefficients) of each scale as well
+as the Social-Emotional Composite, for both teacher/staff
+and parent raters, exceeds the
+recommended standard of .80 for a scale and .90 for a total
+scale (i.e., the Social-Emotional
+Composite) recommended by Bracken (1987). In fact, the
+alpha coefficient for the SocialEmotional Composite is .98 for parents and .99 for
+teachers/staff.
+
+Black/ African
+American
+n
+190
+200
+71
+20
+481
+
+%
+35.6
+22.3
+13.0
+3.9
+22.3
+15.4
+
+Native/
+Hawaiian/
+White
+Pacific Islander
+n
+%
+n
+%
+0
+0
+327 61.4
+3
+0.3
+424 47.3
+2
+0.4
+453 83.1
+9
+1.8
+354 69.8
+14
+0.6
+1,558 72.2
+0.2
+76.3
+
+Total
+533
+665
+541
+420
+2,159
+
+Note: The U.S. race data are based on the 2006 figures for 5- through 14-year-olds only in “Resident Population by Race,
+Hispanic Origin, and Age: 2000 and 2006. Table No. 8.” Statistical Abstract of the United States: 2008 (127th edition): U.S.
+Census Bureau, 2008.
+1
+U.S. figures do not add up to 100% due to “Two or more Races” not being included.
+
+Table B-1. Standardization sample characteristics by race and geographic region.
+
+18 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+Scales
+Social-Emotional Composite
+Personal Responsibility
+Optimistic Thinking
+Goal-Directed Behavior
+Social-Awareness
+Decision Making
+Relationship Skills
+Self-Awareness
+Self-Management
+
+Pjbl in Three Southeastern Public Schools
+
+Parents
+.98
+.86
+.82
+.88
+.84
+.85
+.89
+.82
+.86
+
+Raters
+Teachers/Staff
+.99
+.92
+.89
+.93
+.91
+.92
+.94
+.89
+.92
+
+Test-retest reliabilities are also high with correlation coefficients ranging
+from .79 to .90 for parents and from .86 to .94 for teachers/staff. Interrater
+reliabilities are also quite good, with median scale correlation coefficients of
+.725 for parents and .735 for teachers/staff.
+
+Table B-2. Internal reliability (alpha) coefficients
+for the DESSA scales by rater.
+
+19 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+APPENDIX C
+Student Survey Instrument
+Q1. What grade are you in? DROPDOWN
+a. 3rd
+b. 4th
+c. 5th
+d. 6th
+e. 7th
+f.
+
+8th
+
+g. 9th
+h. 10th
+Q2. Project-based learning is when you learn by working in class/group projects and investigating challenging questions,
+instead of learning by yourself through lectures.
+How many years have you been taught through Project-Based Learning?
+i. This is my first year
+j.
+
+2 years
+
+k. 3 or more years
+l.
+
+I don’t know
+
+Q3. DISPLAY IF Q3 = 5TH AND BELOW: This year in school, my teacher used Project-Based Learning. . .
+a. A lot of the time
+b. Some of the time
+c. Hardly ever
+d. Never
+e. I don’t know
+
+20 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Q4. DISPLAY IF Q3 = 6TH AND ABOVE: Complete the following sentence(s)
+This year at school. . .
+
+A lot of the time
+
+Some of
+the time
+
+Hardly ever
+
+Never
+
+Does not apply
+
+. . . my English/Language Arts
+teacher(s) used Project-Based
+Learning . . .
+. . . my Science teacher(s) used
+Project-Based Learning . . .
+. . . my Social Studies (e.g.,
+World History, Geography, etc.)
+teacher(s) used Project-Based
+Learning . . .
+. . . my Math teacher(s) used
+Project-Based Learning . . .
+. . . my Foreign Language
+teacher(s) used Project-Based
+Learning . . .
+Q5. Complete the following sentence(s).
+This year at school, I generally enjoyed Project-Based Learning. . .
+A lot
+
+Some
+
+A little
+
+Not at all
+
+. . . in my English/Language Arts class . . . (DISPLAY IF Q6 ELA
+EQUALS “A LOT OF THE TIME” OR “SOME OF THE TIME”)
+. . . my Science class . . . (DISPLAY IF Q6 SCIENCE EQUALS “A
+LOT OF THE TIME” OR “SOME OF THE TIME”)
+. . . my Social Studies (e.g., World History, Geography, etc.) class .
+. . (DISPLAY IF Q6 SOCIAL STUDIES EQUALS “A LOT OF THE
+TIME” OR “SOME OF THE TIME”)
+. . . my Math class . . . (DISPLAY IF Q6 MATH EQUALS “A LOT OF
+THE TIME” OR “SOME OF THE TIME”)
+. . . my Foreign Language class . . . (DISPLAY IF Q6 FOREIGN
+LANGUAGE EQUALS “A LOT OF THE TIME” OR “SOME OF
+THE TIME”)
+
+21 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Q6. Compared to when you don’t participate in Project-Based Learning, how much do you learn when you do participate
+in Project-Based Learning in your. . .
+
+I learn more
+
+I learn about I do not learn
+the same
+as much
+I don’t know
+
+. . . English/Language Arts class? (DISPLAY IF Q6
+ELA EQUALS “A LOT OF THE TIME” OR “SOME OF
+THE TIME”)
+. . . Science class? (DISPLAY IF Q6 SCIENCE EQUALS “A
+LOT OF THE TIME” OR “SOME OF THE TIME”)
+. . . Social Studies (e.g., World History, Geography, etc.)
+class? (DISPLAY IF Q6 SOCIAL STUDIES EQUALS “A
+LOT OF THE TIME” OR “SOME OF THE TIME”)
+. . . Math class? (DISPLAY IF Q6 MATH EQUALS “A LOT
+OF THE TIME” OR “SOME OF THE TIME”)
+. . . Foreign Language class? (DISPLAY IF Q6 FOREIGN
+LANGUAGE EQUALS “A LOT OF THE TIME” OR
+“SOME OF THE TIME”)
+Q7. Participating in Project-Based Learning in my school generally has helped me. . .
+
+Agree
+
+Disagree
+
+I don’t know
+
+. . . learn more in school.
+. . . better understand how to show what I have learned in school
+. . . feel excited about learning.
+. . . feel like I have a say in my learning.
+Q8. What have you liked most about Project-Based Learning?
+Q9. What have you liked the least about Project-Based Learning?
+In school, how often do you. . .
+A lot
+
+Some
+
+Hardly ever
+
+Never
+
+I don’t know.
+
+. . . work with other students in groups or teams?
+. . . help create rubrics for your projects?
+. . . use portfolios to show how much you
+have learned?
+. . . make presentations to the class?
+. . . make presentations to people outside of
+your school?
+. . . help design projects used in class?
+
+22 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Please tell us how often you do the following.
+Most of the time
+
+Some of the time
+
+Hardly ever
+
+Never
+
+I work well with people I disagree with or
+do not like.
+I am able to give helpful feedback to others
+on their work.
+I feel comfortable presenting my work in
+front of other people.
+I respect people who have different ideas
+than I do.
+I am able to work through disagreements
+with others in a peaceful way.
+Please tell us how often you do the following.
+Most of the time
+
+Some of the time
+
+Hardly ever
+
+Never
+
+I think about the problems my teacher gives
+me a lot of different ways.
+I am willing to try out new ideas.
+I ask questions to get the information I need
+to solve problems.
+I back up my opinions with evidence
+and examples.
+I am able to manage my time.
+I set goals for myself.
+Q10. I am. . .
+a. Male
+b. Female
+Q11. I would describe myself as. . . (Choose all that apply)
+c. Black or African American
+d. White
+e. Spanish/Hispanic/Latino
+f.
+
+Asian or Pacific Islander
+
+g. American Indian or Alaska Native
+h. Other: _____________
+
+23 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+APPENDIX D
+Teacher Survey Instrument
+Qi. What is the name of your school?
+Qii. Please indicate which of the following subjects you teach at SCHOOL NAME. (Check all that apply)
+ Math
+ ELA
+ Science
+ Social Studies
+ Art/Music
+ P.E.
+ Foreign Language
+ Computer/Technology
+ Other __________
+Qiii. Please indicate which of the following grades you teach at SCHOOL NAME. (Check all that apply)
+ Pre-K
+ Kindergarten
+ 1st Grade
+ 2nd Grade
+ 3rd Grade
+ 4th Grade
+ 5th Grade
+Q1. How many years have you been a teacher at SCHOOL NAME, including this school year?
+a. This is my first year
+b. 2–4
+c. 5–7
+d. 8–10
+e. 11 or more
+Q2. How many years have you been teaching, in total, including this school year?
+a. This is my first year
+b. 2–4
+c. 5–7
+d. 8–10
+e. 11 or more
+Q3. To what extent are you satisfied with your current job?
+a. Very satisfied
+b. Satisfied
+c. Dissatisfied
+d. Very dissatisfied
+Q4. Do you currently implement PjBL in any of your classes at SCHOOL NAME?
+a. Yes
+b. No
+
+24 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Q5. In your teaching this year, how often did you ask students to do the following?
+Frequently
+
+Occasionally
+
+Rarely
+
+Never
+
+Assist with design of assessment rubrics for
+use in class
+Self-evaluate the quality of their work before it
+is completed
+Use peer, teacher, or expert feedback to revise
+their own work
+Model different strategies for confronting a problem
+or question
+Q6. In your teaching this year, how often did you ask students to do the following?
+
+Almost daily
+
+About 1–3
+times per week
+
+About 1–3
+times per month
+
+A few times
+a semester
+
+Almost never
+
+Work in small groups or teams
+Present group work to the class,
+teacher, or others
+Create an original product
+or performance to express
+their ideas
+Engage in deep research or
+inquiry about a topic(s)
+Choose their own topics of
+learning or questions to pursue
+Q7. To what extent do you agree with these statements about the critical thinking and problem-solving skills of your students
+this year?
+Completely
+agree
+
+Somewhat
+agree
+
+Somewhat
+disagree
+
+Completely
+disagree
+
+I’m
+not sure
+
+Students have learned critical thinking and
+problem-solving skills while in my class.
+I have been able to effectively assess students’
+critical thinking and problem-solving skills.
+PjBL helps my students develop critical thinking and problem-solving skills (DISPLAY
+ONLY IF Q4 = YES).
+
+25 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Q8. To what extent do you agree with these statements about the collaboration and teamwork skills of your students this year?
+Completely
+agree
+
+Somewhat
+agree
+
+Somewhat
+disagree
+
+Completely
+disagree
+
+I’m
+not sure
+
+Students have learned collaboration and
+teamwork skills while in my class.
+I have been able to effectively assess students’ collaboration and teamwork skills.
+PjBL helps my students develop collaboration and teamwork skills (DISPLAY ONLY
+IF Q4 = YES).
+Q9. To what extent do you agree with these statements about the interpersonal skills of your students this year?
+Completely
+agree
+
+Somewhat
+agree
+
+Somewhat
+disagree
+
+Completely
+disagree
+
+I’m
+not sure
+
+Students have learned interpersonal skills
+while in my class.
+I have been able to effectively assess students’ interpersonal skills.
+PjBL helps my students develop interpersonal skills (DISPLAY ONLY IF
+Q4 = YES).
+Q10. To what extent do you agree with these statements about the creativity and innovation skills of your students this year?
+Completely
+agree
+
+Somewhat
+agree
+
+Somewhat
+disagree
+
+Completely
+disagree
+
+I’m
+not sure
+
+Students have learned skills in creativity
+and innovation while in my class.
+I have been able to effectively assess students’ skills in creativity and innovation.
+PjBL helps my students develop skills in
+creativity and innovation (DISPLAY ONLY
+IF Q4 = YES).
+
+26 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Q11. To what extent do you agree with these statements about the self-direction skills of your students this year?
+Completely
+agree
+
+Somewhat
+agree
+
+Somewhat
+disagree
+
+Completely
+disagree
+
+I’m
+not sure
+
+Students have learned self-direction skills
+while in my class.
+I have been able to effectively assess students’ self-direction skills.
+PjBL helps my students develop self-direction skills (DISPLAY ONLY IF Q4 = YES).
+Q12. Including this year, how many years have you been implementing PjBL in total (at this school and other schools)?
+a. 1–3
+b. 4–6
+c. 7–9
+d. 10 or more
+Q13. Including this year, how many years have you been implementing PjBL in your classes at SCHOOL NAME?
+e. 1–3
+f. 4–6
+g. 7–9
+h. 10 or more
+Q14. Do you have an endorsement in PjBL?
+a. Yes
+b. No
+c. I am in the process of being endorsed
+Q15. Does SCHOOL NAME have a clear and well-articulated vision for PjBL?
+a. Yes
+b. No
+Q16. Are PjBL teachers at SCHOOL NAME provided training in PjBL?
+a. Yes
+b. No
+Q17. IF Q15 = YES: Which of the following are ways that PjBL teachers at SCHOOL NAME are trained? (Check all that apply)
+ Team-wide planning for PjBL
+ District-wide staff development days (PjBL focused)
+ Common planning periods for PjBL teachers
+ State and/or regional PjBL conferences
+ National PjBL conferences
+ PjBL webinars
+ Online sharing/collaborative environments related to PjBL
+ Other (please specify): __________________________________
+
+27 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Q18. How prepared do you feel to implement PjBL in the classroom?
+a. Very well prepared
+b. Prepared
+c. Somewhat prepared
+d. Not at all prepared
+Q19. About how many PjBL-focused workshops, conferences, or training sessions have you participated in during the last
+12 months?
+a. None
+b. 0
+c. 1
+d. 2
+e. 3
+f. 4 or more
+Q20. Are there topics not covered in your school’s PjBL training that you feel should be covered in order for you to be able
+to effectively implement PjBL in the classroom?
+a. Yes
+b. No
+Q21. IF Q20 = YES: What topics do you feel should be covered?
+Q22. How would you describe your level of involvement in PjBL?
+I have . . .
+a. completely integrated PjBL into my classroom
+b. somewhat integrated PjBL into my classroom
+c. not tried it in my classroom
+Q23. How supportive is your school administration of the PjBL approach?
+a. Very supportive
+b. Supportive
+c. Somewhat supportive
+d. Not at all supportive
+Q24. To what extent . . .
+Completely
+in favor
+
+Somewhat
+in favor
+
+Neutral
+
+Somewhat
+oppose
+
+Completely
+oppose
+
+. . . are you in favor of using PjBL in your classroom?
+. . . are you in favor of a school-wide implementation of PjBL?
+
+28 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Q25. To what extent do you think PjBL has permeated your school’s culture?
+a. Completely
+b. To a large extent, but not completely
+c. To some extent
+d. Not very much at all
+e. Not at all
+Q26. Please answer the following.
+How often do you . . .
+Frequently
+
+Occasionally
+
+Rarely
+
+Never
+
+. . . use rubrics to set expectations for projects?
+. . . require portfolios as part of the PjBL assessment process?
+... require that students make presentations to the class?
+. . . require that students make presentations to business and/or
+community partners?
+. . . use a driving question to frame PjBL class projects?
+. . . work in teams with other teachers?
+. . . involve community partners in project development?
+. . . intentionally align standards with projects?
+Q27. How much resistance to your implementation of PjBL do you generally encounter?
+a. A lot of resistance
+b. Some resistance
+c. A little resistance
+d. No resistance
+Q28. From which areas have you received resistance? (Check all that apply)
+ district/central office
+ building leadership/administration
+ grade/content area team
+ other teachers
+ parents
+ students
+ Other, please specify: ________________________
+
+29 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Q29. Please indicate the extent to which each of the following presents a barrier to effectively implementing projectbased learning:
+A major
+barrier
+
+A moderate
+barrier
+
+Somewhat
+of a barrier
+
+Not at all
+a barrier
+
+Lack of time
+Curriculum alignment/pacing
+Difficulty assessing students
+Lack of training/professional development
+Classroom management challenges
+Competing district priorities
+Competing state priorities
+State regulations/mandates
+Q30. Please list up to 3 other factors that negatively impact your ability to effectively implement project-based learning.
+Q31. Compared to other models you have tried in the past, overall, how effective of a pedagogical approach is PjBL?
+Overall, PjBL is ____________ than other instructional models I have used in the past.
+a. much better
+b. better
+c. no different
+d. worse
+e. much worse
+f. I only have taught using PjBL SKIP TO Q35
+Q32. Compared to other models you have tried in the past, how effective is PjBL in positively impacting . . .
+Much Better
+
+Better
+
+No Different
+
+Worse
+
+Much Worse
+
+. . . student achievement?
+. . . student participation in class?
+. . . student enthusiasm for
+course material?
+. . . student motivation?
+Q33. Compared to other models you have tried in the past, how effective is PjBL in positively impacting students’ ability to . . .
+Much Better
+
+Better
+
+No Different
+
+Worse
+
+Much Worse
+
+. . . apply/use information they have learned?
+. . . work effectively in groups?
+. . . communicate with others?
+. . . express creativity while learning?
+. . . think deeply and critically about subject matter?
+
+30 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+Culclasure, B. T., Longest, K. C., & Terry, T. M.
+
+Pjbl in Three Southeastern Public Schools
+
+Q34. Compared to other models you have tried in the past, how effective is PBL in positively impacting students’ interest in . . .
+Much Better
+
+Better
+
+No Different
+
+Worse
+
+Much Worse
+
+N/A
+
+. . . post–high school education
+(college, tech school, community college)?
+. . . exploring different
+career paths?
+. . . attaining college credit (dual
+credit) while in high school?
+Q35. Compared to a traditional instructional model, how much work is it for you to implement PjBL?
+PjBL requires . . .
+a. much more work
+b. somewhat more work
+c. about the same amount of work
+d. somewhat less work
+e. much less work
+Q36. Overall, to what extent do you agree that using PjBL has helped you become a more effective teacher?
+a. Strongly agree
+b. Somewhat agree
+c. Somewhat disagree
+d. Strongly disagree
+Q37. Use the space below to comment on any aspects of PjBL that we have not covered or to provide any general impressions
+that would be helpful for us to know.
+Q38. What is your gender?
+a. Female
+b. Male
+c. Prefer not to say
+Q39. What is your race/ethnicity?
+a. Black
+b. Asian American
+c. White
+d. Hispanic American
+e. Native American
+f. Prefer not to say
+g. Other (please specify): _______________________
+
+31 | www.ijpbl.org (ISSN 1541-5015)
+
+September 2019 | Volume 13 | Issue 2
+
+

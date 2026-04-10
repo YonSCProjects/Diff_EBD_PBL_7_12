@@ -1,0 +1,50 @@
+ARTICLE: Promoting High-Achieving Students Through Differentiated Instruction in Mixed-Ability Classrooms—A Systematic Review
+
+AUTHORS: Lisa Ziernwald; Delia Hillmayr; Doris Holzberger
+
+JOURNAL: Journal for the Education of the Gifted (Sage)
+DATE: November 14, 2022
+DOI: 10.1177/1932202X221112931
+
+ABSTRACT:
+Promoting high-achieving students plays an important role in the school context. Hence, one promising support measure within the mixed-ability classroom is differentiated instruction (DI).
+
+[NOTE: Full abstract was paywalled; the following is extracted from the article's body text and section headers as visible on the publisher page]
+
+THEORETICAL FRAMEWORK: DI AND ITS ROLE FOR HIGH-ACHIEVING STUDENTS
+
+The construct of "differentiation" includes DI during a lesson as well as student assessment, evaluation, philosophical aspects, and more general principles (cf. Smale-Jacobse et al., 2019; Tomlinson, 2014). The systematic review focused on DI in mixed-ability classrooms, which contains two main aspects: (a) instructional practices and (b) organizational aspects (Smale-Jacobse et al., 2019). DI covers various instructional practices such as tiered tasks, scaffolds, and adaptive learning materials. The organizational aspect contains structures for DI, such as within-class grouping arrangements (Deunk et al., 2018; Puzio et al., 2020; Smale-Jacobse et al., 2019; Tomlinson, 2014). Another construct that considers the needs of individual students and provides corresponding learning opportunities for each student is individualization. In the current systematic review, individualization is included as a part of DI as it can be seen as an extreme type of DI, where instructional practices are not adapted for student subgroups (e.g., high-achievers) but for the individual student (Bohl et al., 2012; Dumont, 2018; Smale-Jacobse et al., 2019).
+
+RESEARCH ON IMPACT OF DI ON STUDENTS' OUTCOMES:
+
+Motivational-affective characteristics are strongly represented (Heller et al., 2005; Stoeger, 2009). Previous research syntheses showed that enrichment and acceleration for high-achieving students could have differential effects on academic achievement and motivational-affective characteristics (Kim, 2016; Steenbergen-Hu & Moon, 2011). The current study summarized different motivational and emotional constructs—including motivational beliefs and attitudes—under the term "motivational-affective characteristics."
+
+CONDITIONS FOR IMPLEMENTING DI:
+
+Research has found that DI has only been implemented to a very small extent in practice (Reis & Renzulli, 2010). Studies from the 1990s found that DI is not used regularly for high-achieving students (Archambault et al., 1993; Matthews, 1992; Westberg et al., 1993). Westberg et al. (1993) observed high-achieving students' instruction in 46 grades 3 and 4 mixed-ability classrooms and found that 84% of high-achieving students' instructional activities across five subjects included no DI.
+
+Key factors for implementation:
+- Teachers' beliefs and expectations were related to the (intended) use of different instructional practices (Bondie et al., 2019; Gebauer & McElvany, 2017; Trivette et al., 2012)
+- Barriers: time constraints, lack of teacher competence (Dixon et al., 2014)
+- Facilitators: colleagues, mentors, control in decision-making (Bondie et al., 2019; Puzio et al., 2015)
+
+PRESENT STUDY:
+
+The review focused only on high-achieving students (not underachieving students), investigated primary and secondary education settings, and examined DI in mixed-ability classrooms specifically. The study investigated:
+1. Impact of DI on high-achieving students' outcomes
+2. How teachers and high-achieving students evaluate DI's utility for promoting high-achieving students
+3. Barriers and facilitators while implementing DI
+
+METHOD - STUDY SEARCH:
+
+The search employed a snowball search strategy and screened included journal articles' reference lists. Inclusion criteria focused on studies of DI in mixed-ability classrooms with high-achieving students, covering primary and secondary education.
+
+[Full methods section including coding scheme, analysis approach, and complete results/discussion available only through institutional subscription]
+
+ARTICLE TYPE: Systematic Review
+PEER REVIEWED: Yes
+
+SOURCES:
+- Publisher page: https://journals.sagepub.com/doi/10.1177/1932202X221112931
+
+NOTE: Full text is paywalled (Sage Journals). This record contains substantial content from the article's visible sections including theoretical framework, background research synthesis, and methodology overview. Full text available via institutional subscription to Journal for the Education of the Gifted.

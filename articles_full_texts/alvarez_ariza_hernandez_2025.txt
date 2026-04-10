@@ -1,0 +1,59 @@
+TITLE: A Systematic Literature Review of Research-based Interventions and Strategies for Students with Disabilities in STEM and STEAM Education
+
+AUTHORS: Jonathan Álvarez Ariza; Carola Hernández Hernández
+
+JOURNAL: International Journal of Science and Mathematics Education
+YEAR: 2025
+DOI: https://doi.org/10.1007/s10763-025-10544-z
+Received: 30 July 2024 / Accepted: 7 January 2025
+© The Author(s) 2025
+
+SOURCE URL: https://d-nb.info/136459739X/34
+
+---
+
+ABSTRACT
+
+Statistical studies performed mainly in the U.S. have depicted that students with disabilities (SWDs) are excluded from the educational process and are prone to several gaps and barriers in terms of special accommodations, learning opportunities, and socio-emotional support in Science, Technology, Engineering, Mathematics (STEM)-Science, Technology, Engineering, Arts, Mathematics (STEAM) education. To clarify this, we conducted a systematic literature review focused on interventions and strategies in STEM and STEAM education for SWDs based on 263 studies retrieved from the databases SCOPUS, Web of Science (WoS), and ERIC from 2013–2024. The studies cover proposals from early childhood to tertiary education. After the screening and appraisal stages, 39 interventions with 21 strategies were identified. The outcomes mostly reveal the following: (1) The studies are mainly focused on the U.S. and in students with autism, learning disabilities, or behavioral disorders between low and medium severity levels. (2) Interventions for autistic students use robotics and coding to foster cognitive, social, and communicative skills. (3) Interventions for deaf or hard-of-hearing students focus on creating a science identity and the issues with non-standardized STEM concepts in American sign language (ASL); in contrast, visually impaired students focus on assistive technologies and the accessibility of educational materials. (4) Little attention has been paid to other disabilities apart from autism, intellectual or learning ones, as well as the perspective of educators to support SWDs in classrooms. And (5) New machine learning, metaverse, and AI models are being used to assess the cognitive-emotional states of the SWDs. The conclusions and insights derived from this study can help educators and researchers to create new methodologies or strategies that sustain SWDs in STEM-STEAM education.
+
+Keywords: Students with disabilities · Inclusion · STEM education · STEAM education · Systematic literature review
+
+---
+
+INTRODUCTION
+
+Studies on Science, Technology, Engineering, Mathematics (STEM)-Science, Technology, Engineering, Arts, Mathematics (STEAM) education for students with disabilities (SWDs) claim that this group is underrepresented and suffers exclusion in their educational process. They do not have the same opportunities for participation, engagement, and retention rates as non-disabled students in STEM programs from K-12 levels to tertiary education (Cech, 2023; Griffiths et al., 2021; James & Singer, 2016; Lee, 2022; Shattuck et al., 2014). Some of the prior studies show that SWDs striving to enroll, graduate from schools and higher education institutions (HEIs), and have issues with employment opportunities, labor force, and access to postgraduate programs of master's and doctorate (Cech, 2023; Lee, 2014; National Science Foundation, 2023). Conversely, the interest in education for SWDs has gained relevance and attention in the last two decades (Amor et al., 2019). It is not surprising that policymakers, governments, and transnational agencies like the United Nation (UN) or United Nations Education Scientific and Cultural Organization (UNESCO) have tried to find a solution to this context of SWDs. Thus, some policies and guidelines have been proposed, some of them mainly in the U.S., such as the Perkins Act, the Individuals with Disabilities Education Act (IDEA), the principles of Universal Design Learning (UDL) for instructional design (see studies Basham & Marino, 2013; Fovet, 2021; Schreffler et al., 2019), and more recently the Convention on the Rights of Persons with Disabilities (CRPD) by the UN (UN, 2023).
+
+However, despite these initiatives, teachers have asked for assistance regarding teaching and engagement of SWDs in STEM-STEAM educational settings. Herein, literature reports that SWDs in these settings cope with several issues and barriers regarding accommodations, self-advocacy, teacher and faculty support, instructional design, emotional distress, and social isolation (Cech, 2023; Lee, 2014; Wang et al., 2024). Indeed, several Higher Education (HE) instructors admit not having the pedagogical expertise to create differentiated tasks or activities focused on SWDs that help to achieve the purposes or goals in the courses (Fovet, 2021; Melese & Tinoca, 2019).
+
+Searching to clarify these points, this study aims to investigate and describe educational research-based interventions (instructional practices that have been researched and determined to be effective) and their strategies from 2013–2024 that help educators to identify and analyze the implications, issues, and challenges of STEM-STEAM education in the community of SWDs. This information can contribute to the pedagogical reflection about how to construct meaningful learning spaces that foster participation and inclusion for SWDs.
+
+At this point, we expose two central points in this study. Firstly, we understand inclusive education as a synonym of special education that attends and meets the special needs or requirements of SWDs, and this is the primary focus of this study. Secondly, our attention is put on Science, Technology, Engineering, the Arts, and Mathematics (STEAM) initiatives wherein the Arts have been integrated to foster creativity and expression of the SWDs. Nevertheless, we also include the traditional STEM approach, where the focus is on the resolution of problems based on concepts and procedures from science and mathematics, which incorporate the strategies applied in engineering and the use of technology (Aguilera & Ortiz-Revilla, 2021; Shaughnessy, 2013). Hence, we prefer to use the terms STEM and STEAM education separately to describe the study's findings.
+
+---
+
+BACKGROUND
+
+We identified several prior reviews focused on SWDs and STEM-STEAM education. Scalise et al. (2018) describe assessment accommodations and UDL practices within the context of emerging technologies in STEM education. The authors emphasize the importance of implementing UDL principles, considering individual needs and preferences, and ensuring content accessibility. Moody et al. (2018) synthesize some key strategies for ASD students, which include early intervention and focus on individual skills; incorporating predictors for post-school success, such as career awareness, work experience, self-advocacy, social skills, and transition programs.
+
+KEY FINDINGS SUMMARY:
+- 39 interventions with 21 strategies identified from 263 studies (2013-2024)
+- Studies mainly focused on U.S. students with autism, learning disabilities, or behavioral disorders
+- Interventions for autistic students use robotics and coding to foster cognitive, social, and communicative skills
+- Interventions for deaf/hard-of-hearing students focus on science identity and ASL STEM terminology issues
+- Visually impaired students: focus on assistive technologies and educational material accessibility
+- Little attention paid to other disabilities; limited educator perspective on supporting SWDs
+- New machine learning, metaverse, and AI models being used to assess cognitive-emotional states of SWDs
+- Conclusions can help educators create new methodologies/strategies to sustain SWDs in STEM-STEAM education
+
+KEY STRATEGIES IDENTIFIED:
+1. Robotics and coding interventions for autistic students
+2. UDL (Universal Design for Learning) principles
+3. Assistive technologies for visually impaired students
+4. American Sign Language (ASL) standardization for STEM concepts for deaf/hard-of-hearing students
+5. AI and machine learning models for cognitive-emotional assessment
+6. Differentiated instruction approaches
+7. Peer support and collaborative learning structures
+8. Early intervention approaches
+9. Metaverse and virtual reality environments
+10. Self-advocacy training and skill development

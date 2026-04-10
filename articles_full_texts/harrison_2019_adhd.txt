@@ -1,0 +1,169 @@
+Attention Deficit Hyperactivity Disorders and Classroom-Based Interventions: Evidence-Based Status, Effectiveness, and Moderators of Effects in Single-Case Design Research
+
+Judith R. Harrison, Denise A. Soares, Stephen Rudzinski, Rachel Johnson
+
+Review of Educational Research, 89(4), 569-611
+Published: 2019 (August)
+DOI: 10.3102/0034654319857038
+Article first published online: June 14, 2019
+
+Sources: ERIC EJ1220832 (https://eric.ed.gov/?id=EJ1220832); SAGE Journals (https://journals.sagepub.com/doi/10.3102/0034654319857038); Semantic Scholar (https://www.semanticscholar.org/paper/Attention-Deficit-Hyperactivity-Disorders-and-and-Harrison-Soares/c83b16744fa1d0154b3ae1bc4be0778504b90997)
+Open Access: No (paywalled - abstract and references publicly available)
+
+NOTE: Full text unavailable through open-access channels. The following contains the complete abstract, metadata, and reference list from SAGE/ERIC/Semantic Scholar.
+
+ABSTRACT (from ERIC EJ1220832 and Semantic Scholar)
+
+Students with attention deficit hyperactivity disorder (ADHD) experience symptoms of inattention, impulsivity, and hyperactivity that often manifest as academic impairment. As such, teachers must select interventions to increase the probability of success for students with ADHD in their classes. Prior meta-analyses have evaluated school-based intervention effects; however, no systematic review meta-analysis has evaluated the effectiveness of interventions implemented in classrooms with students with ADHD. Additionally, classroom-based studies are frequently conducted through single-case design methodology, and recent advances in meta-analytic techniques provide the opportunity to explore intervention effectiveness as evaluated through quality research. Therefore, to inform selection of evidence-based interventions to be implemented in classroom settings, the current systematic review with meta-analysis of single-case design studies was conducted to evaluate intervention effectiveness, evidence-based status, and moderators of effects for four intervention types (behavioral, instructional, self-management, and environmental) when implemented with students with ADHD in classroom settings. The analysis included 27 articles published from 1971 to 2018. Overall and specific to each intervention type, the results indicate that classroom-based interventions for students with ADHD were moderately effective. Instructional and self-management interventions were deemed evidence based by What Works Clearinghouse standards and potentially evidence based by Council for Exceptional Children standards. Behavioral interventions were found to be potentially evidence based by Council for Exceptional Children criteria and were most effective when selected through functional behavior analysis and implemented by researchers in secondary settings. Instructional interventions were more effective when implemented in special education settings targeting academic outcomes. Implications for research and practice are discussed.
+
+PUBLICATION DETAILS
+Journal: Review of Educational Research
+Volume: 89, Issue: 4, Pages: 569-611
+Year: 2019
+Article first published online: June 14, 2019
+DOI: 10.3102/0034654319857038
+Publisher: SAGE Publications / American Educational Research Association (AERA)
+Total views and downloads: 14,091
+
+ERIC Number: EJ1220832
+
+AUTHORS
+- Judith R. Harrison (Rutgers University); email: judithharrison@rutgers.edu — research interests: effectiveness, acceptability, and feasibility of assessment, interventions, and other services for youth with EBD and ADHD
+- Denise A. Soares (Rutgers University); email: dsoares@rutgers.edu — research agenda includes EBD, cognitive-behavioral interventions, and teachers' competing time demands
+- Stephen Rudzinski (Rutgers University); email: srudzinski@rutgers.edu — research interests: academic interventions for students with ADHD and prekindergarten curriculum development
+- Rachel Johnson (Rutgers University); email: rachel.johnson@rutgers.edu — graduated with bachelor's degree in psychology from Rutgers University
+
+STUDY DETAILS
+
+Study Type: Systematic review with meta-analysis
+Methodology: Single-case design meta-analysis
+Number of articles included: 27 (published 1971-2018)
+Intervention Types Examined:
+  1. Behavioral interventions
+  2. Instructional interventions
+  3. Self-management interventions
+  4. Environmental interventions
+Standards Used:
+  - What Works Clearinghouse (WWC)
+  - Council for Exceptional Children (CEC)
+
+Key Findings:
+1. Overall: Classroom-based interventions for students with ADHD were moderately effective
+2. Instructional interventions: Deemed evidence-based by WWC standards; potentially evidence-based by CEC standards; more effective in special education settings targeting academic outcomes
+3. Self-management interventions: Deemed evidence-based by WWC standards; potentially evidence-based by CEC standards
+4. Behavioral interventions: Potentially evidence-based by CEC criteria; most effective when selected through functional behavior analysis (FBA); most effective when implemented by researchers in secondary settings
+5. Environmental interventions: Results discussed in full text
+
+Moderators examined:
+- Educational setting (general ed vs. special ed)
+- Grade level (elementary vs. secondary)
+- Implementer (researcher vs. teacher)
+- Selection method (FBA vs. no FBA)
+- Outcome type (behavioral vs. academic)
+
+Supplementary Material: ds_10.3102_0034654319857038.zip (87.32 KB) available at SAGE
+
+REFERENCE LIST (from SAGE page - citations marked * were included in the meta-analysis)
+
+*Behavioral and Brain Functions, 1(1), 12.
+*Epidemiological Perspective & Innovations, 8, 1–9.
+*The effectiveness of using computer-assisted instruction for reading intervention on reading comprehension and on-task behavior of students with attention deficit hyperactivity disorders in a second language classroom (Electronic dissertation). Retrieved from OhioLINK
+*Child & Family Behavior Therapy, 34, 130–140.
+*Journal of Autism and Developmental Disorders, 10(1), 75–89. doi.
+Single case experimental designs: Strategies for studying behavior for change (3rd ed.). Upper Saddle River, NJ: Pearson Education.
+*Journal of Positive Behavior Interventions, 8, 100–105.
+School Psychology Review, 43, 260–285.
+*Child & Family Behavior Therapy, 30(1), 51–59.
+School Psychology Review, 45(1), 3–18.
+*Behavior Modification, 30, 531–563.
+Single-case research design and analysis: New directions for psychology and education (pp. 187–212). Hillsdale, NJ: Lawrence Erlbaum.
+American Journal of Speech-Language Pathology, 21, 397–414.
+Positive behavior support for people with developmental disabilities: A research synthesis. Washington, DC: American Association on Mental Retardation.
+Attention-deficit/hyperactivity disorder (ADHD). Retrieved from https://www.cdc.gov/ncbddd/adhd/data.html
+*Child & Family Behavior Therapy, 37(1), 38–50.
+The handbook of research synthesis. New York, NY: Russell Sage Foundation.
+Council for Exceptional Children standards for evidence-based practices in special education. Arlington, VA: Author.
+Behavioral Disorders, 40(1), 37–51.
+*Journal of Positive Behavior Interventions, 9(1), 15–29.
+Psychology in the Schools, 37, 135–147.
+Review of Educational Research, 83, 521–550.
+*Education & Treatment of Children, 22, 244–266.
+Behavioral Disorders, 43, 316–321.
+*Journal of Applied Behavior Analysis, 24, 387–397.
+School Psychology Review, 26(1), 5–27.
+School Psychology Review, 41, 387–412.
+*Behavior Modification, 16, 204–225.
+*International Journal of Disability, Development and Education, 53, 161–176.
+British Medical Journal, 315, 629–634.
+The fidget spinner: Useful or distracting? Retrieved from http://solutionsforliving.ca/2017/09/the-fidget-spinner-useful-or-distracting/
+Doing naturalistic inquiry: A guide to methods. Thousand Oaks, CA: Sage.
+Issues in clinical child psychology. Handbook of school mental health: Research, training, practice, and policy (pp. 413–426). New York, NY: Springer.
+School Psychology Review, 36, 256–273.
+Clinical Child and Family Psychology Review, 18(1), 77–97.
+*Journal of the American Academy of Child & Adolescent Psychiatry, 32, 324–332.
+School Mental Health, 1(1), 26–36.
+Teacher Education and Special Education, 24, 304–314.
+*Education & Treatment of Children, 18, 226–242.
+Beyond Behavior, 20(3), 19–31.
+*Education & Treatment of Children, 33, 205–221.
+The Education for All Handicapped Children Act, 42 U.S.C. § 1983, and Section 504 of the Rehabilitation Act of 1973
+*Education & Treatment of Children, 36, 147–167.
+*Journal of Behavioral Education, 23, 287–311.
+Remedial and Special Education, 34, 44–58.
+Remedial and Special Education, 38, 353–370.
+Beyond Behavior, 20(3), 55–67.
+Research methods: Learning to become a critical research consumer. Boston, MA: Allyn & Bacon.
+The Future of Children, 6(1), 25–39.
+Remedial and Special Education, 18, 121–128.
+*Journal of Attention Disorders, 9, 301–312.
+*Journal of Behavioral Education, 22, 253–282.
+Annals of Internal Medicine, 151, 264–269.
+Journal of College Teaching & Learning (Online), 11(4), 181.
+*Child & Family Behavior Therapy, 34, 93–110.
+Behavioral Disorders, 24, 169–179.
+*Education & Treatment of Children, 35, 419–430.
+School Psychology Quarterly, 17, 242–257.
+*Behavior Therapy, 38, 95–105.
+Exceptional Children, 75, 135–150.
+*Behavior Modification, 35, 303–322.
+Journal of Clinical Child & Adolescent Psychology, 46, 661–674.
+Review of Educational Research, 72, 61–99.
+Exceptional Children, 83, 378–395.
+Focus on Exceptional Children, 32(4), 1–20.
+Learning Disabilities: A Contemporary Journal, 12(1), 21–42.
+*Exceptional Children, 71, 361–377.
+Annual Review of Psychology, 52, 59–82.
+*American Journal of Occupational Therapy, 57, 534–541.
+Behavioral Disorders, 29, 189–201.
+Behavior Research Methods, 41, 177–183.
+The role of between-case effect size in conducting, interpreting, and summarizing single-case research (NCER 2015-002). Washington, DC.
+*Journal of School Psychology, 52, 123–147.
+*Education & Treatment of Children, 22, 397–414.
+School Psychology Review, 45, 379–399.
+Exceptionality, 8(3), 149–160.
+Teaching children with attention deficit hyperactivity disorder: Instructional strategies and practices. Washington, DC: Author.
+Remedial and Special Education, 32, 521–534.
+Journal of Counseling & Development, 93, 403–411.
+Single case research: Web-based calculators for SCR analysis (Version 2.0). College Station: Texas A&M University.
+*Child Behavior Therapy, 1, 171–192.
+*Child & Family Behavior Therapy, 35(1), 63–81.
+International Journal of Sports Physical Therapy, 7, 452–460.
+*Education & Treatment of Children, 36, 147–167. [duplicate entry]
+*Journal of Behavioral Education, 23, 421–434.
+*Child & Family Behavior Therapy, 14(2), 53–73.
+Journal of Special Education, 37, 193–199.
+Cochrane Developmental, Psychosocial and Learning Problems Group, (12), CD003018.
+
+CITING ARTICLES (partial, from SAGE page)
+- El mimo en la inclusión de estudiantes con TDAH a la clase de educación física
+- Technology based self-monitoring for a student with EBD to improve academic engagement
+- Effects of active breaks on educational achievement in children with and without ADHD: study protocol and rationale of the Break4Brain project
+- Academic and Behavioral Strategies in Inclusive Settings for Students With EBD: A Meta Analysis
+- Improving the efficacy and effectiveness of evidence-based psychosocial interventions for ADHD in children and adolescents
+- Reconceptualizing the approach to supporting students with ADHD in school settings
+- Experimental Evaluation of the Impact of Lived Experience and Personal Story on Neuroscience Knowledge Translation Effectiveness: Sharing the Neuroscience of ADHD with Pre-Service Teachers
+- Interventions for Young Children's Mental Health: A Review of Reviews
+
+ACCESS INFORMATION
+Full text available to subscribers via: https://doi.org/10.3102/0034654319857038
+No open-access version identified via Unpaywall, PubMed Central, Semantic Scholar, or ERIC as of search date.

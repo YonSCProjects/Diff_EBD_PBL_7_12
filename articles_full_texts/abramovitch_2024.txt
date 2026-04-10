@@ -1,0 +1,1298 @@
+SOURCE: http://www.neuropsychopathology.com/uploads/4/6/0/4/46045287/abramovitch_et_al_2024_psychosocial_burden_of_ocd_in_youth.pdf
+TITLE: The psychosocial and educational burden of obsessive-compulsive disorder in youth
+
+Research paper
+The psychosocial and educational burden of obsessive-compulsive disorder 
+in youth
+Amitai Abramovitch a,b,*, Bowie Duncan a,b, Mckenzie Schuyler b, Daniel A. Geller b,c
+a Department of Psychology, Texas State University, 601 University Drive, San Marcos, TX 78666, USA
+b Department of Psychiatry, Massachusetts General Hospital, 185 Cambridge Street, Suite 2000, Boston, MA 02114, USA
+c Department of Psychiatry, Harvard Medical School, 185 Cambridge Street, Suite 2000, Boston, MA 02114, USA
+A R T I C L E  I N F O
+Keywords:
+Functional impairments
+Family
+OCD
+Comorbidity
+Children
+A B S T R A C T
+Background: Pediatric OCD is associated with functional impairment in multiple environments. However, rela­
+tively little is known about the impact of comorbid conditions, as well as OCD severity on psychosocial func­
+tioning in this population. Furthermore, most studies did not include a control sample, nor examined differences 
+between children and adolescents. The goal of this investigation was to assess psychosocial functioning and its 
+associations with age, symptom severity, and comorbid conditions in a large well characterized sample of pe­
+diatric OCD probands, and controls.
+Methods: Participants included 117 pediatric OCD probands and 147 controls, that underwent a careful diag­
+nostic process, and completed several questionnaires and interviews.
+Results: Results revealed significant psychosocial impairments across multiple domains/settings, some of which 
+were affected by symptom severity as well as by conduct related comorbidities and to a lesser extent affective 
+disorders. In addition, different aspects of psychosocial impairments were found between children and 
+adolescents.
+Conclusion: This study provides high resolution information regarding the types and extent of psychosocial 
+dysfunction in youth with OCD, as well as its relationship with clinical and diagnostic correlates. It is recom­
+mended that evaluation and management of OCD in youth in research and clinical settings regularly include 
+qualitative and semi-quantitative assessment of function across these domains.
+1. Introduction
+Obsessive-compulsive disorder (OCD) is a common and potentially 
+debilitating condition affecting approximately 1–2 % of adults and 1–3 
+% of children and adolescents (Fawcett et al., 2020; Flament et al., 1988; 
+Rapoport et al., 2000). While obsessive thoughts and compulsive rituals 
+are the hallmark symptoms of OCD, the disorder is also frequently 
+accompanied by functional deficits across a wide range of domains, 
+which is integral to the diagnosis (American Psychiatric Association, 
+2013). Indeed, functional impairments have been consistently docu­
+mented among adults with OCD, demonstrating that many struggle to 
+work efficiently, complete household duties, and manage relationships 
+and broader social responsibilities (e.g., Eisen et al., 2006; Jacoby et al., 
+2014; Lochner et al., 2003; Vikas et al., 2011; Wetterneck et al., 2020). 
+However, most cases of OCD begin during childhood or adolescence 
+(Dell'Osso et al., 2016), necessitating the study of the impact of 
+functional impairment in this age group.
+Compared to the adult OCD literature there is relatively limited 
+research examining psychosocial functioning in youth with OCD. Extant 
+research indicates impairments across several domains, including aca­
+demic performance, family and peer relationships, and activities of daily 
+living (Piacentini et al., 2003; Stewart et al., 2017; Weidle et al., 2014). 
+In the largest study to date (n = 151), Piacentini et al. (2003) found that 
+nearly 90 % of children with OCD report impairment in at least one 
+domain and almost 50 % endorse impairment in at least three domains. 
+Further, studies show that functional impairments in youth with OCD 
+are positively associated with symptoms-severity across several symp­
+tomatic domains in both adults and youth with OCD (Storch et al., 
+2009a; Storch et al., 2010a). Finally, one follow-up study (Thomsen, 
+1995) suggested that functional impairments in youth with OCD may 
+persist into adulthood, albeit in different forms.
+* Corresponding author at: Department of Psychology, Texas State University, San Marcos, TX, USA.
+E-mail address: abramovitch@txstate.edu (A. Abramovitch). 
+Contents lists available at ScienceDirect
+Journal of Affective Disorders
+journal homepage: www.elsevier.com/locate/jad
+https://doi.org/10.1016/j.jad.2024.09.022
+Received 21 July 2024; Received in revised form 4 September 2024; Accepted 6 September 2024  
+Journal of A�ective Disorders 367 (2024) 678–685 
+Available online 8 September 2024 
+0165-0327/© 2024 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+
+1.1. Academic functioning
+School presents an environment for socialization and intellectual 
+development of youth; yet obsessive-compulsive symptoms can interfere 
+with school functioning in a variety of ways. For instance, engaging in 
+rituals in school may result in repeated class disruptions, social alien­
+ation or recurring tardiness, while obsessive thoughts may diminish 
+focus on assignments or lead to procrastination and avoidance (Fischer- 
+Terworth, 2013; Piacentini et al., 2003). Indeed, one of the most com­
+mon child- and parent-reported OCD-related impairments are related to 
+school work and homework, with endorsement ranging from 32 % to 47 
+% (Piacentini et al., 2003). This is consistent with findings from more 
+recent studies in which children with OCD reported being most affected 
+by their symptoms in the school domain (du Plessis et al., 2022). Similar 
+work suggests that parents may under-recognize the effects of OCD on 
+their child's academic performance (Stewart et al., 2017). Interestingly, 
+in a large neuropsychological study of youth with OCD, Geller et al. 
+(2018) found that underperformance on cognitive tests did not meet the 
+definition of cognitive impairments, leading the authors to suggest that 
+these relative weaknesses may be overlooked by school systems (Geller 
+et al., 2018). This may also imply that impairments in school settings 
+may be more related to the child's state, as they are driven more by OCD 
+symptoms and to a lesser extent by cognitive deficiencies on the trait 
+level. Taken together, these factors may contribute to the worse long- 
+term educational attainment documented in people with OCD (P´erez- 
+Vigil et al., 2018).
+Despite the relative neurocognitive weaknesses and various case- 
+specific functional impairments experienced by children in the school 
+environment, less than a handful of studies have examined whether this 
+amounts to elevated special education requirements or repeated grades 
+in children with OCD (Geller et al., 2000; Joshi et al., 2010). One study 
+examining children with OCD seen at specialized and nonspecialized 
+clinics found that 19 % of those assessed repeated a grade, while 35 % 
+were placed in a special class and 46 % received extra help in school. 
+Another study of children with ADHD with and without comorbid OCD 
+found that the presence of OCD did not increase rates of special classes, 
+repeated grades, and tutoring (Geller et al., 2000). Therefore, when 
+examining everyday function in pediatric OCD, there is a need to assess 
+the role of comorbid conditions, especially with regards to disorders that 
+are associated with academic and behavioral difficulties.
+1.2. Social and daily living function
+Children with OCD have also been found to suffer from impairments 
+in social adjustment and activities of daily living. These include im­
+pairments in communication and socialization skills (Sukhodolsky et al., 
+2005), as well as with household chores and bathing/grooming 
+(Piacentini et al., 2003). In the interpersonal domain, youth with OCD 
+may struggle to make and keep friends or participate in after school 
+activities (Piacentini et al., 2003). Indeed, some reports indicate that up 
+to three-quarters of youth with OCD suffer to some extent from inter­
+personal problems with friends (du Plessis et al., 2022; Piacentini et al., 
+2003; Valderhaug and Ivarsson, 2005).
+1.3. Family functioning
+Finally, the impacts of pediatric OCD extend beyond the affected 
+child to the entire family unit. A majority (66 %–70 %) of parents of 
+children with OCD report problems at home (Piacentini et al., 2003; 
+Valderhaug and Ivarsson, 2005). Specifically, some studies identified 
+frequent disruption of family routines, primarily morning and bedtime 
+tasks and mealtimes, in families of children with OCD (Stewart et al., 
+2017). Other studies suggest that difficulties in functioning experienced 
+by families of children with OCD may be attributable to comorbid 
+conditions. For example, one study comparing children with OCD to 
+children with OCD with comorbid ADHD found that although OCD alone 
+was associated with psychosocial impairments, the presence of comor­
+bid ADHD was associated with increased family dysfunction 
+(Sukhodolsky et al., 2005). Research examining the role of other 
+comorbidities suggests that the family environments of OCD patients 
+may be characterized by low levels of cohesion and high levels of con­
+flict, especially in the presence of comorbid affective disorders 
+(Canavera et al., 2010; Langley et al., 2010), though more work is 
+needed to elucidate the impact of different types of comorbidity cate­
+gories related to family function among youth with OCD.
+This body of research has some limitations including small sample 
+sizes and lack of control samples. In addition, although most youth with 
+OCD suffer from comorbid conditions, the impact of such conditions on 
+psychosocial functioning is relatively under-studied. Likewise, although 
+the presence of academic impairment in youth with OCD has been 
+documented, it is unclear how often these difficulties lead to school 
+interventions (e.g., special classes, extra help), or repeated grades, and 
+their association with OCD symptoms severity remains underesearched.
+Therefore, the aim of the present study is to fill in these gaps in 
+research and to extend previous findings by examining rates of psy­
+chosocial and educational impairment in a large, well-characterized 
+sample of youths with and without OCD, and by investigating the 
+extent to which comorbidities and symptom-severity are associated with 
+functional impairment in these domains. Considering the available 
+research, we hypothesized that youth with OCD would demonstrate 
+increased family conflict and decreased cohesion and greater social 
+dysfunction across school functioning, spare time activities, peer re­
+lationships and home behavior. Based on limited previous educational 
+findings and due to the burden of current psychopathology, we hy­
+pothesized that children with OCD would require higher rates of 
+educational accommodations than controls. Finally, given that conduct 
+related disorders are associated with significant problems in psychoso­
+cial functioning among youths (Eskander, 2020) we hypothesize that 
+comorbid conduct related disorders may be associated with worse psy­
+chosocial functioning among youth diagnosed with OCD, and to a lesser 
+extent, comorbid affective and anxiety disorders.
+2. Material and method
+2.1. Participants
+The OCD proband group (n = 118) was recruited as part of a large 
+OCD family study (NIMH K08MH01481) conducted at Massachusetts 
+General Hospital. Of the entire proband sample, 15 % were recruited 
+through advertising and direct clinician referral and the remaining were 
+patients referred to the OCD clinic. Inclusion criteria included ages be­
+tween 6 and 17 years, a primary diagnosis of OCD, and basic English 
+language proficiency. Exclusion criteria were any major sensorimotor 
+disability (e.g., deafness or blindness), an eating disorder, psychosis, 
+autism, or pervasive developmental disorder. The control group (n =
+142) was comprised of identically designed contemporaneous case­
+–control family studies of youths obtained from pediatric settings. 
+Detailed research methodology can be found elsewhere (Biederman 
+et al., 2002; Rosenbaum et al., 2000). In brief, these studies assessed 
+families based on cases and controls (i.e., ADHD cases, and non-ADHD 
+controls) children aged 6–17 years at time of participation. The same 
+team of highly trained raters conducted all interviews, using the same 
+assessment battery, therefore avoiding a cohort effect. For the present 
+study, a random sample of biological siblings of the non-ADHD control 
+participants was selected that matched the OCD proband sample on age 
+and gender. In addition to excluding participants with a lifetime or 
+current diagnosis of OCD, exclusion criteria were the same as the OCD 
+proband sample. We did not exclude participants with other disorders 
+from the control group in order to compare probands to ‘normal’ control 
+sample that more closely represents community rates of disorders 
+instead of a ‘super-normal control’ sample with all disorders screened 
+out that may inflate differences between the sample and hinder 
+A. Abramovitch et al.                                                                                                                                                                                                                          
+Journal of A�ective Disorders 367 (2024) 678–685 
+679
+
+generalizability. Demographic information is presented in Table 1.
+2.2. Measures
+2.2.1. Diagnostic assessment
+To assess and record past and current psychiatric disorders we used 
+the Kiddie Schedule for Affective Disorders and Schizophrenia (Kiddie 
+SADS-E; Orvaschel et al., 1982). The Kiddie SADS-E is a structured 
+diagnostic interview focusing on current psychiatric status of children 
+ages 6 to 17 concentrating only on the presence or absence of symptoms 
+of psychiatric disorders.
+2.2.2. Obsessive-compulsive symptom severity
+The Children's Yale-Brown Obsessive-Compulsive Scale (CY-BOCS; 
+Scahill et al., 1997) was used to assess severity of obsessive-compulsive 
+symptoms, and was administered by one of the study authors (DG). The 
+CY-BOCS is a semi-structured clinician administered interview consist­
+ing of a symptom checklist, and a 10-item severity scale. Each item is 
+rated from 0 (none) to 4 (extreme), and the total score ranges from 0 to 
+40 with higher scores indicating a greater severity of symptoms. The CY- 
+BOCS is considered a ‘gold-standard’ measure of OCD symptoms in 
+youth and is characterized by strong psychometric properties (Storch 
+et al., 2004). The CY-BOCS total score demonstrated very good internal 
+consistency in the present study (Cronbach's α = 0.87).
+2.2.3. Social adjustment
+To assess social adjustment, we used the Social Adjustment Inventory 
+for Children and Adolescents (SAICA; John et al., 1987). The SAICA is a 
+semi-structured interview consisting of 77 items that cover four domains 
+of performance: school, spare time activities, peer relations, and home 
+functioning. Each area is evaluated from items that assess competence 
+behaviors and potential behavioral problems within those areas. The 
+SAICA consists of 35 competence items where higher scores indicate 
+reduced competency (scored from 1, “very competent/involved in the 
+activity”, to 4, “not at all competent/involved in the activity”) and 42 
+behavioral problem items where higher scores indicate more severe 
+problems (scored from 1, “not at all a problem”, to 4, “a severe problem 
+for the child”). Notably, two types of questions related to intimate re­
+lationships (i.e., boy-girl relationships, and problems with the opposite 
+sex) were not relevant to younger participatns and thus were not 
+administered to pre-adolescent aged children. The SAICA demonstrated 
+good internal consistency in the present study (α = 0.73).
+2.2.4. Family environment
+To assess multiple aspects of family social environments, we used the 
+Family Environment Scale 3rd Edition (FES; Moos and Moos, 1994). The 
+FES consists of three forms (Real, Ideal, and Expectations) to assess 
+perceptions of current family environment, preferences about an ideal 
+family environment, and expectations about family settings. It consists 
+of 10 subscales: cohesion, expressiveness, conflict, independence, 
+achievement, intellectual-cultural, active-recreational, moral-religious, 
+organization, and control, that measure each of the three forms in 
+three dimensions: relationship dimension, personal growth dimension, 
+and system maintenance dimension. Each subscale scores range from 
+0 to 9.
+We compared the probands and controls on six of the outcomes from 
+the FES: expression past, expression current, conflict past, conflict cur­
+rent, cohesion past, and cohesion present. The expressiveness subscale 
+assesses the extent to which family members are encouraged to act 
+openly and express their feelings directly. The conflict subscale mea­
+sures the amount of openly expressed anger, aggression and conflict 
+among family members, and the cohesion subscale measures the degree 
+of commitment, help, and support family members provide for one 
+another. In the present study, the FES demonstrated very good internal 
+consistency for the expressiveness, conflict, and cohesion subscales (α =
+0.87, 0.88, and 0.82, respectively).
+2.2.5. Academic functioning
+Academic performance was reported in 3 categories: repeating a 
+grade, special class placement (past and current), and extra help (past 
+and current). Participation in a special class was defined as attending a 
+special classroom for learning disabilities with special education 
+teachers. The extra help variable was defined as receiving special edu­
+cation services that were provided as part of a school based 504 plan or a 
+federal IEP plan that usually involves extra one-on-one support, either 
+within the classroom with an aide or in a special classroom setting. In­
+formation was obtained from the participants' parents.
+2.3. Procedure
+A parent or legal guardian of all participants signed informed con­
+sent, and every participant received monetary compensation as part of 
+the family study. The study was approved by the McLean/Massachusetts 
+General Hospital IRB. Clinical assessments were conducted in a stan­
+dardized fashion following published guidelines. Using blind indepen­
+dent interviews with patients' mothers as well as direct interviews with 
+patients, the Kiddie SADS-E was used for psychiatric assessments. 
+Trainers were blinded to the clinical status of subjects and were iden­
+tically trained to evaluate participants of both groups. Each source of 
+information from direct and indirect Kiddie SADS-E was blindly weighed 
+by a diagnostic review team using the Best Estimate method described 
+by Leckman and colleagues (Leckman et al., 1982) yield diagnoses as 
+well as clinical judgements using the information from each report. 
+Diagnoses were definite if DSM-IV criteria (American Psychiatric Asso­
+ciation, 2000) were met and considered to be clinically significant. 
+Resolution of discrepancies between parents and children were met by 
+using both parent and children reports and a consensus algorithm that 
+accounted for the more severe rating from either source. Then, a clinical 
+interview was performed by an expert child psychiatrist (DG) on chil­
+dren and adolescents. Additionally, DG administered the CY-BOCS, the 
+Yale Global Tic Severity Scale (Leckman et al., 1989), and in favor of the 
+informant deemed most reliable, resolved any discrepancies between 
+parent and child reports. Age of onset was identified using the age at 
+which symptoms were estimated to be clinically impairing as defined by 
+when overall daily symptom presentation equaled or was greater than 
+one hour as indicated by a score of greater than or equal to two on CY- 
+BOCS severity items 1 and 6. In addition, if subjective distress was more 
+than mild as indicated by a score of two or higher on the CY-BOCS 
+severity items 3 and 8, and if function impairment was at least moder­
+ate as indicated by a score of greater than or equal to two on CY-BOCS 
+severity items 2 and 7.
+2.4. Statistical analysis
+All analyses were run using version 27.0 of the Statistical Package for 
+the Social Sciences (IBM Corp., 2020). For nominal variables we used 
+Table 1 
+Demographic and clinical characteristics.
+Measure
+OCD 
+(n = 118)
+Control 
+(n = 142)
+F 
+(1,258)
+Х2
+p
+M
+SD
+M
+SD
+Age M (SD)
+11.51
+3.07
+11.49
+3.04
+0.002
+0.97
+Sex at birth % 
+female (n)
+40.68 % (48)
+42.25 % (60)
+0.065
+0.066
+0.80
+CY-BOCS Total
+21.24
+5.34
+CY-BOCS 
+Obsessions
+11.11
+2.90
+CY-BOCS 
+Compulsions
+9.94
+2.92
+Note. CY-BOCS, Children's Yale-Brown Obsessive-Compulsive Scale; OCD, 
+obsessive-compulsive disorder.
+A. Abramovitch et al.                                                                                                                                                                                                                          
+Journal of A�ective Disorders 367 (2024) 678–685 
+680
+
+Chi-squared analyses for group comparison. Additionally, a series of 
+Analysis of Variance (ANOVA) tests were used for group comparisons for 
+continuous variables. To examine the association between continuous 
+variables, we used a series of zero-order Persons's correlations. Since 
+younger youths were not asked about two SAICA items involving 
+romantic relationships, to examine the association between the CY- 
+BOCS and SAICA outcomes, stepwise regressions were performed 
+separately within the two age groups of adolescents, and children (under 
+the age of 13 and age 13 and above).
+3. Results
+3.1. Demographics
+The groups did not differ significantly on age (p = .97) or sex (p =
+.80), and the OCD group's CY-BOCS total score reflected an overall 
+moderate degree of severity (see Table 1).
+3.2. Social adjustment
+The ANOVA comparing means across SAICA factors revealed 
+mulitple significant differences between OCD probands and controls 
+(see Table 2). As such, children with OCD scored significantly higher on 
+social adjustment impairment scales assessing school behavior prob­
+lems, spare time activities, spare time problems, activities with peers, 
+problems with parents, as well as on the SAICA total score. Notably, 
+large effect sizes were found for spare time activities, and activities with 
+peers, whereas small-medium effect sizes were found for the other 
+outcomes, and a medium effect for the SAICA total score. No other 
+significant differences were found on the rest of the SAICA factors.
+A series of zero-order correlations were computed to examine asso­
+ciations between the SAICA factors and the CY-BOCS total score in the 
+OCD sample. Significant positive correlations between the CY-BOCS 
+total score and spare time activities (r = 0.23, p = .017), activities 
+with peers (r = 0.25, p = .011), problems with the opposite sex (r = 0.33, 
+p = .012), and the SAICA total score (r = 0.32, p = .001), all reflecting a 
+positive association between OCD severity and social adjustment prob­
+lems. Examination of the associations between the SAICA outcomes and 
+the CY-BOCS obsessions score revealed similar significant positive cor­
+relations with spare time activities (r = 0.26, p = .009), activities with 
+peers (r = 0.23, p = .020), problems with the opposite sex (r = 0.32, p =
+.017), and the the SAICA total score (r = 0.35, p < .001). Similar results 
+were found when we computed correlations with the CY-BOCS com­
+pulsions severity score. Specifically, significant correlations were found 
+with activities with peers (r = 0.25, p = .011), problems with the 
+opposite sex (r = 0.33, p = .013), and the SAICA total score (r = 0.24, p 
+= .012).
+Finally, boy-girl relationships - examined within OCD probands 13 
+years old and older - resulted in significant positive correlations with the 
+CY-BOCS total score (r = 0.45, p < .001), CY-BOCS obsession severity 
+scores (r = 0.43, p = .001), and CY-BOCS compulsion severity scores (r 
+= 0.45, p < .001), exemplifying positive associations between OCD 
+severity and problems on these domains. No other significant correla­
+tions were found (see Table 3) with CY-BOCS scores.
+To examine the relative impact of OCD symptom severity on 
+different SAICA domains, an exploratory stepwise regression analyses 
+examining the association between of SAICA factors and the CY-BOCS 
+total score separately for youth younger than, or 13 and older were 
+calculated. Within the younger OCD proband group, only one SAICA 
+factor, ‘school behavior problems,’ was significantly associated with the 
+CY-BOCS total score (F(1, 56) = 4.75, p = .03, R2 = 0.078). On the other 
+hand, in youth 13 and older, stepwise regression revealed that four 
+outcome measures were significantly associated with the CY-BOCS total 
+score (boy-girl relationships, problems with the opposite sex, problems 
+with parents, and spare time activities). The final model was found to be 
+significant (p < .01), accounting for 55.3 % of the variance (see Table 4). 
+Interestingly, the SAICA factor ‘problems with parents’ was a negative 
+predictor, meaning that increased OCD severity was related to reduced 
+problems with parents among teens.
+3.3. Family environment
+To examine group differences related to the family environment, a 
+series of ANOVAs comparing FES subscales between the OCD and con­
+trol groups were conducted. Results revealed significant differences 
+between the two groups on cohesion (current and past), and conflict 
+Table 2 
+Comparison between OCD probands and controls on social adjustment indices.
+SAICA factors
+OCD
+Controls
+F
+p
+d
+M
+SD
+M
+SD
+School behavior 
+problems
+1.91
+0.70
+1.62
+0.65
+11.08
+<0.01
+0.44
+Spare time 
+activities
+2.36
+0.56
+1.87
+0.54
+46.87
+<0.01
+0.90
+Spare time 
+problems
+1.69
+0.65
+1.46
+0.58
+8.51
+<0.01
+0.38
+Activities with 
+peers
+2.14
+0.78
+1.64
+0.63
+29.51
+<0.01
+0.71
+Problems with 
+peers
+1.63
+0.74
+1.47
+0.61
+3.15
+0.08
+0.23
+Boy-girl 
+relationships*
+2.52
+0.83
+2.31
+0.86
+1.83
+0.18
+0.25
+Problems with 
+opposite sex*
+1.23
+0.50
+1.37
+0.55
+1.87
+0.17
+−0.25
+Relationship with 
+siblings
+1.79
+0.70
+1.70
+0.66
+1.04
+0.31
+0.14
+Problems with 
+siblings
+1.49
+0.67
+1.54
+0.64
+0.29
+0.59
+−0.07
+Relationship with 
+mother
+1.39
+0.53
+1.44
+0.65
+0.37
+0.55
+−0.08
+Relationship with 
+father
+1.60
+0.67
+1.57
+0.75
+0.12
+0.73
+0.05
+Problems with 
+parents
+1.58
+0.70
+1.28
+0.51
+13.55
+<0.01
+0.49
+SAICA Total Score
+1.78
+0.36
+1.57
+0.38
+18.37
+<0.01
+0.56
+Note. SAICA, Social adjustment inventory for children and adolescents; OCD, 
+obsessive-compulsive disorder; d, Cohen's d. * Due to the nature of these items 
+only adolescents were asked to respond to these items (OCD n = 56, Controls n =
+62). Bold font indicates significant results.
+Table 3 
+Correlations between SAICA and CY-BOCS.
+SAICA factors
+CY-BOCS 
+Obs
+CY-BOCS 
+Com
+CY-BOCS 
+total
+r
+r
+r
+School behavior problems
+0.13
+0.17
+0.14
+Spare time activities
+0.26**
+0.15
+0.23*
+Spare time problems
+0.12
+0.10
+0.12
+Activities with peers
+0.23*
+0.25*
+0.25*
+Problems with peers
+0.14
+0.07
+0.12
+Boy-girl relationships ±
+0.43**
+0.45**
+0.45**
+Problems with opposite sex  
+±
+0.32*
+0.33*
+0.33*
+Relationship with siblings
+0.09
+−0.02
+0.04
+Problems with siblings
+0.06
+−0.05
+0.02
+Relationship with mother
+0.17
+0.03
+0.13
+Relationship with father
+0.12
+0.05
+0.10
+Problems with parents
+0.04
+0.01
+0.04
+SAICA total
+0.35**
+0.24*
+0.32**
+Note. SAICA, The Social Adjustment Inventory for Children and Adolescents; CY- 
+BOCS, Children's Yale-Brown Obsessive-Compulsive Scale; CY-BOCS Obs, CY- 
+BOCS obsession severity score; CY-BOCS Com, CY-BOCS compulsion severity 
+score; CY-BOCS Total, CY-BOCS total score. ± Due to the nature of these items 
+only adolescents were asked to respond to these items (OCD n = −56, Controls n 
+= 62). * p < .05 ** p < .005. Bold font indicates significant correlations.
+A. Abramovitch et al.                                                                                                                                                                                                                          
+Journal of A�ective Disorders 367 (2024) 678–685 
+681
+
+(current and past). Specifically, compared to controls, the OCD group 
+had significantly lower scores on current (Cohen's d = 0.50) and past (d 
+= 0.31) cohesion, and significantly higher scores in current (d = 0.28) 
+and past (d = 0.28) conflict. No significant differences were found on 
+either subscales of ‘expression’ (see Table 5).
+A correlation analysis was performed to examine the association 
+between CY-BOCS scores and FES subscale scores. No significant cor­
+relations between the two measures were found (see Table 6).
+Similar to the SAICA analyses, we computed a stepwise regression to 
+identify relative association between the CY-BOCS total score and FES 
+outcomes. The regression model was not significant.
+3.4. School functioning
+A series of Person's Х2 tests were computed to examine group dif­
+ferences across different education accommodations and school vari­
+ables. Results revealed that the rates of past enrollment in special classes 
+in the OCD proband group (15.3 %) were significantly higher than the 
+control group (2.1 %; p < .01). Further, rates of current enrollment in 
+special classes in the OCD proband group (10.2 %) were significantly 
+higher than the control group (2.1 %; p < .01). Similarly, rates of 
+receiving extra help in the past in the OCD group (58.5 %) were 
+significantly higher than the control group (21.8 %; p < .01). Finally, the 
+rates of receiving current extra help among the OCD proband group 
+(63.8 %) were significantly higher than the control group (4.3 %; p <
+.01), entailing a 15 fold difference. However, there was no significant 
+difference between the OCD proband group and control group in 
+repeating grades (see Table 7).
+To examine the impact of OCD symptom-severity on school function, 
+a series of ANOVAs comparing the CY-BOCS total score between OCD 
+probands receiving or not receiving school accommodations revealed 
+that CY-BOCS total scores among OCD probands placed in a special class 
+(M = 23.71, SD = 5.13) were significantly higher than among those not 
+placed in a special class (M = 20.37, SD = 5.63; F(1,117) = 5.24, p =
+.024). There were no other significant differences found on CY-BOCS 
+total score between OCD probands that received or did not receive ac­
+commodations in school (see Table 8).
+Table 4 
+Stepwise regression of SAICA factor scores in CY-BOCS total score age ≥13.
+Variable
+B
+β
+SE
+p
+95 % CI
+sr2
+Step 1: F(1,31) = 11.72, p < .01, R2 = 0.274
+Boy-girl relationships
+3.51
+1.03
+1.03
+<0.01
+[1.42,5.61]
+0.52
+Step 2: F(2,30) = 9.56, p < .01, R2 = 0.389
+Boy-girl relationships
+3.19
+0.48
+0.97
+<0.01
+[1.21,5.16]
+0.52
+Problems with the opposite sex
+3.34
+0.34
+1.41
+0.02
+[0.467,6.22]
+0.40
+Step 3: F(3, 29) = 8.75, p < .01, R2 = 0.475
+Boy-girl relationships
+2.93
+0.44
+0.92
+<0.01
+[1.05,4.81]
+0.51
+Problems with the opposite sex
+3.2
+0.33
+1.33
+0.02
+[0.48,5.92]
+0.41
+Problems with parents
+−3.43
+−0.30
+1.58
+0.04
+[−6.66,−0.211]
+−0.38
+Step 4: F(4, 28) = 8.66, p < .01, R2 = 0.553
+Boy-girl relationships
+2.67
+0.40
+0.87
+0.01
+[0.88,4.45]
+0.50
+Problems with the opposite sex
+2.91
+0.30
+1.26
+0.028
+[0.34,5.48]
+0.40
+Problems with parents
+−3.63
+−0.31
+1.48
+0.021
+[−6.67,-0.60]
+−0.42
+Spare time activities
+2.77
+0.28
+1.26
+0.036
+[0.20,5.35]
+0.39
+Note. SAICA, The Social Adjustment Inventory for Children and Adolescents; CY-BOCS, The Children's Yale-Brown Obsessive-Compulsive Scale.
+Table 5 
+Family Environment Scale subdomains.
+FES subscale
+OCD
+Control
+F
+p
+d
+M
+SD
+M
+SD
+Current 
+expression
+50.65
+10.74
+53.22
+13.04
+2.56
+0.11
+0.21
+Past expression
+49.04
+12.00
+50.32
+14.99
+0.48
+0.49
+0.09
+Current 
+cohesion
+50.59
+15.27
+57.78
+13.04
+15.10
+<0.01
+0.50
+Past cohesion
+49.02
+16.90
+54.29
+16.48
+5.64
+0.02
+0.31
+Current conflict
+52.78
+12.50
+49.57
+10.70
+4.49
+0.04
+0.28
+Past conflict
+54.46
+13.71
+50.89
+11.78
+4.51
+0.04
+0.28
+Note. FES, Family Environmental Scale. Bold font indicates significant results.
+Table 6 
+Correlations between FES and CY-BOCS.
+FES subscale
+CY-BOCS Obs
+CY-BOCS Com
+CY-BOCS Total
+r
+p
+r
+p
+r
+p
+Expression current
+0.18
+0.08
+0.13
+0.20
+0.16
+0.12
+Expression past
+0.02
+0.86
+0.06
+0.56
+0.01
+0.91
+Cohesion current
+−0.08
+0.46
+0.02
+0.85
+−0.05
+0.61
+Cohesion past
+−0.07
+0.49
+−0.04
+0.70
+−0.06
+0.54
+Conflict current
+0.03
+0.81
+−0.03
+0.76
+0.01
+0.95
+Conflict past
+0.08
+0.46
+0.04
+0.72
+0.08
+0.44
+Note. FES, Family Environmental Score; CY-BOCS, Children's Yale-Brown 
+Obsessive-Compulsive Scale; CY-BOCS Com, Children's Yale-Brown Obsessive 
+Compulsive compulsions subscale; CY-BOCS Obs, Children's Yale-Brown 
+Obsessive Compulsive obsessions subscale.
+Table 7 
+School accommodations between OCD probands and controls.
+OCD
+Control
+Х2
+p
+(N = 118)
+(N = 142)
+n
+%
+n
+%
+Repeated a grade
+10
+8.5 %
+10
+7 %
+0.19
+0.67
+Special class (past)
+18
+15.3 %
+3
+2.1 %
+14.99
+<0.01
+Special class (current)
+12
+10.2 %
+1
+0.7 %
+12.15
+<0.01
+Extra help (past)
+69
+58.5 %
+31
+21.8 %
+36.56
+<0.01
+Extra help (current)
+44
+63.8 %
+6
+4.3 %
+45.36
+<0.01
+Note. OCD, Obsessive Compulsive Disorder. Bold font indicates significant 
+results.
+Table 8 
+CY-BOCS total score in OCD probands with vs without accommodations.
+CY-BOCS total score
+F
+p
+Accommodation type
+Accommodations
+No accommodations
+M
+SD
+M
+SD
+Extra help
+21.58
+5.30
+19.96
+6.00
+2.46
+0.12
+Repeated grade
+21.90
+3.81
+20.75
+5.80
+0.37
+0.54
+Special class
+23.71
+5.13
+20.37
+5.63
+5.24
+0.02
+Note. CY-BOCS, Children's Yale-Brown Obsessive-Compulsive Scale; M, mean; 
+SD, standard deviation.
+A. Abramovitch et al.                                                                                                                                                                                                                          
+Journal of A�ective Disorders 367 (2024) 678–685 
+682
+
+3.5. Comorbidities
+To examine the impact of comorbid disorders we grouped probands 
+with comorbidities into three categories that were sufficiently large to 
+allow comparative statistical analyses: 1. OCD with conduct related 
+disorders (i.e., ADHD, CD, and ODD), 2. OCD with comorbid affective 
+disorders, and 3. OCD with comorbid anxiety disorders. These groups 
+were compared to groups of OCD probands without such comorbidities. 
+No significant differences were found between the OCD group with 
+conduct related disorders and the rest of the OCD probands on the CY- 
+BOCS total score as well as on all the FES outcomes, and all school 
+functioning outcomes. However, several differences emerged on a 
+number of SAICA subscales. Results revealed that the OCD group with 
+comorbid conduct related disorders had significantly higher scores on 
+activities with peers (p = .03), problems with siblings (p < .02), prob­
+lems with parents (p < .01), and the SAICA total score (p < .01), all 
+exemplifying the additional burden of conduct related disorders on 
+these social adjustment factors. Comparing OCD probands with co­
+morbid affective disorders to the rest of the OCD proband sample 
+revealed no differences on the CY-BOCS, as well as on all SAICA and 
+school functioning outcomes. However, analyses of the FES outcomes 
+revealed differences on current (p = .03), and past conflict (p = .02), 
+where probands with comorbid affective disorders scored significantly 
+higher on those outcome measures. Finally, comparisons between OCD 
+probands with any anxiety disorder to the rest of the OCD proband 
+subsample revealed no significant differences across these outcome 
+measures.
+4. Discussion
+The present study aimed to comprehensively examine psychosocial 
+functional difficulties among a large well characterized sample of youths 
+with OCD compared to controls. A comprehensive set of functional 
+indices were assessed including relationships with peers, siblings, and 
+parents, family environment, leisure time, and school functioning and 
+accommodations. A secondary aim was to examine associations between 
+these indices and OCD symptom severity as well as the potential con­
+founding impact of comorbid conditions.
+Our results document the higher prevalence of functional impair­
+ments in several psychosocial domains among youth with OCD. Youths 
+with OCD were found to exhibit significantly more problems with school 
+behavior (e.g., being disruptive or not participating), spare time 
+behavior (e.g., having trouble playing alone, not being interested in 
+activities), and with parent interactions compared to controls. Children 
+with OCD were also found to engage less in free time activities, and with 
+their peers. These findings are in accord with previous findings 
+(Coluccia et al., 2017). In younger children (<13 years of age), only 
+school behavior problems were associated with OCD symptom severity, 
+while in those ≥13 years of age, symptom severity was associated with 
+four different factors including two factors related to heterosexual re­
+lationships. These differences may reflect the differing developmental 
+stages of the two age groups in our analysis; whereas younger children's 
+symptoms may play out in the classroom, adolescents' symptoms may 
+impact age-appropriate milestones including relationships with the 
+opposite biological sex. Interestingly, in the older age group, relative to 
+other factors, increased OCD severity was associated with less problems 
+with parents. These results may be driven by findings repeatedly indi­
+cating increased OCD severity in teens compared to children with OCD 
+(e.g., Abramovitch et al., 2022) which may promote statistically sig­
+nificant findings in this age group. In addition, it is possible that these 
+results reflect a more pronounced behavioral inhibition tendencies 
+among teens with OCD (Coles et al., 2006), and to increased parental 
+accommodation in response to increased OCD symptom severity 
+(Lebowitz et al., 2012) that may reduce conflicts with parents. Further, 
+OCD symptom severity accounted for only 7.8 % of school behavior 
+problems in the younger group, but 55.3 % in the adolescent group. This 
+may suggest that OCD has a greater impact on adolescents' functioning 
+given their increased social involvement compared to younger children.
+Our results show that families of children with OCD are character­
+ized by low levels of cohesion (the support and help that family members 
+give to each other), high levels of conflict, and normative levels of 
+expressiveness (the extent to which family members are encouraged to 
+express their emotions). Previous work has found that families of chil­
+dren with OCD experience more strain and stress, parental guilt and fear, 
+and parental anxiety, which may contribute to conflict among family 
+members and a decreased capacity to provide emotional support 
+(Murphy and Flessner, 2015; Storch et al., 2009b). Low levels of cohe­
+sion and high levels of conflict have similarly been reported in families 
+with children with bipolar disorder (Belardinelli et al., 2008). Family 
+cohesion is an important factor in children's social and cognitive 
+development. For example, research has established links between 
+strong family cohesion and academic achievement (Chawla and Derr, 
+2012) as well as weaker family cohesion and problem behaviors (Church 
+et al., 2009). Given that impairment in school functioning has been 
+documented as one of the most common areas of dysfunction for this 
+population, it is not surprising that we found significantly more youth 
+with OCD had a special class placement or received extra help in school 
+both in the past and present compared to nonpsychiatric controls. 
+However, higher OCD symptoms-severity was positively correlated with 
+only special class placement in children with OCD while there was no 
+correlation with extra help. Notably, educational impairment did not 
+amount to greater rates of repeated grades in youth with OCD compared 
+to controls, suggesting that accommodations as needed may mitigate 
+risk and cognitively minor deficiencies are not sufficient to prove 
+repeated grade level functional impairments. A previous investigation in 
+children with OCD reported rates of 7 %, 40 %, and 48 % for repeated 
+grades, special class placement, and remedial help, respectively (Geller 
+et al., 1996). While this rate of repeated grades is in accord with our 
+findings, we found a lower occurrence of special class placement and a 
+higher occurrence of extra help. This discrepancy may be related to the 
+sample's composition since all participants in the Geller et al. (1996)
+were recruited from a pediatric OCD specialty clinic, but about one sixth 
+of OCD probands comprising the present study's sample were recruited 
+through advertising or physician referral.
+Finally, examination of the impact of comorbid disorders showed 
+that comorbidity of OCD with any of the three categories (i.e., conduct 
+related disorders, affective disorders, and anxiety disorders) did not 
+impact OCD severity, or school functioning. However, comorbid 
+conduct related disorders (i.e., ADHD, CD, ODD) were associated with 
+worse functioning with peers, siblings, and parents. These results are in 
+accordance with multiple studies indicating that comorbidity with these 
+disorders are associated with lower quality of life and increased func­
+tional impairment in OCD youth (Geller et al., 1996; Storch et al., 
+2010b). Interestingly, comorbid affective disorders only had an impact 
+on family conflict but not on other measures of psychosocial functions, 
+school functioning, or OCD severity, whereas comorbid anxiety disor­
+ders did not demonstrate any significant impact across study outcomes. 
+These results reflect previous research showing that affective symptoms 
+have a significant impact on quality of life and functioning, whereas 
+anxiety related comorbidities do not possess such effect (e.g., Vivan Ade 
+et al., 2013). However, it is important to note that our findings related to 
+anxiety disorders or to the lack of additional impact of conduct related 
+disorders on school functioning do not suggest that these comorbid 
+disorders are not associated with psychosocial dysfunction, but rather 
+that their presence among youths with OCD does not add additional 
+burden on specific psychosocial facets.
+5. Conclusion
+Taken together, the results of this study strongly indicate that pedi­
+atric OCD is associated with a host of psychosocial impairments across 
+multiple life domain, that are largely associated with OCD severity, and 
+A. Abramovitch et al.                                                                                                                                                                                                                          
+Journal of A�ective Disorders 367 (2024) 678–685 
+683
+
+that some aspects of psychosocial functioning may be further exacer­
+bated by the presence of comorbid conduct related, and affective dis­
+orders. These findings suggest that effective treatment for OCD in youth 
+may lead to improvement in psychosocial functioning. However, sur­
+prisingly, there is a dearth of research on the subject. Nevertheless, 
+existing studies suggest that among youth with OCD, symptom reduction 
+in the context of treatment leads to significant improvement in psy­
+chosocial functioning across domains (Sperling et al., 2020). Therefore, 
+there is a need for additional research in this specific area. In addition, 
+psychosocial functioning is rarely assessed in clinical settings, where the 
+focus is usually on symptom reduction. Clinicians are therefore advised 
+to address and monitor psychosocial functioning in the context of CBT 
+for pediatric OCD. Furthermore, the results of the present study, along 
+with evidence highlighting the lack of proficiency in identifying and 
+treating OCD in school settings and the limited use of OCD assessment 
+measures in schools (Sloman et al., 2007), emphasize the critical need 
+for training school psychologists in the assessment and treatment of 
+pediatric OCD. Finally, future research should address the open question 
+regarding the relative contribution of OCD related symptoms (e.g., 
+reassurance seeking, reduced confidence in memory) versus neuro­
+cognitive function in accounting for psychosocial impartments, partic­
+ularly in school settings.
+Funding
+This work was supported by the National Institute of Mental Health 
+[grant numbers K08 MH01481].
+CRediT authorship contribution statement
+Amitai Abramovitch: Writing – review & editing, Writing – original 
+draft, Methodology, Investigation, Formal analysis, Conceptualization. 
+Bowie Duncan: Writing – review & editing, Writing – original draft, 
+Formal analysis. Mckenzie Schuyler: Writing – review & editing, 
+Writing – original draft. Daniel A. Geller: Writing – review & editing, 
+Supervision, Resources, Project administration, Investigation, Funding 
+acquisition, Data curation, Conceptualization.
+Declaration of competing interest
+The authors declare the following financial interests/personal re­
+lationships which may be considered as potential competing interests: 
+Daniel Geller reports financial support was provided by National Insti­
+tute of Mental Health. If there are other authors, they declare that they 
+have no known competing financial interests or personal relationships 
+that could have appeared to influence the work reported in this paper.
+Acknowledgments
+None.
+References
+Abramovitch, A., Abramowitz, J.S., McKay, D., Cham, H., Anderson, K.S., Farrell, L., 
+Geller, D.A., Hanna, G.L., Mathieu, S., McGuire, J.F., Rosenberg, D.R., Stewart, S.E., 
+Storch, E.A., Wilhelm, S., 2022. The OCI-CV-R: a revision of the obsessive- 
+compulsive inventory - child version. J. Anxiety Disord. 86, 102532.
+American Psychiatric Association, 2000. Diagnostic Manual of Mental Disorders, 4th ed.
+American Psychiatric Association, 2013. Diagnostic Manual of Mental Disorders, 5th ed. 
+Washington, DC. 
+Belardinelli, C., Hatch, J.P., Olvera, R.L., Fonseca, M., Caetano, S.C., Nicoletti, M., 
+Pliszka, S., Soares, J.C., 2008. Family environment patterns in families with bipolar 
+children. J. Affect. Disord. 107, 299–305.
+Biederman, J., Mick, E., Faraone, S.V., Braaten, E., Doyle, A., Spencer, T., Wilens, T.E., 
+Frazier, E., Johnson, M.A., 2002. Influence of gender on attention deficit 
+hyperactivity disorder in children referred to a psychiatric clinic. Am. J. Psychiatry 
+159, 36–42.
+Canavera, K.E., Ollendick, T.H., May, J.T.E., Pincus, D.B., 2010. Clinical correlates of 
+comorbid obsessive–compulsive disorder and depression in youth. Child Psychiatry 
+Hum. Dev. 41, 583–594.
+Chawla, L., Derr, V., 2012. The Development of Conservation Behaviors in Childhood 
+and Youth, The Oxford Handbook of Environmental and Conservation Psychology. 
+Oxford University Press, New York, NY, US, pp. 527–555.
+Church, W.T., Wharton, T., Taylor, J.K., 2009. An examination of differential association 
+and social control theory:family systems and delinquency. Youth Violence Juvenile 
+Justice 7, 3–15.
+Coles, M.E., Schofield, C.A., Pietrefesa, A.S., 2006. Behavioral inhibition and obsessive- 
+compulsive disorder. J. Anxiety Disord. 20, 1118–1132.
+Coluccia, A., Ferretti, F., Fagiolini, A., Pozza, A., 2017. Quality of life in children and 
+adolescents with obsessive–compulsive disorder: a systematic review and meta- 
+analysis. Neuropsychiatr. Dis. Treat. 13, 597–608.
+Dell’Osso, B., Benatti, B., Hollander, E., Fineberg, N., Stein, D.J., Lochner, C., 
+Nicolini, H., Lanzagorta, N., Palazzo, C., Altamura, A.C., Marazziti, D., Pallanti, S., 
+Van Ameringen, M., Karamustafalioglu, O., Drummond, L.M., Hranov, L., Figee, M., 
+Grant, J.E., Zohar, J., Denys, D., Menchon, J.M., 2016. Childhood, adolescent and 
+adult age at onset and related clinical correlates in obsessive-compulsive disorder: a 
+report from the International College of Obsessive-Compulsive Spectrum Disorders 
+(ICOCS). Int. J. Psychiatry Clin. Pract. 20, 210–217.
+du Plessis, L.J., Lochner, C., Louw, D., Hendricks, G., Bowles, S., Fischer, M., Stein, D.J., 
+Thomas, K.G.F., 2022. A comprehensive view of functional impairment in children 
+and adolescents with obsessive-compulsive disorder adds value. Early Interv. 
+Psychiatry 16, 994–1001.
+Eisen, J.L., Mancebo, M.A., Pinto, A., Coles, M.E., Pagano, M.E., Stout, R., Rasmussen, S. 
+A., 2006. Impact of obsessive-compulsive disorder on quality of life. Compr. 
+Psychiatry 47, 270–275.
+Eskander, N., 2020. The psychosocial outcome of conduct and oppositional defiant 
+disorder in children with attention deficit hyperactivity disorder. Cureus 12, e9521.
+Fawcett, E.J., Power, H., Fawcett, J.M., 2020. Women are at greater risk of OCD than 
+men: a meta-analytic review of OCD prevalence worldwide. J. Clin. Psychiatry 81.
+Fischer-Terworth, C., 2013. Obsessive-compulsive disorder in children and adolescents: 
+impact on academic and psychosocial functioning in the school setting. Life Span 
+Disabil. 16, 127–155.
+Flament, M.F., Whitaker, A., Rapoport, J.L., Davies, M., Berg, C.Z., Kalikow, K., 
+Sceery, W., Shaffer, D., 1988. Obsessive compulsive disorder in adolescence: an 
+epidemiological study. J. Am. Acad. Child Adolesc. Psychiatry 27, 764–771.
+Geller, D.A., Biederman, J., Griffin, S., Jones, J., Lefkowitz, T.R., 1996. Comorbidity of 
+juvenile obsessive-compulsive disorder with disruptive behavior disorders. J. Am. 
+Acad. Child Adolesc. Psychiatry 35, 1637–1646.
+Geller, D.A., Biederman, J., Faraone, S.V., Frazier, J., Coffey, B.J., Kim, G., Bellordre, C. 
+A., 2000. Clinical correlates of obsessive compulsive disorder in children and 
+adolescents referred to specialized and non-specialized clinical settings. Depress. 
+Anxiety 11, 163–168.
+Geller, D.A., Abramovitch, A., Mittelman, A., Stark, A., Ramsey, K., Cooperman, A., 
+Baer, L., Stewart, S.E., 2018. Neurocognitive function in paediatric obsessive- 
+compulsive disorder. World J. Biol. Psychiatry 19, 142–151.
+IBM Corp, 2020. IBM SPSS Statistics for Windows 27.0. IBM Corp, Armonk, NY. 
+Jacoby, R.J., Leonard, R.C., Riemann, B.C., Abramowitz, J.S., 2014. Predictors of quality 
+of life and functional impairment in obsessive-compulsive disorder. Compr. 
+Psychiatry 55, 1195–1202.
+John, K., Gammon, G.D., Prusoff, B.A., Warner, V., 1987. The social adjustment 
+inventory for children and adolescents (SAICA): testing of a new semistructured 
+interview. J. Am. Acad. Child Adolesc. Psychiatry 26, 898–911.
+Joshi, G., Wozniak, J., Petty, C., Vivas, F., Yorks, D., Biederman, J., Geller, D., 2010. 
+Clinical characteristics of comorbid obsessive-compulsive disorder and bipolar 
+disorder in children and adolescents. Bipolar Disord. 12, 185–195.
+Langley, A.K., Lewin, A.B., Bergman, R.L., Lee, J.C., Piacentini, J., 2010. Correlates of 
+comorbid anxiety and externalizing disorders in childhood obsessive compulsive 
+disorder. Eur. Child Adolesc. Psychiatry 19, 637–645.
+Lebowitz, E.R., Panza, K.E., Su, J., Bloch, M.H., 2012. Family accommodation in 
+obsessive-compulsive disorder. Expert. Rev. Neurother. 12, 229–238.
+Leckman, J.F., Sholomskas, D., Thompson, D., Belanger, A., Weissman, M.M., 1982. Best 
+estimate of lifetime psychiatric diagnosis: a methodological study. Arch. Gen. 
+Psychiatry 39, 879–883.
+Leckman, J.F., Riddle, M.A., Hardin, M.T., Ort, S.I., Swartz, K.L., Stevenson, J., Cohen, D. 
+J., 1989. The Yale Global Tic Severity Scale: initial testing of a clinician-rated scale 
+of tic severity. J. Am. Acad. Child Adolesc. Psychiatry 28, 566–573.
+Lochner, C., Mogotsi, M., du Toit, P.L., Kaminer, D., Niehaus, D.J., Stein, D.J., 2003. 
+Quality of life in anxiety disorders: a comparison of obsessive-compulsive disorder, 
+social anxiety disorder, and panic disorder. Psychopathology 36, 255–262.
+Moos, R.H., Moos, B.S., 1994. Family Environment Scale Manual: Development, 
+Applications, Research, Third ed. Consulting Psychologists Press.
+Murphy, Y.E., Flessner, C.A., 2015. Family functioning in paediatric obsessive 
+compulsive and related disorders. Br. J. Clin. Psychol. 54, 414–434.
+Orvaschel, H., Puig-Antich, J., Chambers, W., Tabrizi, M.A., Johnson, R., 1982. 
+Retrospective assessment of prepubertal major depression with the Kiddie-SADS-e. 
+J. Am. Acad. Child Psychiatry 21, 392–397.
+P´erez-Vigil, A., Fern´andez de la Cruz, L., Brander, G., Isomura, K., Jangmo, A., 
+Feldman, I., Hesselmark, E., Serlachius, E., L´azaro, L., Rück, C., Kuja-Halkola, R., 
+D’Onofrio, B.M., Larsson, H., Mataix-Cols, D., 2018. Association of obsessive- 
+compulsive disorder with objective indicators of educational attainment: a 
+nationwide register-based sibling control study. JAMA Psychiatry 75, 47–55.
+Piacentini, J., Bergman, R.L., Keller, M., McCracken, J., 2003. Functional impairment in 
+children and adolescents with obsessive-compulsive disorder. J. Child Adolesc. 
+Psychopharmacol. 13 (Suppl. 1), S61–S69.
+Rapoport, J.L., Inoff-Germain, G., Weissman, M.M., Greenwald, S., Narrow, W.E., 
+Jensen, P.S., Lahey, B.B., Canino, G., 2000. Childhood obsessive-compulsive disorder 
+A. Abramovitch et al.                                                                                                                                                                                                                          
+Journal of A�ective Disorders 367 (2024) 678–685 
+684
+
+in the NIMH MECA study: parent versus child identification of cases. Methods for the 
+epidemiology of child and adolescent mental disorders. J. Anxiety Disord. 14, 
+535–548.
+Rosenbaum, J.F., Biederman, J., Hirshfeld-Becker, D.R., Kagan, J., Snidman, N., 
+Friedman, D., Nineberg, A., Gallery, D.J., Faraone, S.V., 2000. A controlled study of 
+behavioral inhibition in children of parents with panic disorder and depression. Am. 
+J. Psychiatry 157, 2002–2010.
+Scahill, L., Riddle, M.A., McSwiggin-Hardin, M., Ort, S.I., King, R.A., Goodman, W.K., 
+Cicchetti, D., Leckman, J.F., 1997. Children’s Yale-Brown Obsessive Compulsive 
+Scale: reliability and validity. J. Am. Acad. Child Adolesc. Psychiatry 36, 844–852.
+Sloman, G.M., Gallant, J., Storch, E.A., 2007. A school-based treatment model for 
+pediatric obsessive-compulsive disorder. Child Psychiatry Hum. Dev. 38, 303–319.
+Sperling, J., Boger, K., Potter, M., 2020. The impact of intensive treatment for pediatric 
+anxiety and obsessive-compulsive disorder on daily functioning. Clin. Child Psychol. 
+Psychiatry 25, 133–140.
+Stewart, S.E., Hu, Y.P., Leung, A., Chan, E., Hezel, D.M., Lin, S.Y., Belschner, L., 
+Walsh, C., Geller, D.A., Pauls, D.L., 2017. A multisite study of family functioning 
+impairment in pediatric obsessive-compulsive disorder. J. Am. Acad. Child Adolesc. 
+Psychiatry 56, 241–249.e243.
+Storch, E.A., Murphy, T.K., Geffken, G.R., Soto, O., Sajid, M., Allen, P., Roberti, J.W., 
+Killiany, E.M., Goodman, W.K., 2004. Psychometric evaluation of the Children’s 
+Yale-Brown Obsessive-Compulsive Scale. Psychiatry Res. 129, 91–98.
+Storch, E.A., Abramowitz, J.S., Keeley, M., 2009a. Correlates and mediators of functional 
+disability in obsessive-compulsive disorder. Depress. Anxiety 26, 806–813.
+Storch, E.A., Lehmkuhl, H., Pence, S.L., Geffken, G.R., Ricketts, E., Storch, J.F., 
+Murphy, T.K., 2009b. Parental experiences of having a child with obsessive- 
+compulsive disorder: associations with clinical characteristics and caregiver 
+adjustment. J. Child Fam. Stud. 18, 249–258.
+Storch, E.A., Larson, M.J., Muroff, J., Caporino, N., Geller, D., Reid, J.M., Morgan, J., 
+Jordan, P., Murphy, T.K., 2010a. Predictors of functional impairment in pediatric 
+obsessive-compulsive disorder. J. Anxiety Disord. 24, 275–283.
+Storch, E.A., Lewin, A.B., Geffken, G.R., Morgan, J.R., Murphy, T.K., 2010b. The role of 
+comorbid disruptive behavior in the clinical expression of pediatric obsessive- 
+compulsive disorder. Behav. Res. Ther. 48, 1204–1210.
+Sukhodolsky, D.G., do Rosario-Campos, M.C., Scahill, L., Katsovich, L., Pauls, D.L., 
+Peterson, B.S., King, R.A., Lombroso, P.J., Findley, D.B., Leckman, J.F., 2005. 
+Adaptive, emotional, and family functioning of children with obsessive-compulsive 
+disorder and comorbid attention deficit hyperactivity disorder. Am. J. Psychiatry 
+162, 1125–1132.
+Thomsen, P.H., 1995. Obsessive-compulsive disorder in children and adolescents: a 6-22 
+year follow-up study of social outcome. Eur. Child Adolesc. Psychiatry 4, 112–122.
+Valderhaug, R., Ivarsson, T., 2005. Functional impairment in clinical samples of 
+Norwegian and Swedish children and adolescents with obsessive-compulsive 
+disorder. Eur. Child Adolesc. Psychiatry 14, 164–173.
+Vikas, A., Avasthi, A., Sharan, P., 2011. Psychosocial impact of obsessive-compulsive 
+disorder on patients and their caregivers: a comparative study with depressive 
+disorder. Int. J. Soc. Psychiatry 57, 45–56.
+Vivan Ade, S., Rodrigues, L., Wendt, G., Bicca, M.G., Cordioli, A.V., 2013. Quality of life 
+in adolescents with obsessive-compulsive disorder. Braz. J. Psychiatry 35, 369–374.
+Weidle, B., Jozefiak, T., Ivarsson, T., Thomsen, P.H., 2014. Quality of life in children 
+with OCD with and without comorbidity. Health Qual. Life Outcomes 12, 152.
+Wetterneck, C.T., Pinciotti, C.M., Knott, L., Kinnear, K., Storch, E.A., 2020. Development 
+and validation of the Adult OCD Impact Scale (AOIS): a measure of psychosocial 
+functioning for adults with obsessive-compulsive disorder. J. Contextual Behav. Sci. 
+18, 287–293.
+A. Abramovitch et al.                                                                                                                                                                                                                          
+Journal of A�ective Disorders 367 (2024) 678–685 
+685

@@ -26,7 +26,7 @@ Traditional pen-and-paper or pure screen-based learning requires high working me
 *   **Fidget-Integration:** Keep spare, unconnected robotic gears or Lego bricks on the desks. Allow students to build non-sensical, abstract shapes with them while they are thinking or waiting. This is a vital self-regulation tool, not a distraction.
 
 ## 3. Combating Executive Dysfunction with Iterative Micro-Goals
-**Source Research:** *Arzu Gneysu Zgr (2020); Berrezueta-Guzmán & Robles-Bykbaev (2021)*
+**Source Research:** *Guneysu Ozgur et al. (2020); Berrezueta-Guzmán & Robles-Bykbaev (2021)*
 
 **The Science:** 
 Project-Based Learning (PBL) is fundamentally at odds with EBD and ADHD because PBL requires long-term planning, organization, and self-starting—the exact executive functions these students lack. Giving open-ended PBL tasks to these populations results in immediate behavioral escalation out of frustration.

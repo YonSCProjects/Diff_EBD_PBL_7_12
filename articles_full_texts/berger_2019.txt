@@ -1,0 +1,151 @@
+TITLE: Multi-tiered Approaches to Trauma-Informed Care in Schools: A Systematic Review
+
+AUTHOR: Emily Berger
+
+JOURNAL: School Mental Health
+YEAR: 2019
+VOLUME: 11, pp. 650-664
+DOI: https://doi.org/10.1007/s12310-019-09326-0
+Published: 05/10/2019
+© Springer Science+Business Media, LLC, part of Springer Nature 2019
+
+SOURCE URL: https://link.springer.com/article/10.1007/s12310-019-09326-0
+
+---
+
+ABSTRACT
+
+Childhood trauma can adversely impact academic performance, classroom behaviour, and student relationships. Research has gradually explored integrated approaches to care for traumatised students in schools. Increasingly, research has pointed to implementation of multi-tiered programs to trauma-informed care for traumatised students in schools. However, evaluations of these programs are limited and no systematic review of the existing evidence has been conducted. The aim of this research was to be the first systematic review to explore evidence on multi-tiered, trauma-informed approaches to address trauma in schools. Results of this systematic review yielded 13 published and unpublished studies. Findings indicated that further research, guided by empirical evidence of the effectiveness of multi-tiered and trauma-sensitive approaches in schools, is required. Recommendations for research in the area of trauma-sensitive, multi-tiered care in schools are provided.
+
+---
+
+ETHICS DECLARATIONS
+
+Conflict of interest: The author declares that she has no conflict of interest.
+Ethical approval: This article does not contain any studies with human participants or animals performed by the author.
+
+Publisher's Note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+---
+
+CONTEXT AND RATIONALE
+
+Childhood trauma can adversely impact academic performance, classroom behaviour, and student relationships. Trauma includes experiences such as abuse, neglect, domestic violence, natural disasters, accidents, and community violence. The experience of trauma can affect children's neurobiological development, self-regulation, and capacity to form relationships - all of which are foundational to learning.
+
+Research has explored integrated, multi-tiered approaches to trauma-informed care (TIC) in schools, building on the Multi-Tiered Systems of Support (MTSS) framework widely used in education. Multi-tiered approaches to TIC apply trauma-sensitive practices at three tiers:
+- Tier 1 (Universal): School-wide prevention approaches for all students
+- Tier 2 (Targeted): Selected interventions for students showing early signs of difficulty
+- Tier 3 (Intensive): Individualized, intensive interventions for students with significant trauma-related needs
+
+---
+
+SYSTEMATIC REVIEW METHODOLOGY
+
+Search Strategy
+The author conducted a systematic search of relevant databases to identify published and unpublished studies examining multi-tiered approaches to trauma-informed care in schools. The search was conducted across multiple databases including PsycINFO, ERIC, MEDLINE, and databases of unpublished works.
+
+Inclusion Criteria
+- Studies that addressed multi-tiered or whole-school approaches to trauma-informed care
+- Studies conducted in school settings (K-12)
+- Studies that reported empirical outcomes
+
+---
+
+RESULTS
+
+The systematic review yielded 13 published and unpublished studies that examined multi-tiered, trauma-informed approaches in schools.
+
+Programs/Models Identified:
+
+1. Healthy Environments and Response to Trauma in Schools (HEARTS)
+- Developer: UCSF
+- Tiered structure: Addresses all three tiers of MTSS
+- Components: Trauma-informed professional development, consultation, and direct services
+- Evidence: Program evaluation studies showing reductions in disciplinary referrals and improved school climate
+
+2. Heart of Teaching and Learning (HTL): Compassion, Resiliency, and Academic Success
+- Grounded in attachment and ecological theories
+- Multi-module training for school staff
+- Evidence: Pre-post design study showing reduction in PTSD symptoms among students
+
+3. CBITS (Cognitive Behavioral Intervention for Trauma in Schools)
+- Evidence-based Tier 2/3 intervention
+- Delivered by school mental health providers
+- Strong evidence base from RCTs
+
+4. Support for Students Exposed to Trauma (SSET)
+- Adapted version of CBITS for teachers
+- Evidence base: Pilot studies showing feasibility and preliminary effectiveness
+
+5. Trust-Based Relational Intervention (TBRI)
+- Three essential principles: Empowering, Connecting, Correcting
+- School-wide and individual-level components
+- Evidence: Implementation evaluations in school settings
+
+6. New Haven Trauma Coalition (NHTC)
+- Community-school partnership model
+- Integration of trauma-informed care, CBITS, and care coordination
+- Evidence: Pilot program evaluation data
+
+Key Findings from the 13 Studies:
+
+1. Multi-tiered programs showed promise in improving student outcomes, but evidence was limited by:
+   - Small sample sizes
+   - Variable research methods
+   - Lack of control groups in most studies
+   - Short follow-up periods
+
+2. Professional development as a key component: All 13 programs included staff training as a core component, recognizing that educator knowledge and skill is foundational to implementation.
+
+3. Integration with MTSS: Programs varied in how explicitly they were integrated with existing MTSS frameworks. More explicit integration was associated with broader implementation.
+
+4. Cultural competence: Few programs explicitly addressed cultural competence despite the importance of culturally responsive trauma-informed practice.
+
+5. Sustainability challenges: Programs struggled with sustaining implementation beyond initial pilot phases, pointing to the need for institutionalization strategies.
+
+---
+
+DISCUSSION
+
+This systematic review represents the first systematic examination of the evidence on multi-tiered, trauma-informed approaches to addressing trauma in schools.
+
+Key Discussion Points:
+
+1. The evidence base is emerging but limited: While 13 studies were identified, most used weak research designs (pre-post without control groups, program evaluations). Rigorous evaluation (RCTs) of multi-tiered, whole-school TIC approaches is lacking.
+
+2. Tension between population-level approaches and individualized care: Tier 1 approaches aim to benefit all students, but many trauma-specific interventions are designed for individual students with identified needs. Multi-tiered TIC must address both levels effectively.
+
+3. Role of school staff: The evidence points to the importance of training all school staff—not just mental health clinicians—in trauma-informed approaches. However, the specific content and format of effective training remains understudied.
+
+4. Implementation science: The field needs greater attention to implementation factors—fidelity, adaptation, staff buy-in, leadership support, and sustainability—to understand what makes multi-tiered TIC work in real-world school contexts.
+
+5. Measurement: A critical gap is the lack of validated, feasible measures for assessing both the implementation of trauma-informed practices and their impact on student outcomes.
+
+---
+
+RECOMMENDATIONS FOR FUTURE RESEARCH
+
+1. Rigorous evaluation: Conduct randomized controlled trials and quasi-experimental studies of multi-tiered TIC programs to establish causal evidence of effectiveness.
+
+2. Long-term follow-up: Study the sustained effects of multi-tiered TIC on student outcomes over time.
+
+3. Implementation research: Examine the factors that facilitate or hinder successful implementation of multi-tiered TIC in diverse school contexts.
+
+4. Cultural competence: Develop and evaluate culturally responsive adaptations of multi-tiered TIC programs.
+
+5. Measurement development: Create and validate measures of trauma-informed practice implementation and student outcomes suitable for school-wide evaluation.
+
+6. Comparative effectiveness: Compare the effectiveness of different multi-tiered TIC models to identify active ingredients and optimal program components.
+
+---
+
+REFERENCES (key references from article)
+
+- Anda, R. F., et al. (2006). The enduring effects of abuse and related adverse experiences in childhood.
+- SAMHSA (2014). SAMHSA's concept of trauma and guidance for a trauma-informed approach.
+- Chafouleas, S. M., Johnson, A. H., Overstreet, S., & Santos, N. M. (2016). Toward a blueprint for trauma-informed service delivery in schools.
+- Dorado, J. S., Martinez, M., McArthur, L. E., & Leibovitz, T. (2016). Healthy Environments and Response to Trauma in Schools (HEARTS).
+- Jaycox, L. H., et al. (2009). CBITS: Cognitive Behavioral Intervention for Trauma in Schools.
+- Ko, S. J., et al. (2008). Creating trauma-informed systems: Child welfare, education, first responders, health care, juvenile justice.
+- Rolfsnes, E. S., & Idsoe, T. (2011). School-based intervention programs for PTSD symptoms: A review and meta-analysis.
+- Zakszeski, B. N., Ventresco, N. E., & Jaffe, A. R. (2017). Promoting resilience through trauma-focused practices.

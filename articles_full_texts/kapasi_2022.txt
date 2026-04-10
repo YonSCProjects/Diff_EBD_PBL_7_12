@@ -1,0 +1,801 @@
+SOURCE: https://www.uis.no/sites/default/files/inline-images/Mindset%20Theory.pdf
+TITLE: [PDF] Mindset Theory and School Psychology
+
+Canadian Journal of School Psychology
+﻿1­–18
+© The Authors 2021 
+Article reuse guidelines:
+sagepub.com/journals-permissions 
+DOI: 10.1177/08295735211053961
+journals.sagepub.com/home/cjs
+Article
+Mindset Theory and  
+School Psychology
+Aamena Kapasi1
+ and Jacqueline Pei1
+Abstract
+Mindset theory is an achievement motivation theory that centers on the concept 
+of the malleability of abilities. According to mindset theory, students tend to have 
+either a growth mindset or a fixed mindset about their intelligence; students with a 
+growth mindset tend to believe that intelligence is malleable, whereas students with 
+fixed mindsets tend to believe that intelligence is unchangeable. As described in many 
+empirical and theoretical papers, the mindset a student holds can influence important 
+psychological and behavioral factors, including reaction to failure, persistence and level 
+of effort, and expectations of success, which ultimately impact academic achievement. 
+Importantly, mindsets can be changed, and interventions have been developed 
+to promote a more growth mindset. A growth mindset allows students to view 
+challenges as an opportunity for improvement, is linked to enjoyment of learning, and 
+increases motivation in school. School psychologists are often working with students 
+with learning differences and/or mental health concerns who are particularly at-risk 
+for poor academic achievement, and researchers have demonstrated the important 
+impact a growth mindset can have for these vulnerable students. School psychologists 
+are well-positioned to incorporate mindset theory into the school environment in 
+order to best support the students they serve. In this paper we provide a theoretical 
+overview of mindset theory and mindset interventions, and specifically review the 
+literature on mindset theory for individuals with learning disabilities and mental 
+health challenges. We discuss how school psychologists can incorporate mindset 
+theory into their practice to support the shift from a fixed to a growth mindset for 
+all students.
+Keywords
+mindset theory, school psychologists/counselors, education professionals, motivation, 
+personality/individual differences, strengths
+1University of Alberta, Edmonton, Canada
+Corresponding Author:
+Aamena Kapasi, Department of Educational Psychology, University of Alberta, 6-102 Education North, 
+Edmonton, AB T6G 2R3, Canada. 
+Email: kapasi@ualberta.ca
+1053961 CJSXXX10.1177/08295735211053961Canadian Journal of School PsychologyKapasi and Pei
+research-article2021
+
+2 
+Canadian Journal of School Psychology 00(0)
+Mindset theory is an increasingly popular theory of achievement motivation that 
+has made its way into many Canadian classrooms. Numerous resources, websites, 
+and programs have been developed based on this theory identifying the power of 
+beliefs and how our beliefs can influence our motivation and achievement. Although 
+applied to various settings, including sports (Zanin et al., 2020) and business 
+(Canning et al., 2020), mindset theory has been most influential in the field of edu-
+cation. Interventions have been incorporated into educational settings across the 
+world with the hope of targeting student’s beliefs about their intelligence. School 
+psychologists are well-positioned to support this momentum by assisting school 
+staff, parents, and students in understanding and implementing mindset theory. In 
+this paper, we (1) provide an overview of mindset theory and interventions, (2) 
+examine the role of mindset theory in supporting students with  learning disabilities 
+and those with mental health concerns, and (3) outline key considerations for school 
+psychologists and provide an argument for the inclusion of mindset theory in the 
+work of school psychologists.
+Theoretical Overview
+Mindset theory describes core assumptions about the malleability of personal qualities 
+(Dweck & Leggett, 1988). The theory represents a social-cognitive approach that stems 
+from goals and goal-oriented behavior and relates to individual differences in beliefs 
+and values (Dweck & Leggett, 1988). Evolving from its roots in understanding chil-
+dren’s perceptions of their intelligence in school settings, mindset theory informs how 
+we understand responses to challenges or setbacks (Yeager & Dweck, 2020). Early 
+efforts to understand how children respond to a challenge revealed two patterns of per-
+formance: mastery-oriented and helpless responses (Dweck & Leggett, 1988). The 
+helpless response is characterized by avoidance of challenges and difficulty facing 
+obstacles. In contrast, the mastery-oriented pattern involves seeking challenging tasks 
+and persistence after failure.
+Seeking to explain these patterns, Dweck and colleagues posited that there may be 
+a difference in achievement goals underlying the observed behavior (Elliot & Dweck, 
+1988). Some students see achievement situations as a test of their ability (i.e., perfor-
+mance goals), while others see them as learning opportunities which may increase 
+their ability or understanding (i.e., mastery or learning goals) (Elliott & Dweck, 1988). 
+Students with mastery goals tend to confront challenge, show more effort, optimism, 
+and effective strategizing (Elliott & Dweck, 1988). Alternatively, those with perfor-
+mance goal orientations tend to focus on demonstrating competence, obtaining posi-
+tive judgments of one’s ability and avoiding negative ones, and using social comparison 
+standards (Schunk et al., 2008). Individuals with performance goal orientations are 
+also more vulnerable to helpless responses (Dweck & Leggett, 1988). These individu-
+als may avoid activities that pose a risk of failure or errors, and demonstrate more 
+self-blame, negative affect, and impaired problem-solving strategies (Elliott & Dweck, 
+1988).
+
+Kapasi and Pei 
+3
+Implicit Theories of Intelligence
+But why do children develop different learning goals? Dweck and colleagues recog-
+nized that our beliefs associated with our perceived capacities have a significant 
+impact on our ability to navigate, and even benefit, from difficulties or failures we 
+might experience (Yeager & Dweck, 2020). Different theories about one’s abilities 
+orients individuals to different goals, which in turn relate to different patterns of 
+behavior. Two self-theories emerged from this research that mapped onto achievement 
+goals; entity theorists were associated with a performance goal orientation, and incre-
+mental theorists were related to mastery goals (Dweck & Leggett, 1988). Integration 
+of this thinking was initially named Implicit Theories of Intelligence (ITOI) but recog-
+nizing that this theory can be applied to any aspect of the self, ITOI is now commonly 
+referred to as Mindset Theory (Dweck, 2006).
+Mindset theory organizes our capacity beliefs into two broad groups—a fixed 
+mindset and a growth mindset. A fixed mindset, originally called an entity theory of 
+intelligence, describes the belief that one’s intelligence is not under one’s control 
+(Dweck & Leggett, 1988). A fixed mindset commonly exhibits itself as the belief that 
+abilities are stable and unchanging, and individuals with a fixed mindset tend to 
+believe that a person has a set amount of potential for a certain task. A person with a 
+fixed mindset would endorse the statement “I can’t change my intelligence.” Children 
+with a fixed mindset are prone to the helpless response pattern because they tend to 
+view challenges as insurmountable tasks, which they interpret as indicative of low 
+ability (Dweck & Leggett, 1988).
+In contrast, those with a growth mindset, originally called an incremental theory of 
+intelligence, believe that intelligence is malleable and can be cultivated and developed 
+with effort and experience, despite differences in aptitude, interest, or personality 
+(Dweck, 1998). A growth mindset has been linked to higher academic achievement, 
+taking more challenging courses, and college retention (Yeager et al., 2019). A person 
+with a growth mindset would endorse the statement “I believe I can change my intel-
+ligence.” Children with a growth mindset are more likely to have a mastery-oriented 
+pattern, which is more adaptive to learning, because they maintain positive affect 
+toward the task and may even increase their strategy use (Dweck & Leggett, 1988). 
+Students who hold a growth mindset have been found to endorse stronger learning 
+goals and make fewer helpless attributions (Blackwell et al., 2007). It is important to 
+note that mindsets are domain specific; for example, someone could have a growth 
+mindset about their math skills, but a fixed mindset about their basketball skills 
+(Dweck, 2006).
+Mindsets are often discussed as something one has; however, in practice, mindsets 
+are situation dependent (Dweck, 2017), and all individuals have both growth and fixed 
+mindsets at different times. There are certain events, circumstances, or people who 
+influence our mindsets; for example, a situation where one feels judged, or where 
+mistakes are not allowed, may trigger a fixed mindset (Dweck, 2017). Thus, mindset 
+is highly influenced by environment and therefore provides a potential avenue for 
+psychological professions to promote a growth mindset throughout the developmental 
+years.
+
+4 
+Canadian Journal of School Psychology 00(0)
+As children age, a rise in social comparison, identity development, increasing lev-
+els of self-evaluation, and environmental structures, such as grades, may influence 
+student’s mindsets to become more fixed (Dweck, 1999). Associations between mind-
+sets and academic achievement have been found to be strongest during the early teen 
+years (Costa & Faria, 2018). Particularly given the vulnerabilities associated with 
+early adolescence, including high level of self-focus and fear of embarrassment, ado-
+lescents with a fixed mindset may reduce their academic efforts in an attempt to pro-
+tect their egos (Dweck, 2006). Thus, early groundwork to facilitate increased influence 
+of a growth mindset during this critical developmental period may motivate students, 
+particularly those who are more vulnerable, to continue to invest in their goals (Yeager 
+et al., 2019).
+Mindset and Motivation
+Mindset theory is closely associated with theories of motivation (Dweck, 2017). 
+Although the relationship between motivation and academic achievement has been 
+considered to be one-directional, with motivation influencing academic achievement 
+(Wigfield & Wagner, 2007), other researchers have posited that motivation and 
+achievement have a reciprocal relationship (Deci et al., 2001; Dweck & Master, 2009), 
+whereby academic successes and failures impact motivation and motivation in turn 
+impacts achievement (Saunders, 2013). For example, special education students who 
+experienced repeated academic failures had lower self-efficacy (Hampton, 1996), and 
+low self-efficacy may contribute to decreased willingness to attempt a challenging 
+task and/or sustain effort, further increasing the likelihood of academic failures. The 
+beliefs a student holds about their ability to learn and grow may be a key factor in 
+determining which students are willing to attempt challenging tasks to work toward 
+academic success and which students are not.
+Mindsets appear to be one of many factors that influence grades for children 
+(Yeager & Dweck, 2020). In a meta-analysis of the mindset literature and academic 
+achievement, Costa and Faria (2018) found that students with a growth mindset were 
+more likely to obtain higher grades in verbal and quantitative subjects and have higher 
+overall achievement. Fixed mindset students also showed a positive association with 
+specific verbal and quantitative subjects, but at a lower magnitude than their growth 
+mindset peers. Yet these relationships were often of a low to moderate strength; thus, 
+although an important component for academic outcomes, the influence of mindset is 
+complex, and possibly most influential due to the impact it has on motivational factors 
+such as reaction to failure, persistence and level of effort, and expectations of success, 
+which ultimately influence academic outcomes.
+Mechanisms of Mindsets
+Reaction to failure. A growth mindset allows students to see challenges and failures as 
+separate from their actual competency or personality, therefore students with a growth 
+mindset tend to benefit from mistakes and feedback, seek help when they need it, and
+
+Kapasi and Pei 
+5
+learn from failure (Dweck, 2017). On the other hand, those with a fixed mindset strug-
+gle to see opportunity in failure because they are afraid of showing inadequacy 
+(Dweck, 2017). For individuals with fixed mindsets, failure is believed to reflect who 
+they are as a person, and so individuals with a fixed mindset are generally more vul-
+nerable to helplessness when they fail because they do not believe their abilities can 
+improve. Individuals with fixed mindsets may react to failure with more negative 
+affect and fewer constructive strategies than those with a growth mindset (Zhao & 
+Dweck, 1994). Individuals with a fixed mindset are also primarily outcomes-focused. 
+In a study using EEG technology where individuals completed a task and then were 
+given feedback, those with a fixed mindset exhibited the strongest attentional response 
+when they were told whether they were right or wrong, not when they were offered 
+strategies for improvement (Mangels et al., 2006).
+Persistence and level of effort. Having a growth mindset about intelligence in middle 
+school can predict higher grades, which can be attributed to positive beliefs about the 
+value of persistence, and a willingness to respond to challenges with increased effort 
+and helpful strategies (Blackwell et al., 2007; Sarrasin et al., 2018). Blackwell et al. 
+(2007) examined the impact of beliefs regarding intelligence. They found students 
+with a growth mindset experienced improved math performance over 2 years of junior 
+high school compared to students who held fixed mindset. These growth mindset stu-
+dents demonstrated more effort-based strategies in response to failure, which conse-
+quently boosted their math achievement.
+Expectations of success. Expectancy beliefs (i.e., beliefs about expectancy for success) 
+are another key component of a growth mindset. Especially in groups of students who 
+typically hold low expectations for themselves, such as low-income students and 
+females in Science, Technology, Engineering, and Mathematics (STEM) courses, a 
+growth mindset can bolster expectations, and in doing so create the motivational con-
+text that helps these students achieve academic success. For example, Degol et al. 
+(2018) found that student’s growth mindsets predicted a higher value of math to the 
+student, and task values mediated the pathway from growth mindset to higher STEM 
+career aspirations. Notably, females and males with fixed mindsets had comparable 
+math grades; however, females with a growth mindset had higher grades than males 
+with a growth mindset. This difference was due to females having higher expectancy 
+beliefs than males, which suggests that expectancy beliefs about math abilities are an 
+important factor in math performance for female students (Degol et al., 2018).
+Similar to students who face gender stereotypes, low-income students may be less 
+likely to have positive expectations for success given their life experiences. A growth 
+mindset may be one factor can lessen the impact of socio-economic status on aca-
+demic achievement. A study by Claro et al. (2016) found that, although high school 
+students from lower-income families were less likely to hold a growth mindset than 
+wealthy students, those lower-income students who did have a growth mindset showed 
+achievement in language and math scores comparable to high-income peers with a
+
+6 
+Canadian Journal of School Psychology 00(0)
+fixed mindset, suggesting that a growth mindset may act as a buffer between academic 
+achievement and poverty (Claro et al., 2016).
+The influence of mindset is most associated with achievement among those who 
+are facing challenges, which is relevant for school psychologists who often work with 
+these students. In order to best help these students, it is important for psychologists to 
+not only understand the psychological and behavioral influences of mindsets, but also 
+how to use mindset theory as a form of intervention.
+Mindset Interventions
+Mindset interventions educate students about their brain and its capacity for growth 
+and development, with the aim of fostering a growth mindset and ultimately influenc-
+ing positive outcomes, such as academic achievement (Yeager & Dweck, 2020). Often 
+mindset interventions (e.g., www.mindsetworks.com) are delivered to students in 
+schools through videos, workshops, or a written explanation that highlights the ability 
+of the brain to change and grow. Teaching students about neuroplasticity and the 
+potential for growth has an influence on their beliefs, which in turn has an overall posi-
+tive effect on motivation and achievement (Sarrasin et al., 2018). In order to promote 
+a growth mindset in students, mindset interventions often use metaphors such as “the 
+brain is like a muscle – it gets stronger (and smarter) when you exercise it” (Yeager & 
+Dweck, 2020, p. 1277).
+Research Evidence
+Solid evidence exists that supports the benefits of mindset interventions (Yeager & 
+Dweck, 2020). In a meta-analysis of studies that taught neuroplasticity to induce a 
+growth mindset in a variety of participants (Sarrasin et al., 2018), researchers found 
+that targeting students’ beliefs about the malleability of their abilities by way of teach-
+ing about neuroplasticity had positive impacts on motivation, achievement, and brain 
+activity. The impacts were most prominent for math achievement for at-risk youth 
+(Sarrasin et al., 2018).
+In one notable intervention study, seventh-grade students who were taught about 
+growth mindsets throughout eight 25-minute lessons showed enhanced motivation in 
+math class, based on teacher reports, and, consequently, these students maintained 
+math performance over a 2-year period, in contrast to a control group who demon-
+strated a decline in math performance (Blackwell et al., 2007). Similarly, when low-
+income seventh grade students were mentored by college students and taught to view 
+intelligence as malleable, they earned significantly higher reading and math scores 
+than students in the control condition (Good et al., 2003). Researchers also found a 
+decreased gender-gap for math performance; females who learned about the malleabil-
+ity of intelligence earned significantly higher math standardized test scores than 
+females in the control condition (Good et al., 2003).
+Mindset interventions do not need to be long or particularly intensive to have ben-
+efits, as evidenced by a large-scale study of ninth-grade students in the USA (the
+
+Kapasi and Pei 
+7
+National Study for Learning Mindsets) (Yeager et al., 2019). The researchers found 
+that an online growth mindset intervention that was less than an hour in length led to 
+improved grades for lower-achieving students and increased the rate at which students 
+chose to stay in a harder math class (Yeager et al., 2019). Likewise, a 45-minute online 
+mindset intervention increased growth mindsets of low-income, 10th grade female 
+students immediately following the intervention and at 4-month follow-up. Moreover, 
+the researchers found that having a growth mindset indirectly affected student’s moti-
+vation, learning efficacy, and grades (Burnette et al., 2018). These research studies 
+exemplify the evidence that mindset interventions can be beneficial for learning and 
+academic success.
+Intervention Considerations
+Mindset interventions offer a cost-effective, time-efficient tool that can be imple-
+mented into schools (Yeager & Walton, 2011). School psychologists can promote the 
+use of mindset interventions to booster student learning and potential. Importantly, 
+certain conditions are essential to consider when implementing a mindset intervention 
+to optimize benefits and increase positive outcomes.
+First, mindset interventions have been shown to be most effective when growth 
+is described alone, with no reference to fixed mindsets (Yeager et al., 2016). 
+Second, mindset theory was originally called implicit theories because the under-
+lying belief is not explicitly activated or necessarily in conscious awareness. This 
+is a key factor which has often been neglected by the surge of interventions that 
+attempt to change mindset by traditional teaching methods. The best interventions 
+are autonomy-supportive, not didactic, and the intervention messages feel incorpo-
+rated into the learning environment (Yeager & Dweck, 2020). Some examples of 
+stealthy interventions include incorporating mindset information into written 
+assignments (Yeager et al., 2019), courses (Blackwell et al., 2007), or mentorship 
+experiences (Good et al., 2003).
+Notably, growth mindset interventions encourage participants to consider theirs, 
+and others, developmental potentials, but do not make any suggestions as to the mag-
+nitude or ease of that change (Yeager & Dweck, 2020). Therefore, when implementing 
+mindset interventions, school psychologists should be cautious that students do not 
+receive the wrong messaging that their abilities can develop easily or infinitely. This 
+messaging could lead to distrust or disappointment in students.
+Additionally, the role of the environment is crucial in fostering a growth mind-
+set. Indeed, Yeager et al. (2019) found that it was the combined importance of belief 
+change (i.e., mindset) and school environment (i.e., peer norms) that influenced 
+sustained benefits of a mindset intervention. Thus, mindset interventions that 
+deliver messaging about growth without embedding the same messaging in the 
+school and classroom environment will be unlikely to see positive results (Yeager 
+et al., 2019).
+
+8 
+Canadian Journal of School Psychology 00(0)
+Mindsets and Children With Learning Disabilities
+Researchers have found that mindset interventions especially benefit low-achieving 
+students (Paunesku et al., 2015), and although there may be many reasons why a stu-
+dent is low-achieving, one factor may be the presence of a learning disability. Most 
+research in mindsets has been conducted with typically developing populations, but 
+preliminary work has shown support for the application of mindset theory and mindset 
+interventions in learning disability populations (e.g., Rhew et al., 2018).
+School psychologists often work with children with learning differences who 
+require supports, and it is important to acknowledge the differences in beliefs that 
+these children may have in comparison to their typically developing peers. Expectations 
+of success, reaction to failure, and level of persistence and effort all present differently 
+in learning disability populations. Often students with learning disabilities have expe-
+rienced a history of repeated failures (Grolnick & Ryan, 1990; Licht, 1983), and pat-
+terns of failure can foster a belief that one’s competence is low, and failure is inevitable. 
+When academic experiences are full of struggle, students with learning disabilities 
+may not expect success or believe that they have any control over their achievement 
+outcomes, ultimately decreasing levels of effort and persistence, and fostering low 
+self-confidence (Gans et al., 2003; Nunez et al., 2005; Stone & May, 2002). Low self-
+confidence in students with learning disabilities, in turn, reduces motivation to partici-
+pate in, and persist through, academic challenges (Morgan et al., 2008). When students 
+do not expect to do well because they believe they lack competence, they may 
+develop patterns of helplessness. In one study, children with learning disabilities 
+were found to display deficits in all three areas of helplessness assessed: motiva-
+tional deficits (i.e., low effort), cognitive deficits (i.e., hopelessness), and depressed 
+affect (Sideridis, 2003). A growth mindset acts a protective factor against developing 
+a sense of helplessness (Dweck, 2017).
+Influence of Others
+A low sense of competence may be fostered by parents’ and teachers’ responses to 
+children with learning disabilities. One study found that pre-service teachers had more 
+positive feedback and lower levels of frustration when students with learning disabili-
+ties displayed low levels of effort compared to other students (Woodcock & Vialle, 
+2016); however, by showing more sympathy and providing positive feedback for stu-
+dents with specific learning disabilities who expend low levels of effort, they may be 
+unintentionally communicating the belief that these students are not capable of higher 
+achievement, and they do not hold high expectations for them (Woodcock & Vialle, 
+2016).
+Encouragingly, having a teacher with a growth mindset may be a protective factor 
+for children with disabilities; teacher’s mindsets remained constant in a study that used 
+scenarios including different genders and disabilities (Gutshall, 2013). Adopting a 
+growth mindset allows people to see the potential in all children (Dweck, 2017).
+
+Kapasi and Pei 
+9
+Interventions
+Students with specific learning disabilities can respond positively to a growth mindset 
+intervention (Hartmann, 2013). In a study that investigated mindsets in students with 
+learning disabilities, grade six to eight students from an urban school district in the 
+USA were given a mindset intervention (Rhew et al., 2018). The researchers found 
+that those in the growth mindset intervention group significantly improved in their 
+motivation for reading and willingness to attempt tasks related to reading in compari-
+son to a control group (Rhew et al., 2018).
+Although this early work fosters optimism for the potential of this approach for 
+children with learning disabilities, this is a diverse population. Thus, even as modern 
+knowledge of brain plasticity, new technology, and innovative research reveal that 
+individuals with learning disabilities are capable of growth and development, this will 
+look different for different individuals. Believing intelligence to be malleable does 
+not mean that everyone has the same potential or that everyone will learn with 
+equal ease—it means that ability can be further developed for each unique individual 
+(Blackwell et al., 2007). Thus, implementation of approaches that foster increased 
+motivation and promote competency requires careful consideration of what realistic 
+expectations may be, and ways in which success can be created in ways that are well 
+suited to each child. School psychologists are crucial in brokering this process. For 
+instance, children with learning difficulties may benefit more from praise that focuses 
+on finding the right learning strategies, rather than praise for effort. In her book, 
+Dweck provides an example of how to foster a growth mindset for children with learn-
+ing disabilities: “Everyone learns in a different way. Let’s keep trying to find the way 
+that works for you” (Dweck, 2017, p. 181).
+Mindsets and Mental Health
+In addition to working with students with learning differences, school psychologists 
+also often work with students with mental health challenges. An association between 
+mindsets and mental health has been established (Yeager & Dweck, 2020), and 
+research in this field continues to emerge. The extent to which people believe change 
+is possible in domains related to mental health impact their ability to engage in treat-
+ment (Burnette et al., 2020), actively cope (Burnette et al., 2020), self-regulate emo-
+tions in an adaptive way (Schroder et al., 2015; Tamir et al., 2007), and experience 
+symptom reduction (Higgins et al., 2015; Schroder et al., 2017).
+Fixed mindsets are associated with increased mental health problems. Schleider 
+et al. (2015) found that the association between youth fixed mindset and mental health 
+problems remained regardless of type of mental health issue (e.g., internalizing vs. 
+externalizing). When faced with adversity, youth with fixed mental health-related 
+mindsets may be more likely to be helpless about their ability to change, and this can 
+increase the risk for psychopathology (Schleider et al., 2015).
+Alternatively, growth mindsets predict more positive emotional experiences 
+(Burnette et al., 2013). In a recent meta-analysis, Burnette et al. (2020) found that
+
+10 
+Canadian Journal of School Psychology 00(0)
+growth mindsets had a negative relationship to psychological distress (i.e., symptoms 
+of depression, anxiety, stress). Furthermore, applying mindset theory to anxiety, 
+beliefs about the malleability of anxiety were found to moderate the association 
+between stressful life events, psychological distress, and maladaptive coping strate-
+gies, indicating that having a growth anxiety mindset may promote mental health resil-
+ience (Schroder et al., 2017).
+Growth mindsets can buffer mental health problems because of the belief against 
+the fixedness of a person’s mental state (Burnette et al., 2020). For example, middle-
+school students who reported that they believed that emotions were in their control 
+reported fewer depressive symptoms (Romero et al., 2014). Moreover, students with 
+growth mindsets who reported low well-being in sixth grade were more likely than 
+students with fixed mindsets to increase in their self-reported well-being by the end of 
+eighth grade (Romero et al., 2014). These results suggest that beliefs about the malle-
+ability of emotions may be similar to beliefs about the malleability of intelligence in 
+that they are most influential for students who experience emotional challenges.
+Interventions
+Brief online mindset interventions that include content about different types of mind-
+sets, including personality, intelligence, and self-regulation, have been found to be 
+effective in reducing depression and anxiety in adolescents (Schleider & Weisz, 2018). 
+In one study, a brief, online mindset intervention called Growing Minds (www.pro-
+jectgrowingminds.com) was delivered to adolescent females in rural communities. 
+Participants who completed the intervention reported reduced depressive symptoms 
+compared to a control group from baseline to 4-month follow-up (Schleider et al., 
+2020). One potential explanation for this effect is the concept of emotional tolerance; 
+a growth mindset encourages confronting and tolerating emotional distress and pro-
+motes resilience, whereas fixed mindsets discourage feeling distressing emotions such 
+as frustration and disappointment (Schroder, 2021).
+The core concept of mindset theory emphasizes the impact of beliefs, which can be 
+found in another type of intervention: cognitive-behaviour therapy (CBT). School psy-
+chologists are likely already familiar with CBT and can apply these same tenets to the 
+belief of malleability of abilities. In CBT, therapists work with their clients to under-
+stand and examine core beliefs, and the mindset one holds can be described as a core 
+belief. When students learn that their intelligence is not fixed, but instead that their 
+brain can learn and develop, their belief is challenged, and this can lead to changes in 
+their thinking and behaviors (Dweck, 2017). One area that has been researched is the 
+relationship between mindsets and cognitive reappraisal, which is the ability to change 
+the way a person thinks about an event, and is an important component of CBT 
+(Schroder et al., 2015). Growth mindsets are positively correlated with the use of cog-
+nitive reappraisal strategies, whereas fixed mindsets are related to avoidance strategies 
+(Schroder et al., 2015), and reduced use of cognitive reappraisal (De Castella et al., 
+2013).
+
+Kapasi and Pei 
+11
+When delivering mental health interventions, understanding an individual’s mind-
+set may present an important area for intervention. School psychologists can use a 
+mindset questionnaire that specifically asks students about their mindset to better 
+understand their beliefs. Examples of mindset questionnaire items can be found in the 
+appendix of Schroder et al. (2015). Fostering student’s growth mindsets regarding 
+their mental health is consistent with the importance of eliciting hope in therapy to 
+promote readiness for change (Howell, 2017 ).
+Without an underlying belief that growth and change are possible, it is likely that 
+counseling and intervention efforts will not be as effective as possible (Schleider et al., 
+2020). Applying mindset theory to the field of mental health is a promising avenue that 
+may describe differences in student’s resilience, mental health symptoms, sense of 
+well-being, and treatment effectiveness.
+The Role of School Psychologists
+Promoting a growth mindset in students is a worthwhile endeavor to help students 
+experience academic success and mental wellness. In particular, fostering a growth 
+mindset in vulnerable students, including those with lower expectations of success, 
+may help them persist through challenges (Yeager et al., 2019). School psychologists 
+can provide support to students and school staff by using their research and clinical 
+skills to support (1) optimal evidence informed implementation in classroom settings, 
+(2) tailored intervention to specialized student groups, and (3) a growth mindset 
+culture within the school environment.
+Evidence Informed Implementation
+School psychologists play a vital role in bringing evidence-based practices to school 
+settings. When providing consultation and recommendations to schools, school psy-
+chologists can rely on their knowledge of evidence-based practice to provide accurate 
+information. Recently, Dweck has addressed an increasing concern about “false 
+growth mindsets” (Dweck, 2017), which has led to an incorrect implementation of 
+mindset theory in school settings. Areas to consider in order to avoid “false growth 
+mindsets” include fostering purposeful effort, providing meaningful praise, and not 
+blaming children for their mindsets.
+When fostering a growth mindset, focus should not be just on effort, but rather 
+purposeful and meaningful effort. Sternberg (2005) noted that the major factor that 
+determines whether people achieve expertise is not prior ability, but rather purposeful 
+engagement. Despite the good intentions of parents and teachers, by praising success 
+on easy tasks and providing sympathetic assistance, children may infer they have low 
+ability, and that they should expect failure (Woodcock & Vialle, 2011). Effort needs to 
+lead to outcomes, and students need to be able to connect their effort to achievement 
+to foster a belief in the malleability of their abilities. When students exert effort and 
+still endure failure, they may be even more inclined to attribute their failure to a per-
+ceived lack of intelligence (Dweck, 2017; Rhew et al., 2018).
+
+12 
+Canadian Journal of School Psychology 00(0)
+When praising effort, the praise must be meaningful, just as the effort must be 
+meaningful. Therefore, praise should only be given if the child is actually exerting 
+effort, and it should not given for not achieving outcomes (Dweck, 2017). Parents and 
+teachers should praise students for their achievements, but ideally in a way that ties the 
+outcome to the work the student put in, and not their personality attributes (e.g., “you 
+studied so hard for that test and you did great on it” vs. “you are so smart”). It is impor-
+tant to praise what was accomplished through practice, study, persistence, and/or good 
+strategy use (Dweck, 2017). Although praise is an influential way to promote a growth 
+mindset, it is not the only way to positively reinforce the student’s efforts; the same 
+message can be communicated by showing interest and asking questions.
+Lastly, in some school settings children are being blamed for having a fixed mind-
+set as a reason for struggling to learn (Dweck, 2016). Student’s must be encouraged 
+with honest and helpful feedback, advice on learning strategies, and be given opportu-
+nities to revise their work and demonstrate their understanding to promote a growth 
+mindset at school (Dweck, 2016). School psychologists can lessen the threat of a false 
+growth mindset by communicating messaging that is in line with mindset theorist’s 
+evidence-based recommendations.
+Working With Students
+School psychologists can identify students who may be more vulnerable to a fixed 
+mindset (e.g., students with learning difficulties, mental health challenges, lower-
+achieving students) as possible participants for a mindset intervention. School psy-
+chologists may want to use a mindset questionnaire to measure student’s mindsets in 
+order to better understand how student’s beliefs are impacting their psychological 
+functioning. When working with these students, school psychologists can use mindset 
+intervention methods such as those available from Brainology®, or by creating their 
+own based on methods developed by researchers, such as guided reading or watching 
+a video. Coupled with learning about neuroplasticity, students should also engage in 
+an active form of learning such as writing letters, creating art, or teaching others. It is 
+important to make the intervention active, rather than passive, to increase the likeli-
+hood the participant will be persuaded by the messaging (Walton, 2014). This is called 
+“saying-is-believing” and can help students internalize the growth mindset message 
+(Aronson et al., 2002).
+Walton (2014) notes that interventions will only effect long term outcomes if they 
+are able to change recursive processes. There are key time periods where mindset 
+interventions will be most beneficial; for instance, at the beginning of a new school 
+year. School psychologists can keep these ideas in mind when implementing mind-
+set interventions with students. At the beginning of the school year, it may serve 
+school psychologists to wonder, “how might I incorporate mindset theory into 
+assessments, interventions, and consultations this year to target those students who 
+can most benefit?”
+For instance, school psychologists may want to build in a mindset questionnaire 
+into their psychoeducational assessment practices to uncover the beliefs students
+
+Kapasi and Pei 
+13
+hold about their potential for change. Adding in a brief mindset questionnaire to 
+assessments may provide a basis for recommendations to teachers, parents, and the 
+student themselves on how to foster a growth mindset. Regardless of the implemen-
+tation of a mindset questionnaire, recommendations based on the mindset literature, 
+such as the importance of meaningful praise and building comfort with challenge 
+and failure, are likely valuable to include in psychoeducational assessment reports 
+for all students.
+Promoting School Culture Changes
+There are important school environment considerations that should be taken into 
+account for mindset interventions to be most effective. When school psychologists are 
+consulting with teachers and school staff, recommending strategies in line with growth 
+mindset research will work to benefit all students.
+The school climate that the students experience will impact whether students adopt 
+a growth mindset (Yeager et al., 2019). Growth mindsets are heavily influenced by the 
+environment, and it is likely that when students, especially low-achieving students, are 
+placed in a performance-focused environment they will struggle. Indeed, one study 
+found that children with learning difficulties perceived themselves to be incompetent 
+only when comparing themselves to others (Renick & Harter, 1989). The environment 
+of learning should strive to be non-judgmental, collaborative, and communicate the 
+belief in students’ potential to grow (Dweck, 2017).
+Thus far the research suggests that it is the actions of parents, teachers, and other 
+adults in a child’s life that fosters a growth mindset, not whether or not the parent or 
+teacher themselves have a growth mindset (Park et al., 2016; Yeager & Dweck, 2020). 
+For example, teachers’ instructional practices have been found to play a role in mind-
+set development as early as in grades one and two. The more teachers reported empha-
+sizing performance-oriented instructional practices in the classroom, the more students 
+endorsed a fixed mindset (Park et al., 2016). Therefore, if the actions of the school 
+staff, parents, and peers are congruent with a belief in growth, students will be more 
+likely to adopt a growth mindset. The school environment should hold students to high 
+and realistic standards, and also teach them how to achieve those standards. Rhew et 
+al. (2018) recommended that educators consider emphasizing a curriculum that focuses 
+on perseverance, constructive feedback, and the flexibility of intelligence to incorpo-
+rate a growth mindset model.
+Lastly, school psychologists work with a wide variety of individuals of differing 
+abilities and needs, and it is important for psychologists to consider their own mindsets 
+about certain mental health concerns, disabilities, and diagnoses. Psychologists who 
+genuinely believe in growth not only promote that belief, but also create situations and 
+contexts conducive to gathering evidence of such growth. As school psychologists we 
+contribute to school climate, and thus from this foundational level may influence 
+school policies in which growth tenets are promoted for all students. This is an oppor-
+tunity to identify and implement the language of growth, in a preventative, whole-
+school approach. From this vantage point, school psychologists may find themselves
+
+14 
+Canadian Journal of School Psychology 00(0)
+situated in a place where work with educators and within classrooms to leverage these 
+ideas, along with working directly with students who may benefit greatly from mind-
+set interventions.
+Conclusions
+School psychologists play a critical role in supporting healthy outcomes for all 
+children. Although the literature related to mindset, and children with disabilities, or 
+vulnerabilities, continues to emerge, the evidence to date certainly reveals the poten-
+tial for this approach to be a foundational element of a school psychologist’s practice, 
+permeating may aspects of their work. For instance, educators may be supported in 
+building practices into classroom activities, and in interactions with students, to action 
+these principles. In work with those students with the greatest needs, it is possible that 
+these concepts may hold the most promise. As school psychologists, the language of 
+capacity and growth can be embedded into intervention and assessment practices. 
+Imagine assessment that is predicated on ways to help access strengths. In which strat-
+egies are identified and strengths are celebrated—so that approaches to motivate and 
+engage students are central rather than deficits alone defined. Consultations may focus 
+on exceptions and successes, and actionable steps toward growth may be identified. In 
+short, the school psychologist is well positioned to be the central voice shifting per-
+spectives away from exclusive focus on challenges and barriers, and toward consider-
+ation of alternatives. We may become the voice of possibility and potential, shifting 
+perspectives such that balanced approaches that reflect awareness of the critical nature 
+of motivation, become central to our work.
+Declaration of Conflicting Interests
+The author(s) declared no potential conflicts of interest with respect to the research, authorship, 
+and/or publication of this article.
+Funding
+The author(s) received no financial support for the research, authorship, and/or publication of 
+this article.
+ORCID iD
+Aamena Kapasi 
+ https://orcid.org/0000-0002-7583-7740
+References
+Aronson, J., Fried, C. B., & Good, C. (2002). Reducing the effects of stereotype threat on African 
+American college students by shaping theories of intelligence. Journal of Experimental 
+Social Psychology, 38(2), 113–125. https://doi.org/10.1006/jesp.2001.1491
+Blackwell, L. S., Trzesniewski, K. H., & Dweck, C. S. (2007). Implicit theories of intelligence 
+predict achievement across an adolescent transition: A longitudinal study and an interven-
+tion. Child Development, 78(1), 246–263.
+
+Kapasi and Pei 
+15
+Burnette, J. L., Knouse, L. E., Vavra, D. T., O’Boyle, E., & Brooks, M. A. (2020). Growth 
+mindsets and psychological distress: A meta-analysis. Clinical Psychology Review, 77, 
+101816.
+Burnette, J. L., O’Boyle, E. H., VanEpps, E. M., Pollack, J. M., & Finkel, E. J. (2013). Mind-
+sets matter: A meta-analytic review of implicit theories and selfregulation. Psychological 
+Bulletin, 139, 655–701. https://doi.org/10.1037/a0029531
+Burnette, J. L., Russell, V. M., Hoyt, C. L., Orvidas, K., & Widman, L. (2018). An online growth 
+mindset intervention in a sample of rural adolescent girls. British Journal of Educational 
+Psychology, 88, 428–445. https://doi.org/10.1111/bjep.12192
+Canning, E. A., Murphy, M. C., Emerson, K. T. U., Chatman, J. A., Dweck, C. S., & Kray, L. 
+J. (2020). Cultures of genius at work: Organizational mindsets predict cultural norms, trust, 
+and commitment. Personality and Social Psychology Bulletin, 46(4), 626–642. https://doi.
+org/10.1177/0146167219872473
+Claro, S., Paunesku, D., & Dweck, C. S. (2016). Growth mindset tempers the effects of poverty 
+on academic achievement. Proceedings of the National Academy of Sciences of the United 
+States of America, 113(31), 8664–8668. https://doi.org/10.1073/pnas.1608207113
+Costa, A., & Faria, L. (2018). Implicit theories of intelligence and academic achieve-
+ment: A meta-analytic review. Frontiers in Psychology, 9, 829. https://doi.org/10.3389/
+fpsyg.2018.00829
+De Castella, K., Goldin, P., Jazaieri, H., Ziv, M., Dweck, C. S., & Gross, J. J. (2013). Beliefs 
+about emotion: Links to emotion regulation, well-being, and psychological distress. Basic 
+and Applied Social Psychology, 35, 497–505. https://doi.org/10.1080/01973533.2013.840
+632
+Deci, E. L., Koestner, R., & Ryan, R. M. (2001). Extrinsic rewards and intrinsic motivation in 
+education: Reconsidered once again. Review of Educational Research, 71(1), 1–27.
+Degol, J. L., Wang, M. T., Zhang, Y., & Allerton, J. (2018). Do growth mindsets in math benefit 
+females? Identifying pathways between gender, mindset, and motivation. Journal of Youth 
+and Adolescence, 47, 976–990. https://doi.org/10.1007/s10964-017-0739-8
+Dweck, C. (1998). The development of early self-conceptions: Their relevance for motivational 
+processes. In J. Heckhausen & C. Dweck (Eds.), Motivation and self regulation across the 
+life span (pp. 257–280). Cambridge University Press.
+Dweck, C. (2006). Mindset: The new psychology of success. Random House.
+Dweck, C. (2016, January 11). Recognizing and overcoming false growth mindset. Edutopia. 
+https://www.edutopia.org/blog/recognizing-overcoming-false-growth-mindset-
+carol-dweck
+Dweck, C. (2017). Mindset: The new psychology of success (updated ed.). Random House.
+Dweck, C., & Master, A. (2009). Self theories and motivation: Student’s beliefs about intel-
+ligence. In K. R. Wentzel & A. Wigfield (Eds.), Handbook of motivation at school 
+(pp. 123–140). Routledge.
+Dweck, C. S. (1999). Self theories: Their role in motivation, personality, and development. 
+Taylor & Francis.
+Dweck, C. S., & Leggett, E. L. (1988). A social-cognitive approach to motivation and personal-
+ity. Psychological Review, 95, 256–273. https://doi.org/10.1037/0033-295X.95.2.256
+Elliott, E. S., & Dweck, C. S. (1988). Goals: An approach to motivation and achievement. 
+Journal of Personality and Social Psychology, 54(1), 5–12. https://doi.org/10.1037/0022-
+3514.54.1.5
+
+16 
+Canadian Journal of School Psychology 00(0)
+Gans, A. M., Kenny, M. C., & Ghany, D. L. (2003). Comparing the self-concept of students 
+with and without learning disabilities. Journal of Learning Disabilities, 36, 287–295.
+Good, C., Aronson, J., & Inzlicht, M. (2003). Improving adolescents’ standardized test per-
+formance: An intervention to reduce the effects of stereotype threat. Journal of Applied 
+Developmental Psychology, 24, 645–662.
+Grolnick, W. S., & Ryan, R. M. (1990). Self-perceptions, motivation, and adjustment in chil-
+dren with learning disabilities: A multiple group comparison study. Journal of Learning 
+Disabilities, 23(3), 177–184.
+Gutshall, C. A. (2013). Teacher’s mindsets for students with and without disabilities. Psychology 
+in the Schools, 50(10), 1073–1083.
+Hampton, N. Z. (1996). The relationship of learning disabilities to the sources of 
+self-efficacy expectations, and academic achievement in high school student’s efficacy 
+[ProQuest Dissertations & Theses Global]. https://www.proquest.com/openview/7b65e140
+9b6aee58c0284ae3999a7aea/1?pq-origsite=gscholar&cbl=18750&diss=y
+Hartmann, G. M. (2013). The relationship between mindset and students with specific learn-
+ing disabilities [Doctoral dissertation, Humboldt State University]. ProQuest Dissertations 
+Publishing.
+Higgins, N. C., Bailey, S. J., LaChapelle, D. L., Harman, K., & Hadjistavropoulos, T. (2015). 
+Coping styles, pain expressiveness, and implicit theories of chronic pain. The Journal of 
+Psychology, 149, 737–750. https://doi.org/10.1080/00223980.2014.977759
+Howell, A. J. (2017). Believing in change: Reviewing the role of inplicit theories in psychologi-
+cal dysfunction. Journal of Social and Clinical Psychology, 36(6), 437–460.
+Licht, B. G. (1983). Cognitive–motivational factors that contribute to the achievement of learn-
+ing-disabled children. Journal of Learning Disabilities, 16, 483–490.
+Mangels, J. A., Butterfield, B., Lamb, J., Good, C., & Dweck, C. S. (2006). Why do beliefs 
+about intelligence influence learning success? A social cognitive neuroscience model. 
+Social Cognitive and Affective Neuroscience, 1(2), 75–86.
+Morgan, P. L., Fuchs, D., Compton, D. L., Cordray, D. S., & Fuchs, L. S. (2008). Does early 
+reading failure decrease children’s reading motivation? Journal of Learning Disabilities, 
+41(5), 387–404. https://doi.org/10.1177/0022219408321112
+Nunez, J. C., Gonzalez-Pienda, J. A., Gonzalez-Pumariega, S., Roces, C., Alvarez, L., Gonzalez, 
+P., Cabanach, R. G., Valle, A., & Rodriguez, S. (2005). Subgroups of attributional profiles 
+in students with learning difficulties and their relation to self-concept and academic goals. 
+Learning Disabilities Research and Practice, 20(2), 86–97. https://doi.org/10.1111/j.1540-
+5826.2005.00124.x
+Park, D., Gunderson, E. A., Tsukayama, E., Levine, S. C., & Beilock, S. L. (2016). Young 
+children’s motivational frameworks and math achievement: Relation to teacher-reported 
+instructional practices, but not teacher theory of intelligence. Journal of Education & 
+Psychology, 108(3), 300–313. https://doi.org/10.1037/edu0000064
+Paunesku, D., Walton, G. M., Romero, C., Smith, E. N., Yeager, D. S., & Dweck, C. S. 
+(2015). Mind-set interventions are a scalable treatment for academic underachievement. 
+Psychological Science, 26(6), 784–793. https://doi.org/10.1177/0956797615571017
+Renick, M. J., & Harter, S. (1989). Impact of social comparisons on the developing self-
+perceptions of learning disabled students. Journal of Education & Psychology, 81, 
+631–638.
+Rhew, E., Piro, J. S., Goolkasian, P., & Cosentino, P. (2018). The effects of a growth mindset 
+on self-efficacy and motivation. Cogent Education, 5(1), 1–16. https://doi.org/10.1080/23
+31186x.2018.1492337
+
+Kapasi and Pei 
+17
+Romero, C., Master, A., Paunesku, D., Dweck, C. S., & Gross, J. J. (2014). Academic and emo-
+tional functioning in middle school: The role of implicit theories. Emotion, 14(2), 227–234. 
+https://doi.org/10.1037/a0035490
+Sarrasin, J. B., Nenciovici, L., Foisy, L. M. B., Allaire-Duquette, G., Riopel, M., & Masson, S. 
+(2018). Effects of teaching the concept of neuroplasticity to induce a growth mindset on 
+motivation, achievement, and brain activity: A meta-analysis. Trends in Neuroscience and 
+Education, 12, 22–31. https://doi.org/10.1016/j.tine.2018.07.003
+Saunders, S. A. (2013). The impact of a growth mindset intervention on the reading achieve-
+ment of at-risk adolescent students [Doctoral dissertation, University of Virginia]. ProQuest 
+Dissertations Publishing.
+Schleider, J., & Weisz, J. (2018). A single-session growth mindset intervention for adoles-
+cent anxiety and depression: 9-month outcomes of a randomized trial. Journal of Child 
+Psychology and Psychiatry, 59(2), 160–170. https://doi.org/10.1111/jcpp.12811
+Schleider, J. L., Abel, M. R., & Weisz, J. R. (2015). Implicit theories and youth mental health 
+problems: A random-effects meta-analysis. Clinical Psychology Review, 35, 1–9. https://
+doi.org/10.1016/j.cpr.2014.11.001
+Schleider, J. L., Burnette, J. L., Widman, L., Hoyt, C., & Prinstein, M. J. (2020). Randomized 
+trial of a single-session growth mind-set intervention for rural adolescents’ internalizing 
+and externalizing problems. Journal of Clinical Child & Adolescent Psychology, 49(5), 
+660–672. https://doi.org/10.1080/15374416.2019.16221234
+Schroder, H. S. (2021). Mindsets in the clinic: Applying mindset theory to clinical psychology. 
+Clinical Psychology Review, 83, 101957. https://doi.org/10.1016/j.cpr.2020.101957
+Schroder, H. S., Dawood, S., Yalch, M. M., Donnellan, M. B., & Moser, J. S. (2015). The role 
+of implicit theories in mental health symptoms, emotion regulation, and hypothetical treat-
+ment choices in college students. Cognitive Therapy and Research, 39, 120–139.
+Schroder, H. S., Yalch, M. M., Dawood, S., Callahan, C. P., Brent Donnellan, M., & Moser, 
+J. S. (2017). Growth mindset of anxiety buffers the link between stressful life events and 
+psychological distress and coping strategies. Personality and Individual Differences, 110, 
+23–26. https://doi.org/10.1016/j.paid.2017.01.016
+Schunk, D. H., Pintrich, P. K., & Meece, J. L. (2008). Motivation in education: Theory, research, 
+and applications (3rd ed.). Pearson Education Inc.
+Sideridis, G. D. (2003). On the origins of helpless behavior of students with learning disabilities: 
+Avoidance motivation? International Journal of Educational Research, 39(4–5), 497–517.
+Sternberg, R. J. (2005). Intelligence, competence, and expertise. In C. Dweck & A. Elliot (Eds.), 
+Handbook of competence and motivation (pp. 15–30). The Guilford Press.
+Stone, C. A., & May, A. L. (2002). The accuracy of academic self-evaluations in adolescents 
+with learning disabilities. Journal of Learning Disabilities, 35, 370–383.
+Tamir, M., John, O. P., Srivastava, S., & Gross, J. J. (2007). Implicit theories of emotion: 
+Affective and social outcomes across a major life transition. Journal of Personality and 
+Social Psychology, 92, 731–744. https://doi.org/10.1037/0022-3514.92.4.731
+Walton, G. M. (2014). The new science of wise psychological interventions. Current Directions 
+in Psychological Science, 23(1), 73–82.
+Wigfield, A., & Wagner, A. L. (2007). Competence, motivation and identity development dur-
+ing adolescence. In A. J. Elliot & C. S. Dweck (Eds.), Handbook of competence and moti-
+vation (pp. 222–239). Guilford Press.
+
+18 
+Canadian Journal of School Psychology 00(0)
+Woodcock, S., & Vialle, W. (2011). Are we exacerbating students’ learning disabilities? An 
+investigation of preservice teachers’ attributions of the educational outcomes of students 
+with learning disabilities. Annals of Dyslexia, 61, 223–241.
+Woodcock, S., & Vialle, W. (2016). An examination of pre-service teachers’ attributions for stu-
+dents with specific learning difficulties. Learning and Individual Differences, 45, 252–259.
+Yeager, D. S., & Dweck, C. S. (2020). What can be learned from growth mindset controversies? 
+American Psychologist, 75(9), 1269–1284.
+Yeager, D. S., Hanselman, P., Walton, G. M., Murray, J. S., Crosnoe, R., Muller, C., Tipton, 
+E., Schneider, B., Hulleman, C. S., Hinojosa, C. P., Paunesku, D., Romero, C., Flint, K., 
+Roberts, A., Trott, J., Iachan, R., Buontempo, J., Yang, S. M., Carvalho, C. M., . . . Dweck, 
+C. S. (2019). A national experiment reveals where a growth mindset improves achieve-
+ment. Nature, 573, 364–369. https://doi.org/10.1038/s41586-019-1466-y
+Yeager, D. S., Romero, C., Paunesku, D., Hulleman, C. S., Schneider, B., Hinojosa, C., Lee, H. 
+Y., O’Brien, J., Flint, K., Roberts, A., Trott, J., Greene, D., Walton, G. M., & Dweck, C. 
+S. (2016). Using design thinking to improve psychological interventions: The case of the 
+growth mindset during the transition to high school. Journal of Education & Psychology, 
+108(3), 374–391.
+Yeager, D. S., & Walton, G. M. (2011). Social-psychological interventions in education. Review 
+of Educational Research, 81(2), 267–301.
+Zanin, A. C., Adame, E. A., Niess, L. C., & Martinez, L. V. (2020). Negotiating identity and 
+the development of incremental mindset in a female adolescent sport context. Journal of 
+Applied Sport Psychology. 1–25. https://doi.org/10.1080/10413200.2020.1783389
+Zhao, W., & Dweck, C. S. (1994). Implicit theories and vulnerability to depression-like 
+responses [Unpublished manuscript]. Columbia University.
+Author Biographies
+Aamena Kapasi (R.Psych., PhD) is a post-doctoral fellow at the University of Alberta. She 
+completed her Ph.D. in School and Clinical Child Psychology in 2020. Aamena’s research is 
+focused on supports and interventions for individuals with FASD. She has a passion for both 
+research and clinical work and children, youth, and families. 
+Jacqueline Pei (R. Psych., PhD) is a Professor in the Department of Educational Psychology 
+and Assistant Clinical Professor in the Department of Pediatrics at the University of Alberta, 
+and Senior Research Lead for the Canada FASD Research Network. Her research focus includes 
+identification and evaluation of interventions to support healthy outcomes for youth put at risk.

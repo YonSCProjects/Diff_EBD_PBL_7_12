@@ -1,0 +1,19 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -c \"import sys,json,os;d=json.load(sys.stdin);f=(d.get('tool_input',{}) or {}).get('file_path','') or '';g=f.replace(chr(92),'/');sys.exit(0) if (not g.endswith('.md') or any(x in g for x in ['/.claude/','/.git/','/memory/']) or os.path.basename(g)=='Verification_Log.md' or 'Diferential pbl for BE' not in g) else print('{\\\"hookSpecificOutput\\\":{\\\"hookEventName\\\":\\\"PostToolUse\\\",\\\"additionalContext\\\":\\\"A project markdown file was just modified. Dispatch the article-verifier subagent in incremental mode on this file to verify any newly-added citations. Per the project research standard, any unverified citations must be removed and logged in Verification_Log.md.\\\"}}')\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

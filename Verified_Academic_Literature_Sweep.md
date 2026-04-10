@@ -13,7 +13,7 @@ Here is the 100% verified literature, confirmed with DOIs:
 ## 2. Empirical Studies on Tangible Robotics & Self-Regulation
 * **Cibrian, F.L. & Lakes, K.D. (2021).** "The potential for emerging technologies to support self-regulation in children with ADHD: A literature review" (*Int. Journal of Child-Computer Interaction*). DOI: 10.1016/j.ijcci.2021.100421
   * *Relevance:* Proves that hands-on, technological interventions (like robotics) provide immediate, tangible feedback which helps children with ADHD self-regulate and stay on task without teacher intervention.
-* **Arzu Gneysu Zgr. (2020).** "Iterative Design and Evaluation of a Tangible Robot-Assisted Handwriting Activity for Special Education" (*Frontiers in Robotics and AI*). DOI: 10.3389/frobt.2020.00029
+* **Guneysu Ozgur, A., Özgür, A., Asselborn, T., Johal, W., Yadollahi, E., Bruno, B., Skweres, M., & Dillenbourg, P. (2020).** "Iterative Design and Evaluation of a Tangible Robot-Assisted Handwriting Activity for Special Education" (*Frontiers in Robotics and AI*, 7, 29). DOI: 10.3389/frobt.2020.00029
   * *Relevance:* Highlights the importance of iterative, physical milestones where students interact with a robot/device to achieve micro-goals, reducing frustration and perfectionism.
 * **Berrezueta-Guzmán, J. & Pau, I. (2021).** "Assessment of a Robotic Assistant for Supporting Homework Activities of Children With ADHD" (*IEEE Access*). DOI: 10.1109/access.2021.3093233
   * *Relevance:* Direct evidence that when a robotic/technological system guides a student through a task (like a visual milestone or digital checklist), task adherence skyrockets for ADHD students compared to when a teacher gives verbal commands.

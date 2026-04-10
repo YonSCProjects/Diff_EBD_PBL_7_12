@@ -1,0 +1,240 @@
+Synthesizing Results From Empirical Research on Computer-Based Scaffolding in STEM Education: A Meta-Analysis
+
+Brian R. Belland, Andrew E. Walker, Nam Ju Kim, Mason Lefler
+
+Review of Educational Research, 87(2), 309-344
+Published: 2017 (April)
+DOI: 10.3102/0034654316670999
+Article first published online: April 7, 2017
+
+Sources: SAGE Journals (Bronze OA - https://journals.sagepub.com/doi/10.3102/0034654316670999); PubMed https://pubmed.ncbi.nlm.nih.gov/29200508/
+Open Access: Bronze OA (free to read at publisher)
+
+AUTHORS
+- Brian R. Belland
+- Andrew E. Walker
+- Nam Ju Kim
+- Mason Lefler
+
+ABSTRACT
+
+Computer-based scaffolding assists students as they generate solutions to complex problems, goals, or tasks, helping increase and integrate their higher order skills. A pilot meta-analysis of computer-based scaffolding in STEM education indicated that cognitive outcomes were superior when scaffolding was not faded versus when it was faded. Since this initial meta-analysis, the research base on computer-based scaffolding in STEM education has grown considerably. We synthesized this literature to address several persistent issues in the scaffolding literature: (a) scaffolding's overall effect on cognitive outcomes in STEM education; (b) moderating effects of learner characteristics, context of scaffolding use, scaffolding characteristics, and study quality; and (c) issues related to scaffolding's expansion beyond its original metaphor. Results (g = 0.46) indicate that scaffolding has a consistently strong positive effect on STEM cognitive outcomes across learner populations, contexts of scaffolding use, and scaffolding characteristics, while also addressing several persistent debates in the scaffolding field. Implications for research and practice are discussed.
+
+LITERATURE REVIEW
+
+Promotion of Critical Thinking Abilities and Deep Content Knowledge
+
+The research on promoting critical thinking in general education includes many approaches. Abrami et al. (2008) found that immersion approaches had a lower average effect (g = 0.09) than the remaining approaches, but a more comprehensive follow-up found no differences between them (Abrami et al., 2015). A relatively small effect (g = 0.18) of immersion interventions to promote critical thinking skills was found by others (Niu, Behar-Horenstein, & Garvan, 2013), so the evidence appears to be mixed. Some of the variance in findings may be attributable to limitations of the Ennis (1989) framework. It is possible to immerse students in meaningful content instruction and provide nonexplicit support for the development of critical thinking skills. Such an approach can be found in problem-centered instructional models paired with scaffolding (Wood et al., 1976).
+
+Instructional Scaffolding Used in the Context of Problem-Centered Instruction
+
+Scaffolding Components: Scaffolding was originally conceptualized as temporary support provided by an expert to enable learners to engage in and become more proficient at complex skills (Wood et al., 1976).
+
+Existing Meta-Analyses of Computer-Based Scaffolding: A pilot meta-analysis found an average effect size of g = 0.53 (Belland et al., 2015). There have also been several meta-analyses of intelligent tutoring systems, which combine scaffolding with some additional elements, such as adaptivity of content presentation. A meta-analysis of intelligent tutoring systems indicated that step-based intelligent tutoring systems led to an average effect of ES = 0.76 versus control and that substep-based intelligent tutoring systems led to an average effect of ES = 0.40 (VanLehn, 2011). Other meta-analyses found varied average effects for intelligent tutoring systems, including g = 0.41 among students of various levels (Ma et al., 2014), g = 0.09 among K–12 students engaged in mathematics learning (Steenbergen-Hu & Cooper, 2013), and g = 0.37 among college students (Steenbergen-Hu & Cooper, 2014). But clearly, there are many scaffolding types that have not been addressed through meta-analysis, or at least not through a comprehensive meta-analysis technique.
+
+Remaining Questions About Computer-Based Scaffolding: Several questions remain about the effects of scaffolding characteristics (fading, customization logic, context-specificity) and learner characteristics on outcomes.
+
+METHOD
+
+Literature Search Procedure
+
+The literature search used terms including scaffold*, computer*, tutor*, intelligent tutoring system**, and cognitive tutor**. Hand searches were conducted in Computer Applications in Engineering Education, Journal of Geoscience Education, Journal of Professional Issues in Engineering Education and Practice, International Journal of Mathematical Education in Science and Technology, Journal for Research in Mathematics Education, and The Journal of Special Education. Reference lists of included studies were also searched.
+
+Inclusion Criteria: Studies were included if they: (1) used computer-based scaffolding in STEM education; (2) included cognitive outcome measures; (3) used experimental or quasi-experimental designs; (4) provided sufficient statistical information to calculate effect sizes.
+
+Study Feature Coding
+
+Variables coded included:
+- Effect size calculation (ratio scale, Krippendorff's alpha = .995)
+- Education Level: Primary (K–5), Middle Level (6–8), Secondary (9–12), College/Vocational/Technical, Graduate/Professional/Adult
+- Education Population: Traditional, Low-Income, Underrepresented, High-Performing, Underperforming
+- Assessment Level: Concept, Principles, Application
+- Context of Scaffolding Use: Problem-Based, Case-Based, Design-Based, Project-Based, Inquiry-Based, Modeling/Visualization, Problem Solving
+- Scaffolding Change: None, Fading, Adding, Fading/Adding
+- Scaffolding Logic: None, Performance Adapted, Self-Selected, Fixed
+- Scaffolding Scope: Generic, Specific
+- Scaffolding Intervention: Conceptual, Metacognitive, Strategic, Motivation
+- Study Design: Random, Group Random, Quasi-Experimental
+- Reliability/Validity Reporting: None, Attempt, Strong
+
+Coding Process
+
+| Code                    | Scale type | Krippendorff's alpha |
+|-------------------------|------------|----------------------|
+| Assessment level        | Nominal    | .677                 |
+| Context of scaffolding  | Nominal    | .731                 |
+| Education level         | Ordinal    | .975                 |
+| Education population    | Nominal    | .875                 |
+| Effect size calculation | Ratio      | .995                 |
+| Reliability reporting   | Ordinal    | .697                 |
+| Scaffolding change      | Nominal    | .758                 |
+| Scaffolding intervention| Nominal    | .716                 |
+| Scaffolding logic       | Nominal    | .704                 |
+| Scaffolding scope       | Nominal    | .707                 |
+| Study design            | Nominal    | .798                 |
+| Validity reporting      | Ordinal    | .735                 |
+
+Meta-Analytic Procedures/Statistical Analyses
+
+Publication Bias: Five outlier outcomes (z scores above 3.0 or g ≥ 2.34) were excluded after examination. Four of the five asked control learners to engage in complex problem solving without any sort of support. The funnel plot suggests that there is no publication bias.
+
+| Coefficient | Standard error | n   | t     | p    | 95% CI Lower | 95% CI Upper |
+|-------------|----------------|-----|-------|------|--------------|--------------|
+| 0.336       | 0.242          | 333 | 1.390 | .166 | -0.141       | 0.812        |
+
+Note: n refers to the number of outcomes; CI = confidence interval.
+
+Effect Size Dependency: Of the included studies, k = 79 reported effects at more than one time point or had outcomes at more than one assessment level (k = 37), resulting in 333 effect size calculations from the 144 included studies. The total number of included effect size outcomes was reduced by 35% from 515 to 333 by creating composites. Robust variance estimation was implemented to empirically test dependence between remaining outcomes. The analysis indicates that those extremes do not change subsequent estimates of effect size, or Tau² tests of heterogeneity. Since underlying data show no dependency, the outcomes were reported as independent.
+
+RESULTS
+
+Impact of Providing Computer-Based Scaffolding to Students Engaged in Ill-Structured Problem Solving
+
+The overall effect size was g = 0.46 (z = 18.19, p < .01), suggesting that students who receive computer-based scaffolding do better on cognitive tests than students who do not receive scaffolds. A test for heterogeneity (Q = 1096.96, I² = 69.7%, p < .01) indicates differences between effect size estimates, which justifies grouping across outcomes in an effort to estimate the overall effect of scaffolding.
+
+Do Learner Characteristics Moderate Cognitive Student Outcomes?
+
+Education Level: Hedges' g estimates were significantly greater than zero and substantial across all education levels, suggesting that scaffolding improves learning for a wide range of students. The effect size estimate among adult learners was higher than that among college, secondary, middle level, and primary students, p < .01. However, caution is warranted, as the effect size estimate for adult learners is based on one outcome.
+
+Education Population: Scaffolding had a significantly higher effect size among underperforming students than among traditional learners, z = 2.29, p < .05.
+
+How Does Context of Scaffolding Use Moderate Cognitive Student Outcomes?
+
+Hedges' g estimates were significantly greater than zero for all contexts of scaffolding use except design-based learning (perhaps due to a small sample size for that outcome). Scaffolding's effect size was higher when used in the context of project-based learning than when used in the context of:
+- Modeling/visualization, z = 4.69, p < .01
+- Problem solving, z = 5.09, p < .01
+- Case-based learning, z = 5.36, p < .01
+- Inquiry-based learning, z = 5.74, p < .01
+- Design-based learning, z = 3.90, p < .01
+- Problem-based learning, z = 6.08, p < .01
+
+When used in the context of problem solving, scaffolding had a higher effect size than when used in the context of problem-based learning, z = 2.74, p < .01.
+
+Does Assessment Level Moderate Cognitive Student Outcomes?
+
+Hedges' g estimates were significantly greater than zero across all assessment levels; thus, scaffolding positively influences learning for a variety of assessment types. Scaffolding's influence was greater when measured at the principles level than when measured at the concept level, z = 2.17, p < .05.
+
+Do Scaffolding Characteristics Moderate Cognitive Student Outcomes?
+
+Hedges' g estimates were significantly greater than zero across scaffolding customization types. Differences among effect size estimates were not statistically significant, p > .05.
+
+In 64.9% of included outcomes, scaffolding did not change over time. The remainder adjusted scaffolding on the basis of learner performance, self-selection, and fixed schedule. Hedges' g estimates were significantly greater than zero across scaffolding logic. There were no differences in effect size on the basis of scaffolding logic, p > .05.
+
+Generic and context-specific scaffolding were associated with similar cognitive learning outcomes. Each effect size estimate was significantly greater than zero, but the two strategies were not significantly different from each other, z = −0.281, p = .778. Scaffolding associated with the vast majority of outcomes (82%) was context-specific.
+
+Scaffolding Intervention (Conceptual, Strategic, Metacognitive, or Motivation): Hedges' g estimates were significantly greater than zero across all scaffolding intervention types except for motivation scaffolds (which means that conceptual, metacognitive, and strategic scaffolds all improve cognitive outcomes). Despite the range in effect sizes, there were no statistically significant differences among the scaffolding intervention types, p > .05.
+
+Does Scaffolding Study Quality Moderate Cognitive Student Outcomes?
+
+Study Design: Hedges' g estimates were significantly greater than zero and substantial across all included study designs (quasi-experimental, group random, and random), indicating that each of these study designs has the capacity to allow for the detection of the cognitive outcomes of scaffolding. When scaffolding was studied using a quasi-experimental design, the effect size estimate was higher than when using a random design, z = 2.95, p < .01.
+
+Reliability and Validity Reporting: Hedges' g estimates were significantly greater than zero across all levels of reliability reporting. Notably, for 64% of outcomes, there was no reliability reporting at all. There were no differences among levels of reliability reporting, p > .05. Effect size estimates were all significantly greater than zero across validity reporting categories. The effect size estimate when there was strong validity reporting was significantly higher than when there was no validity reporting, z = 2.27, p < .5.
+
+DISCUSSION
+
+The overall effect of scaffolding (g = 0.46) is higher than that of critical thinking interventions (ES = 0.34; Abrami et al., 2008), that of such interventions used among college and graduate students (ES = 0.19; Niu et al., 2013), and that of the effect of computer-assisted instruction on cognitive outcomes (ES = 0.33) found in a synthesis of 25 meta-analyses (Tamim, Bernard, Borokhovski, Abrami, & Schmid, 2011).
+
+Persistent Debates in the Scaffolding Literature
+
+Utility of Fading: No significant differences were found between scaffolding with fading, adding, fading/adding, or no change, suggesting the utility of fading is not a decisive factor in scaffolding effectiveness.
+
+Generic Versus Context-Specific: No significant difference between generic and context-specific scaffolding was found, suggesting that both can be effective approaches.
+
+Expansion of the Scaffolding Metaphor
+
+Educational Level: The effect size estimate for adult learners (the population furthest from the original scaffolding learner population) was highest, suggesting scaffolding's expansion to new populations and the strongest cognitive outcomes among the farthest population. The effect size for mathematics education (g = 0.53) compares favorably with the relatively low ES = 0.18 found for the strongest educational technology applications for mathematics education in a meta-analysis by Cheung and Slavin (2013).
+
+Targeted Learning Outcome: Scaffolding positively influences learning at concept, principles, and application levels—a broader range than previously demonstrated.
+
+Areas in Which More Empirical Work Is Needed
+
+Limited numbers of outcomes were found for: inquiry-based learning (n = 3), design-based learning (n = 3), and the adult population (n = 1). These cases exhibited very wide confidence intervals.
+
+Notable under-researched areas:
+- Scaffolding for Students With Learning Disabilities
+- Design-Based Learning
+- Project-Based Learning
+- Motivation Scaffolding (non-significant effect found; more work needed)
+
+Limitations and Suggestions for Future Research
+
+The average effect of scaffolding in STEM education (g = 0.46) calculated in this review is near the midpoint of the calculated effect size estimates for intelligent tutoring systems outside of STEM. Including studies from outside of STEM was outside the scope of this review, but future meta-analyses should synthesize work on a broader range of scaffolding outside of STEM education.
+
+CONCLUSION
+
+Results (g = 0.46) indicate that scaffolding has a consistently strong positive effect on STEM cognitive outcomes. Strong outcomes were consistent across a wide range of learner populations, contexts of use, and scaffolding characteristics. This study also addresses many persistent questions in the scaffolding literature:
+- No difference in effect sizes among scaffolding with fading, adding, fading/adding, or no fading or adding
+- No difference on the basis of scaffold customization logic
+- No difference on the basis of context specificity
+- Scaffolding influences cognitive outcomes at the concept, principles, and application levels
+- Scaffolding has expanded considerably in terms of learner population and targeted learner outcome, leading to the strongest cognitive outcomes among the learner population furthest from the original scaffolding learner population (i.e., adults), as opposed to the original population of preschoolers.
+
+REFERENCES
+
+Review of Educational Research, 85, 275–314.
+Review of Educational Research, 78, 1102–1134.
+Medical Education, 34, 729–738.
+Educational Psychology Review, 26, 469–476.
+Journal of Educational Technology & Society, 15, 137–151.
+Journal of Science Education and Technology, 11, 39–48.
+Computer Applications in Engineering Education, 20, 634–645.
+Educational Technology Research & Development, 48(2), 37–62.
+Educational Psychology Review, 23, 577–600.
+Interdisciplinary Journal of Problem-Based Learning, 3, 59–89.
+Educational Psychologist, 48, 243–270.
+Educational Technology and Society, 18, 183–197.
+Review of Educational Research, 74, 379–439.
+Journal of Learning Disabilities, 31, 365–369.
+Introduction to meta-analysis (1st ed.). Hoboken, NJ: Wiley.
+Journal of Educational Multimedia and Hypermedia, 10, 333–356.
+Journal of Computer Assisted Learning, 17, 21–33.
+IEEE Transactions on Education, 56, 300–307.
+Educational Research Review, 9, 88–113.
+Motivation, leadership and curriculum design (pp. 119–135). Singapore: Springer.
+Statistical power analysis for the behavioral sciences (2nd ed.). Hillsdale, NJ: Erlbaum.
+Knowing, learning and instruction: Essays in honor of Robert Glaser (pp. 453–494). Hillsdale, NJ: Erlbaum.
+International Journal of Artificial Intelligence in Education, 11, 389–415.
+The handbook of research synthesis and meta-analysis. New York, NY: Russell Sage Foundation.
+Journal of the Learning Sciences, 12, 91–142.
+International Journal of Science Education, 22, 819–837.
+Investigating a computerized scaffolding software for student designed science investigations (Doctoral dissertation).
+Three worlds of CSCL. Can we support CSCL? (pp. 61–91). Heerlen, Netherlands: Open Universiteit Nederland.
+Learning and Instruction, 13, 533–568.
+Journal of Technology Education, 19(2), 21–38.
+American Journal of Community Psychology, 30, 157–197.
+Journal of Pediatric Psychology, 34, 917–928.
+Biometrics, 56, 455–463.
+British Medical Journal, 315, 629–634.
+Educational Researcher, 18(3), 4–10.
+Journal of Computer Assisted Learning, 23, 410–424.
+Educational Technology Research & Development, 51(1), 21–38.
+Review of Educational Research, 75, 27–61.
+British Journal of Educational Technology, 46, 1189–1200.
+Art Education, 67(6), 12–19.
+Instructional Science, 33, 413–450.
+Instructional design theories and models: Volume II. (pp. 115–140). Mahwah, NJ: Erlbaum.
+Journal of Research in Science Teaching, 24, 291–307.
+Research Synthesis Methods, 1, 39–65.
+Child Development Perspectives, 2, 172–177.
+Educational Psychology Review, 16, 235–266.
+Educational Psychologist, 42, 99–107.
+International Journal of Science Education, 35, 1625–1648.
+Educational Technology Research & Development, 55(2), 147–167.
+Computers & Education, 48, 427–445.
+Educational Technology Research & Development, 48(4), 63–85.
+Learning to solve problems: A handbook for designing problem-solving learning environments. New York, NY: Routledge.
+Computer Applications in Engineering Education, 19, 234–243.
+Gifted Child Quarterly, 58, 127–136.
+Journal of Research in Science Teaching, 38, 631–645.
+Instructional Science, 39, 255–282.
+Educational Psychologist, 41, 75–86.
+Andragogy in action. Applying modern principles of adult education. San Francisco, CA: Jossey-Bass.
+Educational Psychology Review, 19, 239–264.
+Journal of the Learning Sciences, 12, 495–547.
+Journal of the Learning Sciences, 7, 313–350.
+Journal of Computer Assisted Learning, 22, 24–33.
+Content analysis: An introduction to its methodology (2nd ed.). Thousand Oaks, CA: Sage.
+Review of Educational Research, 76, 275–313.
+Soviet Psychology, 13(2), 4–33.
+Mathematical Thinking and Learning, 5, 157–189.
+International Journal of Science and Mathematics Education, 10, 437–455.

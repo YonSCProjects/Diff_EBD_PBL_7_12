@@ -1,0 +1,46 @@
+ARTICLE: The Potential for Emerging Technologies to Support Self-Regulation in Children with ADHD: A Literature Review
+
+AUTHORS: Franceli Linney Cibrian; Kimberley D. Lakes; Sabrina E. B. Schuck; Gillian R. Hayes
+
+JOURNAL: International Journal of Child-Computer Interaction (IJCCI)
+VOLUME: 31
+ARTICLE NUMBER: 100421
+YEAR: 2022 (published online November 2021)
+DOI: 10.1016/j.ijcci.2021.100421
+Semantic Scholar Corpus ID: 243462404
+
+ABSTRACT/SUMMARY:
+This review aims to provide a resource to summarize the current evidence for technological interventions that assist and assess the self-regulation of behaviors in children with ADHD. Thirty-six articles were reviewed using various technologies, such as computers, mobile devices, wearables and sensors, virtual and augmented reality, and robotics.
+
+KEY FINDINGS (from CHADD Research Update summary and secondary sources):
+- Mobile health devices have shown promising results in terms of assessing emotions, helping with organization, and enhancing self-monitoring.
+- Research on the use of sensors and wearables is more limited but suggests that these devices may be able to detect behaviors and give feedback to children to help them with behavior and self-regulation.
+- Studies on games that have the purpose of improving self-regulation appear promising in training self-regulation and collaborative skills. These serious games have been delivered by personal computers, mobile technology, sensors, and robots.
+- Little research exists on using augmented or virtual reality to increase self-regulation and decrease ADHD symptoms; however, existing preliminary studies suggest its possibility and potential.
+- Although limited studies exist on computer software and web-based applications for children with ADHD, usage suggests potential applications.
+- More studies exist on neurofeedback and cognitive training, with less research on emerging technologies for interventions for ADHD.
+- Given the increasing use of technology in daily life, better understanding how such technology can be used to help individuals with ADHD has widespread potential.
+
+ARTICLE TYPE: Literature Review
+PAGES: 1-15
+PEER REVIEWED: Yes
+
+RELATED WORK BY AUTHORS:
+- Cibrian FL, Hayes GR, Lakes KD (2020). Research Advances in ADHD and Technology [book].
+- Lakes KD, Cibrian FL, Schuck S, Nelson M, Hayes GR (2022). Digital health interventions for youth with ADHD: A systematic review. Computers in Human Behavior Reports, 6, 1-13. DOI: 10.1016/j.chbr.2022.100174
+- Cibrian FL et al. (2022). Interdisciplinary Tensions When Developing Digital Interventions Supporting Individuals With ADHD. Frontiers in Digital Health. DOI: 10.3389/fdgth.2022.876039 [OPEN ACCESS via PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC9133410/]
+
+CITATIONS: 43 citing papers as of 2024
+
+SELECTED CITING PAPERS:
+1. "Designing for Care Ecosystems: a Literature Review of Technologies for Children with ADHD" (2022)
+2. "Unpacking the Lived Experiences of Smartwatch Mediated Self and Co-Regulation with ADHD Children" (2023)
+3. "An immersive virtual reality-based application for treating ADHD: A remote evaluation of acceptance and usability" (2022)
+4. "Digital health intervention for children with ADHD to improve mental health intervention, patient experiences, and outcomes: a study protocol" (2024)
+
+NOTES:
+- DOI 10.1016/j.ijcci.2021.100421 does not resolve directly; article appears to have access issues at publisher (Elsevier) site.
+- Semantic Scholar confirms paper at: https://www.semanticscholar.org/paper/The-potential-for-emerging-technologies-to-support-Cibrian-Lakes/6696a0c0b3bd84a1bd510322870b931246d6ba07
+- CHADD summarized findings at: https://chadd.org/attention-article/technological-interventions-for-youth-with-adhd/
+- No freely accessible preprint or institutional repository version found via eScholarship (UCI) or Chapman University.
+- Full text requires institutional subscription to International Journal of Child-Computer Interaction (Elsevier).

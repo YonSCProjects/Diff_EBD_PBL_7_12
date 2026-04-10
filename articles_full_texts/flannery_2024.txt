@@ -1,0 +1,132 @@
+Check-In/Check-Out (CICO) in High School: Results From a Small Randomized Controlled Trial
+
+K. Brigid Flannery, PhD1, Mimi McGrath Kato, MS1,
+Angus Kittelman, PhD1,2, Nadia Katul Sampson, MA1,
+and Kent McIntosh, PhD1
+
+1University of Oregon, Eugene, USA
+2University of Missouri, Columbia, USA
+
+Corresponding Author: K. Brigid Flannery, University of Oregon, 1235 University of Oregon, Eugene, OR 97403, USA.
+Email: brigidf@uoregon.edu
+
+Published in: Behavioral Disorders
+2024, Vol. 49(3) 149–159
+© Hammill Institute on Disabilities 2024
+DOI: 10.1177/01987429231225461
+
+ABSTRACT
+
+The purpose of this study was to provide initial evidence of the effectiveness of Check-In/Check-Out-High School (CICO-HS) on high school student outcomes. Check-In/Check-Out-High School is a version of CICO, an established Tier 2 intervention designed to improve student academic and social behavior, adapted to increase effectiveness and feasibility in high schools. Key adaptations in CICO-HS include increased student agency through goal setting and self-rating, and increased efficiency through use of a mobile application for data collection, progress monitoring, and family communication. This randomized controlled trial (RCT) was conducted during the 2021–2022 school year and included 14 ninth grade students in one public high school in the U.S. Pacific Northwest. Students were randomly assigned to receive CICO-HS or a waitlist/control condition. Although underpowered, the RCT results showed meaningful improvements (small to moderate effect sizes) in student attendance (unexcused tardies and absences) and teacher ratings of student academic and social behaviors. Moreover, students and school personnel rated CICO-HS components as being socially acceptable to implement in high school. Implications for future research to replicate and expand study findings and for practice to scale up CICO-HS with fidelity in high schools are discussed.
+
+Keywords: Check-In/Check-Out, CICO, Tier 2, PBIS, positive behavioral interventions and supports, high school
+
+INTRODUCTION
+
+Positive Behavioral Interventions and Supports (PBIS) is a multitiered preventative framework in which a continuum of supports are delivered with a focus on building a safe, predictable, and equitable school culture to prevent challenging behavior (McIntosh et al., 2021). The PBIS was initially developed in elementary and middle schools (Sugai & Horner, 2009) in response to a need for more preventative and less reactive approaches to discipline. The PBIS is implemented to ensure that all students receive the supports they need to be successful, most often through three levels of support: universal, targeted, and intensive (Horner et al., 2017; Walker et al., 1996). The universal level of support (Tier 1) is implemented with all students and shown to be effective with a majority (Simonsen et al., 2011). Tier 1 interventions provide preventative supports for students, especially those with or at risk for disabilities, by defining, teaching, and providing feedback on desired behaviors across all school settings (Kittelman et al., 2021; McIntosh et al., 2021). Explicitly teaching these desired behaviors clarifies expectations and creates more supportive and predictable school environments. Tier 2 interventions are designed for students who are unresponsive to Tier 1 and who require more practice, feedback, and monitoring of desired behaviors taught at Tier 1 to be successful (Bundock et al., 2020; Hawken et al., 2021). Tier 2 provides school personnel with efficient and effective intervention options for students engaging in these low-intensity challenging behaviors, often including those with or at risk for disabilities, thereby reducing the need for more intensive and costly individual (Tier 3) interventions (Kittelman et al., 2021; Nese et al., 2023). Last, Tier 3 interventions are designed for a small percentage of students engaging in serious challenging behaviors (e.g., fighting, aggression) and who require more individualized supports (e.g., function-based behavior support plans; Nese et al., 2023).
+
+Multiple reviews have shown Tier 2 interventions to improve student outcomes for those with and without disabilities (Bruhn et al., 2014; Drevon et al., 2019; Hawken et al., 2014; Maggin et al., 2015; Mitchell et al., 2011; Wolfe et al., 2016). Across these reviews, Check-In/Check-Out (CICO) had the largest effects on outcomes for students with and without disabilities and students of color (Drevon et al., 2019; Wolfe et al., 2016). The CICO is implemented using a daily routine that includes (a) a morning check-in meeting to review expectations, (b) use of a daily progress report (DPR) to track student progress, (c) teacher feedback during naturally occurring breaks, (d) afternoon check-out to evaluate the day's progress, and (e) family communication (Hawken et al., 2021). The CICO is designed around three key principles: (a) student performance increases when students receive clearly defined expectations, consistent feedback, and positive reinforcement that is contingent on meeting goals (Epstein et al., 2008); (b) challenging behavior and academic performance are related (McIntosh et al., 2008, 2012); and (c) school personnel increase student engagement when they shift from reactive and consequence-based approaches to a more preventive and positive approach.
+
+When implemented with fidelity, CICO promotes positive teacher–student relationships, clarity of expectations, and teacher feedback to students on their behavior (Bundock et al., 2020; Hawken et al., 2014). The CICO structure allows students to obtain prompts and reinforcement regarding prosocial behavior, engage in positive adult interactions throughout the day, and participate in consistent home–school communication (Hawken et al., 2021). As with other Tier 2 interventions, CICO is most often used with students with low-intensity behaviors needing support beyond the universal level (Bruhn et al., 2014; Drevon et al., 2019; Hawken et al., 2014). It is designed and standardized to increase student access to feedback and be feasible and organizationally efficient for schools to implement across multiple students (Hawken et al., 2009; Sterett et al., 2020). Despite demonstrated effectiveness in elementary and middle schools, research documenting similar effectiveness of CICO at the high school level is lagging (Drevon et al., 2019; Kittelman et al., 2018).
+
+High School Context
+
+The adoption and success of any intervention is the perceived fit to or compatibility with the context—environment, skills, values, resources—in which it is being delivered (Fixsen et al., 2005; Horner et al., 2017; Lewis et al., 2017). Contextual fit increases not only effectiveness but also engagement of participants (Castro & Yasui, 2017). For the high school context, improving contextual fit includes adjusting for the size of school population and size of school building(s), the complex organizational structures of high schools, and the developmental age of the students (Flannery & Kato, 2017). During high school, students are taking on new roles as they search for independence and autonomy (Morrison et al., 2002). They also are still developing self-regulatory behaviors (Estrapala et al., 2022; Steinberg, 2009). Although high school students may know what is expected of them, they may act outside these expectations if they believe there is a greater social payoff (Dishion et al., 1999; Snyder et al., 2008). Kittelman et al. (2018) provided evidence that high school teams are not only adopting CICO but also adapting it. However, when adapting for contextual fit, it is critical to preserve the core features of the intervention and maintain fidelity to them (Castro & Yasui, 2017).
+
+Check-In/Check-Out-High School
+
+Check-In/Check-Out-High School (Kato et al., 2023) is an adapted version of traditional CICO that not only preserves the core features of CICO but also addresses the unique features of high schools. Specifically, the strategic contextual adaptations of CICO-HS include student and teacher training that emphasizes a more student-directed role, a daily protocol that emphasizes self-regulation and self-recruitment of teacher feedback, and student-directed self-evaluation with feedback on accuracy, automated "real time" monitoring of students' progress in CICO and more efficient school–home messaging using a DPR via a mobile app. Previous studies of CICO-HS have examined (a) implementation fidelity and perceived acceptability through a descriptive implementation study (Kato et al., 2023) and (b) the effects of CICO-HS on student academic engagement using an experimental, nonconcurrent multiple baseline design with three ninth grade students (Kittelman et al., 2023). Kittelman et al. (2023) demonstrated that CICO-HS could be implemented with fidelity by school personnel across two high schools and 23 students. In addition, the authors observed a statistically significant correlation between student procedural fidelity and daily points earned for meeting schoolwide behavior expectations. Moreover, Kittelman et al. (2023) also demonstrated that CICO-HS could be implemented with fidelity across students (70.9%–86.9% fidelity), resulting in significant improvements in student academic engagement (d = 1.05, SE = 0.21; confidence interval [CI] = [0.63, 1.47]), and was rated as socially acceptable by students and school personnel.
+
+Purpose of the Study
+
+The purpose of this study is to demonstrate, through a small randomized controlled trial (RCT), the potential effectiveness and acceptability of a CICO model (CICO-HS) that addresses the key factors of school dropout prevention (e.g., lack of school engagement, decreased attendance, decreased academic and social classroom engagement) and preserves the foundational features of CICO while adapting the intervention to align with the typical high school context. The current study aims to extend an emerging research base on CICO-HS to answer the following research questions:
+Research Question 1: What are the effects of CICO-HS on student attendance?
+Research Question 2: What are the effects of CICO-HS on teacher perceptions of student academic and social behaviors?
+Research Question 3: To what extent is CICO-HS perceived to be socially acceptable by students and school personnel?
+
+METHOD
+
+Participants and Settings
+
+The study was conducted in one public high school in the U.S. Pacific Northwest during the 2021–2022 school year. Based on school demographic data from the National Center for Education Statistics (NCES), the school was in a small city with an average student/teacher ratio of 23.56. The school had a total of 1,371 students, with the majority identified as White (745, 54.3%), followed by Hispanic or Latina/o/e (456, 33.3%), two or more races (110, 8%), Black or African American (19, 1.4%), Asian (15, 1.1%), American Indian/Alaska Native (14, 1%), Native Hawaiian/Pacific Islander (11, <1%), or did not identify (1, <1%). Of these students, 306 (22.3%) were eligible for free or reduced-price lunch. This high school was selected because PBIS Tier 1 and 2 systems were in place (Tier 1 fidelity = 83% and Tier 2 fidelity = 77% in the 2019–2020 school year), as measured on the Tiered Fidelity Inventory (TFI; Algozzine et al., 2014).
+
+Students
+
+Student participants were 14 ninth graders who were randomized to receive either CICO-HS (n = 7) or a waitlist/control condition (n = 7; see Figure 1). One additional student was assigned to receive CICO-HS but transferred to another high school during the study. Nine of the students identified as male, four as female, and one as nonbinary. Students either identified as White (n = 9, 64.3%) or Hispanic/Latino/a/e (n = 5, 35.7%). Three of the students had individualized education programs (IEPs), and two had 504 plans. Students were eligible to participate if they were (a) reported by their teachers to be struggling with academic engagement (e.g., off-task, interrupting), (b) nominated for Tier 2 support by a CICO-HS coordinator, (c) were not already receiving other Tier 2 or Tier 3 behavior support, and (d) granted consent to participate by their parents/guardians and themselves assented to participate.
+
+Teachers
+
+The teachers of the 14 students who participated in CICO-HS were trained to implement CICO-HS classroom components. Fifteen of these teachers participated in completing student outcome (pre/postintervention) and social acceptability measures (postintervention). Of these teachers, 13 identified as White (10 females, three males) and two as Asian (two females). Twelve had master's degrees and three had bachelor's degrees. Four teachers had taught at the high school for more than 10 years, eight between 1 and 6 years, and three for less than 1 year.
+
+CICO-HS Coordinators
+
+Three coordinators participated in implementing daily CICO-HS components and managing implementation of the program in the high school. One coordinator identified as a White female. She had a master's degree, and this was her first year working at the high school. The second coordinator identified as a Black male. He had an associate's degree and had worked in the high school for 3 years. The last coordinator identified as multiracial and male. He had a high school diploma and had worked at the high school for 1 year.
+
+Measures
+
+Attendance
+
+Student attendance data included the number of unexcused absences and tardies each student received (a) during the 30 school days prior to the CICO-HS treatment period and (b) the first 30 school days of CICO-HS. Data on unexcused absences and tardies for each student were obtained from the high school.
+
+Perceptions of Student Academic and Social Behaviors
+
+Teacher perceptions of student academic and social behaviors were measured prior to students being assigned to receive CICO-HS or the waitlist/control condition and after 30 school days of receiving CICO-HS or the waitlist/control condition. Teacher perceptions were measured using the Behavior Intervention Monitoring Assessment System (BIMAS)-Teacher Standard (McDougal et al., 2011). This 34-item, standardized measure consists of five scales with strong sample internal consistency: conduct (n = 9; α = .91), negative affect (n = 7; α = .85), cognitive/attention (n = 7; α = .91), social (n = 6; α = .85), and academic functioning (n = 5; α = .81; McDougal et al., 2011). Each item on the BIMAS-T includes a 5-point rating scale (1 = never to 5 = very often). Teachers completed the BIMAS-T measure for individual students using an online Qualtrics© survey administered by the research team. One to three teachers completed the BIMAS-T per student at pretreatment (M teachers = 2.07) and posttreatment (M teachers = 1.75), and scores were averaged for analyses.
+
+Social Acceptability of CICO-HS Procedures
+
+Teachers, coordinators, and students who participated in the CICO-HS treatment condition completed a brief questionnaire after intervention to rate their perceptions of the social acceptability of the CICO-HS procedures (1 = strongly disagree; 6 = strongly agree). Items were adapted from the CICO Program Acceptability Questionnaire (Hawken & Horner, 2003) and included nine questions for students and coordinators and eight questions for teachers.
+
+Implementation Fidelity
+
+CICO-HS Systems Fidelity. Systems-level fidelity of implementation was measured using a checklist based on the CICO Intervention Development Checklist developed by the Missouri Department of Elementary and Secondary Education (MO SW-PBS, 2018). The measure has seven subscales: (a) 10 items focused on program design criteria, (b) two items focused on the reinforcement system, (c) five items on teaching staff to implement the intervention, (d) two items focused on teaching students to participate, (e) two items on teaching families to participate, (f) six items on plans for fading and graduation, and (g) three items on evaluation of program outcomes.
+
+The baseline initial summary score on the checklist in fall was 40% and by spring it was rated as 80% (subscale scores were Program Design: 95%, Reinforcement System: 75%, Teaching Staff to Implement: 75%, Teaching Students to Participate: 100%, Teaching Families to Participate: 75%, Plans for Fading: 67%, and Evaluate Program Outcomes: 100%).
+
+Student and Teacher Fidelity. Student and teacher daily fidelity was measured when students in the CICO-HS condition used the mobile app with their teachers at the end of each class period.
+
+Intervention
+
+Students received training on CICO-HS procedures required for CICO, including when and where to check in/out, how to self-assess their own behavior using the mobile app, how to request and accept feedback, and a review of expected behaviors. In addition, students identified and prioritized their behavioral goals and put them into the app.
+
+Analyses
+
+Change scores were computed by subtracting preintervention scores from postintervention scores. Due to the small sample size, this study was underpowered to detect statistically significant and clinically meaningful effects for group differences across the dependent variables. Hedge's g was used to calculate effect sizes between conditions.
+
+RESULTS
+
+The purpose for conducting this small, underpowered RCT was to evaluate the initial effectiveness of CICO-HS on high school student outcomes and perceived social acceptability of CICO-HS intervention.
+
+Attendance
+
+For unexcused tardies, the mean number of unexcused tardies for students in the treatment group was 23.71 before intervention and 17.43 during intervention; for students in waitlist/control group, it was 14.14 before intervention and 20.14 during intervention. Findings indicated that CICO-HS had a medium effect (g = −.73, 95% CI = [−1.74, 0.30]) on unexcused tardies. For unexcused absences, CICO-HS had a small to medium effect as well, with treatment group students showing reduced absences during intervention.
+
+Teacher Perceptions of Student Academic and Social Behaviors (BIMAS)
+
+Table including pre- and post-treatment BIMAS scale means and SDs for CICO-HS and control conditions:
+Conduct: CICO-HS pre: M = 2.59, post: M = 2.10 vs. Control pre: M = 2.46, post: M = 2.56
+Negative affect: CICO-HS pre: M = 2.36, post: M = 1.93 vs. Control pre: M = 2.09, post: M = 2.42
+Cognitive/attention: CICO-HS pre: M = 2.17, post: M = 1.83 vs. Control pre: M = 2.11, post: M = 2.37
+Social: CICO-HS pre: M = 2.48, post: M = 2.10 vs. Control: M = 2.46 pre and 2.56 post
+Academic functioning: CICO-HS pre: M = 1.70, post: M = 2.10 vs. Control: M = 2.23 pre and 2.08 post
+
+Social Acceptability
+
+CICO-HS coordinators provided the highest mean ratings (M = 5.06), followed by students (M = 5.06), with teachers providing ratings indicating more moderate levels of acceptability (M = 4.36). All groups indicated willingness to use CICO-HS again and perceived it as effective for improving student behaviors.
+
+DISCUSSION
+
+The purpose of this small RCT was to provide initial evidence of the potential effectiveness of CICO-HS on high school student outcomes. Although the study was not sufficiently powered for formal hypothesis testing, we observed meaningful, beneficial changes (small to moderate effect sizes) for students receiving CICO-HS. First, students in the CICO-HS condition showed reductions in unexcused tardies and absences compared with the control group. Second, teachers reported improved perceptions of student academic and social behaviors (conduct, negative affect, cognitive/attention, and social subscales) for CICO-HS students compared with waitlist/control students. Third, all stakeholder groups rated CICO-HS as socially acceptable. These results provide initial support for CICO-HS as an effective and acceptable Tier 2 intervention for use with high school students.
+
+These findings align with and extend Kittelman et al.'s (2023) single-case design study showing CICO-HS improved academic engagement for ninth-grade students. Taken together, the results from these two studies suggest CICO-HS can be implemented with fidelity and improves multiple student outcomes including academic engagement, attendance, and teacher perceptions of behavior. Additionally, the small to moderate effect sizes observed in this study are meaningful given the difficulty of improving attendance and behavior for high school students (Kittelman et al., 2018).
+
+Implications for Future Research
+
+The findings from this study are limited by several factors. First, the small sample size resulted in insufficient statistical power, suggesting these findings should be considered preliminary. Replication with larger samples and multiple school sites is needed. Second, the single-school, single-year study design limits generalizability. Third, the study did not include standardized academic achievement outcome measures. Future research should include these measures to evaluate whether CICO-HS impacts grades, test scores, and other academic outcomes. Additionally, future studies should include a longer intervention period and examine long-term effects (e.g., graduation rates, attendance over multiple years).
+
+Implications for Practice
+
+Findings support efforts to scale up CICO-HS in high school settings. CICO-HS preserved the foundational components of CICO while making contextually appropriate adaptations (e.g., mobile app, increased student agency), which were rated positively by students, coordinators, and teachers. The mobile application appeared to increase CICO efficiency and was valued by students and school personnel alike. Practitioners adopting CICO-HS should invest in adequate training and coaching for coordinators and teachers and regularly use the data system to support data-based decision-making.
+
+SOURCE: ERIC full text PDF
+DOI: 10.1177/01987429231225461
+URL: https://files.eric.ed.gov/fulltext/EJ1421275.pdf

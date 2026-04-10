@@ -1,0 +1,47 @@
+ARTICLE: Oppositional Defiant Disorder: Evidence-Based Review of Behavioral Treatment Programs
+
+AUTHORS: Mandeep Kaur, MD, FAPA; Augustus Floyd, DO; Ana-Maria Balta, DO
+
+AFFILIATIONS:
+- Mandeep Kaur: Cone Behavioral Health Hospital, Greensboro, North Carolina, USA
+- Augustus Floyd: Cone Behavioral Health Hospital, Greensboro, North Carolina, USA
+- Ana-Maria Balta: The University of Texas Health Science Center at San Antonio, San Antonio, Texas, USA; Eastern Virginia Medical School, Norfolk, Virginia, USA
+
+JOURNAL: Annals of Clinical Psychiatry
+VOLUME: 34
+ISSUE: 1
+PAGES: 44-58
+DATE: February 2022 (first published online February 1, 2022)
+DOI: 10.12788/acp.0056
+PubMed ID: 35166664
+
+ABSTRACT:
+
+BACKGROUND:
+Oppositional defiant disorder (ODD) is a common clinical condition seen among children and adolescents in behavioral health settings. In this article, we review behavioral treatment programs and their clinical use in managing ODD.
+
+METHODS:
+We searched PubMed, PsycInfo, and Scopus from 2000 to 2020 using the terms "oppositional defiant disorder" and "treatment." We found 1,665 articles, including clinical trials, review articles, and case control studies of evidence-based ODD treatments in patients age <18. Articles were screened to identify literature focusing on evidence-based behavioral treatment programs for ODD.
+
+RESULTS:
+The literature search revealed abundant evidence supporting the role of behavioral treatment programs for managing ODD and other disruptive behavior disorders. In this review, we discuss the most recent findings on established and effective strategies, including:
+- Parent Management Training
+- Parent-Child Interaction Therapy
+- Collaborative Problem Solving
+- Incredible Years program
+- Triple-P Positive Parenting Program
+- Start Now and Plan program
+- Coping Power Program
+
+CONCLUSIONS:
+ODD can cause significant distress to patients and their caregivers. Familiarity with behavioral treatment programs provides clinicians with tools for managing this condition in clinical settings.
+
+CORRESPONDENCE: Mandeep Kaur, MD; 700 Walter Reed Dr, Greensboro, NC 27401 USA; Email: mandy.drmandeep@gmail.com
+
+ARTICLE TYPE: Review article
+
+SOURCE: PubMed
+Retrieved from: https://pubmed.ncbi.nlm.nih.gov/35166664/
+Full article: https://journals.sagepub.com/doi/10.12788/acp.0056
+
+NOTE: Full text is paywalled (Sage Journals/Annals of Clinical Psychiatry). This record contains the complete abstract, methods, and conclusions. Full text available via institutional subscription.

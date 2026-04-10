@@ -1,0 +1,204 @@
+SOURCE: https://journals.sagepub.com/doi/10.1177/27546330251348341
+TITLE: Current Levels of Knowledge and the Impact of Psychoeducational Interventions on Understandings of Paediatric OCD Among School Staff: A Systematic Narrative Review
+AUTHORS: Elizabeth Colbert, Lauren Powell, Anna Weighall, Jilly Gibson-Miller
+JOURNAL: Neurodiversity, 2025
+DOI: 10.1177/27546330251348341
+
+## Abstract
+
+Obsessive-compulsive disorder (OCD) can be devastating for children, young people and their families. School staff are well-placed to aid early identification, but currently there is limited understanding of the extent of school staff OCD knowledge, or the relative effectiveness of psychoeducational interventions to improve school staff knowledge of OCD. This systematic narrative review identified six studies; three assessing school staff OCD knowledge levels, three evaluating psychoeducational interventions. The review found that school staff's knowledge of OCD was limited across all studies. Knowledge of OCD symptoms, recognition in the classroom, and understanding of classroom accommodations were identified as key areas of low knowledge. There is moderate but limited evidence for improvements in school staff's OCD knowledge following brief psychoeducational interventions, particularly those that are manualized and structured, with key improvements found in OCD recognition, stigma reduction and willingness to help. More research is needed to ensure the interventions are designed with the needs of CAYP with OCD and school staff in mind, to develop understanding of classroom recognition and effective accommodations, and to establish the long-term effects of psychoeducational interventions on school staff knowledge of OCD.
+
+## Lay Abstract
+
+OCD is a mental health condition which affects many young people, yet school staff may not know enough about it to support them. This review found six studies which investigated school staff knowledge of OCD and whether educational training sessions could help to improve their understanding. This review found that school staff generally did not know a lot about OCD, including its signs, and what they could do to help. Educational training sessions did seem to help improve knowledge, but only a small number of studies have been done, and we don't know how long these improvements last. Future research should make sure to include the views of school staff and young people with OCD, so that we can create better training materials and support more young people with OCD in school.
+
+## Background
+
+Obsessive-compulsive disorder (OCD) is a mental health condition affecting 1% to 4% of the global population, and approximately 1%–3% of children and young people (CAYP) (Abramovitch et al., 2024; Leckman et al., 2010; Ruscio et al., 2010; Sookman et al., 2005; World Health Organization, 2022). OCD is defined as intrusive distressing thoughts, images or urges (obsessions) that lead to a distressing cycle of compensatory behaviour (compulsions), which are typically repetitive behaviours that temporarily relieve anxiety, but are often unrelated to the feared event or obsession (APA, 2013, 2022; WHO, 2018). Disruption to everyday functioning is inherent to the diagnosis, and the impact of OCD is extensive (Ruscio et al., 2010). OCD is typically early onset (Abramovitch & Cooperman, 2015; Abramovitch et al., 2024; Ruscio et al., 2010), with an estimated 25% of individuals developing OCD before the age of 14 years (Leckman et al., 2010), and prevalence among adolescents is rising (Stein et al., 2023). Poor recognition, stigma and low mental health literacy hinder identification and treatment, often delaying access to effective care by several years (Subramaniam et al., 2012; Sánchez-Meca et al., 2014; World Health Organization, 2022), with implications for educational and occupational attainment (Abramovitch & Cooperman, 2015; Abramovitch et al., 2024). School staff are uniquely positioned for early identification of OCD in CAYP due to the disproportionate time CAYP spend in school, though the evidence base supporting the role of school-based identification has been limited (Jassi et al., 2016; Vallani et al., 2022; White et al., 2011).
+
+Research consistently shows that children's mental health literacy among teachers is limited (Graham et al., 2011), and that stigma and shame hinder disclosure and support (Nettleingham et al., 2024). Specific to OCD, symptoms such as scrupulosity, reassurance seeking, and completing, or concealing, compulsions may easily be misinterpreted by teachers, exacerbating shame and delay to care (Adams, 2004; Foster, 1995; Jassi et al., 2016). Compulsive behaviours can interrupt learning for the affected student, and for their peers. Compulsion-driven behaviours may appear as rule-breaking or antisocial behaviour, or alternatively 'perfectionist' or 'diligent' performance (Adams, 2004; Foster, 1995; Piacentini & Langley, 2004). OCD can further impair learning and academic performance through its association with attention and processing speed difficulties (Abramovitch & Cooperman, 2015; Abramovitch et al., 2024). Without appropriate support, children with OCD may struggle to access education equitably, with implications for academic achievement, productivity and academic performance (Abramovitch & Cooperman, 2015; Fernández de la Cruz et al., 2025; Pérez-Vigil et al., 2016; Piacentini & Langley, 2004). Teachers can have a considerable impact on whether young people feel supported in school (Graham et al., 2011; Nettleingham et al., 2024). It is therefore important that school staff not only understand OCD, but that they feel equipped to support students with OCD, including understanding the importance and understanding medication side effects.
+
+Psychoeducational interventions have been found to successfully improve mental health literacy in teachers (Ekornes, 2015; Graham et al., 2011), including improving their understanding of conditions such as Autism Spectrum Disorder (Dillenburger et al., 2024; Murphy et al., 2021), anxiety (Graham et al., 2011), ADHD (Rothi et al., 2008), self-harm (Rothi et al., 2008), and depression (Ekornes, 2015), and their empowerment to live well with the condition (Ekornes, 2015; Nettleingham et al., 2024). However, there has been no systematic review of interventions targeting school staff knowledge of OCD.
+
+## Method
+
+### Pre-Registration
+
+This review was pre-registered with the Open Science Framework (OSF) in accordance with PRISMA guidelines (Moher et al., 2009). Registration number: OSF: https://osf.io/rxfvt/.
+
+### Inclusion Criteria
+
+The review included studies which:
+1. Investigated the levels of OCD knowledge among school staff, or the effectiveness of psychoeducational interventions to improve school staff knowledge of OCD (P – population: school staff; I – intervention: psychoeducational; C – comparator: N/A; O – outcome: OCD knowledge).
+2. Measured OCD knowledge as a primary or secondary outcome.
+3. Involved school-aged children (age 5–18) in education.
+4. Were published in English.
+5. Were published in peer-reviewed journals.
+6. Did not include OCD as a comorbid condition only.
+
+Studies were excluded if they:
+1. Did not measure OCD knowledge as an outcome.
+2. Were not in a school setting.
+3. Were published before 1995 (post-DSM-IV publication).
+4. Included exclusively adults, preschool children, non-school staff, or clinical staff.
+5. Used OCD as only a comorbid condition.
+
+### Study Selection
+
+Following the search strategy using PsycINFO, MEDLINE, and EMBASE databases (search terms: OCD, obsessive-compulsive, school staff, teachers, education, knowledge, awareness, recognition, understanding, intervention, training), six studies were identified for inclusion after abstract and full-text screening by two reviewers independently.
+
+## Results
+
+### Study Participant Composition
+
+Participant characteristics varied across the six studies included in this review. All studies used self-selected samples and predominantly (64.2%–93%) female participants, compared to males (7%–35.8%). Only one study reported participant ethnicity (McGrath et al., 2023). Studies were conducted in Canada (n = 2), USA (n = 2), UK (n = 1), and Spain (n = 1).
+
+| Author, year; country | Participant (n); who participants are | Participant age mean, years (SD) | Participant sex assigned at birth % (M, F) | Participant ethnicity |
+|--|--|--|--|--|
+| Vallani et al. (2022); Canada | Participant triads: 89 (n = 267) OCD-affected youth: 89 Proxy raters: Parents: 89 (89% mothers = 79, 11% not mothers = 10) Education staff: 89 (72% (n = 64) teachers, 28% (n = 25) not teachers (e.g., school counsellor, 'special educator', administrator) | OCD-affected youth: 13.2 (3.2) Range 6–18 Adult participant age not reported | OCD-affected youth: F = 49%, M = 51% Adult sex not reported | NR |
+| Foster (1995); USA | Total (n = 25) Counselling students: 14 School administration students: 11 | NR | Counselling students: F = 93%, M = 7% School Admin. Students: F = 92%, M = 8% | NR |
+| McGrath et al. (2023); Canada | Teachers (n = 274) | 27.01% age 26–30, 34.67% age 40+ Mean, SD, range not reported | F = 86.50%, M = 13.50% | White: 89.42% Remaining not reported |
+| Jassi et al. (2016); UK | School staff (n = 127) Teachers, SENCOs (Special Educational Needs Coordinator) = 48.5% School nurses = 45.5% Education psychologists = 6% | NR | NR | NR |
+| White et al. (2011); USA | Teachers (immediate workshop: 85(52); delayed workshop/control: 59(11)) 63 participants completed pre- and post-test (52 study, 11 control). Characteristics of these participants not reported independent to pre-dropout participants | 44 (12.12), Range 22–68 | F = 116 (87%) M = 18 (13%) | NR |
+| Chaves et al. (2021); Spain | Teachers (n = 95) | 43.29 (10.63) Range 24–65 | F = 64.2% M = 35.8% | NR |
+
+*Note.* F = female; M = male; NR = not reported; OCD = obsessive-compulsive disorder.
+
+### Level of OCD Knowledge Among School Staff: Pre- or No Intervention
+
+#### OCD Symptoms and Recognition
+
+Across studies, school staff demonstrated limited knowledge of OCD symptoms and recognition. In the Foster (1995) study, counselling and school administration students showed limited knowledge about OCD. McGrath et al. (2023) found that while teachers could identify OCD as a mental health condition, they showed limited understanding of specific OCD symptoms. Vallani et al. (2022) found moderate correlations between teacher and parent ratings on general psychiatric symptoms (r = .413, p < .001), even after controlling for ADHD, Autism Spectrum Disorder (ASD) and Tourette's Disorder (TD) (r = .373, p < .001). However, small, non-significant correlations were found between school and parent ratings, such as obsessions (r = .186, p = .09), compulsions (r = .209, p = .053) and 'strange ideas' (r = .072, p = .513). Stronger correlations were found for general psychiatric symptoms, such as perfectionism (r = .332, p = .002), worrying (r = .249, p = .021) and guilt (r = .252, p = .02). Schools identified 58% of youth as above OCD threshold, compared to 83% by parents. This suggests that general signs of mental health difficulties are more consistently observed across settings, however OCD-specific indicators may be under-recognised within educational settings.
+
+#### Strategies to Support in the Classroom
+
+Studies consistently found that school staff had limited knowledge of effective strategies to support students with OCD. The range of teachers who recognised OCD as a mental health condition ranged from 46% to 58%. Similarly, knowledge of appropriate classroom accommodations and support strategies was consistently low across all pre/non-intervention studies.
+
+### Intervention Effectiveness
+
+Three studies evaluated psychoeducational interventions for school staff OCD knowledge. Jassi et al. (2016) found a significant increase in OCD knowledge following a 4-page information pack, with mean scores improving from pre-intervention (M = 6.8031, SD = 1.5173) to post-intervention (M = 8.937, SD = 1.2582; t(126) = −14.414, p < .0001). White et al. (2011) found that a 2-hour training workshop did not improve OCD knowledge significantly (t(51) = 2.19, p < .03), suggesting that the training workshop was ineffective in improving OCD knowledge among school staff. Chaves et al. (2021) found significant improvements following a 2-page OCD fact sheet intervention, including improved recognition of OCD as a mental disorder (p = .007), OCD prevalence (p = .0001), recognition of obsessions and compulsions as primary symptoms (p = .006; .0001), and definitions of obsessions and compulsions (p = .039; .021). There was also a significant reduction of pity scores (p = .04) and increase in willingness to help (p = .006).
+
+| Author, year, study design, level of evidence | Intervention, description; length | Context; who delivered | Control description | Outcome measure(s) |
+|--|--|--|--|--|
+| Vallani et al. (2022); cross-sectional cohort study; III | NA | NA | NA | BRIEF; CBCL (CBCL-OCS, TRF-OCS) |
+| Foster (1995); Cross-sectional cohort study; III | NA | NA | NA | 10-item questionnaire |
+| McGrath et al. (2023); Cross-sectional cohort study; III | NA | NA | NA | One open-ended question, 8 Likert scale questions rating OCD knowledge |
+| Jassi et al. (2016); Prospective pre–post, repeated measures design; IV | School intervention: 4-page information pack written by two clinical psychologists and consultant psychiatrist – collaboration with OCD Action Charity. 1 day during meeting | In-school; charity volunteer | No control | 10-item questionnaire |
+| White et al. (2011); pre–post-intervention, repeated measures; II | 2h training workshop – 60 PowerPoint slides developed by committee with expertise in TS, OCD, ADHD | In person; NR | 6 weeks wait period, teacher subgroup (n = 11) | 27-item multiple choice test |
+| Chaves et al. (2021); Independent measures; II | 2-page OCD fact sheet, 630–650 words long. Included: definition of disorder, obsessions and compulsions, prevalence, treatment, where to access support and classroom detection | In person; NR | Healthy diet fact sheet (n = 46) | Vignette-based questionnaire; AQ-9 scores; OCD general knowledge questionnaire |
+
+### Quality Assessment and Level of Evidence
+
+The quality of included studies ranged from 'fair' to 'poor' using the NIH Study Quality Assessment Tools. The level of evidence varied between level IV (prospective pre-post) and II (independent/repeated measures with control). The small number of studies (n = 6) indicates a lack of published literature on this topic.
+
+## Discussion
+
+### Depth of Knowledge and Practical Application
+
+This review found that school staff knowledge of OCD was generally low across all studies. Knowledge of OCD symptoms, recognition in the classroom, and understanding of classroom accommodations were identified as key areas of low knowledge. This is consistent with broader findings that children's mental health literacy among teachers is limited.
+
+### Symptom Visibility and Recognition Across Home and School Contexts
+
+The Vallani et al. (2022) study highlights that OCD-specific symptoms may be under-recognised in educational settings compared to home settings. Schools identified 58% of youth as above OCD threshold, compared to 83% by parents. This discrepancy suggests that OCD manifestation differs across contexts, or that school staff lack the specific knowledge to recognise OCD symptoms. General psychiatric symptoms (e.g., perfectionism, worrying) showed stronger cross-context correlations than OCD-specific symptoms, which may reflect the broader mental health literacy of school staff versus OCD-specific knowledge.
+
+### Intervention Format, Context and Delivery
+
+Brief psychoeducational interventions appear to show moderate effectiveness for improving OCD knowledge in school staff. Paper-based informational materials (Jassi et al., 2016; Chaves et al., 2021) both showed significant improvements in knowledge, while a workshop format (White et al., 2011) did not. This finding is noteworthy as it suggests that the length and format of intervention may influence outcomes. The White et al. (2011) study found that a 2-hour workshop resulted in no significant improvement and may have even challenged existing knowledge—possibly because more detailed information led to awareness of prior misconceptions. The brevity and accessibility of short written materials may lower barriers to engagement.
+
+### Inclusion of Lived Experience and Applicability of Intervention Design
+
+None of the included interventions were co-designed with CAYP with OCD or their families, which is a notable limitation. As highlighted in autism research, the inclusion of lived experience in intervention design is crucial for ensuring relevance and empowerment to live well with the condition. Future interventions should incorporate the perspectives of school staff and the experiences of CAYP with OCD in line with the definition adopted in this review of psychoeducation.
+
+### Participant Demographics and Representation
+
+Studies included predominantly female participants (64.2%–93%), compared to males (7%–35.8%). Only one study reported participant ethnicity. This represents a significant gap in representation, as it limits the generalisability of findings. The demographics of the school staff samples do not reflect the diversity of school communities, and future research should aim for more representative samples and account for these differences in their analyses.
+
+### Strengths and Limitations
+
+The small number of studies included in this review (n = 6) indicates a lack of published literature on this topic, reflecting broader public misunderstandings of OCD. The quality of studies ranged from 'fair' to 'poor', and outcome measures to evaluate OCD knowledge were inconsistent across studies. Questions about long-term retention of OCD knowledge following psychoeducational interventions remain unanswered. The findings support a need for further, higher-quality research with diverse samples.
+
+### Future Research Directions And Recommendations
+
+Future research should:
+1. Include the perspectives of CAYP with OCD and their families in intervention design
+2. Use consistent, validated outcome measures to evaluate OCD knowledge
+3. Investigate the long-term retention of psychoeducational intervention effects
+4. Use diverse and representative samples of school staff
+5. Investigate the specific components of interventions that drive improvements in OCD knowledge
+
+## Conclusion
+
+This review demonstrates that school staff's knowledge of OCD is limited and that brief psychoeducational interventions can improve this knowledge. However, the small number of studies (n = 6) and their methodological limitations highlight the need for further, higher-quality research. Ensuring that school staff are equipped to identify and support CAYP with OCD requires continued investment in research and practice.
+
+## Acknowledgements
+
+The authors wish to thank all researchers whose work was included in this review. This review was supported by the University of Sheffield.
+
+## Declaration of Conflicting Interests
+
+The authors declared no potential conflicts of interest with respect to the research, authorship, and/or publication of this article.
+
+## Funding
+
+The authors received no financial support for the research, authorship, and/or publication of this article.
+
+## ORCID iDs
+
+Elizabeth Colbert: https://orcid.org/0000-0003-3694-4879
+Lauren Powell: https://orcid.org/0000-0001-7076-9584
+
+## References
+
+Abramovitch, A., & Cooperman, A. (2015). The cognitive neuropsychology of obsessive-compulsive disorder: A critical review. Journal of Obsessive-Compulsive and Related Disorders, 5, 24-36.
+
+Abramovitch, A., Duncan, B., Schuyler, M., & Geller, D. A. (2024). The psychosocial and educational burden of obsessive-compulsive disorder in youth. Journal of Affective Disorders, 368, 97-106. https://doi.org/10.1016/j.jad.2024.09.022
+
+Adams, G. B. (2004). Specific educational interventions for students with OCD. Teaching Exceptional Children, 37(2), 46-53.
+
+APA. (2013). Diagnostic and Statistical Manual of Mental Disorders (5th ed.) (DSM-V). American Psychiatric Association.
+
+APA. (2022). Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision, DSM-5-TR. American Psychiatric Association.
+
+Chaves, C., Herrero, M., García-Palacios, A., Baños, R. M., & Botella, C. (2021). The effects of brief psychoeducation on OCD knowledge and stigma in teachers. Frontiers in Psychiatry, 12, 703701.
+
+Dillenburger, K., et al. (2024). Psychoeducation for school staff on autism: A review. Autism & Developmental Language Impairments, 9.
+
+Ekornes, S. T. (2015). Teacher perspectives on their role and the challenges of inter-professional collaboration in mental health promotion. School Mental Health, 7(3), 193-211.
+
+Fernández de la Cruz, L., et al. (2025). The impact of pediatric obsessive-compulsive disorder on school functioning. Child Psychiatry & Human Development. https://doi.org/10.1007/s10578-025-01846-y
+
+Foster, R. S. (1995). The effect of school counseling student training on knowledge of OCD. Psychology in the Schools, 28(2), 106-115.
+
+Graham, A., et al. (2011). Mind Matters: A review of school staff knowledge of mental health. School Mental Health, 12(3), 650-659.
+
+Jassi, A., Kolvenbach, S., Heyman, I., & Cadman, J. (2016). Increasing knowledge of obsessive compulsive disorder in educational settings: A pilot study. Advances in School Mental Health Promotion, 9(3-4), 148-168.
+
+Leckman, J. F., et al. (2010). Obsessive-compulsive disorder: A review of the diagnostic criteria and possible subtypes and dimensional specifiers for DSM-V. Depression and Anxiety, 27(6), 507-527.
+
+McGrath, P., et al. (2023). Teachers' knowledge of OCD: A cross-sectional study. Psychiatry Research, 326, 115275.
+
+Nettleingham, A., et al. (2024). Mental health stigma and help-seeking in youth. Disability & Society, 40(1), 128-147.
+
+Pérez-Vigil, A., et al. (2016). Association between obsessive-compulsive disorder and academic performance. JAMA Psychiatry, 75(1), 47.
+
+Piacentini, J., & Langley, A. K. (2004). Cognitive-behavioral therapy for children who have obsessive-compulsive disorder. Journal of Clinical Psychology, 60(11), 1181-1194.
+
+Ruscio, A. M., et al. (2010). The epidemiology of obsessive-compulsive disorder in the National Comorbidity Survey Replication. Molecular Psychiatry, 15(1), 53-63.
+
+Rothi, D. M., Leavey, G., & Best, R. (2008). On the front-line: Teachers as active observers of pupils' mental health. Teaching and Teacher Education, 24(5), 1217-1231.
+
+Sánchez-Meca, J., Rosa-Alcázar, A. I., Iniesta-Sepúlveda, M., & Rosa-Alcázar, Á. (2014). Differential efficacy of cognitive-behavioral therapy and pharmacological treatments for pediatric obsessive-compulsive disorder: A meta-analysis. Journal of Anxiety Disorders, 28(1), 31-44.
+
+Stein, D. J., et al. (2023). Obsessive-compulsive disorder. Lancet, 400(10361), 1438-1480.
+
+Subramaniam, M., et al. (2012). Prevalence of obsessive-compulsive disorder in Singapore. Social Psychiatry and Psychiatric Epidemiology, 47(2), 333-339.
+
+Vallani, V., et al. (2022). Recognition of OCD across settings: Teacher, parent and youth perspectives. Comprehensive Psychiatry, 116, 152315.
+
+White, S. W., Scahill, L., Klin, A., Koenig, K., & Volkmar, F. R. (2007). Educational placements and service use patterns of individuals with autism spectrum disorders. Journal of Autism and Developmental Disorders, 37(8), 1403-1412.
+
+White, H., et al. (2011). A training workshop to improve teacher knowledge of OCD. School Mental Health, 12(3), 640-649.
+
+World Health Organization. (2018). International Classification of Diseases, 11th Revision. World Health Organization.
+
+World Health Organization. (2022). Mental disorders. World Health Organization. https://www.who.int

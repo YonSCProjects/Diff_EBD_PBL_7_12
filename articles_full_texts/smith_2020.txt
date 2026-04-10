@@ -1,0 +1,51 @@
+ARTICLE: Academic Motivation Deficits in Adolescents with ADHD and Associations with Academic Functioning
+
+AUTHORS: Zoe R. Smith; Joshua M. Langberg; Caroline N. Cusick; Cathrin D. Green; Stephen P. Becker
+
+JOURNAL: Journal of Abnormal Child Psychology
+VOLUME: 48
+ISSUE: 2
+PAGES: 237-249
+NUMBER OF PAGES: 13
+DATE: February 1, 2020
+ORIGINAL LANGUAGE: English (US)
+
+ABSTRACT:
+The present study evaluates differences in self-reported intrinsic and extrinsic academic motivation and amotivation between eighth-grade adolescents with (n = 162) and without (n = 140) ADHD. This study also examines associations between motivation and academic functioning with objective (i.e., grade point average, standardized reading and math scores) and cross-rater measurement (i.e., parent-reported homework performance). Multivariate analysis of variance controlling for sex, intelligence, and medication status found that adolescents with ADHD exhibited a significant motivational deficit compared to adolescents without ADHD across all areas of academic motivation, including intrinsic motivation (d = 0.49), extrinsic motivation (d = 0.43), and amotivation (d = 0.42). To examine whether motivation was differentially associated with academic impairment in the ADHD and comparison groups, a multi-group path analysis was conducted controlling for sex, intelligence, and medication status. Findings showed that motivation was differentially associated with academic impairment for adolescents with and without ADHD. For the comparison group, higher amotivation was associated with poorer homework performance and lower intrinsic motivation was associated with lower reading accuracy. In the ADHD group, higher amotivation was associated with poorer homework performance and math fluency, higher extrinsic motivation was associated with better homework performance and higher GPA, and higher intrinsic motivation was associated with higher reading accuracy. This study builds upon previous research in demonstrating that adolescents with ADHD have academic motivational deficits when compared to their peers without ADHD. Research is needed to understand the longitudinal interplay of academic motivation and academic functioning, with an eye towards developing or modifying interventions to increase academic motivation and academic success.
+
+METHODS:
+- Sample: Eighth-grade adolescents with ADHD (n = 162) and without ADHD (n = 140)
+- Self-reported measures of intrinsic and extrinsic academic motivation and amotivation
+- Objective academic functioning measures: grade point average, standardized reading and math scores
+- Cross-rater measurement: parent-reported homework performance
+- Multivariate analysis of variance (MANOVA) controlling for sex, intelligence, and medication status
+- Multi-group path analysis controlling for sex, intelligence, and medication status
+
+FINDINGS:
+- Adolescents with ADHD showed significant motivational deficits vs. peers without ADHD:
+  - Intrinsic motivation: d = 0.49
+  - Extrinsic motivation: d = 0.43
+  - Amotivation: d = 0.42
+- Differential associations with academic impairment:
+  - Comparison group: higher amotivation → poorer homework performance; lower intrinsic motivation → lower reading accuracy
+  - ADHD group: higher amotivation → poorer homework performance and math fluency; higher extrinsic motivation → better homework performance and higher GPA; higher intrinsic motivation → higher reading accuracy
+
+CONCLUSION:
+This study builds upon previous research in demonstrating that adolescents with ADHD have academic motivational deficits when compared to their peers without ADHD. Research is needed to understand the longitudinal interplay of academic motivation and academic functioning, with an eye towards developing or modifying interventions to increase academic motivation and academic success.
+
+KEYWORDS:
+- Academic impairment
+- Amotivation
+- Attention-deficit/hyperactivity disorder
+- Extrinsic motivation
+- Grades
+- Intrinsic motivation
+
+ASJC CODES:
+- Developmental and Educational Psychology
+- Psychiatry and Mental health
+
+SOURCE: Rutgers University Research Profile
+Retrieved from: https://www.researchwithrutgers.com/en/publications/academic-motivation-deficits-in-adolescents-with-adhd-and-associa/
+
+NOTE: Full text is paywalled. This record contains the complete abstract and methodology/findings details.

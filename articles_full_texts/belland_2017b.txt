@@ -1,0 +1,154 @@
+A Bayesian Network Meta-Analysis to Synthesize the Influence of Contexts of Scaffolding Use on Cognitive Outcomes in STEM Education
+
+Brian R. Belland, Andrew E. Walker, Nam Ju Kim
+
+Review of Educational Research, 87(6), 1042-1081
+Published: 2017 (December)
+DOI: 10.3102/0034654317723009
+Article first published online: December 27, 2017
+
+Sources: SAGE Journals (Bronze OA - https://journals.sagepub.com/doi/10.3102/0034654317723009); PubMed (https://pubmed.ncbi.nlm.nih.gov/29200508/)
+Open Access: Bronze OA (free to read at publisher)
+
+AUTHORS
+- Brian R. Belland
+- Andrew E. Walker
+- Nam Ju Kim
+
+ABSTRACT
+
+Computer-based scaffolding provides temporary support that enables students to participate in and become more proficient at complex skills. This study used Bayesian network meta-analysis to synthesize within-subjects (pre-post) differences resulting from scaffolding in 56 studies. Scaffolding has a consistently strong effect across student populations, STEM (science, technology, engineering, and mathematics) disciplines, and assessment levels, and a strong effect when used with most problem-centered instructional models (exception: inquiry-based learning and modeling visualization) and educational levels (exception: secondary education).
+
+LITERATURE REVIEW
+
+Existing Scaffolding Meta-Analyses
+
+Meta-analyses have been performed among specific subtypes of scaffolding, such as that in intelligent tutoring systems (Ma et al., 2014; Steenbergen-Hu & Cooper, 2013, 2014; VanLehn, 2011), dynamic assessment (Swanson & Lussier, 2001), and scaffolding for students with learning disabilities (Swanson & Deshler, 2003), indicating that scaffolding can help experimental students perform substantially better than control students. While this work is important, it does not speak to the magnitude of cognitive growth that one might see in students who use scaffolding. There is a need for synthesis of pre–post cognitive growth resulting from scaffolding, and how that growth varies based on differences in the context in which scaffolding is used. The technique of network meta-analysis, which can address such growth, has emerged in medical research (Jansen et al., 2011; Lumley, 2002; Mills et al., 2013) and has potential in education research.
+
+Contextual Issues Related to Scaffolding
+
+Learners: Different populations of learners (e.g., by education level, education population, and STEM discipline) may benefit from scaffolding to different degrees.
+
+Context of Use: The context of scaffolding use (problem-based learning, inquiry-based learning, case-based learning, design-based learning, project-based learning, modeling/visualization, problem solving) may moderate scaffolding outcomes.
+
+Assessment Level: Learning gains may vary depending on whether concept-level, principles-level, or application-level assessments are used.
+
+Bayesian Network Meta-Analysis as a Potential Solution
+
+Bayesian network meta-analysis allows for the synthesis of pre-post (within-subjects) cognitive growth resulting from scaffolding, and how that growth varies based on context. This approach addresses limitations of traditional comparative meta-analyses.
+
+Research Questions
+
+1. To what extent do learner characteristics moderate cognitive pre-post gains resulting from scaffolding?
+2. How does context of scaffolding use moderate cognitive pre-post gains resulting from scaffolding?
+3. How does assessment level moderate cognitive pre-post gains resulting from scaffolding?
+
+METHOD
+
+Design
+
+Bayesian network meta-analysis using Markov Chain Monte Carlo (MCMC) estimation.
+
+Literature Search
+
+The literature search used terms including scaffold**, tutor**, computer**, intelligent tutoring system**, and cognitive tutor**. Hand searches were conducted in journals recommended by experts or where articles related to scaffolding in mathematics and engineering education had been found: Journal for Research in Mathematics Education, International Journal of Mathematical Education in Science and Technology, Journal of Professional Issues in Engineering Education and Practice, and Computer Applications in Engineering Education. Additional hand searches to gain coverage in special education and adult learning were conducted in: Journal of Special Education, Journal of Special Education Technology, BMC Medical Education, and Journal of Medical Education.
+
+Application of Inclusion Criteria
+
+Stage 1: k = 6,471 studies that resulted from the literature search (k = 7,589).
+Stage 2: resulted in dropping a total of 1,062 of the studies remaining after Stage 1.
+Final: k = 56 included studies. The number of included outcomes varies slightly by moderator analysis.
+
+Coding Scheme
+
+Effect Size Calculations: Hedges' g was chosen because it (a) uses pooled standard deviation, which has the potential to be less biased than effect size estimates that use the control group standard deviation, and (b) is weighted according to sample size (Hedges, 1982).
+
+Variables Coded:
+- Education Level: Primary/K–5, Middle Level/6–8, Secondary/9–12, College/Vocational/Technical, Graduate/Professional, Adult
+- Education Population: Traditional, High-Performing, Underperforming, English Language Learners (ELL), Underrepresented, Persons With Learning Disabilities
+- Instructional Approach: Problem-Based Learning With Scaffolding, Project-Based Learning With Scaffolding, Inquiry-Based Learning With Scaffolding, Case-Based Learning With Scaffolding, Design-Based Learning With Scaffolding, Modeling/Visualization With Scaffolding, and Problem Solving With Scaffolding
+- STEM Discipline: Science, Technology, Engineering, Mathematics
+- Assessment Level: Concept, Principles, and Application
+
+Coding Process
+
+The q test bootstrapping method was used to examine the probability that statistics were below .667 (Hayes & Krippendorff, 2007). Results for assessment level coding: the chance of obtaining an alpha value below .67 was 3.13%. Results for Context of Use: 90% probability that the alpha value was above .67.
+
+Meta-Analytic Procedures/Statistical Analyses
+
+The Bayesian model has the following distribution: i~N(0, σ²) and the sampling error has a mean of zero and a sampling variance of σ². The seed for the random number generator was 1234. Starting value for beta and gamma parameter was zero. A total of 22,500 iterations for estimation of posterior distribution were generated by MCMC and 2,500 initial iterations were burned in to remove randomized initial values. Models were validated with graphical summaries (i.e., trace plot, autocorrelation, histogram and density plots).
+
+Two outliers were identified (z score > +3 SD): Galleto and Refugio (2012) and Kramarski and Zeichner (2001). Because there was no evidence of systematic bias, the mentioned studies were maintained in the list of included studies.
+
+RESULTS
+
+Research Question 1: To What Extent Do Learner Characteristics Moderate Cognitive Pre-Post Gains Resulting From Scaffolding?
+
+Education Level
+
+Pre-post cognitive gains were: (a) highest among college students (k = 12); (b) roughly equivalent among primary (k = 7), middle level (k = 8), and secondary (k = 6); and (c) lowest among graduate/professional (k = 3). Because this is a Bayesian network meta-analysis, effect size estimates represent pre-post gains rather than group comparisons.
+
+Key finding: Scaffolding has a consistently strong effect across all educational levels, with some variation. College-level students showed the highest pre-post gains.
+
+Education Population
+
+Students with learning disabilities showed especially large pre-post gains from scaffolding (average g = 3.13 in some analyses), consistent with Belland et al. (2017a)'s finding that "scaffolding's strongest effects are in populations the furthest from the target learner population in the original scaffolding definition." Students in traditional, underperforming, underrepresented, and ELL populations also showed significant gains.
+
+Research Question 2: How Does Context of Scaffolding Use Moderate Cognitive Pre-Post Gains?
+
+Pre-post gains were strong for most instructional contexts:
+- Problem-based learning with scaffolding: strong effect
+- Project-based learning with scaffolding: strong effect
+- Case-based learning with scaffolding: strong effect
+- Design-based learning with scaffolding: strong effect
+- Problem solving with scaffolding: strong effect
+- Inquiry-based learning with scaffolding: exception (weaker effect)
+- Modeling/visualization with scaffolding: exception (weaker effect)
+
+STEM Discipline
+
+Scaffolding had a consistently strong effect across STEM disciplines. The highest-ranking subjects were:
+- Math (avg g = 1.29)
+- Technology (avg g = 1.06, but high potential error)
+
+Research Question 3: How Does Assessment Level Moderate Cognitive Pre-Post Gains?
+
+Scaffolding had a consistently strong effect across assessment levels:
+- Concept-level assessments: strong effect (avg g = 0.4 or greater)
+- Principles-level assessments: strong effect (avg g = 0.7-0.9)
+- Application-level assessments: strong effect (avg g = 0.7-0.9)
+
+DISCUSSION
+
+Key Findings Summarized:
+1. Scaffolding has a consistently strong effect on pre-post cognitive gains across student populations, STEM disciplines, and assessment levels
+2. Context of scaffolding use matters: exceptions include inquiry-based learning and modeling/visualization
+3. Students with learning disabilities benefit most (exceptionally high pre-post gains)
+4. College-level students showed highest gains among education levels
+5. Secondary education was a notable exception with lower gains than primary and middle level
+
+These findings complement and extend Belland et al. (2017a), which found g = 0.46 overall for between-group comparisons. The Bayesian network meta-analysis approach provides pre-post gain estimates that show even stronger effects.
+
+Implications for Practice:
+- Computer-based scaffolding should be widely implemented in STEM education
+- Particular attention should be paid to using scaffolding in problem-based and project-based contexts
+- Scaffolding may be especially beneficial for students with learning disabilities and other underserved populations
+- Inquiry-based learning and modeling/visualization contexts may require modified scaffolding approaches
+
+CONCLUSION
+
+This Bayesian network meta-analysis confirms and extends findings from prior meta-analyses, showing that scaffolding has consistently strong effects on cognitive pre-post gains in STEM education. The results provide practical guidance for educators implementing scaffolding in diverse STEM learning contexts.
+
+REFERENCES (available at https://doi.org/10.3102/0034654317723009)
+
+Belland, B. R., Walker, A. E., Kim, N. J., & Lefler, M. (2017). Synthesizing results from empirical research on computer-based scaffolding in STEM education: A meta-analysis. Review of Educational Research, 87(2), 309-344. https://doi.org/10.3102/0034654316670999
+Hedges, L. V. (1982). Estimation of effect size from a series of independent experiments. Psychological Bulletin, 92, 490-499.
+Jansen, J. P., Crawford, B., Bergman, G., & Stam, W. (2011). Bayesian meta-analysis of multiple treatment comparisons. Value in Health, 11, 956-964.
+Ma, W., Adesope, O. O., Nesbit, J. C., & Liu, Q. (2014). Intelligent tutoring systems and learning outcomes: A meta-analysis. Journal of Educational Psychology, 106, 901-918.
+Steenbergen-Hu, S., & Cooper, H. (2013). A meta-analysis of the effectiveness of intelligent tutoring systems on K-12 students' mathematical learning. Journal of Educational Psychology, 105, 970-987.
+Steenbergen-Hu, S., & Cooper, H. (2014). A meta-analysis of the effectiveness of intelligent tutoring systems on college students' academic learning. Journal of Educational Psychology, 106, 331-347.
+Swanson, H. L., & Deshler, D. (2003). Instructing adolescents with learning disabilities: Converting a meta-analysis to practice. Journal of Learning Disabilities, 36(2), 124-135.
+Swanson, H. L., & Lussier, C. M. (2001). A selective synthesis of the experimental literature on dynamic assessment. Review of Educational Research, 71, 321-363.
+VanLehn, K. (2011). The relative effectiveness of human tutoring, intelligent tutoring systems, and other tutoring systems. Educational Psychologist, 46, 197-221.
+Wood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in problem solving. Journal of Child Psychology and Psychiatry, 17, 89-100.
+[Additional references in full text at publisher]

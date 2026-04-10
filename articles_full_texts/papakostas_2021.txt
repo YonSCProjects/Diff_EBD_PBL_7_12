@@ -1,0 +1,392 @@
+Title: Social Robots in Special Education: A Systematic Review
+URL: https://doi.org/10.3390/electronics10121398
+Authors: George A Papakostas; George K Sidiropoulos; Cristina I Papadopoulou; Eleni Vrochidou; Vassilis G Kaburlasos; Maria T Papadopoulou; Vasiliki Holeva; Vasiliki-Aliki Nikopoulou; Nikolaos Dalivigkas; Papakostas; George A; Sidiropoulos; George K; Papadopoulou; Cristina I; Vrochidou; Eleni; Kaburlasos; Vassilis G; Maria T; Holeva; Vasiliki; Nikopoulou; Dalivigkas; Nikolaos
+Description: In recent years, social robots have become part of a variety of human activities, especially in applications involving children, e.g., entertainment, education, companionship. The interest of this work lies in the interaction of social robots with children in the field of special education. This paper seeks to present a systematic review of the use of robots in special education, with the ultimate goal of highlighting the degree of integration of robots in this field worldwide. This work aims to explore the technologies of robots that are applied according to the impairment type of children. The study showed a large number of attempts to apply social robots to the special education of children with various impairments, especially in recent years, as well as a wide variety of social robots from the market involved in such activities. The main conclusion of this work is the finding that the specific field of application of social robots is at the first development step; however, it is expected to be of great concern to the research community in the coming years.
+
+---FULL TEXT---
+
+# Social Robots in Special Education: A Systematic Review
+
+^1^
+
+^2^
+
+^3^
+
+^4^
+
+^*^
+
+*Electronics*
+
+**2021**,
+
+*10*(12), 1398; https://doi.org/10.3390/electronics10121398
+
+## Abstract
+
+## 1. Introduction
+
+### 1.1. Related Work
+
+### 1.2. Contribution of This Study
+- ****A.****
+ **Question 1—What is the degree of integration of social robots in special education?**
+- ****B.****
+ **Question 2—In which impairments have the social robots been used, under what conditions and experimental settings and with what results?**
+- ****C.****
+ **Question 3—What types of social robots are appropriate for each impairment and what is their performance?**
+- ****D.****
+ **Question 4—What are the challenges that need to be addressed by the researchers in this field, in order to achieve the successful integration of social robots in special education?**
+
+## 2. Materials and Methods
+
+### 2.1. Sources and Search Terms
+- **(1)**
+ “(human–robot interaction) AND ((special education) OR (special needs education) OR disorder)” and
+- **(2)**
+ “human–robot interaction” AND “autism”.
+
+### 2.2. Inclusion and Exclusion Criteria
+
+### 2.3. Data Extraction
+- **-**
+ The impairment type of the target group.
+- **-**
+ The age range of the target group.
+- **-**
+ The role of the robot in the interaction (if the interaction occurred only with the robot or with the cooperation of other persons, namely an instructor, other children, or a family member).
+- **-**
+ The type of interaction between the target group and the robot (game, interaction, lessons, or other).
+- **-**
+ The name of the robot that was used.
+- **-**
+ The type of robot (humanoid, non-humanoid).
+- **-**
+ The challenges faced during the study from the aspect of the functionality of the robot.
+
+### 2.4. Statistical Results
+
+#### 2.4.1. Demographics
+
+#### 2.4.2. Timeline
+
+#### 2.4.3. Impairments
+
+## 3. Impairments Taxonomy
+
+### 3.1. Autism Spectrum Disorder (ASD)
+
+^−6^and F critical value = 3.28; joint attention and imitation were F value = 23.93, p-value = 3.79 × 10
+
+^−7^and F critical value = 3.28 and the eye contact duration of each participant improved over the experiments. Another study that carried out a joint attention therapy was presented in [29], which aimed to find the effect of different visual stimuli in order to improve the children’s joint attention, by measuring the total eye contact time and number of times for each visual cue. The study included 12 children (11 males and one female), aged between 3.5 and 7.2 years old. Two attention cues were examined, with one them being more effective (blinking or rasta), with the blinking having 32.4 s and 65.1% accuracy eye contact and rasta having 38.8 s with 80.3%. The results showed that the prominence of the cue is important in establishing eye contact, showing effectiveness in the improvement of joint attention.
+
+|Ref.|Objectives|Interaction|Age Range(Years)|Participants Total(Female, Male)|RobotName|RobotType|RobotRole|
+|--|--|--|--|--|--|--|--|
+|[25]|Teach fundamentals of music, improve social/cognitive skills|Music-based scenario|6|4 (0, 4)|NAO|Humanoid|Main interaction|
+|[26]|Improve joint attention, imitation and turn-taking skills|Games|3–5(Phase 1)-(Phase 2)|11 (-, -)(Phase 1)27 (-, -)(Phase 2)|NAO|Humanoid|Main interaction. Therapist present|
+|[27]|If caregivers can better address concerns of adolescents with ASD via a desktop humanoid robot|Conversations|15, 18|2 (0, 2)|CommU|Humanoid|Main interaction, tele-operated by caregiver, cases of caregiver being in the same room and in a different room|
+|[28]|Find parameters that can improve the multi-communication skills|Intervention adaptive therapy games (joint attention and imitation)|3.7–10.4|12 (1, 11)|2 NAO|Humanoid|Main interaction|
+|[29]|Find effect of different visual stimuli in order to improve the joint attention|Joint attention therapy|3.5–7.2|12 (1, 11)|NAO|Humanoid|Main interaction|
+|[30]|Assess autonomy of robot|Therapy sessions|3.9–5.9--|5 (0, 5)6 (-, -)18 (-, -)|ASTRO|Non-Humanoid|Main interaction|
+|[31]|Measure effectiveness of interaction module|Interaction modules|5–6|9 (0, 9)|Rero|Humanoid|Main interaction, therapist present, experimenter hidden|
+|[32]|See whether the games played with the robot improve the children’s visual perspective taking (VPT) and theory of mind (TOM)|Games|3–5 (initial proof of concept), 11–14(pilot study)|3 (-, -)12 (5, 7)|Kaspar|Humanoid|Main interaction, therapist present|
+|[33]|Examine whether children successfully imitate the robot and if they focus attention on the robot|Sign language teaching|-|10 (-, -)|InMoov|Humanoid|Main interaction, therapist and companions present|
+|[34]|Test and analyze impact of robot|Storytelling, games, exercises, song|7–11|15 (-, -)|NAO|Humanoid|Main interaction, teacher present|
+|[35]|Evaluate benefits in anxiety reduction and instruction compliance|Mixed play activities|5|5 (-, -)|NAO, MiRo|Humanoid, Non-Humanoid|Main interaction, therapist and parents present|
+|[36]|Develop social skills|Distrust and deception games|5–8|20 (2, 18)|NAO|Humanoid|Main interaction|
+
+### 3.2. Multiple Impairments
+|Ref.|Impairments|Objectives|Interaction|Age Range(Years)|Participants Total(Female, Male)|RobotName|RobotType|RobotRole|
+|--|--|--|--|--|--|--|--|--|
+|[37]|Spinal muscular atrophy, cerebral palsy, developmental disorder, intellectual disabilities|Engage children in STEM|Workshops|6–13|18 (4, 14)|WeDo, Lego Mindstorms/EV3|Non-Humanoid, Humanoid|Main interaction|
+|[39]|Cerebral palsy, communication disorders|Speech therapy|Exercises|-|14 (-, -)|SPELTRA|Humanoid|Main interaction, therapist present|
+|[40]|Global cognitive retardation, developmental disorder, epilepsy, language retardation|Investigation of effects of robot|Game|6–11|5 (3, 2)|Iromec|Non-Humanoid|Main interaction, single and two child tests, one teacher involved in activity, another observing|
+|[41]|ASD, speech–language impairment,|Improve social and attentions skills|Social interaction and exercises|6–9|3 (1, 2)|NAO|Humanoid|Main interaction, parent and researcher present, robot operated|
+|[42]|ASD, Global developmental delay, cerebral palsy, epilepsy|Improve mobility|Sessions|9–17|6 (2, 4)|NAO|Humanoid|Main interaction|
+|[43]|Global cognitive disability, tuberous sclerosis, ADHD, motor impairments|Improve mobility and cognitive skills|Play sessions|6–11|4 (3, 1)|Iromec|Non-Humanoid|Main interaction, individual or group sessions, teacher and facilitator present|
+|[44]|Prader–Willi disorder, psychosis, Down syndrome,intellectual disabilities|Learn through play with the robotInvestigation of effects of robot|Free play|6–10|11 (-, -)|Teo|Non-Humanoid|Main interaction, therapist present|
+|[45]|ASD, mental impairment|Improve mobility|Play sessions|adolescents|2 (-, -)|Lego Mindstorms NTX|Humanoid|Main interaction, researcher present|
+|[46]|Physical disabilities, cognitive impairments|Improvement of movements and cognitive skills|Body exercises|2.6–18|17 (7, 10)|ZORA (NAO)|Humanoid|Main interaction, Wizard of Oz|
+|[47]|ASD, cognitive impairments|Improve social and cognitive skills|Play scenarios|8.3 avg.|10 (1, 9)|Iromec, Kaspar|Non-Humanoid, Humanoid|Main interaction, experimenter present|
+|[48]|ASD, intellectual disabilities|Improve communication skills|Communication and interaction.|8–13|3 (0, 3)|NAO|Humanoid|Main interaction|
+|[49]|ASD, developmental disorders,mood disorder, anxiety disorder|Investigation of effects of robot|Free interaction|8–19|9 (5, 4)|Paro|Non-Humanoid|Main interaction|
+|[50]|Different levels of cognitive disabilities|Learn cleaning skills|Training session|10–18|30 (-, -)|NAO|Humanoid|Main interaction, controlled by experimenter|
+|[51]|ASD, intellectual disability|Rehabilitation|Imitation tasks|8.7 avg.|6 (0, 6)|NAO|Humanoid|Main interaction, teacher present|
+|[52]|ASD, developmental delay (DD)|Find the preferences of the children for appearances and functionalities of the robots|Free play|7.8 avg.|74 (11, 63)|DabaoXiaoEMika|Humanoid|Main interaction|
+|[53]|ASD, intellectual disability, Down syndrome|Analyze the behavior of the participants|Games|24–42|6 (5, 1)|Cozmo|Non-Humanoid|Main interaction|
+|[54]|ASD, ADHD, delayed speech development (DSD)|Engagement level measuring, find behavioral patterns|Games|4–8|21 (3, 18)|NAO|Humanoid|Main interaction, researcher is present|
+|[55]|ASD, ADHD|Apply a novel robot behavior|Imitation games|3–56–12|7 (0, 7)8 (0, 8)|NAO|Humanoid|Main interaction, researcher is present|
+
+### 3.3. Cerebral Palsy
+|Ref.|Objectives|Interaction|Age Range(Years)|Participants Total(Female, Male)|RobotName|RobotType|RobotRole|
+|--|--|--|--|--|--|--|--|
+|[56]|Neurophysiological rehabilitation|Exercises|4–9|6 (-, -)|KineTron|Humanoid|Main interaction, therapist present|
+|[57]|Improve mobility|Exercises|9–13|2 (0, 2)|NAO|Humanoid|Main interaction|
+|[59]|Improve playfulness|Training sessions|5–9|4 (1, 3)|Lego Invention “Roverbot”|Non-Humanoid|Main interaction, child with mother|
+
+### 3.4. Other Impairments
+
+#### 3.4.1. Attention Deficit Hyperactivity Disorder (ADHD)
+
+#### 3.4.2. Hearing Impairments
+
+#### 3.4.3. Down Syndrome
+
+#### 3.4.4. Oncological Disorders
+
+#### 3.4.5. Neuro-Developmental Disorder (NDD)
+|Ref.|Impairment|Objectives|Interaction|Age Range(Years)|Participants Total(Female, Male)|RobotName|RobotType|RobotRole|
+|--|--|--|--|--|--|--|--|--|
+|[60]|ADHD|Observe effects of the interaction|Collaborative learning|-|3 (-, -)|Ifbot|Non-Humanoid|Wizard of Oz, main interaction|
+|[62]|Hearing impairments|Sign language teaching|Sign game|7–16|27 (16, 11)|Robovie R3, NAO|Humanoid|Main interaction|
+|[64]|Down syndrome|Compare the two robots|Play scenarios|10–16|4 (1, 3)|NAO, Lego Mindstorms KRAZ3|Humanoid, Non-Humanoid|Support the learning|
+|[65]|Down syndrome|Investigate effects of robots|Play scenarios|8|1 (1, 0)|Iromec, Kaspar|Non-Humanoid, humanoid|Main interaction, experimenter interacting|
+|[68]|Oncological disorders|Increase motivation of children to perform exercises|Gross motor exercises|3–15|14 (5, 9)|ZORA (NAO)|Humanoid|Main interaction|
+|[70]|NDD|Increase engagement|Storytelling|25–42|11 (-, -)|ELE|Non-Humanoid|Main interaction|
+
+### 3.5. Challenges
+|Reference|Impairment|Outcomes|Challenges|
+|--|--|--|--|
+|[25]|ASD|Sessions positively affected their walking, speaking and handwriting; autism severity and parental stress decreased, social skills increased and stereotyped behaviors improved.|A small number of participants and no control group, children were not mature enough, potential effects of other classes, heterogeneous autism severity on children, unpredicted behaviors during sessions, engineering and technical issues, the small number of sessions.|
+|[34]|ASD|The use of the NAO robot showed significant improvement in several aspects of learning behaviors, confirming the confidence level for the techniques used.|Not reported.|
+|[35]|ASD|Reduction in anxiety and increase in compliance with instructions.|Not reported.|
+|[36]|ASD|Distrust task: the independent-sample Welch t-test showed a significant difference in overall distrust performance between the ASD (M = 7.70, SD = 2.62) and TD groups (M = 9.35, SD = 0.67. TD children were more likely than children with ASD to distrust the robot who offered incorrect information.Deception task: the overall performance analysis of the deception task also found a significant difference in the overall deception performance between the ASD (M = 6.70, SD = 3.64) and TD (M = 9.55, SD = 1.19) groups, indicating that TD children were more likely to deceive the robot than children with ASD.|Did not use a within-subject design to compare the same participants with human and robot conditions.Although there is no significant difference in the mean ages between the two ASD groups, the age difference of six months could still represent different neurodevelopmental patterns in children, which could affect their interactions with robots and humans.The anthropomorphic thinking for the human condition was not investigated; thus, it is not clear whether the interaction progress would affect children’s anthropomorphic thinking answers.To study the regional difference of the performance of this study, and to replicate these findings in more cities and counties.|
+|[37]|Multiple disabilities|The results obtained show that children can adapt quickly to the robot, and in the case of phonemic area, an immediate improvement.Helped to address the educational, cognitive, physical and social needs of the children, engaging youth with disabilities in a robotics program.|Three main improvements were identified for this study, based on its challenges: (1) to scale the research and to repeat it in more sites, (2) to increase the number of female children and (3) to generalize the designed experiments to children with other disabilities, since the authors realized that STEM learning for children with various disabilities may have different meanings and is an area worthy of further exploration.|
+|[39]|Multiple disabilities|Children were engaged in the activity from the very beginning of the session.|The appearance and behaviors did not evoke an agent with its inner state and intentionality. Issues are mainly related to the functional aspect of the visual interface, design of the physical appearance of the robot and its faces.|
+|[40]|Multiple disabilities|Helped to address the educational, cognitive, physical and social needs of the children.|The research was conducted at only one site. The girls were under-represented in the program.|
+|[41]|Multiple disabilities|“No response” count decreases and flattens out with improvement. The “correct response” count consistently increases. These counts are consistent with the increase of total directives over time. The results for subject 3 are inconclusive. Another subject made considerable progress according to the SLP and SPED teacher.|Not reported.|
+|[42]|Multiple disabilities|The Wilcoxon signed-rank test showed that for the group as a whole, ratings were significantly higher when working with the robot.|There was a small amount of bias that may have influenced the teachers’ ratings. There were more people present in the classroom than when working with the robot and there was also the researcher and a camera.|
+|[43]|Multiple disabilities|No positive changes for the Sensory developmental area were recorded. The motor developmental area was the only one that did not report any negative changes.|To extend this preliminary study.|
+|[44]|Multiple disabilities|Some children had the highest increase on the variable “communication with Teo”, while others had a high decrease. For four children, there was an increase in some variables, while there was a strong decrease in two children. The variable “manipulation of Teo” had a decrease for all children except for two of them. Additionally, the variables “externalization of needs”, “positive emotions” and “negative emotions” showed a positive trend in the second session in both groups of children.|Causality relationships are hard to measure.|
+|[45]|Multiple disabilities|Improvements in distinguishing the cards and overall behavior.|Not reported.|
+|[46]|Multiple disabilities|The mean score of IPPA before the sessions was 11.8, and the mean score after the sessions was 8.8.|Not reported.|
+|[47]|Multiple disabilities|Analysis of the data from the pre- and post-test questionnaires; all items were compared with each other in order to evaluate possible improvements in the developmental target areas.|The ability to speak and understand the language was vital for the children. Study data are preliminary.|
+|[48]|Multiple disabilities|The three students became more confident and willing to engage in conversation after interacting with the robot over a period of time.|Not reported.|
+|[49]|Multiple disabilities|They confirmed the lasting positive change by gross observation.|One boy did not like the big eyes or the slight drive noise.|
+|[50]|Multiple disabilities|All groups in this experiment improved their knowledge and skills between the pre-test and the post-test. The interaction with the robot was more efficient in improving functional knowledge and skills. Students’ IQ levels showed an improvement.|Not reported.|
+|[51]|Multiple disabilities|Children successful at the end of the therapy. Two children with profound ID did not benefit from robot-assisted therapy. All children increased the time spent imitating the robot.|The results of this study only indicate the underlying potential of research in this field.|
+|[56]|Cerebral palsy|All children liked the sessions with the Rehabilitation Robot. The children wanted him to be present during their other sessions.|Not reported.|
+|[57]|Cerebral palsy|The robot misinterprets children with the speech impediment.|Not reported.|
+|[59]|Cerebral palsy|Scoring based on Rasch analysis. During intervention, all children had an increase in self-control, specifically the items decides, modifies, initiates and transitions.|The Lego Invention robot is not 100% accurate in its movements.|
+|[60]|ADHD|Learning time (min:sec): without robot: 15:28, 12:49;with robot: 18:05, 13:45.Running time: without robot: 6 and 5 times;with robot: 7 and 9 times.|Not reported.|
+|[62]|Hearing impairments|The children of beginner’s level preferred to play with NAO first. Their average error rates are smaller in the games played with R3 than NAO in the first games, and total error in both games.|The robots, due to their hands, did not correctly sign one of the words.|
+|[64]|Down syndrome|Participants had a higher percentage of engagement with the Lego Mindstorm than with the NAO. In the fourth participant, there was no difference in percentage engagement between the two robots. In terms of percentage errors, there was no difference between the two robots in all four participants.|The learning objectives were limited to those that could be carried out with both robots.|
+|[65]|Down syndrome|The child was more interactive with the experimenter and the robot during the sessions with the Kaspar robot.|Not reported.|
+|[68]|Oncological disorders|The motivation was assessed using three measures based on the Fun Toolkit.|Not reported.|
+
+## 4. Robots—Taxonomy
+
+### 4.1. NAO Robot
+
+### 4.2. Kaspar Robot
+
+### 4.3. Lego Mindstorms
+
+### 4.4. iRobiQ Robot
+
+### 4.5. Iromec Robot
+
+### 4.6. Alice Robot
+
+### 4.7. Probo Robot
+
+### 4.8. KiliRo Robot
+
+### 4.9. Zeno Robot
+
+### 4.10. Miscellaneous Robots
+|NAO|Kaspar|Lego-Mindstorms-ev3|iRobiQ|
+|--|--|--|--|
+|Iromec|Alice|Probo|KiliRo|
+|Zeno|Aibo|Rero|Cozmo|
+|Paro|MiRo|CommU|QTrobot|
+|InMoov|Ifbot|Charlie|Keepon|
+|Robot Name|Robot Type|Ref.|Impairments|Robot Role|Interaction|
+|--|--|--|--|--|--|
+|NAO|Humanoid|[25,26,28,29,34,35,36,41,42,46,48,50,51,54,55,57,62,64,68,75,77,85,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109]|ASD, multiple impairments, cerebral palsy, hearing impairments, oncological disorders|Proactive companion, assistive intervention tool, social mediator, therapeutic assistant|Imitation, therapeutic games, free play sessions, teaching joint attention, learning sessions|
+|Kaspar|Humanoid|[32,47,65,110,111,112]|ASD, multiple impairments, Down syndrome|Game partner|Unconstrained interaction, tactile interaction through tactile play scenarios, games|
+|Lego Mindstorms|Non-HumanoidHumanoid|[37,45,59,113,113]|Multiple impairments, cerebral palsy|Main interaction|Working sessions, workshops (program robot to solve problems), games|
+|iRobiQ|Humanoid|[73,114,115,116]|ASD, multiple impairments|Main interaction|Story intervention, social interaction|
+|Iromec|Non-Humanoid|[40,43,47,65,117]|ASD, multiple impairments, Down syndrome|Companion and teacher assistant|Play scenarios, triadic interaction, imitation|
+|Alice|Humanoid|[74,75,76]|ASD|Game partner|Game, triadic interaction|
+|Probo|Humanoid(pet-like)|[77,78,79]|ASD|Main interaction|Storytelling, game|
+|KiliRo|Non-Humanoid(pet-like)|[80,81]|ASD|Lower stress levels of the children, improve the interaction of the teacher|Pronouncing letters and dancing, free interaction, learning activities|
+|Zeno|Humanoid|[82,83]|ASD|Social mediator, assistant|recognize emotions in a game scenario, stimulus-reinforcement|
+|Aibo|Non-Humanoid(pet-like)|[84]|ASD|Main interaction|Interactive and therapy sessions|
+|Rero|Humanoid|[31]|ASD|Main interaction|Interaction modules|
+|Cozmo|Non-Humanoid|[53]|Multiple impairments|Main interaction|Games|
+|Paro|Non-Humanoid(pet-like)|[49,85]|Multiple impairments|Main interaction|Free interaction|
+|MiRo|Non-Humanoid(pet-like)|[35]|ASD|Main interaction|Mixed play activities|
+|CommU|Humanoid|[27]|ASD|Main interaction|Conversations|
+|Astro|Non-Humanoid|[30]|ASD|Main interaction|Therapy sessions|
+|QTrobot|Humanoid|[86]|ASD|Interview partner|Storytelling, ask questions, imitation games|
+|InMoov|Humanoid|[33]|ASD|Teacher assistant|Sign language learning|
+|Ifbot|Non-Humanoid|[60]|ADHD|Collaborative learning|Wizard of Oz, main interaction|
+|Keepon|Non-humanoid(pet-like)|[88]|ASD|Gives feedback to the children|Learning/reversal learning task|
+|FACE|Humanoid(Android)|[89]|ASD|Treatment assistive tool|Imitation games|
+|Kinetron|Humanoid|[56]|Cerebral palsy|Rehabilitation, precise movements with specified speed and force.|Games|
+|Pleo|Non-humanoid(pet-like)|[90]|ASD|Elicit social interaction and host of social perception reasoning to children|Triadic interaction with the child and a teacher|
+|Queball|Non-humanoid|[91]|ASD|Therapeutic tool|Social interaction, play|
+|Robovie R3|Humanoid|[62]|Hearing impairments|Teacher assistant|Sign language learning|
+|SPELTRA|Non-humanoid|[39]|Multiple impairments|Main interaction|Speech exercises|
+|Teo|Non-humanoid|[44]|Multiple impairments, Down syndrome|Main interaction|Free play|
+|Troy|Humanoid|[92]|ASD|Treatment assistive tool|Social communication|
+
+## 5. Discussion
+
+## 6. Conclusions
+
+## Author Contributions
+
+## Funding
+
+## Conflicts of Interest
+
+## References
+1. Lasi, H.; Fettke, P.; Kemper, H.-G.; Feld, T.; Hoffmann, M. Industry 4.0. Bus. Inf. Syst. Eng. **2014**, 6, 239–242. [Google Scholar] [CrossRef]
+2. Fukuyama, M. Society 5.0: Aiming for a new human-centered society. Jpn. Spotlight **2018**, 27, 47–50. [Google Scholar]
+3. Breazeal, C. Toward sociable robots. Robot. Autonom. Syst. **2003**, 42, 167–175. [Google Scholar] [CrossRef]
+4. Lin, C.-Y.; Cheng, L.-C.; Huang, C.-C.; Chuang, L.-W.; Teng, W.-C.; Kuo, C.-H.; Gu, H.-Y.; Chung, K.-L.; Fahn, C.-S. Versatile humanoid robots for theatrical performances. Int. J. Adv. Robot. Syst. **2013**, 10, 7. [Google Scholar] [CrossRef]
+5. Katevas, K.; Healey, P.G.; Harris, M.T. Robot comedy lab: Experimenting with the social dynamics of live performance. Front. Psychol. **2015**, 6, 1253. [Google Scholar] [CrossRef] [PubMed]
+6. Lytridis, C.; Bazinas, C.; Kaburlasos, V.G.; Vassileva-Aleksandrova, V.; Youssfi, M.; Mestari, M.; Ferelis, V.; Jaki, A. Social robots as cyber-physical actors in entertainment and education. In Proceedings of the 2019 International Conference on Software, Telecommunications and Computer Networks (SoftCOM), Split, Croatia, 19–21 September 2019; pp. 1–6. [Google Scholar]
+7. Fazekas, G.; Horvath, M.; Toth, A. A novel robot training system designed to supplement upper limb physiotherapy of patients with spastic hemiparesis. Int. J. Rehab. Res. **2006**, 29, 251–254. [Google Scholar] [CrossRef]
+8. Kachouie, R.; Sedighadeli, S.; Khosla, R.; Chu, M.-T. Socially assistive robots in elderly care: A mixed-method systematic literature review. Int. J. Hum. Comput. Interact. **2014**, 30, 369–393. [Google Scholar] [CrossRef]
+9. Savela, N.; Turja, T.; Oksanen, A. Social acceptance of robots in different occupational fields: A systematic literature review. Int. J. Soc. Robot. **2018**, 10, 493–502. [Google Scholar] [CrossRef]
+10. Lytridis, C.; Bazinas, C.; Sidiropoulos, G.; Papakostas, G.A.; Kaburlasos, V.G.; Nikopoulou, V.-A.; Holeva, V.; Evangeliou, A. Distance special education delivery by social robots. Electronics **2020**, 9, 1034. [Google Scholar] [CrossRef]
+11. Belpaeme, T.; Kennedy, J.; Ramachandran, A.; Scassellati, B.; Tanaka, F. Social robots for education: A review. Sci. Robot. **2018**, 3, eaat5954. [Google Scholar] [CrossRef]
+12. Kostova, S.; Dimitrova, M.; Kaburlasos, V.; Vrochidou, E.; Papakostas, G.; Pachidis, T.; Saeva, S.; Bonković, M.; Kružić, S.; Marasović, T.; et al. Identifying needs of robotic and technological solutions for the classroom. In Proceedings of the 2018 26th International Conference on Software, Telecommunications and Computer Networks (SoftCOM), Split, Croatia, 13–15 September 2018; pp. 1–6. [Google Scholar]
+13. Musić, J.; Bonković, M.; Kružić, S.; Marasović, T.; Papić, V.; Kostova, S.; Dimitrova, M.; Saeva, S.; Zamfirov, M.; Kaburlasos, V.; et al. Robotics and information technologies in education: Four countries from Alpe-Adria-Danube region survey. Int. J. Technol. Des. Educ. **2020**. [Google Scholar] [CrossRef]
+14. Lytridis, C.; Bazinas, C.; Papakostas, G.A.; Kaburlasos, V. On measuring engagement level during child-robot interaction in education. In Proceedings of the Robotics in Education, Online. 30 September–3 October 2020. [Google Scholar]
+15. Sidiropoulos, G.K.; Papakostas, G.A.; Lytridis, C.; Bazinas, C.; Kaburlasos, V.G.; Kourampa, E.; Karageorgiou, E. Measuring engagement level in child-robot interaction using machine learning based data analysis. In Proceedings of the 2020 International Conference on Data Analytics for Business and Industry: Way Towards a Sustainable Economy (ICDABI), Online. 26–27 October 2020; pp. 1–5. [Google Scholar]
+16. Sano, A.; Hernandez, J.; Deprey, J.; Eckhardt, M.; Goodwin, M.S.; Picard, R.W. Multimodal annotation tool for challenging behaviors in people with autism spectrum disorders. In Proceedings of the ACM Conference on Ubiquitous Computing; Association for Computing Machinery, New York, NY, USA, 21–26 September 2012; pp. 737–740. [Google Scholar]
+17. Dong, W.; Lepri, B.; Cappelletti, A.; Pentland, A.S.; Pianesi, F.; Zancanaro, M. Using the influence model to recognize functional roles in meetings. In Proceedings of the 9th international Conference on Multimodal Interfaces—Association for Computing Machinery, New York, NY, USA, 9–13 November 2007; pp. 271–278. [Google Scholar]
+18. Mubin, O.; Stevens, C.J.; Shahid, S.; Mahmud, A.A.; Dong, J.-J. A review of the applicability of robots in education. Technol. Educ. Learn. **2013**, 1. [Google Scholar] [CrossRef]
+19. Ismail, L.I.; Verhoeven, T.; Dambre, J.; Wyffels, F. Leveraging robotics research for children with autism: A review. Int. J. Soc. Robot. **2019**, 11, 389–410. [Google Scholar] [CrossRef]
+20. Papakostas, G.; Sidiropoulos, G.; Bella, M.; Kaburlasos, V. Social robots in special education: Current status and future challenges. Proc. JSME Annu. Conf. Robot. Mechatron. **2018**, 2018, 1P1–A15. [Google Scholar] [CrossRef]
+21. Kitchenham, B. Procedures for Performing Systematic Reviews; Keele University: Keele, UK, 2004; p. 33. [Google Scholar]
+22. Khan, K.S. Undertaking Systematic Reviews of Research on Effectiveness CRD’s Guidance for Those Carrying Out or Commissioning Reviews; NHS Centre for Reviews and Dissemination: York, UK, 2001; ISBN 978-1-900640-20-6. [Google Scholar]
+23. Scopus. Available online: https://www.scopus.com (accessed on 22 June 2020).
+24. Maenner, M.J. Prevalence of autism spectrum disorder among children aged 8 years—Autism and developmental disabilities monitoring network, 11 Sites, United States, 2016. MMWR Surveill. Summ. **2020**, 69. [Google Scholar] [CrossRef] [PubMed]
+25. Taheri, A.; Meghdari, A.; Alemi, M.; Pouretemad, H. Teaching music to children with autism: A social robotics challenge. Sci. Iran. **2019**, 26, 40–58. [Google Scholar] [CrossRef]
+26. Cao, H.-L.; Esteban, P.G.; Bartlett, M.; Baxter, P.; Belpaeme, T.; Billing, E.; Cai, H.; Coeckelbergh, M.; Costescu, C.; David, D.; et al. Robot-enhanced therapy: Development and validation of supervised autonomous robotic system for autism spectrum disorders therapy. IEEE Robot. Automat. Mag. **2019**, 26, 49–58. [Google Scholar] [CrossRef]
+27. Shimaya, J.; Yoshikawa, Y.; Kumazaki, H.; Matsumoto, Y.; Miyao, M.; Ishiguro, H. Communication support via a tele-operated robot for easier talking: Case/laboratory study of individuals with/without autism spectrum disorder. Int. J. Soc. Robot. **2019**, 11, 171–184. [Google Scholar] [CrossRef]
+28. Ali, S.; Mehmood, F.; Dancey, D.; Ayaz, Y.; Khan, M.J.; Naseer, N.; Amadeu, R.D.C.; Sadia, H.; Nawaz, R. An adaptive multi-robot therapy for improving joint attention and imitation of ASD children. IEEE Access **2019**, 7, 81808–81825. [Google Scholar] [CrossRef]
+29. Ali, S.; Mehmood, F.; Ayaz, Y.; Asgher, U.; Khan, M.J. Effect of different visual stimuli on joint attention of ASD children using NAO robot. In Proceedings of the Advances in Neuroergonomics and Cognitive Engineering, Washington, DC, USA, 24–28 July 2019; Volume 953, pp. 490–499, ISBN 978-3-030-20472-3. [Google Scholar]
+30. Melo, F.S.; Sardinha, A.; Belo, D.; Couto, M.; Faria, M.; Farias, A.; Gamboa, H.; Jesus, C.; Kinarullathil, M.; Lima, P. Project INSIDE: Towards autonomous semi-unstructured human-robot social interaction in autism therapy. Artif. Intell. Med. **2019**, 96, 198–216. [Google Scholar] [CrossRef] [PubMed]
+31. Ishak, N.I.; Yusof, H.M.; Ramlee, M.R.H.; Sidek, S.N.; Rusli, N. Modules of interaction for ASD children using rero robot (Humanoid). In Proceedings of the 2019 7th International Conference on Mechatronics Engineering (ICOM), Putrajaya, Malaysia, 30–31 October 2019; pp. 1–6. [Google Scholar]
+32. Wood, L.J.; Robins, B.; Lakatos, G.; Syrdal, D.S.; Zaraki, A.; Dautenhahn, K. Developing a protocol and experimental setup for using a humanoid robot to assist children with autism to develop visual perspective taking skills. Paladyn J. Behav. Robot. **2019**, 10, 167–179. [Google Scholar] [CrossRef]
+33. Axelsson, M.; Racca, M.; Weir, D.; Kyrki, V. A participatory design process of a robotic tutor of assistive sign language for children with autism. In Proceedings of the 28th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN), New Delhi, India, 14–18 October 2019; pp. 1–8. [Google Scholar]
+34. Qidwai, U.; Kashem, S.B.A.; Conor, O. Humanoid robot as a teacher’s assistant: Helping children with autism to learn social and academic skills. J. Intell. Robot. Syst. **2020**, 98, 759–770. [Google Scholar] [CrossRef]
+35. Di Nuovo, A.; Bamforth, J.; Conti, D.; Sage, K.; Ibbotson, R.; Clegg, J.; Westaway, A.; Arnold, K. An explorative study on robotics for supporting children with autism spectrum disorder during clinical procedures. In Proceedings of the Companion of the 2020 ACM/IEEE International Conference on Human-Robot Interaction, Cambridge, UK, 23–26 March 2020; pp. 189–191. [Google Scholar]
+36. Zhang, Y.; Song, W.; Tan, Z.; Zhu, H.; Wang, Y.; Lam, C.M.; Weng, Y.; Hoi, S.P.; Lu, H.; Man Chan, B.S.; et al. Could social robots facilitate children with autism spectrum disorders in learning distrust and deception? Comput. Hum. Behav. **2019**, 98, 140–149. [Google Scholar] [CrossRef]
+37. Lindsay, S.; Hounsell, K.G. Adapting a robotics program to enhance participation and interest in STEM among children with disabilities: A pilot study. Disab. Rehab. Assist. Technol. **2017**, 12, 694–704. [Google Scholar] [CrossRef]
+38. LEGO Education. Available online: https://education.lego.com/en-us/products (accessed on 22 June 2020).
+39. Robles-Bykbaev, V.; Ochoa-Guaraca, M.; Carpio-Moreta, M.; Pulla-Sánchez, D.; Serpa-Andrade, L.; López-Nores, M.; García-Duque, J. Robotic assistant for support in speech therapy for children with cerebral palsy. In Proceedings of the 2016 IEEE International Autumn Meeting on Power, Electronics and Computing (ROPEC), Zihuatanejo, Mexico, 9–11 November 2016; pp. 1–6. [Google Scholar]
+40. Marti, P.; Giusti, L. A robot companion for inclusive games: A user-centred design perspective. In Proceedings of the IEEE International Conference on Robotics and Automation, Anchorage, AK, USA, 3–8 May 2010; pp. 4348–4353. [Google Scholar]
+41. Lewis, L.; Charron, N.; Clamp, C.; Craig, M. Co-robot therapy to foster social skills in special need learners: Three pilot studies. In Methodologies and Intelligent Systems for Technology Enhanced Learning; Springer: Berlin/Heidelberg, Germany, 2016; pp. 131–139. [Google Scholar]
+42. Hedgecock, J.; Standen, P.J.; Beer, C.; Brown, D.; Stewart, D.S. Evaluating the role of a humanoid robot to support learning in children with profound and multiple disabilities. J. Assist. Technol. **2014**, 8, 111–123. [Google Scholar] [CrossRef]
+43. Marti, P.; Iacono, I. Learning through play with a robot companion. Everyday Technol. Indep. Care **2011**, 29, 526–533. [Google Scholar]
+44. Bonarini, A.; Clasadonte, F.; Garzotto, F.; Gelsomini, M.; Romero, M. Playful interaction with Teo, a mobile robot for children with neurodevelopmental disorders. In Proceedings of the 7th International Conference on Software Development and Technologies for Enhancing Accessibility and Fighting Info-Exclusion—Association for Computing Machinery, Vila Real, Portugal, 1–3 December 2016; pp. 223–231. [Google Scholar]
+45. Costa, S.; Santos, C.; Soares, F.; Ferreira, M.; Moreira, F. Promoting interaction amongst autistic adolescents using robots. In Proceedings of the Annual International Conference of the IEEE Engineering in Medicine and Biology, Buenos Aires, Argentina, 31 August–4 September 2010; pp. 3856–3859. [Google Scholar]
+46. Van den Heuvel, R.J.; Lexis, M.A.; de Witte, L.P. Robot ZORA in rehabilitation and special education for children with severe Physical disabilities: A pilot study. Int. J. Rehab. Res. **2017**, 40, 353. [Google Scholar] [CrossRef]
+47. Iacono, I.; Lehmann, H.; Marti, P.; Robins, B.; Dautenhahn, K. Robots as social mediators for children with autism—A preliminary analysis comparing two different robotic platforms. In Proceedings of the IEEE International Conference on Development and Learning (ICDL), Frankfurt, Germany, 24–27 August 2011; Volume 2, pp. 1–6. [Google Scholar]
+48. Silvera-Tawil, D.; Bradford, D.; Roberts-Yates, C. Talk to me: The role of human-robot interaction in improving verbal communication skills in students with autism or intellectual disability. In Proceedings of the 27th IEEE International Symposium on Robot and Human Interactive Communication (RO-MAN), Naples, Italy, 31 August–4 September 2018; pp. 1–6. [Google Scholar]
+49. Nakadoi, Y. Usefulness of animal type robot assisted therapy for autism spectrum disorder in the child and adolescent psychiatric ward. In Proceedings of the JSAI International Symposium on Artificial Intelligence; Springer: Berlin/Heidelberg, Germany, 2015; pp. 478–482. [Google Scholar]
+50. Park, E.; Kwon, S.J. I can teach them: The ability of robot instructors to cognitive disabled children. J. Psychol. Educ. Res. **2016**, 24, 101–114. [Google Scholar]
+51. Conti, D.; Trubia, G.; Buono, S.; Di Nuovo, S.; Di Nuovo, A. Evaluation of a robot-assisted therapy for children with autism and intellectual disability. In Proceedings of the Annual Conference Towards Autonomous Robotic Systems; Springer: Berlin/Heidelberg, Germany, 2018; pp. 405–415. [Google Scholar]
+52. Wan, G.; Deng, F.; Jiang, Z.; Lin, S.; Zhao, C.; Liu, B.; Chen, G.; Chen, S.; Cai, X.; Wang, H.; et al. Attention shifting during child—Robot interaction: A preliminary clinical study for children with autism spectrum disorder. Front. Inf. Technol. Electron. Eng. **2019**, 20, 374–387. [Google Scholar] [CrossRef]
+53. Balasuriya, S.S.; Sitbon, L.; Brereton, M.; Koplick, S. How can social robots spark collaboration and engagement among people with intellectual disability? In Proceedings of the 31st Australian Conference on Human-Computer-Interaction, Fremantle, WA, Australia, 2–5 December 2019; pp. 209–220. [Google Scholar]
+54. Zhanatkyzy, A.; Telisheva, Z.; Turarova, A.; Zhexenova, Z.; Sandygulova, A. Quantitative results of robot-assisted therapy for children with autism, ADHD and delayed speech development. In Proceedings of the Companion of the 2020 ACM/IEEE International Conference on Human-Robot Interaction, Cambridge, UK, 23–26 March 2020; pp. 541–542. [Google Scholar]
+55. Rakhymbayeva, N.; Seitkazina, N.; Turabayev, D.; Pak, A.; Sandygulova, A. A long-term study of robot-assisted therapy for children with severe autism and ADHD. In Proceedings of the Companion of the 2020 ACM/IEEE International Conference on Human-Robot Interaction, Cambridge, UK, 23–26 March 2020; pp. 401–402. [Google Scholar]
+56. Kozyavkin, V.; Kachmar, O.; Ablikova, I. Humanoid social robots in the rehabilitation of children with cerebral palsy. In Proceedings of the 8th International Conference on Pervasive Computing Technologies for Healthcare, Oldenburg, Germany, 20–23 May 2014; pp. 430–431. [Google Scholar]
+57. Rahman, R.A.A.; Hanapiah, F.A.; Basri, H.H.; Malik, N.A.; Yussof, H. Use of humanoid robot in children with cerebral palsy: The ups and downs in clinical experience. Procedia Comput. Sci. **2015**, 76, 394–399. [Google Scholar] [CrossRef]
+58. BIOLOID Premium Kit. Available online: https://www.generationrobots.com/en/401066-bioloid-premium-kit-robotis.html (accessed on 22 June 2020).
+59. Ríos-Rincón, A.M.; Adams, K.; Magill-Evans, J.; Cook, A. Playfulness in children with limited motor abilities when using a robot. Phys. Occupat. Ther. Pediatr. **2016**, 36, 232–246. [Google Scholar] [CrossRef] [PubMed]
+60. Jimenez, F.; Yoshikawa, T.; Furuhashi, T.; Kanoh, M.; Nakamura, T. Effects of collaborative learning between educational-support robots and children who potential symptoms of a development disability. In Proceedings of the 2016 Joint 8th International Conference on Soft Computing and Intelligent Systems (SCIS) and 17th International Symposium on Advanced Intelligent Systems (ISIS), Sapporo, Japan, 25–28 August 2016; pp. 266–270. [Google Scholar]
+61. Kato, S.; Ohshiro, S.; Itoh, H.; Kimura, K. Development of a communication robot Ifbot. In Proceedings of the IEEE International Conference on Robotics and Automation, New Orleans, LA, USA, 26 April–1 May 2004; Volume 1, pp. 697–702. [Google Scholar]
+62. Özkul, A.; Köse, H.; Yorganci, R.; Ince, G. Robostar: An interaction game with humanoid robots for learning sign language. In Proceedings of the 2014 IEEE International Conference on Robotics and Biomimetics (ROBIO 2014), Bali, Indonesia, 5–10 December 2014; pp. 522–527. [Google Scholar]
+63. Vstone. Available online: http://www.vstone.co.jp/english/ (accessed on 22 June 2020).
+64. Aslam, S.; Standen, P.J.; Shopland, N.; Burton, A.; Brown, D. A comparison of humanoid and non-humanoid robots in supporting the learning of pupils with severe intellectual disabilities. In Proceedings of the 2016 International Conference on Interactive Technologies and Games (ITAG), Notthingham, UK, 26–27 October 2016; pp. 7–12. [Google Scholar]
+65. Lehmann, H.; Iacono, I.; Dautenhahn, K.; Marti, P.; Robins, B. Robot companions for children with down syndrome: A case study. Interact. Stud. **2014**, 15, 99–112. [Google Scholar] [CrossRef]
+66. Kaspar the Social Robot. Available online: https://www.herts.ac.uk/kaspar/the-social-robot (accessed on 22 June 2020).
+67. IROMEC. Available online: https://www.roboticstoday.com/projects/iromec (accessed on 22 June 2020).
+68. Meyns, P.; van der Spank, J.; Capiau, H.; De Cock, L.; Van Steirteghem, E.; Van der Looven, R.; Van Waelvelde, H. Do a humanoid robot and music increase the motivation to perform physical activity? A quasi-experimental cohort in typical developing children and preliminary findings in hospitalized children in neutropenia. Int. J. Hum. Comput. Stud. **2019**, 122, 90–102. [Google Scholar] [CrossRef]
+69. Nao—Zorabots. Available online: https://zorarobotics.be/robots/nao (accessed on 22 June 2020).
+70. Fisicaro, D.; Pozzi, F.; Gelsomini, M.; Garzotto, F. Engaging persons with neuro-developmental disorder with a plush social robot. In Proceedings of the 14th ACM/IEEE International Conference on Human-Robot Interaction (HRI), Daegu, Korea, 11–14 March 2019; pp. 610–611. [Google Scholar]
+71. Belpaeme, T.; Vogt, P.; Van den Berghe, R.; Bergmann, K.; Göksun, T.; De Haas, M.; Kanero, J.; Kennedy, J.; Küntay, A.C.; Oudgenoeg-Paz, O. Guidelines for designing social robots as second language tutors. Int. J. Soc. Robot. **2018**, 10, 325–341. [Google Scholar] [CrossRef] [PubMed]
+72. Papakostas, G.A.; Strolis, A.K.; Panagiotopoulos, F.; Aitsidis, C.N. Social robot selection: A case study in education. In Proceedings of the 26th International Conference on Software, Telecommunications and Computer Networks (SoftCOM), Supetar, Croatia, 13–15 September 2018; pp. 1–4. [Google Scholar]
+73. Jordan, K.; King, M.; Hellersteth, S.; Wirén, A.; Mulligan, H. Feasibility of using a humanoid robot for enhancing attention and social skills in adolescents with autism spectrum disorder. Int. J. Rehab. Res. **2013**, 36, 221–227. [Google Scholar] [CrossRef]
+74. Taheri, A.R.; Alemi, M.; Meghdari, A.; Pour Etemad, H.R.; Basiri, N.M. Social robots as assistants for autism therapy in Iran: Research in progress. In Proceedings of the Second RSI/ISM International Conference on Robotics and Mechatronics (ICRoM), Tehran, Iran, 15–17 October 2014; pp. 760–766. [Google Scholar]
+75. Taheri, A.; Meghdari, A.; Alemi, M.; Pouretemad, H. Human-robot interaction in autism treatment: A case study on three pairs of autistic children as twins, siblings, and classmates. Int. J. Soc. Robot. **2018**, 10, 93–113. [Google Scholar] [CrossRef]
+76. Ghorbandaei Pour, A.; Taheri, A.; Alemi, M.; Meghdari, A. Human-robot facial expression reciprocal interaction platform: Case studies on children with autism. Int. J. Soc. Robot. **2018**, 10, 179–198. [Google Scholar] [CrossRef]
+77. Pop, C.A.; Simut, R.; Pintea, S.; Saldien, J.; Rusu, A.; David, D.; Vanderfaeillie, J.; Lefeber, D.; Vanderborght, B. Can the social robot probo help children with autism to identify situation-based emotions? A series of single case experiments. Int. J. Hum. Robot. **2013**, 10, 1350025. [Google Scholar] [CrossRef]
+78. Simut, R.E.; Vanderfaeillie, J.; Peca, A.; Van de Perre, G.; Vanderborght, B. Children with autism spectrum disorders make a fruit salad with probo, the social robot: An interaction study. J. Autism Dev. Disord. **2016**, 46, 113–126. [Google Scholar] [CrossRef] [PubMed]
+79. Vanderborght, B.; Simut, R.; Saldien, J.; Pop, C.; Rusu, A.S.; Pintea, S.; Lefeber, D.; David, D.O. Using the social robot probo as a social story telling agent for children with ASD. Interact. Stud. **2012**, 13, 348–372. [Google Scholar] [CrossRef]
+80. Bharatharaj, J.; Huang, L.; Al-Jumaily, A.; Elara, M.R.; Krägeloh, C. Investigating the effects of robot-assisted therapy among children with autism spectrum disorder using bio-markers. In Proceedings of the IOP Conference Series: Materials Science and Engineering, Busan, Korea, 25–27 August 2017; Volume 234, pp. 1–7. [Google Scholar]
+81. Bharatharaj, J.; Huang, L.; Krägeloh, C.; Elara, M.R.; Al-Jumaily, A. Social engagement of children with autism spectrum disorder in interaction with a parrot-inspired therapeutic robot. Procedia Comput. Sci. **2018**, 133, 368–376. [Google Scholar] [CrossRef]
+82. Palestra, G.; Varni, G.; Chetouani, M.; Esposito, F. A multimodal and multilevel system for robotics treatment of autism in children. In Proceedings of the International Workshop on Social Learning and Multimodal Interaction for Designing Artificial Agents—DAA ’16; ACM Press: Tokyo, Japan, 2016; pp. 1–6. [Google Scholar]
+83. Silva, V.; Soares, F.; Esteves, J.S.; Pereira, A.P. Building a hybrid approach for a game scenario using a tangible interface in human robot interaction. In Serious Games; Göbel, S., Garcia-Agundez, A., Tregel, T., Ma, M., Baalsrud Hauge, J., Oliveira, M., Marsh, T., Caserman, P., Eds.; Lecture Notes in Computer Science; Springer International Publishing: Cham, Switzerland, 2018; Volume 11243, pp. 241–247. ISBN 978-3-030-02761-2. [Google Scholar]
+84. Stanton, C.M.; Kahn, P.H.; Severson, R.L.; Ruckert, J.H.; Gill, B.T. Robotic animals might aid in the social development of children with autism. In Proceedings of the 3rd ACM/IEEE International Conference on Human-Robot Interaction (HRI); ACM Press: New York, NY, USA, 2008; pp. 271–278. [Google Scholar]
+85. Alhaddad, A.Y.; Javed, H.; Connor, O.; Banire, B.; Al Thani, D.; Cabibihan, J.-J. Robotic trains as an educational and therapeutic tool for autism spectrum disorder intervention. In Robotics in Education; Lepuschitz, W., Merdan, M., Koppensteiner, G., Balogh, R., Obdržálek, D., Eds.; Advances in Intelligent Systems and Computing; Springer International Publishing: Cham, Switzeralnd, 2019; Volume 829, pp. 249–262. ISBN 978-3-319-97084-4. [Google Scholar]
+86. Costa, A.P.; Charpiot, L.; Lera, F.R.; Ziafati, P.; Nazarikhorram, A.; Van Der Torre, L.; Steffgen, G. More attention and less repetitive and stereotyped behaviors using a robot with children with autism. In Proceedings of the 27th IEEE International Symposium on Robot and Human Interactive Communication (RO-MAN), Nanjing, China, 27–31 August 2018; pp. 534–539. [Google Scholar]
+87. InMoov—Open-Source 3D Printed Life-Size Robot. Available online: https://inmoov.fr/ (accessed on 28 April 2021).
+88. Costescu, C.A.; Vanderborght, B.; David, D.O. Reversal learning task in children with autism spectrum disorder: A robot-based approach. J. Autism Dev. Disord. **2015**, 45, 3715–3725. [Google Scholar] [CrossRef]
+89. Mazzei, D.; Greco, A.; Lazzeri, N.; Zaraki, A.; Lanatà, A.; Igliozzi, R.; Mancini, A.; Stoppa, F.; Scilingo, E.P.; Muratori, F. Robotic social therapy on children with autism: Preliminary evaluation through multi-parametric analysis. In Proceedings of the International Conference on Privacy, Security, Risk and Trust and 2012 International Confernece on Social Computing, Amsterdam, The Netherlands, 3–5 September 2012; pp. 766–771. [Google Scholar]
+90. Kim, E.S.; Berkovits, L.D.; Bernier, E.P.; Leyzberg, D.; Shic, F.; Paul, R.; Scassellati, B. Social robots as embedded reinforcers of social behavior in children with autism. J. Autism Dev. Disord. **2013**, 43, 1038–1049. [Google Scholar] [CrossRef]
+91. Salter, T.; Davey, N.; Michaud, F. Designing & developing QueBall, a robotic device for autism therapy. In Proceedings of the 23rd IEEE International Symposium on Robot and Human Interactive Communication, Edinburgh, UK, 25–29 September 2014; pp. 574–579. [Google Scholar]
+92. Whitmer, T. Incorporating a Robot in Intervention with Children with ASD: The Effect on Tantrum Behaviors. Master’s Thesis, Brigham Young University, Provo, UT, USA, 2015. [Google Scholar]
+93. Srinivasan, S.M.; Kaur, M.; Park, I.K.; Gifford, T.D.; Marsh, K.L.; Bhat, A.N. The effects of rhythm and robotic interventions on the imitation/praxis, interpersonal synchrony, and motor performance of children with autism spectrum disorder (ASD): A pilot randomized controlled trial. Autism Res. Treat. **2015**, 2015, 1–18. [Google Scholar] [CrossRef] [PubMed]
+94. So, W.-C.; Wong, M.K.-Y.; Lam, C.K.-Y.; Lam, W.-Y.; Chui, A.T.-F.; Lee, T.-L.; Ng, H.-M.; Chan, C.-H.; Fok, D.C.-W. Using a social robot to teach gestural recognition and production in children with autism spectrum disorders. Disabil. Rehab. Assist. Technol. **2018**, 13, 527–539. [Google Scholar] [CrossRef]
+95. Hirokawa, M.; Funahashi, A.; Itoh, Y.; Suzuki, K. Adaptive behavior acquisition of a robot based on affective feedback and improvised teleoperation. IEEE Trans. Cogn. Dev. Syst. **2019**, 11, 405–413. [Google Scholar] [CrossRef]
+96. Mavadati, S.M.; Feng, H.; Salvador, M.; Silver, S.; Gutierrez, A.; Mahoor, M.H. Robot-based therapeutic protocol for training children with autism. In Proceedings of the 25th IEEE International Symposium on Robot and Human Interactive Communication (RO-MAN), New York, NY, USA, 26–31 August 2016; pp. 855–860. [Google Scholar]
+97. Nie, G.; Zheng, Z.; Johnson, J.; Swanson, A.R.; Weitlauf, A.S.; Warren, Z.E.; Sarkar, N. Predicting response to joint attention performance in human-human interaction based on human-robot interaction for young children with autism spectrum disorder. In Proceedings of the 27th IEEE International Symposium on Robot and Human Interactive Communication (RO-MAN), Nanjing, China, 31 August–4 September 2018; pp. 1–4. [Google Scholar]
+98. Shamsuddin, S.; Yussof, H.; Ismail, L.I.; Mohamed, S.; Hanapiah, F.A.; Zahari, N.I. Initial response in HRI—A case study on evaluation of child with autism spectrum disorders interacting with a humanoid Robot NAO. Procedia Eng. **2012**, 41, 1448–1455. [Google Scholar] [CrossRef]
+99. Manner, M.D. Identifying differences in social responsiveness among preschoolers interacting with or watching social robots. In Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence—International Joint Conferences on Artificial Intelligence Organization, Stockholm, Sweden, 13–19 July 2018; pp. 5777–5778. [Google Scholar]
+100. Shamsuddin, S.; Yussof, H.; Ismail, L.I.; Mohamed, S.; Hanapiah, F.A.; Zahari, N.I. Humanoid robot NAO interacting with autistic children of moderately impaired intelligence to augment communication skills. Procedia Eng. **2012**, 41, 1533–1538. [Google Scholar] [CrossRef]
+101. Shamsuddin, S.; Yussof, H.; Miskam, A.; Hamid, M.A.C.; Malik, N.A.; Hashim, H.; Hanapiah, A.; Ismail, L.I. Humanoid robot NAO as HRI mediator to teach emotions using game-centered approach for children with autism. In Proceedings of the HRI 2013 Workshop on Applications for Emotional Robots, Tokyo, Japan, 3–6 March 2013. [Google Scholar]
+102. Anzalone, S.M.; Tilmont, E.; Boucenna, S.; Xavier, J.; Jouen, A.-L.; Bodeau, N.; Maharatna, K.; Chetouani, M.; Cohen, D. How children with autism spectrum disorder behave and explore the 4-dimensional (spatial 3D+time) environment during a joint attention induction task with a robot. Res. Autism Spect. Disord. **2014**, 8, 814–826. [Google Scholar] [CrossRef]
+103. Greczek, J.; Kaszubski, E.; Atrash, A.; Mataric, M. Graded cueing feedback in robot-mediated imitation practice for children with autism spectrum disorders. In Proceedings of the 23rd IEEE International Symposium on Robot and Human Interactive Communication, Edinburgh, UK, 25–29 August 2014; pp. 561–566. [Google Scholar]
+104. Desideri, L. Exploring the use of a humanoid robot to engage children with Autism Spectrum Disorder (ASD). Harness. Power Technol. Improve Lives **2017**. [Google Scholar] [CrossRef]
+105. Alemi, M.; Basiri, N.M. Exploring social robots as a tool for special education to teach english to Iranian kids with autism. Int. J. Robot. Theory Appl. **2016**, 4, 12. [Google Scholar]
+106. Zheng, Z.; Zhao, H.; Swanson, A.R.; Weitlauf, A.S.; Warren, Z.E.; Sarkar, N. Design, development, and evaluation of a noninvasive autonomous robot-mediated joint attention intervention system for young children with ASD. IEEE Trans. Hum. Mach. Syst. **2018**, 48, 125–135. [Google Scholar] [CrossRef] [PubMed]
+107. Kaboski, J.R.; Diehl, J.J.; Beriont, J.; Crowell, C.R.; Villano, M.; Wier, K.; Tang, K. Brief report: A pilot summer robotics camp to reduce social anxiety and improve social/vocational skills in adolescents with ASD. J. Autism Dev. Disord. **2015**, 45, 3862–3869. [Google Scholar] [CrossRef] [PubMed]
+108. Warren, Z.E.; Zheng, Z.; Swanson, A.R.; Bekele, E.; Zhang, L.; Crittendon, J.A.; Weitlauf, A.F.; Sarkar, N. Can robotic interaction improve joint attention skills? J. Autism Dev. Disord. **2015**, 45, 3726–3734. [Google Scholar] [CrossRef]
+109. Anzalone, S.M.; Tanet, A.; Pallanca, O.; Cohen, D.; Chetouani, M. A Humanoid robot controlled by neurofeedback to reinforce attention in autism spectrum disorder. In Proceedings of the 3rd Italian Workshop on Artificial Intelligence and Robotics, Genova, Italy, 28–30 November 2016. [Google Scholar]
+110. Wainer, J.; Dautenhahn, K.; Robins, B.; Amirabdollahian, F. Collaborating with kaspar: Using an autonomous humanoid robot to foster cooperative dyadic play among children with autism. In Proceedings of the 10th IEEE-RAS International Conference on Humanoid Robots, Nashville, TN, USA, 6–8 December 2010; pp. 631–638. [Google Scholar]
+111. Wood, L.J.; Robins, B.; Lakatos, G.; Syrdal, D.S.; Zaraki, A.; Dautenhahn, K. Piloting scenarios for children with autism to learn about visual perspective taking. In Towards Autonomous Robotic Systems; Giuliani, M., Assaf, T., Giannaccini, M.E., Eds.; Lecture Notes in Computer Science; Springer International Publishing: Cham, Switzerland, 2018; Volume 10965, pp. 260–270. ISBN 978-3-319-96727-1. [Google Scholar]
+112. Robins, B.; Amirabdollahian, F.; Ji, Z.; Dautenhahn, K. Tactile interaction with a humanoid robot for children with autism: A case study analysis involving user requirements and results of an initial implementation. In Proceedings of the 19th International Symposium in Robot and Human Interactive Communication, Viareggio, Italy, 12–15 September 2010; pp. 704–711. [Google Scholar]
+113. Conti, D.; Di Nuovo, A.; Trubia, G.; Buono, S.; Di Nuovo, S. Adapting robot-assisted therapy of children with autism and different levels of intellectual disability: A preliminary study. In Proceedings of the Companion of the 2018 ACM/IEEE International Conference on Human-Robot Interaction, Chicago, IL, USA, 5–8 March 2018; pp. 91–92. [Google Scholar]
+114. Yun, S.-S.; Park, S.-K.; Choi, J. A robotic treatment approach to promote social interaction skills for children with autism spectrum disorders. In Proceedings of the 23rd IEEE International Symposium on Robot and Human Interactive Communication, Edinburgh, UK, 25–29 August 2014; pp. 130–134. [Google Scholar]
+115. Han, B.Y.; Yim, D.; Kim, Y.T.; Lee, S.J.; Hong, K.H. The effect of a story intervention on the syntactic skills of children with autism spectrum disorders by using an educational humanoid robot. Commun. Sci. Disord. **2016**, 21, 244–261. [Google Scholar] [CrossRef]
+116. Jeon, K.H.; Yeon, S.J.; Kim, Y.T.; Song, S.; Kim, J. Robot-based augmentative and alternative communication for nonverbal children with communication disorders. In Proceedings of the ACM International Joint Conference on Pervasive and Ubiquitous Computing—UbiComp ’14 Adjunct, Seattle, WA, USA, 13–17 September 2014; pp. 853–859. [Google Scholar]
+117. Pennazio, V. Social robotics to help children with autism in their interactions through imitation. Res. Educ. Media **2017**, 9, 10–16. [Google Scholar] [CrossRef]
+118. Minsky, M. Society of Mind; Simon and Schuster: New York, NY, USA, 1988; ISBN 978-0-671-65713-0. [Google Scholar]
+119. Sidiropoulos, G.K.; Bazinas, C.; Lytridis, C.; Papakostas, G.A.; Kaburlasos, V.G.; Kechayas, P.; Kourampa, E.; Katsi, S.R.; Karatsioras, C. Synergy of intelligent algorithms for efficient child-robot interaction in special education: A feasibility study. In Proceedings of the Robotics in Education, Online. 30 September–3 October 2020; pp. 98–105. [Google Scholar]
+
+Publisher’s Note: MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+© 2021 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).
+
+## Share and Cite
+
+**MDPI and ACS Style**
+
+Papakostas, G.A.; Sidiropoulos, G.K.; Papadopoulou, C.I.; Vrochidou, E.; Kaburlasos, V.G.; Papadopoulou, M.T.; Holeva, V.; Nikopoulou, V.-A.; Dalivigkas, N.
+Social Robots in Special Education: A Systematic Review. *Electronics* **2021**, *10*, 1398. https://doi.org/10.3390/electronics10121398
+
+**AMA Style**
+
+Papakostas GA, Sidiropoulos GK, Papadopoulou CI, Vrochidou E, Kaburlasos VG, Papadopoulou MT, Holeva V, Nikopoulou V-A, Dalivigkas N.
+Social Robots in Special Education: A Systematic Review. *Electronics*. 2021; 10(12):1398. https://doi.org/10.3390/electronics10121398
+
+**Chicago/Turabian Style**
+
+Papakostas, George A., George K. Sidiropoulos, Cristina I. Papadopoulou, Eleni Vrochidou, Vassilis G. Kaburlasos, Maria T. Papadopoulou, Vasiliki Holeva, Vasiliki-Aliki Nikopoulou, and Nikolaos Dalivigkas.
+2021. "Social Robots in Special Education: A Systematic Review" *Electronics* 10, no. 12: 1398. https://doi.org/10.3390/electronics10121398
+
+**APA Style**
+
+Papakostas, G. A., Sidiropoulos, G. K., Papadopoulou, C. I., Vrochidou, E., Kaburlasos, V. G., Papadopoulou, M. T., Holeva, V., Nikopoulou, V.-A., & Dalivigkas, N.
+
+(2021). Social Robots in Special Education: A Systematic Review. *Electronics*, *10*(12), 1398. https://doi.org/10.3390/electronics10121398

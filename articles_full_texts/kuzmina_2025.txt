@@ -1,0 +1,112 @@
+ARTICLE: Study of Divergent Thinking and Task Performance in Children with ADHD through a Modular Robotic Task
+
+AUTHORS: Olga Kuzmina; Margarida Romero
+
+JOURNAL: Technology, Pedagogy and Education (Taylor & Francis / Tandfonline)
+PUBLISHED: July 3, 2025
+DOI: 10.1080/19404158.2025.2567849
+SOURCE: https://doi.org/10.1080/19404158.2025.2567849
+
+---
+
+ABSTRACT:
+This study investigates the divergent thinking components and task performance of children with Attention Deficit and Hyperactivity Disorder (ADHD) using the CreaCube task, a manipulative robotic activity. We hypothesize that children with ADHD will exhibit higher levels of fluency, flexibility, and originality in their problem-solving compared to their neurotypical peers. The study included fifteen children aged 9 to 14, including seven diagnosed with ADHD and eight controls. The CreaCube task required participants to assemble modular robotic cubes. We examined the components of divergent thinking and the time it took to solve the task. Despite finding no significant differences between ADHD and neurotypical children, behavioral observations suggest distinct exploratory patterns among participants with ADHD. These preliminary findings show the potential of robotics-based tasks for studying creative problem-solving approaches in ADHD. Through this study, we show the relevance of educational robotics for capturing the interactive nature of creativity in children with ADHD.
+
+---
+
+INTRODUCTION:
+
+ADHD is recognized as the most prevalent neurodevelopmental disorder, characterized by persistent inattention, hyperactivity, and impulsivity (Rep, 2024). Approximately 8.0% of children and adolescents (Ayano et al., 2023) are affected worldwide. While ADHD is a challenge in formal educational contexts, emerging evidence suggests that individuals with ADHD may exhibit unique cognitive strengths, particularly in areas of creativity and problem-solving (Hoogman et al., 2020).
+
+ADHD AND CREATIVITY: A COMPLEX RELATIONSHIP
+
+Creativity is a multifaceted concept defined by inventiveness and originality, leading to the generation of new ideas or novel connections. Theories of creativity distinguish between divergent and convergent thinking. Creative potential will be mostly associated with divergent thinking (Runco & Jaeger, 2012) and there is more evidence suggesting that ADHD is linked with this type of thinking abilities.
+
+Boot et al. (2017) found that subclinical ADHD symptoms are associated with enhanced divergent thinking, particularly in generating original ideas. Some studies confirm that higher ADHD symptoms were associated with higher scores in divergent thinking measures (fluency, flexibility, originality) but not convergent thinking (Stolte et al., 2022). In contrast, Healey and Rucklidge (2006) found no significant differences in creativity between children with and without ADHD using both divergent thinking assessments and general cognitive assessments.
+
+An overall review of 31 behavioral studies on creativity and ADHD confirms potential cognitive strengths, particularly in creative thinking (Hoogman et al., 2020). Most studies indicate that individuals with elevated ADHD trait levels, but who do not meet diagnostic thresholds, exhibit greater divergent thinking than those with formally diagnosed ADHD. This suggests that subclinical ADHD symptoms may enhance creativity, especially in tasks that involve generating multiple solutions to a problem.
+
+ASSESSING CREATIVITY USING MODULAR ROBOTICS
+
+The CreaCube task involves participants in a creative problem-solving activity using modular robotic cubes, allowing for a more interactive and tangible assessment of creativity (Romero, 2019). This method evaluates the three main components of divergent thinking — fluency, flexibility, and originality — by analyzing the configurations and transformations of the cubes during the task.
+
+CURRENT STUDY HYPOTHESES:
+- H1: Children with ADHD will exhibit higher fluency than neurotypical children
+- H2: Children with ADHD will exhibit higher flexibility than neurotypical children
+- H3: Children with ADHD will exhibit higher originality than neurotypical children
+- H4: Children with ADHD will spend a higher amount of time to complete both task occurrences
+- H5: Children with ADHD will show a higher rate of non-intentional creative behavior
+
+---
+
+METHODS:
+
+Participants: 15 children aged 9–14 (M=10.53, SD=1.59).
+- ADHD group (n=7): aged 9–13 (M=10.57); confirmed ADHD diagnosis from psychiatrist/psychologist
+- Control group (n=8): aged 9–14 (M=10.50)
+- All right-handed, not medicated, no prior experience with CreaCube
+- Recruitment: schools, ADHD support organizations, community centers, psychologists
+
+Materials: Four modular robotic cubes from Cubelets Modular Robotic. The cubes have specific functions:
+- Wheels: allows vehicle to move when powered
+- Battery: provides energy to other cubes when activated
+- Sensor: detects presence of an object in front of its sensors
+- Inverter: reverses the operation of every other cube
+
+Task: Build an autonomous vehicle that moves from a starting red point to a finishing black point. 12 potentially successful configurations exist. Task performed twice (A1 and A2).
+
+Measures:
+- Fluency: total number of configurations attempted, including minor variations
+- Flexibility: number of distinct configuration types
+- Originality: configurations produced by fewer than 5% of all participants
+
+Creative behavior profiles (Leroy & Romero, 2022 framework):
+- Creative: deliberately created a different configuration in A2 compared to A1
+- Conservative: reused the same configuration from A1 in A2
+- Unintentional Creative: intended to replicate A1 solution but failed, inadvertently creating different successful solution
+- Unintentional Conservative: attempted new configuration but reverted to original after failing
+
+Procedure: Individual experiment in a calm environment, no time constraint. No free exploration phase before task. Audio instruction: "You should build an autonomous vehicle that moves from a starting red point to a finishing black point." Task repeated twice.
+
+Analysis: Video recordings uploaded to CreaMaker platform. Jamovi (version 2.3.28) for statistical analysis. Shapiro-Wilk test for normality; t-test or Mann-Whitney U test as appropriate.
+
+---
+
+RESULTS:
+
+H1 (Fluency): In A1, ADHD children generated fewer configurations (M=4.71, SD=2.69) than neurotypical (M=9.25, SD=9.88), not significant (U=24.5, p=0.727). In A2, similar non-significant pattern (t(13)=−0.721, p=0.484). H1 NOT supported.
+
+H2 (Flexibility): In A1, ADHD children had lower flexibility scores (M=2.00, SD=0.82) than neurotypical (M=2.87, SD=2.10), not significant (t(13)=−1.032, p=0.321). In A2, ADHD had slightly higher scores (M=1.71, SD=0.95) vs neurotypical (M=1.50, SD=1.19), not significant (U=24.0, p=0.659). H2 NOT supported.
+
+H3 (Originality): In A1, ADHD descriptively lower (M=0.43, SD=0.79) vs neurotypical (M=1.25, SD=1.04), not significant (t(13)=−1.709, p=0.111). In A2, ADHD higher (M=0.71, SD=0.76) vs neurotypical (M=0.38, SD=0.52), not significant (t(13)=1.026, p=0.323). H3 NOT supported.
+
+H4 (Time): In A1, ADHD: 138.00 sec (SD=129.09) vs neurotypical: 159.88 sec (SD=75.85), not significant (U=19.0, p=0.336). In A2, ADHD: 201.29 sec (SD=255.53) vs neurotypical: 83.88 sec (SD=38.30), not significant (U=26.0, p=0.867). H4 NOT supported.
+
+H5 (Non-intentional creative behavior): Non-intentional creatives included only participants with ADHD (100%), whereas persistent creatives comprised 37.5% ADHD and 62.5% neurotypical. Chi-square test: χ²=5.24, df=3, p=0.155 — not statistically significant. H5 NOT supported statistically, but qualitatively notable.
+
+BEHAVIORAL OBSERVATION:
+Five out of seven children with ADHD spontaneously used "think-aloud" technique during the task (verbalizing their actions, hypotheses, and reactions). None of the neurotypical children exhibited this behavior. Children with ADHD also commented on affordances, asked questions about the task, and in one case engaged in conversation with the cubes.
+
+---
+
+DISCUSSION:
+
+Despite the lack of significant differences in fluency, flexibility, originality and time, the observations reveal distinct behaviors unique to ADHD children. Contrary to hypotheses, children with ADHD did not demonstrate significantly higher divergent thinking. All participants identified as "non-intentional creatives" were in the ADHD group — a finding worth further exploration.
+
+The spontaneous verbalization ("think-aloud") observed only in children with ADHD may be a productive compensatory strategy for managing cognitive load or enhancing self-regulation. Verbalization helps organize thoughts, maintain focus on the task, and self-regulate behavior — particularly beneficial given executive function deficits associated with ADHD (Barkley, 2014). Corkum et al. (2008) found that children with ADHD produced more task-relevant external private speech than typically developing peers during problem-solving tasks.
+
+---
+
+CONCLUSION:
+
+This study serves as an exploratory investigation into the use of a novel, manipulative robotics-based task (CreaCube) to assess creativity-related behaviors in children with and without ADHD. Although no statistically significant differences were found on standard measures of divergent thinking, the task revealed qualitative patterns — particularly spontaneous verbalization and non-intentional creative behavior — that may reflect unique cognitive strategies among children with ADHD. These findings suggest that non-verbal, embodied tasks such as CreaCube may offer a valuable complement to traditional creativity assessments for neurodiverse populations.
+
+LIMITATIONS: Small sample (N=15), no IQ assessment, no categorization by ADHD subtype, cross-sectional design.
+
+ETHICAL APPROVAL: Université Côte d'Azur Comité d'Ethique pour les Recherches Non Interventionnelles (CERNI, 2019-6).
+FUNDING: Not disclosed.
+CONFLICT OF INTEREST: None reported.
+
+---
+
+Note: Full text retrieved from Tandfonline via DOI 10.1080/19404158.2025.2567849 (open access article).

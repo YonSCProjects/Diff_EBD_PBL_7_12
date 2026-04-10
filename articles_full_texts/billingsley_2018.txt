@@ -1,0 +1,58 @@
+Effects of Student Choice of Instructional Method on the Learning Outcomes of Students With Comorbid Learning and Emotional/Behavioral Disabilities
+
+Glenna M. Billingsley, Cathy N. Thomas, Jo Webber
+
+Learning Disability Quarterly, 41(4), 213-226
+Published: 2018 (November)
+DOI: 10.1177/0731948718768512
+
+Source: ERIC EJ1192418; https://eric.ed.gov/?id=EJ1192418
+Open Access: No (paywalled - abstract only available)
+
+NOTE: Full text unavailable through open-access channels. The following contains the complete abstract and metadata from ERIC and available sources.
+
+ABSTRACT
+
+The purpose of this exploratory study was to determine whether learning preferences of secondary students identified with concomitant learning disabilities (LD) and emotional disturbance (ED) align with the instructional method with which they best learned mathematics. Responses to a preference survey given before and after instruction were compared with learning outcomes in a single-subject, alternating treatments research design investigating the effects of direct teach, computer-assisted instruction (CAI), and a combination of both methods. Results showed that most students were able to predict, by choice or stated preference, conditions under which they will learn best and, in hindsight, indicate the condition that provided the best learning outcome. This small study contributes to the literature on secondary mathematics learning for students with LD, and makes unique contributions regarding (a) the learning of students with comorbid LD and ED and (b) implementation of student choice into instruction.
+
+PUBLICATION DETAILS
+Journal: Learning Disability Quarterly
+Volume: 41, Issue: 4, Pages: 213-226
+Year: 2018
+DOI: 10.1177/0731948718768512
+Publisher: SAGE Publications / Hammill Institute on Disabilities
+
+ERIC Number: EJ1192418
+ERIC Descriptors: Learning Disabilities, Emotional Disturbances, Student Needs, Student Attitudes, Preferences, Secondary School Students, Mathematics, Instructional Design, Computer Assisted Instruction, Comparative Analysis, Intervention
+
+AUTHORS
+- Glenna M. Billingsley
+- Cathy N. Thomas
+- Jo Webber (Texas State University)
+
+STUDY OVERVIEW (from abstract and ERIC metadata)
+
+Study Design: Single-subject alternating treatments design
+Population: Secondary students with comorbid learning disabilities (LD) and emotional disturbance (ED)
+Subject Area: Mathematics
+Instructional Conditions Compared:
+  1. Direct teach
+  2. Computer-assisted instruction (CAI)
+  3. Combination of direct teach and CAI
+
+Measures:
+- Learning preference survey (pre- and post-instruction)
+- Learning outcomes in mathematics
+
+Key Findings:
+- Most students were able to predict, by choice or stated preference, conditions under which they would learn best
+- Students were able to retrospectively identify the condition that provided the best learning outcome
+- The study contributes to the literature on secondary mathematics learning for students with LD
+- Unique contributions regarding: (a) learning of students with comorbid LD and ED, and (b) implementation of student choice into instruction
+
+NOTES
+This study is referenced in subsequent literature (e.g., Crowell et al., 2021, OSEP Practice Guide) as evidence that "instructional choice in Billingsley (2018) led to an increase in student performance by allowing students to choose their preferred method of instruction."
+
+ACCESS INFORMATION
+Full text available to subscribers via: https://doi.org/10.1177/0731948718768512
+No open-access version identified via Unpaywall, PubMed Central, Semantic Scholar, or ERIC as of search date.

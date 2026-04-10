@@ -1,0 +1,75 @@
+TITLE: The effectiveness of universal design for learning: A systematic review of the literature and meta-analysis
+
+AUTHORS: Qais I Almeqdad; Ali M Alodat; Mahmoud F Alquraan; Mohammad A Mohaidat; Alaa K Al-Makhzoomy
+
+JOURNAL: Cogent Education
+YEAR: 2023
+VOLUME: 10(1)
+DOI: https://doi.org/10.1080/2331186X.2023.2218191
+
+SOURCE URL: https://www.tandfonline.com/doi/full/10.1080/2331186X.2023.2218191
+
+---
+
+ABSTRACT
+
+Universal Design for Learning (UDL) framework supports students' diversity principles in inclusive education settings. This systematic review and meta-analysis examined the effectiveness of UDL principles in educational settings. The inclusion criteria of the systematic search include empirical peer-reviewed research (pre-and post-design) published between 2015 to 2021 in English and Arabic (N = 13). Findings of the systematic review revealed that the identified studies were conducted in six countries, either specific or generic domain-related; targeting K-12 or higher education levels, generally implemented all UDL principles, directed to teachers or students using professional development programmes or school interventions, and mainly used one group quantitative research design. The meta-analysis findings showed that the total effect sizes for the identified studies were 3.56; however, considerable heterogeneity was evident. The meta-analysis results specifically showed statistically significant effect sizes for one group studies, student participants, specific domain, and quantitative research design. Discussion and future directions are presented.
+
+PUBLIC INTEREST STATEMENT
+
+A promising strategy for promoting inclusivity and diversity in education is the Universal Design for Learning (UDL) framework. This systematic study and meta-analysis aimed to assess how well UDL concepts work in educational contexts. The results imply that UDL can improve student learning, especially in particular domains and when applied through professional development initiatives or classroom interventions. More research is required to ensure that UDL is widely applicable and to better understand how to maximize its advantages. These findings have consequences for educators, decision-makers, and academics who work to make schools more diverse and egalitarian.
+
+---
+
+1. INTRODUCTION
+
+The need to overcome learning disabilities raises the focus on the "disability of the instruction", not only the learning disability of the learner. Also, acknowledging differences among learners encourages thinking towards more suitable instruction for all learners, which leads to closing the mismatch gap between the curriculum and learners. The concept of Universal Design (UD) emerged from architecture, which was used to design a physical environment that facilitates access for all people (Nelson, 2014). Using this way of thinking helped in introducing the concept of The Universal Design for Learning (UDL). This concept transformed education into a system that provides principles and strategies to design a learning environment that suits all learners (Meyer et al., 2014).
+
+UDL is a philosophical framework based on cognitive neuroscience research investigating how the human brain learns. It is widely used to provide an accessible educational environment to all diverse learners, including students with disabilities (Alquraini & Rao, 2020; Capp, 2017; Chita-Tegmark et al., 2012; Rao, 2015). The Center for Applied Special Technology (CAST) organised the UDL framework in three main principles: representation, expression and action, and engagement (CAST, 2018a). The three principles align with specific areas in the brain.
+
+Representation aligning with the recognition networks promotes the "what" of learning, such as perception, language and symbols, and comprehension. Expression aligning with the strategic networks promotes the "how" of learning, such as physical action, communication, and executive function. Engagement aligning with the affective networks promotes the "why" of learning, such as interest, effort and persistence, and self-regulation (CAST, 2018b).
+
+Under these three principles, CAST has included nine guidelines and 31 checkpoints, distributed among the nine guidelines, that provide research-based instruction to implement UDL (Hall et al., 2012). The checkpoints provide practical, evidence-based practices that could effectively eliminate barriers in the educational environment (Basham et al., 2020).
+
+The first principle of UDL, Representation, calls for an assortment of ways to represent knowledge by addressing physical and cognitive barriers that affect students' education (Capp, 2017). Dickinson and Gronseth (2020) define the representation principle as planning and implementing the curriculum by using multiple sources, such as visual materials (McGuire et al., 2003), auditory texts (Burgstahler et al., 2000; Hall et al., 2015), and digital reading materials (Proctor et al., 2011). The second UDL principle, Action and Expression, emphasises the ability of students to plan, strategies, and demonstrate their learning (Courey et al., 2013; Rose & Meyer, 2006). The action and expression principle relates to how students demonstrate their knowledge, organise their thinking, and interact with the content (Capp, 2017; Walker et al., 2017). The third principle of UDL, Engagement, concentrates on students' participation in the learning process (Courtad, 2019), particularly in their motivation, interest, and self-regulation (Almeqdad et al., 2016; Rose & Meyer, 2006). Ultimately, UDL principles work together as a learning framework that enables learners to achieve "purposeful, knowledgeable, strategic and effective" learning.
+
+The main objective of UDL is to provide equal educational opportunities by encouraging teachers to offer representation, expression, and engagement for all diverse students (CAST, 2022). Applying UDL principles enhances students' academic ability from diverse backgrounds in contemporary classrooms to acquire and use new knowledge (Boothe et al., 2018). It also enables teachers to design and implement an accessible curriculum that minimises barriers in education (Florian, 2021; Kennette & Wilson, 2019). These principles effectively engage students in aspects of the learning process and play an essential role in promoting the social inclusion of all students, especially those with disabilities (Almeqdad et al., 2016; Lowrey et al., 2017). Mackey (2019) indicated that UDL enhances teacher-student interactions, classroom preparation, instructional strategies, and resources. The UDL principles are necessary to improve inclusive practices in schools and prepare an accessible learning environment (Almumen, 2020; Florian, 2015).
+
+Even though the UDL framework principles are based on research practices, these researches are still relatively recent regarding how the framework can be applied to pedagogical practices (Ok et al., 2017). Theoretically, UDL principles could be implemented in curricula and teaching; however, these principles could be mixed and complicated and applied to specific units of lessons' objectives (Hall et al., 2012). Hence, evidence-based research that investigates the effectiveness of UDL-based educational activities should be increased.
+
+---
+
+2. RELATED REVIEWS
+
+Reviewing the literature shows that there are six recent key reviews related to the UDL framework.
+
+Oliveira et al. (2019) conducted a systematic review study to review the principles of UDL in inclusive settings. The study analysed seven studies that met the inclusion criteria of the review. The results revealed that the studies have a theoretical background but were weak in their application. The review recommended the need for research that directly applies UDL principles to identify the effects of the UDL application in inclusive schools.
+
+Schreffler et al. (2019) conducted a literature review for studies published after 2006 to explore the use of UDL for students with disabilities in postsecondary STEM education. The review identified four studies and three literature reviews that met the inclusion criteria. The results revealed that implementing UDL principles impacted STEM instruction at the postsecondary level, including teachers' instruction and self-advocacy from students with disabilities. The study concluded a need to apply the UDL principles in research to analyse the effectiveness of the UDL framework in inclusion settings.
+
+A systematic review explored UDL implementation for students in postsecondary schools. The authors identified 15 studies that...
+
+---
+
+KEY FINDINGS
+
+SYSTEMATIC REVIEW FINDINGS:
+- 13 empirical peer-reviewed studies (pre-post design) published 2015-2021 in English and Arabic
+- Studies conducted in six countries
+- Studies were either specific or generic domain-related
+- Targeted K-12 or higher education levels
+- Generally implemented all UDL principles
+- Directed to teachers or students using professional development programs or school interventions
+- Mainly used one-group quantitative research design
+
+META-ANALYSIS FINDINGS:
+- Total effect sizes for identified studies: 3.56 (large effect)
+- Considerable heterogeneity was evident
+- Statistically significant effect sizes found for:
+  - One group studies
+  - Student participants
+  - Specific domain studies
+  - Quantitative research design
+
+CONCLUSION:
+UDL can improve student learning, especially in particular domains and when applied through professional development initiatives or classroom interventions. More research is required to ensure that UDL is widely applicable and to better understand how to maximize its advantages.

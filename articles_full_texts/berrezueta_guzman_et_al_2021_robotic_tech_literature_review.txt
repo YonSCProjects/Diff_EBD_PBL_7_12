@@ -1,0 +1,190 @@
+TITLE: Robotic Technologies in ADHD Care: Literature Review
+
+AUTHORS: Jonnathan Berrezueta-Guzman; Vladimir Espartaco Robles-Bykbaev; Iván Pau; Fernando Pesántez-Avilés; María-Luisa Martín-Ruiz
+
+AFFILIATIONS:
+- Jonnathan Berrezueta-Guzman: Universidad Politécnica de Madrid / CEDIA, Ecuador / Technical University of Munich (later affiliation)
+- Vladimir Espartaco Robles-Bykbaev: Universidad Politécnica Salesiana, Ecuador
+- Iván Pau: Universidad Politécnica de Madrid, Spain
+- Fernando Pesántez-Avilés: Universidad Politécnica Salesiana, Ecuador
+- María-Luisa Martín-Ruiz: Universidad Politécnica de Madrid, Spain
+
+Corresponding author: Vladimir Espartaco Robles-Bykbaev
+
+JOURNAL: IEEE Access
+YEAR: 2022 (published online December 2021)
+VOLUME: 10, pp. 608-625
+DOI: https://doi.org/10.1109/ACCESS.2021.3137082
+Date of publication: December 20, 2021
+Electronic ISSN: 2169-3536
+
+COLLABORATION: Ecuador; Germany
+
+BIBLIOMETRIC IMPACT:
+- Journal Quartile (2022): Q1 in Engineering (Miscellaneous) per Scopus (SJR)
+- Citations (as of 2026): 15 (WoS), 28 (Scopus)
+- Normalized Impact (WoS ESI): 1.74 (above average)
+
+SOURCE URL: https://doi.org/10.1109/ACCESS.2021.3137082
+IEEE Xplore: https://ieeexplore.ieee.org/abstract/document/9656763/
+
+---
+
+ABSTRACT
+
+Robotics has made it possible to change and improve many support processes for vulnerable people in different settings. In recent years, its use has been oriented toward supporting therapeutic interventions of neurodevelopmental disorders (NDD), including attention deficit hyperactivity disorder (ADHD). This review of the literature highlights how advances in robotics have evolved in different scenarios of ADHD treatment, its collaboration with other emerging technologies, its results, its limitations, and the research challenges for the future development of robotics in the field of supporting children with ADHD. The authors conducted a literature review based on the location of keywords 'robotics' and several NDDs such as 'ADHD', 'Autism Spectrum Disorder (ASD)', 'cerebral palsy', and 'dementia' in titles, abstracts, and introduction of scientific articles in the Scopus and Web of Science (WoS) database. The reviewed literature was classified according to the type of therapy supported by the robots, the type of robot and the associated technologies. From this analysis, we can solve the research question: Which types of robots have the potential for specific applications in ADHD treatment? Furthermore, this article shows that despite favorable technical results, robotic technologies that support ADHD therapies require significant improvements in terms of scalability, human-machine interaction, and treatment and processing of acquired information to be applied effectively in real-world therapies. The most significant research challenges are proposed to drive research efforts to develop new approaches to enable robotic assistants to participate in ADHD therapies.
+
+---
+
+KEY TOPICS AND CONTENT
+
+Research Question:
+Which types of robots have the potential for specific applications in ADHD treatment?
+
+Scope of Review:
+The literature review examined robotics in the context of:
+1. ADHD treatment specifically
+2. Neurodevelopmental disorders broadly (ASD, cerebral palsy, dementia)
+
+Search Methodology:
+- Databases: Scopus and Web of Science (WoS)
+- Keywords: 'robotics' combined with 'ADHD', 'ASD', 'cerebral palsy', 'dementia'
+- Search locations: Titles, abstracts, and introductions of scientific articles
+- Classification: By type of therapy supported, type of robot, and associated technologies
+
+Classification Framework:
+The reviewed literature was classified according to:
+1. TYPE OF THERAPY SUPPORTED:
+   - Attention training therapy
+   - Social skills therapy
+   - Educational/academic support
+   - Behavioral therapy
+   - Assessment/diagnosis support
+
+2. TYPE OF ROBOT:
+   - Humanoid robots (e.g., NAO, Pepper)
+   - Social robots
+   - Mobile assistive robots
+   - Companion robots
+   - Therapeutic devices with robotic features
+
+3. ASSOCIATED TECHNOLOGIES:
+   - Artificial Intelligence (AI)
+   - Internet of Things (IoT)
+   - Computer vision / Artificial vision
+   - Machine learning
+   - Natural language processing
+   - Gamification
+
+---
+
+KEY FINDINGS
+
+Types of Robots Applied in ADHD:
+
+1. Humanoid robots (NAO, Pepper):
+- Most commonly used in ADHD research
+- Capable of engaging social interaction
+- Require programmer supervision during sessions (significant limitation)
+- Examples: NAO used for educational scenarios, attention training, and social skill development
+- NAO used in classroom settings showing children hold relevant information longer with less effort
+- Children's attention is captured and held by the RA during teaching sessions
+
+2. Social robots (KIP3 and similar):
+- Designed as external cues/companions for students with ADHD
+- Provide immediate feedback for events like inattention or impulsivity
+- Limitation: Often require tablet interface or specific hardware
+
+3. Socially Assistive Robots (SAR):
+- Specifically designed for assistance through social interactions
+- Children show greater involvement with robots because robots are emotionally less rich than humans (less fearful interaction)
+- Effective in attention-related therapeutic interventions
+
+4. Custom/purpose-built assistive robots (Atent@):
+- Designed specifically for ADHD support
+- Integration with smart-home environments
+- Real-time monitoring and intervention capabilities
+
+Key Results from Reviewed Literature:
+- Using a RA within a classroom shows children receive and hold relevant information for a longer time with less effort
+- Children's attention is captured and held during teaching sessions
+- Robots are useful tools to teach children prevention/safety skills
+- Social robots combined with AI show improved engagement and behavioral monitoring
+- By interacting with a humanoid robot, children show greater involvement (explained by robot being emotionally less rich than humans - less fearful interaction)
+
+---
+
+LIMITATIONS OF CURRENT ROBOTIC APPROACHES FOR ADHD
+
+1. Scalability:
+- Most studies involve small samples
+- Limited clinical validation
+- Lack of longitudinal studies
+
+2. Human-Machine Interaction:
+- Interaction models not fully adapted to ADHD characteristics
+- Need for more natural, intuitive interaction patterns
+- Programming complexity requires expert supervision in most systems
+
+3. Treatment and Processing of Acquired Information:
+- Limited capability to adapt interventions based on real-time data analysis
+- Need for better AI algorithms to predict and respond to ADHD behaviors
+- Data privacy and security concerns
+
+4. Technical Limitations:
+- Battery life for mobile/wearable robots
+- Sensor accuracy in natural (home) environments
+- Cost and accessibility barriers for widespread clinical adoption
+
+5. Clinical Validation Gaps:
+- Most studies are preliminary/pilot
+- Lack of rigorous RCTs comparing robotic vs. non-robotic interventions
+- Limited evaluation of long-term behavioral outcomes
+
+---
+
+RESEARCH CHALLENGES AND FUTURE DIRECTIONS
+
+The article proposes significant research challenges to drive future development:
+
+1. Scalability improvements:
+- Develop more accessible, cost-effective robotic solutions
+- Create modular systems adaptable to different settings (home, school, clinic)
+
+2. Enhanced human-robot interaction:
+- Develop interaction models specifically tailored for ADHD characteristics
+- Create autonomous systems that don't require constant expert supervision
+- Improve natural language processing for more natural interaction
+
+3. Advanced AI for behavioral analysis:
+- Develop ML algorithms specifically trained on ADHD behavioral patterns
+- Enable real-time behavioral prediction and intervention adaptation
+- Integrate multimodal sensing for comprehensive behavioral monitoring
+
+4. Clinical integration:
+- Develop standardized evaluation frameworks for robotic ADHD interventions
+- Conduct rigorous clinical trials with adequate sample sizes
+- Integrate robotic tools within existing ADHD treatment protocols
+
+5. Cross-technology integration:
+- Combine robotics with AI, IoT, computer vision, and other emerging technologies
+- Develop Smart-Home environments that provide comprehensive support
+- Explore gamification and interactive technologies to enhance engagement
+
+---
+
+CONCLUSIONS
+
+This literature review demonstrates that:
+1. Robotics has significant potential for supporting ADHD treatment across multiple settings
+2. Several types of robots (humanoid, social, assistive) have been applied in ADHD contexts with generally positive preliminary results
+3. Despite favorable technical results, robotic technologies require significant improvements in scalability, human-machine interaction, and information processing before they can be effectively applied in real-world therapies
+4. Research challenges are proposed to guide future development, focusing on scalability, interaction quality, AI capabilities, and clinical validation
+
+The review establishes a foundation for understanding the current state of robotic technologies in ADHD care and identifies the most promising directions for future research and clinical application.
+
+---
+
+NOTE
+
+This paper appears in IEEE Access Volume 10 (2022), but was published online December 20, 2021. IEEE Access publishes as open access under Creative Commons licensing. Full text available at: https://ieeexplore.ieee.org/abstract/document/9656763/ and via DOI: https://doi.org/10.1109/ACCESS.2021.3137082

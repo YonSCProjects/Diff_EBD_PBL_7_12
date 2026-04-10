@@ -1,0 +1,162 @@
+TITLE: School-based depression and anxiety prevention programs: An updated systematic review and meta-analysis
+
+AUTHORS: Aliza Werner-Seidler(a,*), Samantha Spanos(a), Alison L. Calear(b), Yael Perry(c), Michelle Torok(a), Bridianne O'Dea(a), Helen Christensen(a), Jill M. Newby(a,d)
+
+AFFILIATIONS:
+(a) Black Dog Institute, University of New South Wales, Sydney, NSW, Australia
+(b) Centre for Mental Health Research, Research School of Population Health, The Australian National University, Canberra, ACT, Australia
+(c) Telethon Kids Institute, University of Western Australia, Perth, WA, Australia
+(d) School of Psychology, University of New South Wales, Sydney, NSW, Australia
+
+JOURNAL: Clinical Psychology Review
+YEAR: 2021
+VOLUME: 89, Article 102079
+DOI: https://doi.org/10.1016/j.cpr.2021.102079
+Available online: 30 August 2021
+© 2021 The Authors. Published by Elsevier Ltd. Open access under CC BY-NC-ND license.
+
+SYSTEMATIC REVIEW REGISTRATION: PROSPERO - CRD42020188323
+
+SOURCE URL: https://research-management.mq.edu.au/ws/portalfiles/portal/199860398/Publisher_version_open_access_.pdf
+
+---
+
+ABSTRACT
+
+Depression and anxiety are often first experienced during childhood and adolescence, and interest in the prevention of these disorders is growing. The focus of this review was to assess the effectiveness of psychological prevention programs delivered in schools, and to provide an update to our previous review from five years ago (Werner-Seidler, Perry, Calear, Newby, & Christensen, 2017). Three electronic databases were systematically searched for published articles of randomised controlled trials (RCTs) evaluating the efficacy of school-based prevention programs until October 2020. There were 130 articles that met inclusion criteria, representing 118 unique trials and 45,924 participants. Small between-group effect sizes for depression (g = 0.21) and anxiety (g = 0.18) were detected immediately post-intervention. Subgroup analyses suggested that targeted prevention programs (for young people with risk factors or symptoms) were associated with significantly greater effect sizes relative to universal programs for depression, which was confirmed by meta-regression. There was also some evidence that external providers conferred some benefit over school-staff delivered programs. Overall, study quality was moderate and no association between risk of bias and effect size was detected. School-delivered psychological prevention programs have small effects in reducing symptoms of depression and anxiety. Refinement of these programs, and knowledge about how they can be sustainably delivered in schools beyond the trial period is now needed for population-level preventive effects.
+
+Keywords: Meta-analysis; Systematic-review; School-based; Depression; Anxiety
+
+---
+
+1. INTRODUCTION
+
+Depression and anxiety are common, debilitating, and often lifelong conditions that frequently emerge for the first time early in life. Approximately 50% of mental disorders emerge before the age of 14, and 75% before the age of 24 (Kessler et al., 2007). Despite increased investment in research, growing awareness of mental illness, and the proliferation of treatments, rates of these common mental disorders have not decreased in decades. In fact, the opposite appears to be the case with rising rates of mental ill health, particularly among young people. For example, data from a nationally representative survey of US adolescents showed that the rates of depression in adolescents increased 52%, from 8.7% to 13.2% between the years of 2005–2017 (Bitsko et al., 2018; Twenge, Cooper, Joiner, Duffy, & Binau, 2019), and increases have been found in rates of childhood and adolescent anxiety disorders between 2007 and 2012 (Bitsko et al., 2018). Even at subthreshold levels, general psychological distress has increased, from 19% in 2012 to 24% in 2018 (Hall et al., 2019), painting a picture of worsening mental health and a growing global burden of disease (James et al., 2018). Globally, the availability and accessibility of quality mental health care for young people simply cannot keep up with the demand (Rocha, Graeff-Martins, Kieling, & Rohde, 2015), something that has been highlighted by the COVID-19 pandemic (Courtney, Watson, Battaglia, Mulsant, & Szatmari, 2020; Young, 2020). Moreover, modelling has shown that treatment alone is insufficient to address the mental health burden, with improved access to, and quality of treatment, only able to alleviate 28% of the disease burden (Andrews, Issakidis, Sanderson, Corry, & Lapsley, 2004). Given the limitations of current treatment approaches, there has been increased acknowledgement that upstream prevention approaches must be seriously considered if the burden of mental ill health is to be reduced at a population level (Dopp & Lantz, 2020; Wyman, 2014).
+
+Prevention approaches are ideally delivered before the onset of disorder, which means that delivery to children and adolescents is necessary. Prevention programs are either delivered universally, to a whole group or cohort, or are targeted towards those with increased risk factors (selective prevention) or who are showing subthreshold symptoms (indicated prevention). The ultimate goal of this approach is to reduce the occurrence of new cases of depression and anxiety, which often involves the targeting and lowering of symptoms such that the risk of disorder onset is reduced.
+
+Educational settings have been identified as a suitable context in which prevention programs can be delivered to young people. This is because most young people attend school, and in many schools, there are often established referral pathways and ways to manage student mental health issues (Rickwood, Deane, & Wilson, 2007). For example, in Australia, more than a third of young people first receive care for a mental health problem within their school (e.g., Lawrence et al., 2015). Furthermore, many schools are already providing some form of mental health intervention (e.g., Wei et al., 2015), and school-based prevention programs are more cost effective than many other prevention approaches (Drost et al., 2012).
+
+---
+
+2. METHOD
+
+2.1. Protocol and Registration
+
+This review was prospectively registered with PROSPERO CRD42020188323 [Registered 25th May 2020].
+
+2.2. Search Strategy
+
+The electronic databases PsycINFO, PubMed and the Cochrane Library were systematically searched. The search strategy included a combination of four key blocks of terms related to: i) mental health, ii) prevention and early intervention, iii) schools and young people, and iv) studies involving a control group. The updated search was limited to studies published in English, listed as clinical trials and published between 13th February 2015 (the day after the search from the earlier review) and the date the search was conducted, the 8th October 2020. Reference lists from recent reviews and meta-analyses in the field were hand-searched to assess whether any additional studies were relevant and assessed for inclusion. The group of studies identified in the updated search were then added to the study group identified in the previous review (Werner-Seidler et al., 2017).
+
+2.3. Eligibility Criteria
+
+2.3.1. Types of Participants
+Children or adolescents with a mean age between 5 and 19 years met inclusion criteria. Age was used to categorise participants according to whether they were children (<10 years), early adolescents (10–14 years), or older adolescents (>14 years).
+
+2.3.2. Types of Interventions
+Included interventions were psychological or psycho-educational programs, including individual, group and face-to-face or digital interventions. For multi-component programs, the psychological or educational component was required to constitute >75% of the program content and the young person had to be the primary recipient of the intervention (i.e., programs targeted at parents or teachers were excluded). Studies were included if they used a program designed to prevent depressive or anxiety symptoms, and/or promote mental well-being. Studies evaluating drug and alcohol, physical activity, nutritional or pharmacological interventions were not eligible for inclusion.
+
+2.3.3. Setting
+Interventions needed to be school-based, which in this context refers to a program that is endorsed by the school and delivered in the classroom during school hours, or before or after school on school premises.
+
+2.3.4. Types of Comparisons
+Studies were included in which the effect of the school-based intervention was compared to either a no-intervention control group or a school-as-usual control condition, a waitlist control condition, or an attention control condition/alternate educational/psychological condition.
+
+2.3.5. Types of Outcomes
+Studies were included if they reported symptoms of depression and/or anxiety at both baseline and post-intervention at a minimum. The two primary outcomes were depression and anxiety symptoms.
+
+2.3.6. Length of Follow-up
+Each data-point was categorised as being post-intervention, short-term (0–6 months inclusive), medium-term (>6–12 months inclusive), or long-term (>12 month) follow-up.
+
+2.3.7. Study Design
+Studies were eligible for inclusion if they used quantitative randomised controlled trial (RCT) methodology, including cluster RCTs.
+
+2.4. Data Extraction Process and Management
+
+The following data was extracted: author, year of publication, program target (depression, anxiety, both depression and anxiety), prevention type (universal, selective, indicated), age range, sample size, program name, control group conditions, program format, program content, mode of delivery, number of sessions and outcome data.
+
+2.5. Risk of Bias in Individual Studies
+
+Quality and risk of bias was assessed using the Cochrane Collaboration 'Risk of Bias' tool (Higgins & Green, 2011). The included studies were assessed against: i) generation of their condition allocation sequence, ii) concealment of this sequence, iii) reporting of incomplete outcome data, iv) selective reporting of data, and v) protection against contamination. Studies with a low risk of bias on three or more of the five variables were classified as being high quality studies.
+
+2.6. Statistical Analyses
+
+2.6.1. Calculation of Effect Sizes
+Comprehensive Meta-Analysis (version 3.0, Biostat Inc.) was used to calculate individual study and pooled effect sizes. For each comparison between a prevention intervention and control group, effect size was calculated using Hedges g. Effect sizes of 0.2, 0.5 and 0.8 refer to small, moderate and large effect sizes respectively (Cohen, 1988). A random effects model was used.
+
+2.6.2. Testing Homogeneity
+Homogeneity of effect sizes was tested using the I2 statistic. Zero percent indicates no heterogeneity, while 25%, 50% and 75% indicate low, moderate, and high heterogeneity, respectively.
+
+2.6.3. Subgroup Analyses
+Planned subgroup analyses examined: prevention type, personnel delivering the program, control condition type, age at which the intervention was delivered, content of the programs, face-to-face vs. digitally delivered programs, and high vs. low quality studies.
+
+2.6.4. Meta-Regression
+A multivariate meta-regression was conducted with effect size as the dependent variable.
+
+2.7. Testing for and Managing Publication Bias
+Funnel plots of the primary outcome measures were examined to test for publication bias. Duval and Tweedie's Trim and Fill procedure was conducted where publication bias was indicated.
+
+---
+
+3. RESULTS
+
+3.1. Study Selection
+
+A total of 8568 articles were identified. After deduplication, screening, and eligibility assessment, 130 articles met inclusion criteria, representing 118 unique trials and 45,924 participants. This included 49 articles from the original review plus 81 new articles from the updated search.
+
+3.2. Study Characteristics
+
+Studies came from 25 countries, with the majority from Australia (n = 26), the US (n = 25), and the UK (n = 15). Participant ages ranged from 5 to 19 years. Programs targeted depression only (n = 59), anxiety only (n = 40), or both (n = 31). Prevention types: universal (n = 67), selective (n = 14), indicated (n = 49). CBT was the most commonly used therapeutic approach. Most programs were face-to-face (n = 107); 11 used digital delivery.
+
+3.3. Primary Outcomes
+
+Depression prevention programs:
+- Post-intervention: g = 0.21 (95% CI: 0.16–0.25), I2 = 47%
+- Short-term follow-up (0-6 months): g = 0.17
+- Medium-term follow-up (6-12 months): g = 0.14
+- Long-term follow-up (>12 months): g = 0.12
+
+Anxiety prevention programs:
+- Post-intervention: g = 0.18 (95% CI: 0.13–0.24), I2 = 44%
+- Short-term follow-up: g = 0.14
+- Medium-term follow-up: g = 0.11
+
+3.4. Subgroup Analyses - Depression
+
+Prevention type: Targeted programs (selective g = 0.21; indicated g = 0.33) showed significantly larger effects than universal programs (g = 0.16) at post-intervention.
+
+Personnel: External providers (g = 0.26) showed marginally larger effects than school staff (g = 0.19), though this was not statistically significant.
+
+Age: Older adolescents (>14 years) showed larger effects than younger children.
+
+Program content: CBT-based programs were not significantly more effective than non-CBT programs.
+
+3.5. Meta-Regression
+
+Meta-regression confirmed that targeted/indicated prevention predicted larger effect sizes for depression. No significant association between study quality (risk of bias) and effect size was detected.
+
+3.6. Publication Bias
+
+Funnel plots and Egger's tests suggested some evidence of publication bias for both depression and anxiety outcomes. After Trim and Fill adjustment, effect sizes were slightly reduced but remained significant.
+
+---
+
+4. DISCUSSION
+
+This review updated and substantially extended the evidence base for school-based prevention programs for depression and anxiety in young people. The findings confirm that school-delivered psychological prevention programs have small effects in reducing symptoms of depression (g = 0.21) and anxiety (g = 0.18) immediately post-intervention, with effects maintained but attenuating over follow-up.
+
+Key findings:
+1. Targeted/indicated programs are more effective than universal programs for depression prevention
+2. There is some advantage for externally delivered programs over school staff-delivered programs
+3. Study quality was moderate overall, with no association between quality and effect size
+4. Digital delivery may be a viable alternative to face-to-face delivery
+5. Effects are small but clinically meaningful given the public health scale of school-based delivery
+
+Limitations of the current evidence base include: considerable heterogeneity across studies; variable quality; limited evidence on long-term effectiveness; and insufficient evaluation of implementation factors such as fidelity, uptake, and reach.
+
+---
+
+5. CONCLUSIONS
+
+School-delivered psychological prevention programs have small but statistically significant effects in reducing symptoms of depression and anxiety in young people. Targeted programs are more effective than universal programs for depression. Refinement of these programs, and knowledge about how they can be sustainably delivered in schools beyond the trial period is needed for population-level preventive effects. Future research should investigate implementation strategies, long-term effectiveness, and ways to reach vulnerable populations within school settings.

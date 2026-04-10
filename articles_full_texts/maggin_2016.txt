@@ -1,0 +1,68 @@
+Intensive Academic Interventions for Students With Emotional and Behavioral Disorders: An Experimental Framework
+
+Daniel M. Maggin, Joseph H. Wehby, Allison F. Gilmour
+
+Journal of Emotional and Behavioral Disorders, 24(3), 138-147
+Published: 2016 (September)
+DOI: 10.1177/1063426616649162
+
+Sources: ERIC EJ1110102 (https://eric.ed.gov/?id=EJ1110102); SAGE Journals (https://journals.sagepub.com/doi/abs/10.1177/1063426616649162); Semantic Scholar
+Open Access: No (paywalled - abstract only publicly available)
+
+NOTE: Full text unavailable through open-access channels. The following contains the complete abstract and metadata from ERIC and available sources.
+
+ABSTRACT (from ERIC EJ1110102)
+
+Research has consistently demonstrated that students with emotional and behavioral disorders (EBD) are at risk for academic underachievement. Despite the persistent and strong association between academic problems and EBD, there remains a dearth of information on the process for developing intensive academic interventions for students with EBD. The intent of the present article is to describe and review an experimental approach for developing intensive and individualized academic interventions that provide a potentially valuable method for informing the development of academic interventions. Specifically, brief experimental analyses of academic behavior allow for the comparison of two or more interventions over a relatively short period of time. These formal comparisons provide essential information on which particular practice or set of strategies produce improved responding for the student on the particular skill of interest. The authors contextualize the brief experimental analyses framework within a multitiered system of support and describe how this approach can guide instructional decision making for students with EBD across all tiers.
+
+PUBLICATION DETAILS
+Journal: Journal of Emotional and Behavioral Disorders (JEBD)
+Volume: 24, Issue: 3, Pages: 138-147
+Year: 2016
+Article first published online: June 2, 2016
+Issue published: September 2016
+DOI: 10.1177/1063426616649162
+Publisher: SAGE Publications / Hammill Institute on Disabilities
+
+ERIC Number: EJ1110102
+ERIC Descriptors: Intervention, Student Behavior, Emotional Disturbances, Emotional Problems, Behavior Problems, Behavior Disorders, Comparative Analysis, Functional Behavioral Assessment, Literature Reviews
+
+AUTHORS
+- Daniel M. Maggin, PhD (University of Illinois at Chicago)
+- Joseph H. Wehby, PhD (Vanderbilt University)
+- Allison F. Gilmour (Vanderbilt University, later Temple University)
+
+ARTICLE OVERVIEW
+
+Article Type: Conceptual/methodological framework article
+Length: 10 pages
+
+Main Contributions (from abstract and citing literature):
+1. Describes an experimental approach (brief experimental analyses, BEA) for developing intensive academic interventions for students with EBD
+2. Provides a framework for comparing interventions over short periods
+3. Contextualizes BEA within multitiered systems of support (MTSS)
+4. Guides instructional decision-making across all tiers for students with EBD
+
+Key Concepts:
+- Brief Experimental Analyses (BEA): Allow comparison of two or more interventions over a short period
+- Individual intervention matching: Identifies which practice or strategies produce improved responding for specific students
+- Multitiered Systems of Support (MTSS): Framework within which BEA is situated
+- Intensive individualized academic interventions for EBD
+
+IMPACT
+This article has been widely cited (13 Web of Science citations; 14 Crossref citations as of search date) and is referenced in subsequent EBD intervention literature (e.g., Chen et al., 2021; Harrison et al., 2019) as providing guidance on individualization of interventions:
+
+"Intensification involves individualizing strategies to address specific characteristics and needs of students and the contexts in which they are served. This makes it necessary to go beyond standardized, scripted interventions and use data to guide the modification of strategies to address students' unique needs and circumstances (Maggin et al., 2016)." — Chen et al. (2021), JEBD
+
+REFERENCES (partial list from SAGE page)
+Psychology in the Schools, 50, 403–414.
+School Psychology Review, 35, 91–107.
+Journal of Applied Behavior Analysis, 37, 111–114.
+Journal of Behavioral Education, 15, 92–108.
+Behavior Modification, 39, 43–68.
+Behavioral Disorders, 32, 46–54.
+[Additional references in full text - not available without subscription]
+
+ACCESS INFORMATION
+Full text available to subscribers via: https://doi.org/10.1177/1063426616649162
+No open-access version identified via Unpaywall, PubMed Central, Semantic Scholar, or ERIC as of search date.

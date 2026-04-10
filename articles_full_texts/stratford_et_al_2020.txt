@@ -1,0 +1,183 @@
+TITLE: A Scoping Review of School-Based Efforts to Support Students Who Have Experienced Trauma
+
+AUTHORS: Brandon Stratford(1); Elizabeth Cook(1); Rosie Hanneke(2); Emily Katz(1); Deborah Seok(1); Heather Steed(1); Emily Fulks(1); Alexis Lessans(1); Deborah Temkin(1)
+
+AFFILIATIONS:
+(1) Child Trends, Bethesda, USA
+(2) University of Illinois at Chicago, Chicago, USA
+
+JOURNAL: School Mental Health
+YEAR: 2020
+VOLUME: 12, pp. 442-477
+DOI: https://doi.org/10.1007/s12310-020-09368-9
+Published: 26 March 2020
+© The Author(s) 2020 - Open Access under Creative Commons Attribution 4.0 International License
+
+SOURCE URL: https://d-nb.info/1212110455/34 (German National Library)
+
+---
+
+ABSTRACT
+
+The current review sought to describe the published literature relative to addressing trauma in schools. Through a systematic review of peer-reviewed publications as well as gray literature, we identified a total of 91 publications that were coded for study rigor as well as a number of intervention characteristics. Publications included in the review mentioned a variety of intervention components, most notably an emphasis on counseling services, skill development, psychoeducation related to trauma, and parent engagement. We identified a relative lack of empirical evaluation of whole-school approaches and interventions intended to be delivered by non-clinical staff. We also found that less rigorous publications were more likely to highlight the needs of particularly vulnerable groups of youth and to emphasize cultural competence and community engagement in efforts to address trauma in schools. We call for more rigorous evaluation of practices and policies that take a whole-school approach and can be implemented by non-clinical staff. In particular, we highlight the need to evaluate professional development strategies that can help school staff acquire knowledge and skills that can translate into improved outcomes for students—especially students from historically marginalized groups. We also emphasize the importance of ensuring that high-quality research be made accessible to policymakers and school staff to ensure that clear, evidence-based guidance is available to avoid programs, practices, and policies that may inadvertently traumatize students or exacerbate symptoms among students who have already experienced trauma.
+
+Keywords: Trauma · Policy · Program · Practice · Review · School-based
+
+---
+
+INTRODUCTION
+
+Over the past decade, increasingly sophisticated research has confirmed that trauma—the long-lasting, adverse response to a physically or emotionally harmful or life-threatening event, series of events, or circumstances—can significantly alter the brain (Anda et al., 2006; Stark et al., 2015). Exposure to traumatic stress in childhood can contribute to mental, emotional, and behavioral challenges including mood disorders and difficulties with self-regulation that can lead to poor academic performance (Terrasi & de Galarce, 2017). At the same time, many jurisdictions across the country have adopted punitive approaches to discipline that do not align with the current research on the effects of trauma and are often disproportionately applied to students of color and students with disabilities (Skiba & Peterson, 2000; Curran, 2016).
+
+As awareness about trauma has grown, researchers, policymakers, and practitioners are paying more attention to understanding the impacts of trauma and increasing the capacity of service systems to adequately address trauma in recent years (Donisch, Bray, & Gewirtz, 2016; Ko et al., 2008). In response to this increasing awareness, nearly a dozen states have passed legislation encouraging or requiring school staff training on the impacts of trauma on students (Chriqui et al., 2019). Yet, despite this growing consensus that school staff play a critical role in supporting students that have had traumatic experiences, there remains a need to identify the most effective strategies for increasing schools' capacity in these efforts.
+
+Much of the existing work around trauma is informed by the US Substance Abuse and Mental Health Services Administration (SAMHSA, 2014). SAMHSA defines individual trauma as "an event, series of events, or set of circumstances that is experienced by an individual as physically or emotionally harmful or life threatening and that has lasting adverse effects on the individual's functioning and mental, physical, social, emotional, or spiritual well-being" (p. 7). Accordingly, SAMHSA describes a trauma-informed program, organization, or system as one that "(1) realizes the widespread impact of trauma and understands potential paths for recovery; (2) recognizes the signs and symptoms of trauma in clients, families, staff, and others involved in the system; (3) responds by fully integrating knowledge about trauma into policies, procedures, and practices; and (4) seeks to actively resist re-traumatization" (p. 9).
+
+The concept of trauma-informed care emerged within health care settings—including physical and behavioral health systems—in the early 2000s (Harris & Fallot, 2001). As the concept gained prominence, other systems including child welfare and juvenile justice began to seek effective ways to integrate trauma-informed approaches into their delivery models (Ko et al., 2008). Education settings are now seeking ways to integrate trauma-informed approaches into their schools and classrooms. However, education settings differ in scope and structure from medical, child welfare, and juvenile justice settings. For example, public schools are intended to educate all children, whereas the other systems typically serve a selected group of youth with identified symptoms or risk factors. Additionally, many medical, child welfare, and juvenile justice professionals receive intensive training in behavioral health topics and typically work to address the needs of individual youth and their families. The majority of school staff, on the other hand, receive limited training in behavioral health topics and are typically charged with addressing the varying needs of a classroom of students (Chafouleas, Johnson, Overstreet, & Santos, 2016). Thus, it is critical to identify and address the gaps in knowledge with respect to effective school-based interventions to address trauma.
+
+Previous reviews of school-based trauma interventions highlight two important gaps in knowledge. First, there is a lack of rigorous evaluation of trauma-informed interventions that are delivered by teachers—even fewer evaluate the effectiveness of training for school personnel (Rolfsnes & Idsoe, 2011; Zakszeski, Ventresco, & Jaffe, 2017). This dearth is particularly striking given evidence suggesting that interventions delivered by teachers can be effective in improving student behavioral health outcomes. For example, a review of 49 studies of mental and behavioral health interventions found that 40% included some involvement of classroom teachers (Franklin, Kim, Ryan, Kelly, & Montgomery, 2012). Notably, the interventions delivered by classroom teachers were just as effective as those delivered by mental health clinicians. Durlak, Weissberg, Dymnicki, Taylor, and Schellinger (2011) conducted a meta-analysis of over 213 school-based, universal social and emotional learning (SEL) programs and found that interventions led by teachers were the most effective for a range of outcomes including behavior, emotional distress, and academic performance. These reviews suggest that non-clinical school staff can also be effective in supporting students experiencing trauma.
+
+Second, many schools have embraced the Multi-Tiered Systems of Support (MTSS) approach to addressing students' needs (Sugai & Horner, 2019). However, efforts to rigorously evaluate trauma-focused interventions across different tiers of support have been uneven and have left schools with little evidence of what works with respect to Universal (Tier 1) interventions.
+
+---
+
+OBJECTIVES OF REVIEW
+
+The current review is intended to describe the published school-based, trauma-focused literature to:
+1. Characterize the landscape of programs, practices, and policies that address trauma in schools
+2. Describe the state of evidence for these programs, practices, and policies
+3. Identify gaps in the literature and areas for future research
+
+---
+
+METHODS
+
+Article Identification
+
+This paper follows the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines (Moher, Liberati, Tetzlaff, & Altman, 2009).
+
+To identify peer-reviewed publications, we searched the following bibliographic databases: PubMed, ERIC (EBSCOhost), PsycINFO (ProQuest), PAIS (ProQuest), and Web of Science Core Collection. Searches were conducted for the literature published from January 2010 through July 2018 in order to focus on interventions that reflect current understanding of the neurobiological effects of trauma (Shonkoff, 2016; Thomason & Marusak, 2017). The search strategies for each database included both controlled vocabulary terms and keywords based around the three conceptual domains of school-based, trauma, and interventions.
+
+To identify gray literature, we searched the Google search engine and organizational websites.
+
+Inclusion/Exclusion Criteria
+
+Publications were included if they:
+- Described a specific intervention or set of interventions
+- Provided evidence that the intervention targeted trauma-related outcomes
+- Targeted students or adults working in a K-12 education setting
+- Were published between January 2010 and July 2018
+
+Publications were excluded if they:
+- Did not describe a specific intervention or set of interventions
+- Only addressed predisposing risk factors (e.g., child maltreatment) without responding to the trauma response
+- Did not include K-12 students or staff as targets
+
+Publication Rigor Classification
+
+Publications were classified according to study design rigor:
+- Experimental: Randomized controlled trial (RCT)
+- Quasi-experimental: Comparison between groups or pre-post within group
+- Systematic review: Met four criteria: summarized existing research; described search strategy; searched multiple databases; screened results against inclusion/exclusion criteria
+- Literature review: Summarized existing research but did not meet all four systematic review criteria
+- Descriptive: Described intervention without evaluating effectiveness
+
+Data Extraction
+
+For each included publication, the following was extracted:
+- Publication type, year, and authors
+- Target population and setting
+- MTSS tier targeted (Tier 1/Universal, Tier 2/Selected, Tier 3/Indicated)
+- Intervention components
+- Facilitator characteristics
+- Study rigor
+- Outcomes
+- Cultural competence and equity considerations
+
+Coding Categories for Intervention Components:
+- Counseling services
+- Skill development
+- Psychoeducation related to trauma
+- Parent engagement
+- Social-emotional learning (SEL)
+- Code of conduct/discipline policies
+- Community engagement
+- Cultural competence
+- Screening/assessment
+- Staff self-care
+- Professional development/training
+
+---
+
+RESULTS
+
+A total of 91 publications were identified through database searches and web searches, met inclusion criteria, and were selected for data extraction.
+
+Overview by Rigor:
+- Experimental (RCTs): 8 publications
+- Quasi-experimental: 15 publications
+- Systematic reviews: 9 publications
+- Literature reviews: 24 publications
+- Descriptive: 35 publications
+
+Overview by MTSS Tier:
+- Tier 1/Universal approaches: fewer publications with rigorous evaluation
+- Tier 2/Selective: moderate representation
+- Tier 3/Indicated: most rigorous evaluation of intensive interventions
+
+Key Intervention Components Mentioned:
+1. Counseling services (most frequently mentioned)
+2. Skill development
+3. Psychoeducation related to trauma
+4. Parent engagement
+5. Social-emotional learning (SEL)
+6. Staff training and professional development
+7. Community engagement (more common in less rigorous publications)
+8. Cultural competence (more common in less rigorous publications)
+9. Screening and assessment
+
+Key Findings by Rigor Level:
+
+Experimental and Quasi-experimental studies:
+- Most focused on Tier 2/3 interventions targeting specific trauma symptoms
+- CBITS (Cognitive Behavioral Intervention for Trauma in Schools) had the strongest evidence base
+- School-based trauma-focused CBT showed consistent effects on PTSD symptoms and depression
+- Fewer rigorous evaluations of Tier 1/Universal approaches
+
+Systematic and Literature Reviews:
+- Consistent findings regarding effectiveness of trauma-focused CBT approaches
+- Growing recognition of need for whole-school, trauma-informed approaches
+- Lack of evidence for effectiveness of whole-school approaches
+
+Descriptive Publications:
+- More likely to address cultural competence and community engagement
+- More likely to address needs of marginalized populations
+- Generally less rigorous but highlighted important equity considerations
+
+---
+
+DISCUSSION
+
+Gaps in the Evidence Base:
+
+1. Lack of rigorous evaluation of whole-school (Tier 1) approaches: The majority of rigorous evidence focuses on Tier 2 and 3 interventions. Schools are increasingly implementing whole-school, trauma-informed approaches, but the evidence base for these is limited to descriptive and quasi-experimental studies.
+
+2. Lack of rigorous evaluation of interventions delivered by non-clinical staff: Most rigorously evaluated interventions are delivered by mental health clinicians. Given that most school staff are not clinicians, there is a critical gap in evidence for teacher- and staff-delivered approaches.
+
+3. Cultural competence and equity: Less rigorous publications were more likely to address cultural competence and the needs of marginalized groups. This suggests that the field has not yet adequately integrated equity considerations into rigorous research designs.
+
+4. Professional development evaluation: Despite growing investment in trauma-informed professional development for school staff, few rigorous studies have evaluated whether these training approaches improve staff competency and, ultimately, student outcomes.
+
+Recommendations:
+
+1. Invest in rigorous evaluation of whole-school, trauma-informed approaches that can be implemented by non-clinical staff
+2. Evaluate professional development strategies that help school staff translate knowledge into improved student outcomes
+3. Center equity and cultural competence in both research and practice
+4. Ensure high-quality research is accessible to policymakers and school staff
+5. Develop clear guidance to help schools avoid inadvertently traumatizing students
+
+---
+
+CONCLUSION
+
+This scoping review characterized the landscape of school-based, trauma-focused programs, practices, and policies. While a substantial body of literature exists, there are significant gaps in rigorous evaluation of whole-school approaches and those delivered by non-clinical staff. Future research should prioritize evaluation of these approaches, with particular attention to equity and cultural competence. High-quality evidence should be made accessible to policymakers and practitioners to ensure clear, evidence-based guidance is available.

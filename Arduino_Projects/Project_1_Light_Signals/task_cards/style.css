@@ -416,3 +416,221 @@ footer {
   .card { padding: 10mm; }
   a { color: #000; text-decoration: underline; }
 }
+
+/* =====================================================================
+ * Tutorial-specific styles
+ * Used by project_1_tutorial.html, which links to this same stylesheet
+ * so the tutorial visually matches the printed task cards.
+ * ===================================================================*/
+
+/* Tutorial intro block (blue, introduces how to use the tutorial) */
+
+.tutorial-intro {
+  background: #e3f2fd;
+  border: 3pt solid #1565c0;
+  padding: 18pt 22pt;
+  margin: 20pt 0;
+  font-size: 14pt;
+}
+
+.tutorial-intro h2 {
+  margin-top: 0;
+  background: #1565c0;
+}
+
+.tutorial-intro p {
+  margin: 8pt 0;
+  line-height: 1.55;
+}
+
+/* Tutorial navigation (table of contents with anchor links) */
+
+.tutorial-nav {
+  background: #f5f5f5;
+  border: 1pt solid #aaa;
+  padding: 16pt 22pt;
+  margin: 20pt 0;
+}
+
+.tutorial-nav h2 {
+  margin-top: 0;
+}
+
+.tutorial-nav h3 {
+  font-size: 15pt;
+  margin: 12pt 0 4pt 0;
+  color: #000;
+  border-bottom: 1pt solid #999;
+  padding-bottom: 3pt;
+}
+
+.tutorial-nav ol {
+  margin: 6pt 0;
+  padding-left: 24pt;
+  list-style: decimal;
+}
+
+.tutorial-nav li {
+  margin: 5pt 0;
+  line-height: 1.4;
+}
+
+.tutorial-nav a {
+  color: #0050a0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tutorial-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Tier divider (big black bar between Tier 1 / Tier 2 / Tier 3 sections) */
+
+.tier-divider {
+  background: #000;
+  color: #fff;
+  padding: 20pt 24pt;
+  margin: 34pt 0 22pt 0;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+}
+
+.tier-divider .tier-subtitle {
+  display: block;
+  font-size: 13pt;
+  font-weight: normal;
+  letter-spacing: 0.5pt;
+  text-transform: none;
+  margin-top: 6pt;
+  opacity: 0.85;
+}
+
+/* "Open this sketch" action link — a prominent clickable button */
+
+.open-link {
+  display: block;
+  background: #0050a0;
+  color: #fff !important;
+  padding: 12pt 18pt;
+  margin: 12pt 0;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: center;
+  border-radius: 4pt;
+  border: 2pt solid #003875;
+}
+
+.open-link:hover {
+  background: #003875;
+}
+
+.open-link::before {
+  content: "📎 ";
+  font-size: 16pt;
+}
+
+/* Inline action link (for "see R1 Wiring" and similar) */
+
+.inline-link {
+  color: #0050a0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.inline-link:hover {
+  color: #003875;
+}
+
+/* File-path box (fallback — shown next to .open-link for students whose
+ * browser does not open .ino files directly) */
+
+.file-path {
+  display: block;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 6pt 10pt;
+  margin: -6pt 0 12pt 0;
+  color: #555;
+  text-align: center;
+}
+
+.file-path::before {
+  content: "Or open this file in File Explorer: ";
+  font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: 10pt;
+  font-style: italic;
+}
+
+/* Milestone section (each task card's screen equivalent) */
+
+.milestone-section {
+  scroll-margin-top: 20pt;
+  page-break-after: always;
+  border-bottom: 2pt dashed #ccc;
+  margin-bottom: 20pt;
+  padding-bottom: 20pt;
+}
+
+.milestone-section:last-of-type {
+  border-bottom: none;
+}
+
+/* Back-to-top link at the end of each milestone */
+
+.back-to-top {
+  text-align: right;
+  margin-top: 16pt;
+  font-size: 11pt;
+}
+
+.back-to-top a {
+  color: #0050a0;
+  text-decoration: none;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
+
+/* Tutorial content wrapper (centers content in browser view) */
+
+.tutorial-content {
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 12mm;
+}
+
+/* Screen-only hint: tells the student what they are looking at */
+
+@media screen {
+  .screen-hint {
+    display: block;
+    background: #fff8e1;
+    border: 1pt solid #f9a825;
+    padding: 8pt 12pt;
+    margin: 12pt 0;
+    font-size: 11pt;
+    font-style: italic;
+    color: #555;
+  }
+}
+
+@media print {
+  .screen-hint { display: none; }
+  .tier-divider { page-break-before: always; }
+  .tutorial-nav { page-break-after: always; }
+  .back-to-top { display: none; }
+  .open-link {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2pt solid #000 !important;
+  }
+  .file-path { display: block; }
+}

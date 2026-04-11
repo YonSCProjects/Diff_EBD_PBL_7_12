@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 — Light Signals — Tutorial</title>
+<link rel="stylesheet" href="task_cards/style.css">
+</head>
+<body>
+<div class="tutorial-content">
+
+<div class="header">
+  <h1>Project 1 — Light Signals</h1>
+  <div class="subtitle">Student tutorial • Agourim Differentiated Arduino Workshop</div>
+</div>
+
+<div class="tutorial-intro">
+  <h2>How to use this tutorial</h2>
+  <p>This tutorial contains everything for Project 1 in a single page. It is the same content as the printed task cards on your desk — just on screen instead of on paper. You can read this tutorial, or read the printed cards, or use both at the same time. They say the same thing.</p>
+  <p><strong>Clickable links.</strong> When you see a blue button like <span class="open-link" style="display:inline-block; padding:3pt 10pt; font-size:12pt;">📎 Open sketch: filename.ino</span> you can click it and the file will open. No typing, no copy-paste.</p>
+  <p><strong>If the first click doesn't work:</strong> The first time you click a sketch link, Windows may ask you "How do you want to open this?" Pick <strong>Arduino IDE</strong> and check the box that says "Always use this app". After that, all future clicks will open the sketch directly.</p>
+  <p><strong>Still stuck?</strong> If a link does not open, the file path is shown in grey right below the button. Copy the path, open File Explorer, navigate to the file, and double-click it there.</p>
+  <p><strong>Pick your tier</strong> — Tier 1 (guided build, 8 milestones), Tier 2 (guided design, 5 milestones), or Tier 3 (open design, project planner). If you are new to the workshop, start at Tier 1.</p>
+</div>
+
+<div class="tutorial-nav">
+  <h2>Jump to a milestone</h2>
+
+  <h3>Tier 1 — Guided Build (8 milestones)</h3>
+  <ol>
+    <li><a href="#t1-m1">Set up your workspace and plug in the Arduino</a> <em>(together-milestone)</em></li>
+    <li><a href="#t1-m2">Upload your first sketch</a></li>
+    <li><a href="#t1-m3">Wire your first external LED</a></li>
+    <li><a href="#t1-m4">Upload the sketch and light up the LED</a></li>
+    <li><a href="#t1-m5">Add a second LED</a></li>
+    <li><a href="#t1-m6">Upload the alternating-blink sketch</a></li>
+    <li><a href="#t1-m7">Wire the push-button</a></li>
+    <li><a href="#t1-m8">Upload the button-controlled sketch</a> <em>(final milestone)</em></li>
+  </ol>
+
+  <h3>Tier 2 — Guided Design (5 milestones)</h3>
+  <ol>
+    <li><a href="#t2-m1">Start-up — workspace, first LED, first upload</a></li>
+    <li><a href="#t2-m2">Pick your pattern</a></li>
+    <li><a href="#t2-m3">Modify the sketch with Claude Code</a></li>
+    <li><a href="#t2-m4">Add the button, pick its behaviour</a></li>
+    <li><a href="#t2-m5">Signature pattern and show</a> <em>(final milestone)</em></li>
+  </ol>
+
+  <h3>Tier 3 — Open Design</h3>
+  <ol>
+    <li><a href="#t3-planner">Design your own Project 1</a></li>
+  </ol>
+
+  <h3>Reference cards</h3>
+  <ol>
+    <li><a href="reference_cards/R1_wiring_reference.html" target="_blank">R1 — Wiring Reference</a> (opens in new tab)</li>
+    <li><a href="reference_cards/R2_stuck_protocol.html" target="_blank">R2 — Stuck Protocol</a></li>
+    <li><a href="reference_cards/R3_claude_code_prompts.html" target="_blank">R3 — Claude Code Prompts</a></li>
+    <li><a href="reference_cards/R4_safety_reminder.html" target="_blank">R4 — Safety Reminder</a></li>
+    <li><a href="reference_cards/R5_sketch_index.html" target="_blank">R5 — Sketch Index</a></li>
+  </ol>
+</div>
+
+<!-- ============================================================
+     TIER 1
+     ============================================================ -->
+
+<div class="tier-divider" id="tier-1">
+  Tier 1 — Guided Build
+  <span class="tier-subtitle">8 milestones • Pre-written sketches • Channel A Level 1</span>
+</div>
+
+<!-- ============== T1 M1 ============================== -->
+
+<section class="milestone-section" id="t1-m1">
+  <div class="header">
+    <div class="milestone-badge">Tier 1 • Milestone 1 of 8</div>
+    <h1>Set up your workspace and plug in the Arduino</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="together-notice">
+    <strong>This is a together-milestone.</strong>
+    The teacher is next to you for this whole milestone. You do not work on it alone.
+  </div>
+
+  <div class="why">
+    This is your first milestone of the whole Arduino program. In this milestone you will pick a nickname for your folder (if you don't already have one), create your Project 1 folder together with the teacher, open Claude Code, plug in the Arduino, and see the little green light on the Arduino blink for the first time. It takes about 5 to 10 minutes.
+  </div>
+
+  <span class="screen-hint">Channel B reminder: Claude Code's conversational walk-through is NOT recommended for this milestone — the teacher is next to you and hearing Claude Code speak at the same time is confusing.</span>
+
+  <h2>What to do (with the teacher beside you)</h2>
+  <ul class="checklist">
+    <li><strong>First time in the workshop?</strong> The teacher will ask what nickname you want to use for your folder. You can pick anything you like. It will be your folder's name for the whole year, so pick something you like seeing.</li>
+    <li>Open File Explorer on the PC (press Windows key + E).</li>
+    <li>Go to this folder: <code>G:\My Drive\Arduino_Projects\</code></li>
+    <li>Find your nickname folder, or create it together with the teacher.</li>
+    <li>Inside your nickname folder, create a new folder called <code>Project_1_Light_Signals</code>.</li>
+    <li>Open Claude Code with your new folder as its working directory.</li>
+    <li>Plug the Arduino Uno into the PC with the USB cable.</li>
+    <li>Find the small green "L" LED near pin 13 on the Arduino. It should be blinking.</li>
+    <li>Open the Arduino IDE.</li>
+  </ul>
+
+  <p class="recognition-line">This is your folder, this is your project, Project 1 starts now.</p>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    The little green "L" LED near pin 13 on your Arduino is blinking on and off. This is the factory sketch — you have not uploaded anything yet.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>You have your nickname folder at <code>G:\My Drive\Arduino_Projects\&lt;your_nickname&gt;\</code></li>
+      <li>You have a new <code>Project_1_Light_Signals</code> folder inside it</li>
+      <li>Claude Code is open and pointed at your Project 1 folder</li>
+      <li>The Arduino is plugged in and the "L" LED is blinking</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    This is a together-milestone — the teacher will walk you through it. If the teacher is with another student, wait and work on the resistor-sorting backup task on your desk.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ Back to Tier 1 top</a></div>
+</section>
+
+<!-- ============== T1 M2 ============================== -->
+
+<section class="milestone-section" id="t1-m2">
+  <div class="header">
+    <div class="milestone-badge">Tier 1 • Milestone 2 of 8</div>
+    <h1>Upload your first sketch</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    In this milestone you will upload a sketch that makes the "L" LED blink faster than the factory sketch. This is your first time clicking the Upload button. About 5 minutes.
+  </div>
+
+  <h2>What to do</h2>
+
+  <a class="open-link" href="ino_files/01_blink_L_fast/01_blink_L_fast.ino">Open sketch: 01_blink_L_fast.ino</a>
+  <code class="file-path">ino_files/01_blink_L_fast/01_blink_L_fast.ino</code>
+
+  <ul class="checklist">
+    <li>Click the Open sketch button above. The Arduino IDE should open with <code>01_blink_L_fast.ino</code>.</li>
+    <li>Click the Upload button in the Arduino IDE toolbar (right-arrow icon).</li>
+    <li>Wait for "Done uploading" in green at the bottom of the IDE.</li>
+    <li>Look at the "L" LED on the Arduino. It should now blink FASTER than before — about three times per second.</li>
+  </ul>
+
+  <h2>The sketch you are uploading</h2>
+  <pre class="code-block"><span class="filename">01_blink_L_fast.ino</span>// Blinks the built-in "L" LED faster than the factory sketch.
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(150);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(150);
+}</pre>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    The green "L" LED blinks faster than before. "Done uploading" showed in green.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>The "L" LED is blinking faster than the factory blink</li>
+      <li>"Done uploading" appeared in the Arduino IDE</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    Check that Tools → Board shows "Arduino Uno" and Tools → Port shows a COM port. Still stuck? See <a class="inline-link" href="reference_cards/R2_stuck_protocol.html" target="_blank">R2 Stuck Protocol</a>.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ Back to Tier 1 top</a></div>
+</section>
+
+<!-- ============== T1 M3 ============================== -->
+
+<section class="milestone-section" id="t1-m3">
+  <div class="header">
+    <div class="milestone-badge">Tier 1 • Milestone 3 of 8</div>
+    <h1>Wire your first external LED</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    You are going to wire an LED on the breadboard for the first time. Hardware only — no sketch upload in this milestone.
+  </div>
+
+  <h2>What to do</h2>
+  <ul class="checklist">
+    <li>Pick one LED from your parts tray. Any colour is fine.</li>
+    <li>Notice: the <strong>long leg is positive (+)</strong>, the <strong>short leg is negative (−)</strong>.</li>
+    <li>Pick a 220 Ω resistor (colour bands: <strong>red · red · brown</strong>).</li>
+    <li>Plant the LED across two rows of the breadboard — legs in different rows.</li>
+    <li>Long leg (+) → 220 Ω resistor → Arduino <strong>pin 9</strong>.</li>
+    <li>Short leg (−) → jumper wire → Arduino <strong>GND</strong>.</li>
+  </ul>
+
+  <h2>Wiring diagram</h2>
+  <pre class="wiring-block">Arduino pin 9  ───[220 Ω]───┬─── LED long leg
+                           │
+                           ▼
+                      LED short leg ─── Arduino GND</pre>
+
+  <p>For a full-sized diagram with all four Project 1 wiring states, see <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring Reference</a>.</p>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    The LED is in the breadboard, long leg connects through the 220 Ω resistor to pin 9, short leg connects to GND. <strong>The LED is not lit yet</strong> — that comes in Milestone 4 when you upload the sketch.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>The LED is planted with legs in different rows</li>
+      <li>Long leg → 220 Ω → pin 9</li>
+      <li>Short leg → GND</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    Check <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring Reference</a> first — it shows exactly how the LED should look. If you are still unsure, call the teacher.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ Back to Tier 1 top</a></div>
+</section>
+
+<!-- ============== T1 M4 ============================== -->
+
+<section class="milestone-section" id="t1-m4">
+  <div class="header">
+    <div class="milestone-badge">Tier 1 • Milestone 4 of 8</div>
+    <h1>Upload the sketch and light up the LED</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    This is the most important milestone in Project 1. You wired the LED. Now you upload a sketch that makes it blink. The LED on your breadboard blinks because of code you uploaded. This is the moment code makes physical things happen.
+  </div>
+
+  <h2>What to do</h2>
+
+  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">Open sketch: 02_blink_external.ino</a>
+  <code class="file-path">ino_files/02_blink_external/02_blink_external.ino</code>
+
+  <ul class="checklist">
+    <li>Click Open sketch above.</li>
+    <li>Click the Upload button in the Arduino IDE.</li>
+    <li>Wait for "Done uploading".</li>
+    <li>Look at your breadboard LED. It should blink about once per second.</li>
+  </ul>
+
+  <h2>The sketch you are uploading</h2>
+  <pre class="code-block"><span class="filename">02_blink_external.ino</span>// Blinks the external LED wired to digital pin 9.
+
+const int LED_PIN = 9;
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(500);
+  digitalWrite(LED_PIN, LOW);
+  delay(500);
+}</pre>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    Your external LED on the breadboard blinks about once per second. Your wiring came alive because of the code you uploaded.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>Your external LED is blinking once per second</li>
+      <li>"Done uploading" appeared in green</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck? LED not blinking?</strong>
+    <ol>
+      <li>Flip the LED. Long leg to resistor, short leg to GND. About half the time the LED is backwards.</li>
+      <li>Check the resistor is between pin 9 and the LED's long leg — not just stuck in the breadboard.</li>
+      <li>Look for the green "Done uploading" message. If missing, upload failed.</li>
+      <li>Still stuck? Call the teacher. See <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring Reference</a>.</li>
+    </ol>
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ Back to Tier 1 top</a></div>
+</section>
+
+<!-- ============== T1 M5 ============================== -->
+
+<section class="milestone-section" id="t1-m5">
+  <div class="header">
+    <div class="milestone-badge">Tier 1 • Milestone 5 of 8</div>
+    <h1>Add a second LED</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    Same wiring pattern as Milestone 3, but one row over on the breadboard. No sketch upload this milestone.
+  </div>
+
+  <h2>What to do</h2>
+  <ul class="checklist">
+    <li>Pick a second LED of a <strong>different colour</strong> from your first.</li>
+    <li>Pick another 220 Ω resistor.</li>
+    <li>Plant the second LED in the breadboard, one row away from the first.</li>
+    <li>Long leg → 220 Ω → Arduino <strong>pin 10</strong>.</li>
+    <li>Short leg → GND.</li>
+  </ul>
+
+  <h2>Wiring diagram</h2>
+  <pre class="wiring-block">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND</pre>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    Two LEDs on the breadboard. The <strong>first LED is still blinking</strong> from Milestone 4's sketch. The second LED is not lit yet — Milestone 6 fixes that.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>Two LEDs on the breadboard, side by side</li>
+      <li>LED 2 long leg → 220 Ω → pin 10; short leg → GND</li>
+      <li>You can tell the two LEDs apart by colour</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    The wiring is the same pattern as Milestone 3 — just one row over. See <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring 2</a>. If the first LED stops blinking while you wire the second one, you may have knocked its jumper loose — re-check it.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ Back to Tier 1 top</a></div>
+</section>
+
+<!-- ============== T1 M6 ============================== -->
+
+<section class="milestone-section" id="t1-m6">
+  <div class="header">
+    <div class="milestone-badge">Tier 1 • Milestone 6 of 8</div>
+    <h1>Upload the alternating-blink sketch</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    Now the Arduino controls two things at once. When one LED is on, the other is off. First time you see the Arduino do more than one thing in the same sketch.
+  </div>
+
+  <h2>What to do</h2>
+
+  <a class="open-link" href="ino_files/03_blink_alternating/03_blink_alternating.ino">Open sketch: 03_blink_alternating.ino</a>
+  <code class="file-path">ino_files/03_blink_alternating/03_blink_alternating.ino</code>
+
+  <ul class="checklist">
+    <li>Click Open sketch above.</li>
+    <li>Click Upload.</li>
+    <li>Wait for "Done uploading".</li>
+    <li>Watch your two LEDs. They should alternate — when LED 1 is on, LED 2 is off, then swap.</li>
+  </ul>
+
+  <h2>The sketch you are uploading</h2>
+  <pre class="code-block"><span class="filename">03_blink_alternating.ino</span>// Blinks two external LEDs in alternation.
+
+const int LED_1 = 9;
+const int LED_2 = 10;
+
+void setup() {
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_1, HIGH);
+  digitalWrite(LED_2, LOW);
+  delay(500);
+
+  digitalWrite(LED_1, LOW);
+  digitalWrite(LED_2, HIGH);
+  delay(500);
+}</pre>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    Two LEDs alternating — LED 1 on / LED 2 off / then swap / every half second.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>Both LEDs are blinking in alternation</li>
+      <li>"Done uploading" appeared in green</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    <strong>Both LEDs always on:</strong> one is probably wired to 5 V instead of a digital pin. <strong>Only one LED works:</strong> the other is wired backwards, or its resistor is not connected. See <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring 2</a>.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ Back to Tier 1 top</a></div>
+</section>
+
+<!-- ============== T1 M7 ============================== -->
+
+<section class="milestone-section" id="t1-m7">
+  <div class="header">
+    <div class="milestone-badge">Tier 1 • Milestone 7 of 8</div>
+    <h1>Wire the push-button</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    Hardest wiring step of Project 1. You add a push-button AND a special resistor called a pull-down. Getting the pull-down in the right place is important — if you put it in the wrong place the Arduino will reset. Read carefully.
+  </div>
+
+  <h2>What to do</h2>
+  <ul class="checklist">
+    <li>Pick a tactile push-button. It has four pins.</li>
+    <li>Plant it <strong>across the centre gap</strong> of the breadboard — four pins in four different rows.</li>
+    <li>Pick a <strong>10 kΩ resistor</strong> (colour bands: <strong>brown · black · orange</strong>). This is different from the 220 Ω LED resistor.</li>
+    <li>Button pin A → Arduino <strong>5 V</strong>.</li>
+    <li>Button pin B → Arduino <strong>pin 2</strong>.</li>
+    <li>From pin B, also through the 10 kΩ resistor → <strong>GND</strong>. This is the pull-down.</li>
+  </ul>
+
+  <h2>Wiring diagram</h2>
+  <pre class="wiring-block">Arduino 5 V ──────────────┬─── Button pin A
+                          │
+                          ▼
+                      Button pin B ────┬─── Arduino pin 2
+                                       │
+                                       └─[10 kΩ]── Arduino GND</pre>
+
+  <div class="warning">
+    <strong>Most common mistake</strong>
+    The 10 kΩ pull-down goes between <strong>pin 2 and GND</strong>. NOT between 5 V and GND. If you put it between 5 V and GND, pressing the button creates a short circuit and the Arduino resets. Check with your finger: does the resistor go from pin 2 to GND? Good. From 5 V to GND? Move it.
+  </div>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    The button is on the breadboard with the pull-down resistor between pin 2 and GND. The two LEDs from before are still blinking. Pressing the button does nothing yet — the current sketch doesn't know about the button. Milestone 8 changes that.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>Button straddles the centre gap, pins in four different rows</li>
+      <li>Button pin A → 5 V</li>
+      <li>Button pin B → pin 2 AND → 10 kΩ → GND</li>
+      <li>The two LEDs from before are still alternating</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    This is the hardest wiring step. The teacher expects to help here — call them. Before calling, check <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring 3</a> for the pull-down position. If the Arduino keeps resetting, you have the pull-down on the wrong side — unplug USB, fix it, plug back in.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ Back to Tier 1 top</a></div>
+</section>
+
+<!-- ============== T1 M8 ============================== -->
+
+<section class="milestone-section" id="t1-m8">
+  <div class="header">
+    <div class="milestone-badge celebration">Tier 1 • Milestone 8 of 8 • Final milestone</div>
+    <h1>Upload the button-controlled sketch</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    Last milestone of Project 1. You wired the button in Milestone 7. Now you upload a sketch that uses the button to switch which LED is on. Pressing the button swaps which LED is lit. This is your first interactive Arduino project.
+  </div>
+
+  <h2>What to do</h2>
+
+  <a class="open-link" href="ino_files/04_button_control/04_button_control.ino">Open sketch: 04_button_control.ino</a>
+  <code class="file-path">ino_files/04_button_control/04_button_control.ino</code>
+
+  <ul class="checklist">
+    <li>Click Open sketch above.</li>
+    <li>Click Upload.</li>
+    <li>Wait for "Done uploading".</li>
+    <li>Look at your breadboard. One LED is on, the other is off.</li>
+    <li>Press and hold the button. The LEDs swap — the one that was on turns off, the one that was off turns on.</li>
+    <li>Release the button. The LEDs swap back.</li>
+    <li>Press and release a few times. The button should reliably switch the LEDs.</li>
+  </ul>
+
+  <h2>The sketch you are uploading</h2>
+  <pre class="code-block"><span class="filename">04_button_control.ino</span>// A push-button controls which of two LEDs is on.
+
+const int LED_1 = 9;
+const int LED_2 = 10;
+const int BUTTON = 2;
+
+void setup() {
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+  pinMode(BUTTON, INPUT);
+}
+
+void loop() {
+  int buttonState = digitalRead(BUTTON);
+
+  if (buttonState == HIGH) {
+    // Button is pressed: LED 2 on, LED 1 off.
+    digitalWrite(LED_1, LOW);
+    digitalWrite(LED_2, HIGH);
+  } else {
+    // Button not pressed: LED 1 on, LED 2 off.
+    digitalWrite(LED_1, HIGH);
+    digitalWrite(LED_2, LOW);
+  }
+}</pre>
+
+  <p>Notice the <code>if ... else</code>. The Arduino reads the button. If the button is pressed (<code>HIGH</code>), it turns one LED on. If not pressed (<code>LOW</code>), it turns the other LED on. Read input → decide → write output. This is the fundamental pattern for every interactive Arduino project.</p>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    Button NOT pressed: LED 1 (pin 9) on, LED 2 (pin 10) off. Button pressed: LED 1 off, LED 2 on. The switch happens instantly and reliably.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>Pressing the button switches which LED is lit</li>
+      <li>Releasing the button switches it back</li>
+      <li>You have completed Project 1</li>
+    </ul>
+  </div>
+
+  <div class="celebration">
+    <span class="title">🎉 You just completed Project 1!</span>
+    You wired a breadboard from scratch. You uploaded four sketches. You built an interactive circuit with LEDs and a button. Ask the teacher for a photo of your finished build. Real electrical engineering.
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck? Button does nothing?</strong>
+    Most common cause: the 10 kΩ pull-down resistor is on the wrong side. Check <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring 3</a>. The resistor must be between pin 2 and GND, not between 5 V and GND. If the wiring is correct and the button still does nothing, call the teacher.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ Back to Tier 1 top</a></div>
+</section>
+
+<!-- ============================================================
+     TIER 2
+     ============================================================ -->
+
+<div class="tier-divider" id="tier-2">
+  Tier 2 — Guided Design
+  <span class="tier-subtitle">5 milestones • Pattern choice + button behaviour + Claude Code Level 2</span>
+</div>
+
+<!-- ============== T2 M1 ============================== -->
+
+<section class="milestone-section" id="t2-m1">
+  <div class="header">
+    <div class="milestone-badge">Tier 2 • Milestone 1 of 5</div>
+    <h1>Start-up — workspace, first LED, first upload</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    This milestone covers everything that Tier 1 does across Milestones 1 to 4, but moves faster. If this is your first workshop session ever, the nickname and folder creation part is still a together-milestone — the teacher will be with you for it.
+  </div>
+
+  <h2>What to do</h2>
+
+  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">Open sketch: 02_blink_external.ino</a>
+  <code class="file-path">ino_files/02_blink_external/02_blink_external.ino</code>
+
+  <ul class="checklist">
+    <li><strong>Workspace setup</strong> (together with the teacher if this is your first session): File Explorer → <code>G:\My Drive\Arduino_Projects\</code> → create or find your nickname folder → create <code>Project_1_Light_Signals</code> inside it → open Claude Code.</li>
+    <li>Plug in the Arduino. Confirm the "L" LED is blinking from the factory sketch.</li>
+    <li>Wire ONE LED: long leg → 220 Ω → pin 9; short leg → GND. See <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring 1</a>.</li>
+    <li>Click Open sketch above. Click Upload.</li>
+    <li>Confirm the external LED is blinking once per second.</li>
+  </ul>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    Folders created on Drive. Claude Code open. Arduino plugged in. One LED wired on pin 9 and blinking. Ready for design choices next milestone.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>Nickname and project folders exist</li>
+      <li>One LED wired on pin 9 and blinking</li>
+      <li>Claude Code is open on your Project 1 folder</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    If this feels too fast, look at the Tier 1 tutorial sections above (Milestones 1 to 4) — they cover the same steps in smaller pieces. It is completely fine to slow down.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ Back to Tier 2 top</a></div>
+</section>
+
+<!-- ============== T2 M2 ============================== -->
+
+<section class="milestone-section" id="t2-m2">
+  <div class="header">
+    <div class="milestone-badge">Tier 2 • Milestone 2 of 5</div>
+    <h1>Pick your pattern</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    Your first real design choice in Project 1. Pick the pattern you want to build. Alternating, chasing, or breathing. There is no "correct" answer — pick the one you like.
+  </div>
+
+  <h2>Pick ONE of these three patterns</h2>
+
+  <div class="choice-point">
+    <strong>Option A — Alternating (2 LEDs)</strong>
+    <div class="option">
+      Two LEDs blinking in opposition. When one is on, the other is off.<br>
+      <strong>Wiring:</strong> add a second LED on pin 10 with its own 220 Ω resistor.<br>
+      <a class="open-link" href="ino_files/T2_alternating_starter/T2_alternating_starter.ino">Open starter: T2_alternating_starter.ino</a>
+      <code class="file-path">ino_files/T2_alternating_starter/T2_alternating_starter.ino</code>
+    </div>
+
+    <strong>Option B — Chasing (3 LEDs)</strong>
+    <div class="option">
+      Three LEDs lighting one at a time, like a chase light.<br>
+      <strong>Wiring:</strong> add a second LED on pin 10 AND a third LED on pin 11, each with its own 220 Ω resistor.<br>
+      <a class="open-link" href="ino_files/T2_chasing_starter/T2_chasing_starter.ino">Open starter: T2_chasing_starter.ino</a>
+      <code class="file-path">ino_files/T2_chasing_starter/T2_chasing_starter.ino</code>
+    </div>
+
+    <strong>Option C — Breathing (1 LED, PWM fade)</strong>
+    <div class="option">
+      One LED fading smoothly in and out.<br>
+      <strong>Wiring:</strong> nothing new. Use the first LED from Milestone 1 on pin 9.<br>
+      <a class="open-link" href="ino_files/T2_breathing_starter/T2_breathing_starter.ino">Open starter: T2_breathing_starter.ino</a>
+      <code class="file-path">ino_files/T2_breathing_starter/T2_breathing_starter.ino</code>
+    </div>
+  </div>
+
+  <h2>What to do</h2>
+  <ul class="checklist">
+    <li>Decide A, B, or C.</li>
+    <li>Wire any additional LEDs your choice needs.</li>
+    <li>Click Open starter (from your chosen option above).</li>
+    <li>Click Upload and watch.</li>
+  </ul>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    Your chosen pattern is running on the breadboard. Watch it for a few seconds — in Milestone 3 you will modify it with Claude Code.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>You picked A, B, or C</li>
+      <li>The hardware is wired for your choice</li>
+      <li>The starter sketch is running</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    Option B (chasing) needs THREE LEDs wired. Option C (breathing) uses only pin 9 (a PWM pin). See <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1</a>.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ Back to Tier 2 top</a></div>
+</section>
+
+<!-- ============== T2 M3 ============================== -->
+
+<section class="milestone-section" id="t2-m3">
+  <div class="header">
+    <div class="milestone-badge">Tier 2 • Milestone 3 of 5</div>
+    <h1>Modify the sketch with Claude Code</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    Your first time using Claude Code as a pair programmer (Channel A Level 2). You describe the change you want, Claude Code helps you figure out what to modify. Important: describe the problem BEFORE you ask for a solution. That discipline is how Channel A Level 2 works.
+  </div>
+
+  <h2>Step 1 — Fill in the (a)(b)(c) BEFORE talking to Claude Code</h2>
+  <p>Pick a change you want. Easy: make it faster, make it slower, add a third LED, change which pin an LED is on.</p>
+
+  <pre class="prompt-template">(a) What I want to happen:
+_________________________________________________
+_________________________________________________
+
+(b) What is currently happening:
+_________________________________________________
+_________________________________________________
+
+(c) What I have tried (or looked at):
+_________________________________________________
+_________________________________________________</pre>
+
+  <h2>Step 2 — Send the prompt to Claude Code</h2>
+  <p>In Claude Code, paste this template (with your answers filled in) and your current sketch code:</p>
+
+  <pre class="prompt-template">I am working on my Tier 2 Project 1 starter sketch.
+
+(a) What I want to happen:
+[your answer]
+
+(b) What is currently happening:
+[your answer]
+
+(c) What I have tried:
+[your answer]
+
+Here is my current code:
+[paste the whole sketch file here]
+
+Can you help me figure out what to change?</pre>
+
+  <h2>Step 3 — Read, change, upload, test</h2>
+  <ul class="checklist">
+    <li>Read Claude Code's response. Do not just paste code you do not understand.</li>
+    <li>Make the change in the Arduino IDE.</li>
+    <li>Click Upload.</li>
+    <li>Watch. Did it behave the way you wanted?</li>
+    <li>If not, go back to Step 1 with a new (a)(b)(c).</li>
+  </ul>
+
+  <h2>Comprehension check</h2>
+  <p>Answer in one sentence (out loud or on paper):</p>
+  <pre class="prompt-template">After Claude Code helped me, the thing that changed in my sketch was:
+_________________________________________________
+_________________________________________________</pre>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    Your pattern runs differently from the starter sketch. You can point at one line of code and say "this is the line that changed."
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>You filled in (a)(b)(c) before talking to Claude Code</li>
+      <li>Your pattern runs differently from the starter</li>
+      <li>You can say in one sentence what changed</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    If Claude's answer did not work, go back to (a)(b)(c) and describe what happened MORE specifically. "It still blinks the same" is less useful than "both LEDs now stay on all the time which is not what I wanted." See <a class="inline-link" href="reference_cards/R3_claude_code_prompts.html" target="_blank">R3 Claude Code Prompts</a>.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ Back to Tier 2 top</a></div>
+</section>
+
+<!-- ============== T2 M4 ============================== -->
+
+<section class="milestone-section" id="t2-m4">
+  <div class="header">
+    <div class="milestone-badge">Tier 2 • Milestone 4 of 5</div>
+    <h1>Add the button, pick its behaviour</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    Add a push-button and decide what it does. Then use Claude Code Level 2 to make your sketch actually do that behaviour.
+  </div>
+
+  <h2>Step 1 — Wire the button</h2>
+  <p>Same wiring as Tier 1 Milestone 7: button across the centre gap, pin A to 5 V, pin B to Arduino pin 2, and a 10 kΩ pull-down resistor from pin 2 to GND. See <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring 3</a>.</p>
+
+  <div class="warning">
+    <strong>Pull-down reminder</strong>
+    The 10 kΩ resistor goes between pin 2 and GND. Not between 5 V and GND. Getting this wrong causes the Arduino to reset.
+  </div>
+
+  <h2>Step 2 — Pick ONE button behaviour</h2>
+
+  <div class="choice-point">
+    <strong>Behaviour A — Toggle</strong>
+    <div class="option">
+      Pressing the button starts the pattern. Pressing again stops it. Press again: starts.
+    </div>
+
+    <strong>Behaviour B — Cycle</strong>
+    <div class="option">
+      Pressing the button cycles through patterns. Alternating → chasing → breathing → back to alternating. (Needs all three LEDs wired.)
+    </div>
+
+    <strong>Behaviour C — Speed control</strong>
+    <div class="option">
+      Holding the button makes the pattern run faster. Releasing returns it to normal.
+    </div>
+  </div>
+
+  <h2>Step 3 — Use Claude Code Level 2 to implement your choice</h2>
+  <p>Same (a)(b)(c) discipline as Milestone 3:</p>
+  <pre class="prompt-template">(a) What I want to happen:
+[your chosen behaviour — A, B, or C — described in your own words]
+
+(b) What is currently happening:
+[what the sketch does right now, before the button works]
+
+(c) What I have tried:
+[what you already looked at or changed]</pre>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    The button changes your pattern in the way you chose. You can show it to the teacher and say what you built.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>Button wired with 10 kΩ pull-down in the correct position</li>
+      <li>You chose A, B, or C</li>
+      <li>The button actually does what you chose</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    Button does nothing? Check pull-down position on <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1</a>. If wiring is correct, the sketch needs <code>pinMode(BUTTON, INPUT)</code> in setup() and <code>digitalRead()</code> in loop(). Ask Claude Code to check.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ Back to Tier 2 top</a></div>
+</section>
+
+<!-- ============== T2 M5 ============================== -->
+
+<section class="milestone-section" id="t2-m5">
+  <div class="header">
+    <div class="milestone-badge celebration">Tier 2 • Milestone 5 of 5 • Final milestone</div>
+    <h1>Signature pattern and show</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    Final milestone of Tier 2. Combine your pattern choice, button behaviour, colours, and timing into a "signature pattern" — your version of Project 1. Show it to the teacher at the end.
+  </div>
+
+  <h2>Step 1 — Decide your signature pattern</h2>
+  <pre class="prompt-template">My signature pattern is going to:
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________</pre>
+
+  <h2>Step 2 — Build it</h2>
+  <ul class="checklist">
+    <li>Make sure your LEDs and button are still wired.</li>
+    <li>Use Claude Code Level 2 (or Level 3 if you feel confident) to modify your sketch.</li>
+    <li>Upload, watch, iterate. Go back to Claude Code with a new (a)(b)(c) if needed.</li>
+    <li>Keep going until it matches your plan — or until you decide what you actually built is better than what you planned.</li>
+  </ul>
+
+  <h2>Step 3 — Show it to the teacher</h2>
+  <ul class="checklist">
+    <li>Call the teacher when you are happy.</li>
+    <li>Show the pattern running. Say in one or two sentences what you built.</li>
+    <li>Optional: ask the teacher to take a photo.</li>
+  </ul>
+
+  <div class="expected">
+    <strong>What you should see</strong>
+    Your own version of Project 1 running on your breadboard. The teacher has seen it. You have a photo if you wanted one.
+  </div>
+
+  <div class="celebration">
+    <span class="title">🎉 You completed Tier 2 of Project 1!</span>
+    You picked a pattern, modified code with Claude Code, wired a button, chose a behaviour, and built something that is your own design. This is what Tier 2 is about.
+  </div>
+
+  <div class="done-when">
+    <strong>Done when</strong>
+    <ul>
+      <li>Your signature pattern runs</li>
+      <li>The button does what you chose</li>
+      <li>You showed the teacher</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck?</strong>
+    If you cannot decide what your signature pattern should be, combine two things you liked from Milestones 2 and 3. For example: "alternating, faster than default, and the button toggles it on/off." That counts.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ Back to Tier 2 top</a></div>
+</section>
+
+<!-- ============================================================
+     TIER 3
+     ============================================================ -->
+
+<div class="tier-divider" id="tier-3">
+  Tier 3 — Open Design
+  <span class="tier-subtitle">Design your own version of Project 1 from scratch</span>
+</div>
+
+<!-- ============== T3 PLANNER ============================== -->
+
+<section class="milestone-section" id="t3-planner">
+  <div class="header">
+    <div class="milestone-badge">Tier 3 • Project Planner</div>
+    <h1>Design your own Project 1</h1>
+    <div class="subtitle">Project 1 • Light Signals</div>
+  </div>
+
+  <div class="why">
+    Tier 3 is for students who want to design their own version of Project 1 from scratch. Pick a real use case, build it, show it. No numbered milestones — just five phases on this planner.
+  </div>
+
+  <span class="screen-hint">The printed version of this planner has fill-in-the-blank fields you can write in with a pen. This on-screen version shows the same questions — write your answers on paper, in Claude Code, or in a separate text file.</span>
+
+  <h2>Phase 1 — Plan</h2>
+
+  <p><strong>What is your project going to be?</strong> (one or two sentences)</p>
+  <p><em>Example: "A mood light for my desk. Three LEDs. A button picks the colour mood — calm, energetic, or neutral."</em></p>
+
+  <p><strong>Who is it for?</strong> (yourself, a family member, the school, a specific use)</p>
+  <p><em>Knowing who it is for helps you make design choices.</em></p>
+
+  <p><strong>What hardware do you need?</strong> (LEDs, resistors, button, jumper wires — how many)</p>
+  <p><em>For most Tier 3 projects: 2–4 LEDs, 2–4 resistors, a button, jumper wires. Ask the teacher if you need something unusual.</em></p>
+
+  <p><strong>What is the behaviour?</strong> (be specific)</p>
+  <p><em>"The LEDs do something" is not enough. "When I press the button, the LEDs cycle through red → yellow → green → off, one press each, and stay at whatever colour you stopped on" is enough to start coding.</em></p>
+
+  <h2>Phase 2 — Build</h2>
+  <ul class="checklist">
+    <li>Sketch your wiring on paper first.</li>
+    <li>Wire it on the breadboard. Use <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1</a> as a base.</li>
+    <li>Take a photo of your finished wiring (optional).</li>
+  </ul>
+
+  <h2>Phase 3 — Code (Claude Code Level 3)</h2>
+  <p>Use Claude Code in free-dialogue mode. Describe what you are trying to build. Iterate together. Same (a)(b)(c) discipline — describe the problem before asking for a solution.</p>
+
+  <p><strong>First prompt draft</strong> (write it before you send):</p>
+  <pre class="prompt-template">I am building [your project description] for [who it is for].
+I have [list of hardware] wired on [which pins].
+I want the behaviour to be [be specific].
+Can you help me write the Arduino sketch?</pre>
+
+  <h2>Phase 4 — Test</h2>
+  <ul class="checklist">
+    <li>Upload and watch.</li>
+    <li>Does it do what you wanted? If not, what is different?</li>
+    <li>Go back to Claude Code with a new (a)(b)(c).</li>
+    <li>Iterate until it works — or until you decide the way it actually came out is better.</li>
+  </ul>
+
+  <h2>Phase 5 — Show</h2>
+  <ul class="checklist">
+    <li>Call the teacher when you are happy.</li>
+    <li>Show your project. Explain what it does and why you built it.</li>
+    <li>Save a photo to your Project 1 folder on Google Drive (optional).</li>
+  </ul>
+
+  <div class="celebration">
+    <span class="title">🎉 You completed Tier 3 of Project 1!</span>
+    You designed, built, and programmed your own version of Project 1 from scratch. This is the kind of work the whole Arduino program is building toward.
+  </div>
+
+  <div class="stuck">
+    <strong>Stuck at any phase?</strong>
+    Tier 3 is open-ended and that is its point. Being stuck is part of designing your own project. Use Claude Code to think through the problem. Call the teacher if you have been stuck for more than 10 minutes. A Tier 3 teacher conversation is a design conversation, not a troubleshooting one — tell them what you are trying to build and what is not working.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-3">↑ Back to Tier 3 top</a></div>
+</section>
+
+<footer>
+  Project 1 — Light Signals • Agourim Differentiated Arduino Workshop • Tutorial • Same content as printed task cards in <code>task_cards/</code>
+</footer>
+
+</div>
+</body>
+</html>

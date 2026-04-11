@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 1 Milestone 8: Upload the button-controlled sketch (Final milestone)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge celebration">Tier 1 • Milestone 8 of 8 • Final milestone</div>
+  <h1>Upload the button-controlled sketch</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+This is the last milestone of Project 1. After this, Project 1 is complete. The sketch you upload now uses the button you wired in Milestone 7 to switch which LED is on. When you press the button, one LED turns off and the other turns on. This is your first interactive Arduino project — your input (the button press) changes the Arduino's output (which LED is lit).
+</div>
+
+<h2>What to do</h2>
+
+<ul class="checklist">
+  <li>Open the file <code>04_button_control.ino</code> in the Arduino IDE. It is in your Project 1 folder under <code>ino_files/04_button_control/</code>.</li>
+  <li>Click the Upload button.</li>
+  <li>Wait for "Done uploading" in green.</li>
+  <li>Look at your breadboard. One LED should be on, the other off. (This is the "button not pressed" state.)</li>
+  <li>Press and hold the button. The LEDs should swap — the one that was on turns off, and the one that was off turns on.</li>
+  <li>Release the button. The LEDs swap back.</li>
+  <li>Press and release a few times. The button should switch which LED is lit every time, reliably.</li>
+</ul>
+
+<h2>The sketch you are uploading</h2>
+
+<pre class="code-block"><span class="filename">04_button_control.ino</span>// A push-button controls which of two LEDs is on.
+
+const int LED_1 = 9;
+const int LED_2 = 10;
+const int BUTTON = 2;
+
+void setup() {
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+  pinMode(BUTTON, INPUT);
+}
+
+void loop() {
+  int buttonState = digitalRead(BUTTON);
+
+  if (buttonState == HIGH) {
+    // Button is pressed: LED 2 on, LED 1 off.
+    digitalWrite(LED_1, LOW);
+    digitalWrite(LED_2, HIGH);
+  } else {
+    // Button not pressed: LED 1 on, LED 2 off.
+    digitalWrite(LED_1, HIGH);
+    digitalWrite(LED_2, LOW);
+  }
+}</pre>
+
+<p>Notice the <code>if ... else</code> in the loop. That is how the Arduino makes a decision. It reads the button, and depending on whether the button is pressed (<code>HIGH</code>) or not (<code>LOW</code>), it turns on one LED or the other. This is the fundamental pattern for every interactive Arduino project: read input → decide → write output.</p>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  With the button NOT pressed: LED 1 (on pin 9) is on, LED 2 (on pin 10) is off. When you press and hold the button: LED 1 turns off and LED 2 turns on. Releasing goes back to LED 1 on. The switch happens instantly when you press and again when you release.
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>Pressing the button reliably switches which LED is lit</li>
+    <li>Releasing the button switches it back</li>
+    <li>You have completed Project 1</li>
+  </ul>
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 You just completed Project 1!</span>
+  You wired a breadboard from scratch. You uploaded four sketches. You built an interactive circuit with LEDs and a button. Ask the teacher for a photo of your finished Project 1 build (if you want one) — this is real electrical engineering and you did it.
+</div>
+
+<div class="stuck">
+  <strong>Stuck? Button does nothing?</strong>
+  The most common cause is the 10 kΩ pull-down resistor being in the wrong place. Check reference card R1 Wiring 3: the pull-down must be between <strong>pin 2 and GND</strong>, not between 5 V and GND. If the button still does nothing after you verify the pull-down position, call the teacher.
+</div>
+
+<footer>T1 • M8 of 8 • Project 1 Light Signals • Final milestone • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 1 Milestone 4: Upload the sketch and light up the LED</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge">Tier 1 • Milestone 4 of 8</div>
+  <h1>Upload the sketch and light up the LED</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+This is the moment everything you have done so far comes together. You wired the LED in Milestone 3. Now you upload a sketch that blinks it. The LED on your breadboard should start blinking because of code you uploaded. This is the single most important milestone in Project 1 — the moment you prove that "something I wired" responds to "code I uploaded."
+</div>
+
+<h2>What to do</h2>
+
+<ul class="checklist">
+  <li>Open the file <code>02_blink_external.ino</code> in the Arduino IDE. It is in your Project 1 folder under <code>ino_files/02_blink_external/</code>.</li>
+  <li>Click the Upload button (the right-arrow in the toolbar).</li>
+  <li>Wait for "Done uploading" to appear at the bottom of the IDE in green.</li>
+  <li>Look at the LED on your breadboard. It should be blinking on and off about once per second.</li>
+  <li>If it is not blinking, run the stuck protocol at the bottom of this card before calling the teacher.</li>
+</ul>
+
+<h2>The sketch you are uploading</h2>
+
+<pre class="code-block"><span class="filename">02_blink_external.ino</span>// Blinks the external LED wired to digital pin 9.
+
+const int LED_PIN = 9;
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(500);
+  digitalWrite(LED_PIN, LOW);
+  delay(500);
+}</pre>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  Your external LED on the breadboard is blinking on and off about once per second. This is the moment code you uploaded makes something physical happen on your own wiring. Take a second to notice that the LED on the Arduino board (the "L" LED from Milestone 2) has stopped blinking fast — because you replaced that sketch with this one.
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>The external LED on your breadboard is blinking once per second</li>
+    <li>The Arduino IDE shows "Done uploading" in green</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong>Stuck? LED not blinking? Try these first:</strong>
+  1. <strong>Check the LED orientation.</strong> The long leg (+) goes to the resistor and then to pin 9. The short leg (−) goes to GND. If you have them backwards, the LED will not light. Flip the LED.<br>
+  2. <strong>Check the resistor.</strong> The resistor must be in series — between pin 9 and the LED's long leg — not just stuck somewhere in the breadboard. See reference card R1.<br>
+  3. <strong>Check that Upload actually worked.</strong> Look for the green "Done uploading" message at the bottom of the IDE. If you see red error text instead, the upload did not happen.<br>
+  4. <strong>If still stuck, call the teacher.</strong> This is the first wiring + upload milestone and it is normal to need help.
+</div>
+
+<footer>T1 • M4 of 8 • Project 1 Light Signals • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

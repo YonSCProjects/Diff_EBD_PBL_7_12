@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 1 Milestone 3: Wire your first external LED</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge">Tier 1 • Milestone 3 of 8</div>
+  <h1>Wire your first external LED</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+You are going to wire an LED on the breadboard for the first time. This is hardware only — no sketch upload in this milestone. The sketch comes next, at Milestone 4.
+</div>
+
+<h2>What to do</h2>
+
+<ul class="checklist">
+  <li>Pick one LED from your parts tray. Any colour is fine.</li>
+  <li>Look at the LED's two legs. The <strong>long leg is positive (+)</strong> and the <strong>short leg is negative (−)</strong>. Remember which is which.</li>
+  <li>Pick a 220 Ω resistor from the parts tray. The colour-code bands are <strong>red · red · brown</strong>.</li>
+  <li>Plant the LED across two rows of the breadboard so the legs land in different rows (not the same row — that would short them together).</li>
+  <li>Connect the LED's long leg (+) to the Arduino's <strong>digital pin 9</strong>, going through the 220 Ω resistor. The resistor sits between the LED's long leg and pin 9.</li>
+  <li>Connect the LED's short leg (−) to the Arduino's <strong>GND</strong> pin using a jumper wire.</li>
+</ul>
+
+<h2>Wiring diagram</h2>
+
+<pre class="wiring-block">Arduino pin 9  ───[220 Ω]───┬─── LED long leg
+                           │
+                           ▼
+                      LED short leg ─── Arduino GND</pre>
+
+<div class="image-slot">
+  <div class="image-slot-header">Image slot — real breadboard photo or Fritzing diagram goes here</div>
+  <p>See Reference Card <strong>R1 Wiring Reference</strong> for the full-sized diagram with all four wiring states on one card.</p>
+</div>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  The LED is in your breadboard with the long leg going through the resistor to pin 9, and the short leg going to GND. <strong>The LED is not lit yet</strong> — you have not uploaded a sketch that turns it on. That is Milestone 4. Right now you are just checking the wiring is correct.
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>The LED is planted in the breadboard with its two legs in different rows</li>
+    <li>The long leg connects to pin 9 through a 220 Ω resistor</li>
+    <li>The short leg connects to GND</li>
+    <li>The teacher (or you, checking against reference card R1) has confirmed the wiring is correct</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong>Stuck?</strong>
+  Check reference card R1 (Wiring Reference) first — it shows exactly how the LED should look in the breadboard. If you are still unsure which leg is long or which hole connects to pin 9, call the teacher. This is the first wiring milestone and the teacher will help you.
+</div>
+
+<footer>T1 • M3 of 8 • Project 1 Light Signals • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

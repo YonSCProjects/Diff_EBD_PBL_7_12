@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 2 Milestone 4: Add the button, pick its behaviour</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge">Tier 2 • Milestone 4 of 5</div>
+  <h1>Add the button, pick its behaviour</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+In this milestone you add a push-button to your breadboard and decide what the button does. There are three options. Pick the one that fits the pattern you are building. Then use Claude Code to change your sketch so the button actually does it.
+</div>
+
+<h2>Step 1 — Wire the button</h2>
+
+<p>Same wiring as Tier 1 Milestone 7: button straddles the centre gap, pin A to 5 V, pin B to Arduino pin 2, and a 10 kΩ pull-down resistor from pin 2 to GND. See reference card R1 Wiring 3 for the full diagram.</p>
+
+<div class="warning">
+  <strong>Pull-down reminder</strong>
+  The 10 kΩ resistor goes between pin 2 and GND. Not between 5 V and GND. Getting this wrong causes the Arduino to reset. Check the reference card R1 if you are unsure.
+</div>
+
+<h2>Step 2 — Pick ONE button behaviour</h2>
+
+<div class="choice-point">
+  <strong>Behaviour A — Toggle</strong>
+  <div class="option">
+    Pressing the button once starts the pattern. Pressing it again stops the pattern. Press once more: starts again.
+  </div>
+
+  <strong>Behaviour B — Cycle</strong>
+  <div class="option">
+    Pressing the button cycles through different patterns. Press once for alternating, press again for chasing, press again for breathing, press again to go back to alternating. (You will need all three LEDs wired for this one.)
+  </div>
+
+  <strong>Behaviour C — Speed control</strong>
+  <div class="option">
+    Holding the button down makes the pattern run faster. Releasing the button brings it back to normal speed.
+  </div>
+</div>
+
+<p>Write your choice here: <span style="border-bottom: 1pt solid #000; display: inline-block; min-width: 60pt;">&nbsp;</span></p>
+
+<h2>Step 3 — Use Claude Code Level 2 to make the button do your chosen behaviour</h2>
+
+<p>Same (a)(b)(c) discipline as Milestone 3. Describe the behaviour you want first. Then ask Claude Code to help you modify the sketch.</p>
+
+<div class="prompt-template">(a) What I want to happen:
+[describe your chosen behaviour — A, B, or C — in your own words]
+
+(b) What is currently happening:
+[describe what your sketch does right now, before the button works]
+
+(c) What I have tried:
+[what you have already looked at or changed]</div>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  The button changes your pattern in the way you picked. Behaviour A: pressing starts and stops. Behaviour B: pressing cycles through patterns. Behaviour C: pressing makes it faster. You can show the behaviour to the teacher and say "this is what I built."
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>The button is wired with the 10 kΩ pull-down in the correct position</li>
+    <li>You chose a button behaviour (A, B, or C)</li>
+    <li>Your sketch has been modified via Claude Code Level 2 to do the chosen behaviour</li>
+    <li>The button actually does what you chose</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong>Stuck?</strong>
+  Button does nothing? First check the pull-down position on R1. If wiring is correct but the button still does not work, the sketch probably needs <code>pinMode(BUTTON, INPUT);</code> in setup() and a <code>digitalRead()</code> in the loop. Ask Claude Code to check your code for that. If Claude's answer does not help, call the teacher.
+</div>
+
+<footer>T2 • M4 of 5 • Project 1 Light Signals • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

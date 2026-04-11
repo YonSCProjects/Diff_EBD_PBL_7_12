@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 1 Milestone 2: Upload your first sketch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge">Tier 1 • Milestone 2 of 8</div>
+  <h1>Upload your first sketch</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+The Arduino came with a sketch already on it — that is why the "L" LED was blinking in Milestone 1. In this milestone you will upload a different sketch that makes the "L" LED blink faster. This is your first time clicking the Upload button. It is short — about 5 minutes.
+</div>
+
+<h2>What to do</h2>
+
+<ul class="checklist">
+  <li>Open the file <code>01_blink_L_fast.ino</code> in the Arduino IDE. The file is in your Project 1 folder under <code>ino_files/01_blink_L_fast/</code>.</li>
+  <li>Look at the Arduino IDE toolbar. Find the right-arrow button (→). This is the Upload button.</li>
+  <li>Click Upload. Watch the progress bar at the bottom of the IDE.</li>
+  <li>When upload finishes, you should see the green message "Done uploading" at the bottom.</li>
+  <li>Look at the "L" LED on the Arduino board. It should now be blinking FASTER than before — about three times a second.</li>
+</ul>
+
+<h2>The sketch you are uploading</h2>
+
+<p>This is the full code in <code>01_blink_L_fast.ino</code>. You do not need to understand every line — just read it if you want to.</p>
+
+<pre class="code-block"><span class="filename">01_blink_L_fast.ino</span>// Blinks the built-in "L" LED faster than the factory sketch.
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(150);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(150);
+}</pre>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  The green "L" LED on the Arduino board is now blinking about three times per second — noticeably faster than the factory blink from Milestone 1. The Arduino IDE shows "Done uploading" in green at the bottom. Your first Upload click worked.
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>The "L" LED is blinking faster than before</li>
+    <li>The Arduino IDE shows "Done uploading" in green</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong>Stuck?</strong>
+  If Upload fails: check that Tools → Board shows "Arduino Uno" and Tools → Port shows a COM port. If the IDE says "Arduino not found," unplug the USB cable, wait three seconds, plug it back in. If still stuck after that, call the teacher. See reference card R2 for the full stuck protocol.
+</div>
+
+<footer>T1 • M2 of 8 • Project 1 Light Signals • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

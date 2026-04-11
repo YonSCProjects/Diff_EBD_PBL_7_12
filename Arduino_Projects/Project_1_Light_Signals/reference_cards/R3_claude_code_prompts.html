@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reference Card R3 — Claude Code Prompt Templates</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .prompt-template {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 12pt 14pt;
+    margin: 10pt 0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    white-space: pre-wrap;
+    line-height: 1.45;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-weight: bold;
+    font-size: 14pt;
+  }
+  .rule {
+    background: #fef0f0;
+    border-left: 5pt solid #b00;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <h1>R3 — Claude Code Prompt Templates</h1>
+  <div class="subtitle">Project 1 • How to talk to Claude Code</div>
+</div>
+
+<p>Claude Code is your coding collaborator. It runs in a window pointed at your Project 1 folder, so it can see the sketches you are working on. There are two ways to use it.</p>
+
+<h2>Channel A — When you want help with code (Level 2)</h2>
+
+<p>Before you ask Claude Code anything about your code, <strong>fill in these three things on your task card</strong>:</p>
+
+<div class="rule">
+<strong>(a)</strong> What I want to happen: <em>[describe the behaviour you want]</em><br>
+<strong>(b)</strong> What is currently happening: <em>[describe what the sketch does now]</em><br>
+<strong>(c)</strong> What I have tried: <em>[what you have already looked at or considered]</em>
+</div>
+
+<p>Then use this prompt template:</p>
+
+<div class="prompt-template">I am working on [sketch file name].
+
+(a) What I want to happen:
+[your answer]
+
+(b) What is currently happening:
+[your answer]
+
+(c) What I have tried:
+[your answer]
+
+Can you help me figure out what to change?</div>
+
+<div class="key">
+The (a)(b)(c) is not optional. It helps you think about the problem before Claude Code answers, and it helps Claude Code give you a useful answer. Skipping it usually gets a worse answer.
+</div>
+
+<p>After Claude Code answers, you make the change in the Arduino IDE, upload it, and test. Then answer this question on your task card:</p>
+
+<div class="rule">
+<strong>Comprehension check:</strong> In one sentence, what did Claude Code change?
+</div>
+
+<h2>Channel B — When you want the task card read to you</h2>
+
+<p>Channel B walks you through your current task card conversationally. Use it when the printed card feels hard to read, or when you prefer hearing instructions one step at a time. Use this prompt:</p>
+
+<div class="prompt-template">I'm on Project 1, Tier [1 or 2], Milestone [number].
+Walk me through it.</div>
+
+<p>Claude Code will read the card's content in small pieces and ask you to confirm each step before moving on. You still check off the printed card as you go — Channel B does not replace the card, it just helps you work through it.</p>
+
+<div class="key">
+Channel B is <strong>not recommended for Milestone 1</strong> of any project, because Milestone 1 is a together-milestone where the teacher is next to you. Hearing Claude Code speak while the teacher is also speaking is confusing.
+</div>
+
+<h2>Channel A Level 3 — Free dialogue (Tier 3 only)</h2>
+
+<p>If you are working at Tier 3 on an open-design project, you can talk to Claude Code freely about what you are trying to build. The same (a)(b)(c) discipline still applies — describe what you want before you ask.</p>
+
+<footer>R3 Claude Code Prompts • Project 1 • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

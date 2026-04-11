@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 1 Milestone 7: Wire the push-button</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge">Tier 1 • Milestone 7 of 8</div>
+  <h1>Wire the push-button</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+This is the hardest wiring step of Project 1. You are adding a push-button and a special kind of resistor called a pull-down. The pull-down is important — if you wire it in the wrong place the Arduino will reset or the button will not work. Read carefully. Call the teacher if you are unsure. This is hardware only — the sketch that uses the button comes at Milestone 8.
+</div>
+
+<h2>What to do</h2>
+
+<ul class="checklist">
+  <li>Pick a tactile push-button from your parts tray. It has four pins.</li>
+  <li>Plant the button on the breadboard <strong>across the centre gap</strong> so its four pins land in four different rows (not all in the same row). If you lay it flat, you are doing it wrong — rotate it 90 degrees.</li>
+  <li>Pick a <strong>10 kΩ resistor</strong> from the parts tray. The colour-code bands are <strong>brown · black · orange</strong>. (Different from the 220 Ω LED resistor!)</li>
+  <li>Connect one side of the button (pin A) to the Arduino's <strong>5 V</strong> pin.</li>
+  <li>Connect the other side of the button (pin B) to the Arduino's <strong>digital pin 2</strong>.</li>
+  <li>From pin B, also connect through the 10 kΩ resistor to <strong>GND</strong>. This is the pull-down resistor — it holds pin 2 at 0 V when the button is not pressed.</li>
+</ul>
+
+<h2>Wiring diagram</h2>
+
+<pre class="wiring-block">Arduino 5 V ──────────────┬─── Button pin A
+                          │
+                          ▼
+                      Button pin B ────┬─── Arduino pin 2
+                                       │
+                                       └─[10 kΩ]── Arduino GND</pre>
+
+<div class="image-slot">
+  <div class="image-slot-header">Image slot — button with pull-down photo or Fritzing diagram</div>
+  <p>See Reference Card <strong>R1 Wiring Reference</strong>, Wiring 3, for the full diagram with the pull-down resistor clearly shown.</p>
+</div>
+
+<div class="warning">
+  <strong>Important — the most common mistake</strong>
+  The 10 kΩ pull-down resistor must go between <strong>pin 2 and GND</strong>. <strong>Not</strong> between 5 V and GND. If you put it between 5 V and GND, pressing the button creates a short circuit and the Arduino will reset itself. This is the single most common wiring mistake in Project 1. Before you plug anything back in, trace the resistor with your finger: does it go from pin 2 to GND? If yes, you are safe. If it goes from 5 V to GND, fix it before calling the teacher.
+</div>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  The button is planted across the centre gap of the breadboard. One side of it goes to 5 V. The other side goes to pin 2, and also through the 10 kΩ resistor to GND. The two LEDs from before are still wired. <strong>Nothing new happens yet</strong> when you press the button — the current sketch (from Milestone 6) does not know about the button. Milestone 8 changes that.
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>Button is on the breadboard, straddling the centre gap</li>
+    <li>Button pin A connects to 5 V</li>
+    <li>Button pin B connects to pin 2</li>
+    <li>10 kΩ resistor sits between pin 2 and GND (the pull-down)</li>
+    <li>The two LEDs from Milestones 3 and 5 are still wired and still alternating</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong>Stuck?</strong>
+  This is the hardest wiring step of Project 1. The teacher expects to help at this milestone — call them. Before calling, check reference card R1 Wiring 3 for the pull-down position. If the Arduino keeps resetting or turning off, you almost certainly have the pull-down on the wrong side — unplug the USB, fix the resistor, plug back in.
+</div>
+
+<footer>T1 • M7 of 8 • Project 1 Light Signals • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

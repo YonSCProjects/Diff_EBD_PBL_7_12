@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 — Teacher Troubleshooting Crib Sheet</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.45;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .sheet {
+    max-width: 210mm;
+    padding: 6mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 12pt;
+  }
+  h1 {
+    font-size: 18pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 10pt;
+    color: #555;
+    margin-top: 2pt;
+  }
+  .fault {
+    margin: 12pt 0;
+    padding: 10pt 12pt;
+    border-left: 4pt solid #000;
+    background: #f6f6f6;
+    page-break-inside: avoid;
+  }
+  .fault-number {
+    font-size: 14pt;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 20pt;
+    color: #b00;
+  }
+  .symptom {
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  .cause {
+    margin: 4pt 0;
+  }
+  .fix {
+    margin: 4pt 0;
+    color: #060;
+  }
+  .citation {
+    font-size: 9pt;
+    color: #555;
+    font-style: italic;
+    margin-top: 4pt;
+  }
+  .intro {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    font-size: 10pt;
+  }
+  footer {
+    margin-top: 16pt;
+    padding-top: 6pt;
+    border-top: 1pt dashed #999;
+    font-size: 9pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<div class="header">
+  <h1>Teacher Troubleshooting Crib Sheet</h1>
+  <div class="subtitle">Project 1 • Light Signals • Internal teacher reference</div>
+</div>
+
+<div class="intro">
+<strong>Eight most common failure modes in Project 1, in rough frequency order, with the fix.</strong> Use this as a quick reference during rotation when a student is stuck and the R2 stuck protocol did not resolve it. The symptom is what the student reports; the cause is what is usually actually wrong; the fix is the first thing to try.
+</div>
+
+<div class="fault">
+<p><span class="fault-number">1.</span> <span class="symptom">LED does not light at Milestone 4 (or later milestones with a new LED).</span></p>
+<p class="cause"><strong>Usual cause:</strong> LED wired backwards. The long leg must go to the resistor and then to pin 9 (or pin 10 or pin 11); the short leg goes to GND. A student wiring the LED the wrong way round is the single most common Milestone 4 failure.</p>
+<p class="fix"><strong>Fix:</strong> flip the LED. If that does not fix it, check that the 220 Ω resistor is actually in series with the LED (between the pin and the LED's long leg), not just stuck uselessly in the breadboard.</p>
+<p class="citation">[Verification: Principle 3 (physical-first) + R1 wiring reference card. Berrezueta-Guzmán et al. (2021) non-human-mediator framing — the reference card catches ~60% of these before the teacher needs to rotate.]</p>
+</div>
+
+<div class="fault">
+<p><span class="fault-number">2.</span> <span class="symptom">Arduino IDE shows "Arduino not found" or "no COM port" on Upload.</span></p>
+<p class="cause"><strong>Usual cause:</strong> wrong COM port selected in Tools → Port, or the USB cable is a "charge-only" cable with no data lines.</p>
+<p class="fix"><strong>Fix:</strong> scroll through the available ports in Tools → Port and pick the one that appeared when the Arduino was plugged in. If no new port appears when the Arduino is plugged in, swap the USB cable for a known-good data cable from the parts library.</p>
+</div>
+
+<div class="fault">
+<p><span class="fault-number">3.</span> <span class="symptom">Upload says "avrdude: stk500_getsync() attempt X of Y" error.</span></p>
+<p class="cause"><strong>Usual cause:</strong> another program has the COM port locked — usually a Serial Monitor window or another Arduino IDE instance left open from a previous session.</p>
+<p class="fix"><strong>Fix:</strong> close the Serial Monitor, close any extra IDE windows, try Upload again. If it still fails, unplug the USB cable, wait three seconds, plug it back in, retry.</p>
+</div>
+
+<div class="fault">
+<p><span class="fault-number">4.</span> <span class="symptom">Button does not do anything at Milestone 8.</span></p>
+<p class="cause"><strong>Usual cause:</strong> 10 kΩ pull-down resistor on the wrong side of the button. The resistor must be between <strong>pin 2 and GND</strong>, not between 5 V and GND. A student wiring the pull-down between 5 V and GND creates a persistent short circuit whenever the button is pressed.</p>
+<p class="fix"><strong>Fix:</strong> move the 10 kΩ resistor so it sits between pin 2 and GND. See R1 wiring reference card, Wiring 3 diagram.</p>
+<p class="citation">[Verification: Principle 3 — physical-first. The wiring reference card (R1) carries the correct layout, and the teacher-rotation checkpoint at Milestone 7 is specifically designed to catch this before the student gets discouraged.]</p>
+</div>
+
+<div class="fault">
+<p><span class="fault-number">5.</span> <span class="symptom">Both LEDs stay on all the time after Milestone 6 (alternating sketch).</span></p>
+<p class="cause"><strong>Usual cause:</strong> one of the LEDs is wired to 5 V instead of to a digital pin. Both LEDs' long legs should go through their own 220 Ω resistors to pin 9 and pin 10 — not to the 5 V rail.</p>
+<p class="fix"><strong>Fix:</strong> re-check wiring against R1 Wiring 2 diagram. Move any jumper wire that is going from an LED to 5 V so that it goes to the correct digital pin instead.</p>
+</div>
+
+<div class="fault">
+<p><span class="fault-number">6.</span> <span class="symptom">Arduino resets or turns off repeatedly.</span></p>
+<p class="cause"><strong>Usual cause:</strong> short circuit somewhere in the wiring — usually a jumper wire accidentally bridging 5 V to GND, or (at Milestone 7+) a button wired without the pull-down resistor so that pressing the button shorts 5 V to GND.</p>
+<p class="fix"><strong>Fix:</strong> disconnect the USB cable. Look for any wire going directly between 5 V and GND (both sides of the breadboard's power rails). Remove the short. Re-check the pull-down resistor position if the button is wired. Reconnect.</p>
+</div>
+
+<div class="fault">
+<p><span class="fault-number">7.</span> <span class="symptom">Student says "my sketch is the same as the reference but it does not work."</span></p>
+<p class="cause"><strong>Usual cause:</strong> the student opened the sketch in the IDE but did not click Upload, or Upload silently failed with a compile error the student did not notice.</p>
+<p class="fix"><strong>Fix:</strong> click Upload and watch for the green "Done uploading" message at the bottom of the IDE. If there is no green message, read the red error text. If the error is "avrdude: stk500_getsync()" see item 3.</p>
+</div>
+
+<div class="fault">
+<p><span class="fault-number">8.</span> <span class="symptom">Student's LED lit up brightly for a moment then stopped working.</span></p>
+<p class="cause"><strong>Usual cause:</strong> LED wired without a current-limiting resistor, drew too much current, burned out. This is the most common way to destroy an LED in Project 1.</p>
+<p class="fix"><strong>Fix:</strong> replace the LED from the parts library. Add the 220 Ω resistor. Re-wire following R1 Wiring 1. Use this as a teaching moment — "the resistor is not optional, this is why."</p>
+<p class="citation">[Verification: Principle 3 + R4 safety reminder card — the safety card addresses this directly as Rule 2.]</p>
+</div>
+
+<div class="fault">
+<p><span class="fault-number">9 (digital infrastructure).</span> <span class="symptom">Claude Code does not see the student's sketch files, or opens pointed at the wrong folder.</span></p>
+<p class="cause"><strong>Usual cause:</strong> Claude Code was left open from a previous student's session with their working directory, and the new student is seeing the previous student's folder. Or: Google Drive for Desktop is not fully synced and the student's folder has not yet appeared locally.</p>
+<p class="fix"><strong>Fix:</strong> close Claude Code completely, verify Drive for Desktop is running and synced (open File Explorer and navigate to the student's folder manually — if it appears, Drive is synced), then relaunch Claude Code pointed at <span style="font-family: 'Consolas', monospace; font-size: 10pt; background: #f4f4f4; padding: 1pt 3pt;">G:\My Drive\Arduino_Projects\&lt;nickname&gt;\Project_1_Light_Signals\</span>.</p>
+<p class="citation">[Verification: Arduino_PBL_Program.md §9.5 item 4 — three-way digital-infrastructure dependency. This is an expected failure mode; note any occurrence in the Weekly Data Collector (§7.3 Instrument 2).]</p>
+</div>
+
+<footer>Teacher Troubleshooting Crib Sheet • Project 1 Light Signals • Internal • Not student-facing</footer>
+
+</div>
+</body>
+</html>

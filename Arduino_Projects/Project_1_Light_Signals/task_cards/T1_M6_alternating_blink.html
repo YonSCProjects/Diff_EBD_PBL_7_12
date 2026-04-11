@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 1 Milestone 6: Upload the alternating-blink sketch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge">Tier 1 • Milestone 6 of 8</div>
+  <h1>Upload the alternating-blink sketch</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+Now the Arduino controls two things at once. You upload a new sketch that blinks both LEDs — but never at the same time. When one is on, the other is off. This is your first time seeing the Arduino do more than one thing in the same sketch.
+</div>
+
+<h2>What to do</h2>
+
+<ul class="checklist">
+  <li>Open the file <code>03_blink_alternating.ino</code> in the Arduino IDE. It is in your Project 1 folder under <code>ino_files/03_blink_alternating/</code>.</li>
+  <li>Click the Upload button.</li>
+  <li>Wait for "Done uploading" in green.</li>
+  <li>Watch your two LEDs. They should alternate — when LED 1 is on, LED 2 is off, then swap.</li>
+</ul>
+
+<h2>The sketch you are uploading</h2>
+
+<pre class="code-block"><span class="filename">03_blink_alternating.ino</span>// Blinks two external LEDs in alternation.
+// When one is on, the other is off.
+
+const int LED_1 = 9;
+const int LED_2 = 10;
+
+void setup() {
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_1, HIGH);
+  digitalWrite(LED_2, LOW);
+  delay(500);
+
+  digitalWrite(LED_1, LOW);
+  digitalWrite(LED_2, HIGH);
+  delay(500);
+}</pre>
+
+<p>Notice something: there are two <code>digitalWrite</code> calls in each half of the loop. One turns LED 1 on while the other turns LED 2 off. Then a delay. Then the opposite. That is how "two things at once" works inside a single Arduino loop.</p>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  Your two LEDs alternate — LED 1 on while LED 2 is off, then LED 2 on while LED 1 is off, repeating about once per second. If both LEDs stay on all the time, or both stay off, or only one works, see the stuck section below.
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>Both LEDs are blinking in alternation</li>
+    <li>"Done uploading" showed in green in the IDE</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong>Stuck?</strong>
+  <strong>Both LEDs stay on all the time:</strong> one of them is probably wired to 5 V instead of to a digital pin. Check reference card R1 Wiring 2. <strong>Only one LED works:</strong> the other is wired backwards (flip it) or its resistor is not connected. <strong>Neither LED works:</strong> Upload may have failed — look for red error text in the IDE. Call the teacher if you cannot figure it out from R1.
+</div>
+
+<footer>T1 • M6 of 8 • Project 1 Light Signals • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

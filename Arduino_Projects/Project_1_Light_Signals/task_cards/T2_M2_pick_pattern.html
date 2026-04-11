@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 2 Milestone 2: Pick your pattern</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge">Tier 2 • Milestone 2 of 5</div>
+  <h1>Pick your pattern</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+This is your first real design choice in Project 1. You get to pick which light pattern you want to build: alternating, chasing, or breathing. Each one looks and feels different. The choice is yours — there is no "correct" answer. Pick the one you like, and then wire the LEDs you need for it.
+</div>
+
+<h2>Pick ONE of these three patterns</h2>
+
+<div class="choice-point">
+  <strong>Option A — Alternating pattern (2 LEDs)</strong>
+  <div class="option">
+    <strong>What it looks like:</strong> two LEDs blinking in opposition — when one is on, the other is off.<br>
+    <strong>What you wire:</strong> same as Tier 1 Milestone 5 — add a second LED on pin 10 with its own 220 Ω resistor.<br>
+    <strong>Starter sketch:</strong> <code>ino_files/T2_alternating_starter/T2_alternating_starter.ino</code>
+  </div>
+
+  <strong>Option B — Chasing pattern (3 LEDs)</strong>
+  <div class="option">
+    <strong>What it looks like:</strong> three LEDs lighting up one after another, like a chase light on a sign.<br>
+    <strong>What you wire:</strong> add a second LED on pin 10 AND a third LED on pin 11, each with its own 220 Ω resistor.<br>
+    <strong>Starter sketch:</strong> <code>ino_files/T2_chasing_starter/T2_chasing_starter.ino</code>
+  </div>
+
+  <strong>Option C — Breathing pattern (1 LED, PWM fade)</strong>
+  <div class="option">
+    <strong>What it looks like:</strong> one LED fades smoothly in and out — it gets brighter, then dimmer, then brighter again, forever.<br>
+    <strong>What you wire:</strong> nothing new. Use only the first LED from Milestone 1, on pin 9.<br>
+    <strong>Starter sketch:</strong> <code>ino_files/T2_breathing_starter/T2_breathing_starter.ino</code>
+  </div>
+</div>
+
+<h2>What to do</h2>
+
+<ul class="checklist">
+  <li>Pick A, B, or C. Write your choice here: <span style="border-bottom: 1pt solid #000; display: inline-block; min-width: 60pt;">&nbsp;</span></li>
+  <li>Wire any additional LEDs your chosen pattern needs. (Option A: one more LED on pin 10. Option B: two more LEDs on pins 10 and 11. Option C: no new wiring.)</li>
+  <li>Open the starter sketch for your choice in the Arduino IDE.</li>
+  <li>Click Upload and watch.</li>
+</ul>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  The pattern you chose is running on your breadboard. For Option A: two LEDs alternating. For Option B: three LEDs chasing. For Option C: one LED breathing in and out. Take a few seconds to watch it — in the next milestone you will modify it to be faster, slower, or different.
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>You have written your choice (A, B, or C) on this card</li>
+    <li>The hardware is wired for your chosen pattern</li>
+    <li>The starter sketch is uploaded and running</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong>Stuck?</strong>
+  Pattern not running? Check the wiring for your chosen pattern against reference card R1. Option B (chasing) needs THREE LEDs wired, not two. Option C (breathing) uses only the first LED but the sketch uses <code>analogWrite</code> which is different from <code>digitalWrite</code> — if the LED just stays at full brightness, the sketch may have failed to upload. Call the teacher if you need help.
+</div>
+
+<footer>T2 • M2 of 5 • Project 1 Light Signals • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

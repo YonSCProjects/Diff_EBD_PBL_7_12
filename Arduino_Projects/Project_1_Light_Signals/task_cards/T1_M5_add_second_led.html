@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 1 Milestone 5: Add a second LED</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge">Tier 1 • Milestone 5 of 8</div>
+  <h1>Add a second LED</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+You are going to add a second LED next to your first one. Same wiring pattern as Milestone 3, just one row over on the breadboard. No sketch upload this milestone — the sketch that uses both LEDs comes next, at Milestone 6.
+</div>
+
+<h2>What to do</h2>
+
+<ul class="checklist">
+  <li>Pick a second LED from your parts tray. <strong>Choose a different colour</strong> from your first LED (if the first was red, pick green or yellow — any combination is fine, as long as you can tell them apart).</li>
+  <li>Pick another 220 Ω resistor (red · red · brown colour bands).</li>
+  <li>Plant the second LED in the breadboard, one row away from the first LED. Legs in different rows, like Milestone 3.</li>
+  <li>Connect the long leg (+) of the second LED to the Arduino's <strong>digital pin 10</strong>, through the 220 Ω resistor.</li>
+  <li>Connect the short leg (−) of the second LED to the Arduino's GND using a jumper wire.</li>
+</ul>
+
+<h2>Wiring diagram</h2>
+
+<pre class="wiring-block">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND</pre>
+
+<div class="image-slot">
+  <div class="image-slot-header">Image slot — two-LED breadboard photo or Fritzing diagram goes here</div>
+  <p>See Reference Card <strong>R1 Wiring Reference</strong>, Wiring 2, for the full diagram.</p>
+</div>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  Your breadboard now has two LEDs, side by side, each with its own resistor. The <strong>first LED is still blinking</strong> from the sketch you uploaded in Milestone 4 — that sketch is still running on the Arduino. The second LED is not lit yet because the current sketch only knows about pin 9. Milestone 6 will upload a new sketch that uses both pins.
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>Two LEDs are planted in the breadboard, one row apart</li>
+    <li>The second LED's long leg goes through a 220 Ω resistor to pin 10</li>
+    <li>The second LED's short leg goes to GND</li>
+    <li>You can clearly tell the two LEDs apart by their colour</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong>Stuck?</strong>
+  The wiring is the same pattern as Milestone 3 — just one row over. If you got Milestone 3's wiring right, this should feel similar. Check reference card R1 (Wiring 2) for the full diagram. If the first LED stopped blinking while you were wiring the second one, you may have accidentally pulled its jumper wire loose — re-check the first LED's wiring. Call the teacher if you need help.
+</div>
+
+<footer>T1 • M5 of 8 • Project 1 Light Signals • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reference Card R4 — Project 1 Safety Reminder</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .big-msg {
+    background: #e8f5e9;
+    border: 2pt solid #2e7d32;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 16pt;
+    text-align: center;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  .rule {
+    background: #fef0f0;
+    border-left: 5pt solid #b00;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <h1>R4 — Safety Reminder</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="big-msg">
+Project 1 is very safe. The Arduino runs on 5 volts, which is too low to hurt you. But you can still break things if you wire something wrong. Read these three rules and you will be fine.
+</div>
+
+<h2>Rule 1 — Never connect 5 V directly to GND</h2>
+
+<div class="rule">
+<span class="dont">Do not</span> put a jumper wire straight from <strong>5 V</strong> to <strong>GND</strong>. This is called a <em>short circuit</em>. It will make the Arduino reset itself or turn off to protect itself. No one gets hurt, but the circuit stops working until you remove the bad wire.
+</div>
+
+<p>The 5 V pin powers the LEDs, sensors, and buttons you connect. The GND pin is the return path for the electricity. They should never touch each other directly.</p>
+
+<h2>Rule 2 — Every LED needs a resistor</h2>
+
+<div class="rule">
+<span class="dont">Do not</span> connect an LED directly to a 5 V pin with no resistor. The LED will light up very brightly for a second or two, get hot, and burn out. You will hear the teacher say "that's why we use a resistor" and then you will need a new LED.
+</div>
+
+<p>Every LED in Project 1 has a <strong>220 Ω resistor</strong> (colour bands: red, red, brown) between its long leg and the Arduino pin. If you see an LED in your circuit without a resistor, fix it before you upload anything.</p>
+
+<h2>Rule 3 — USB cable has one right way</h2>
+
+<div class="rule">
+The USB cable's square end fits into the Arduino only one way. If it does not go in, do not push harder — you will break the connector. Flip the plug over and try again.
+</div>
+
+<h2>If something stops working</h2>
+
+<p><strong>Stop pressing buttons.</strong> Look at your wiring. If you cannot see what is wrong, call the teacher — this is what the stuck protocol (R2) is for. You will not be blamed for wiring something wrong. Wiring things wrong is part of learning Arduino.</p>
+
+<footer>R4 Safety Reminder • Project 1 • A4 portrait • Laminate-ready</footer>
+
+</div>
+</body>
+</html>

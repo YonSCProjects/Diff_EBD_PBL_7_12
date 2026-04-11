@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 — Teacher Setup Checklist</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.45;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .sheet {
+    max-width: 210mm;
+    padding: 6mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 12pt;
+  }
+  h1 {
+    font-size: 18pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 10pt;
+    color: #555;
+    margin-top: 2pt;
+  }
+  h2 {
+    font-size: 13pt;
+    margin: 14pt 0 6pt 0;
+    padding: 3pt 8pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 4pt 0; }
+  ol.checklist {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: item;
+  }
+  ol.checklist li {
+    counter-increment: item;
+    padding: 6pt 0 6pt 36pt;
+    position: relative;
+    border-bottom: 1pt dashed #ccc;
+  }
+  ol.checklist li::before {
+    content: "☐ " counter(item) ".";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  .path-box {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 4pt 8pt;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    display: inline-block;
+  }
+  .citation {
+    font-size: 9pt;
+    color: #555;
+    font-style: italic;
+    margin-top: 3pt;
+  }
+  .note {
+    background: #fffbe0;
+    border-left: 3pt solid #d4a017;
+    padding: 6pt 10pt;
+    margin: 10pt 0;
+    font-size: 10pt;
+  }
+  footer {
+    margin-top: 16pt;
+    padding-top: 6pt;
+    border-top: 1pt dashed #999;
+    font-size: 9pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<div class="header">
+  <h1>Teacher Setup Checklist</h1>
+  <div class="subtitle">Project 1 • Light Signals • Pre-session checklist • Target time: ≤ 15 minutes</div>
+</div>
+
+<p>Complete this checklist before the first student arrives. Items marked [first cohort only] are one-time setup; items with no tag are per-session. <em>[Verification: Principle 9 — teacher sustainability as a first-class design constraint. Pre-session prep is intentionally bounded to ≤15 minutes per the sustainability target in Arduino_PBL_Program.md §7.2.]</em></p>
+
+<h2>Part 1 — Hardware setup (per station)</h2>
+
+<ol class="checklist">
+
+<li>
+<strong>Lay out each workstation</strong> with: Arduino Uno, USB-B cable plugged into the PC, breadboard, one LED + one 220 Ω resistor in a small parts tray, a set of ~15 jumper wires. <strong>Do not pre-wire anything.</strong> The student wires from scratch — that is the point of Milestones 3 onward.
+<div class="citation">[Verification: Principle 3 (physical-first, concrete-before-abstract) — Hwang & Taylor (2016) CRA sequence. The student's own hands on the wire is the intervention, not the finished circuit.]</div>
+</li>
+
+<li>
+<strong>Place the 5 reference cards at each station</strong>: R1 Wiring, R2 Stuck Protocol, R3 Claude Code Prompts, R4 Safety, R5 Sketch Index. Laminated, clipped or loose, within the student's immediate reach.
+<div class="citation">[Verification: Principle 2 (task-card-is-the-boss) — Rosen, Boyle, Cariss & Forchelli (2014) on external cognitive scaffolds. The reference cards are the student's first line of help, not the teacher.]</div>
+</li>
+
+<li>
+<strong>Place the backup-task bin at each station</strong>: a small tray of ~30 mixed resistors from the workshop parts library. The student uses this if the teacher is rotating to another student when they get stuck (see R2).
+<div class="citation">[Verification: Minahan & Rappaport (2012) — prevents panic/paralysis from unstructured wait time. The backup task is quiet, tactile, mildly educational, and previews Project 3's resistor threshold work.]</div>
+</li>
+
+</ol>
+
+<h2>Part 2 — Arduino IDE setup (per PC)</h2>
+
+<ol class="checklist">
+
+<li>
+<strong>Open the Arduino IDE on each PC.</strong> Confirm the board type (Tools → Board → Arduino Uno) and the correct COM port (Tools → Port → COMx). Do a test compile-and-upload of <span class="path-box">01_blink_L_fast.ino</span> to confirm the IDE is talking to the board. <strong>This is the highest-risk setup failure; check it before students arrive.</strong>
+</li>
+
+</ol>
+
+<h2>Part 3 — Shared Workshop Drive and Claude Code setup (per PC)</h2>
+
+<ol class="checklist">
+
+<li>
+<strong>Confirm Google Drive for Desktop is running</strong> and logged into the shared robotics-workshop Google account, with the account's My Drive mounted at <span class="path-box">G:\My Drive\</span>. If Drive for Desktop is not running, start it from the Windows Start menu and wait for the Drive to finish syncing before students arrive.
+</li>
+
+<li>
+<strong>Open File Explorer and navigate to</strong> <span class="path-box">G:\My Drive\Arduino_Projects\</span>. This folder holds one subfolder per student nickname for the whole robotics program. For each student in today's session:
+<ul>
+  <li>If the student has worked in the workshop before, their nickname subfolder already exists. Confirm it is visible.</li>
+  <li>If this is the student's first time ever in the workshop, their nickname subfolder does not exist yet and the student has not picked a nickname. Both of those happen at Milestone 1 in the together-ritual — you and the student pick a nickname together and create the folder together. <strong>Do NOT pre-create a folder with a guess at the nickname.</strong></li>
+</ul>
+<div class="citation">[Verification: Principle 5 (structured autonomy) + Principle 8 (teacher-student relationship as the multiplier) — Sciacca (2025) building-trusting-relationships sub-theme. The nickname and folder creation are the student's first Principle 5 moment, operationalised via a one-minute together-ritual.]</div>
+</li>
+
+<li>
+<strong>Do NOT pre-create the <span class="path-box">Project_1_Light_Signals</span> subfolder</strong> for any student. That folder is created in the together-ritual at Milestone 1. The student watches the folder come into existence. Creating it ahead of time removes the ritual.
+</li>
+
+<li>
+<strong>Open Claude Code on the workstation but do not launch it into a working directory yet.</strong> Claude Code is launched into the student's Project 1 folder during Milestone 1, after the folder is created together. A Claude Code session that was left open from a previous student with a different working directory should be closed and restarted fresh for the new student.
+</li>
+
+</ol>
+
+<h2>Part 4 — Per-student sketch preparation</h2>
+
+<ol class="checklist">
+
+<li>
+<strong>For students whose Project 1 folder already exists from a previous session:</strong> confirm the <span class="path-box">ino_files</span> subfolder is present inside their Project 1 folder with all seven sketch subfolders. If it is missing, copy the entire <span class="path-box">ino_files</span> directory from the repository's <span class="path-box">Arduino_Projects\Project_1_Light_Signals\ino_files\</span> into the student's Project 1 folder before the session. <strong>Session-flow decision: Option A — all sketches pre-copied at session start, not added per milestone.</strong> This reduces teacher rotation burden during the session.
+</li>
+
+<li>
+<strong>For students whose Project 1 folder does not yet exist:</strong> nothing to copy yet — the folder is created at Milestone 1. Immediately after Milestone 1 the teacher copies the <span class="path-box">ino_files</span> directory into the newly-created folder, while the student is plugging in the Arduino and looking at the factory-blink L LED (this is a 30-second copy operation that the teacher does during the student's natural hardware-looking pause).
+</li>
+
+</ol>
+
+<h2>Part 5 — Tracking and session-readiness</h2>
+
+<ol class="checklist">
+
+<li>
+<strong>Review the tracking sheet</strong> for the expected students today (the §5.8 sheet from the master document). Note any students whose last-session row had a red-card incident — those students need an intentional relational check-in during Arrival. <strong>Have your private nickname-to-real-name mapping sheet ready</strong> to record a new nickname if this is a first-session student.
+<div class="citation">[Verification: Principle 8 — teacher-student relationship as the multiplier. Pre-session awareness of each student's recent state shapes the Arrival phase.]</div>
+</li>
+
+<li>
+<strong>Confirm the cool-down corner</strong> is set up at the back of the workshop (§5.6 of the master document). Not Project 1-specific but always part of session setup.
+</li>
+
+</ol>
+
+<div class="note">
+<strong>Pre-session time target: ≤ 15 minutes.</strong> If this checklist takes longer than 15 minutes per session consistently (more than two weeks in a row), flag it in the Weekly Data Collector — it is a signal that the checklist needs simplification, not that you need to work harder.
+</div>
+
+<footer>Teacher Setup Checklist • Project 1 Light Signals • Internal • [Verification citations inline per Arduino_PBL_Program.md §4]</footer>
+
+</div>
+</body>
+</html>

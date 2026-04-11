@@ -33,20 +33,27 @@ All hardware is assumed to be in the Agourim workshop kit. This list is the stud
 | 1 | Tactile push-button (4-pin, breadboard-friendly) | Added at Milestone 7, not before. |
 | 1 | 10 kΩ pull-down resistor (for the button) | Colour-code: brown-black-orange. |
 | ~15 | Jumper wires (M-M assortment) | For breadboard wiring. |
-| 1 | Workshop PC (Windows 11) with Arduino IDE installed | Arduino IDE 2.x or later. See Teacher Setup Checklist. |
-| 1 | Claude Code access via the shared robotics-studio account | Opened in a browser tab alongside the Arduino IDE. |
+| 1 | Workshop PC (Windows 11) with Arduino IDE installed | Arduino IDE 2.x or later. Google Drive for Desktop installed and logged in to the shared robotics-workshop Google account, with the account's `My Drive` mounted at `G:\My Drive\`. See Teacher Setup Checklist. |
+| 1 | Per-student Project 1 folder on the shared Workshop Drive | Path: `G:\My Drive\Arduino_Projects\<student_nickname>\Project_1_Light_Signals\`, where `<student_nickname>` is a nickname the student chose at their first workshop session (see §5.1 and §5.5 of the master document on the nickname architecture). Created at Milestone 1 in a together-ritual between the student and the teacher (see Milestone 1 below). This folder is the student's persistent workspace for Project 1 — their pre-written sketches, their modifications, their photos, and any notes they write all live here across sessions and across the whole year. |
+| 1 | Claude Code launched pointed at the student's Project 1 folder | Invoked via the shared robotics-workshop Google account, with the student's Project 1 folder as the working directory. Claude Code can read and write the student's actual sketch files. See §5.5 of the master document for the dual-channel (pair programmer / scaffolded tutorial) operational detail. |
 
 **Cohort kit for 8 students:** 8× each of the above (per-student columns). Plus the parts library stock: spare LEDs, spare resistors, spare jumper wires, and the "sort the resistor pack" backup-task bin (see *Setup and Wait Protocol* below).
 
 ## Session structure
 
-Project 1 is designed to fit **two 60–90 minute sessions** for a Tier 1 student working at a steady pace, **one session** for a student who is fast or has prior Arduino experience, and **three sessions or more** for a student who needs extra time at any milestone. Nothing in the program pushes a student to finish on a particular schedule — the task cards and the teacher rotation adjust to the student, not the other way around (Principle 5, Principle 9 — see [Arduino_PBL_Program.md](../../Arduino_PBL_Program.md) §4).
+A "session" at Agourim School is **one 45-minute class period**, of which approximately **30 minutes are actual work time** (the other 15 minutes are arrival, mini-huddle, movement break, clean-up, and close-out circle — see [Arduino_PBL_Program.md](../../Arduino_PBL_Program.md) §5.2). The two work blocks are 15 minutes each, which is the exact duration Principle 4's hyper-chunked milestone structure assumes.
 
-**Session 1 typical arc** — Tier 1 Milestones 1 through 4 or 5. Arrival, check-in, hardware proofing, first upload, first external LED wiring, second LED wiring, second upload. A Tier 1 student at the end of Session 1 has a blinking external LED of their chosen colour on their own breadboard and has clicked Upload at least twice.
+Project 1 is designed to fit **two 45-minute sessions** for a Tier 1 student working at a steady pace, **three sessions** for a student who needs extra time on wiring or who has never used an Arduino before, and **one long or two short sessions** for a student who is fast or has prior Arduino experience. Nothing in the program pushes a student to finish on a particular schedule — the task cards and the teacher rotation adjust to the student, not the other way around (Principle 5, Principle 9 — see [Arduino_PBL_Program.md](../../Arduino_PBL_Program.md) §4).
 
-**Session 2 typical arc** — Tier 1 Milestones 6 through 8 (or Tier 2 if the student is ready). Alternating-blink sketch, push-button wiring, button-controlled sketch, close-out. A Tier 1 student at the end of Session 2 has a two-LED circuit with a button that switches which LED is on, and has taken a photo to show a family member at home.
+**Session 1 typical arc for a Tier 1 student** — Milestones 1 through 4. *Work Block 1:* plug in the Arduino, see the factory blink (M1); upload the first sketch (M2); start wiring the first LED (M3). *Work Block 2:* finish wiring the first LED if not done in Block 1; upload the second sketch; confirm the external LED blinks (M4). A Tier 1 student at the end of Session 1 has a blinking external LED of their chosen colour on their own breadboard and has clicked Upload at least twice.
 
-**Tier 2 and Tier 3 students** typically spend Session 1 on the Tier 2 start-up milestones and Session 2 on their chosen pattern or design. Tier 3 students may take a third session for the open-design phase.
+**Session 2 typical arc for a Tier 1 student** — Milestones 5 through 8. *Work Block 1:* wire the second LED (M5); upload the alternating-blink sketch (M6). *Work Block 2:* wire the push-button with the pull-down resistor (M7); upload the button-controlled sketch and celebrate (M8). A Tier 1 student at the end of Session 2 has a two-LED circuit with a button that switches which LED is on, and has taken a photo to show a family member at home (with their permission).
+
+**Session 3 (if needed) for a Tier 1 student** — catching up any milestone that did not complete in Sessions 1 or 2. Milestone 7 (the push-button with pull-down resistor) is the most common "needs a third session" milestone because the pull-down wiring is the single hardest piece of Project 1 and several students will not finish it in the second work block of Session 2.
+
+**Tier 2 students** typically spend Session 1 on Tier 2 Milestones 1–2 (start-up + pattern choice) and Session 2 on Tier 2 Milestones 3–5 (first Channel A Level 2 interaction, button behaviour choice, signature pattern show-off). Tier 2 students may finish in two 45-minute sessions if their Channel A Level 2 modification at Milestone 3 goes smoothly.
+
+**Tier 3 students** typically spend Session 1 on the planning phase (PLAN + BUILD), Session 2 on the coding and testing phases (CODE + TEST + iteration), and Session 3 on the show-off phase — though Tier 3 at Project 1 is rare (see the Tier 3 section below).
 
 ## Setup and Wait Protocol
 
@@ -57,7 +64,15 @@ Project 1 is designed to fit **two 60–90 minute sessions** for a Tier 1 studen
 1. **Print and laminate the task cards for today's expected tiers.** Tier 1 cards are the default; add Tier 2/3 cards for students likely to reach them. Cards are in `Arduino_Projects/Project_1_Light_Signals/task_cards/`.
 2. **Lay out each workstation** with: Arduino Uno, USB-B cable plugged into the PC, breadboard, one LED + one 220 Ω resistor in a small parts tray, and a set of ~15 jumper wires. *Do not pre-wire anything.* The student wires from scratch — that is the point of Milestones 3 onward.
 3. **Open the Arduino IDE on each PC** and confirm the board type (Tools → Board → Arduino Uno) and the correct COM port (Tools → Port → COMx). Do a test compile-and-upload of `01_blink_L.ino` to confirm the IDE is talking to the board. *This is the highest-risk setup failure; check it before students arrive.*
-4. **Open Claude Code in a browser tab** next to the Arduino IDE. Log in with the shared robotics-studio account. Leave Claude Code idle — students who use Channel A Level 1 will never touch it; students who use Channel B will invoke it themselves.
+4. **Verify the shared Workshop Drive state and prepare for each student's folder together-ritual.** For each student in today's session:
+   - Confirm **Google Drive for Desktop** is running and logged into the shared robotics-workshop Google account, with the account's `My Drive` mounted at `G:\My Drive\`. If Drive for Desktop is not running, start it from the Windows Start menu and wait for the Drive to finish syncing before students arrive.
+   - Open File Explorer and navigate to `G:\My Drive\Arduino_Projects\`. This is the top-level folder that holds every student's per-nickname subfolder for the whole robotics program.
+   - **If the student has already worked in the robotics workshop on any earlier project**, their nickname subfolder already exists at `G:\My Drive\Arduino_Projects\<their_nickname>\`. Confirm it is visible and accessible.
+   - **If this is the student's first time in the workshop ever**, the student's nickname subfolder does not exist yet and the student has not yet picked a nickname. Both of those happen at Milestone 1 in the together-ritual — you and the student pick a nickname together and create the folder together. **Do NOT pre-create a folder with a guess at the nickname.** The student chooses the nickname, not you.
+   - **Do NOT pre-create the `Project_1_Light_Signals` subfolder for any student.** That folder is created in the one-minute together-ritual between you and the student at Milestone 1, and the ritual is a deliberate ownership moment (§5.5 of the master document — the Sciacca 2025 building-trusting-relationships anchor). The student watches the folder come into existence. Creating it ahead of time removes the ritual.
+   - Open **Claude Code** on the workstation but **do not launch it into a working directory yet**. Claude Code is launched into the student's Project 1 folder during Milestone 1, after the folder is created together. A Claude Code session that was left open from a previous student's session with a different working directory should be closed and restarted fresh for the new student.
+   - Confirm the student's workstation has Arduino IDE open with the correct Board (Arduino Uno) and Port (COMx) selected — see the setup check in the next paragraph.
+   - Have your private nickname-to-real-name mapping sheet (the tracking sheet from §5.8 of the master document) ready to record a new nickname if this is the student's first workshop session. The mapping lives in your private notes, not on the shared Drive.
 5. **Place the laminated reference cards** at each station: wiring reference, stuck-protocol reference, Claude Code prompt templates (Tier 2+ only), safety reminder.
 6. **Place the backup-task bin** at each station: a small tray of ~30 mixed resistors from the workshop parts library. The backup task card reads: *"If you need to wait for the teacher and you've already tried the 'stuck' steps, sort these resistors by colour-code band value. Put them in order from smallest (1 Ω) to largest (1 MΩ)."* This is a quiet, tactile, mildly educational task that previews Project 3's sensor threshold work. Students who have already learned to read resistor colour codes from Project 3 or later can instead practice reading 4-band and 5-band codes side by side.
 7. **Confirm the cool-down corner** is set up at the back of the workshop (§5.6 of the master document). Not Project 1-specific but always part of session setup.
@@ -87,19 +102,68 @@ The older LEGO-rover project in this repo used a traffic-light-cup system (red /
 
 **Task card count.** Eight milestones, eight physical task cards. Each card has 3–5 checkboxes, a "done when" criterion, and the standard "stuck" protocol.
 
-### Milestone 1 — Plug it in
+### Milestone 1 — Set up your workspace and plug in the Arduino (together-milestone)
 
-**What the student does.** Connects the Arduino Uno to the workshop PC with the USB-B cable. Opens the Arduino IDE (the shortcut is on the desktop). Looks at the Arduino board itself and finds the small green "L" LED near pin 13 — the built-in LED that blinks from the factory sketch.
+**This is a together-milestone.** The teacher is at the student's side for this whole milestone. It is not a card the student works through alone. The teacher's presence for the full milestone is not optional — it is the student's first session of Project 1 and the point of the milestone is as much the relational moment as the technical setup. Budget approximately **5 minutes** for a student who has already worked in the workshop on an earlier project (they already have a nickname), and **up to 10 minutes** for a first-time-ever student who is picking their nickname at this moment.
 
-**Done when.** The "L" LED on the Arduino is blinking on/off about once per second. *Nothing else is required for this milestone — just confirming the Arduino works and the student can see the hardware responding.*
+**What the student does (with the teacher beside them):**
 
-**Why this milestone exists.** It is the student's very first positive experience with the hardware, and it is **guaranteed not to fail** because the factory sketch is already installed on every Arduino Uno from the manufacturer. The student has done nothing except plug in a cable, and something blinks. This is the Principle 4 visible-win pattern at its simplest.
+**Step 0 — Pick a nickname (only if this is your first time in the workshop ever).** If this is the student's first workshop session on any project, the teacher begins the ritual with the nickname question: *"What name do you want to use for your folder? It can be your real first name if you want, or any nickname you like — a character, an animal, a favourite word. It is going to be your folder's name for the whole year, so pick something you like seeing."* The student picks. The teacher writes the nickname next to the student's real name on the teacher's private tracking sheet (§5.8 of the master document). If the student already has a nickname from a previous project, skip Step 0 and go straight to Step 1.
 
-**Channel A Level 1 note.** No sketch upload at this milestone. The factory sketch is already there.
+1. **Open File Explorer** on the workshop PC (Windows key + E, or the folder icon on the taskbar).
+2. **Navigate to the shared Workshop Drive:** `G:\My Drive\Arduino_Projects\`. This folder holds one subfolder per student nickname, including the student's own subfolder if they have worked in the workshop before.
+3. **If this is the student's first workshop session ever:** together, create the student's own top-level nickname folder inside `Arduino_Projects`. The student types their chosen nickname as the folder name, or the teacher types it while the student watches, depending on the student's keyboard comfort. The nickname is now visible in the path as the student's own folder.
+4. **If the student already has a nickname folder from a previous project:** the student opens their existing nickname folder (`G:\My Drive\Arduino_Projects\<their_nickname>\`) and sees their previous project folders already inside.
+5. **Inside the nickname folder, create a new subfolder** called `Project_1_Light_Signals`. Same together-typing arrangement.
+6. **Open Claude Code** and launch it with the new `Project_1_Light_Signals` folder as its working directory. The teacher walks the student through the exact invocation path on the workstation.
+7. **Pick up the USB-B cable** and plug the Arduino Uno into the computer. Push the square end into the Arduino and the flat end into the PC's USB port.
+8. **Look at the Arduino board** itself and find the small green "L" LED near pin 13 — the built-in LED that blinks from the factory sketch.
+9. **Open the Arduino IDE** (the shortcut is on the desktop). The teacher confirms with the student that the Board menu shows "Arduino Uno" and the Port menu shows the correct COM port.
 
-**Channel B note.** A student using Channel B invokes it by saying to Claude: *"I'm on Project 1, Tier 1, Milestone 1. Walk me through it."* Claude's tutorial-channel scaffold (see `claude_code_tutorial_scaffold.md` when generated) walks the student through plugging in the USB cable, confirming the LED on the board is blinking, and checking "done when" on their card.
+**The teacher's recognition line.** At the moment the folder is created and Claude Code is opened pointed at it, the teacher says to the student, short and direct:
 
-**Research basis (teacher-facing).** *[Verification: Principle 4 — hyper-chunked milestones with visible wins. The LED blinking on the board is the first of many "something I did made the thing work" moments the super-target commits to (Arduino_PBL_Program.md §1, §4). Also [Verification: Cibrian et al. (2022) — tangible feedback for ADHD self-regulation, via the non-human-mediator framing the master document's §3.6 establishes.]]*
+> *"This is your folder, this is your project, Project 1 starts now."*
+
+The exact words matter less than the recognition — the student has just watched their own folder come into existence in their own nickname subfolder, and an adult who knows them is welcoming them into it. The line is one breath, not a speech. If the student responds, the teacher listens; if the student doesn't respond, the teacher moves on. This is the small relational moment Principle 8 of the master document commits to, operationalised in one sentence.
+
+**Done when.** The student has all five of these, together:
+- Their own top-level nickname folder at `G:\My Drive\Arduino_Projects\<their_nickname>\` (created now or pre-existing from a previous project).
+- Their own `Project_1_Light_Signals` subfolder inside it, newly created.
+- Claude Code open and pointed at the Project 1 folder.
+- The Arduino Uno plugged in via USB.
+- The "L" LED on the Arduino blinking on/off about once per second from the factory sketch.
+
+**Why this milestone exists.** It is the student's very first positive experience with the hardware **and** the student's literal moment of taking ownership of their Project 1 workspace. Three things happen at once: the student picks or confirms their nickname (identity + autonomy, Principle 5), the student sees their own folder come into existence on the Drive (ownership ritual, §5.5 of the master document), and the student sees the "L" LED blinking on the Arduino (first visible win, Principle 4). The blinking LED is **guaranteed not to fail** because the factory sketch is already installed on every Arduino Uno from the manufacturer — the student has done nothing except plug in a cable, and something blinks. And the folder creation is guaranteed not to fail because the teacher is beside the student the whole time, walking them through every click.
+
+**Why this is a together-milestone and not a solo task card.** The Sciacca (2025) building-trusting-relationships sub-theme (§3.5 of the master document) is operationalised here — the teacher's presence during the student's first moment of taking ownership of their workspace is the small relational moment Principle 8 commits to. A student who goes through Milestone 1 alone and sees a folder appear on a screen misses the ritual's full weight. A student who goes through Milestone 1 beside the teacher, picks their own nickname, watches their folder come into existence, and hears the teacher's recognition line, gets the moment the program is designed to deliver.
+
+**Student task card language (what actually appears on the printed card the student reads).**
+
+> *Milestone 1 — Set up your workspace and plug in the Arduino*
+>
+> *The teacher will help you with this milestone — it is a together-milestone.*
+>
+> *What to do (with the teacher beside you):*
+>
+> - [ ] **First time in the workshop?** Pick a nickname for your folder. It can be any name you like — a character, an animal, your real first name, anything you want to see on the screen. Tell the teacher your nickname.
+> - [ ] Open File Explorer (Windows key + E)
+> - [ ] Go to `G:\My Drive\Arduino_Projects\`
+> - [ ] Find your nickname folder, or create it together with the teacher
+> - [ ] Inside your nickname folder, create a new folder called `Project_1_Light_Signals`
+> - [ ] Open Claude Code with your new `Project_1_Light_Signals` folder
+> - [ ] Plug in the Arduino with the USB cable
+> - [ ] Look at the Arduino — you should see a small green light blinking near pin 13
+> - [ ] Open the Arduino IDE
+>
+> *Done when:* You have your own nickname folder, your `Project_1_Light_Signals` folder inside it, Claude Code is open, the Arduino is plugged in, and the green light on the Arduino is blinking.
+>
+> *Stuck? Try this first:* This is a together-milestone — the teacher will walk you through it. If the teacher is with another student right now, wait at your workstation and work on sorting the resistor pack on your desk until the teacher comes to you.
+
+**Channel A Level 1 note.** No sketch upload at this milestone. The factory sketch is already installed on the Arduino and the newly-created `Project_1_Light_Signals` folder is empty of sketches — that is normal. Sketches start appearing at Milestone 2, when the pre-written `01_blink_L_fast.ino` is copied into the folder.
+
+**Channel B note.** Channel B is technically available at Milestone 1, but because the milestone is a together-milestone with the teacher present, a student using Channel B would be hearing instructions from Claude Code while the teacher is also speaking to them — which is confusing. Milestone 1 is the one milestone in Project 1 where Channel B is **not recommended**. Channel B becomes available and useful at Milestone 2 onward, once the student is working more independently.
+
+**Research basis (teacher-facing).** *[Verification: Principle 4 — hyper-chunked milestones with visible wins. The LED blinking on the board is the first of many "something I did made the thing work" moments the super-target commits to (Arduino_PBL_Program.md §1, §4).]* *[Verification: Principle 5 — structured autonomy, not forced compliance. The student picking their own nickname is a Principle 5 autonomy moment at the earliest possible point in the program; the nickname is the student's chosen representation of themselves in the workshop's digital workspace for the entire year.]* *[Verification: Principle 8 — the teacher-student relationship is the multiplier. The together-milestone framing, the nickname question, and the recognition line are the direct operationalisation of Sciacca (2025)'s building-trusting-relationships sub-theme (§3.5), where all three of Sciacca's participant teachers described rapport and trust with students as the foundation on which PjBL works. The one-minute folder-creation ritual is a micro-relationship moment that costs one minute and returns real ownership plus a student-chosen nickname that carries across the entire year.]* *[Verification: Cibrian et al. (2022) — tangible feedback for ADHD self-regulation, via the non-human-mediator framing the master document's §3.6 establishes.]*
 
 ---
 

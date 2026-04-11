@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית עזר R4 — תזכורת בטיחות</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .big-msg {
+    background: #e8f5e9;
+    border: 2pt solid #2e7d32;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 16pt;
+    text-align: center;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  .rule {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">R4</div>
+
+<div class="header">
+  <h1><span class="section-icon">⚠️</span>תזכורת בטיחות</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="big-msg">
+פרויקט 1 מאוד בטוח. הארדואינו עובד על 5 וולט — מתח נמוך מדי מכדי לפגוע בכם. אבל עדיין אפשר לקלקל דברים אם מחווטים משהו לא נכון. קוראים את שלושת הכללים האלה ויהיה בסדר.
+</div>
+
+<h2>כלל 1 — לא מחברים 5 V ישירות ל-GND</h2>
+
+<div class="rule">
+<span class="dont">לא</span> מחברים חוט ישירות מ-<strong>5 V</strong> ל-<strong>GND</strong>. זה נקרא <em>קצר חשמלי</em>. זה יגרום לארדואינו לאתחל את עצמו או להיכבות כדי להגן על עצמו. אף אחד לא ייפגע, אבל המעגל יפסיק לעבוד עד שמסירים את החוט הבעייתי.
+</div>
+
+<p>הרגל של 5 V מזינה את הלדים, החיישנים והכפתורים שאתם מחברים. הרגל של GND היא נתיב החזרה של החשמל. הן אף פעם לא צריכות להיגע ישירות אחת בשנייה.</p>
+
+<h2>כלל 2 — לכל לד צריך נגד</h2>
+
+<div class="rule">
+<span class="dont">לא</span> מחברים לד ישירות לרגל 5 V בלי נגד. הלד ידלוק חזק מאוד לשנייה-שתיים, יתחמם, וייכבה לתמיד. תשמעו את המורה אומר "בגלל זה אנחנו משתמשים בנגד" ואז תצטרכו לד חדש.
+</div>
+
+<p>לכל לד בפרויקט 1 יש <strong>נגד של 220 אוהם</strong> (פסי צבע: אדום, אדום, חום) בין הרגל הארוכה שלו לרגל של הארדואינו. אם אתם רואים לד במעגל שלכם בלי נגד, מתקנים לפני שמעלים שום דבר.</p>
+
+<h2>כלל 3 — לכבל ה-USB יש כיוון אחד נכון</h2>
+
+<div class="rule">
+הקצה המרובע של כבל ה-USB נכנס לארדואינו רק בצורה אחת. אם זה לא נכנס, לא מפעילים כוח — תשברו את המחבר. הופכים את התקע ומנסים שוב.
+</div>
+
+<h2>אם משהו מפסיק לעבוד</h2>
+
+<p><strong>עוצרים את הלחיצות.</strong> מסתכלים על החיווט. אם לא רואים מה לא בסדר, קוראים למורה — בשביל זה יש את פרוטוקול התקיעה (R2). לא מאשימים אתכם בחיווט לא נכון. לחווט לא נכון זה חלק מלמידת ארדואינו, לא אסון.</p>
+
+<footer>R4 תזכורת בטיחות • פרויקט 1 • A4 portrait • מוכן ללמינציה</footer>
+
+</div>
+</body>
+</html>

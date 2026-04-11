@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית עזר R1 — חיווט פרויקט 1</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    /* Arial first for reliable Hebrew rendering (both regular and bold glyphs
+     * are consistent across Windows versions). Segoe UI and -apple-system
+     * kept as fallbacks for LTR fallback behaviour on non-Windows systems. */
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 10mm;
+    position: relative;
+  }
+  /* Card identifier badge — top-left corner of the card.
+   * Uses physical "left" (not inline-start) so it sits in the same
+   * physical corner regardless of LTR/RTL language direction.
+   * In Hebrew RTL the badge sits at the END of the reading flow
+   * (far from the heading text which starts on the right), so it
+   * never overlaps with content. */
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 12pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 11pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .key {
+    /* Yellow background + orange border are the visual emphasis.
+     * Box-level font-weight: bold was removed because synthesized
+     * Hebrew bold renders inconsistently on Windows — individual
+     * <strong> tags within the box still get bold for specific
+     * critical words, which is where the reader's eye should land. */
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+  }
+  .wiring {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13pt;
+    background: #f4f4f4;
+    padding: 12pt;
+    border: 1pt solid #ccc;
+    white-space: pre;
+    line-height: 1.3;
+    margin: 8pt 0;
+    direction: ltr;
+    text-align: left;
+  }
+  .living-placeholder {
+    border: 2pt dashed #667;
+    background: #f0f4fa;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-size: 11pt;
+    page-break-inside: avoid;
+  }
+  .lp-header {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #334;
+    letter-spacing: 0.5pt;
+    margin-bottom: 6pt;
+  }
+  .lp-section {
+    margin: 6pt 0;
+  }
+  .lp-section strong {
+    color: #000;
+    display: block;
+    margin-bottom: 2pt;
+  }
+  .lp-section ul {
+    margin: 3pt 0 3pt 0;
+    padding-inline-start: 18pt;
+  }
+  .lp-section li {
+    margin: 2pt 0;
+    line-height: 1.4;
+  }
+  .lp-section code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #fff;
+    padding: 1pt 4pt;
+    border: 1pt solid #ccd;
+    border-radius: 2pt;
+    direction: ltr;
+    display: inline-block;
+  }
+  .lp-section a {
+    color: #0050a0;
+    word-break: break-all;
+    direction: ltr;
+    display: inline-block;
+  }
+  .color-band {
+    /* Kept distinctive via background colour and padding, but uses the
+     * regular body font — Latin monospace fonts (Consolas, Courier New)
+     * have unreadable Hebrew glyphs and should never wrap Hebrew text. */
+    background: #efefef;
+    padding: 2pt 5pt;
+    border-radius: 2pt;
+    font-size: 13pt;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  .do {
+    color: #060;
+    font-weight: bold;
+  }
+  /* Inline code in running text (pin numbers, file paths, etc.) */
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  /* Section-icon class for the recurring-concept visual markers.
+   * Placed BEFORE the text in HTML source order, which in RTL
+   * Hebrew renders the icon visually on the RIGHT side of the
+   * heading/block (matching Yon's preference). Same HTML also
+   * works correctly for LTR English, where "before the text
+   * in source order" = visually on the left. */
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  footer {
+    margin-top: 14pt;
+    padding-top: 6pt;
+    border-top: 1pt dashed #999;
+    font-size: 9pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">R1</div>
+
+<div class="header">
+  <h1>חיווט פרויקט 1</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור • כרטיסייה לעמדת התלמיד</div>
+</div>
+
+<p><strong>הכרטיסייה הזאת מראה איך לחבר את הלדים, הנגדים והכפתור בפרויקט 1.</strong> שומרים אותה ליד הברדבורד. אם מתבלבלים בחיווט, קודם מסתכלים על הכרטיסייה הזאת לפני שקוראים למורה.</p>
+
+<h2><span class="section-icon">⚠️</span>הכללים החשובים ביותר</h2>
+
+<div class="key">
+הרגל הארוכה של הלד = <span class="do">חיובי (+)</span>. היא הולכת ל<strong>נגד</strong>, ומשם לרגל של הארדואינו.
+</div>
+
+<div class="key">
+הרגל הקצרה של הלד = <span class="do">שלילי (−)</span>. היא הולכת ל-<strong>GND</strong> של הארדואינו.
+</div>
+
+<div class="key">
+לכל לד צריך <strong>נגד של 220 אוהם</strong> משלו (פסי צבע: <span class="color-band">אדום · אדום · חום</span>). בלי נגד = לד שרוף.
+</div>
+
+<div class="key">
+לכפתור צריך <strong>נגד הורדה של 10 קילו-אוהם</strong> (פסי צבע: <span class="color-band">חום · שחור · כתום</span>). בלעדיו הכפתור קורא ערכים אקראיים.
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 1 — לד אחד על רגל 9 (<span class="section-icon">🏁</span>אבן דרך 3)</h2>
+
+<div class="wiring">Arduino pin 9  ───[220 Ω]───┬─── LED long leg
+                           │
+                           ▼
+                      LED short leg ─── Arduino GND</div>
+
+<div class="living-placeholder">
+  <div class="lp-header">מקום לתמונה — חיווט 1 (לד יחיד על רגל 9)</div>
+  <div class="lp-section">
+    <strong>מה התמונה צריכה להראות:</strong>
+    <ul>
+      <li>ארדואינו Uno R3, עם כבל USB מחובר (לא חובה)</li>
+      <li>ברדבורד מלא לצד הארדואינו</li>
+      <li>לד אחד נעוץ בשתי שורות בברדבורד</li>
+      <li>הרגל הארוכה של הלד → נגד 220 אוהם → חוט → רגל 9 של הארדואינו</li>
+      <li>הרגל הקצרה של הלד → חוט → GND של הארדואינו</li>
+      <li>הרכיבים נראים בבירור; אפשר לקרוא את תוויות הרגליים של הארדואינו</li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>תמונה מועמדת בקוד פתוח (CC BY-SA 4.0):</strong>
+    <ul>
+      <li><code>Arduino_uno_led_bb.svg</code> by user Edwiyanto — Wikimedia Commons</li>
+      <li>File page: <a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_led_bb.svg">commons.wikimedia.org/wiki/File:Arduino_uno_led_bb.svg</a></li>
+      <li>Direct download: <a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Arduino_uno_led_bb.svg">upload.wikimedia.org/.../Arduino_uno_led_bb.svg</a></li>
+      <li>Resolution: 470 × 562 px; 646 KB</li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>מה צריך לוודא לפני השימוש:</strong>
+    <ul>
+      <li>פותחים את קובץ ה-SVG בדפדפן ובודקים לאיזו רגל הלד מחובר. אם התמונה מראה חיבור לרגל 13 (נתיב הלד המובנה) ולא רגל 9, הכיתוב בכרטיסייה צריך לומר "התמונה מראה רגל 13; אתם מחווטים לרגל 9 — אותו רעיון, מספר רגל שונה", או שצריך לבנות מחדש את התמונה בפריצינג עם רגל 9 במפורש.</li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>כשהתמונה מוכנה לשימוש:</strong> מורידים, מוודאים, שומרים כ-<code>images/w1_single_led.svg</code> (או <code>.png</code>) בתוך <code>Project_1_Light_Signals/</code>, ואז מחליפים את כל התיבה הזאת ב-<code>&lt;img src="../images/w1_single_led.svg" alt="לד יחיד מחובר לרגל 9"&gt;</code>. שורת הייחוס הנדרשת (להוסיף בכרטיסייה או בכותרת התחתונה של המדריך): <em>"Based on Arduino_uno_led_bb.svg by Edwiyanto, Wikimedia Commons, CC BY-SA 4.0."</em>
+  </div>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 2 — שני לדים על רגליים 9 ו-10 (<span class="section-icon">🏁</span>אבן דרך 5)</h2>
+
+<p>אותו חיווט כמו בחיווט 1, אבל מוסיפים <strong>לד שני בצבע אחר</strong> בשורה סמוכה בברדבורד, עם נגד 220 אוהם משלו שהולך ל<strong>רגל 10</strong>.</p>
+
+<div class="wiring">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND</div>
+
+<div class="living-placeholder">
+  <div class="lp-header">מקום לתמונה — חיווט 2 (שני לדים על רגליים 9 ו-10)</div>
+  <div class="lp-section">
+    <strong>מה התמונה צריכה להראות:</strong>
+    <ul>
+      <li>ארדואינו Uno + ברדבורד מלא</li>
+      <li>שני לדים בצבעים שונים נעוצים בברדבורד, שורה אחת זה מזה</li>
+      <li>לד 1: רגל ארוכה → נגד 220 אוהם → רגל 9; רגל קצרה → GND</li>
+      <li>לד 2: רגל ארוכה → נגד 220 אוהם → רגל 10; רגל קצרה → GND</li>
+      <li>החיווט נראה מקבילי בבירור — אותה תבנית, מספר רגל שונה</li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>תמונה מועמדת בקוד פתוח (CC BY-SA 4.0):</strong>
+    <ul>
+      <li><code>Arduino_circuit_04_01.png</code> — SparkFun SIK Experiment 4 (Driving Multiple LEDs)</li>
+      <li>התמונה מראה <em>שמונה</em> לדים על רגליים 2–9 עם נגדים של 330 אוהם, ולא שני לדים על רגליים 9–10 עם 220 אוהם.</li>
+      <li>עקרון החיווט זהה; התלמיד רואה יותר לדים ממה שצריך לחווט באבן הדרך הזאת.</li>
+      <li>Source: <a href="https://learn.sparkfun.com/tutorials/sik-experiment-guide-for-arduino---v33/experiment-4-driving-multiple-leds">learn.sparkfun.com/.../experiment-4-driving-multiple-leds</a></li>
+      <li>Direct download: <a href="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/3/1/0/Arduino_circuit_04_01.png">cdn.sparkfun.com/.../Arduino_circuit_04_01.png</a></li>
+      <li>Attribution: "Arduino Multi-LED circuit by SparkFun Electronics, CC BY-SA 4.0."</li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>אפשרות טובה יותר:</strong> לבנות בפריצינג תמונה של 2 לדים עם רגליים 9 ו-10 ונגדים של 220 אוהם, או לצלם את הבנייה המדגימה של המורה. שתי האפשרויות נותנות התאמה מדויקת שהתלמיד יכול לשחזר בלי תרגום קוגניטיבי.
+  </div>
+  <div class="lp-section">
+    <strong>כשהתמונה מוכנה לשימוש:</strong> שומרים כ-<code>images/w2_two_leds.svg</code> או <code>images/w2_two_leds.png</code> ומחליפים את התיבה הזאת בתגית <code>&lt;img&gt;</code>.
+  </div>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 3 — הוספת הכפתור (<span class="section-icon">🏁</span>אבן דרך 7)</h2>
+
+<p>הכפתור נעוץ מעל <strong>המרווח המרכזי</strong> של הברדבורד, כך שארבע הרגליים שלו נוחתות בארבע שורות שונות.</p>
+
+<div class="wiring">Arduino 5 V ──────────────┬─── Button pin A
+                          │
+                          ▼
+                      Button pin B ────┬─── Arduino pin 2
+                                       │
+                                       └─[10 kΩ]── Arduino GND</div>
+
+<p><span class="section-icon">⚠️</span><span class="dont">חשוב:</span> נגד ההורדה של 10 קילו-אוהם הולך בין <strong>רגל 2 לבין GND</strong>, <span class="dont">לא בין 5 V לבין GND</span>. אם מחווטים אותו בין 5 V לבין GND, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
+
+<div class="living-placeholder">
+  <div class="lp-header">מקום לתמונה — חיווט 3 (שני לדים + כפתור עם נגד הורדה 10 קילו-אוהם על רגל 2)</div>
+  <div class="lp-section">
+    <strong>מה התמונה צריכה להראות:</strong>
+    <ul>
+      <li>ארדואינו Uno + ברדבורד עם שני לדים כבר מחווטים (מחיווט 2)</li>
+      <li>כפתור טקטילי נעוץ מעל המרווח המרכזי של הברדבורד</li>
+      <li>רגל A של הכפתור → 5 V של הארדואינו</li>
+      <li>רגל B של הכפתור → רגל 2 של הארדואינו וגם → נגד 10 קילו-אוהם → GND של הארדואינו</li>
+      <li>נגד ההורדה של 10 קילו-אוהם נמצא במיקום ברור בין רגל 2 ל-GND, ולא בין 5 V ל-GND</li>
+      <li>זהו חיווט <strong>נגד הורדה</strong> (pull-down), לא נגד משיכה (pull-up)</li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>תמונה מועמדת בקוד פתוח (CC BY-SA 4.0):</strong>
+    <ul>
+      <li><code>Arduino_uno_led_button_bb.svg</code> by user Edwiyanto — Wikimedia Commons</li>
+      <li>File page: <a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_led_button_bb.svg">commons.wikimedia.org/wiki/File:Arduino_uno_led_button_bb.svg</a></li>
+      <li>Direct download: <a href="https://upload.wikimedia.org/wikipedia/commons/f/fc/Arduino_uno_led_button_bb.svg">upload.wikimedia.org/.../Arduino_uno_led_button_bb.svg</a></li>
+      <li>Schematic version: <a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_led_button_schema.svg">File:Arduino_uno_led_button_schema.svg</a></li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>חובה לוודא לפני השימוש — pull-up או pull-down?</strong>
+    <ul>
+      <li>פותחים את ה-SVG בדפדפן לפני השימוש. עוקבים אחרי נגד ה-10 קילו-אוהם: אם הוא הולך מ<strong>רגל 2 ל-GND</strong> (pull-down), התמונה מתאימה ישירות לחיווט 3. אם הוא הולך מ<strong>רגל 2 ל-5 V</strong> (pull-up), התמונה סותרת את החיווט שלנו ואסור להשתמש בה ללא שינוי.</li>
+      <li>אם התמונה מוויקימדיה היא pull-up, אפשרות חלופית: (א) התמונה <code>ArduinoUno_Button_SchematicAndDiagram_PullDownResistor.png</code> של Makeability Lab ב-<a href="https://makeabilitylab.github.io/physcomp/arduino/buttons.html">makeabilitylab.github.io/physcomp/arduino/buttons.html</a> (צריך לוודא רישיון לפני השימוש — בודקים את קובץ ה-LICENSE במאגר הגיטהאב), או (ב) בנייה בפריצינג עם חיווט pull-down מפורש.</li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>כשהתמונה מוכנה לשימוש:</strong> שומרים כ-<code>images/w3_leds_and_button_pulldown.svg</code> ומחליפים את התיבה הזאת בתגית <code>&lt;img&gt;</code>. ייחוס: "Based on Arduino_uno_led_button_bb.svg by Edwiyanto, Wikimedia Commons, CC BY-SA 4.0."
+  </div>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 4 — שלושה לדים לתבנית רדיפה (גרסה 2 בלבד)</h2>
+
+<p>נחוץ רק אם בחרתם ב<strong>תבנית הרדיפה</strong> בגרסה 2. מוסיפים לד שלישי על רגל 11 עם נגד 220 אוהם משלו, מחווט באותה צורה כמו לדים 1 ו-2.</p>
+
+<div class="wiring">Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
+                           ▼
+                      LED 3 short leg ─── Arduino GND</div>
+
+<div class="living-placeholder">
+  <div class="lp-header">מקום לתמונה — חיווט 4 (שלושה לדים רדיפה, גרסה 2 בלבד)</div>
+  <div class="lp-section">
+    <strong>מה התמונה צריכה להראות:</strong>
+    <ul>
+      <li>ארדואינו Uno + ברדבורד עם שלושה לדים בחיווט מקבילי</li>
+      <li>לד 1 → נגד 220 אוהם → רגל 9 → GND</li>
+      <li>לד 2 → נגד 220 אוהם → רגל 10 → GND</li>
+      <li>לד 3 → נגד 220 אוהם → רגל 11 → GND</li>
+      <li>בלי כפתור בתמונה הזאת (הכפתור הוא תוכן גרסה 1, הרדיפה היא תוכן גרסה 2)</li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>תמונה מועמדת בקוד פתוח (אותה תמונה כמו בחיווט 2):</strong>
+    <ul>
+      <li>SparkFun SIK Experiment 4 <code>Arduino_circuit_04_01.png</code> — מראה 8 לדים על רגליים 2–9 עם נגדים של 330 אוהם; התלמיד מחווט רק את השלושה הראשונים.</li>
+      <li>Source: <a href="https://learn.sparkfun.com/tutorials/sik-experiment-guide-for-arduino---v33/experiment-4-driving-multiple-leds">learn.sparkfun.com/.../experiment-4-driving-multiple-leds</a></li>
+      <li>Direct download: <a href="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/3/1/0/Arduino_circuit_04_01.png">cdn.sparkfun.com/.../Arduino_circuit_04_01.png</a></li>
+      <li>License: CC BY-SA 4.0</li>
+    </ul>
+  </div>
+  <div class="lp-section">
+    <strong>אפשרות טובה יותר:</strong> בניית 3 לדים בפריצינג עם רגליים 9, 10, 11 ונגדים של 220 אוהם, או צילום של אותה בנייה. תמונות בהתאמה מדויקת עדיפות על תמונת-סופרסט עבור תלמידי גרסה 2.
+  </div>
+  <div class="lp-section">
+    <strong>כשהתמונה מוכנה לשימוש:</strong> שומרים כ-<code>images/w4_three_leds_chasing.svg</code> ומחליפים את התיבה הזאת בתגית <code>&lt;img&gt;</code>.
+  </div>
+</div>
+
+<footer>R1 חיווט • פרויקט 1 אותות אור • A4 portrait • מוכן ללמינציה</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית עזר R3 — תבניות פניות לקלוד קוד</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .prompt-template {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 12pt 14pt;
+    margin: 10pt 0;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    direction: rtl;
+  }
+  .prompt-template.ltr {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    text-align: left;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+  }
+  .rule {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+    background: #f4f4f4;
+    padding: 1pt 4pt;
+    border-radius: 2pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">R3</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>איך מדברים עם קלוד קוד</h1>
+  <div class="subtitle">פרויקט 1 • תבניות פניות לקלוד קוד</div>
+</div>
+
+<p>קלוד קוד הוא שותף התכנות שלכם. הוא רץ בחלון שמכוון לתיקיית פרויקט 1 שלכם, אז הוא רואה את הקוד שאתם עובדים עליו. יש שתי דרכים להשתמש בו.</p>
+
+<h2>ערוץ A — כשרוצים עזרה עם הקוד (רמה 2)</h2>
+
+<p>לפני ששואלים את קלוד קוד משהו על הקוד שלכם, <strong>ממלאים את שלושת הסעיפים האלה בכרטיסיית המשימה</strong>:</p>
+
+<div class="rule">
+<strong>(א)</strong> מה אני רוצה שיקרה: <em>[מתארים את ההתנהגות הרצויה]</em><br>
+<strong>(ב)</strong> מה קורה עכשיו: <em>[מתארים מה הקוד עושה עכשיו]</em><br>
+<strong>(ג)</strong> מה כבר ניסיתי: <em>[מה כבר הסתכלנו עליו או חשבנו עליו]</em>
+</div>
+
+<p>ואז משתמשים בתבנית הפנייה הזאת:</p>
+
+<pre class="prompt-template">אני עובד על [שם קובץ הקוד].
+
+(א) מה אני רוצה שיקרה:
+[התשובה שלכם]
+
+(ב) מה קורה עכשיו:
+[התשובה שלכם]
+
+(ג) מה כבר ניסיתי:
+[התשובה שלכם]
+
+תוכל לעזור לי להבין מה לשנות?</pre>
+
+<div class="key">
+<span class="section-icon">⚠️</span>(א)(ב)(ג) זה לא אופציונלי. זה עוזר לכם לחשוב על הבעיה לפני שקלוד קוד עונה, וזה עוזר לקלוד קוד לתת לכם תשובה שימושית. דילוג על זה בדרך כלל נותן תשובה פחות טובה.
+</div>
+
+<p>אחרי שקלוד קוד עונה, מבצעים את השינוי בארדואינו IDE, מעלים, ובודקים. אז עונים על השאלה הזאת בכרטיסיית המשימה:</p>
+
+<div class="rule">
+<strong>בדיקת הבנה:</strong> במשפט אחד, מה קלוד קוד שינה בקוד?
+</div>
+
+<h2>ערוץ B — כשרוצים שיקראו לכם את המשימה</h2>
+
+<p>ערוץ B מוביל אתכם דרך כרטיסיית המשימה הנוכחית בצורת שיחה. משתמשים בו כשקשה לקרוא את הכרטיסייה המודפסת, או כשעדיף לשמוע את ההוראות שלב אחר שלב. משתמשים בתבנית הזאת:</p>
+
+<pre class="prompt-template">אני בפרויקט 1, גרסה [1 או 2], אבן דרך [מספר].
+תוביל אותי דרך המשימה.</pre>
+
+<p>קלוד קוד יקרא את תוכן הכרטיסייה בחלקים קטנים וישאל אתכם לאשר כל שלב לפני שממשיכים הלאה. אתם עדיין מסמנים V בכרטיסייה המודפסת תוך כדי — ערוץ B לא מחליף את הכרטיסייה, הוא רק עוזר לכם לעבור אותה.</p>
+
+<div class="key">
+ערוץ B <strong>לא מומלץ לאבן דרך 1</strong> של אף פרויקט, כי אבן דרך 1 היא אבן דרך משותפת שבה המורה לידכם. לשמוע את קלוד קוד מדבר בזמן שהמורה גם מדבר אליכם — זה מבלבל.
+</div>
+
+<h2>ערוץ A רמה 3 — דיאלוג חופשי (גרסה 3 בלבד)</h2>
+
+<p>אם אתם עובדים בגרסה 3 על פרויקט בעיצוב פתוח, אפשר לדבר עם קלוד קוד בחופשיות על מה שאתם מנסים לבנות. אותו כלל של (א)(ב)(ג) עדיין חל — מתארים מה אתם רוצים לפני ששואלים.</p>
+
+<footer>R3 פניות לקלוד קוד • פרויקט 1 • A4 portrait • מוכן ללמינציה</footer>
+
+</div>
+</body>
+</html>

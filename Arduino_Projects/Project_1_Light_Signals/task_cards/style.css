@@ -10,7 +10,12 @@
 * { box-sizing: border-box; }
 
 body {
-  font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+  /* Arial first for reliable Hebrew rendering (Windows Arial has
+   * consistent regular and bold Hebrew glyphs across Windows versions;
+   * Segoe UI's Hebrew bold can fall back to synthesized bold which
+   * looks visually different). Segoe UI and -apple-system kept as
+   * fallbacks for LTR English on non-Windows systems. */
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
   font-size: 14pt;
   line-height: 1.5;
   color: #000;
@@ -62,11 +67,13 @@ h1 {
   margin-top: 3pt;
 }
 
-/* Why-this-milestone callout (pale blue italic) */
+/* Why-this-milestone callout (pale blue italic).
+ * Uses border-inline-start so it renders correctly under both LTR
+ * (border on the left) and RTL Hebrew (border on the right). */
 
 .why {
   background: #f0f4fa;
-  border-left: 5pt solid #0050a0;
+  border-inline-start: 5pt solid #0050a0;
   padding: 10pt 14pt;
   margin: 14pt 0;
   font-style: italic;
@@ -106,13 +113,15 @@ p { margin: 6pt 0; }
 
 .checklist {
   list-style: none;
-  padding-left: 0;
+  padding-inline-start: 0;
   margin: 10pt 0;
 }
 
 .checklist li {
   position: relative;
-  padding: 6pt 0 6pt 34pt;
+  padding-block: 6pt;
+  padding-inline-start: 34pt;
+  padding-inline-end: 0;
   margin: 4pt 0;
   line-height: 1.5;
   border-bottom: 1pt dashed #ddd;
@@ -121,7 +130,7 @@ p { margin: 6pt 0; }
 .checklist li::before {
   content: "☐";
   position: absolute;
-  left: 4pt;
+  inset-inline-start: 4pt;
   top: 3pt;
   font-size: 22pt;
   line-height: 1;
@@ -197,7 +206,7 @@ p { margin: 6pt 0; }
 
 .expected {
   background: #e8f5e9;
-  border-left: 5pt solid #2e7d32;
+  border-inline-start: 5pt solid #2e7d32;
   padding: 12pt 14pt;
   margin: 14pt 0;
 }
@@ -233,7 +242,7 @@ p { margin: 6pt 0; }
 
 .done-when ul {
   margin: 6pt 0 0 0;
-  padding-left: 20pt;
+  padding-inline-start: 20pt;
   font-weight: normal;
   font-size: 13pt;
 }
@@ -246,7 +255,7 @@ p { margin: 6pt 0; }
 
 .stuck {
   background: #fffbe0;
-  border-left: 5pt solid #d4a017;
+  border-inline-start: 5pt solid #d4a017;
   padding: 10pt 14pt;
   margin: 12pt 0;
   font-size: 13pt;
@@ -264,7 +273,7 @@ p { margin: 6pt 0; }
 
 .warning {
   background: #fef0f0;
-  border-left: 5pt solid #b00;
+  border-inline-start: 5pt solid #b00;
   padding: 12pt 14pt;
   margin: 14pt 0;
   font-size: 13pt;
@@ -466,7 +475,7 @@ footer {
 
 .tutorial-nav ol {
   margin: 6pt 0;
-  padding-left: 24pt;
+  padding-inline-start: 24pt;
   list-style: decimal;
 }
 
@@ -582,10 +591,12 @@ footer {
   border-bottom: none;
 }
 
-/* Back-to-top link at the end of each milestone */
+/* Back-to-top link at the end of each milestone.
+ * text-align: end renders as "right" under LTR and "left" under RTL,
+ * so the link always sits at the visual end of its container. */
 
 .back-to-top {
-  text-align: right;
+  text-align: end;
   margin-top: 16pt;
   font-size: 11pt;
 }

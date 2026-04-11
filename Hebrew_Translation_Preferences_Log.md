@@ -26,15 +26,39 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 - `חבר את הלד לרגל 9` → `מחברים את הלד לרגל 9`
 - `הסתכל על החיווט` → `מסתכלים על החיווט`
 
-### Pattern A2 — First-person plural inclusive framing for meta-guidance
+### Pattern A2 — First-person plural inclusive framing for procedural meta-guidance
 
-**Rule:** When stating reasons, rules, or meta-guidance (why a rule exists, what a discipline accomplishes), prefer first-person plural (עוזרים לנו, עבורנו, שלנו) over second-person plural (עוזר לכם, עבורכם, שלכם).
+**Rule:** When stating **rules, disciplines, or procedural meta-guidance** (why a rule exists, what a discipline accomplishes, how a practice is meant to work), prefer first-person plural (עוזרים לנו, עבורנו, שלנו) over second-person plural (עוזר לכם, עבורכם, שלכם).
 
-**Why:** Creates a "we are in this together" inclusive tone rather than a "teacher instructs student" tone. The "we" includes student, teacher, and Claude Code as co-participants in the same practice.
+**Scope and exception:** This pattern applies to *procedural* meta-guidance only — rules, disciplines, the "why" behind a practice, explanations of workflow logic. It does **NOT** apply to *personal* orientation openers — the warm second-person framing that positions a specific milestone or project for a specific student (e.g., `זו אבן הדרך הראשונה שלכם בתוכנית הארדואינו` in the opening why-block of a first-milestone task card). In those personal-orientation contexts, second-person possessive (שלכם) adds warmth and ownership and should be kept. The rule of thumb: if the sentence could be spoken to any student in any workshop in exactly the same form, use first-person plural inclusive; if it's addressed to a specific student in a specific moment of their journey, second-person is appropriate.
+
+**Why:** First-person plural in procedural meta-guidance creates a "we are in this together" inclusive tone — student, teacher, and Claude Code as co-participants in the same practice. But in personal orientation contexts (opening of a first-milestone card, recognition lines, direct teacher-to-student address), the second-person warmth is exactly what the moment needs. Don't strip warmth where warmth is the point.
 
 **Examples:**
+
+*Apply the rule (procedural meta-guidance):*
 - `(א)(ב)(ג) זה לא אופציונלי. זה עוזר לכם לחשוב על הבעיה לפני שקלוד קוד עונה, וזה עוזר לקלוד קוד לתת לכם תשובה שימושית.`
 - → `(א), (ב) ו-(ג) אינם סתם אופציות. הם עוזרים לנו לחשוב על הבעיה לפני שקלוד קוד עונה, ועוזרים לקלוד קוד להגיע לתשובה שתהיה שימושית עבורנו.`
+
+*Do NOT apply the rule (personal orientation):*
+- `זו אבן הדרך הראשונה שלכם בתוכנית הארדואינו.` — Yon kept `שלכם` here during T1_M1 review on 2026-04-12. The sentence is the opening of the why-block of a first-ever-milestone card, addressing a specific student at a specific moment. Stripping `שלכם` to `זו אבן הדרך הראשונה בתוכנית הארדואינו` was proposed and rejected: the reduced form is more "clinical" and loses the welcoming tone that belongs in this specific context.
+
+### Pattern A5 — Permissive `אפשר ל-` for optional/backup tasks vs plural impersonal for primary instructions
+
+**Rule:** For **optional, backup, or fallback tasks** (the "try this while you wait" alternatives), use the permissive construction `אפשר ל-` ("it is possible to / one may") rather than the plural impersonal verb (`מתחילים ל-`, `עושים את`). Primary instructions (the main task workflow) keep the plural impersonal form per pattern A1.
+
+**Why:** The plural impersonal form (pattern A1) reads as "this is what we do here" — a shared practice the student is expected to follow. That register is correct for primary milestone instructions, but wrong for backup tasks, which the student is being *offered*, not *told*. `אפשר ל-` signals "this is available if you want it" — respecting student autonomy in the fallback context. Mixing A1 plural impersonal with backup tasks reads as "you must do the backup task" which contradicts the whole point of a backup task being an autonomous waiting activity.
+
+**Examples:**
+
+*Backup task — permissive form:*
+- `מתחילים במשימת הגיבוי של מיון הנגדים שעל השולחן` → `אפשר להתחיל במשימת הגיבוי` (T1_M1 stuck-block revision, 2026-04-12)
+
+*Primary task — plural impersonal (pattern A1 still applies):*
+- `מחברים את הארדואינו למחשב` — primary instruction, stays plural impersonal
+- `פותחים את Arduino IDE` — primary instruction, stays plural impersonal
+
+**Interaction with pattern A1:** The reviewer agent should NOT flag `אפשר ל-` constructions as A1 violations. A1 and A5 cover different registers: A1 is for primary workflow instructions; A5 is for the offered alternatives.
 
 ### Pattern A3 — Prefer hif'il when the action is causative/transitive
 
@@ -83,10 +107,15 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 
 **Rule:** For actions that have a natural Hebrew verb, prefer it over a literal translation from English.
 
-**Why:** Literal translations from English produce Hebrew that reads as "translated" rather than native. A LED "lights up" naturally renders יאיר (shines) in Hebrew; ידלוק (burns/ignites) is technically correct but sounds archaic/combustion-related.
+**Why:** Literal translations from English produce Hebrew that reads as "translated" rather than native. A LED "lights up" naturally renders יאיר (shines) in Hebrew; ידלוק (burns/ignites) is technically correct but sounds archaic/combustion-related. Similarly, verbs with implicit force/violence connotations should be replaced with their gentler, task-appropriate counterparts when the physical action is delicate.
 
 **Examples:**
 - `הלד ידלוק חזק מאוד לשנייה-שתיים` → `הלד יאיר חזק מאוד לשנייה-שתיים`
+- `נועצים את הלד בברדבורד` → `מכניסים את הלד לברדבורד` (T1_M3 review, 2026-04-12 — `נועצים` carries a forceful "staking/piercing" connotation that is alarming for EBD students handling delicate components; `מכניסים` is the standard Israeli maker-community verb for inserting components into a breadboard and matches the gentle physical action). The same logic applies to done-when state: `הלד נעוץ בברדבורד` → `הלד מוכנס לברדבורד`.
+- Root-level preference extends to title/heading position: `מדליקים את הלד` → `מאירים את הלד` (T1_M4 review, 2026-04-12 — the ד.ל.ק root in `מדליקים` is the same family as the flagged `ידלוק`; א.ו.ר root in `מאירים` is the family of the preferred `יאיר`. When the English heading says "light up the LED," the Hebrew heading should use the א.ו.ר-root form to match body-text consistency).
+- Extends to nif'al passive-action form: `לדים נדלקים` → `לדים מאירים` (T2_M2 + T1_M8 review, 2026-04-12 — `נדלקים` is a nif'al passive-action from the same ד.ל.ק root family, describing the LED-ignition event. `מאירים` is the hif'il participial from א.ו.ר and is the natural Hebrew verb for LED light-up events).
+- State-descriptor `דולק`/`כבוי` present-tense adjective is NOT part of this pattern. `דולק` in the sentence "when LED 1 is on" is a state descriptor, not a verb action; it is the natural Israeli electronics vocabulary and should stay. Pattern B3 targets *verb actions* (future tense, present participle verbs for ignition/illumination events), not state descriptors. Keep `דולק`/`כבוי` for on/off states.
+- Extends to verb choice (not just LED): `נועצים` is a forceful verb to avoid for delicate components; similar forceful or causative-chain verbs should prefer their direct-state alternatives. Example: `החזקת הכפתור לחוץ גורמת לתבנית לרוץ מהר יותר` → `כשהכפתור לחוץ — התבנית רצה מהר יותר` (T2_M4 review, 2026-04-12 — the causative chain `גורם ל-X לרוץ` is English "makes the pattern run" calqued into Hebrew; natural Hebrew uses the conditional-consequent form).
 
 ### Pattern B4 — Unified vocabulary: גרסה for tier AND Claude Code level
 
@@ -113,6 +142,14 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 - "too low to harm" → NOT `נמוך מדי מכדי לפגוע` (double "too") → `נמוך מכדי לפגוע`
 - "fix before uploading anything" → NOT `מתקנים לפני שמעלים שום דבר` → `קודם כל מתקנים את זה`
 - "stop the clicks" → NOT `עוצרים את הלחיצות` → `עוצרים`
+- "the file is under `ino_files/...`" (path navigation) → NOT `הקובץ נמצא תחת ino_files/...` → `הקובץ נמצא בתוך ino_files/...` (T1_M2 review, 2026-04-12 — `תחת` is a spatial "below/beneath" preposition in Hebrew; natural file-system navigation uses `בתוך` "inside")
+- "first Upload click worked" (celebrating a procedural action) → NOT `הלחיצה הראשונה על Upload עבדה` → `ההעלאה הראשונה עבדה` (T1_M2 review, 2026-04-12 — English "click" is a noun-ified gesture; Hebrew celebrates the outcome, not the physical action)
+- "legs land in different rows" (aviation/spatial metaphor for component placement) → NOT `הרגליים נוחתות בשורות שונות` → `כל רגל נמצאת בשורה שונה` (T1_M3 review, 2026-04-12 — "landing" is an English metaphor for component insertion that does not carry into Hebrew electronics vocabulary; describe the spatial outcome directly)
+- "Notice something" / "Take a second to notice that" (English attention-drawing with placeholder object) → NOT `שמים לב לדבר` / `שווה לשים לב ש-` → `שמים לב:` or `כדאי לשים לב:` followed by the content as direct declarative (T1_M4, T1_M6 reviews, 2026-04-12 — Hebrew attention-drawing does not need an object noun filler; colon-predicate form reads cleanly).
+- "the most common cause is that X" (English copula-relative-clause construction) → NOT `הסיבה הנפוצה ביותר היא ש...` → `הסיבה הנפוצה ביותר: ...` (T1_M8 review, 2026-04-12 — Hebrew prefers the colon-predicate over the English copula-relative-clause; the shorter form is also more scannable in stuck-block safety contexts).
+- "you did this yourself" (celebrating with vague demonstrative) → NOT `ועשיתם את זה בעצמכם` → `ועשיתם אותה בעצמכם` (where the feminine pronoun back-references a specific feminine antecedent like `הנדסת חשמל`; T1_M8 celebration block, 2026-04-12 — `את זה` is a calque of English "this"; Hebrew prefers an internal-antecedent pronoun that closes the sentence's own referential loop).
+- "it is normal to need help" (English infinitive-subject reassurance) → NOT `וזה נורמלי להזדקק לעזרה` → `מבקשים עזרה בלי לחשוש` (T1_M4 review, 2026-04-12 — the English infinitive-subject construction after `נורמלי` reads mechanically in Hebrew; the positive plural-impersonal form preserves the reassurance without the calque).
+- "the button button" (English noun-noun compound with article) — `לוחצים על Upload` vs `לוחצים על כפתור ה-Upload` is a register choice, not a strict rule. For EBD students, explicit naming (`כפתור ה-Upload`) can aid recognition and reduce confusion; for literate contexts the compressed form (`לוחצים על Upload`) is tighter. T1_M6 review 2026-04-12 kept the explicit form for EBD clarity. Judgment call — use explicit naming when the student must identify a specific UI element.
 
 ### Pattern C2 — Section titles: include the subject; trim connectives
 
@@ -148,6 +185,7 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 - `לא מאשימים אתכם בחיווט לא נכון` — moralizing qualifier
 - `לחווט לא נכון זה חלק מלמידת ארדואינו, לא אסון` — dramatic closer with negation
 - `מרימים יד או אומרים את השם של המורה. המורה יגיע אליכם` — mechanical description of how to call someone
+- `חשוב לזכור את ההבדל` (trailing a bullet that already uses `<strong>` on both halves of the contrast) — closing-clause reminder that tells the student how important the information they just read is. If the bold markup and the reference card already encode the importance, the trailing reminder is instructive noise. Drop. (T1_M3 review, 2026-04-12 — first task-card example of this sub-type; watch for similar closers like "אל תשכחו", "חשוב להבין", "תזכרו ש-" in future drafts.)
 
 ### Pattern D2 — Prefer short aphorisms over long explanations
 

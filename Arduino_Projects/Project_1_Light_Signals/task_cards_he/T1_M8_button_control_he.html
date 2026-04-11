@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית משימה פרויקט 1 — גרסה 1 אבן דרך 8: מעלים את הקוד שנשלט בכפתור (אבן הדרך האחרונה)</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">T1·M8</div>
+
+<div class="header">
+  <div class="milestone-badge celebration">גרסה 1 • אבן דרך 8 מתוך 8 • אבן הדרך האחרונה</div>
+  <h1><span class="section-icon">🏁</span>מעלים את הקוד שנשלט בכפתור</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+זו אבן הדרך האחרונה של פרויקט 1. אחריה, פרויקט 1 הושלם. הקוד שמעלים עכשיו משתמש בכפתור שחיווטתם באבן דרך 7 כדי להחליף איזה לד דולק. כשלוחצים על הכפתור, לד אחד נכבה והשני מאיר. זה הפרויקט האינטראקטיבי הראשון שלכם בארדואינו — הקלט שלכם — לחיצה על הכפתור — משנה את הפלט של הארדואינו: איזה לד מאיר.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code>04_button_control.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/04_button_control/</code>.</li>
+  <li>לוחצים על כפתור ה-Upload.</li>
+  <li>מחכים להודעה "Done uploading" בירוק.</li>
+  <li>מסתכלים על הברדבורד. לד אחד אמור להיות דולק, השני כבוי. (זה המצב של "הכפתור לא לחוץ".)</li>
+  <li>לוחצים ומחזיקים את הכפתור. הלדים אמורים להתחלף — זה שהיה דולק נכבה, וזה שהיה כבוי מאיר עכשיו.</li>
+  <li>משחררים את הכפתור. הלדים מתחלפים בחזרה.</li>
+  <li>לוחצים ומשחררים כמה פעמים. הכפתור אמור להחליף איזה לד מאיר בכל פעם, בצורה יציבה.</li>
+</ul>
+
+<h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+
+<pre class="code-block"><span class="filename">04_button_control.ino</span>// A push-button controls which of two LEDs is on.
+
+const int LED_1 = 9;
+const int LED_2 = 10;
+const int BUTTON = 2;
+
+void setup() {
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+  pinMode(BUTTON, INPUT);
+}
+
+void loop() {
+  int buttonState = digitalRead(BUTTON);
+
+  if (buttonState == HIGH) {
+    // Button is pressed: LED 2 on, LED 1 off.
+    digitalWrite(LED_1, LOW);
+    digitalWrite(LED_2, HIGH);
+  } else {
+    // Button not pressed: LED 1 on, LED 2 off.
+    digitalWrite(LED_1, HIGH);
+    digitalWrite(LED_2, LOW);
+  }
+}</pre>
+
+<p>שמים לב ל-<code>if ... else</code> שבתוך ה-loop. ככה הארדואינו מקבל החלטה. הוא קורא את הכפתור, ובהתאם לאם הכפתור לחוץ (<code>HIGH</code>) או לא (<code>LOW</code>), מדליק את אחד הלדים. זו התבנית הבסיסית של כל פרויקט אינטראקטיבי בארדואינו: קלט → החלטה → פלט.</p>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  כשהכפתור לא לחוץ: לד 1 (על רגל 9) דולק, לד 2 (על רגל 10) כבוי. כשלוחצים ומחזיקים את הכפתור: לד 1 נכבה ולד 2 מאיר. כששחררים, לד 1 שוב מאיר. ההחלפה מיידית — בלחיצה ובשחרור.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>לחיצה על הכפתור מחליפה בצורה יציבה איזה לד מאיר</li>
+    <li>שחרור הכפתור מחליף חזרה</li>
+    <li>השלמתם את פרויקט 1</li>
+  </ul>
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את פרויקט 1!</span>
+  חיווטתם ברדבורד מאפס. העליתם ארבעה קבצי קוד. בניתם מעגל אינטראקטיבי עם לדים וכפתור. אפשר לבקש מהמורה תמונה של פרויקט 1 הגמור שלכם (אם רוצים) — זו הנדסת חשמל אמיתית — ועשיתם אותה בעצמכם.
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים? הכפתור לא עושה כלום?</strong>
+  הסיבה הנפוצה ביותר: נגד ההורדה של 10 קילו-אוהם במקום הלא נכון. בודקים בכרטיסיית העזר <span class="r-ref">R1</span> חיווט 3: נגד ההורדה חייב להיות בין <strong>רגל 2 ל-GND</strong>, לא בין 5 V ל-GND. אם הכפתור עדיין לא עובד אחרי בדיקת מיקום הנגד, קוראים למורה.
+</div>
+
+<footer>גרסה 1 • אבן דרך 8 מתוך 8 • אבן הדרך האחרונה • פרויקט 1 אותות אור • A4 portrait • מוכן ללמינציה</footer>
+
+</div>
+</body>
+</html>

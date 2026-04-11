@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית משימה פרויקט 1 — גרסה 1 אבן דרך 5: מוסיפים לד שני</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">T1·M5</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 5 מתוך 8</div>
+  <h1><span class="section-icon">🔌</span>מוסיפים לד שני</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+באבן דרך זו מוסיפים לד שני ליד הראשון. אותה תבנית חיווט כמו באבן דרך 3, רק שורה אחת הצידה בברדבורד. לא מעלים קוד באבן דרך זו — הקוד שמשתמש בשני הלדים מגיע באבן דרך 6.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בוחרים לד שני ממגש החלקים. <strong>בוחרים צבע שונה</strong> מהלד הראשון (אם הראשון היה אדום, בוחרים ירוק או צהוב — כל שילוב בסדר, כל עוד אפשר להבחין ביניהם).</li>
+  <li>בוחרים עוד נגד של 220 אוהם (פסי צבע אדום · אדום · חום).</li>
+  <li>מכניסים את הלד השני לברדבורד, שורה אחת הצידה מהלד הראשון. כל רגל בשורה שונה, כמו באבן דרך 3.</li>
+  <li>מחברים את הרגל הארוכה (+) של הלד השני ל<strong>רגל דיגיטלית 10</strong> של הארדואינו, דרך הנגד של 220 אוהם.</li>
+  <li>מחברים את הרגל הקצרה (−) של הלד השני לרגל GND של הארדואינו בעזרת חוט ג'אמפר.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND</pre>
+
+<div class="image-slot">
+  <div class="image-slot-header">מקום לתמונה — תמונה של ברדבורד עם שני לדים או דיאגרמת Fritzing</div>
+  <p>בכרטיסיית העזר <span class="r-ref">R1</span> (חיווט), חיווט 2, נמצא התרשים המלא.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  על הברדבורד יש עכשיו שני לדים, זה לצד זה, כל אחד עם הנגד שלו. <strong>הלד הראשון עדיין מהבהב</strong> מהקוד שהעליתם באבן דרך 4 — הקוד הזה עדיין רץ על הארדואינו. הלד השני עדיין לא מאיר כי הקוד הנוכחי יודע רק על רגל 9. באבן דרך 6 מעלים קוד חדש שמשתמש בשתי הרגליים.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>שני לדים מחוברים לברדבורד, שורה אחת אחד מהשני</li>
+    <li>הרגל הארוכה של הלד השני עוברת דרך נגד של 220 אוהם לרגל 10</li>
+    <li>הרגל הקצרה של הלד השני מחוברת ל-GND</li>
+    <li>אפשר להבחין בין שני הלדים לפי הצבע שלהם</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  החיווט הוא אותה תבנית כמו באבן דרך 3 — רק שורה אחת הצידה. אם החיווט באבן דרך 3 יצא נכון, זה אמור להרגיש דומה. בודקים את כרטיסיית העזר <span class="r-ref">R1</span> (חיווט 2) — שם נמצא התרשים המלא. אם הלד הראשון הפסיק להבהב בזמן חיווט השני, אולי הג'אמפר שלו התנתק — בודקים שוב את החיווט של הלד הראשון.
+</div>
+
+<footer>גרסה 1 • אבן דרך 5 מתוך 8 • פרויקט 1 אותות אור • A4 portrait • מוכן ללמינציה</footer>
+
+</div>
+</body>
+</html>

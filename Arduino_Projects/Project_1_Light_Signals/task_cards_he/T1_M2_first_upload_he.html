@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית משימה פרויקט 1 — גרסה 1 אבן דרך 2: מעלים את הקוד הראשון</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">T1·M2</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 2 מתוך 8</div>
+  <h1><span class="section-icon">🏁</span>מעלים את הקוד הראשון</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+הארדואינו הגיע עם קוד שכבר נמצא עליו — בגלל זה הלד "L" הבהב באבן דרך 1. באבן דרך זו מעלים קוד אחר שגורם ללד "L" להבהב מהר יותר. זו הפעם הראשונה שלוחצים על כפתור ה-Upload. אבן דרך זו קצרה — בערך 5 דקות.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code>01_blink_L_fast.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/01_blink_L_fast/</code>.</li>
+  <li>מסתכלים על סרגל הכלים של Arduino IDE. מוצאים את כפתור ה-Upload — הכפתור עם חץ שמצביע ימינה.</li>
+  <li>לוחצים על Upload. עוקבים אחרי סרגל ההתקדמות בתחתית ה-IDE.</li>
+  <li>כשההעלאה מסתיימת, אמורה להופיע ההודעה הירוקה "Done uploading" בתחתית.</li>
+  <li>מסתכלים על הלד "L" על לוח הארדואינו. הוא אמור להבהב עכשיו מהר יותר מקודם — בערך שלוש פעמים בשנייה.</li>
+</ul>
+
+<h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+
+<p>זה הקוד המלא של <code>01_blink_L_fast.ino</code>. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
+
+<pre class="code-block"><span class="filename">01_blink_L_fast.ino</span>// Blinks the built-in "L" LED faster than the factory sketch.
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(150);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(150);
+}</pre>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  הלד הירוק "L" על לוח הארדואינו מהבהב עכשיו בערך שלוש פעמים בשנייה — מהר יותר מההבהוב של היצרן באבן דרך 1. ב-Arduino IDE מופיע "Done uploading" בירוק בתחתית. ההעלאה הראשונה עבדה.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>הלד "L" מהבהב מהר יותר מקודם</li>
+    <li>ב-Arduino IDE מופיע "Done uploading" בירוק</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  אם ה-Upload נכשל: בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM. אם ה-IDE אומר "Arduino not found," מוציאים את כבל ה-USB, מחכים שלוש שניות, ומחברים בחזרה. אם עדיין תקועים אחרי זה, קוראים למורה. פרוטוקול ההיתקעות המלא נמצא בכרטיסיית העזר <span class="r-ref">R2</span>.
+</div>
+
+<footer>גרסה 1 • אבן דרך 2 מתוך 8 • פרויקט 1 אותות אור • A4 portrait • מוכן ללמינציה</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>פרויקט 1 — אותות אור — מדריך</title>
+<link rel="stylesheet" href="task_cards/style.css">
+</head>
+<body>
+<div class="tutorial-content">
+
+<div class="header">
+  <h1>פרויקט 1 — אותות אור</h1>
+  <div class="subtitle">מדריך לתלמיד • סדנת ארדואינו דיפרנציאלית באגורים</div>
+</div>
+
+<div class="tutorial-intro">
+  <h2>איך משתמשים במדריך הזה</h2>
+  <p>המדריך הזה מכיל את כל פרויקט 1 בעמוד אחד. זה אותו תוכן של כרטיסיות המשימה המודפסות שעל השולחן — רק על המסך במקום על נייר. אפשר לקרוא את המדריך, או את הכרטיסיות המודפסות, או להשתמש בשניהם יחד. הם אומרים אותו דבר.</p>
+  <p><strong>קישורים שאפשר ללחוץ עליהם.</strong> כשרואים כפתור כחול כמו <span class="open-link" style="display:inline-block; padding:3pt 10pt; font-size:12pt;">📎 פתיחת קוד: filename.ino</span> אפשר ללחוץ עליו והקובץ ייפתח. בלי הקלדה, בלי העתקה.</p>
+  <p><strong>אם הלחיצה הראשונה לא עובדת:</strong> בפעם הראשונה שלוחצים על קישור של קובץ, Windows עלול לשאול באיזו אפליקציה לפתוח את הקובץ. בוחרים <strong>Arduino IDE</strong> ומסמנים את התיבה "Always use this app". אחרי זה, כל הלחיצות הבאות יפתחו את הקוד ישירות.</p>
+  <p><strong>עדיין תקועים?</strong> אם קישור לא נפתח, נתיב הקובץ מופיע באפור מיד מתחת לכפתור. מעתיקים את הנתיב, פותחים את סייר הקבצים, מנווטים לקובץ, ולוחצים עליו כפולה.</p>
+  <p><strong>בוחרים גרסה</strong> — גרסה 1 (בנייה מודרכת, 8 אבני דרך), גרסה 2 (עיצוב מודרך, 5 אבני דרך), או גרסה 3 (עיצוב פתוח, מתכנן פרויקט). אם זו הפעם הראשונה בסדנה, מתחילים בגרסה 1.</p>
+</div>
+
+<div class="tutorial-nav">
+  <h2>קופצים לאבן דרך</h2>
+
+  <h3>גרסה 1 — בנייה מודרכת (8 אבני דרך)</h3>
+  <ol>
+    <li><a href="#t1-m1">פותחים את עמדת העבודה ומחברים את הארדואינו</a> <em>(אבן דרך משותפת)</em></li>
+    <li><a href="#t1-m2">מעלים את הקוד הראשון</a></li>
+    <li><a href="#t1-m3">מחווטים את הלד החיצוני הראשון</a></li>
+    <li><a href="#t1-m4">מעלים את הקוד ומאירים את הלד</a></li>
+    <li><a href="#t1-m5">מוסיפים לד שני</a></li>
+    <li><a href="#t1-m6">מעלים את קוד ההבהוב לסירוגין</a></li>
+    <li><a href="#t1-m7">מחווטים את הכפתור</a></li>
+    <li><a href="#t1-m8">מעלים את הקוד שנשלט בכפתור</a> <em>(אבן הדרך האחרונה)</em></li>
+  </ol>
+
+  <h3>גרסה 2 — עיצוב מודרך (5 אבני דרך)</h3>
+  <ol>
+    <li><a href="#t2-m1">הפעלה ראשונית — עמדת עבודה, לד ראשון, העלאה ראשונה</a></li>
+    <li><a href="#t2-m2">בוחרים תבנית</a></li>
+    <li><a href="#t2-m3">משנים את הקוד בעזרת קלוד קוד</a></li>
+    <li><a href="#t2-m4">מוסיפים את הכפתור, בוחרים את התנהגותו</a></li>
+    <li><a href="#t2-m5">תבנית חתימה ותצוגה</a> <em>(אבן הדרך האחרונה)</em></li>
+  </ol>
+
+  <h3>גרסה 3 — עיצוב פתוח</h3>
+  <ol>
+    <li><a href="#t3-planner">מעצבים את פרויקט 1 שלכם</a></li>
+  </ol>
+
+  <h3>כרטיסיות עזר</h3>
+  <ol>
+    <li><a href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> — חיווט</a> (נפתח בלשונית חדשה)</li>
+    <li><a href="reference_cards_he/R2_stuck_protocol_he.html" target="_blank"><span class="r-ref">R2</span> — פרוטוקול היתקעות</a></li>
+    <li><a href="reference_cards_he/R3_claude_code_prompts_he.html" target="_blank"><span class="r-ref">R3</span> — פניות לקלוד קוד</a></li>
+    <li><a href="reference_cards_he/R4_safety_reminder_he.html" target="_blank"><span class="r-ref">R4</span> — תזכורת בטיחות</a></li>
+    <li><a href="reference_cards_he/R5_sketch_index_he.html" target="_blank"><span class="r-ref">R5</span> — אינדקס קובצי הקוד</a></li>
+  </ol>
+</div>
+
+<!-- ============================================================
+     גרסה 1
+     ============================================================ -->
+
+<div class="tier-divider" id="tier-1">
+  גרסה 1 — בנייה מודרכת
+  <span class="tier-subtitle">8 אבני דרך • קוד מוכן מראש • ערוץ A גרסה 1</span>
+</div>
+
+<!-- ============== T1 M1 ============================== -->
+
+<section class="milestone-section" id="t1-m1">
+  <div class="header">
+    <div class="milestone-badge">גרסה 1 • אבן דרך 1 מתוך 8</div>
+    <h1><span class="section-icon">🏁</span>פותחים את עמדת העבודה ומחברים את הארדואינו</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="together-notice">
+    <img src="images/together_milestone_icon.png" class="together-icon" alt="">
+    <strong>זו אבן דרך משותפת.</strong>
+    המורה לידכם לאורך כל אבן הדרך הזאת. לא עובדים עליה לבד.
+  </div>
+
+  <div class="why">
+    זו אבן הדרך הראשונה שלכם בתוכנית הארדואינו. באבן דרך זו בוחרים כינוי לתיקייה (אם עדיין אין לכם אחד), יוצרים את תיקיית פרויקט 1 יחד עם המורה, פותחים את קלוד קוד, מחברים את הארדואינו, ורואים את הלד הירוק הקטן על הארדואינו מהבהב בפעם הראשונה. אבן דרך זו נמשכת 5 עד 10 דקות.
+  </div>
+
+  <span class="screen-hint">תזכורת על ערוץ B: הדיאלוג של קלוד קוד אינו מומלץ לאבן דרך זו — המורה לידכם, ודיאלוג במקביל יוצר בלבול.</span>
+
+  <h2><span class="section-icon">📋</span>מה עושים (כשהמורה לידכם)</h2>
+  <ul class="checklist">
+    <li><strong>זו הפעם הראשונה שלכם בסדנה?</strong> המורה ישאל איזה כינוי אתם רוצים להשתמש בו לתיקייה. אפשר לבחור כל דבר. זה יהיה שם התיקייה לכל השנה, אז בוחרים משהו שנעים לראות.</li>
+    <li>פותחים את סייר הקבצים של Windows (לוחצים על Windows + E).</li>
+    <li>נכנסים לתיקייה הזאת: <code>G:\My Drive\Arduino_Projects\</code></li>
+    <li>מוצאים את תיקיית הכינוי שלכם, או יוצרים אותה יחד עם המורה.</li>
+    <li>בתוך תיקיית הכינוי, יוצרים תיקייה חדשה בשם <code>Project_1_Light_Signals</code>.</li>
+    <li>פותחים את קלוד קוד עם התיקייה החדשה כתיקיית העבודה שלה.</li>
+    <li>מחברים את הארדואינו Uno למחשב בכבל USB.</li>
+    <li>מוצאים את הלד הירוק הקטן עם האות "L" ליד רגל 13 בארדואינו. הוא אמור להבהב.</li>
+    <li>פותחים את Arduino IDE.</li>
+  </ul>
+
+  <p class="recognition-line">זו התיקייה שלכם, זה הפרויקט שלכם, פרויקט 1 מתחיל עכשיו.</p>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    הלד הירוק הקטן עם האות "L" ליד רגל 13 בארדואינו מהבהב. זה הקוד שהגיע עם הארדואינו מהיצרן — עדיין לא העלינו שום דבר.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>יש לכם תיקיית כינוי ב-<code>G:\My Drive\Arduino_Projects\&lt;your_nickname&gt;\</code></li>
+      <li>יש בתוכה תיקייה חדשה בשם <code>Project_1_Light_Signals</code></li>
+      <li>קלוד קוד פתוח ומכוון לתיקיית פרויקט 1 שלכם</li>
+      <li>הארדואינו מחובר והלד "L" מהבהב</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    זו אבן דרך משותפת — המורה ילווה אתכם דרכה. אם המורה עם תלמיד אחר, אפשר להתחיל במשימת הגיבוי של מיון הנגדים שעל השולחן.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ חזרה לראש גרסה 1</a></div>
+</section>
+
+<!-- ============== T1 M2 ============================== -->
+
+<section class="milestone-section" id="t1-m2">
+  <div class="header">
+    <div class="milestone-badge">גרסה 1 • אבן דרך 2 מתוך 8</div>
+    <h1><span class="section-icon">🏁</span>מעלים את הקוד הראשון</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    באבן דרך זו מעלים קוד שגורם ללד "L" להבהב מהר יותר מהקוד של היצרן. זו הפעם הראשונה שלוחצים על כפתור ה-Upload. בערך 5 דקות.
+  </div>
+
+  <h2><span class="section-icon">📋</span>מה עושים</h2>
+
+  <a class="open-link" href="ino_files/01_blink_L_fast/01_blink_L_fast.ino">📎 פתיחת קוד: 01_blink_L_fast.ino</a>
+  <code class="file-path">ino_files/01_blink_L_fast/01_blink_L_fast.ino</code>
+
+  <ul class="checklist">
+    <li>לוחצים על הכפתור לפתיחת הקוד למעלה. Arduino IDE אמור להיפתח עם <code>01_blink_L_fast.ino</code>.</li>
+    <li>לוחצים על כפתור ה-Upload בסרגל הכלים של Arduino IDE (אייקון החץ שמצביע ימינה).</li>
+    <li>מחכים ל-"Done uploading" בירוק בתחתית ה-IDE.</li>
+    <li>מסתכלים על הלד "L" בארדואינו. הוא אמור להבהב עכשיו מהר יותר מקודם — בערך שלוש פעמים בשנייה.</li>
+  </ul>
+
+  <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+  <pre class="code-block"><span class="filename">01_blink_L_fast.ino</span>// Blinks the built-in "L" LED faster than the factory sketch.
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(150);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(150);
+}</pre>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    הלד הירוק "L" מהבהב מהר יותר מקודם. "Done uploading" הופיע בירוק.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>הלד "L" מהבהב מהר יותר מההבהוב של היצרן</li>
+      <li>"Done uploading" הופיע ב-Arduino IDE</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    בודקים ש-Tools → Board מראה "Arduino Uno" ו-Tools → Port מראה יציאת COM. עדיין תקועים? ראו <a class="inline-link" href="reference_cards_he/R2_stuck_protocol_he.html" target="_blank"><span class="r-ref">R2</span> פרוטוקול היתקעות</a>.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ חזרה לראש גרסה 1</a></div>
+</section>
+
+<!-- ============== T1 M3 ============================== -->
+
+<section class="milestone-section" id="t1-m3">
+  <div class="header">
+    <div class="milestone-badge">גרסה 1 • אבן דרך 3 מתוך 8</div>
+    <h1><span class="section-icon">🔌</span>מחווטים את הלד החיצוני הראשון</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    באבן דרך זו מחווטים לד על הברדבורד בפעם הראשונה. חומרה בלבד — בלי העלאת קוד.
+  </div>
+
+  <h2><span class="section-icon">📋</span>מה עושים</h2>
+  <ul class="checklist">
+    <li>בוחרים לד אחד ממגש החלקים. כל צבע בסדר.</li>
+    <li>שמים לב: <strong>הרגל הארוכה היא חיובית (+)</strong>, <strong>הרגל הקצרה היא שלילית (−)</strong>.</li>
+    <li>בוחרים נגד של 220 אוהם (פסי צבע: <strong>אדום · אדום · חום</strong>).</li>
+    <li>מכניסים את הלד לברדבורד כך שכל רגל נמצאת בשורה שונה.</li>
+    <li>הרגל הארוכה (+) ← נגד 220 אוהם ← <strong>רגל 9</strong> של הארדואינו.</li>
+    <li>הרגל הקצרה (−) ← חוט ג'אמפר ← <strong>GND</strong> של הארדואינו.</li>
+  </ul>
+
+  <h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+  <pre class="wiring-block" dir="ltr">Arduino pin 9  ───[220 Ω]───┬─── LED long leg
+                           │
+                           ▼
+                      LED short leg ─── Arduino GND</pre>
+
+  <p>לתרשים מלא עם כל ארבעת מצבי החיווט של פרויקט 1, ראו <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט</a>.</p>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    הלד מחובר לברדבורד, הרגל הארוכה עוברת דרך הנגד של 220 אוהם לרגל 9, והרגל הקצרה מחוברת ל-GND. <strong>הלד עדיין לא מאיר</strong> — זה יקרה באבן דרך 4 כשמעלים את הקוד.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>הלד מוכנס לברדבורד כאשר שתי הרגליים בשורות שונות</li>
+      <li>הרגל הארוכה ← 220 אוהם ← רגל 9</li>
+      <li>הרגל הקצרה ← GND</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    קודם כל בודקים את <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט</a> — שם רואים בדיוק איך הלד אמור להיראות. אם עדיין לא בטוחים, קוראים למורה.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ חזרה לראש גרסה 1</a></div>
+</section>
+
+<!-- ============== T1 M4 ============================== -->
+
+<section class="milestone-section" id="t1-m4">
+  <div class="header">
+    <div class="milestone-badge">גרסה 1 • אבן דרך 4 מתוך 8</div>
+    <h1><span class="section-icon">🏁</span>מעלים את הקוד ומאירים את הלד</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    זו אבן הדרך הכי חשובה בפרויקט 1. חיווטתם את הלד. עכשיו מעלים קוד שגורם לו להבהב. הלד שעל הברדבורד מהבהב בזכות קוד שהעליתם. זה הרגע שבו "משהו שחיווטתי" מגיב ל"קוד שהעליתי".
+  </div>
+
+  <h2><span class="section-icon">📋</span>מה עושים</h2>
+
+  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">📎 פתיחת קוד: 02_blink_external.ino</a>
+  <code class="file-path">ino_files/02_blink_external/02_blink_external.ino</code>
+
+  <ul class="checklist">
+    <li>לוחצים על הכפתור לפתיחת הקוד למעלה.</li>
+    <li>לוחצים על כפתור ה-Upload ב-Arduino IDE.</li>
+    <li>מחכים ל-"Done uploading".</li>
+    <li>מסתכלים על הלד שעל הברדבורד. הוא אמור להבהב פעם בשנייה.</li>
+  </ul>
+
+  <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+  <pre class="code-block"><span class="filename">02_blink_external.ino</span>// Blinks the external LED wired to digital pin 9.
+
+const int LED_PIN = 9;
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(500);
+  digitalWrite(LED_PIN, LOW);
+  delay(500);
+}</pre>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    הלד החיצוני על הברדבורד מהבהב פעם בשנייה. החיווט שלכם קם לתחייה בזכות הקוד שהעליתם.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>הלד החיצוני מהבהב פעם בשנייה</li>
+      <li>"Done uploading" הופיע בירוק</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים? הלד לא מהבהב?</strong>
+    <ol>
+      <li>הופכים את הלד. הרגל הארוכה לנגד, הרגל הקצרה ל-GND. בערך מחצית מהמקרים הלד הפוך.</li>
+      <li>בודקים שהנגד בין רגל 9 לרגל הארוכה של הלד — לא סתם תקוע בברדבורד.</li>
+      <li>מחפשים את ההודעה הירוקה "Done uploading". אם היא חסרה, ההעלאה נכשלה.</li>
+      <li>עדיין תקועים? קוראים למורה. ראו <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט</a>.</li>
+    </ol>
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ חזרה לראש גרסה 1</a></div>
+</section>
+
+<!-- ============== T1 M5 ============================== -->
+
+<section class="milestone-section" id="t1-m5">
+  <div class="header">
+    <div class="milestone-badge">גרסה 1 • אבן דרך 5 מתוך 8</div>
+    <h1><span class="section-icon">🔌</span>מוסיפים לד שני</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    אותה תבנית חיווט כמו באבן דרך 3, רק שורה אחת הצידה בברדבורד. לא מעלים קוד באבן דרך זו.
+  </div>
+
+  <h2><span class="section-icon">📋</span>מה עושים</h2>
+  <ul class="checklist">
+    <li>בוחרים לד שני ב<strong>צבע שונה</strong> מהראשון.</li>
+    <li>בוחרים עוד נגד של 220 אוהם.</li>
+    <li>מכניסים את הלד השני לברדבורד, שורה אחת הצידה מהראשון.</li>
+    <li>הרגל הארוכה ← 220 אוהם ← <strong>רגל 10</strong> של הארדואינו.</li>
+    <li>הרגל הקצרה ← GND.</li>
+  </ul>
+
+  <h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+  <pre class="wiring-block" dir="ltr">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND</pre>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    שני לדים על הברדבורד. <strong>הלד הראשון עדיין מהבהב</strong> מהקוד של אבן דרך 4. הלד השני עדיין לא מאיר — אבן דרך 6 מתקנת את זה.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>שני לדים על הברדבורד, זה לצד זה</li>
+      <li>לד 2 רגל ארוכה ← 220 אוהם ← רגל 10; רגל קצרה ← GND</li>
+      <li>אפשר להבחין בין שני הלדים לפי הצבע</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    החיווט הוא אותה תבנית כמו באבן דרך 3 — רק שורה אחת הצידה. ראו <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט 2</a>. אם הלד הראשון הפסיק להבהב בזמן חיווט השני, אולי הג'אמפר שלו התנתק — בודקים שוב.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ חזרה לראש גרסה 1</a></div>
+</section>
+
+<!-- ============== T1 M6 ============================== -->
+
+<section class="milestone-section" id="t1-m6">
+  <div class="header">
+    <div class="milestone-badge">גרסה 1 • אבן דרך 6 מתוך 8</div>
+    <h1><span class="section-icon">🏁</span>מעלים את קוד ההבהוב לסירוגין</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    עכשיו הארדואינו שולט בשני דברים בו־זמנית. כשלד אחד דולק, השני כבוי. זו הפעם הראשונה שרואים את הארדואינו עושה יותר מדבר אחד באותו קוד.
+  </div>
+
+  <h2><span class="section-icon">📋</span>מה עושים</h2>
+
+  <a class="open-link" href="ino_files/03_blink_alternating/03_blink_alternating.ino">📎 פתיחת קוד: 03_blink_alternating.ino</a>
+  <code class="file-path">ino_files/03_blink_alternating/03_blink_alternating.ino</code>
+
+  <ul class="checklist">
+    <li>לוחצים על הכפתור לפתיחת הקוד למעלה.</li>
+    <li>לוחצים על Upload.</li>
+    <li>מחכים ל-"Done uploading".</li>
+    <li>מסתכלים על שני הלדים. הם אמורים להתחלף לסירוגין — כשלד 1 דולק, לד 2 כבוי, ואז להפך.</li>
+  </ul>
+
+  <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+  <pre class="code-block"><span class="filename">03_blink_alternating.ino</span>// Blinks two external LEDs in alternation.
+
+const int LED_1 = 9;
+const int LED_2 = 10;
+
+void setup() {
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_1, HIGH);
+  digitalWrite(LED_2, LOW);
+  delay(500);
+
+  digitalWrite(LED_1, LOW);
+  digitalWrite(LED_2, HIGH);
+  delay(500);
+}</pre>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    שני לדים לסירוגין — לד 1 דולק / לד 2 כבוי / ואז מתחלפים / כל חצי שנייה.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>שני הלדים מהבהבים לסירוגין</li>
+      <li>"Done uploading" הופיע בירוק</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    <strong>שני הלדים דולקים כל הזמן:</strong> כנראה שאחד מהם מחובר ל-5 V במקום לרגל דיגיטלית. <strong>רק לד אחד עובד:</strong> השני מחובר הפוך, או שהנגד שלו לא מחובר. ראו <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט 2</a>.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ חזרה לראש גרסה 1</a></div>
+</section>
+
+<!-- ============== T1 M7 ============================== -->
+
+<section class="milestone-section" id="t1-m7">
+  <div class="header">
+    <div class="milestone-badge">גרסה 1 • אבן דרך 7 מתוך 8</div>
+    <h1><span class="section-icon">🔌</span>מחווטים את הכפתור</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    זו אבן דרך החיווט הקשה ביותר בפרויקט 1. מוסיפים כפתור לחיצה וגם נגד מיוחד בשם נגד הורדה. חשוב מאוד להכניס את נגד ההורדה במקום הנכון — אם שמים אותו במקום הלא נכון, הארדואינו יאתחל את עצמו. קוראים בזהירות.
+  </div>
+
+  <h2><span class="section-icon">📋</span>מה עושים</h2>
+  <ul class="checklist">
+    <li>בוחרים כפתור לחיצה. יש לו ארבע רגליים.</li>
+    <li>מכניסים אותו <strong>לרוחב החריץ המרכזי</strong> של הברדבורד — ארבע רגליים בארבע שורות שונות.</li>
+    <li>בוחרים <strong>נגד של 10 קילו-אוהם</strong> (פסי צבע: <strong>חום · שחור · כתום</strong>). שונה מהנגד של 220 אוהם של הלד.</li>
+    <li>רגל A של הכפתור ← <strong>5 V</strong> של הארדואינו.</li>
+    <li>רגל B של הכפתור ← <strong>רגל 2</strong> של הארדואינו.</li>
+    <li>מרגל B, גם דרך הנגד של 10 קילו-אוהם ← <strong>GND</strong>. זה נגד ההורדה.</li>
+  </ul>
+
+  <h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+  <pre class="wiring-block" dir="ltr">Arduino 5 V ──────────────┬─── Button pin A
+                          │
+                          ▼
+                      Button pin B ────┬─── Arduino pin 2
+                                       │
+                                       └─[10 kΩ]── Arduino GND</pre>
+
+  <div class="warning">
+    <strong><span class="section-icon">⚠️</span>הטעות הנפוצה ביותר</strong>
+    נגד ההורדה של 10 קילו-אוהם הולך בין <strong>רגל 2 ל-GND</strong>. לא בין 5 V ל-GND. אם שמים אותו בין 5 V ל-GND, הלחיצה על הכפתור יוצרת קצר והארדואינו מתאתחל. בודקים באצבע: מרגל 2 ל-GND? בטוח. מ-5 V ל-GND? קודם כל מתקנים את זה.
+  </div>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    הכפתור על הברדבורד עם נגד ההורדה בין רגל 2 ל-GND. שני הלדים מקודם עדיין מהבהבים. עדיין לא קורה שום דבר חדש כשלוחצים על הכפתור — הקוד הנוכחי לא יודע על הכפתור. אבן דרך 8 משנה את זה.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>הכפתור לרוחב החריץ המרכזי, רגליים בארבע שורות שונות</li>
+      <li>רגל A של הכפתור ← 5 V</li>
+      <li>רגל B של הכפתור ← רגל 2 וגם ← 10 קילו-אוהם ← GND</li>
+      <li>שני הלדים מקודם עדיין לסירוגין</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    זו אבן דרך החיווט הקשה ביותר. המורה מצפה לעזור כאן — קוראים לו. לפני שקוראים, בודקים את <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט 3</a> למיקום נגד ההורדה. אם הארדואינו ממשיך להתאתחל, נגד ההורדה בצד הלא נכון — מוציאים את ה-USB, מתקנים, מחברים חזרה.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ חזרה לראש גרסה 1</a></div>
+</section>
+
+<!-- ============== T1 M8 ============================== -->
+
+<section class="milestone-section" id="t1-m8">
+  <div class="header">
+    <div class="milestone-badge celebration">גרסה 1 • אבן דרך 8 מתוך 8 • אבן הדרך האחרונה</div>
+    <h1><span class="section-icon">🏁</span>מעלים את הקוד שנשלט בכפתור</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    אבן הדרך האחרונה של פרויקט 1. חיווטתם את הכפתור באבן דרך 7. עכשיו מעלים קוד שמשתמש בכפתור כדי להחליף איזה לד דולק. הלחיצה על הכפתור מחליפה איזה לד מאיר. זה הפרויקט האינטראקטיבי הראשון שלכם בארדואינו.
+  </div>
+
+  <h2><span class="section-icon">📋</span>מה עושים</h2>
+
+  <a class="open-link" href="ino_files/04_button_control/04_button_control.ino">📎 פתיחת קוד: 04_button_control.ino</a>
+  <code class="file-path">ino_files/04_button_control/04_button_control.ino</code>
+
+  <ul class="checklist">
+    <li>לוחצים על הכפתור לפתיחת הקוד למעלה.</li>
+    <li>לוחצים על Upload.</li>
+    <li>מחכים ל-"Done uploading".</li>
+    <li>מסתכלים על הברדבורד. לד אחד דולק, השני כבוי.</li>
+    <li>לוחצים ומחזיקים את הכפתור. הלדים מתחלפים — זה שהיה דולק נכבה, וזה שהיה כבוי מאיר עכשיו.</li>
+    <li>משחררים את הכפתור. הלדים מתחלפים בחזרה.</li>
+    <li>לוחצים ומשחררים כמה פעמים. הכפתור אמור להחליף את הלדים בצורה יציבה.</li>
+  </ul>
+
+  <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+  <pre class="code-block"><span class="filename">04_button_control.ino</span>// A push-button controls which of two LEDs is on.
+
+const int LED_1 = 9;
+const int LED_2 = 10;
+const int BUTTON = 2;
+
+void setup() {
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+  pinMode(BUTTON, INPUT);
+}
+
+void loop() {
+  int buttonState = digitalRead(BUTTON);
+
+  if (buttonState == HIGH) {
+    // Button is pressed: LED 2 on, LED 1 off.
+    digitalWrite(LED_1, LOW);
+    digitalWrite(LED_2, HIGH);
+  } else {
+    // Button not pressed: LED 1 on, LED 2 off.
+    digitalWrite(LED_1, HIGH);
+    digitalWrite(LED_2, LOW);
+  }
+}</pre>
+
+  <p>שמים לב ל-<code>if ... else</code>. הארדואינו קורא את הכפתור. אם הכפתור לחוץ (<code>HIGH</code>), מאיר לד אחד. אם לא לחוץ (<code>LOW</code>), מאיר את השני. קלט ← החלטה ← פלט. זו התבנית הבסיסית של כל פרויקט אינטראקטיבי בארדואינו.</p>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    כשהכפתור לא לחוץ: לד 1 (רגל 9) דולק, לד 2 (רגל 10) כבוי. כשלוחצים: לד 1 נכבה, לד 2 מאיר. ההחלפה מיידית ויציבה.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>לחיצה על הכפתור מחליפה איזה לד מאיר</li>
+      <li>שחרור הכפתור מחליף חזרה</li>
+      <li>השלמתם את פרויקט 1</li>
+    </ul>
+  </div>
+
+  <div class="celebration">
+    <span class="title">🎉 השלמתם את פרויקט 1!</span>
+    חיווטתם ברדבורד מאפס. העליתם ארבעה קבצי קוד. בניתם מעגל אינטראקטיבי עם לדים וכפתור. אפשר לבקש מהמורה תמונה של הפרויקט הגמור שלכם. הנדסת חשמל אמיתית.
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים? הכפתור לא עושה כלום?</strong>
+    הסיבה הנפוצה ביותר: נגד ההורדה של 10 קילו-אוהם בצד הלא נכון. בודקים את <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט 3</a>. הנגד חייב להיות בין רגל 2 ל-GND, לא בין 5 V ל-GND. אם החיווט נכון והכפתור עדיין לא עובד, קוראים למורה.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-1">↑ חזרה לראש גרסה 1</a></div>
+</section>
+
+<!-- ============================================================
+     גרסה 2
+     ============================================================ -->
+
+<div class="tier-divider" id="tier-2">
+  גרסה 2 — עיצוב מודרך
+  <span class="tier-subtitle">5 אבני דרך • בחירת תבנית • התנהגות כפתור • ערוץ A גרסה 2</span>
+</div>
+
+<!-- ============== T2 M1 ============================== -->
+
+<section class="milestone-section" id="t2-m1">
+  <div class="header">
+    <div class="milestone-badge">גרסה 2 • אבן דרך 1 מתוך 5</div>
+    <h1><span class="section-icon">🏁</span>הפעלה ראשונית — עמדת עבודה, לד ראשון, העלאה ראשונה</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    אבן דרך זו מכסה את כל מה שגרסה 1 עושה באבני דרך 1 עד 4, אבל זזה מהר יותר. אם זו הפעם הראשונה שלכם בסדנה, חלק בחירת הכינוי ויצירת התיקייה עדיין אבן דרך משותפת — המורה יהיה לידכם.
+  </div>
+
+  <h2><span class="section-icon">📋</span>מה עושים</h2>
+
+  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">📎 פתיחת קוד: 02_blink_external.ino</a>
+  <code class="file-path">ino_files/02_blink_external/02_blink_external.ino</code>
+
+  <ul class="checklist">
+    <li><strong>הקמת עמדת העבודה</strong> (יחד עם המורה אם זו הפעם הראשונה): סייר הקבצים ← <code>G:\My Drive\Arduino_Projects\</code> ← יוצרים או מוצאים את תיקיית הכינוי שלכם ← יוצרים <code>Project_1_Light_Signals</code> בתוכה ← פותחים את קלוד קוד.</li>
+    <li>מחברים את הארדואינו. מוודאים שהלד "L" מהבהב מהקוד של היצרן.</li>
+    <li>מחווטים לד אחד: רגל ארוכה ← 220 אוהם ← רגל 9; רגל קצרה ← GND. ראו <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט 1</a>.</li>
+    <li>לוחצים על הכפתור לפתיחת הקוד למעלה. לוחצים על Upload.</li>
+    <li>מוודאים שהלד החיצוני מהבהב פעם בשנייה.</li>
+  </ul>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    התיקיות נוצרו ב-Drive. קלוד קוד פתוח. הארדואינו מחובר. לד אחד מחווט על רגל 9 ומהבהב. מוכנים להחלטות עיצוב באבן הדרך הבאה.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>תיקיות הכינוי והפרויקט קיימות</li>
+      <li>לד אחד מחווט על רגל 9 ומהבהב</li>
+      <li>קלוד קוד פתוח על תיקיית פרויקט 1 שלכם</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    אם זה מרגיש מהר מדי, מסתכלים בחלקי המדריך של גרסה 1 למעלה (אבני דרך 1 עד 4) — שם אותם שלבים בחלקים קטנים יותר. אפשר להאט.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ חזרה לראש גרסה 2</a></div>
+</section>
+
+<!-- ============== T2 M2 ============================== -->
+
+<section class="milestone-section" id="t2-m2">
+  <div class="header">
+    <div class="milestone-badge">גרסה 2 • אבן דרך 2 מתוך 5</div>
+    <h1><span class="section-icon">🏁</span>בוחרים תבנית</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    החלטת העיצוב האמיתית הראשונה שלכם בפרויקט 1. בוחרים את התבנית שאתם רוצים לבנות. לסירוגין, רדיפה, או נשימה. אין תשובה "נכונה" — בוחרים את מה שאהבתם.
+  </div>
+
+  <h2><span class="section-icon">📋</span>בוחרים אחת משלוש התבניות האלה</h2>
+
+  <div class="choice-point">
+    <strong>אפשרות א — לסירוגין (2 לדים)</strong>
+    <div class="option">
+      שני לדים מהבהבים בניגוד. כשאחד דולק, השני כבוי.<br>
+      <strong>חיווט:</strong> מוסיפים לד שני על רגל 10 עם נגד 220 אוהם משלו.<br>
+      <a class="open-link" href="ino_files/T2_alternating_starter/T2_alternating_starter.ino">📎 פתיחת קוד התחלתי: T2_alternating_starter.ino</a>
+      <code class="file-path">ino_files/T2_alternating_starter/T2_alternating_starter.ino</code>
+    </div>
+
+    <strong>אפשרות ב — רדיפה (3 לדים)</strong>
+    <div class="option">
+      שלושה לדים מאירים אחד בכל פעם, כמו אורות מרדף.<br>
+      <strong>חיווט:</strong> מוסיפים לד שני על רגל 10 וגם לד שלישי על רגל 11, כל אחד עם נגד 220 אוהם משלו.<br>
+      <a class="open-link" href="ino_files/T2_chasing_starter/T2_chasing_starter.ino">📎 פתיחת קוד התחלתי: T2_chasing_starter.ino</a>
+      <code class="file-path">ino_files/T2_chasing_starter/T2_chasing_starter.ino</code>
+    </div>
+
+    <strong>אפשרות ג — נשימה (לד אחד, עמעום PWM)</strong>
+    <div class="option">
+      לד אחד מתעמעם ומתבהיר בחלקות.<br>
+      <strong>חיווט:</strong> שום דבר חדש. משתמשים בלד הראשון מאבן דרך 1 על רגל 9.<br>
+      <a class="open-link" href="ino_files/T2_breathing_starter/T2_breathing_starter.ino">📎 פתיחת קוד התחלתי: T2_breathing_starter.ino</a>
+      <code class="file-path">ino_files/T2_breathing_starter/T2_breathing_starter.ino</code>
+    </div>
+  </div>
+
+  <h2><span class="section-icon">📋</span>מה עושים</h2>
+  <ul class="checklist">
+    <li>מחליטים א, ב, או ג.</li>
+    <li>מחווטים כל לד נוסף שהבחירה שלכם דורשת.</li>
+    <li>לוחצים על הכפתור לפתיחת הקוד ההתחלתי (מהאפשרות שבחרתם).</li>
+    <li>לוחצים על Upload ומסתכלים.</li>
+  </ul>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    התבנית שבחרתם רצה על הברדבורד. מסתכלים כמה שניות — באבן דרך 3 משנים אותה בעזרת קלוד קוד.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>בחרתם א, ב, או ג</li>
+      <li>החומרה מחווטת לבחירה שלכם</li>
+      <li>הקוד ההתחלתי רץ</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    אפשרות ב (רדיפה) צריכה שלושה לדים מחווטים. אפשרות ג (נשימה) משתמשת רק ברגל 9 (רגל PWM). ראו <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span></a>.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ חזרה לראש גרסה 2</a></div>
+</section>
+
+<!-- ============== T2 M3 ============================== -->
+
+<section class="milestone-section" id="t2-m3">
+  <div class="header">
+    <div class="milestone-badge">גרסה 2 • אבן דרך 3 מתוך 5</div>
+    <h1><span class="section-icon">💻</span>משנים את הקוד בעזרת קלוד קוד</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    זו הפעם הראשונה שאתם משתמשים בקלוד קוד כשותף תכנות (ערוץ A — גרסה 2). אתם מתארים את השינוי שאתם רוצים, קלוד קוד עוזר להבין מה לשנות. חשוב: מתארים את הבעיה לפני שמבקשים פתרון. כך עובד ערוץ A גרסה 2.
+  </div>
+
+  <h2><span class="section-icon">📋</span>שלב 1 — ממלאים את (א)(ב)(ג) לפני שמדברים עם קלוד קוד</h2>
+  <p>בוחרים שינוי שאתם רוצים. קלים: לעשות מהיר יותר, איטי יותר, להוסיף לד שלישי, לשנות על איזו רגל לד נמצא.</p>
+
+  <pre class="prompt-template">(א) מה אני רוצה שיקרה:
+_________________________________________________
+_________________________________________________
+
+(ב) מה קורה עכשיו:
+_________________________________________________
+_________________________________________________
+
+(ג) מה כבר ניסיתי (או הסתכלתי עליו):
+_________________________________________________
+_________________________________________________</pre>
+
+  <h2><span class="section-icon">💻</span>שלב 2 — שולחים את הפנייה לקלוד קוד</h2>
+  <p>בקלוד קוד, מדביקים את התבנית הזאת (עם התשובות שלכם) ואת הקוד הנוכחי:</p>
+
+  <pre class="prompt-template">אני עובד על הקוד ההתחלתי שלי בגרסה 2 של פרויקט 1.
+
+(א) מה אני רוצה שיקרה:
+[התשובה שלכם]
+
+(ב) מה קורה עכשיו:
+[התשובה שלכם]
+
+(ג) מה כבר ניסיתי:
+[התשובה שלכם]
+
+הנה הקוד הנוכחי שלי:
+[מדביקים כאן את כל קובץ הקוד]
+
+תוכל לעזור לי להבין מה לשנות?</pre>
+
+  <h2><span class="section-icon">📋</span>שלב 3 — קוראים, משנים, מעלים, בודקים</h2>
+  <ul class="checklist">
+    <li>קוראים את התשובה של קלוד קוד. לא מדביקים סתם קוד שלא הבנתם.</li>
+    <li>מבצעים את השינוי ב-Arduino IDE.</li>
+    <li>לוחצים על Upload.</li>
+    <li>מסתכלים. ההתנהגות השתנתה כמו שרציתם?</li>
+    <li>אם לא, חוזרים לשלב 1 עם (א)(ב)(ג) חדשים.</li>
+  </ul>
+
+  <h2><span class="section-icon">📋</span>בדיקת הבנה</h2>
+  <p>עונים במשפט אחד (בקול רם או על נייר):</p>
+  <pre class="prompt-template">אחרי שקלוד קוד עזר לי, הדבר שהשתנה בקוד שלי הוא:
+_________________________________________________
+_________________________________________________</pre>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    התבנית שלכם רצה אחרת מהקוד ההתחלתי. אפשר להצביע על שורת קוד אחת ולומר "זו השורה שהשתנתה".
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>מילאתם (א)(ב)(ג) לפני שדיברתם עם קלוד קוד</li>
+      <li>התבנית שלכם רצה אחרת מהקוד ההתחלתי</li>
+      <li>אתם יכולים לומר במשפט אחד מה השתנה</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    אם התשובה של קלוד לא עבדה, חוזרים ל-(א)(ב)(ג) ומתארים מה קרה בצורה יותר ספציפית. "זה עדיין מהבהב אותו דבר" פחות שימושי מ"שני הלדים עכשיו דולקים יחד וזה לא מה שרציתי". ראו <a class="inline-link" href="reference_cards_he/R3_claude_code_prompts_he.html" target="_blank"><span class="r-ref">R3</span> פניות לקלוד קוד</a>.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ חזרה לראש גרסה 2</a></div>
+</section>
+
+<!-- ============== T2 M4 ============================== -->
+
+<section class="milestone-section" id="t2-m4">
+  <div class="header">
+    <div class="milestone-badge">גרסה 2 • אבן דרך 4 מתוך 5</div>
+    <h1><span class="section-icon">🔌</span>מוסיפים את הכפתור, בוחרים את התנהגותו</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    מוסיפים כפתור לחיצה ומחליטים מה הוא יעשה. אחר כך משתמשים בקלוד קוד גרסה 2 כדי שהקוד יבצע את ההתנהגות שבחרתם.
+  </div>
+
+  <h2><span class="section-icon">🔌</span>שלב 1 — מחווטים את הכפתור</h2>
+  <p>אותו חיווט כמו גרסה 1 אבן דרך 7: הכפתור לרוחב החריץ המרכזי, רגל A ל-5 V, רגל B לרגל 2 של הארדואינו, ונגד הורדה של 10 קילו-אוהם מרגל 2 ל-GND. ראו <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט 3</a>.</p>
+
+  <div class="warning">
+    <strong><span class="section-icon">⚠️</span>תזכורת על נגד ההורדה</strong>
+    הנגד של 10 קילו-אוהם הולך בין רגל 2 ל-GND. לא בין 5 V ל-GND. טעות כאן גורמת לארדואינו להתאתחל.
+  </div>
+
+  <h2><span class="section-icon">📋</span>שלב 2 — בוחרים התנהגות אחת לכפתור</h2>
+
+  <div class="choice-point">
+    <strong>התנהגות א — החלפת מצב</strong>
+    <div class="option">
+      לחיצה אחת — מפעיל. עוד לחיצה — עוצר. עוד לחיצה — מפעיל שוב.
+    </div>
+
+    <strong>התנהגות ב — מעבר בין תבניות</strong>
+    <div class="option">
+      הלחיצה על הכפתור עוברת בין תבניות. לסירוגין → רדיפה → נשימה → חוזרים ללסירוגין. (צריך את כל שלושת הלדים מחווטים.)
+    </div>
+
+    <strong>התנהגות ג — שליטת מהירות</strong>
+    <div class="option">
+      כשהכפתור לחוץ — התבנית רצה מהר יותר. בשחרור — חוזרים למהירות רגילה.
+    </div>
+  </div>
+
+  <h2><span class="section-icon">💻</span>שלב 3 — משתמשים בקלוד קוד גרסה 2 לביצוע הבחירה שלכם</h2>
+  <p>אותה משמעת של (א)(ב)(ג) כמו באבן דרך 3:</p>
+  <pre class="prompt-template">(א) מה אני רוצה שיקרה:
+[מתארים את ההתנהגות שבחרתם — א, ב, או ג — במילים שלכם]
+
+(ב) מה קורה עכשיו:
+[מה הקוד עושה כרגע, לפני שהכפתור עובד]
+
+(ג) מה כבר ניסיתי:
+[מה כבר הסתכלנו עליו או שינינו]</pre>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    הכפתור משנה את התבנית שלכם בדרך שבחרתם. אפשר להראות את ההתנהגות למורה ולומר מה בניתם.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>הכפתור מחווט עם נגד ההורדה של 10 קילו-אוהם במיקום הנכון</li>
+      <li>בחרתם א, ב, או ג</li>
+      <li>הכפתור באמת עושה את מה שבחרתם</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    הכפתור לא עושה כלום? בודקים את מיקום נגד ההורדה ב-<a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span></a>. אם החיווט נכון, הקוד צריך <code>pinMode(BUTTON, INPUT)</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">setup()</span> ו-<code>digitalRead()</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">loop()</span>. אפשר לבקש מקלוד קוד לבדוק.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ חזרה לראש גרסה 2</a></div>
+</section>
+
+<!-- ============== T2 M5 ============================== -->
+
+<section class="milestone-section" id="t2-m5">
+  <div class="header">
+    <div class="milestone-badge celebration">גרסה 2 • אבן דרך 5 מתוך 5 • אבן הדרך האחרונה</div>
+    <h1><span class="section-icon">🏁</span>תבנית חתימה ותצוגה</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    אבן הדרך האחרונה של גרסה 2. מחברים את בחירת התבנית, התנהגות הכפתור, הצבעים והתזמון ל"תבנית חתימה" — הגרסה שלכם של פרויקט 1. בסוף מראים אותה למורה.
+  </div>
+
+  <h2><span class="section-icon">📋</span>שלב 1 — מחליטים על תבנית החתימה שלכם</h2>
+  <pre class="prompt-template">תבנית החתימה שלי תעשה:
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________</pre>
+
+  <h2><span class="section-icon">🔌</span>שלב 2 — בונים אותה</h2>
+  <ul class="checklist">
+    <li>מוודאים שהלדים והכפתור עדיין מחווטים.</li>
+    <li>משתמשים בקלוד קוד גרסה 2 (או גרסה 3 אם מרגישים בטוחים) כדי לשנות את הקוד.</li>
+    <li>מעלים, מסתכלים, משפרים. חוזרים לקלוד קוד עם (א)(ב)(ג) חדשים אם צריך.</li>
+    <li>ממשיכים עד שזה מתאים לתכנון — או עד שמחליטים שמה שיצא טוב יותר מהתכנון.</li>
+  </ul>
+
+  <h2><span class="section-icon">📋</span>שלב 3 — מראים את זה למורה</h2>
+  <ul class="checklist">
+    <li>קוראים למורה כשמרוצים.</li>
+    <li>מראים את התבנית רצה. אומרים במשפט או שניים מה בניתם.</li>
+    <li>אופציונלי: אפשר לבקש מהמורה לצלם תמונה.</li>
+  </ul>
+
+  <div class="expected">
+    <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+    הגרסה האישית שלכם של פרויקט 1 רצה על הברדבורד. המורה ראה אותה. יש לכם תמונה אם רציתם.
+  </div>
+
+  <div class="celebration">
+    <span class="title">🎉 השלמתם את גרסה 2 של פרויקט 1!</span>
+    בחרתם תבנית, שיניתם קוד עם קלוד קוד, חיווטתם כפתור, בחרתם התנהגות, ובניתם אותה — תבנית שהיא שלכם. זו המהות של גרסה 2.
+  </div>
+
+  <div class="done-when">
+    <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+    <ul>
+      <li>תבנית החתימה שלכם רצה</li>
+      <li>הכפתור עושה את מה שבחרתם</li>
+      <li>הראיתם למורה</li>
+    </ul>
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים?</strong>
+    אם אי אפשר להחליט מה תבנית החתימה צריכה להיות, מחברים שני דברים שאהבתם מאבני דרך 2 ו-3. למשל: "לסירוגין, מהר יותר מברירת המחדל, והכפתור מפעיל ועוצר". זה נחשב.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-2">↑ חזרה לראש גרסה 2</a></div>
+</section>
+
+<!-- ============================================================
+     גרסה 3
+     ============================================================ -->
+
+<div class="tier-divider" id="tier-3">
+  גרסה 3 — עיצוב פתוח
+  <span class="tier-subtitle">מעצבים את הגרסה שלכם של פרויקט 1 מאפס</span>
+</div>
+
+<!-- ============== T3 PLANNER ============================== -->
+
+<section class="milestone-section" id="t3-planner">
+  <div class="header">
+    <div class="milestone-badge">גרסה 3 • מתכנן פרויקט</div>
+    <h1><span class="section-icon">🏁</span>מעצבים את פרויקט 1 שלכם</h1>
+    <div class="subtitle">פרויקט 1 • אותות אור</div>
+  </div>
+
+  <div class="why">
+    גרסה 3 היא לתלמידים שרוצים לעצב גרסה משלהם של פרויקט 1 מאפס. בוחרים רעיון שימושי אמיתי, בונים אותו, ומראים אותו. אין אבני דרך ממוספרות — רק חמישה שלבים במתכנן הזה.
+  </div>
+
+  <span class="screen-hint">בגרסה המודפסת של המתכנן יש שדות למילוי בעט. הגרסה הזו על המסך מראה את אותן שאלות — כותבים את התשובות על נייר, בקלוד קוד, או בקובץ טקסט נפרד.</span>
+
+  <h2><span class="section-icon">📋</span>שלב 1 — מתכננים</h2>
+
+  <p><strong>מה הפרויקט שלכם הולך להיות?</strong> (משפט או שניים)</p>
+  <p><em>דוגמה: "מנורת מצב רוח לשולחן שלי. שלושה לדים. כפתור בוחר את מצב הרוח של הצבע — רגוע, אנרגטי, או ניטרלי."</em></p>
+
+  <p><strong>למי זה מיועד?</strong> (לעצמכם, לבן משפחה, לבית הספר, לשימוש מסוים)</p>
+  <p><em>לדעת למי זה מיועד עוזר להחליט החלטות עיצוב.</em></p>
+
+  <p><strong>איזו חומרה צריך?</strong> (לדים, נגדים, כפתור, חוטי ג'אמפר — כמה מכל אחד)</p>
+  <p><em>ברוב פרויקטי גרסה 3: 2–4 לדים, 2–4 נגדים, כפתור, חוטי ג'אמפר. שואלים את המורה אם צריך משהו לא רגיל.</em></p>
+
+  <p><strong>מה ההתנהגות?</strong> (ספציפי)</p>
+  <p><em>"הלדים עושים משהו" לא מספיק. "כשאני לוחץ על הכפתור, הלדים עוברים בין אדום → צהוב → ירוק → כבוי, לחיצה אחת כל פעם, ונשארים על הצבע שעצרתם בו" מספיק כדי להתחיל לקודד.</em></p>
+
+  <h2><span class="section-icon">🔌</span>שלב 2 — בונים</h2>
+  <ul class="checklist">
+    <li>מציירים את החיווט על נייר קודם.</li>
+    <li>מחווטים על הברדבורד. משתמשים ב-<a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span></a> כבסיס.</li>
+    <li>מצלמים תמונה של החיווט הגמור (אופציונלי).</li>
+  </ul>
+
+  <h2><span class="section-icon">💻</span>שלב 3 — קוד (ערוץ A — גרסה 3)</h2>
+  <p>משתמשים בקלוד קוד במצב דיאלוג חופשי. מתארים מה אנחנו מנסים לבנות. משפרים יחד. אותה משמעת של (א)(ב)(ג) — מתארים את הבעיה לפני שמבקשים פתרון.</p>
+
+  <p><strong>טיוטת הפנייה הראשונה</strong> (כותבים אותה לפני ששולחים):</p>
+  <pre class="prompt-template">אני בונה [תיאור הפרויקט שלכם] עבור [למי זה מיועד].
+יש לי [רשימת החומרה] מחווטת על [אילו רגליים].
+אני רוצה שההתנהגות תהיה [ספציפי].
+תוכל לעזור לי לכתוב את הקוד בארדואינו?</pre>
+
+  <h2><span class="section-icon">📋</span>שלב 4 — בודקים</h2>
+  <ul class="checklist">
+    <li>מעלים ומסתכלים.</li>
+    <li>זה עושה מה שרציתם? אם לא, מה שונה?</li>
+    <li>חוזרים לקלוד קוד עם (א)(ב)(ג) חדשים.</li>
+    <li>משפרים עד שזה עובד — או עד שמחליטים שהדרך שזה יצא בפועל טובה יותר.</li>
+  </ul>
+
+  <h2><span class="section-icon">📋</span>שלב 5 — מראים</h2>
+  <ul class="checklist">
+    <li>קוראים למורה כשמרוצים.</li>
+    <li>מראים את הפרויקט. מסבירים מה זה עושה ולמה בניתם.</li>
+    <li>אופציונלי: שומרים תמונה בתיקיית פרויקט 1 ב-Google Drive.</li>
+  </ul>
+
+  <div class="celebration">
+    <span class="title">🎉 השלמתם את גרסה 3 של פרויקט 1!</span>
+    עיצבתם, בניתם ותכנתתם את הגרסה שלכם של פרויקט 1 מאפס. זו סוג העבודה שכל תוכנית הארדואינו בונה לקראתה.
+  </div>
+
+  <div class="stuck">
+    <strong><span class="section-icon">🪄</span>תקועים בשלב כלשהו?</strong>
+    גרסה 3 פתוחה — וזו המטרה שלה. להיות תקועים זה חלק מעיצוב פרויקט משלכם. משתמשים בקלוד קוד כדי לחשוב על הבעיה. קוראים למורה אחרי יותר מ-10 דקות על אותה בעיה. שיחה עם המורה בגרסה 3 היא שיחת עיצוב, לא שיחת תקלות — מספרים מה מנסים לבנות ומה לא עובד.
+  </div>
+
+  <div class="back-to-top"><a href="#tier-3">↑ חזרה לראש גרסה 3</a></div>
+</section>
+
+<footer>
+  פרויקט 1 — אותות אור • סדנת ארדואינו דיפרנציאלית באגורים • מדריך • אותו תוכן של כרטיסיות המשימה המודפסות ב-<code>task_cards_he/</code>
+</footer>
+
+</div>
+</body>
+</html>

@@ -645,3 +645,93 @@ footer {
   }
   .file-path { display: block; }
 }
+
+/* =====================================================================
+ * Hebrew RTL overrides — Pattern E6 (no box-level bold on Hebrew callouts)
+ * Windows Arial synthesises Hebrew bold inconsistently (thickens regular
+ * glyphs rather than using a true bold face), so box-level bold on a
+ * Hebrew-language callout looks visibly different from the surrounding
+ * regular text. Individual <strong> tags inside these boxes still provide
+ * emphasis via the semantic tag, so the important labels stay bold.
+ * English LTR cards are unaffected — this override only fires under [dir="rtl"].
+ * ===================================================================*/
+
+[dir="rtl"] .together-notice,
+[dir="rtl"] .done-when,
+[dir="rtl"] .celebration,
+[dir="rtl"] .recognition-line,
+[dir="rtl"] .milestone-badge,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .expected strong,
+[dir="rtl"] .warning strong,
+[dir="rtl"] .done-when strong {
+  font-weight: normal;
+}
+
+/* Hebrew RTL: the .r-ref inline circle used in task cards to reference
+ * R1-R5 reference cards. Matches the circled style of the top-corner
+ * card-ID badge so "R2" in body text looks identical to "R2" in the corner. */
+
+[dir="rtl"] .r-ref,
+.r-ref {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18pt;
+  height: 18pt;
+  border: 1.5pt solid #000;
+  border-radius: 50%;
+  font-size: 10pt;
+  font-weight: bold;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  top: -1pt;
+}
+
+/* Hebrew RTL: card-ID badge in the top corner. Hebrew cards position at
+ * top-left (heading flows from the right, badge sits in empty space on
+ * the left). English cards use the same badge but positioned top-right,
+ * handled per-file via an additional .card-id-en class if needed.
+ * For now, Hebrew task cards add the badge via .card-id and RTL honors top-left. */
+
+.card-id {
+  position: absolute;
+  top: 6mm;
+  left: 6mm;
+  width: 44pt;
+  height: 44pt;
+  border: 2.5pt solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15pt;
+  font-weight: bold;
+  background: #fff;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.5pt;
+  z-index: 10;
+}
+
+.card {
+  position: relative;
+}
+
+/* Together-milestone image icon (Hebrew + English). Used inside the
+ * .together-notice block to visually mark the together-milestone pattern.
+ * Source: images/together_milestone_icon.png (Yon-provided). */
+
+.together-icon {
+  display: block;
+  width: 60pt;
+  height: 60pt;
+  margin: 0 auto 10pt auto;
+  object-fit: contain;
+}

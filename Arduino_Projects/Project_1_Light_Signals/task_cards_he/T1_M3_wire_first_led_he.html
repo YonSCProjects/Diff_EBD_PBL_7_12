@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית משימה פרויקט 1 — גרסה 1 אבן דרך 3: מחווטים את הלד הראשון</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">T1·M3</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 3 מתוך 8</div>
+  <h1><span class="section-icon">🔌</span>מחווטים את הלד החיצוני הראשון</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+באבן דרך זו מחווטים לד על הברדבורד בפעם הראשונה. זו אבן דרך של חומרה בלבד — בלי העלאת קוד. הקוד מגיע באבן דרך 4.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בוחרים לד אחד ממגש החלקים. כל צבע בסדר.</li>
+  <li>מסתכלים על שתי הרגליים של הלד. <strong>הרגל הארוכה היא חיובית (+)</strong> ו<strong>הרגל הקצרה היא שלילית (−)</strong>.</li>
+  <li>בוחרים נגד של 220 אוהם ממגש החלקים. פסי הצבע שלו: <strong>אדום · אדום · חום</strong>.</li>
+  <li>מכניסים את הלד לברדבורד כך שכל רגל נמצאת בשורה שונה (לא באותה שורה — זה יקצר ביניהן).</li>
+  <li>מחברים את הרגל הארוכה (+) של הלד ל<strong>רגל דיגיטלית 9</strong> של הארדואינו, דרך הנגד של 220 אוהם. הנגד יושב בין הרגל הארוכה של הלד לבין רגל 9.</li>
+  <li>מחברים את הרגל הקצרה (−) של הלד לרגל <strong>GND</strong> של הארדואינו בעזרת חוט ג'אמפר.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">Arduino pin 9  ───[220 Ω]───┬─── LED long leg (+)
+                           │
+                           ▼
+                      LED short leg (−) ─── Arduino GND</pre>
+
+<div class="image-slot">
+  <div class="image-slot-header">מקום לתמונה — תמונה אמיתית של הברדבורד או דיאגרמת Fritzing תיכנס לכאן</div>
+  <p>בכרטיסיית העזר <span class="r-ref">R1</span> (חיווט) נמצא התרשים המלא עם כל ארבעת מצבי החיווט על כרטיס אחד.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  הלד מחובר לברדבורד — הרגל הארוכה עוברת דרך הנגד לרגל 9, והרגל הקצרה מחוברת ל-GND. <strong>הלד עדיין לא מאיר</strong> — עדיין לא העלינו קוד שיפעיל אותו. זה יקרה באבן דרך 4. עכשיו רק בודקים שהחיווט נכון.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>הלד מוכנס לברדבורד כאשר שתי הרגליים בשורות שונות</li>
+    <li>הרגל הארוכה מחוברת לרגל 9 דרך נגד של 220 אוהם</li>
+    <li>הרגל הקצרה מחוברת ל-GND</li>
+    <li>המורה (או בבדיקה עצמית מול כרטיסיית העזר <span class="r-ref">R1</span>) אישר שהחיווט נכון</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  קודם כל בודקים את כרטיסיית העזר <span class="r-ref">R1</span> (חיווט) — היא מראה בדיוק איך הלד אמור להיראות בברדבורד. אם עדיין לא בטוחים איזו רגל ארוכה או איזה חור מתחבר לרגל 9, קוראים למורה. זו אבן הדרך הראשונה של חיווט, והמורה יעזור.
+</div>
+
+<footer>גרסה 1 • אבן דרך 3 מתוך 8 • פרויקט 1 אותות אור • A4 portrait • מוכן ללמינציה</footer>
+
+</div>
+</body>
+</html>

@@ -97,7 +97,7 @@ The program must be runnable by one teacher managing 3–8 students without burn
 
 ## The 8 projects
 
-Students progress through projects in order. Each project introduces new hardware and new skills. The three tiers within each project provide differentiation by readiness:
+Students progress through projects in the order shown below, but the sequence is a suggestion, not a requirement. When a student refuses the prescribed order, the teacher treats the refusal as information about what the student needs — delivers missing prerequisite skills just-in-time and lets the student choose which project to work on. Each project introduces new hardware and new skills. The three tiers within each project provide differentiation by readiness:
 
 - **Tier 1 (Guided Build)** — Step-by-step task cards with pre-written code. The student follows instructions and builds.
 - **Tier 2 (Guided Design)** — The student makes 2–3 design choices and modifies code with Claude Code's help.
@@ -144,6 +144,29 @@ Every 45-minute session follows the same seven-phase structure:
 | **Per student** | USD 219–229 | USD 52–63 |
 
 The program's highest-cost single item is Project 8 (quadcopter) at ~USD 65 per drone. The first five projects together cost less than one educational drone kit. All components are sourced from AliExpress with 15–45 day lead time.
+
+**Implementation roadmap.** Year one is a single-cohort pilot. At year's end, three paths: **continue** if the success criteria below are met; **revise and re-pilot** if results are mixed; or **stop and document honestly** if the program is not working. Year-two cost drops to approximately USD 460–560 because most hardware is reusable. The program commits to honest reporting of whichever outcome occurs — a funder will know within one year whether this is worth continuing.
+
+---
+
+## How we will know if it is working
+
+The program uses a lightweight measurement framework designed to be sustainable for a solo teacher:
+
+- **Per-session tracking sheet** (30 seconds per student per session): three columns — started work within 5 minutes (yes/no), completed at least one milestone checkpoint (yes/no), red-card or behavioural incident (yes/no). This is the primary longitudinal data source.
+- **Weekly data collector** (~10 minutes per week): per-student trajectory, cohort observations, Claude Code usage, teacher sustainability indicators.
+- **End-of-semester teacher reflection** (15–20 minutes): structured self-assessment of sustainability, relational capacity, and what to revise.
+
+**What the program does NOT measure:** standardized test scores, behavioural rating scales, comparison to a non-workshop control group, or causal claims about durable change outside the workshop. The measurement framework matches the program's honest scope — it tracks in-workshop engagement and completion, not clinical outcomes.
+
+**The program targets four outcome clusters**, each with a different evidence base and a different honesty caveat:
+
+1. **Positive learning experiences** — the super-target. Students experience moments where "something I did made the thing work."
+2. **Technical skills** — breadboarding, wiring, uploading code, sensor reading, soldering (from Project 4), motor control, Wi-Fi, and integration.
+3. **Executive-function practice** — the workshop provides structured opportunities to practice planning, task-initiation, and help-seeking. This is *not* a therapeutic EF-improvement claim; it is a practice-opportunity claim.
+4. **Reduced within-workshop refusal and avoidance** — the most cautious cluster, since behavioural outcomes are most affected by factors outside the workshop.
+
+The program treats **teacher-level outcomes as equal in priority to student outcomes**: the teacher remains non-burnt-out, between-session prep stays under 30 minutes, relational capacity stays intact. If the teacher burns out, the program fails regardless of student outcomes.
 
 ---
 

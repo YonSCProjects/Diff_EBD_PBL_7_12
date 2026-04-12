@@ -80,6 +80,16 @@ h1 {
   font-size: 13pt;
 }
 
+.why ul {
+  margin: 6pt 0 2pt 0;
+  padding-inline-start: 22pt;
+}
+
+.why li {
+  margin: 3pt 0;
+  line-height: 1.45;
+}
+
 /* Together-milestone notice (first-milestone distinctive) */
 
 .together-notice {
@@ -269,6 +279,24 @@ p { margin: 6pt 0; }
   letter-spacing: 0.5pt;
 }
 
+.stuck ul {
+  margin: 6pt 0 2pt 0;
+  padding-inline-start: 22pt;
+}
+
+.stuck ul li {
+  margin: 3pt 0;
+  line-height: 1.45;
+}
+
+.stuck ul li strong {
+  display: inline;
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: inherit;
+  letter-spacing: 0;
+}
+
 /* Warning block (pale red, for the button pull-down pitfall especially) */
 
 .warning {
@@ -314,6 +342,11 @@ p { margin: 6pt 0; }
   vertical-align: -4pt;
   color: #d4a017;
 }
+
+/* RTL: swap opening/closing quotes so the opening quote sits at the
+ * visual start (right side) of the recognition line in Hebrew. */
+[dir="rtl"] .recognition-line::before { content: "\201D"; }
+[dir="rtl"] .recognition-line::after { content: "\201C"; }
 
 /* Celebration block — Milestone 8 project complete */
 
@@ -424,6 +457,21 @@ footer {
   body { font-size: 13pt; }
   .card { padding: 10mm; }
   a { color: #000; text-decoration: underline; }
+
+  /* Keep callout boxes from splitting across a page break — a callout
+   * broken mid-box is disorienting and defeats the box's visual framing. */
+  .why, .together-notice, .expected, .done-when, .stuck,
+  .warning, .recognition-line, .celebration, .choice-point,
+  .prompt-template, .image-slot {
+    page-break-inside: avoid;
+  }
+
+  /* Two-page cards: when the recognition line appears mid-card, force
+   * the "what you should see" + "done when" + "stuck" cluster onto
+   * page 2 so the ceremonial line closes page 1 cleanly. */
+  .recognition-line + .expected {
+    page-break-before: always;
+  }
 }
 
 /* =====================================================================

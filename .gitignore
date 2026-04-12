@@ -1,0 +1,12 @@
+# Generated outputs (Phase E build pipeline)
+# These are regenerated from source .md files — do not commit.
+build_output/
+
+# Node modules (if md-to-pdf is installed locally)
+node_modules/
+package-lock.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

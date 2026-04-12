@@ -723,6 +723,33 @@ footer {
   font-weight: normal;
 }
 
+/* Hebrew RTL: uppercase + letter-spacing are Latin-type conventions
+ * and render poorly on Hebrew glyphs (no case, and letter-spacing
+ * pushes Hebrew letters apart awkwardly). Override on all callout
+ * headings and bump size for a clearer visual hierarchy. */
+[dir="rtl"] .expected strong,
+[dir="rtl"] .done-when strong,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .warning strong {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14pt;
+  margin-bottom: 6pt;
+}
+
+/* Expected block: paragraph spacing so the primary observable fact
+ * reads as a clean lead line and the explanation sits below it. */
+.expected p {
+  margin: 4pt 0 0 0;
+  line-height: 1.55;
+}
+
+.expected p.expected-note {
+  font-size: 12pt;
+  color: #444;
+  margin-top: 6pt;
+}
+
 /* Inline <code> in RTL context: isolate the LTR run so neutral characters
  * (backslash, colon, parentheses) resolve inside the LTR island rather than
  * being absorbed into the surrounding RTL paragraph and reordering visually.

@@ -524,9 +524,13 @@ footer {
    * broken mid-box is disorienting and defeats the box's visual framing. */
   .why, .together-notice, .expected, .done-when, .stuck,
   .warning, .recognition-line, .celebration, .choice-point,
-  .prompt-template, .image-slot {
+  .prompt-template, .image-slot, .field, .living-placeholder, table {
     page-break-inside: avoid;
   }
+
+  /* Living placeholders are authoring scaffolding for image slots —
+   * they must never reach a laminated student card. */
+  .living-placeholder { display: none; }
 
   /* Two-page cards: when the recognition line appears mid-card, force
    * the "what you should see" + "done when" + "stuck" cluster onto
@@ -803,6 +807,29 @@ footer {
   font-size: 12pt;
   color: #444;
   margin-top: 6pt;
+}
+
+/* Prompt templates hold Hebrew prose fill-in labels under RTL — per
+ * Pattern E5, Hebrew text never uses monospace. Keep monospace for
+ * LTR prompt templates (English code examples). */
+[dir="rtl"] .prompt-template {
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+}
+
+/* Field labels (Tier 3 planner) — strip Latin uppercase and letter-
+ * spacing when rendered under RTL; Hebrew has no case and glyphs
+ * render poorly with Latin letter-spacing. */
+[dir="rtl"] .field label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Fill-in-blank utility (Tier 2 choice-commitment, planner fields).
+ * Replaces inline style="border-bottom: 1pt solid; ..." across cards. */
+.fill-blank {
+  border-bottom: 1pt solid #000;
+  display: inline-block;
+  min-width: 60pt;
 }
 
 /* Inline <code> in RTL context: isolate the LTR run so neutral characters

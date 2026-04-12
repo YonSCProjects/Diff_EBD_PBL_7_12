@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>כרטיסיית ניווט פרויקט 1 — גרסה 1 אבן דרך 2: מעלים את הקוד הראשון</title>
 <link rel="stylesheet" href="../task_cards/style.css">
+<script src="../task_cards/card.js" defer></script>
 </head>
 <body>
 <div class="card">
@@ -32,7 +33,12 @@
 
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
-<p>זה הקוד המלא של <code>01_blink_L_fast.ino</code>. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong><br>
+העלאה של קובץ מוכן = ערוץ A גרסה 1. הקובץ כבר כתוב, רק מעלים אותו. באבן דרך 3 של גרסה 2 מתחילים לשנות קוד עם קלוד קוד.
+</div>
+
+<p>זה הקוד המלא של <code dir="ltr">01_blink_L_fast.ino</code>. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
 
 <pre class="code-block"><span class="filename">01_blink_L_fast.ino</span>// Blinks the built-in "L" LED faster than the factory sketch.
 
@@ -49,7 +55,8 @@ void loop() {
 
 <div class="expected">
   <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
-  הלד הירוק "L" על לוח הארדואינו מהבהב עכשיו בערך שלוש פעמים בשנייה — מהר יותר מההבהוב של היצרן באבן דרך 1. ב-Arduino IDE מופיע "Done uploading" בירוק בתחתית. ההעלאה הראשונה עבדה.
+  <p>הלד הירוק "L" על לוח הארדואינו מהבהב עכשיו בערך שלוש פעמים בשנייה. ב-Arduino IDE מופיע "Done uploading" בירוק בתחתית.</p>
+  <p class="expected-note">ההבהוב מהיר יותר מההבהוב של היצרן באבן דרך 1 — זה אומר שההעלאה הראשונה שלכם עבדה.</p>
 </div>
 
 <div class="done-when">

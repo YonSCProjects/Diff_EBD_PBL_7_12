@@ -177,4 +177,38 @@ These materials demonstrate the level of detail, visual design, and Hebrew-langu
 
 ---
 
+---
+
+## References
+
+Barker, C., & de Lugt, J. (2022). A review of evidence-based practices to support students with oppositional defiant disorder in classroom settings. *International Journal of Special Education, 37*(1), 85–98. https://internationalsped.com/ijse/article/view/47
+
+Belland, B. R., Walker, A. E., & Kim, N. J. (2017). A Bayesian network meta-analysis to synthesize the influence of contexts of scaffolding use on cognitive outcomes in STEM education. *Review of Educational Research, 87*(6), 1042–1081. https://doi.org/10.3102/0034654317723009
+
+Cibrian, F. L., Lakes, K. D., Schuck, S. E. B., & Hayes, G. R. (2022). The potential for emerging technologies to support self-regulation in children with ADHD: A literature review. *International Journal of Child-Computer Interaction, 31*, 100421. https://doi.org/10.1016/j.ijcci.2021.100421
+
+Cumming, M. M., Oblath, R., Qiu, Y., Frazier, S. L., Zelazo, P. D., Flores, H., & Park, J. (2024). Executive function, perceived stress, and academic performance among middle schoolers with and without behavior problems. *Remedial and Special Education, 45*(2), 85–100. https://doi.org/10.1177/07419325231176762
+
+Gersib, J. A., & Mason, S. (2023). A meta-analysis of behavior interventions for students with emotional-behavioral disorders in self-contained settings. *Behavioral Disorders*. https://doi.org/10.1177/01987429231160285
+
+Gilmour, A. F., Sandilos, L. E., Pilny, W. V., Schwartz, S., & Wehby, J. H. (2022). Teaching students with emotional/behavioral disorders: Teachers' burnout profiles and classroom management. *Journal of Emotional and Behavioral Disorders*. https://doi.org/10.1177/10634266211020258
+
+Harrison, J. R., Soares, D. A., & Joyce, J. (2019). Inclusion of students with emotional and behavioural disorders in general education settings: A scoping review of research in the US. *International Journal of Inclusive Education, 23*(12), 1258–1277. https://doi.org/10.1080/13603116.2018.1444107
+
+Hwang, J., & Taylor, J. C. (2016). Stemming on STEM: A STEM education framework for students with disabilities. *Journal of Science Education for Students with Disabilities, 19*(1). https://doi.org/10.14448/jsesd.06.00017
+
+Morsink, S., Van der Oord, S., Antrop, I., Danckaerts, M., & Scheres, A. (2022). Studying motivation in ADHD: The role of internal motives and the relevance of self-determination theory. *Journal of Attention Disorders*. https://doi.org/10.1177/10870547211050948
+
+Qiu, H., Liang, X., Wang, P., Zhang, H., & Shum, D. H. K. (2023). Efficacy of non-pharmacological interventions on executive functions in children and adolescents with ADHD: A systematic review and meta-analysis. *Asian Journal of Psychiatry, 87*, 103692. https://doi.org/10.1016/j.ajp.2023.103692
+
+Rosen, S. M., Boyle, J. R., Cariss, K., & Forchelli, G. A. (2014). Changing how we think, changing how we learn: Scaffolding executive function processes for students with learning disabilities. *Learning Disabilities: A Multidisciplinary Journal, 20*(4), 165–176. https://eric.ed.gov/?id=EJ1168865
+
+Sciacca, J. L. (2025). *Experiences of teachers using project-based learning with students with emotional and behavioral disorders* [Doctoral dissertation, Wilkes University]. ProQuest Dissertations & Theses (ID 32170831). https://www.proquest.com/openview/f3284aea35dd8d14dd8429e421c14110/1
+
+Smith, Z. R., Langberg, J. M., Cusick, C. N., Green, C. D., & Becker, S. P. (2020). Academic motivation deficits in adolescents with ADHD and associations with academic functioning. *Journal of Abnormal Child Psychology*. https://doi.org/10.1007/s10802-019-00601-x
+
+Taylor, J. C., Allen, L. M., Van, J., & Moohr, M. (2024). The effects of project-based learning on student behavior and teacher burnout in an emotional/behavioral support classroom. *Journal of Emotional and Behavioral Disorders, 32*(2). https://doi.org/10.1177/10634266241235933
+
+---
+
 *Full documentation, source files, and the complete 77-citation research document are available at the project repository. Contact: Yon, Agourim School.*

@@ -1,4 +1,4 @@
-# Differentiated Arduino Workshop Program for Students with Emotional and Behavioural Challenges
+# A Project-Based Learning Program in a Differentiated-Instruction Style for Students with Emotional and Behavioural Challenges
 
 ## Program Overview for Agourim School, Grades 7–12
 
@@ -9,19 +9,19 @@
 
 ## Why this program exists
 
-This program was born from two problems I encountered as a workshop teacher.
+This program was born from two difficulties I cope with as a workshop teacher at Agourim School.
 
-The first was **the rotation problem.** In a robotics workshop with 3–8 students, each working on a different project at a different pace, I found myself running between workstations and often failing to give each student the help they needed. By the time I reached one student, another had been waiting too long and had disengaged. The workshop was designed for individual work, but the teacher had become a bottleneck.
+The first is **the rotation difficulty.** In a robotics workshop with 3–8 students, each working on a different project at a different pace, I found myself running between workstations and often failing to give each student the help they needed. By the time I reached one student, another had been waiting too long and had disengaged. The workshop was designed for individual work, but I as the teacher had become a bottleneck in the flow of the activity.
 
-The second was **the overwhelm problem.** The workshop had a rich inventory of materials — Arduino boards, motors, sensors, chassis kits, cameras, tools — and students were free to choose what to build. I expected this freedom to be motivating. Instead, for many students, the large variety and the open-ended choice were overwhelming and intimidating. Students who already struggled with decision-making and self-regulation froze in front of too many options. I understood that I needed to bring structure to the workshop: structure that would make the available equipment accessible rather than paralyzing, and that would allow students to work independently so that the teacher could rotate without becoming a bottleneck.
+The second is **the overwhelm difficulty.** The workshop had a rich inventory of materials — Arduino boards, motors, sensors, chassis kits, cameras, soldering equipment, Lego robotics kits, computers, tools, and more — and students were free to choose what to build. I expected this freedom to be motivating. Instead, for many students, the large variety and the open-ended choice led to overwhelm, fear, and avoidance. Students who already struggled with decision-making and self-regulation froze in front of too many options. I understood that I needed to bring structure to the workshop: structure that would make the available equipment accessible rather than paralyzing, and that would allow students to work independently so that the teacher could support without becoming a bottleneck.
 
-This program is the result. It turns the open workshop into a structured progression of eight projects, each with pre-built task cards that guide students step-by-step at three readiness tiers, supported by an AI coding assistant that provides immediate help when the teacher is with another student.
+This program is the result. It turns the open workshop into a structured progression of eight projects, each built around three differentiated versions (a choice element) with printed and online navigation cards that guide students step-by-step, supported by an AI coding assistant that provides immediate help when the teacher is with another student.
 
 ## What this program is
 
-An eight-project Arduino and ESP32 workshop program designed for 3–8 students per cohort in grades 7–12 with emotional and behavioural challenges (ADHD, oppositional defiant disorder, anxiety, depression, OCD, post-trauma). Students progress from a first-session LED circuit through a student-built tiny quadcopter, working individually at their own pace and tier, with a solo teacher rotating between workstations.
+An eight-project Arduino and ESP32 workshop program designed for 3–8 students per cohort in grades 7–12 with emotional and behavioural challenges (ADHD, oppositional defiant disorder, anxiety, depression, OCD, post-trauma, and others). Students progress from a first-session LED circuit through a student-built tiny quadcopter, working individually at their own pace and version, with a solo teacher (sometimes with an additional instructional assistant) rotating between workstations.
 
-The program combines three ingredients: **differentiated instruction** with three readiness tiers per project; **hands-on physical computing** that produces visible, tangible results every 15 minutes; and **Claude Code** (an AI coding assistant) integrated as both a pair-programming collaborator and a conversational tutorial channel.
+The program combines three ingredients: **differentiated instruction** with three readiness versions per project; **hands-on physical computing** that produces visible, tangible results every 15 minutes; and **Claude Code** (an AI coding assistant) integrated as both a pair-programming collaborator and a conversational tutorial channel.
 
 The design rests on **nine research-grounded principles** distilled from 77 verified peer-reviewed sources. The full research document, per-project files, student-facing materials (in Hebrew and English), and a reproducible build pipeline are available in the project repository.
 
@@ -29,7 +29,7 @@ The design rests on **nine research-grounded principles** distilled from 77 veri
 
 ## The population
 
-The Agourim student body is defined by heterogeneity across every dimension — reading level, home context, prior technology experience, social comfort, diagnostic profile. Students commonly carry diagnoses of ADHD, ODD, anxiety, depression, OCD, or post-trauma, often multiple concurrently. What nearly all share is a sense that school has been a place where they fail, or where they are failed.
+The Agourim student body is defined by heterogeneity across every dimension — reading level, home context, prior technology experience, social comfort, diagnostic profile. Students commonly carry diagnoses of ADHD, ODD, anxiety, depression, OCD, or post-trauma, often multiple concurrently (and others too). What nearly all share is a sense that school has been a place where they fail, or where they are failed.
 
 This program responds to the student in front of the teacher, not to the label on a file. The **super-target** is the creation of small, positive, empowering learning experiences for students whose confidence in school has been damaged.
 
@@ -45,9 +45,9 @@ Every session follows an identical seven-phase structure. No surprises without a
 
 *Evidence: Cumming et al. (2024) — stress degrades EF (β ≈ .61–.65); Harrison et al. (2019) — instructional interventions meeting WWC standards.*
 
-### Principle 2 — The task card is the boss, not the teacher
+### Principle 2 — The navigation card traces the path
 
-Laminated visual task cards guide students step-by-step. The teacher rotates and supports but never gives verbal multi-step instructions. This bypasses power-struggle dynamics common in ODD profiles and reduces working-memory load.
+Laminated visual navigation cards guide students step-by-step. The teacher rotates and supports but never gives verbal multi-step instructions. This bypasses power-struggle dynamics common in ODD profiles and reduces working-memory load.
 
 *Evidence: Barker & de Lugt (2022) — environmental modifications for ODD; Thomas & Karuppali (2022) — visual schedules reduce task-initiation latency.*
 
@@ -59,29 +59,29 @@ Students build the wiring before writing the code. The concrete → representati
 
 ### Principle 4 — Hyper-chunked 15-minute milestones with visible wins
 
-Every task card maps to ≤ 15 minutes and produces an observable result ("the LED blinks," "the motor turns"). No silent work periods longer than that. This is the engagement mechanism for ADHD attention profiles.
+Every navigation card maps to ≤ 15 minutes and produces an observable result ("the LED blinks," "the motor turns"). No silent work periods longer than that. This is the engagement mechanism for ADHD attention profiles.
 
 *Evidence: Taylor et al. (2024) — very large on-task effect sizes (BC-SMD 95% CI [1.70, 3.81]) with frequent visible milestones; Cibrian et al. (2022) — hands-on tangible feedback as core ADHD mechanism.*
 
 ### Principle 5 — Structured autonomy, not forced compliance
 
-Every project offers at least one genuine choice point, even at the most guided tier. Choice reduces oppositional resistance. External structure enables autonomy rather than undermining it.
+Every project offers at least one genuine choice point, even at the most guided version. Choice reduces oppositional resistance. External structure enables autonomy rather than undermining it.
 
 *Evidence: Taylor et al. (2024) — student voice as essential quality element; Morsink et al. (2022) — no undermining effect of external rewards on intrinsic motivation in ADHD.*
 
 ### Principle 6 — Movement is medicine for ADHD
 
-A structured 3-minute movement break between work blocks is non-negotiable — not a reward, not a release valve, but a first-class intervention with the largest effect sizes in the ADHD executive-function literature.
+A structured 3-minute movement break between work segments is non-negotiable — not a reward, not a release valve, but a first-class intervention with the largest effect sizes in the ADHD executive-function literature.
 
 *Evidence: Qiu et al. (2023) — meta-analysis of 67 EF intervention studies: physical exercise produced g = 0.900 on inhibitory control, g = 1.377 on cognitive flexibility.*
 
 ### Principle 7 — Claude Code as dual-channel coding support
 
-Claude Code serves two roles. **Channel A** is a pair programmer at three levels (upload pre-written code / modify code with AI help / free dialogue). **Channel B** is a conversational tutorial that walks students through task cards in small chunks with checkpoint questions. Both scaffold; neither replaces the teacher or the task card.
+Claude Code serves two roles. **Channel A** is a pair programmer in three versions (upload pre-written code / modify code with AI help / free dialogue). **Channel B** is a conversational tutorial that walks students through navigation cards in small chunks with checkpoint questions. Both scaffold; neither replaces the teacher or the navigation card.
 
 *Evidence: Rosen et al. (2014) — external scaffolds enabling EF practice. Caveat: no direct empirical research exists for AI-paired coding with neurodivergent learners. This is the program's most evidence-thin component; it is flagged as a piloted practice, not an evidence-based one.*
 
-### Principle 8 — The teacher–student relationship is the multiplier
+### Principle 8 — The relationship is the multiplier
 
 Structure alone does not work. The teacher–student relationship is first-class infrastructure: greeting by name, relational check-in before task-progress check, consistent presence. The relationship is the soil in which independent work grows.
 
@@ -89,7 +89,7 @@ Structure alone does not work. The teacher–student relationship is first-class
 
 ### Principle 9 — Teacher sustainability is a first-class design constraint
 
-The program must be runnable by one teacher managing 3–8 students without burnout. Pre-prepared materials, task-card discipline, and predictable session rhythms are non-negotiable. If the teacher burns out, the program fails regardless of its design quality.
+The program must be runnable by one teacher managing 3–8 students without burnout. Pre-prepared materials, navigation-card discipline, and predictable session rhythms are non-negotiable. If the teacher experiences significant burnout as a result of the program, this is a red flag requiring re-examination of the design.
 
 *Evidence: Gilmour et al. (2022) — teacher burnout profile linked to classroom management quality; Sciacca (2025) — "the kids drive so much more of their own learning" (teacher S.F.).*
 
@@ -97,11 +97,11 @@ The program must be runnable by one teacher managing 3–8 students without burn
 
 ## The 8 projects
 
-Students progress through projects in the order shown below, but the sequence is a suggestion, not a requirement. When a student refuses the prescribed order, the teacher treats the refusal as information about what the student needs — delivers missing prerequisite skills just-in-time and lets the student choose which project to work on. Each project introduces new hardware and new skills. The three tiers within each project provide differentiation by readiness:
+Students progress through projects in the order shown below, but the sequence is a suggestion, not a requirement. Choice within the structure is a built-in element of the program. However, handling refusal to the prescribed order is a complex challenge: there is an inherent tension between offering choice and encouraging the student to engage with order and structure, and it is not always possible to fill the prerequisite skills gaps needed for jumping ahead immediately. The teacher must balance the two according to what is possible in the moment and according to familiarity with the student's individual path. Each project introduces new hardware and new skills. The three versions within each project provide differentiation by readiness:
 
-- **Tier 1 (Guided Build)** — Step-by-step task cards with pre-written code. The student follows instructions and builds.
-- **Tier 2 (Guided Design)** — The student makes 2–3 design choices and modifies code with Claude Code's help.
-- **Tier 3 (Open Design)** — The student designs their own version of the project from scratch.
+- **Version 1 (Guided Build)** — Step-by-step navigation cards with pre-written code. The student follows instructions and builds.
+- **Version 2 (Guided Design)** — The student makes 2–3 design choices and modifies code with Claude Code's help.
+- **Version 3 (Open Design)** — The student designs their own version of the project from scratch.
 
 | # | Project | Hardware | New skills | Sessions |
 |---|---------|----------|------------|----------|
@@ -126,17 +126,17 @@ Every 45-minute session follows the same seven-phase structure:
 |-------|---------|-------------|
 | Arrival & Board Check | 3 | Greet by name. One-word check-in. Student checks their task board. |
 | Mini-Huddle | 3 | Teacher sets expectations for the session. Acknowledge milestones. |
-| **Work Block 1** | **15** | Independent work on task card. Teacher rotates (~3 min/student). |
+| **Work Segment 1** | **15** | Independent work on navigation card. Teacher rotates (~3 min/student). |
 | Movement Break | 3 | Everyone stands, walks, stretches. Non-negotiable. |
-| **Work Block 2** | **15** | Continue project work. Teacher finishes rotations. |
-| Clean-Up | 3 | Tools away, workspace tidy, task card returned. |
+| **Work Segment 2** | **15** | Continue project work. Teacher finishes rotations. |
+| Clean-Up | 3 | Tools away, workspace tidy, navigation card returned. |
 | Close-Out Circle | 3 | Each student says one thing they worked on or got stuck on. |
 
-**30 minutes of actual work time** in two 15-minute blocks — aligned with the hyper-chunked milestone design. The remaining 15 minutes are routine infrastructure that protects the work time.
+**30 minutes of actual work time** in two 15-minute segments. The remaining 15 minutes are routine infrastructure that supports the work time.
 
 ---
 
-## Budget at a glance
+## Budget at a glance (full budget in Appendix 2)
 
 | | Year 1 (setup + all 8 projects) | Year 2 (consumables only) |
 |---|---|---|
@@ -151,22 +151,20 @@ The program's highest-cost single item is Project 8 (quadcopter) at ~USD 65 per 
 
 ## How we will know if it is working
 
-The program uses a lightweight measurement framework designed to be sustainable for a solo teacher:
+The program uses a simple measurement framework designed to be sustainable for a solo teacher:
 
-- **Per-session tracking sheet** (30 seconds per student per session): three columns — started work within 5 minutes (yes/no), completed at least one milestone checkpoint (yes/no), red-card or behavioural incident (yes/no). This is the primary longitudinal data source.
-- **Weekly data collector** (~10 minutes per week): per-student trajectory, cohort observations, Claude Code usage, teacher sustainability indicators.
-- **End-of-semester teacher reflection** (15–20 minutes): structured self-assessment of sustainability, relational capacity, and what to revise.
+- **Per-session tracking sheet** (30 seconds per student per session): three columns — started work within 5 minutes (yes/no), completed at least one milestone checkpoint (yes/no), behavioural incident (yes/no). This is the primary longitudinal data source.
+- **Weekly tracking form** (~10 minutes per week): per-student trajectory, cohort observations, Claude Code usage, teacher-burnout indicators.
+- **End-of-semester teacher reflection** (15–20 minutes): structured self-assessment of burnout level, relational capacity, and what to revise.
 
-**What the program does NOT measure:** standardized test scores, behavioural rating scales, comparison to a non-workshop control group, or causal claims about durable change outside the workshop. The measurement framework matches the program's honest scope — it tracks in-workshop engagement and completion, not clinical outcomes.
+**What the program does NOT measure:** standardized test scores, behavioural rating scales, comparison to a non-workshop control group, or causal claims about durable change outside the workshop. The measurement framework matches the program's honest scope — it tracks in-workshop engagement and task completion, not clinical outcomes.
 
 **The program targets four outcome clusters**, each with a different evidence base and a different honesty caveat:
 
-1. **Positive learning experiences** — the super-target. Students experience moments where "something I did made the thing work."
+1. **Positive learning experiences** — the super-target. Students experience moments where "something I did — worked."
 2. **Technical skills** — breadboarding, wiring, uploading code, sensor reading, soldering (from Project 4), motor control, Wi-Fi, and integration.
-3. **Executive-function practice** — the workshop provides structured opportunities to practice planning, task-initiation, and help-seeking. This is *not* a therapeutic EF-improvement claim; it is a practice-opportunity claim.
-4. **Reduced within-workshop refusal and avoidance** — the most cautious cluster, since behavioural outcomes are most affected by factors outside the workshop.
-
-The program treats **teacher-level outcomes as equal in priority to student outcomes**: the teacher remains non-burnt-out, between-session prep stays under 30 minutes, relational capacity stays intact. If the teacher burns out, the program fails regardless of student outcomes.
+3. **Executive-function practice** — the workshop provides structured opportunities to practice planning, task-initiation, self-regulation, and help-seeking. This is *not* a therapeutic EF-improvement claim; it is a practice-opportunity claim.
+4. **Reduced within-workshop refusal and avoidance** — students approach tasks faster, engage with them for longer stretches of time, and ask for help instead of giving up when they get stuck.
 
 ---
 
@@ -174,31 +172,37 @@ The program treats **teacher-level outcomes as equal in priority to student outc
 
 **It is** a carefully designed pilot program grounded in 77 verified research sources, structured for a specific population, and honest about what the evidence does and does not support.
 
-**It is not** an evidence-based intervention in the strict sense. No randomized trial of the full combination (DI + PBL + EBD + Arduino + AI) exists anywhere in the literature. The program crosses several evidence gaps openly:
+**It is not** an evidence-based intervention in the strict research sense. No randomized trial of the full combination (DI + PBL + EBD + Arduino + AI) exists anywhere in the literature I surveyed. The program crosses several evidence gaps openly:
 
 - No research on Arduino/microcontroller education for EBD/ADHD populations was found.
 - No research on aerial robotics for any special-needs population was found.
-- The Claude Code integration (Principle 7) is the most evidence-thin component — it is a responsible inference from adjacent scaffolding literature, flagged as a piloted practice.
-- The program is designed as a living document: everything in it is a hypothesis, adjustable based on actual experience with actual students.
+- The Claude Code integration (Principle 7) is evidence-thin — it is an inference from adjacent scaffolding literature, flagged as a piloted practice.
+- The program is designed as a living process: everything in it is a hypothesis, adjustable based on actual experience with actual students.
 
-**Year-one success criteria** include: the workshop runs a full year without teacher burnout; at least two thirds of students complete at least two projects; on-task initiation improves across the first semester; no safety incidents on Project 8 if attempted. What year-one success does *not* require: every student completing every project, quantitative comparison to a baseline, or demonstrated transfer of skills outside the workshop.
+**Year-one success criteria** include: at least two thirds of students complete at least two projects; engagement and participation improve across the first semester; no safety incidents in the workshop. The teacher does not experience burnout.
+
+**Year-one success does NOT require:** every student completing every project, quantitative comparison to a baseline, or demonstrated transfer of skills outside the workshop.
 
 ---
 
-## Appendix: Project 1 student materials (Hebrew)
+## Appendix 1: Project 1 student materials (Hebrew)
 
 The complete Hebrew student-facing materials for Project 1 (Light Signals) are attached as a separate packet. These include:
 
 - 5 reference cards (R1 Wiring, R2 Stuck Protocol, R3 Claude Code Prompts, R4 Safety, R5 Sketch Index)
-- 8 Tier 1 task cards (guided build, milestones 1–8)
-- 5 Tier 2 task cards (guided design, milestones 1–5)
-- 1 Tier 3 project planner (open design)
-- 1 HTML tutorial (browser-viewable single-page mirror of all task cards)
+- 8 Version-1 navigation cards (guided build, milestones 1–8)
+- 5 Version-2 navigation cards (guided design, milestones 1–5)
+- 1 Version-3 project planner (open design)
+- 1 HTML tutorial (browser-viewable single-page mirror of all navigation cards)
 - 1 Claude Code Channel B scaffold (conversational walk-through scripts)
 
 These materials demonstrate the level of detail, visual design, and Hebrew-language quality of the student-facing artifacts. Equivalent artifact families are planned for Projects 2–8.
 
 ---
+
+## Appendix 2: Full budget breakdown
+
+*(Full itemized budget to be included here — currently summarized in "Budget at a glance" above. Full line-item breakdown available in the master document §8.)*
 
 ---
 

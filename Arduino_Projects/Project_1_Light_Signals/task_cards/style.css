@@ -259,6 +259,13 @@ p { margin: 6pt 0; }
 
 .done-when ul li {
   margin: 3pt 0;
+  padding-block: 5pt;
+  line-height: 1.6;
+  border-bottom: 1pt solid #e0e0e0;
+}
+
+.done-when ul li:last-child {
+  border-bottom: none;
 }
 
 /* Stuck protocol short version (pale yellow) */
@@ -714,6 +721,19 @@ footer {
 [dir="rtl"] .warning strong,
 [dir="rtl"] .done-when strong {
   font-weight: normal;
+}
+
+/* Inline <code> in RTL context: isolate the LTR run so neutral characters
+ * (backslash, colon, parentheses) resolve inside the LTR island rather than
+ * being absorbed into the surrounding RTL paragraph and reordering visually.
+ * Also allow long paths to break if they would overflow the column. */
+[dir="rtl"] code {
+  unicode-bidi: isolate;
+  direction: ltr;
+}
+
+code {
+  overflow-wrap: anywhere;
 }
 
 /* Hebrew RTL: the .r-ref inline circle used in task cards to reference

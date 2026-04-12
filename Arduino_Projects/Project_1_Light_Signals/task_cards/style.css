@@ -150,6 +150,54 @@ p { margin: 6pt 0; }
   border-bottom: none;
 }
 
+/* Screen-interactive: clicking toggles a ✓ and persists in localStorage
+ * per nickname (see card.js). Print view strips interactivity and keeps
+ * the plain empty boxes so the laminated card still works with a marker. */
+.checklist li {
+  cursor: pointer;
+  user-select: none;
+}
+
+.checklist li.checked::before {
+  content: "☑";
+}
+
+.checklist li.checked {
+  color: #666;
+  text-decoration: line-through;
+  text-decoration-color: #aaa;
+}
+
+/* Nickname indicator strip (screen only) */
+.nickname-indicator {
+  background: #f5f5f5;
+  border: 1pt solid #ccc;
+  padding: 6pt 12pt;
+  margin: 0 0 10pt 0;
+  font-size: 11pt;
+  display: flex;
+  gap: 10pt;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nickname-indicator strong {
+  font-weight: bold;
+}
+
+.nickname-indicator button {
+  font-size: 10pt;
+  padding: 3pt 10pt;
+  border: 1pt solid #888;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nickname-indicator button:hover {
+  background: #e8e8e8;
+}
+
 /* Code snippet block — the full .ino printed for reading on paper */
 
 .code-block {
@@ -464,6 +512,13 @@ footer {
   body { font-size: 13pt; }
   .card { padding: 10mm; }
   a { color: #000; text-decoration: underline; }
+
+  /* Print = laminated artifact: always show empty boxes, no interactivity,
+   * no nickname strip, no strikethrough on checked items. */
+  .nickname-indicator { display: none; }
+  .checklist li { cursor: default; }
+  .checklist li.checked { color: #000; text-decoration: none; }
+  .checklist li.checked::before { content: "☐"; }
 
   /* Keep callout boxes from splitting across a page break — a callout
    * broken mid-box is disorienting and defeats the box's visual framing. */

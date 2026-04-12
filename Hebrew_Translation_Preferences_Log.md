@@ -290,12 +290,139 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 
 ---
 
+## Category H — Professional/clinical register (for Ministry-facing documents)
+
+Added 2026-04-12 based on Yon's DOCX edit of the Hebrew executive overview. This category applies specifically to professional/academic Hebrew — Ministry proposals, program descriptions, colleague-facing documents. For student-facing materials the simpler A1–A5 registers apply.
+
+### Pattern H1 — Clinical-professional vocabulary for student experiences
+
+**Rule:** In Ministry-facing prose, use psychological-clinical vocabulary (`הצפה`, `הימנעות`, `ויסות`) when describing student experiences. Informal emotional adjectives like `מפחידים` should be replaced with the clinical sequence — "overwhelm, fear, and avoidance."
+
+**Why:** Clinical vocabulary signals professional awareness of the population's actual clinical profile. Ministry readers and special-education colleagues will recognize it immediately. Informal adjectives read as lay descriptions and weaken the document's authority.
+
+**Examples:**
+- `המגוון הרב והבחירה הפתוחה היו מציפים ומפחידים` → `המגוון הרב והבחירה הפתוחה מביאים להצפה, פחד והימנעות` (Hebrew overview edit, 2026-04-12)
+
+### Pattern H2 — `קשיים` not `בעיות` for student challenges
+
+**Rule:** Use `קשיים` ("difficulties") rather than `בעיות` ("problems") when describing student challenges or teacher experiences with the population.
+
+**Why:** `קשיים` is warmer, more professional, and aligns with special-education discourse in Hebrew. `בעיות` has a stronger deficit-framing connotation and reads as informal. The shift parallels English editorial preferences for softer framing (Editorial Pattern 4, 5).
+
+**Examples:**
+- `שתי בעיות שנתקלתי בהן` → `שני קשיים איתם אני מתמודד` (Hebrew overview edit, 2026-04-12)
+
+### Pattern H3 — `מענה` not `עזרה` in Ministry-facing prose
+
+**Rule:** Use `מענה` ("response / provision") rather than `עזרה` ("help") when describing what the teacher provides to the student in formal educational contexts.
+
+**Why:** `מענה` is the educational-system term used in Ministry documents about differentiated support; `עזרה` is colloquial. `מענה` also carries the connotation of a structured response to an identified need, which matches the differentiated-instruction framing. For student-facing materials `עזרה` remains fine (children understand it better).
+
+**Examples:**
+- `את העזרה שהוא צריך` → `את המענה לו הוא זקוק` (Hebrew overview edit, 2026-04-12)
+
+### Pattern H4 — `אוטונומיה` not `סוכנות` for agency
+
+**Rule:** Use `אוטונומיה` ("autonomy") rather than `סוכנות` ("agency") when describing student self-direction or empowerment.
+
+**Why:** `סוכנות` is a direct calque of the English sociological term "agency"; it reads as translated and may not be familiar to all Ministry readers. `אוטונומיה` is the term used in mainstream Israeli educational discourse and directly maps to the program's framing (Principle 5: "structured autonomy").
+
+**Examples:**
+- `מכבדת את הסוכנות של התלמיד` → `מכבדת את האוטונומיה של התלמיד` (Hebrew overview edit, 2026-04-12, Principle 5)
+
+### Pattern H5 — Prefer Hebraic roots over Anglicized roots where both exist
+
+**Rule:** When a native Hebrew root and an Anglicized root both exist for the same concept, prefer the Hebraic root in professional/academic Hebrew.
+
+**Why:** Native roots signal literacy in Hebrew's own lexicon rather than reliance on transliteration. `פיזי` is an Anglicism (from "physical"); `גשמי` is the native Hebrew root for "material / corporeal." Both mean the same thing; the Hebraic form reads as more polished.
+
+**Examples:**
+- `פיזי קודם, מופשט אחר כך` → `גשמי קודם, מופשט אחר כך` (Hebrew overview edit, Principle 3, 2026-04-12)
+
+### Pattern H6 — `ישימה` not `ניתן ליישום` for feasibility
+
+**Rule:** Prefer compact Hebrew adjectives (`ישימה`, `מעשית`, `בת-ביצוע`) over English-style relative-clause constructions (`ניתן ליישום`, `ניתנת להפעלה`) for feasibility claims.
+
+**Why:** Hebrew prefers adjectival predicates where English uses "can be X'd." The adjectival form is shorter, more natural, and avoids the calque feel of the relative clause.
+
+**Examples:**
+- `חייבת להיות ישימה ולא שוחקת` (Hebrew overview Principle 9, 2026-04-12) — not `חייבת להיות ניתנת ליישום`
+
+### Pattern H7 — Soft negation preference (PROMOTED from candidate to established)
+
+**Rule:** Prefer positive reframes or soft negation (`אינה`, `אינו`, `אינם`) over bare negation (`לא`) in formal prose. Replace `אופציונלי` with `חיוני` where the sense is "essential" rather than merely "not optional."
+
+**Why:** Soft negation and positive reframes read as more composed and more Hebrew-idiomatic. Bare negation with `לא` is direct but can feel like English-style contradiction.
+
+**Examples:**
+- `זה לא אופציונלי` → `אינם סתם אופציות` (R3 key-rule rewrite, 2026-04-11)
+- `אינו אופציונלי עבור תלמידים עם קשיי למידה` → `הינו חיוני עבור תלמידים עם קשיי למידה` (Hebrew overview Principle 3, 2026-04-12)
+
+**Promotion note:** This pattern had a single example in the "not yet established" section prior to 2026-04-12. The Hebrew overview edit provided a second reinforcing example (Principle 3's CRA description), which promotes it from candidate to established.
+
+---
+
+## Category C extensions — new calque sub-examples (added 2026-04-12)
+
+### C1 sub-example — `גוש עבודה` → `מקטע עבודה`
+
+**Rule:** Prefer `מקטע` (segment) over `גוש` (block) for work units in professional descriptions.
+
+**Why:** `גוש` has a physical/chunky connotation suitable for student-facing materials; `מקטע` is more neutral/professional and fits Ministry-facing documents.
+
+**Examples:**
+- `גוש עבודה 1 / גוש עבודה 2` → `מקטע עבודה 1 / מקטע עבודה 2` (Hebrew overview session-structure table, 2026-04-12)
+
+### C1 sub-example — `בין גושי עבודה` → `בין פרקי העבודה`
+
+**Rule:** When referring to transitions between work segments in prose (not table headers), use `פרקים` (chapters/segments) rather than `גושים`.
+
+**Why:** `פרקים` reads as more formal in running prose; `גושים` is better for visual/tabular contexts where chunkiness is intentional.
+
+**Examples:**
+- `הפסקת תנועה מובנית של 3 דקות בין גושי עבודה` → `הפסקת תנועה מובנית של 3 דקות בין פרקי העבודה` (Hebrew overview Principle 6, 2026-04-12)
+
+### C1 sub-example — `אינו אופציונלי / ניתן למשא ומתן` → `קבוע`
+
+**Rule:** For rules that are fixed and non-negotiable, prefer the compact declarative `קבוע` ("fixed") over the English-calque `לא ניתן למשא ומתן` ("non-negotiable, literally: not open to negotiation").
+
+**Why:** `משא ומתן` in Israeli Hebrew is associated with commercial negotiations or diplomatic talks, not classroom ground rules. `קבוע` says the same thing more compactly and without the bazaar connotation.
+
+**Examples:**
+- `אלה אינם ניתנים למשא ומתן` → `כל אלה קבועים` (Hebrew overview Principle 6, established 2026-04-12)
+
+### C1 sub-example — `לא ניתן לתזמון` → `לא אפשרי במסגרת זו`
+
+(Placeholder — add when a second example appears.)
+
+---
+
 ## Patterns observed but not yet established (single example only)
 
 The following are candidate patterns that have appeared once but have not yet been reinforced by a second occurrence. The reviewer should flag drift from these as **low confidence** until a second example confirms them.
 
-- **Softer negation**: prefer `אינם סתם אופציות` over `זה לא אופציונלי` (declarative-positive with soft negation over bare negation). Single example: R3 key rule rewrite.
 - **Replace "normal" / "not a disaster" with positive inclusion framing**: `לא אסון` and `חלק נורמלי מלמידה` were cut in favor of `חלק בלתי נפרד מלמידה`. Single example: R2 important-block rewrite.
+- **`מדידה פשוטה` (simple) vs `מדידה קלה` (lightweight) — Yon prefers `פשוטה`** despite the minor "simplistic" connotation risk. Single example: Hebrew overview "איך נדע אם זה עובד" section, 2026-04-12. Note for future: if a Ministry reader flags `פשוטה` as reading simplistic, consider switching to `פשוטה ויעילה` or `מסגרת קלה` as alternatives.
+
+---
+
+## Category I — Cross-document terminology (propagated 2026-04-12)
+
+### Pattern I1 — School name: `עגורים` (with ayin), not `אגורים` (with aleph)
+
+**Rule:** The school's name in Hebrew is spelled `עגורים` (ayin-gimel-vav-resh-yud-mem), NOT `אגורים` (aleph-gimel...).
+
+**Why:** Factual accuracy. The school is named after cranes (birds); the correct Hebrew spelling uses ayin. The aleph spelling was a transliteration artifact from the English "Agourim."
+
+**Scope:** All Hebrew documents in the project. Propagated across 21 Hebrew files on 2026-04-12. See Editorial_Preferences_Log Pattern 15 for the cross-language equivalent.
+
+### Pattern I2 — Navigation card (`כרטיסיית ניווט`), not task card (`כרטיסיית משימה`)
+
+**Rule:** In all Hebrew student-facing materials and in all Ministry-facing framing, the student-facing cards are called `כרטיסיות ניווט` (navigation cards), not `כרטיסיות משימה` (task cards).
+
+**Why:** "Navigation" emphasizes student agency and reframes the card as a map rather than an externally-imposed task. "Task" echoes a register that many EBD students have negative associations with. See Editorial_Preferences_Log Pattern 12 for the cross-language reasoning and the English equivalent "navigation card."
+
+**Scope:** All 18 Hebrew student-facing files (14 task cards, 5 reference cards, tutorial, Channel B scaffold, Hebrew overview). Propagated 2026-04-12. English student-facing files to follow in the retroactive English pass.
 
 ---
 

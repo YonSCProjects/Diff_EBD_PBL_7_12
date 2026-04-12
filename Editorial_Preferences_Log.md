@@ -216,4 +216,77 @@ Both misattributions happened in the same sentence of the same principle because
 
 ---
 
-*Last updated: 2026-04-10 during Phase C. Pattern 9 added after Yon caught an overreaching novelty claim in §1. Pattern 10 added after Yon caught two misattributions of research stance in Principle 5 (Barker 2022 and Morsink 2022, both misread as opposing token economies when they actually do not).*
+## Pattern 11 — Frame the program as PBL-with-DI, not DI-with-projects
+
+**Rule:** When naming or introducing the program in audience-facing framing (titles, abstracts, executive summaries), lead with "Project-Based Learning in a Differentiated-Instruction style." Do NOT lead with "Differentiated Arduino Workshop." PBL is the primary pedagogical frame; DI is the instructional modifier.
+
+**Why:** PBL is the concept Ministry of Education officials and colleagues will immediately recognize from their professional training. DI is the qualifier that explains *how* this PBL is implemented. Leading with "Differentiated Arduino Workshop" makes the program sound like an instructional-design intervention with projects attached; reversing the order aligns with how educators mentally categorize this work and signals the program's pedagogical center of gravity correctly.
+
+**Scope:** Titles and first-mention framing in all audience-facing documents (overview, master-doc abstract, executive summary, any funder-facing material). The reverse framing ("differentiated Arduino workshop") is fine in implementation-detail contexts where the student-work-tier aspect is the foreground.
+
+**Examples (from session 2026-04-12 Hebrew overview edit by Yon):**
+- **Before:** `תוכנית סדנת ארדואינו דיפרנציאלית לתלמידים עם קשיים רגשיים-התנהגותיים` (title of Hebrew overview)
+- **After:** `תוכנית ללמידה מבוססת פרויקטים בסגנון הוראה דיפרנציאלי לתלמידים עם קשיים רגשיים-התנהגותיים`
+- English equivalent for future documents: `A Project-Based Learning Program in a Differentiated-Instruction Style for Students with Emotional and Behavioural Challenges`
+
+---
+
+## Pattern 12 — Prefer "navigation card" over "task card" in audience-facing framing AND in Hebrew student-facing materials
+
+**Rule:** Use `כרטיסיית ניווט` (navigation card), not `כרטיסיית משימה` (task card), in Hebrew student-facing materials and in all audience-facing framing (Hebrew and English). Yon's decision as of 2026-04-12 was to propagate the "navigation card" terminology to ALL student-facing Hebrew materials, not to keep two registers. English audience-facing documents should use "navigation card" in parallel; English student-facing materials (once the retroactive English pass runs) should be updated to match.
+
+**Why:** "Navigation" emphasizes student agency — the student navigates through the project — and reframes the card as a map the student uses to find their way. "Task" frames the card as an externally-imposed obligation and echoes the "task-to-complete" register that many EBD students have negative associations with. The shift in terminology is small but the framing change is meaningful for a population whose school history is largely one of imposed tasks they did not choose.
+
+**Scope:** All Hebrew student-facing materials (task cards, reference cards, tutorial, Channel B scaffold) — updated across 18 files on 2026-04-12. All audience-facing documents in both languages. English student-facing materials to be updated in the retroactive English pass.
+
+**Examples (from session 2026-04-12):**
+- **Before:** `כרטיסיית משימה` / "task card" / `כרטיסיות המשימה`
+- **After:** `כרטיסיית ניווט` / "navigation card" / `כרטיסיות הניווט`
+- **Hebrew file titles updated:** all 14 task cards' `<title>` tags changed from `כרטיסיית משימה פרויקט 1` to `כרטיסיית ניווט פרויקט 1`.
+
+---
+
+## Pattern 13 — When describing origin/personal experience, use present tense and stay in-role
+
+**Rule:** In first-person narrative sections describing the teacher's motivation or origin of the program, prefer present-tense framing that positions the writer as currently in the role, not past-tense framing that positions the experience as historical. Hebrew: `אני מתמודד` not `נתקלתי בהן`. English: "I cope with" not "I ran into."
+
+**Why:** The program is a living document — Yonatan is still the workshop teacher, still dealing with these problems, still refining. Past-tense framing ("I ran into two problems") creates retrospective distance and reads as if the problems are solved. Present-tense framing ("I cope with two difficulties") positions the writer as an active practitioner whose authority comes from ongoing engagement, not from past experience. For a Ministry reader or colleague, present-tense signals that the program is being lived, not reported.
+
+**Scope:** All first-person narrative sections — overview's "Why this program exists" section, master doc's §1.3 "Where this program came from" subsection, and any future teacher-voice writing.
+
+**Examples (from session 2026-04-12 Hebrew overview edit):**
+- **Before:** `התוכנית נולדה משתי בעיות שנתקלתי בהן כמורה בסדנה.`
+- **After:** `התוכנית הזו נולדה בעקבות שני קשיים איתם אני מתמודד כמורה בסדנת התכנות והרובוטיקה בבית הספר עגורים.`
+- The past-tense "was born" of the program is preserved (the origin is a historical fact); the problems themselves are in the present (they are ongoing).
+
+---
+
+## Pattern 14 — Add "and more" / `ועוד` to diagnostic and similar lists; never claim exhaustiveness
+
+**Rule:** When listing student diagnoses, hardware, or any other category that is inherently non-exhaustive, always end the list with "and more" / `ועוד` / "among others." Never present such a list as closed.
+
+**Why:** The program explicitly describes a heterogeneous population. A closed list ("ADHD, ODD, anxiety, depression, OCD, post-trauma") reads as "these are the students we serve" when the real message is "these are examples of the range." The added "ועוד" / "among others" signals openness and preempts the reader's question "what about students with X?" The same principle applies to hardware lists in workshop descriptions — the specific items shown are examples of what the workshop contains, not an exhaustive inventory.
+
+**Scope:** Every diagnostic list, hardware list, and other inherently non-exhaustive list in every document. Both Hebrew and English.
+
+**Examples (from session 2026-04-12 Hebrew overview edit):**
+- **Before:** `(הפרעת קשב וריכוז, הפרעת התנגדות מתריסה, חרדה, דיכאון, הפרעה טורדנית-כפייתית, פוסט-טראומה)`
+- **After:** `(הפרעת קשב וריכוז, הפרעת התנגדות מתריסה, חרדה, דיכאון, הפרעה טורדנית-כפייתית, פוסט-טראומה ועוד)`
+
+---
+
+## Pattern 15 — School name Hebrew spelling is עגורים (with ayin), not אגורים (with aleph)
+
+**Rule:** The school's name in Hebrew is **עגורים** (with ayin, meaning "cranes"), not **אגורים** (with aleph). Apply this spelling consistently across every Hebrew document.
+
+**Why:** Factual accuracy. The aleph spelling was a transliteration artifact from the English "Agourim" — the correct Hebrew spelling uses ayin because the school is named after cranes (the birds). Misspelling the name is a credibility-damaging factual error in a Ministry-facing document.
+
+**Scope:** Every Hebrew file in the project. Propagated across all 21 Hebrew files on 2026-04-12 (Hebrew overview + 14 task cards + 5 reference cards + Hebrew tutorial + Channel B scaffold). Any future Hebrew document must use the ayin spelling.
+
+**Examples (from session 2026-04-12):**
+- **Before:** `בית ספר אגורים`
+- **After:** `בית ספר עגורים`
+
+---
+
+*Last updated: 2026-04-12. Patterns 11–15 added after Yon revised the Hebrew executive overview in DOCX: Pattern 11 (PBL-first framing) from title change; Pattern 12 (navigation card) from a systematic terminology preference; Pattern 13 (present-tense origin voice) from "נתקלתי בהן"→"מתמודד"; Pattern 14 ("ועוד" on diagnostic lists) from explicit addition; Pattern 15 (school name spelling) from the אגורים→עגורים correction. Earlier entry: Pattern 9 added after Yon caught an overreaching novelty claim in §1. Pattern 10 added after Yon caught two misattributions of research stance in Principle 5 (Barker 2022 and Morsink 2022, both misread as opposing token economies when they actually do not).*

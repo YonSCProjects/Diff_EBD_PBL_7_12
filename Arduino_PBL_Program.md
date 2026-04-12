@@ -3,7 +3,7 @@
 ## A research-grounded program for Agourim School, grades 7–12
 
 *Version 1.0 — 2026-04-11.*
-*Author: Yon (robotics and programming teacher, Agourim School), with research synthesis and documentation support from Claude.*
+*Author: Yonatan Lev El (robotics and programming teacher, Agourim School), with research synthesis and documentation support from Claude.*
 
 ---
 
@@ -43,7 +43,7 @@ This document describes an eight-project differentiated project-based learning p
 
 This document serves three audiences, and each should be able to use it independently.
 
-**First**, it is a **practical program guide for Yon** — the robotics and programming teacher at Agourim School — to run an eight-project Arduino workshop across three school years. Everything from the session rhythm to the per-project task cards is designed to be picked up and used, not just read. A teacher who has read §5 (Methodology) and the relevant chapter of §6 (Projects Overview) should be able to run a session without additional preparation.
+**First**, it is a **practical program guide for Yonatan Lev El** — the robotics and programming teacher at Agourim School — to run an eight-project Arduino workshop across three school years. Everything from the session rhythm to the per-project task cards is designed to be picked up and used, not just read. A teacher who has read §5 (Methodology) and the relevant chapter of §6 (Projects Overview) should be able to run a session without additional preparation.
 
 **Second**, it is a **research-grounded proposal for potential evaluating and funding organizations**, describing a program that can be evaluated on its merits and supported with budget. The literature review, the honest limitations, the expected-outcomes framework, and the budget ask are all written with an evaluating reviewer in mind. Where the research base is strong, the document says so clearly; where the research base is weaker or where the program extends into territory without direct empirical support, the document says so with equal clarity. Academic integrity and the reviewer's trust both depend on this honesty.
 

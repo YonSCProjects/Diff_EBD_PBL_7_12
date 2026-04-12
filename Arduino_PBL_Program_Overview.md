@@ -2,7 +2,7 @@
 
 ## Program Overview for Agourim School, Grades 7–12
 
-*Yon, Robotics and Programming Teacher, Agourim School, Israel*
+*Yonatan Lev El, Robotics and Programming Teacher, Agourim School, Israel*
 *Version 1.0 — April 2026*
 
 ---
@@ -234,4 +234,4 @@ Taylor, J. C., Allen, L. M., Van, J., & Moohr, M. (2024). The effects of project
 
 ---
 
-*Full documentation, source files, and the complete 77-citation research document are available at the project repository. Contact: Yon, Agourim School.*
+*Full documentation, source files, and the complete 77-citation research document are available at the project repository. Contact: Yonatan Lev El, Agourim School.*

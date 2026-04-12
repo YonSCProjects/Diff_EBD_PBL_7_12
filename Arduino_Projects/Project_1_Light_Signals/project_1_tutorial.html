@@ -16,9 +16,8 @@
 <div class="tutorial-intro">
   <h2>How to use this tutorial</h2>
   <p>This tutorial contains everything for Project 1 in a single page. It is the same content as the printed task cards on your desk — just on screen instead of on paper. You can read this tutorial, or read the printed cards, or use both at the same time. They say the same thing.</p>
-  <p><strong>Clickable links.</strong> When you see a blue button like <span class="open-link" style="display:inline-block; padding:3pt 10pt; font-size:12pt;">📎 Open sketch: filename.ino</span> you can click it and the file will open. No typing, no copy-paste.</p>
-  <p><strong>If the first click doesn't work:</strong> The first time you click a sketch link, Windows may ask you "How do you want to open this?" Pick <strong>Arduino IDE</strong> and check the box that says "Always use this app". After that, all future clicks will open the sketch directly.</p>
-  <p><strong>Still stuck?</strong> If a link does not open, the file path is shown in grey right below the button. Copy the path, open File Explorer, navigate to the file, and double-click it there.</p>
+  <p><strong>How to open sketches in Arduino IDE.</strong> In Milestone 1, the teacher will help you set the Arduino IDE Sketchbook location to your Project 1 folder (<code>File → Preferences → Sketchbook location</code>). After that, all your sketches appear under <code>File → Sketchbook</code> — one click to open. This is how you open every sketch in the workshop.</p>
+  <p><strong>View code buttons.</strong> When you see a blue button like <span class="open-link" style="display:inline-block; padding:3pt 10pt; font-size:12pt;">📎 View code: filename.ino</span> it shows the code in your browser for reading alongside the instructions. To actually upload the sketch, open it in Arduino IDE via <code>File → Sketchbook</code>.</p>
   <p><strong>Pick your tier</strong> — Tier 1 (guided build, 8 milestones), Tier 2 (guided design, 5 milestones), or Tier 3 (open design, project planner). If you are new to the workshop, start at Tier 1.</p>
 </div>
 
@@ -100,7 +99,7 @@
     <li>Open Claude Code with your new folder as its working directory.</li>
     <li>Plug the Arduino Uno into the PC with the USB cable.</li>
     <li>Find the small green "L" LED near pin 13 on the Arduino. It should be blinking.</li>
-    <li>Open the Arduino IDE.</li>
+    <li>Open the Arduino IDE. The teacher will help you set the Sketchbook location to your Project 1 folder (<code>File → Preferences → Sketchbook location</code>). This is a one-time setup — after this, all your sketches appear under <code>File → Sketchbook</code>.</li>
   </ul>
 
   <p class="recognition-line">This is your folder, this is your project, Project 1 starts now.</p>
@@ -143,11 +142,11 @@
 
   <h2>What to do</h2>
 
-  <a class="open-link" href="ino_files/01_blink_L_fast/01_blink_L_fast.ino">Open sketch: 01_blink_L_fast.ino</a>
+  <a class="open-link" href="ino_files/01_blink_L_fast/01_blink_L_fast.ino">View code: 01_blink_L_fast.ino</a>
   <code class="file-path">ino_files/01_blink_L_fast/01_blink_L_fast.ino</code>
 
   <ul class="checklist">
-    <li>Click the Open sketch button above. The Arduino IDE should open with <code>01_blink_L_fast.ino</code>.</li>
+    <li>Open <code>01_blink_L_fast.ino</code> in the Arduino IDE (via <code>File → Sketchbook</code>).</li>
     <li>Click the Upload button in the Arduino IDE toolbar (right-arrow icon).</li>
     <li>Wait for "Done uploading" in green at the bottom of the IDE.</li>
     <li>Look at the "L" LED on the Arduino. It should now blink FASTER than before — about three times per second.</li>
@@ -256,11 +255,11 @@ void loop() {
 
   <h2>What to do</h2>
 
-  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">Open sketch: 02_blink_external.ino</a>
+  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">View code: 02_blink_external.ino</a>
   <code class="file-path">ino_files/02_blink_external/02_blink_external.ino</code>
 
   <ul class="checklist">
-    <li>Click Open sketch above.</li>
+    <li>Open the sketch in the Arduino IDE (via <code>File → Sketchbook</code>).</li>
     <li>Click the Upload button in the Arduino IDE.</li>
     <li>Wait for "Done uploading".</li>
     <li>Look at your breadboard LED. It should blink about once per second.</li>
@@ -376,11 +375,11 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
 
   <h2>What to do</h2>
 
-  <a class="open-link" href="ino_files/03_blink_alternating/03_blink_alternating.ino">Open sketch: 03_blink_alternating.ino</a>
+  <a class="open-link" href="ino_files/03_blink_alternating/03_blink_alternating.ino">View code: 03_blink_alternating.ino</a>
   <code class="file-path">ino_files/03_blink_alternating/03_blink_alternating.ino</code>
 
   <ul class="checklist">
-    <li>Click Open sketch above.</li>
+    <li>Open the sketch in the Arduino IDE (via <code>File → Sketchbook</code>).</li>
     <li>Click Upload.</li>
     <li>Wait for "Done uploading".</li>
     <li>Watch your two LEDs. They should alternate — when LED 1 is on, LED 2 is off, then swap.</li>
@@ -502,11 +501,11 @@ void loop() {
 
   <h2>What to do</h2>
 
-  <a class="open-link" href="ino_files/04_button_control/04_button_control.ino">Open sketch: 04_button_control.ino</a>
+  <a class="open-link" href="ino_files/04_button_control/04_button_control.ino">View code: 04_button_control.ino</a>
   <code class="file-path">ino_files/04_button_control/04_button_control.ino</code>
 
   <ul class="checklist">
-    <li>Click Open sketch above.</li>
+    <li>Open the sketch in the Arduino IDE (via <code>File → Sketchbook</code>).</li>
     <li>Click Upload.</li>
     <li>Wait for "Done uploading".</li>
     <li>Look at your breadboard. One LED is on, the other is off.</li>
@@ -595,14 +594,14 @@ void loop() {
 
   <h2>What to do</h2>
 
-  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">Open sketch: 02_blink_external.ino</a>
+  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">View code: 02_blink_external.ino</a>
   <code class="file-path">ino_files/02_blink_external/02_blink_external.ino</code>
 
   <ul class="checklist">
     <li><strong>Workspace setup</strong> (together with the teacher if this is your first session): File Explorer → <code>G:\My Drive\Arduino_Projects\</code> → create or find your nickname folder → create <code>Project_1_Light_Signals</code> inside it → open Claude Code.</li>
     <li>Plug in the Arduino. Confirm the "L" LED is blinking from the factory sketch.</li>
     <li>Wire ONE LED: long leg → 220 Ω → pin 9; short leg → GND. See <a class="inline-link" href="reference_cards/R1_wiring_reference.html" target="_blank">R1 Wiring 1</a>.</li>
-    <li>Click Open sketch above. Click Upload.</li>
+    <li>Open the sketch in the Arduino IDE (via <code>File → Sketchbook</code>). Click Upload.</li>
     <li>Confirm the external LED is blinking once per second.</li>
   </ul>
 
@@ -648,7 +647,7 @@ void loop() {
     <div class="option">
       Two LEDs blinking in opposition. When one is on, the other is off.<br>
       <strong>Wiring:</strong> add a second LED on pin 10 with its own 220 Ω resistor.<br>
-      <a class="open-link" href="ino_files/T2_alternating_starter/T2_alternating_starter.ino">Open starter: T2_alternating_starter.ino</a>
+      <a class="open-link" href="ino_files/T2_alternating_starter/T2_alternating_starter.ino">View starter: T2_alternating_starter.ino</a>
       <code class="file-path">ino_files/T2_alternating_starter/T2_alternating_starter.ino</code>
     </div>
 
@@ -656,7 +655,7 @@ void loop() {
     <div class="option">
       Three LEDs lighting one at a time, like a chase light.<br>
       <strong>Wiring:</strong> add a second LED on pin 10 AND a third LED on pin 11, each with its own 220 Ω resistor.<br>
-      <a class="open-link" href="ino_files/T2_chasing_starter/T2_chasing_starter.ino">Open starter: T2_chasing_starter.ino</a>
+      <a class="open-link" href="ino_files/T2_chasing_starter/T2_chasing_starter.ino">View starter: T2_chasing_starter.ino</a>
       <code class="file-path">ino_files/T2_chasing_starter/T2_chasing_starter.ino</code>
     </div>
 
@@ -664,7 +663,7 @@ void loop() {
     <div class="option">
       One LED fading smoothly in and out.<br>
       <strong>Wiring:</strong> nothing new. Use the first LED from Milestone 1 on pin 9.<br>
-      <a class="open-link" href="ino_files/T2_breathing_starter/T2_breathing_starter.ino">Open starter: T2_breathing_starter.ino</a>
+      <a class="open-link" href="ino_files/T2_breathing_starter/T2_breathing_starter.ino">View starter: T2_breathing_starter.ino</a>
       <code class="file-path">ino_files/T2_breathing_starter/T2_breathing_starter.ino</code>
     </div>
   </div>

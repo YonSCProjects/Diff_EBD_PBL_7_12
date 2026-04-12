@@ -16,9 +16,8 @@
 <div class="tutorial-intro">
   <h2>איך משתמשים במדריך הזה</h2>
   <p>המדריך הזה מכיל את כל פרויקט 1 בעמוד אחד. זה אותו תוכן של כרטיסיות המשימה המודפסות שעל השולחן — רק על המסך במקום על נייר. אפשר לקרוא את המדריך, או את הכרטיסיות המודפסות, או להשתמש בשניהם יחד. הם אומרים אותו דבר.</p>
-  <p><strong>קישורים שאפשר ללחוץ עליהם.</strong> כשרואים כפתור כחול כמו <span class="open-link" style="display:inline-block; padding:3pt 10pt; font-size:12pt;">📎 פתיחת קוד: filename.ino</span> אפשר ללחוץ עליו והקובץ ייפתח. בלי הקלדה, בלי העתקה.</p>
-  <p><strong>אם הלחיצה הראשונה לא עובדת:</strong> בפעם הראשונה שלוחצים על קישור של קובץ, Windows עלול לשאול באיזו אפליקציה לפתוח את הקובץ. בוחרים <strong>Arduino IDE</strong> ומסמנים את התיבה "Always use this app". אחרי זה, כל הלחיצות הבאות יפתחו את הקוד ישירות.</p>
-  <p><strong>עדיין תקועים?</strong> אם קישור לא נפתח, נתיב הקובץ מופיע באפור מיד מתחת לכפתור. מעתיקים את הנתיב, פותחים את סייר הקבצים, מנווטים לקובץ, ולוחצים עליו כפולה.</p>
+  <p><strong>איך פותחים קובצי קוד ב-Arduino IDE.</strong> באבן דרך 1, המורה יעזור לכם להגדיר את מיקום ה-Sketchbook של Arduino IDE לתיקיית פרויקט 1 שלכם (<code>File → Preferences → Sketchbook location</code>). אחרי זה, כל קובצי הקוד שלכם מופיעים תחת <code>File → Sketchbook</code> — לחיצה אחת לפתיחה. ככה פותחים כל קוד בסדנה.</p>
+  <p><strong>כפתורי צפייה בקוד.</strong> כשרואים כפתור כחול כמו <span class="open-link" style="display:inline-block; padding:3pt 10pt; font-size:12pt;">📎 צפייה בקוד: filename.ino</span> הוא מציג את הקוד בדפדפן לקריאה לצד ההוראות. כדי באמת להעלות את הקוד, פותחים אותו ב-Arduino IDE דרך <code>File → Sketchbook</code>.</p>
   <p><strong>בוחרים גרסה</strong> — גרסה 1 (בנייה מודרכת, 8 אבני דרך), גרסה 2 (עיצוב מודרך, 5 אבני דרך), או גרסה 3 (עיצוב פתוח, מתכנן פרויקט). אם זו הפעם הראשונה בסדנה, מתחילים בגרסה 1.</p>
 </div>
 
@@ -101,7 +100,7 @@
     <li>פותחים את קלוד קוד עם התיקייה החדשה כתיקיית העבודה שלה.</li>
     <li>מחברים את הארדואינו Uno למחשב בכבל USB.</li>
     <li>מוצאים את הלד הירוק הקטן עם האות "L" ליד רגל 13 בארדואינו. הוא אמור להבהב.</li>
-    <li>פותחים את Arduino IDE.</li>
+    <li>פותחים את Arduino IDE. המורה יעזור לכם להגדיר את מיקום ה-Sketchbook לתיקיית פרויקט 1 שלכם (<code>File → Preferences → Sketchbook location</code>). זו הגדרה חד-פעמית — אחריה כל קובצי הקוד מופיעים תחת <code>File → Sketchbook</code>.</li>
   </ul>
 
   <p class="recognition-line">זו התיקייה שלכם, זה הפרויקט שלכם, פרויקט 1 מתחיל עכשיו.</p>
@@ -144,11 +143,11 @@
 
   <h2><span class="section-icon">📋</span>מה עושים</h2>
 
-  <a class="open-link" href="ino_files/01_blink_L_fast/01_blink_L_fast.ino">📎 פתיחת קוד: 01_blink_L_fast.ino</a>
+  <a class="open-link" href="ino_files/01_blink_L_fast/01_blink_L_fast.ino">📎 צפייה בקוד: 01_blink_L_fast.ino</a>
   <code class="file-path">ino_files/01_blink_L_fast/01_blink_L_fast.ino</code>
 
   <ul class="checklist">
-    <li>לוחצים על הכפתור לפתיחת הקוד למעלה. Arduino IDE אמור להיפתח עם <code>01_blink_L_fast.ino</code>.</li>
+    <li>פותחים את <code>01_blink_L_fast.ino</code> ב-Arduino IDE (דרך <code>File → Sketchbook</code>).</li>
     <li>לוחצים על כפתור ה-Upload בסרגל הכלים של Arduino IDE (אייקון החץ שמצביע ימינה).</li>
     <li>מחכים ל-"Done uploading" בירוק בתחתית ה-IDE.</li>
     <li>מסתכלים על הלד "L" בארדואינו. הוא אמור להבהב עכשיו מהר יותר מקודם — בערך שלוש פעמים בשנייה.</li>
@@ -257,11 +256,11 @@ void loop() {
 
   <h2><span class="section-icon">📋</span>מה עושים</h2>
 
-  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">📎 פתיחת קוד: 02_blink_external.ino</a>
+  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">📎 צפייה בקוד: 02_blink_external.ino</a>
   <code class="file-path">ino_files/02_blink_external/02_blink_external.ino</code>
 
   <ul class="checklist">
-    <li>לוחצים על הכפתור לפתיחת הקוד למעלה.</li>
+    <li>פותחים את הקוד ב-Arduino IDE (דרך <code>File → Sketchbook</code>).</li>
     <li>לוחצים על כפתור ה-Upload ב-Arduino IDE.</li>
     <li>מחכים ל-"Done uploading".</li>
     <li>מסתכלים על הלד שעל הברדבורד. הוא אמור להבהב פעם בשנייה.</li>
@@ -377,11 +376,11 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
 
   <h2><span class="section-icon">📋</span>מה עושים</h2>
 
-  <a class="open-link" href="ino_files/03_blink_alternating/03_blink_alternating.ino">📎 פתיחת קוד: 03_blink_alternating.ino</a>
+  <a class="open-link" href="ino_files/03_blink_alternating/03_blink_alternating.ino">📎 צפייה בקוד: 03_blink_alternating.ino</a>
   <code class="file-path">ino_files/03_blink_alternating/03_blink_alternating.ino</code>
 
   <ul class="checklist">
-    <li>לוחצים על הכפתור לפתיחת הקוד למעלה.</li>
+    <li>פותחים את הקוד ב-Arduino IDE (דרך <code>File → Sketchbook</code>).</li>
     <li>לוחצים על Upload.</li>
     <li>מחכים ל-"Done uploading".</li>
     <li>מסתכלים על שני הלדים. הם אמורים להתחלף לסירוגין — כשלד 1 דולק, לד 2 כבוי, ואז להפך.</li>
@@ -503,11 +502,11 @@ void loop() {
 
   <h2><span class="section-icon">📋</span>מה עושים</h2>
 
-  <a class="open-link" href="ino_files/04_button_control/04_button_control.ino">📎 פתיחת קוד: 04_button_control.ino</a>
+  <a class="open-link" href="ino_files/04_button_control/04_button_control.ino">📎 צפייה בקוד: 04_button_control.ino</a>
   <code class="file-path">ino_files/04_button_control/04_button_control.ino</code>
 
   <ul class="checklist">
-    <li>לוחצים על הכפתור לפתיחת הקוד למעלה.</li>
+    <li>פותחים את הקוד ב-Arduino IDE (דרך <code>File → Sketchbook</code>).</li>
     <li>לוחצים על Upload.</li>
     <li>מחכים ל-"Done uploading".</li>
     <li>מסתכלים על הברדבורד. לד אחד דולק, השני כבוי.</li>
@@ -596,14 +595,14 @@ void loop() {
 
   <h2><span class="section-icon">📋</span>מה עושים</h2>
 
-  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">📎 פתיחת קוד: 02_blink_external.ino</a>
+  <a class="open-link" href="ino_files/02_blink_external/02_blink_external.ino">📎 צפייה בקוד: 02_blink_external.ino</a>
   <code class="file-path">ino_files/02_blink_external/02_blink_external.ino</code>
 
   <ul class="checklist">
     <li><strong>הקמת עמדת העבודה</strong> (יחד עם המורה אם זו הפעם הראשונה): סייר הקבצים ← <code>G:\My Drive\Arduino_Projects\</code> ← יוצרים או מוצאים את תיקיית הכינוי שלכם ← יוצרים <code>Project_1_Light_Signals</code> בתוכה ← פותחים את קלוד קוד.</li>
     <li>מחברים את הארדואינו. מוודאים שהלד "L" מהבהב מהקוד של היצרן.</li>
     <li>מחווטים לד אחד: רגל ארוכה ← 220 אוהם ← רגל 9; רגל קצרה ← GND. ראו <a class="inline-link" href="reference_cards_he/R1_wiring_reference_he.html" target="_blank"><span class="r-ref">R1</span> חיווט 1</a>.</li>
-    <li>לוחצים על הכפתור לפתיחת הקוד למעלה. לוחצים על Upload.</li>
+    <li>פותחים את הקוד ב-Arduino IDE (דרך <code>File → Sketchbook</code>). לוחצים על Upload.</li>
     <li>מוודאים שהלד החיצוני מהבהב פעם בשנייה.</li>
   </ul>
 
@@ -649,7 +648,7 @@ void loop() {
     <div class="option">
       שני לדים מהבהבים בניגוד. כשאחד דולק, השני כבוי.<br>
       <strong>חיווט:</strong> מוסיפים לד שני על רגל 10 עם נגד 220 אוהם משלו.<br>
-      <a class="open-link" href="ino_files/T2_alternating_starter/T2_alternating_starter.ino">📎 פתיחת קוד התחלתי: T2_alternating_starter.ino</a>
+      <a class="open-link" href="ino_files/T2_alternating_starter/T2_alternating_starter.ino">📎 צפייה בקוד התחלתי: T2_alternating_starter.ino</a>
       <code class="file-path">ino_files/T2_alternating_starter/T2_alternating_starter.ino</code>
     </div>
 
@@ -657,7 +656,7 @@ void loop() {
     <div class="option">
       שלושה לדים מאירים אחד בכל פעם, כמו אורות מרדף.<br>
       <strong>חיווט:</strong> מוסיפים לד שני על רגל 10 וגם לד שלישי על רגל 11, כל אחד עם נגד 220 אוהם משלו.<br>
-      <a class="open-link" href="ino_files/T2_chasing_starter/T2_chasing_starter.ino">📎 פתיחת קוד התחלתי: T2_chasing_starter.ino</a>
+      <a class="open-link" href="ino_files/T2_chasing_starter/T2_chasing_starter.ino">📎 צפייה בקוד התחלתי: T2_chasing_starter.ino</a>
       <code class="file-path">ino_files/T2_chasing_starter/T2_chasing_starter.ino</code>
     </div>
 
@@ -665,7 +664,7 @@ void loop() {
     <div class="option">
       לד אחד מתעמעם ומתבהיר בחלקות.<br>
       <strong>חיווט:</strong> שום דבר חדש. משתמשים בלד הראשון מאבן דרך 1 על רגל 9.<br>
-      <a class="open-link" href="ino_files/T2_breathing_starter/T2_breathing_starter.ino">📎 פתיחת קוד התחלתי: T2_breathing_starter.ino</a>
+      <a class="open-link" href="ino_files/T2_breathing_starter/T2_breathing_starter.ino">📎 צפייה בקוד התחלתי: T2_breathing_starter.ino</a>
       <code class="file-path">ino_files/T2_breathing_starter/T2_breathing_starter.ino</code>
     </div>
   </div>

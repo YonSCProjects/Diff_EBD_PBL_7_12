@@ -571,7 +571,7 @@ footer {
 }
 
 .file-path::before {
-  content: "Or open this file in File Explorer: ";
+  content: "File path (open in Arduino IDE via File \2192  Sketchbook): ";
   font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
   font-size: 10pt;
   font-style: italic;

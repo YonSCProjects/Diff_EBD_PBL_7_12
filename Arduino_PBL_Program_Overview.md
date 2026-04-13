@@ -35,6 +35,22 @@ This program responds to the student in front of the teacher, not to the label o
 
 ---
 
+## What research grounds this program
+
+The program rests on four threads of evidence, each attached to the design choices it informs.
+
+**Differentiated instruction in secondary education.** The strongest meta-analytic evidence comes from Smale-Jacobse et al. (2019), which found achievement effects of d = 0.509–0.741 when DI is implemented as adaptation of process, product, and assessment to student readiness — not as tracking or as a single extension task. The available evidence base in secondary settings is modest (twelve unique studies), so the effect size is directional rather than definitive. This thread grounds the three-tier structure at the heart of every project.
+
+**Scaffolded project-based and inquiry learning in STEM.** Belland et al. (2017), a meta-analysis of computer-based scaffolding in STEM, reports an overall effect of g = 0.46, with scaffolding producing directionally stronger effects in project-based learning contexts than in problem-based learning, and significantly larger effects for underperforming students than for their traditional peers. This thread grounds the card-mediated workflow, the 15-minute milestone chunks, and the decision to make AI (Claude Code) part of the scaffold rather than a separate channel.
+
+**Emotional-behavioural population and technology-mediated instruction.** Robotics-in-special-education studies (Berrezueta-Guzmán et al. 2021; Cibrian et al. 2022) show that structured, hands-on technological work sustains attention and task completion in children with ADHD by providing non-threatening feedback from a non-human source. We describe this informally as a "non-human mediator" effect — cards and AI as the authority, the teacher as the relational anchor — aggregating across studies rather than citing a unified synthesis.
+
+**Universal Design for Learning.** Almeqdad et al. (2023) summarise the UDL evidence base on reducing access barriers by designing multiple means of representation, engagement, and expression into the material up front rather than retrofitting accommodations. This thread grounds the dual print + HTML delivery, Claude Code's dual-channel role (pair programmer + conversational tutorial), and the three-tier differentiation — the same milestone in three entry points.
+
+**Honest caveat.** No single randomised controlled trial combines all four threads with Arduino hardware and an AI pair programmer in an EBD secondary classroom. The program is research-*grounded*, not research-*proven*. Section "What this program is — and is not" below carries this limitation forward explicitly.
+
+---
+
 ## The 9 design principles
 
 Every design decision in the program traces to one or more of these nine research-grounded principles. Each principle states a rule, names its strongest evidence, and describes what it looks like in practice.

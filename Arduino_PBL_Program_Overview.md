@@ -1,4 +1,4 @@
-# A Project-Based Learning Program in a Differentiated-Instruction Style for Students with Emotional and Behavioural Challenges
+# A Differentiated Project-Based Learning Program for Students with Emotional and Behavioural Challenges in the Robotics Workshop at Agourim School
 
 ## Program Overview for Agourim School, Grades 7–12
 

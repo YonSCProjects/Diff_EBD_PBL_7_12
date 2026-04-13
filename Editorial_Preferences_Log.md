@@ -218,16 +218,17 @@ Both misattributions happened in the same sentence of the same principle because
 
 ## Pattern 11 — Frame the program as PBL-with-DI, not DI-with-projects
 
-**Rule:** When naming or introducing the program in audience-facing framing (titles, abstracts, executive summaries), lead with "Project-Based Learning in a Differentiated-Instruction style." Do NOT lead with "Differentiated Arduino Workshop." PBL is the primary pedagogical frame; DI is the instructional modifier.
+**Rule:** When naming or introducing the program in audience-facing framing (titles, abstracts, executive summaries), lead with "Differentiated Project-Based Learning" as a compound concept. Do NOT lead with "Differentiated Arduino Workshop." PBL is the primary pedagogical frame; "differentiated" is the instructional qualifier bound to it. Include the workshop + school context ("in the Robotics Workshop at Agourim School") in the canonical title so readers know where this program lives.
 
-**Why:** PBL is the concept Ministry of Education officials and colleagues will immediately recognize from their professional training. DI is the qualifier that explains *how* this PBL is implemented. Leading with "Differentiated Arduino Workshop" makes the program sound like an instructional-design intervention with projects attached; reversing the order aligns with how educators mentally categorize this work and signals the program's pedagogical center of gravity correctly.
+**Why:** PBL is the concept Ministry of Education officials and colleagues will immediately recognize from their professional training. "Differentiated" qualifies *how* this PBL is implemented. The 2026-04-13 evolution tightened the title from the compound "Project-Based Learning in a Differentiated-Instruction Style" to "Differentiated Project-Based Learning" — a single compound concept that reads cleaner in Hebrew ("למידה דיפרנציאלית מבוססת פרויקטים") and parallel English. Adding the workshop-at-Agourim framing anchors the program to its actual setting.
 
-**Scope:** Titles and first-mention framing in all audience-facing documents (overview, master-doc abstract, executive summary, any funder-facing material). The reverse framing ("differentiated Arduino workshop") is fine in implementation-detail contexts where the student-work-tier aspect is the foreground.
+**Scope:** Titles and first-mention framing in all audience-facing documents (overview, master-doc, executive summary, any funder-facing material). The reverse framing ("differentiated Arduino workshop") is fine in implementation-detail contexts where the student-work-tier aspect is the foreground.
 
-**Examples (from session 2026-04-12 Hebrew overview edit by Yon):**
-- **Before:** `תוכנית סדנת ארדואינו דיפרנציאלית לתלמידים עם קשיים רגשיים-התנהגותיים` (title of Hebrew overview)
-- **After:** `תוכנית ללמידה מבוססת פרויקטים בסגנון הוראה דיפרנציאלי לתלמידים עם קשיים רגשיים-התנהגותיים`
-- English equivalent for future documents: `A Project-Based Learning Program in a Differentiated-Instruction Style for Students with Emotional and Behavioural Challenges`
+**Examples — title evolution (session 2026-04-12 → 2026-04-13):**
+- **Before (pre-2026-04-12):** `תוכנית סדנת ארדואינו דיפרנציאלית לתלמידים עם קשיים רגשיים-התנהגותיים`
+- **Intermediate (2026-04-12 Yon's DOCX revision):** `תוכנית ללמידה מבוססת פרויקטים בסגנון הוראה דיפרנציאלי לתלמידים עם קשיים רגשיים-התנהגותיים`
+- **Current (2026-04-13):** `תוכנית ללמידה דיפרנציאלית מבוססת פרויקטים לתלמידים עם קשיים רגשיים-התנהגותיים במסגרת סדנת הרובוטיקה בבית הספר עגורים`
+- **English equivalent (current):** `A Differentiated Project-Based Learning Program for Students with Emotional and Behavioural Challenges in the Robotics Workshop at Agourim School`
 
 ---
 

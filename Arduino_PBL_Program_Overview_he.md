@@ -394,9 +394,13 @@
 
 ## רשימת מקורות
 
+Almeqdad, Q. I., Alodat, A. M., Alquraan, M. F., Mohaidat, M. A., & Al-Makhzoomy, A. K. (2023). The effectiveness of universal design for learning: A systematic review of the literature and meta-analysis. *Cogent Education, 10*(1). https://doi.org/10.1080/2331186X.2023.2218191
+
 Barker, C., & de Lugt, J. (2022). A review of evidence-based practices to support students with oppositional defiant disorder in classroom settings. *International Journal of Special Education, 37*(1), 85–98. https://internationalsped.com/ijse/article/view/47
 
-Belland, B. R., Walker, A. E., & Kim, N. J. (2017). A Bayesian network meta-analysis to synthesize the influence of contexts of scaffolding use on cognitive outcomes in STEM education. *Review of Educational Research, 87*(6), 1042–1081. https://doi.org/10.3102/0034654317723009
+Belland, B. R., Walker, A. E., Kim, N. J., & Lefler, M. (2017). Synthesizing results from empirical research on computer-based scaffolding in STEM education: A meta-analysis. *Review of Educational Research, 87*(2), 309–344. https://doi.org/10.3102/0034654316670999
+
+Berrezueta-Guzmán, J., Robles-Bykbaev, V. E., Pau, I., Pesántez-Avilés, F., & Martín-Ruiz, M.-L. (2021). Robotic technologies in ADHD care: Literature review. *IEEE Access, 10*. https://doi.org/10.1109/access.2021.3137082
 
 Cibrian, F. L., Lakes, K. D., Schuck, S. E. B., & Hayes, G. R. (2022). The potential for emerging technologies to support self-regulation in children with ADHD: A literature review. *International Journal of Child-Computer Interaction, 31*, 100421. https://doi.org/10.1016/j.ijcci.2021.100421
 
@@ -417,6 +421,8 @@ Qiu, H., Liang, X., Wang, P., Zhang, H., & Shum, D. H. K. (2023). Efficacy of no
 Rosen, S. M., Boyle, J. R., Cariss, K., & Forchelli, G. A. (2014). Changing how we think, changing how we learn: Scaffolding executive function processes for students with learning disabilities. *Learning Disabilities: A Multidisciplinary Journal, 20*(4), 165–176. https://eric.ed.gov/?id=EJ1168865
 
 Sciacca, J. L. (2025). *Experiences of teachers using project-based learning with students with emotional and behavioral disorders* [Doctoral dissertation, Wilkes University]. ProQuest Dissertations & Theses (ID 32170831). https://www.proquest.com/openview/f3284aea35dd8d14dd8429e421c14110/1
+
+Smale-Jacobse, A. E., Meijer, A., Helms-Lorenz, M., & Maulana, R. (2019). Differentiated instruction in secondary education: A systematic review of research evidence. *Frontiers in Psychology, 10*, 2366. https://doi.org/10.3389/fpsyg.2019.02366
 
 Smith, Z. R., Langberg, J. M., Cusick, C. N., Green, C. D., & Becker, S. P. (2020). Academic motivation deficits in adolescents with ADHD and associations with academic functioning. *Journal of Abnormal Child Psychology*. https://doi.org/10.1007/s10802-019-00601-x
 

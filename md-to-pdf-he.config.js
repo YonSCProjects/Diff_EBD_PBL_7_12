@@ -15,9 +15,18 @@ module.exports = {
     displayHeaderFooter: true,
     headerTemplate: '<span></span>',
     footerTemplate: `
-      <div style="width: 100%; font-size: 9pt; color: #999; text-align: center; padding: 0 20mm;">
+      <div style="width: 100%; font-size: 9pt; color: #999; text-align: center; padding: 0 20mm;" id="footer-content">
         <span class="pageNumber"></span> / <span class="totalPages"></span>
       </div>
+      <script>
+        (function(){
+          var pn = document.querySelector('.pageNumber');
+          var fc = document.getElementById('footer-content');
+          if (pn && fc && pn.textContent.trim() === '1') {
+            fc.style.visibility = 'hidden';
+          }
+        })();
+      </script>
     `,
   },
 
@@ -163,11 +172,33 @@ module.exports = {
       display: inline;
     }
 
-    /* But italic Hebrew paragraphs should stay RTL */
+    /* But italic Hebrew paragraphs should stay RTL.
+     * unicode-bidi: plaintext lets each text run determine direction
+     * from its first strong character — handles mixed Hebrew + Latin
+     * citation fragments without manual LRM markers. */
     p > em:only-child {
       direction: rtl;
-      unicode-bidi: normal;
+      unicode-bidi: plaintext;
       display: block;
+    }
+
+    /* APA-7 hanging indent for references (RTL mirror) */
+    .references p {
+      padding-right: 2em;
+      text-indent: -2em;
+      text-align: right;
+      margin: 4pt 0;
+    }
+
+    /* Defensive: explicit page break for appendix h1s */
+    h1.appendix, h1[id^="נספח"] {
+      page-break-before: always;
+    }
+
+    /* Table cell wrapping — prevent long model numbers from forcing column overflow */
+    td {
+      word-break: normal;
+      overflow-wrap: anywhere;
     }
   `,
 

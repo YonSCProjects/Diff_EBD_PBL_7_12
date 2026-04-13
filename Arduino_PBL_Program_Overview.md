@@ -2,9 +2,6 @@
 
 ## Program Overview for Agourim School, Grades 7–12
 
-*Yonatan Lev El, Robotics and Programming Teacher, Agourim School, Israel*
-*Version 1.0 — April 2026*
-
 ---
 
 ## Why this program exists
@@ -201,21 +198,6 @@ The program uses a simple measurement framework designed to be sustainable for a
 
 ---
 
-## Appendix 1: Project 1 student materials (Hebrew)
-
-The complete Hebrew student-facing materials for Project 1 (Light Signals) are attached as a separate packet. These include:
-
-- 5 reference cards (R1 Wiring, R2 Stuck Protocol, R3 Claude Code Prompts, R4 Safety, R5 Sketch Index)
-- 8 Version-1 navigation cards (guided build, milestones 1–8)
-- 5 Version-2 navigation cards (guided design, milestones 1–5)
-- 1 Version-3 project planner (open design)
-- 1 HTML tutorial (browser-viewable single-page mirror of all navigation cards)
-- 1 Claude Code Channel B scaffold (conversational walk-through scripts)
-
-These materials demonstrate the level of detail, visual design, and Hebrew-language quality of the student-facing artifacts. Equivalent artifact families are planned for Projects 2–8.
-
----
-
 ## Appendix 2: Full budget breakdown
 
 *(Full itemized budget to be included here — currently summarized in "Budget at a glance" above. Full line-item breakdown available in the master document §8.)*
@@ -261,3 +243,42 @@ Taylor, J. C., Allen, L. M., Van, J., & Moohr, M. (2024). The effects of project
 ---
 
 *Full documentation, source files, and the complete 77-citation research document are available at the project repository. Contact: Yonatan Lev El, Agourim School.*
+
+---
+
+# Appendix 1 — Reference Cards and Task Cards (Project 1)
+
+This appendix contains the printable student-facing cards for Project 1 — *Light Signals*:
+
+**Reference Cards (R1–R5):**
+
+- R1 — Wiring Reference
+- R2 — Stuck Protocol
+- R3 — Claude Code Prompts
+- R4 — Safety Reminder
+- R5 — Sketch Index
+
+**Task Cards — Version 1 (T1, 8 milestones):**
+
+- T1·M1 — Set Up Your Workspace
+- T1·M2 — First Upload
+- T1·M3 — Wire First LED
+- T1·M4 — Light Up the LED
+- T1·M5 — Add a Second LED
+- T1·M6 — Alternating Blink
+- T1·M7 — Wire a Button
+- T1·M8 — Button Control
+
+**Task Cards — Version 2 (T2, 5 milestones):**
+
+- T2·M1 — Startup
+- T2·M2 — Pick a Pattern
+- T2·M3 — Claude Code Level 2
+- T2·M4 — Button Behavior
+- T2·M5 — Signature Pattern
+
+**Task Card — Version 3 (T3):**
+
+- T3 — Project Planner
+
+The cards follow on the subsequent pages.

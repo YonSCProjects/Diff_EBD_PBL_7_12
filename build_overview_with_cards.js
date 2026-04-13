@@ -102,6 +102,7 @@ async function renderCards(browser) {
     }
     const page = await browser.newPage();
     await page.setJavaScriptEnabled(false);
+    await page.emulateMediaType('print');
     const url = 'file:///' + full.replace(/\\/g, '/');
     await page.goto(url, { waitUntil: 'load', timeout: 60000 });
     const buf = await page.pdf({

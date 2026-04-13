@@ -175,7 +175,7 @@ The program uses a simple measurement framework designed to be sustainable for a
 
 **What the program does NOT measure:** standardized test scores, behavioural rating scales, comparison to a non-workshop control group, or causal claims about durable change outside the workshop. The measurement framework matches the program's honest scope — it tracks in-workshop engagement and task completion, not clinical outcomes.
 
-**The program targets four outcome clusters**, each with a different evidence base and a different honesty caveat:
+**The program targets four outcome clusters**:
 
 1. **Positive learning experiences** — the super-target. Students experience moments where "something I did — worked."
 2. **Technical skills** — breadboarding, wiring, uploading code, sensor reading, soldering (from Project 4), motor control, Wi-Fi, and integration.

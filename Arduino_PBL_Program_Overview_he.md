@@ -1,6 +1,6 @@
 <div style="text-align: center; direction: rtl; page-break-after: always; padding-top: 60pt;">
 
-<h1 style="font-size: 22pt; text-align: center; border: none; margin-top: 40pt; margin-bottom: 60pt;">תוכנית ללמידה דיפרנציאלית מבוססת פרויקטים<br/>לתלמידים עם קשיים רגשיים-התנהגותיים<br/>במסגרת סדנת הרובוטיקה בבית הספר עגורים</h1>
+<h1 style="font-size: 22pt; text-align: center; border: none; margin-top: 40pt; margin-bottom: 60pt;">תוכנית למידה דיפרנציאלית מבוססת פרויקטים<br/>לתלמידים עם קשיים רגשיים-התנהגותיים<br/>במסגרת סדנת הרובוטיקה ותכנות בבית הספר עגורים</h1>
 
 <p style="font-size: 14pt; margin-top: 30pt;"><strong>מספר פתרון הלמידה:</strong> 206874</p>
 
@@ -167,7 +167,7 @@
 
 ---
 
-## תקציב במבט חטוף (תקציב מלא בנספח 1)
+## תקציב במבט חטוף (תקציב מלא בנספח 2)
 
 | | שנה 1 (הקמה + כל 8 הפרויקטים) | שנה 2 (מתכלים בלבד) |
 |---|---|---|
@@ -216,7 +216,90 @@
 
 ---
 
-# נספח 1 — תקציב מפורט ובקשת משאבים
+## רשימת מקורות
+
+<div class="references" markdown="1">
+
+Almeqdad, Q. I., Alodat, A. M., Alquraan, M. F., Mohaidat, M. A., & Al-Makhzoomy, A. K. (2023). The effectiveness of universal design for learning: A systematic review of the literature and meta-analysis. *Cogent Education, 10*(1). https://doi.org/10.1080/2331186X.2023.2218191
+
+Barker, C., & de Lugt, J. (2022). A review of evidence-based practices to support students with oppositional defiant disorder in classroom settings. *International Journal of Special Education, 37*(1), 85–98. https://internationalsped.com/ijse/article/view/47
+
+Belland, B. R., Walker, A. E., Kim, N. J., & Lefler, M. (2017). Synthesizing results from empirical research on computer-based scaffolding in STEM education: A meta-analysis. *Review of Educational Research, 87*(2), 309–344. https://doi.org/10.3102/0034654316670999
+
+Berrezueta-Guzmán, J., Robles-Bykbaev, V. E., Pau, I., Pesántez-Avilés, F., & Martín-Ruiz, M.-L. (2021). Robotic technologies in ADHD care: Literature review. *IEEE Access, 10*. https://doi.org/10.1109/access.2021.3137082
+
+Cibrian, F. L., Lakes, K. D., Schuck, S. E. B., & Hayes, G. R. (2022). The potential for emerging technologies to support self-regulation in children with ADHD: A literature review. *International Journal of Child-Computer Interaction, 31*, 100421. https://doi.org/10.1016/j.ijcci.2021.100421
+
+Cumming, M. M., Oblath, R., Qiu, Y., Frazier, S. L., Zelazo, P. D., Flores, H., & Park, J. (2024). Executive function, perceived stress, and academic performance among middle schoolers with and without behavior problems. *Remedial and Special Education, 45*(2), 85–100. https://doi.org/10.1177/07419325231176762
+
+Gersib, J. A., & Mason, S. (2023). A meta-analysis of behavior interventions for students with emotional-behavioral disorders in self-contained settings. *Behavioral Disorders*. Advance online publication. https://doi.org/10.1177/01987429231160285
+
+Gilmour, A. F., Sandilos, L. E., Pilny, W. V., Schwartz, S., & Wehby, J. H. (2022). Teaching students with emotional/behavioral disorders: Teachers' burnout profiles and classroom management. *Journal of Emotional and Behavioral Disorders*. Advance online publication. https://doi.org/10.1177/10634266211020258
+
+Harrison, J. R., Soares, D. A., & Joyce, J. (2019). Inclusion of students with emotional and behavioural disorders in general education settings: A scoping review of research in the US. *International Journal of Inclusive Education, 23*(12), 1258–1277. https://doi.org/10.1080/13603116.2018.1444107
+
+Hwang, J., & Taylor, J. C. (2016). Stemming on STEM: A STEM education framework for students with disabilities. *Journal of Science Education for Students with Disabilities, 19*(1). https://doi.org/10.14448/jsesd.06.00017
+
+Morsink, S., Van der Oord, S., Antrop, I., Danckaerts, M., & Scheres, A. (2022). Studying motivation in ADHD: The role of internal motives and the relevance of self-determination theory. *Journal of Attention Disorders*. Advance online publication. https://doi.org/10.1177/10870547211050948
+
+Qiu, H., Liang, X., Wang, P., Zhang, H., & Shum, D. H. K. (2023). Efficacy of non-pharmacological interventions on executive functions in children and adolescents with ADHD: A systematic review and meta-analysis. *Asian Journal of Psychiatry, 87*, 103692. https://doi.org/10.1016/j.ajp.2023.103692
+
+Rosen, S. M., Boyle, J. R., Cariss, K., & Forchelli, G. A. (2014). Changing how we think, changing how we learn: Scaffolding executive function processes for students with learning disabilities. *Learning Disabilities: A Multidisciplinary Journal, 20*(4), 165–176. https://eric.ed.gov/?id=EJ1168865
+
+Sciacca, J. L. (2025). *Experiences of teachers using project-based learning with students with emotional and behavioral disorders* [Doctoral dissertation, Wilkes University]. ProQuest Dissertations & Theses (ID 32170831). https://www.proquest.com/openview/f3284aea35dd8d14dd8429e421c14110/1
+
+Smale-Jacobse, A. E., Meijer, A., Helms-Lorenz, M., & Maulana, R. (2019). Differentiated instruction in secondary education: A systematic review of research evidence. *Frontiers in Psychology, 10*, 2366. https://doi.org/10.3389/fpsyg.2019.02366
+
+Smith, Z. R., Langberg, J. M., Cusick, C. N., Green, C. D., & Becker, S. P. (2020). Academic motivation deficits in adolescents with ADHD and associations with academic functioning. *Journal of Abnormal Child Psychology*. Advance online publication. https://doi.org/10.1007/s10802–019–00601-x
+
+Taylor, J. C., Allen, L. M., Van, J., & Moohr, M. (2024). The effects of project-based learning on student behavior and teacher burnout in an emotional/behavioral support classroom. *Journal of Emotional and Behavioral Disorders, 32*(2). https://doi.org/10.1177/10634266241235933
+
+</div>
+
+---
+
+# נספח 1 — כרטיסיות עזר וכרטיסיות ניווט (פרויקט 1)
+
+נספח זה מכיל את הכרטיסיות המודפסות לתלמיד עבור פרויקט 1 — *אותות אור*:
+
+**כרטיסיות עזר (R1–R5):**
+
+- R1 — חיווט פרויקט 1
+- R2 — פרוטוקול "נתקעתי"
+- R3 — הנחיות לקלוד קוד
+- R4 — תזכורת בטיחות
+- R5 — אינדקס סקיצות
+
+**כרטיסיות ניווט — גרסה 1 (T1, 8 אבני דרך):**
+
+- T1·M1 — פותחים את עמדת העבודה
+- T1·M2 — העלאה ראשונה
+- T1·M3 — מחברים לד ראשון
+- T1·M4 — מדליקים את הלד
+- T1·M5 — מוסיפים לד שני
+- T1·M6 — הבהוב מתחלף
+- T1·M7 — מחברים כפתור
+- T1·M8 — שליטה בלד עם כפתור
+
+**כרטיסיות ניווט — גרסה 2 (T2, 5 אבני דרך):**
+
+- T2·M1 — התחלה
+- T2·M2 — בוחרים תבנית
+- T2·M3 — קלוד קוד גרסה 2
+- T2·M4 — התנהגות כפתור
+- T2·M5 — תבנית חתימה
+
+**כרטיסיית ניווט — גרסה 3 (T3):**
+
+- T3 — מתכנן פרויקט חופשי
+
+הכרטיסיות מצורפות בעמודים הבאים.
+
+<!-- INSERT_CARDS_HERE -->
+
+---
+
+# נספח 2 — תקציב מפורט ובקשת משאבים
 
 נספח זה מתאר את עלות השנה הראשונה של הפיילוט ואת המשאבים שהתוכנית מבקשת מגורמי מימון לתמוך בהם. המטרה היא להציג תקציב שקוף, מפורט וכן — עם טווחי מחירים מפורשים במקומות בהם הרכש תלוי במחירים מקומיים — כך שהמעיין יראה בדיוק מה מבוקש ומדוע. התקציב מעוצב להיות **בר-קיימא בשנה השנייה ואילך**: רוב החומרה ניתנת לשימוש חוזר בין קבוצות, ועלויות השנה השנייה נשלטות בעיקר על ידי מתכלים ורכיבים שצריך להחליף, ולא על ידי תשתית חדשה.
 
@@ -390,87 +473,3 @@
 
 **מה גורם המימון מקבל תמורת הבקשה לשנה הראשונה.** שנה שלמה של תוכנית ארדואינו דיפרנציאלית, מבוססת מחקר, שמונה פרויקטים לאוכלוסייה מוחלשת עם קשיים רגשיים-התנהגותיים; משפחה שלמה של חומרי מורה לכל שמונת הפרויקטים (כרטיסיות ניווט, כרטיסיות עזר, מדריכי HTML, קוד מוכן מראש, תבניות לקלוד קוד, דפי התמודדות עם תקלות); רישום אורכי קל אך אמיתי של תוצאות הקבוצה במעורבות, השלמת אבני דרך, ודפוסי אירועים התנהגותיים; רפלקציית מורה בסוף השנה שמזהה מה עבד ומה לא; ופיילוט ש — אם יצליח — יהפוך לבסיס להמשך שנה שנייה בערך שליש מעלות השנה הראשונה.
 
----
-
-## רשימת מקורות
-
-<div class="references" markdown="1">
-
-Almeqdad, Q. I., Alodat, A. M., Alquraan, M. F., Mohaidat, M. A., & Al-Makhzoomy, A. K. (2023). The effectiveness of universal design for learning: A systematic review of the literature and meta-analysis. *Cogent Education, 10*(1). https://doi.org/10.1080/2331186X.2023.2218191
-
-Barker, C., & de Lugt, J. (2022). A review of evidence-based practices to support students with oppositional defiant disorder in classroom settings. *International Journal of Special Education, 37*(1), 85–98. https://internationalsped.com/ijse/article/view/47
-
-Belland, B. R., Walker, A. E., Kim, N. J., & Lefler, M. (2017). Synthesizing results from empirical research on computer-based scaffolding in STEM education: A meta-analysis. *Review of Educational Research, 87*(2), 309–344. https://doi.org/10.3102/0034654316670999
-
-Berrezueta-Guzmán, J., Robles-Bykbaev, V. E., Pau, I., Pesántez-Avilés, F., & Martín-Ruiz, M.-L. (2021). Robotic technologies in ADHD care: Literature review. *IEEE Access, 10*. https://doi.org/10.1109/access.2021.3137082
-
-Cibrian, F. L., Lakes, K. D., Schuck, S. E. B., & Hayes, G. R. (2022). The potential for emerging technologies to support self-regulation in children with ADHD: A literature review. *International Journal of Child-Computer Interaction, 31*, 100421. https://doi.org/10.1016/j.ijcci.2021.100421
-
-Cumming, M. M., Oblath, R., Qiu, Y., Frazier, S. L., Zelazo, P. D., Flores, H., & Park, J. (2024). Executive function, perceived stress, and academic performance among middle schoolers with and without behavior problems. *Remedial and Special Education, 45*(2), 85–100. https://doi.org/10.1177/07419325231176762
-
-Gersib, J. A., & Mason, S. (2023). A meta-analysis of behavior interventions for students with emotional-behavioral disorders in self-contained settings. *Behavioral Disorders*. Advance online publication. https://doi.org/10.1177/01987429231160285
-
-Gilmour, A. F., Sandilos, L. E., Pilny, W. V., Schwartz, S., & Wehby, J. H. (2022). Teaching students with emotional/behavioral disorders: Teachers' burnout profiles and classroom management. *Journal of Emotional and Behavioral Disorders*. Advance online publication. https://doi.org/10.1177/10634266211020258
-
-Harrison, J. R., Soares, D. A., & Joyce, J. (2019). Inclusion of students with emotional and behavioural disorders in general education settings: A scoping review of research in the US. *International Journal of Inclusive Education, 23*(12), 1258–1277. https://doi.org/10.1080/13603116.2018.1444107
-
-Hwang, J., & Taylor, J. C. (2016). Stemming on STEM: A STEM education framework for students with disabilities. *Journal of Science Education for Students with Disabilities, 19*(1). https://doi.org/10.14448/jsesd.06.00017
-
-Morsink, S., Van der Oord, S., Antrop, I., Danckaerts, M., & Scheres, A. (2022). Studying motivation in ADHD: The role of internal motives and the relevance of self-determination theory. *Journal of Attention Disorders*. Advance online publication. https://doi.org/10.1177/10870547211050948
-
-Qiu, H., Liang, X., Wang, P., Zhang, H., & Shum, D. H. K. (2023). Efficacy of non-pharmacological interventions on executive functions in children and adolescents with ADHD: A systematic review and meta-analysis. *Asian Journal of Psychiatry, 87*, 103692. https://doi.org/10.1016/j.ajp.2023.103692
-
-Rosen, S. M., Boyle, J. R., Cariss, K., & Forchelli, G. A. (2014). Changing how we think, changing how we learn: Scaffolding executive function processes for students with learning disabilities. *Learning Disabilities: A Multidisciplinary Journal, 20*(4), 165–176. https://eric.ed.gov/?id=EJ1168865
-
-Sciacca, J. L. (2025). *Experiences of teachers using project-based learning with students with emotional and behavioral disorders* [Doctoral dissertation, Wilkes University]. ProQuest Dissertations & Theses (ID 32170831). https://www.proquest.com/openview/f3284aea35dd8d14dd8429e421c14110/1
-
-Smale-Jacobse, A. E., Meijer, A., Helms-Lorenz, M., & Maulana, R. (2019). Differentiated instruction in secondary education: A systematic review of research evidence. *Frontiers in Psychology, 10*, 2366. https://doi.org/10.3389/fpsyg.2019.02366
-
-Smith, Z. R., Langberg, J. M., Cusick, C. N., Green, C. D., & Becker, S. P. (2020). Academic motivation deficits in adolescents with ADHD and associations with academic functioning. *Journal of Abnormal Child Psychology*. Advance online publication. https://doi.org/10.1007/s10802–019–00601-x
-
-Taylor, J. C., Allen, L. M., Van, J., & Moohr, M. (2024). The effects of project-based learning on student behavior and teacher burnout in an emotional/behavioral support classroom. *Journal of Emotional and Behavioral Disorders, 32*(2). https://doi.org/10.1177/10634266241235933
-
-</div>
-
----
-
-*התיעוד המלא, קובצי המקור, ומסמך המחקר בן 77 הציטוטים זמינים במאגר הפרויקט. ליצירת קשר: יונתן לב אל, בית ספר עגורים.*
-
----
-
-# נספח 2 — כרטיסיות עזר וכרטיסיות ניווט (פרויקט 1)
-
-נספח זה מכיל את הכרטיסיות המודפסות לתלמיד עבור פרויקט 1 — *אותות אור*:
-
-**כרטיסיות עזר (R1–R5):**
-
-- R1 — חיווט פרויקט 1
-- R2 — פרוטוקול "נתקעתי"
-- R3 — הנחיות לקלוד קוד
-- R4 — תזכורת בטיחות
-- R5 — אינדקס סקיצות
-
-**כרטיסיות ניווט — גרסה 1 (T1, 8 אבני דרך):**
-
-- T1·M1 — פותחים את עמדת העבודה
-- T1·M2 — העלאה ראשונה
-- T1·M3 — מחברים לד ראשון
-- T1·M4 — מדליקים את הלד
-- T1·M5 — מוסיפים לד שני
-- T1·M6 — הבהוב מתחלף
-- T1·M7 — מחברים כפתור
-- T1·M8 — שליטה בלד עם כפתור
-
-**כרטיסיות ניווט — גרסה 2 (T2, 5 אבני דרך):**
-
-- T2·M1 — התחלה
-- T2·M2 — בוחרים תבנית
-- T2·M3 — קלוד קוד גרסה 2
-- T2·M4 — התנהגות כפתור
-- T2·M5 — תבנית חתימה
-
-**כרטיסיית ניווט — גרסה 3 (T3):**
-
-- T3 — מתכנן פרויקט חופשי
-
-הכרטיסיות מצורפות בעמודים הבאים.

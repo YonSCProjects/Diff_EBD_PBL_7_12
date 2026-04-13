@@ -61,16 +61,34 @@ const cardOrder = [
   [taskDir, `T3_project_planner${suffix}.html`],
 ];
 
-async function renderOverview() {
-  console.log(`[1/3] Rendering overview PDF: ${overviewMd}`);
+const MARKER = '<!-- INSERT_CARDS_HERE -->';
+
+function renderMdToPdf(mdPath) {
   execSync(
-    `npx --yes md-to-pdf --config-file ${overviewConfig} "${overviewMd}"`,
+    `npx --yes md-to-pdf --config-file ${overviewConfig} "${mdPath}"`,
     { cwd: ROOT, stdio: 'inherit' }
   );
-  const src = path.join(ROOT, overviewPdf);
-  const dst = path.join(OUT, overviewPdf);
-  fs.renameSync(src, dst);
-  return dst;
+  return path.join(ROOT, path.basename(mdPath).replace(/\.md$/, '.pdf'));
+}
+
+async function renderOverview() {
+  const src = fs.readFileSync(path.join(ROOT, overviewMd), 'utf8');
+  if (!src.includes(MARKER)) {
+    console.log(`[1/3] Rendering overview PDF (no marker — cards will append at end)`);
+    const pdf = renderMdToPdf(overviewMd);
+    return { parts: [pdf], splitAtEnd: true };
+  }
+  console.log(`[1/3] Rendering overview PDF in two parts (split at INSERT_CARDS_HERE marker)`);
+  const [before, after] = src.split(MARKER);
+  const part1Md = overviewMd.replace(/\.md$/, '.part1.md');
+  const part2Md = overviewMd.replace(/\.md$/, '.part2.md');
+  fs.writeFileSync(path.join(ROOT, part1Md), before, 'utf8');
+  fs.writeFileSync(path.join(ROOT, part2Md), after, 'utf8');
+  const pdf1 = renderMdToPdf(part1Md);
+  const pdf2 = renderMdToPdf(part2Md);
+  fs.unlinkSync(path.join(ROOT, part1Md));
+  fs.unlinkSync(path.join(ROOT, part2Md));
+  return { parts: [pdf1, pdf2], splitAtEnd: false };
 }
 
 async function renderCards(browser) {
@@ -98,20 +116,32 @@ async function renderCards(browser) {
   return pdfBuffers;
 }
 
-async function mergePdfs(overviewPath, cardBuffers) {
+async function mergePdfs(overviewInfo, cardBuffers) {
   console.log(`[3/3] Merging PDFs into ${finalPdf}`);
   const out = await PDFDocument.create();
-  const overviewBytes = fs.readFileSync(overviewPath);
-  const overviewDoc = await PDFDocument.load(overviewBytes);
-  const overviewPages = await out.copyPages(
-    overviewDoc,
-    overviewDoc.getPageIndices()
-  );
-  overviewPages.forEach((p) => out.addPage(p));
-  for (const buf of cardBuffers) {
+
+  async function appendPdfFile(p) {
+    const doc = await PDFDocument.load(fs.readFileSync(p));
+    const pages = await out.copyPages(doc, doc.getPageIndices());
+    pages.forEach((pg) => out.addPage(pg));
+  }
+  async function appendPdfBuf(buf) {
     const doc = await PDFDocument.load(buf);
     const pages = await out.copyPages(doc, doc.getPageIndices());
-    pages.forEach((p) => out.addPage(p));
+    pages.forEach((pg) => out.addPage(pg));
+  }
+
+  if (overviewInfo.splitAtEnd) {
+    await appendPdfFile(overviewInfo.parts[0]);
+    for (const buf of cardBuffers) await appendPdfBuf(buf);
+  } else {
+    await appendPdfFile(overviewInfo.parts[0]);
+    for (const buf of cardBuffers) await appendPdfBuf(buf);
+    await appendPdfFile(overviewInfo.parts[1]);
+    // Clean up intermediate part PDFs
+    for (const p of overviewInfo.parts) {
+      try { fs.unlinkSync(p); } catch (_) {}
+    }
   }
   const bytes = await out.save();
   fs.writeFileSync(finalPdf, bytes);

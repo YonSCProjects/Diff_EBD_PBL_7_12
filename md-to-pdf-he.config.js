@@ -152,8 +152,38 @@ module.exports = {
       page-break-before: avoid;
     }
 
-    h2, h3, h4 {
+    h1, h2, h3, h4, h5, h6 {
       page-break-after: avoid;
+      break-after: avoid-page;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+    /* Belt-and-braces: forbid a page break between a heading and its first
+     * following block element. Chromium honors this more reliably than
+     * page-break-after: avoid alone. */
+    h2 + p, h2 + ul, h2 + ol, h2 + table, h2 + blockquote,
+    h3 + p, h3 + ul, h3 + ol, h3 + table, h3 + blockquote,
+    h4 + p, h4 + ul, h4 + ol, h4 + table, h4 + blockquote {
+      page-break-before: avoid;
+      break-before: avoid-page;
+    }
+
+    /* Keep a table's lead-in sentence on the same page as the table
+     * (Chicago §3.51, APA-7 §7.8). Covers direct lead-ins and lead-ins
+     * separated from the table by one blockquote/paragraph/list. */
+    p:has(+ table), ul:has(+ table), ol:has(+ table),
+    blockquote:has(+ table),
+    p:has(+ blockquote + table), p:has(+ p + table),
+    p:has(+ ul + table), p:has(+ ol + table),
+    blockquote:has(+ p + table), blockquote:has(+ blockquote + table) {
+      page-break-after: avoid;
+      break-after: avoid-page;
     }
 
     /* Title page */

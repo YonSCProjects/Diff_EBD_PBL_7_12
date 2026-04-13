@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "fritzing": {
+      "command": "C:\\Python314\\python.exe",
+      "args": ["-m", "fritzing_mcp"],
+      "cwd": "C:\\Fritzing mcp",
+      "env": {}
+    }
+  }
+}

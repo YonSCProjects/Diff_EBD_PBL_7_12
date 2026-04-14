@@ -2,9 +2,12 @@
   "mcpServers": {
     "fritzing": {
       "command": "C:\\Python314\\python.exe",
-      "args": ["-m", "fritzing_mcp"],
+      "args": ["-u", "C:\\Fritzing mcp\\run_mcp.py"],
       "cwd": "C:\\Fritzing mcp",
-      "env": {}
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONIOENCODING": "utf-8"
+      }
     }
   }
 }

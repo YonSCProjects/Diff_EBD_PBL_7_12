@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 Task Card — Tier 2 Option B: Wire the third LED (chasing)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <div class="milestone-badge">Tier 2 • Option B (chasing) — extra wiring</div>
+  <h1>Wire the third LED</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="why">
+You only do this card if you picked <strong>Option B — chasing pattern</strong> in Milestone 2. Chasing needs three LEDs: one on pin 9, one on pin 10, and one on pin 11. The first two are already wired from Tier 1 Milestones 3 and 5. Now you add the third. Same wiring pattern, one row over on the breadboard. No sketch upload — the chasing starter sketch comes with Milestone 2.
+</div>
+
+<div class="warning">
+  <strong>Skip this card if you chose Option A or Option C.</strong>
+  Option A (alternating) only needs two LEDs — you are done with wiring. Option C (breathing) only needs one LED — you are done with wiring.
+</div>
+
+<h2>What to do</h2>
+
+<ul class="checklist">
+  <li>Pick a third LED from your parts tray — <strong>a third colour</strong>, different from LEDs 1 and 2 (so you can see the chase clearly).</li>
+  <li>Pick another 220 Ω resistor (red · red · brown colour bands).</li>
+  <li>Plant the third LED in the breadboard, one row away from the second LED. Legs in different rows, like Milestones 3 and 5.</li>
+  <li>Connect the long leg (+) of the third LED to the Arduino's <strong>digital pin 11</strong>, through the 220 Ω resistor.</li>
+  <li>Connect the short leg (−) of the third LED to the Arduino's GND.</li>
+</ul>
+
+<h2>Wiring diagram</h2>
+
+<pre class="wiring-block">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND
+
+Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
+                           ▼
+                      LED 3 short leg ─── Arduino GND</pre>
+
+<figure class="wiring-figure">
+  <img src="../images/w4_three_leds_chasing_breadboard.svg" alt="Breadboard diagram: three LEDs wired in parallel — pin 9 through 220 Ω to LED 1, pin 10 through 220 Ω to LED 2, pin 11 through 220 Ω to LED 3, all short legs to GND. No button.">
+  <figcaption><strong>Pin 9 → 220 Ω → LED 1</strong> · <strong>Pin 10 → 220 Ω → LED 2</strong> · <strong>Pin 11 → 220 Ω → LED 3</strong>. All short legs → Arduino <strong>GND</strong>. See Reference Card <strong>R1 Wiring 4</strong>.</figcaption>
+</figure>
+
+<div class="expected">
+  <strong>What you should see</strong>
+  Three LEDs in three different colours, planted side by side on the breadboard, each with its own 220 Ω resistor going to a different pin (9, 10, 11). None of them is lit yet — the sketch that chases them comes when you upload the chasing starter from Milestone 2.
+</div>
+
+<div class="done-when">
+  <strong>Done when</strong>
+  <ul>
+    <li>Three LEDs on the breadboard, one row apart each, three different colours</li>
+    <li>LED 3's long leg goes through a 220 Ω resistor to pin 11</li>
+    <li>LED 3's short leg goes to GND</li>
+    <li>The first two LEDs from Tier 1 are still wired on pins 9 and 10</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong>Stuck?</strong>
+  The wiring is the same pattern as Milestones 3 and 5 — just one more row over, on pin 11. Check reference card R1 Wiring 4 for the full three-LED diagram. If one of the earlier LEDs stopped working while you were wiring this one, a jumper wire probably came loose — re-seat it. Call the teacher if you need help.
+</div>
+
+</div>
+</body>
+</html>

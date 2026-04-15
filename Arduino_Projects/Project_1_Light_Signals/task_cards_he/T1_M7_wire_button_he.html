@@ -48,6 +48,11 @@
 
 <p>תרשים מלא של החיווט עם נגד ההורדה נמצא בכרטיסיית העזר <span class="r-ref">R1</span> (חיווט 3).</p>
 
+<figure class="wiring-figure">
+  <img src="../images/w3_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שני לדים על רגליים 9 ו-10 וכפתור מעל המרווח המרכזי — צד אחד ל-5V, הצד השני לרגל 2 ודרך נגד הורדה 10 קילו-אוהם ל-GND.">
+  <figcaption><strong>רגל A של הכפתור ← 5V</strong> · <strong>רגל B של הכפתור ← רגל 2</strong> ודרך <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. הנגד יושב בין רגל 2 ל-GND, <strong>לא</strong> בין 5V ל-GND.</figcaption>
+</figure>
+
 <div class="warning">
   <strong><span class="section-icon">⚠️</span>חשוב — הטעות הנפוצה ביותר</strong>
   נגד ההורדה של 10 קילו-אוהם חייב להיות בין <strong>רגל 2 ל-GND</strong>. <strong>לא</strong> בין 5 V ל-GND. אם שמים אותו בין 5 V ל-GND, הלחיצה על הכפתור יוצרת קצר והארדואינו יאתחל את עצמו. זו הטעות הנפוצה ביותר בפרויקט 1. לפני שמחברים שוב — עוקבים באצבע: מרגל 2 ל-GND? בטוח. מ-5 V ל-GND? קודם כל מתקנים את זה.

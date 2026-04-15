@@ -40,6 +40,7 @@ const taskDir = path.join(projectDir, isHe ? 'task_cards_he' : 'task_cards');
 
 const suffix = isHe ? '_he' : '';
 const cardOrder = [
+  [refDir, `R0_breadboard_basics${suffix}.html`],
   [refDir, `R1_wiring_reference${suffix}.html`],
   [refDir, `R2_stuck_protocol${suffix}.html`],
   [refDir, `R3_claude_code_prompts${suffix}.html`],
@@ -55,6 +56,7 @@ const cardOrder = [
   [taskDir, `T1_M8_button_control${suffix}.html`],
   [taskDir, `T2_M1_startup${suffix}.html`],
   [taskDir, `T2_M2_pick_pattern${suffix}.html`],
+  [taskDir, `T2_M2b_wire_third_led${suffix}.html`],
   [taskDir, `T2_M3_claude_code_level2${suffix}.html`],
   [taskDir, `T2_M4_button_behavior${suffix}.html`],
   [taskDir, `T2_M5_signature_pattern${suffix}.html`],

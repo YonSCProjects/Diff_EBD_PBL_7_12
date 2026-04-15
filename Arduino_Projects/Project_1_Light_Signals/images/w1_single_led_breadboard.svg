@@ -6922,10 +6922,10 @@
    </g>
   </g>
  </g>
- <path d="M4240.53,1416.47L4240.56,1755.56" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
- <path d="M4240.55,1700L4240.56,1755.56" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
  <path d="M4340.56,1416.47L4340.55,1755.56" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
  <path d="M4340.55,1700L4340.55,1755.56" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
+ <path d="M4240.53,1416.47L4240.56,1755.56" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
+ <path d="M4240.55,1700L4240.56,1755.56" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
  <g partID="90000030">
   <g transform="translate(3940.49,1938.44)">
    <g id="breadboard" >
@@ -6948,10 +6948,10 @@
    </g>
   </g>
  </g>
- <path d="M3969.59,1988.89L3945.04,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
- <path d="M3969.59,1988.89L3945.04,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <path d="M4340.56,1988.89L4365.11,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <path d="M4340.56,1988.89L4365.11,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
+ <path d="M3969.59,1988.89L3945.04,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
+ <path d="M3969.59,1988.89L3945.04,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <g partID="90000070">
   <line stroke="#000000" stroke-linecap="round" stroke-width="44.4444" x1="1949.61" x2="3240.56" y1="2000" y2="755.556"/>
   <line stroke="#000000" stroke-linecap="round" stroke-width="22.2222" x1="1949.61" x2="3240.56" y1="2000" y2="755.556"/>

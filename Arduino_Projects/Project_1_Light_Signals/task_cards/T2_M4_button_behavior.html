@@ -20,12 +20,17 @@ In this milestone you add a push-button to your breadboard and decide what the b
 
 <h2>Step 1 — Wire the button</h2>
 
-<p>Same wiring as Tier 1 Milestone 7: button straddles the centre gap, pin A to 5 V, pin B to Arduino pin 2, and a 10 kΩ pull-down resistor from pin 2 to GND. See reference card R1 Wiring 3 for the full diagram.</p>
+<p>Same button wiring as Tier 1 Milestone 7: button straddles the centre gap, pin A to 5 V, pin B to Arduino pin 2, and a 10 kΩ pull-down resistor from pin 2 to GND. The LEDs you already have on the breadboard stay wired — you are only adding the button.</p>
 
 <div class="warning">
   <strong>Pull-down reminder</strong>
-  The 10 kΩ resistor goes between pin 2 and GND. Not between 5 V and GND. Getting this wrong causes the Arduino to reset. Check the reference card R1 if you are unsure.
+  The 10 kΩ resistor goes between pin 2 and GND. Not between 5 V and GND. Getting this wrong causes the Arduino to reset. Check reference card R1 if you are unsure.
 </div>
+
+<figure class="wiring-figure">
+  <img src="../images/w5_three_leds_and_button_pulldown_breadboard.svg" alt="Breadboard diagram: three LEDs on pins 9, 10, 11 with 220 Ω resistors, plus a push-button with 10 kΩ pull-down on pin 2.">
+  <figcaption><strong>Option B (chasing) shown above</strong> — three LEDs + button. <strong>Option A (alternating):</strong> same button wiring, but only LEDs 1 and 2 — see R1 Wiring 3. <strong>Option C (breathing):</strong> same button wiring, but only LED 1. In all three cases the button section is identical: 5 V → button → pin 2, with 10 kΩ pull-down to GND.</figcaption>
+</figure>
 
 <h2>Step 2 — Pick ONE button behaviour</h2>
 

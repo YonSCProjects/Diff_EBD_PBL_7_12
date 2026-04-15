@@ -67,6 +67,32 @@
     font-size: 11pt;
     page-break-inside: avoid;
   }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 300pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .wiring-figure figcaption strong {
+    color: #223;
+  }
   .lp-header {
     font-size: 12pt;
     font-weight: bold;
@@ -163,38 +189,10 @@ The button needs a <strong>10 kΩ pull-down resistor</strong> (colour bands: <sp
                            ▼
                       LED short leg ─── Arduino GND</div>
 
-<div class="living-placeholder">
-  <div class="lp-header">Image slot — Wiring 1 (single LED on pin 9)</div>
-  <div class="lp-section">
-    <strong>What the image should show:</strong>
-    <ul>
-      <li>Arduino Uno R3 board, USB cable plugged in (optional)</li>
-      <li>Full-size breadboard next to the Arduino</li>
-      <li>One LED planted across two rows of the breadboard</li>
-      <li>LED long leg (anode) → 220 Ω resistor → jumper wire → Arduino digital pin 9</li>
-      <li>LED short leg (cathode) → jumper wire → Arduino GND</li>
-      <li>Components clearly visible; pin labels on the Arduino readable</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>Candidate open-source image (CC BY-SA 4.0):</strong>
-    <ul>
-      <li><code>Arduino_uno_led_bb.svg</code> by user Edwiyanto — Wikimedia Commons</li>
-      <li>File page: <a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_led_bb.svg">commons.wikimedia.org/wiki/File:Arduino_uno_led_bb.svg</a></li>
-      <li>Direct download: <a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Arduino_uno_led_bb.svg">upload.wikimedia.org/.../Arduino_uno_led_bb.svg</a></li>
-      <li>Resolution: 470 × 562 px; 646 KB</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>Verification needed before using:</strong>
-    <ul>
-      <li>Open the SVG in a browser and confirm which pin the LED uses. If the image shows pin 13 (built-in LED route) rather than pin 9, the caption on the card should say "the image shows pin 13; you are wiring to pin 9 — same idea, different pin number" or the image should be re-built in Fritzing with pin 9 explicitly.</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>When ready to use:</strong> Download, verify, save as <code>images/w1_single_led.svg</code> (or <code>.png</code>) inside <code>Project_1_Light_Signals/</code>, then replace this whole box with <code>&lt;img src="../images/w1_single_led.svg" alt="Single LED wired to pin 9"&gt;</code>. Required attribution line (include in card or HTML tutorial footer): <em>"Based on Arduino_uno_led_bb.svg by Edwiyanto, Wikimedia Commons, CC BY-SA 4.0."</em>
-  </div>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w1_single_led_breadboard.svg" alt="Breadboard diagram: Arduino Uno with one LED — pin 9 through a 220 Ω resistor to the LED's long leg, short leg to GND.">
+  <figcaption><strong>Pin 9 → 220 Ω → LED long leg.</strong> LED short leg → <strong>GND</strong>. Built in Fritzing for this project.</figcaption>
+</figure>
 
 <h2>Wiring 2 — Two LEDs on pins 9 and 10 (Milestone 5)</h2>
 
@@ -208,36 +206,10 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
                            ▼
                       LED 2 short leg ─── Arduino GND</div>
 
-<div class="living-placeholder">
-  <div class="lp-header">Image slot — Wiring 2 (two LEDs on pins 9 and 10)</div>
-  <div class="lp-section">
-    <strong>What the image should show:</strong>
-    <ul>
-      <li>Arduino Uno + full-size breadboard</li>
-      <li>Two LEDs of different colours planted on the breadboard, one row apart</li>
-      <li>LED 1: long leg → 220 Ω → pin 9; short leg → GND</li>
-      <li>LED 2: long leg → 220 Ω → pin 10; short leg → GND</li>
-      <li>Wiring visibly parallel — same pattern, different pin number</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>Candidate open-source image (CC BY-SA 4.0):</strong>
-    <ul>
-      <li><code>Arduino_circuit_04_01.png</code> — SparkFun SIK Experiment 4 (Driving Multiple LEDs)</li>
-      <li>Shows <em>eight</em> LEDs on pins 2–9 with 330 Ω resistors, not two LEDs on pins 9–10 with 220 Ω.</li>
-      <li>Wiring principle is identical; student sees more LEDs than they need to wire for this milestone.</li>
-      <li>Source: <a href="https://learn.sparkfun.com/tutorials/sik-experiment-guide-for-arduino---v33/experiment-4-driving-multiple-leds">learn.sparkfun.com/.../experiment-4-driving-multiple-leds</a></li>
-      <li>Direct download: <a href="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/3/1/0/Arduino_circuit_04_01.png">cdn.sparkfun.com/.../Arduino_circuit_04_01.png</a></li>
-      <li>Attribution required: "Arduino Multi-LED circuit by SparkFun Electronics, CC BY-SA 4.0."</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>Better option:</strong> Build a 2-LED Fritzing diagram with exact pin numbers 9 and 10 and 220 Ω resistors, or take a photograph of your own demo build. Either gives a precise match that the student can replicate without cognitive translation.
-  </div>
-  <div class="lp-section">
-    <strong>When ready to use:</strong> Save as <code>images/w2_two_leds.svg</code> or <code>images/w2_two_leds.png</code> and replace this box with the <code>&lt;img&gt;</code> tag.
-  </div>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w2_two_leds_breadboard.svg" alt="Breadboard diagram: Arduino Uno with two LEDs wired in parallel — pin 9 through 220 Ω to LED 1 (red), pin 10 through 220 Ω to LED 2 (yellow), both short legs returning to GND.">
+  <figcaption><strong>Pin 9 → 220 Ω → LED 1</strong> · <strong>Pin 10 → 220 Ω → LED 2</strong>. Both short legs → <strong>GND</strong>. Same pattern as Wiring 1, different pin numbers.</figcaption>
+</figure>
 
 <h2>Wiring 3 — Adding the button (Milestone 7)</h2>
 
@@ -252,39 +224,10 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
 
 <p><span class="dont">Important:</span> the 10 kΩ pull-down resistor goes between <strong>pin 2 and GND</strong>, <span class="dont">not between 5 V and GND</span>. If you wire it between 5 V and GND, pressing the button creates a short circuit and the Arduino will reset.</p>
 
-<div class="living-placeholder">
-  <div class="lp-header">Image slot — Wiring 3 (two LEDs + button with 10 kΩ pull-down on pin 2)</div>
-  <div class="lp-section">
-    <strong>What the image should show:</strong>
-    <ul>
-      <li>Arduino Uno + breadboard with two LEDs already wired (from Wiring 2)</li>
-      <li>Tactile push-button straddling the centre gap of the breadboard</li>
-      <li>Button pin A → Arduino 5 V</li>
-      <li>Button pin B → Arduino digital pin 2 AND via 10 kΩ resistor → Arduino GND</li>
-      <li>The 10 kΩ pull-down resistor clearly positioned between pin 2 and GND, NOT between 5 V and GND</li>
-      <li>This is a <strong>pull-DOWN</strong> configuration, NOT pull-up</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>Candidate open-source image (CC BY-SA 4.0):</strong>
-    <ul>
-      <li><code>Arduino_uno_led_button_bb.svg</code> by user Edwiyanto — Wikimedia Commons</li>
-      <li>File page: <a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_led_button_bb.svg">commons.wikimedia.org/wiki/File:Arduino_uno_led_button_bb.svg</a></li>
-      <li>Direct download: <a href="https://upload.wikimedia.org/wikipedia/commons/f/fc/Arduino_uno_led_button_bb.svg">upload.wikimedia.org/.../Arduino_uno_led_button_bb.svg</a></li>
-      <li>Schematic version: <a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_led_button_schema.svg">File:Arduino_uno_led_button_schema.svg</a></li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>Critical verification needed — is it pull-up or pull-down?</strong>
-    <ul>
-      <li>Open the SVG in a browser before using. Trace the 10 kΩ resistor: if it goes from <strong>pin 2 to GND</strong> (pull-down), the image is directly usable for Wiring 3. If it goes from <strong>pin 2 to 5 V</strong> (pull-up), the image contradicts our wiring and must not be used without modification.</li>
-      <li>If the Wikimedia image is pull-up, fall back to either (a) Makeability Lab's <code>ArduinoUno_Button_SchematicAndDiagram_PullDownResistor.png</code> at <a href="https://makeabilitylab.github.io/physcomp/arduino/buttons.html">makeabilitylab.github.io/physcomp/arduino/buttons.html</a> (license needs verification before use — check the GitHub repo's LICENSE file) or (b) a Fritzing build with explicit pull-down wiring.</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>When ready to use:</strong> Save as <code>images/w3_leds_and_button_pulldown.svg</code> and replace this box with the <code>&lt;img&gt;</code> tag. Attribution: "Based on Arduino_uno_led_button_bb.svg by Edwiyanto, Wikimedia Commons, CC BY-SA 4.0."
-  </div>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w3_leds_and_button_pulldown_breadboard.svg" alt="Breadboard diagram: two LEDs on pins 9 and 10 plus a push-button straddling the centre gap — one side to 5 V, the other to pin 2 and through a 10 kΩ pull-down resistor to GND.">
+  <figcaption><strong>Button pin A → 5 V</strong> · <strong>Button pin B → pin 2</strong> and through a <strong>10 kΩ pull-down resistor → GND</strong>. This is pull-<em>down</em>: the resistor sits between pin 2 and GND, <strong>not</strong> between 5 V and GND.</figcaption>
+</figure>
 
 <h2>Wiring 4 — Three LEDs for the chasing pattern (Tier 2 only)</h2>
 
@@ -294,34 +237,38 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
                            ▼
                       LED 3 short leg ─── Arduino GND</div>
 
-<div class="living-placeholder">
-  <div class="lp-header">Image slot — Wiring 4 (three LEDs chasing, Tier 2 only)</div>
-  <div class="lp-section">
-    <strong>What the image should show:</strong>
-    <ul>
-      <li>Arduino Uno + breadboard with three LEDs wired in parallel pattern</li>
-      <li>LED 1 → 220 Ω → pin 9 → GND</li>
-      <li>LED 2 → 220 Ω → pin 10 → GND</li>
-      <li>LED 3 → 220 Ω → pin 11 → GND</li>
-      <li>No button in this image (button is a Tier 1 feature, chasing is a Tier 2 option)</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>Candidate open-source image (same as Wiring 2):</strong>
-    <ul>
-      <li>SparkFun SIK Experiment 4 <code>Arduino_circuit_04_01.png</code> — shows 8 LEDs on pins 2–9 with 330 Ω resistors; student wires only the first three.</li>
-      <li>Source: <a href="https://learn.sparkfun.com/tutorials/sik-experiment-guide-for-arduino---v33/experiment-4-driving-multiple-leds">learn.sparkfun.com/.../experiment-4-driving-multiple-leds</a></li>
-      <li>Direct download: <a href="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/3/1/0/Arduino_circuit_04_01.png">cdn.sparkfun.com/.../Arduino_circuit_04_01.png</a></li>
-      <li>License: CC BY-SA 4.0</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>Better option:</strong> A 3-LED Fritzing build with pins 9, 10, 11 and 220 Ω resistors, or a photograph of the same. Exact-match images are better than a superset-of-needed image for Tier 2 students.
-  </div>
-  <div class="lp-section">
-    <strong>When ready to use:</strong> Save as <code>images/w4_three_leds_chasing.svg</code> and replace this box with the <code>&lt;img&gt;</code> tag.
-  </div>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w4_three_leds_chasing_breadboard.svg" alt="Breadboard diagram: three LEDs wired in parallel — pin 9 through 220 Ω to LED 1 (red), pin 10 through 220 Ω to LED 2 (yellow), pin 11 through 220 Ω to LED 3 (green), all short legs to GND. No button.">
+  <figcaption><strong>Pin 9 → 220 Ω → LED 1</strong> · <strong>Pin 10 → 220 Ω → LED 2</strong> · <strong>Pin 11 → 220 Ω → LED 3</strong>. Same pattern, three pins. No button.</figcaption>
+</figure>
+
+<h2>Wiring 5 — Three LEDs + button (Tier 2 Milestone 4 — Option B)</h2>
+
+<p>Only needed if you chose the <strong>chasing pattern</strong> in Tier 2 and are adding the button in Milestone 4. Combines Wiring 4 (three LEDs on pins 9, 10, 11) with Wiring 3 (button on pin 2 with 10 kΩ pull-down).</p>
+
+<div class="wiring">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND
+
+Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
+                           ▼
+                      LED 3 short leg ─── Arduino GND
+
+Arduino 5 V ──────────────┬─── Button pin A
+                          ▼
+                      Button pin B ────┬─── Arduino pin 2
+                                       └─[10 kΩ]── Arduino GND</div>
+
+<p><span class="dont">Same pull-down rule:</span> the 10 kΩ resistor goes between <strong>pin 2 and GND</strong>, not between 5 V and GND.</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w5_three_leds_and_button_pulldown_breadboard.svg" alt="Breadboard diagram: three LEDs on pins 9, 10, 11 with 220 Ω resistors, plus a push-button with 10 kΩ pull-down on pin 2 — all on one breadboard.">
+  <figcaption><strong>Pins 9 / 10 / 11 → 220 Ω → LEDs 1 / 2 / 3 → GND</strong> · <strong>Button → pin 2</strong> with <strong>10 kΩ pull-down → GND</strong>. Full Tier 2 Option B + Milestone 4 layout.</figcaption>
+</figure>
 
 </div>
 </body>

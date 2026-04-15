@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית עזר R0 — איך עובד ברדבורד</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .orient {
+    background: #eef3f8;
+    border-inline-start: 5pt solid #5a7391;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 12.5pt;
+    color: #234;
+  }
+  .big-msg {
+    background: #fff8e1;
+    border: 2pt solid #f57c00;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 15pt;
+    text-align: right;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border-inline-start: 5pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key strong { color: #000; }
+  .tip {
+    background: #f1f8e9;
+    border-inline-start: 5pt solid #558b2f;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont { color: #b00; font-weight: bold; }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 260pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.5;
+    text-align: center;
+    direction: rtl;
+  }
+  .wiring-figure figcaption strong { color: #223; }
+  .bb-ascii {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    border: 1pt solid #ccc;
+    padding: 8pt 8pt;
+    margin: 10pt 0;
+    line-height: 1.35;
+    white-space: pre;
+    overflow-x: auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: left;
+  }
+  .chain {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    background: #fafcff;
+    border: 1pt solid #b8c4d8;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    text-align: center;
+    direction: ltr;
+    unicode-bidi: isolate;
+    page-break-inside: avoid;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">R0</div>
+
+<div class="header">
+  <h1><span class="section-icon">🧩</span>איך עובד ברדבורד</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="orient">
+קוראים את הכרטיסייה הזאת לפני הפגישה הראשונה. לא צריך לשנן אותה — משאירים אותה על שולחן העבודה וחוזרים לכל חלק כשנתקעים.
+</div>
+
+<div class="big-msg">
+ברדבורד מאפשר לבנות מעגלים חשמליים בלי להלחים. מכניסים את הרגליים של הרכיבים (לדים, נגדים, חוטים) לתוך החורים, והלוח מחבר ביניהם בפנים — בלי כלים. בסוף אפשר להוציא הכל ולהשתמש בחלקים שוב.
+</div>
+
+<h2><span class="section-icon">🗺️</span>בלוח יש ארבעה אזורים</h2>
+
+<div class="wiring-figure">
+  <img src="../images/w0_empty_breadboard_breadboard.svg" alt="ברדבורד ריק: שתי מסילות מתח אופקיות בחלק העליון (מסומנות + ו-−), שני חצאים של טורים ממוספרים המופרדים על ידי מרווח מרכזי, ועוד שתי מסילות מתח בחלק התחתון.">
+  <figcaption><strong>הברדבורד האמיתי.</strong> למעלה ולמטה — <strong>מסילות מתח</strong> בצבע אדום וכחול (מסומנות + ו-−). בין לבין — רשת של טורים ממוספרים המופרדים על ידי <strong>מרווח מרכזי</strong>. השורות מסומנות <strong>a–e</strong> בחצי העליון ו-<strong>f–j</strong> בחצי התחתון.</figcaption>
+</div>
+
+<div class="bb-ascii">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+
+     a  ● ● ● ● ● ● ● ● ● ● ●
+     b  ● ● ● ● ● ● ● ● ● ● ●
+     c  ● ● ● ● ● ● ● ● ● ● ●       top half
+     d  ● ● ● ● ● ● ● ● ● ● ●
+     e  ● ● ● ● ● ● ● ● ● ● ●
+                                    ← centre gap
+     f  ● ● ● ● ● ● ● ● ● ● ●
+     g  ● ● ● ● ● ● ● ● ● ● ●
+     h  ● ● ● ● ● ● ● ● ● ● ●       bottom half
+     i  ● ● ● ● ● ● ● ● ● ● ●
+     j  ● ● ● ● ● ● ● ● ● ● ●
+
+     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+        1 2 3 4 5 6 7 8 9 10 …</div>
+
+<div class="key">
+<strong>שני הכללים שחשוב להכיר</strong>
+<ul>
+  <li><strong>בתוך טור ממוספר אחד, השורות a–e מחוברות ביניהן.</strong> החורים a5, b5, c5, d5, e5 כולם חולקים חיבור חשמלי אחד. כל מה שמכניסים לחמשת החורים האלה — מחובר ביחד.</li>
+  <li><strong>השורות f–j מחוברות באותה צורה, אבל בנפרד מ-a–e.</strong> המרווח המרכזי שובר את החיבור — החורים e5 ו-f5 <strong>לא</strong> מחוברים ביניהם.</li>
+</ul>
+</div>
+
+<div class="key">
+<strong>שתי מסילות המתח</strong>
+<ul>
+  <li>המסילה ה<span style="color:#c00;"><strong>אדומה</strong></span> (מסומנת +) עוברת לאורך כל הלוח. כל החורים לאורך המסילה האדומה מחוברים ביניהם. משמשת ל-<strong>5 V</strong>.</li>
+  <li>המסילה ה<span style="color:#036;"><strong>כחולה</strong></span> (מסומנת −) גם עוברת לאורך כל הלוח. כל החורים לאורך המסילה הכחולה מחוברים. משמשת ל-<strong>GND</strong> (הארקה).</li>
+  <li>מכיוון שכל מסילה עוברת לאורך כל הלוח, אפשר לשאוב מתח מכל מקום לאורכה — אין צורך בחוט נפרד לכל לד.</li>
+</ul>
+</div>
+
+<h2><span class="section-icon">💡</span>איך מניחים לד על הברדבורד</h2>
+
+<p>ללד יש <strong>שתי רגליים באורכים שונים</strong>. הרגל הארוכה היא הצד של הפלוס; הרגל הקצרה היא הצד של המינוס. כל רגל צריכה <strong>טור ממוספר משלה</strong> — אם שתי הרגליים נכנסות לאותו טור, הלד יוצר קצר ולא יאיר.</p>
+
+<div class="tip">
+<strong>כלל אצבע:</strong> מכניסים את הלד כך ששתי הרגליים נכנסות לשני טורים ממוספרים שונים (לדוגמה, הרגל הארוכה בטור 9 והרגל הקצרה בטור 8). גם לנגדים — שתי רגליים בשני טורים שונים.
+</div>
+
+<h2><span class="section-icon">🔗</span>מה משמעות "רגל 9 ← נגד 220 אוהם ← לד" על הברדבורד</h2>
+
+<p>כאשר כרטיסיית העזר <span class="r-ref">R1</span> (חיווט 1) כותבת <em>"Arduino pin 9 → 220 Ω → LED long leg"</em>, זו שרשרת החיבורים שבונים:</p>
+
+<div class="chain">[Arduino pin 9] ── wire ── [resistor] ── [LED long leg] ── [LED short leg] ── wire ── [GND]</div>
+
+<p>על הברדבורד, כל חץ בשרשרת למעלה הוא טור משותף אחד. לפי החיווט ב-<span class="r-ref">R1</span> חיווט 1:</p>
+
+<ul>
+  <li>חוט ג'אמפר מרגל 9 של הארדואינו נכנס לחור אחד בברדבורד.</li>
+  <li>רגל אחת של נגד 220 אוהם נכנסת ל<strong>אותו טור ממוספר</strong> שאליו הכנסנו את הג'אמפר — עכשיו הם מחוברים.</li>
+  <li>הרגל השנייה של הנגד נכנסת ל<strong>טור חדש</strong> — חיבור נפרד לגמרי.</li>
+  <li>הרגל הארוכה של הלד נכנסת לאותו טור חדש — עכשיו הזרם יכול לזרום: רגל 9 ← נגד ← לד.</li>
+  <li>הרגל הקצרה של הלד נכנסת לטור משלה, ומשם חוט ג'אמפר חוזר למסילת ה-GND הכחולה.</li>
+</ul>
+
+<p>הברדבורד עושה את החיווט בשבילנו — רק בוחרים לאיזה טור כל רגל נכנסת.</p>
+
+<h2><span class="section-icon">🔍</span>שני דברים לבדוק אם משהו עדיין לא עובד</h2>
+
+<div class="tip">
+<strong>בדיקה 1 — האם שתי הרגליים של הלד בשני טורים שונים?</strong> אם שתי הרגליים באותו טור, הארוכה והקצרה מחוברות ישירות — זה קצר, והלד לא יאיר. מוציאים רגל אחת ומעבירים אותה טור אחד הצידה.
+</div>
+
+<div class="tip">
+<strong>בדיקה 2 — האם שתי רגליי הלד (ושתי רגליי הנגד) באותו חצי של הלוח?</strong> שתיהן מעל המרווח המרכזי, או שתיהן מתחתיו. אם רגל אחת מעל והשנייה מתחת, שני הצדדים לא מחוברים והמעגל שבור. מוציאים ומעבירים לאותו חצי.
+</div>
+
+<h2><span class="section-icon">✅</span>יש לכם את מה שצריך</h2>
+
+<p>הכרטיסייה הבאה היא <span class="r-ref">R1</span> — חיווט. משאירים את <span class="r-ref">R0</span> על שולחן העבודה — אם משהו לא עובד בהמשך, שתי הבדיקות למעלה לרוב ימצאו את הבעיה.</p>
+
+<footer>
+  R0 — איך עובד ברדבורד · פרויקט 1 אותות אור
+</footer>
+
+</div>
+</body>
+</html>

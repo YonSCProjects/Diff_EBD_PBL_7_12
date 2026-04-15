@@ -103,6 +103,33 @@
     font-size: 11pt;
     page-break-inside: avoid;
   }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 300pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.5;
+    text-align: center;
+    direction: rtl;
+  }
+  .wiring-figure figcaption strong {
+    color: #223;
+  }
   .lp-header {
     font-size: 12pt;
     font-weight: bold;
@@ -224,38 +251,10 @@
                            ▼
                       LED short leg ─── Arduino GND</div>
 
-<div class="living-placeholder">
-  <div class="lp-header">מקום לתמונה — חיווט 1 (לד יחיד על רגל 9)</div>
-  <div class="lp-section">
-    <strong>מה התמונה צריכה להראות:</strong>
-    <ul>
-      <li>ארדואינו Uno R3, עם כבל USB מחובר (לא חובה)</li>
-      <li>ברדבורד מלא לצד הארדואינו</li>
-      <li>לד אחד נעוץ בשתי שורות בברדבורד</li>
-      <li>הרגל הארוכה של הלד → נגד 220 אוהם → חוט → רגל 9 של הארדואינו</li>
-      <li>הרגל הקצרה של הלד → חוט → GND של הארדואינו</li>
-      <li>הרכיבים נראים בבירור; אפשר לקרוא את תוויות הרגליים של הארדואינו</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>תמונה מועמדת בקוד פתוח (CC BY-SA 4.0):</strong>
-    <ul>
-      <li><code>Arduino_uno_led_bb.svg</code> by user Edwiyanto — Wikimedia Commons</li>
-      <li>File page: <a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_led_bb.svg">commons.wikimedia.org/wiki/File:Arduino_uno_led_bb.svg</a></li>
-      <li>Direct download: <a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Arduino_uno_led_bb.svg">upload.wikimedia.org/.../Arduino_uno_led_bb.svg</a></li>
-      <li>Resolution: 470 × 562 px; 646 KB</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>מה צריך לוודא לפני השימוש:</strong>
-    <ul>
-      <li>פותחים את קובץ ה-SVG בדפדפן ובודקים לאיזו רגל הלד מחובר. אם התמונה מראה חיבור לרגל 13 (נתיב הלד המובנה) ולא רגל 9, הכיתוב בכרטיסייה צריך לומר "התמונה מראה רגל 13; אתם מחווטים לרגל 9 — אותו רעיון, מספר רגל שונה", או שצריך לבנות מחדש את התמונה בפריצינג עם רגל 9 במפורש.</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>כשהתמונה מוכנה לשימוש:</strong> מורידים, מוודאים, שומרים כ-<code>images/w1_single_led.svg</code> (או <code>.png</code>) בתוך <code>Project_1_Light_Signals/</code>, ואז מחליפים את כל התיבה הזאת ב-<code>&lt;img src="../images/w1_single_led.svg" alt="לד יחיד מחובר לרגל 9"&gt;</code>. שורת הייחוס הנדרשת (להוסיף בכרטיסייה או בכותרת התחתונה של המדריך): <em>"Based on Arduino_uno_led_bb.svg by Edwiyanto, Wikimedia Commons, CC BY-SA 4.0."</em>
-  </div>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w1_single_led_breadboard.svg" alt="תרשים ברדבורד: ארדואינו Uno עם לד אחד — רגל 9 דרך נגד 220 אוהם לרגל הארוכה של הלד, רגל קצרה ל-GND.">
+  <figcaption><strong>רגל 9 ← נגד 220 אוהם ← רגל ארוכה של הלד.</strong> רגל קצרה ← <strong>GND</strong>. נבנה בפריצינג עבור הפרויקט.</figcaption>
+</figure>
 
 <h2><span class="section-icon">🔌</span>חיווט 2 — שני לדים על רגליים 9 ו-10 (<span class="section-icon">🏁</span>אבן דרך 5)</h2>
 
@@ -269,36 +268,10 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
                            ▼
                       LED 2 short leg ─── Arduino GND</div>
 
-<div class="living-placeholder">
-  <div class="lp-header">מקום לתמונה — חיווט 2 (שני לדים על רגליים 9 ו-10)</div>
-  <div class="lp-section">
-    <strong>מה התמונה צריכה להראות:</strong>
-    <ul>
-      <li>ארדואינו Uno + ברדבורד מלא</li>
-      <li>שני לדים בצבעים שונים נעוצים בברדבורד, שורה אחת זה מזה</li>
-      <li>לד 1: רגל ארוכה → נגד 220 אוהם → רגל 9; רגל קצרה → GND</li>
-      <li>לד 2: רגל ארוכה → נגד 220 אוהם → רגל 10; רגל קצרה → GND</li>
-      <li>החיווט נראה מקבילי בבירור — אותה תבנית, מספר רגל שונה</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>תמונה מועמדת בקוד פתוח (CC BY-SA 4.0):</strong>
-    <ul>
-      <li><code>Arduino_circuit_04_01.png</code> — SparkFun SIK Experiment 4 (Driving Multiple LEDs)</li>
-      <li>התמונה מראה <em>שמונה</em> לדים על רגליים 2–9 עם נגדים של 330 אוהם, ולא שני לדים על רגליים 9–10 עם 220 אוהם.</li>
-      <li>עקרון החיווט זהה; התלמיד רואה יותר לדים ממה שצריך לחווט באבן הדרך הזאת.</li>
-      <li>Source: <a href="https://learn.sparkfun.com/tutorials/sik-experiment-guide-for-arduino---v33/experiment-4-driving-multiple-leds">learn.sparkfun.com/.../experiment-4-driving-multiple-leds</a></li>
-      <li>Direct download: <a href="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/3/1/0/Arduino_circuit_04_01.png">cdn.sparkfun.com/.../Arduino_circuit_04_01.png</a></li>
-      <li>Attribution: "Arduino Multi-LED circuit by SparkFun Electronics, CC BY-SA 4.0."</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>אפשרות טובה יותר:</strong> לבנות בפריצינג תמונה של 2 לדים עם רגליים 9 ו-10 ונגדים של 220 אוהם, או לצלם את הבנייה המדגימה של המורה. שתי האפשרויות נותנות התאמה מדויקת שהתלמיד יכול לשחזר בלי תרגום קוגניטיבי.
-  </div>
-  <div class="lp-section">
-    <strong>כשהתמונה מוכנה לשימוש:</strong> שומרים כ-<code>images/w2_two_leds.svg</code> או <code>images/w2_two_leds.png</code> ומחליפים את התיבה הזאת בתגית <code>&lt;img&gt;</code>.
-  </div>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w2_two_leds_breadboard.svg" alt="תרשים ברדבורד: ארדואינו Uno עם שני לדים במקביל — רגל 9 דרך נגד 220 אוהם ללד 1 (אדום), רגל 10 דרך נגד 220 אוהם ללד 2 (צהוב), שתי הרגליים הקצרות חוזרות ל-GND.">
+  <figcaption><strong>רגל 9 ← 220 אוהם ← לד 1</strong> · <strong>רגל 10 ← 220 אוהם ← לד 2</strong>. שתי הרגליים הקצרות ← <strong>GND</strong>. אותה תבנית כמו חיווט 1, מספרי רגליים שונים.</figcaption>
+</figure>
 
 <h2><span class="section-icon">🔌</span>חיווט 3 — הוספת הכפתור (<span class="section-icon">🏁</span>אבן דרך 7)</h2>
 
@@ -313,39 +286,10 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
 
 <p><span class="section-icon">⚠️</span><span class="dont">חשוב:</span> נגד ההורדה של 10 קילו-אוהם הולך בין <strong>רגל 2 לבין GND</strong>, <span class="dont">לא בין 5 V לבין GND</span>. אם מחווטים אותו בין 5 V לבין GND, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
 
-<div class="living-placeholder">
-  <div class="lp-header">מקום לתמונה — חיווט 3 (שני לדים + כפתור עם נגד הורדה 10 קילו-אוהם על רגל 2)</div>
-  <div class="lp-section">
-    <strong>מה התמונה צריכה להראות:</strong>
-    <ul>
-      <li>ארדואינו Uno + ברדבורד עם שני לדים כבר מחווטים (מחיווט 2)</li>
-      <li>כפתור טקטילי נעוץ מעל המרווח המרכזי של הברדבורד</li>
-      <li>רגל A של הכפתור → 5 V של הארדואינו</li>
-      <li>רגל B של הכפתור → רגל 2 של הארדואינו וגם → נגד 10 קילו-אוהם → GND של הארדואינו</li>
-      <li>נגד ההורדה של 10 קילו-אוהם נמצא במיקום ברור בין רגל 2 ל-GND, ולא בין 5 V ל-GND</li>
-      <li>זהו חיווט <strong>נגד הורדה</strong> (pull-down), לא נגד משיכה (pull-up)</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>תמונה מועמדת בקוד פתוח (CC BY-SA 4.0):</strong>
-    <ul>
-      <li><code>Arduino_uno_led_button_bb.svg</code> by user Edwiyanto — Wikimedia Commons</li>
-      <li>File page: <a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_led_button_bb.svg">commons.wikimedia.org/wiki/File:Arduino_uno_led_button_bb.svg</a></li>
-      <li>Direct download: <a href="https://upload.wikimedia.org/wikipedia/commons/f/fc/Arduino_uno_led_button_bb.svg">upload.wikimedia.org/.../Arduino_uno_led_button_bb.svg</a></li>
-      <li>Schematic version: <a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_led_button_schema.svg">File:Arduino_uno_led_button_schema.svg</a></li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>חובה לוודא לפני השימוש — pull-up או pull-down?</strong>
-    <ul>
-      <li>פותחים את ה-SVG בדפדפן לפני השימוש. עוקבים אחרי נגד ה-10 קילו-אוהם: אם הוא הולך מ<strong>רגל 2 ל-GND</strong> (pull-down), התמונה מתאימה ישירות לחיווט 3. אם הוא הולך מ<strong>רגל 2 ל-5 V</strong> (pull-up), התמונה סותרת את החיווט שלנו ואסור להשתמש בה ללא שינוי.</li>
-      <li>אם התמונה מוויקימדיה היא pull-up, אפשרות חלופית: (א) התמונה <code>ArduinoUno_Button_SchematicAndDiagram_PullDownResistor.png</code> של Makeability Lab ב-<a href="https://makeabilitylab.github.io/physcomp/arduino/buttons.html">makeabilitylab.github.io/physcomp/arduino/buttons.html</a> (צריך לוודא רישיון לפני השימוש — בודקים את קובץ ה-LICENSE במאגר הגיטהאב), או (ב) בנייה בפריצינג עם חיווט pull-down מפורש.</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>כשהתמונה מוכנה לשימוש:</strong> שומרים כ-<code>images/w3_leds_and_button_pulldown.svg</code> ומחליפים את התיבה הזאת בתגית <code>&lt;img&gt;</code>. ייחוס: "Based on Arduino_uno_led_button_bb.svg by Edwiyanto, Wikimedia Commons, CC BY-SA 4.0."
-  </div>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w3_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שני לדים על רגליים 9 ו-10 וכפתור נעוץ מעל המרווח המרכזי — צד אחד ל-5 V, הצד השני לרגל 2 ודרך נגד הורדה 10 קילו-אוהם ל-GND.">
+  <figcaption><strong>רגל A של הכפתור ← 5 V</strong> · <strong>רגל B של הכפתור ← רגל 2</strong> ודרך <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. זה חיווט pull-<em>down</em>: הנגד יושב בין רגל 2 ל-GND, <strong>לא</strong> בין 5 V ל-GND.</figcaption>
+</figure>
 
 <h2><span class="section-icon">🔌</span>חיווט 4 — שלושה לדים לתבנית רדיפה (גרסה 2 בלבד)</h2>
 
@@ -355,34 +299,38 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
                            ▼
                       LED 3 short leg ─── Arduino GND</div>
 
-<div class="living-placeholder">
-  <div class="lp-header">מקום לתמונה — חיווט 4 (שלושה לדים רדיפה, גרסה 2 בלבד)</div>
-  <div class="lp-section">
-    <strong>מה התמונה צריכה להראות:</strong>
-    <ul>
-      <li>ארדואינו Uno + ברדבורד עם שלושה לדים בחיווט מקבילי</li>
-      <li>לד 1 → נגד 220 אוהם → רגל 9 → GND</li>
-      <li>לד 2 → נגד 220 אוהם → רגל 10 → GND</li>
-      <li>לד 3 → נגד 220 אוהם → רגל 11 → GND</li>
-      <li>בלי כפתור בתמונה הזאת (הכפתור הוא תוכן גרסה 1, הרדיפה היא תוכן גרסה 2)</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>תמונה מועמדת בקוד פתוח (אותה תמונה כמו בחיווט 2):</strong>
-    <ul>
-      <li>SparkFun SIK Experiment 4 <code>Arduino_circuit_04_01.png</code> — מראה 8 לדים על רגליים 2–9 עם נגדים של 330 אוהם; התלמיד מחווט רק את השלושה הראשונים.</li>
-      <li>Source: <a href="https://learn.sparkfun.com/tutorials/sik-experiment-guide-for-arduino---v33/experiment-4-driving-multiple-leds">learn.sparkfun.com/.../experiment-4-driving-multiple-leds</a></li>
-      <li>Direct download: <a href="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/3/1/0/Arduino_circuit_04_01.png">cdn.sparkfun.com/.../Arduino_circuit_04_01.png</a></li>
-      <li>License: CC BY-SA 4.0</li>
-    </ul>
-  </div>
-  <div class="lp-section">
-    <strong>אפשרות טובה יותר:</strong> בניית 3 לדים בפריצינג עם רגליים 9, 10, 11 ונגדים של 220 אוהם, או צילום של אותה בנייה. תמונות בהתאמה מדויקת עדיפות על תמונת-סופרסט עבור תלמידי גרסה 2.
-  </div>
-  <div class="lp-section">
-    <strong>כשהתמונה מוכנה לשימוש:</strong> שומרים כ-<code>images/w4_three_leds_chasing.svg</code> ומחליפים את התיבה הזאת בתגית <code>&lt;img&gt;</code>.
-  </div>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w4_three_leds_chasing_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים במקביל — רגל 9 דרך נגד 220 אוהם ללד 1 (אדום), רגל 10 דרך נגד 220 אוהם ללד 2 (צהוב), רגל 11 דרך נגד 220 אוהם ללד 3 (ירוק), כל הרגליים הקצרות ל-GND. בלי כפתור.">
+  <figcaption><strong>רגל 9 ← 220 אוהם ← לד 1</strong> · <strong>רגל 10 ← 220 אוהם ← לד 2</strong> · <strong>רגל 11 ← 220 אוהם ← לד 3</strong>. אותה תבנית, שלוש רגליים. בלי כפתור.</figcaption>
+</figure>
+
+<h2><span class="section-icon">🔌</span>חיווט 5 — שלושה לדים + כפתור (גרסה 2 <span class="section-icon">🏁</span>אבן דרך 4 — אפשרות ב')</h2>
+
+<p>נחוץ רק למי שבחרו ב<strong>תבנית הרדיפה</strong> בגרסה 2 ומוסיפים את הכפתור באבן דרך 4. משלב את חיווט 4 (שלושה לדים על רגליים 9, 10, 11) עם חיווט 3 (כפתור על רגל 2 עם נגד הורדה 10 קילו-אוהם).</p>
+
+<div class="wiring">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND
+
+Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
+                           ▼
+                      LED 3 short leg ─── Arduino GND
+
+Arduino 5 V ──────────────┬─── Button pin A
+                          ▼
+                      Button pin B ────┬─── Arduino pin 2
+                                       └─[10 kΩ]── Arduino GND</div>
+
+<p><span class="section-icon">⚠️</span><span class="dont">אותו כלל של נגד הורדה:</span> נגד 10 קילו-אוהם הולך בין <strong>רגל 2 ל-GND</strong>, לא בין 5 V ל-GND.</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w5_three_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים על רגליים 9, 10, 11 עם נגדים של 220 אוהם, ועוד כפתור עם נגד הורדה 10 קילו-אוהם על רגל 2 — הכל על ברדבורד אחד.">
+  <figcaption><strong>רגליים 9 / 10 / 11 ← 220 אוהם ← לדים 1 / 2 / 3 ← GND</strong> · <strong>כפתור ← רגל 2</strong> עם <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. החיווט המלא של גרסה 2 אפשרות ב' + אבן דרך 4.</figcaption>
+</figure>
 
 </div>
 </body>

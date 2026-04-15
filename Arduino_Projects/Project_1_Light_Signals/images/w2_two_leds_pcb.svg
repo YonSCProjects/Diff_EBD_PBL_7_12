@@ -97,7 +97,7 @@
    <circle cx="2002.57" cy="2000" fill="none" id="connector0pad" r="26.3889" stroke="#F7BD13" stroke-width="12.5" />
   </g>
  </g>
- <g partID="90000081">
+ <g partID="90000082">
   <g transform="translate(4444.44,3333.33)">
    <g id="silkscreen" >
     <path d="M193.222,4.23333c52.0556,39.3,62.3778,113.367,23.0667,165.433c-39.3111,52.0556,-113.378,62.3778,-165.433,23.0667S-11.5111,79.3444,27.8,27.3C34.4778,18.4444,42.3667,10.5778,51.2556,3.93333" fill="none" id="path2820" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.87444" />
@@ -105,7 +105,7 @@
    </g>
   </g>
  </g>
- <g partID="90000071">
+ <g partID="90000072">
   <g transform="translate(3333.33,3333.33)">
    <g id="silkscreen" >
     <line stroke="white" stroke-width="10" x1="75" x2="147"  y1="43" y2="43"/>
@@ -117,7 +117,7 @@
    </g>
   </g>
  </g>
- <g partID="90000041">
+ <g partID="90000042">
   <g transform="translate(4444.44,3333.33)">
    <g id="silkscreen" >
     <path d="M193.222,4.23333c52.0556,39.3,62.3778,113.367,23.0667,165.433c-39.3111,52.0556,-113.378,62.3778,-165.433,23.0667S-11.5111,79.3444,27.8,27.3C34.4778,18.4444,42.3667,10.5778,51.2556,3.93333" fill="none" id="path2820" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.87444" />
@@ -125,7 +125,7 @@
    </g>
   </g>
  </g>
- <g partID="90000031">
+ <g partID="90000032">
   <g transform="translate(3333.33,3333.33)">
    <g id="silkscreen" >
     <line stroke="white" stroke-width="10" x1="75" x2="147"  y1="43" y2="43"/>
@@ -137,7 +137,7 @@
    </g>
   </g>
  </g>
- <g partID="90000021">
+ <g partID="90000022">
   <g id="silkscreen">
    <circle cx="2604.13" cy="706.764" fill="none" r="59.0556" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="3.47222"/>
    <circle cx="2604.13" cy="1803.28" fill="none" r="59.0556" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="3.47222"/>

@@ -282,6 +282,38 @@ p { margin: 6pt 0; }
   font-size: 11pt;
 }
 
+/* Wiring figure — Fritzing breadboard diagram + caption */
+
+.wiring-figure {
+  border: 1pt solid #b8c4d8;
+  background: #fafcff;
+  padding: 10pt 12pt 8pt;
+  margin: 12pt 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  text-align: center;
+}
+
+.wiring-figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 260pt;
+  height: auto;
+  margin: 0 auto;
+}
+
+.wiring-figure figcaption {
+  margin-top: 6pt;
+  font-size: 10pt;
+  color: #455;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.wiring-figure figcaption strong {
+  color: #223;
+}
+
 /* Expected-result block (green) */
 
 .expected {

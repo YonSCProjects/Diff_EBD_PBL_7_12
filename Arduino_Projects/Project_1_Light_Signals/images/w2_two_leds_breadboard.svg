@@ -6895,6 +6895,37 @@
    </g>
   </g>
  </g>
+ <g partID="90000080">
+  <g transform="translate(4477.66,1010.82)">
+   <g id="breadboard" >
+    <rect fill="none" height="10" id="connector0pin" width="29.89" x="47.93"  y="353.07"/>
+    <rect fill="none" height="10" id="connector1pin" width="29.92" x="147.93"  y="353.07"/>
+    <g fill="none" id="connector0leg" stroke="#8C8C8C" stroke-linecap="round" stroke-width="29.88" x1="6.287" x2="6.287"  y1="40.565" y2="74.754"/>
+    <g fill="none" id="connector1leg" stroke="#8C8C8C" stroke-linecap="round" stroke-width="29.88" x1="16.29" x2="16.29"  y1="40.565" y2="74.754"/>
+    <rect fill="#8C8C8C" height="136.49" width="29.88" x="47.93"  y="269.16"/>
+    <path d="M177.84,405.65c0,-16.3,-14.79,-29.2,-29,-41.55c-5.78,-5.1,-16.66,-13.91,-16.66,-19.79l0,-75.98l-30.02,0l0,80.28c0,14.7,13.16,26.09,27.03,38.17c6.17,5.22,18.73,17.36,18.73,24.58" fill="#8C8C8C" />
+    <g id="g12" >
+     <path d="M196.85,180.57L196.85,98.45C196.85,44.1,152.85,0,98.44,0C44.1,0,0,44.02,0,98.45l0,189.57c20.47,22.93,56.9,38.23,98.44,38.23c64.16,0,116.23,-36.36,116.23,-81.38l0,-21.16C214.66,207.84,208.08,193.1,196.85,180.57z" fill="#e60000" id="color_path14" opacity="0.3" />
+     <path d="M196.85,180.57L196.85,98.45C196.85,44.1,152.85,0,98.44,0C44.1,0,0,44.02,0,98.45l0,189.57c20.47,22.93,56.9,38.23,98.44,38.23c64.16,0,116.23,-36.36,116.23,-81.38l0,-21.16C214.66,207.84,208.08,193.1,196.85,180.57z" fill="#E6E6E6" id="path16" opacity="0.5" />
+     <path d="M196.85,180.57l0,43.13c0,38.04,-43.97,68.96,-98.41,68.96C44.1,292.66,0,261.84,0,223.7l0,43.13L0,288c20.47,22.94,56.9,38.23,98.44,38.23c64.16,0,116.23,-36.36,116.23,-81.37L214.67,223.7C214.66,207.84,208.08,193.1,196.85,180.57z" fill="#D1D1D1" id="path18" opacity="0.9" />
+     <path d="M196.85,180.57l0,43.13c0,38.04,-43.97,68.96,-98.41,68.96C44.1,292.66,0,261.84,0,223.7l0,43.13L0,288c20.47,22.94,56.9,38.23,98.44,38.23c64.16,0,116.23,-36.36,116.23,-81.37L214.67,223.7C214.66,207.84,208.08,193.1,196.85,180.57z" fill="#e60000" id="color_path20" opacity="0.7" />
+     <path d="M196.85,180.57l0,43.13c0,38.04,-43.97,68.96,-98.41,68.96C44.1,292.66,0,261.84,0,223.7l0,43.13c20.47,22.92,56.9,38.23,98.44,38.23c64.16,0,116.23,-36.36,116.23,-81.37C214.66,207.84,208.08,193.1,196.85,180.57z" fill="#e60000" id="color_path22" opacity="0.25" />
+     <ellipse cx="98.44" cy="223.7" fill="#E6E6E6" id="ellipse24" opacity="0.25" rx="98.43" ry="68.9" />
+     <ellipse cx="98.44" cy="223.7" fill="#e60000" id="color_ellipse26" opacity="0.25" rx="98.43" ry="68.9" />
+     <polygon fill="#666666" id="polygon28" points="30.6,134,30.6,223.71,44.39,223.71,44.39,181.87,83.55,181.87,139.06,122.29,47.32,122.29" />
+     <polygon fill="#666666" id="polygon30" points="149.7,118.39,155.76,125.47,102.94,181.87,153.61,181.87,153.61,223.71,166.3,223.71,166.3,118.39" />
+     <path d="M196.85,180.57L196.85,98.45C196.85,44.1,152.85,0,98.44,0C44.1,0,0,44.02,0,98.45l0,189.57c20.47,22.93,56.9,38.23,98.44,38.23c64.16,0,116.23,-36.36,116.23,-81.38l0,-21.16C214.66,207.84,208.08,193.1,196.85,180.57z" fill="#e60000" id="color_path32" opacity="0.65" />
+     <path d="M144.28,52.14l19.95,-3.8c-11.69,-15.72,-28.92,-27.19,-49.19,-31.09l3.53,15.01C129.18,36.02,138.11,43.1,144.28,52.14z" fill="#FFFFFF" id="path34" opacity="0.5" />
+     <path d="M10.67,276.75l0,21.11c9.01,7.35,19.91,13.56,32.05,18.29l0,-21.18C30.52,290.3,19.71,284.11,10.67,276.75z" fill="#FFFFFF" id="path36" opacity="0.5" />
+     <path d="M153.79,280.69c-3.55,1.7,-7.36,3.19,-11.19,4.58c-0.81,0.27,-1.63,0.56,-2.47,0.81c-7.83,2.49,-16.13,4.43,-24.93,5.48c-1.04,0.13,-2.1,0.26,-3.12,0.27c-4.45,0.42,-8.94,0.81,-13.48,0.81c-2.06,0,-4.27,-0.21,-6.55,-0.33c-16.67,-0.79,-32.37,-4.37,-45.8,-10.27L46.25,165.52L46.25,98.5c0,-20.43,11.78,-37.91,28.8,-46.52L74.74,51.24l-17.33,-21c-23.19,13.93,-38.75,39.2,-38.75,68.22l0,165.35c-0.69,-0.69,-4.28,-4.29,-6.67,-7.36l-4.27,9.55c19.46,20.58,52.9,34.19,90.87,34.19c23.33,0,44.96,-5.19,62.66,-13.92l-7.32,-5.68C153.79,280.69,153.79,280.69,153.79,280.69z" fill="#FFFFFF" id="path38" opacity="0.5" />
+    </g>
+   </g>
+  </g>
+ </g>
+ <path d="M4640.56,1416.47L4640.55,1755.56" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
+ <path d="M4640.55,1700L4640.55,1755.56" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
+ <path d="M4540.53,1416.47L4540.56,1755.56" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
+ <path d="M4540.55,1700L4540.56,1755.56" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
  <g partID="90000070">
   <g transform="translate(4240.49,1938.44)">
    <g id="breadboard" >
@@ -6917,10 +6948,10 @@
    </g>
   </g>
  </g>
- <path d="M4269.59,1988.89L4245.04,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
- <path d="M4269.59,1988.89L4245.04,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <path d="M4640.56,1988.89L4665.11,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <path d="M4640.56,1988.89L4665.11,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
+ <path d="M4269.59,1988.89L4245.04,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
+ <path d="M4269.59,1988.89L4245.04,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <g partID="90000040">
   <g transform="translate(3677.66,1010.82)">
    <g id="breadboard" >
@@ -6948,10 +6979,10 @@
    </g>
   </g>
  </g>
- <path d="M3740.53,1416.47L3740.56,1755.56" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
- <path d="M3740.55,1700L3740.56,1755.56" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
  <path d="M3840.56,1416.47L3840.55,1755.56" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
  <path d="M3840.55,1700L3840.55,1755.56" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
+ <path d="M3740.53,1416.47L3740.56,1755.56" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
+ <path d="M3740.55,1700L3740.56,1755.56" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.88"/>
  <g partID="90000030">
   <g transform="translate(3440.49,1938.44)">
    <g id="breadboard" >
@@ -6974,10 +7005,10 @@
    </g>
   </g>
  </g>
- <path d="M3469.59,1988.89L3445.04,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
- <path d="M3469.59,1988.89L3445.04,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <path d="M3840.56,1988.89L3865.11,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <path d="M3840.56,1988.89L3865.11,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
+ <path d="M3469.59,1988.89L3445.04,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
+ <path d="M3469.59,1988.89L3445.04,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <g partID="90000110">
   <line stroke="#000000" stroke-linecap="round" stroke-width="44.4444" x1="1949.61" x2="3240.56" y1="2000" y2="755.556"/>
   <line stroke="#000000" stroke-linecap="round" stroke-width="22.2222" x1="1949.61" x2="3240.56" y1="2000" y2="755.556"/>

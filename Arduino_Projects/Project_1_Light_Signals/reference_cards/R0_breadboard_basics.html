@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reference Card R0 — How a breadboard works</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .orient {
+    background: #eef3f8;
+    border-left: 5pt solid #5a7391;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 12.5pt;
+    color: #234;
+  }
+  .big-msg {
+    background: #fff8e1;
+    border: 2pt solid #f57c00;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 15pt;
+    text-align: left;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border-left: 5pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key strong {
+    color: #000;
+  }
+  .tip {
+    background: #f1f8e9;
+    border-left: 5pt solid #558b2f;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 260pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .wiring-figure figcaption strong {
+    color: #223;
+  }
+  .bb-ascii {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    border: 1pt solid #ccc;
+    padding: 8pt 8pt;
+    margin: 10pt 0;
+    line-height: 1.35;
+    white-space: pre;
+    overflow-x: auto;       /* screen only; print clips at page edge */
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .chain {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    background: #fafcff;
+    border: 1pt solid #b8c4d8;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    text-align: center;
+    page-break-inside: avoid;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <h1>R0 — How a breadboard works</h1>
+  <div class="subtitle">Project 1 • Light Signals</div>
+</div>
+
+<div class="orient">
+Read this before your first session. You do not need to memorise it — keep it on your workbench and come back to any section when you get stuck.
+</div>
+
+<div class="big-msg">
+A breadboard lets you build circuits without soldering. You push the legs of parts (LEDs, resistors, wires) into the holes, and the board connects them together inside — no tools needed. When you are done, you can pull everything out and reuse the parts.
+</div>
+
+<h2>The board has four areas</h2>
+
+<div class="wiring-figure">
+  <img src="../images/w0_empty_breadboard_breadboard.svg" alt="Empty breadboard: two horizontal power rails at the top (marked + and −), then two halves of numbered columns separated by a centre gap, then two more power rails at the bottom.">
+  <figcaption><strong>The real breadboard.</strong> Two red/blue <strong>power rails</strong> at top and bottom (marked + and −). In between, a grid of numbered columns split by a <strong>centre gap</strong>. Rows are labelled <strong>a–e</strong> on the top half and <strong>f–j</strong> on the bottom half.</figcaption>
+</div>
+
+<div class="bb-ascii">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+
+     a  ● ● ● ● ● ● ● ● ● ● ●
+     b  ● ● ● ● ● ● ● ● ● ● ●
+     c  ● ● ● ● ● ● ● ● ● ● ●       top half
+     d  ● ● ● ● ● ● ● ● ● ● ●
+     e  ● ● ● ● ● ● ● ● ● ● ●
+                                    ← centre gap
+     f  ● ● ● ● ● ● ● ● ● ● ●
+     g  ● ● ● ● ● ● ● ● ● ● ●
+     h  ● ● ● ● ● ● ● ● ● ● ●       bottom half
+     i  ● ● ● ● ● ● ● ● ● ● ●
+     j  ● ● ● ● ● ● ● ● ● ● ●
+
+     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+        1 2 3 4 5 6 7 8 9 10 …</div>
+
+<div class="key">
+<strong>The two rules that matter</strong>
+<ul>
+  <li><strong>Inside one numbered column, rows a–e are connected.</strong> Holes a5, b5, c5, d5, e5 all share the same electrical connection. Anything you push into those 5 holes is wired together.</li>
+  <li><strong>Rows f–j are connected the same way, but separately from a–e.</strong> The centre gap breaks the connection — holes e5 and f5 are <strong>not</strong> connected to each other.</li>
+</ul>
+</div>
+
+<div class="key">
+<strong>The two power rails</strong>
+<ul>
+  <li>The <span style="color:#c00;"><strong>red</strong></span> rail (marked +) runs the full length of the board. Every hole along the red rail is connected. Used for <strong>5 V</strong>.</li>
+  <li>The <span style="color:#036;"><strong>blue</strong></span> rail (marked −) also runs the full length. Every hole along the blue rail is connected. Used for <strong>GND</strong> (ground).</li>
+  <li>Because each rail runs the full length, you can tap power from anywhere along it — you do not need a separate wire for each LED.</li>
+</ul>
+</div>
+
+<h2>How to place an LED on the breadboard</h2>
+
+<p>An LED has <strong>two legs of different lengths</strong>. The long leg is the plus side; the short leg is the minus side. Each leg needs its <strong>own numbered column</strong> — if both legs go into the same column, the LED is short-circuited and will not light.</p>
+
+<div class="tip">
+<strong>Rule of thumb:</strong> plant the LED so its two legs go into two different numbered columns (for example, long leg in column 9, short leg in column 8). Resistors work the same way — legs in two different columns.
+</div>
+
+<h2>What "pin 9 → 220 Ω → LED" means on the breadboard</h2>
+
+<p>When reference card <strong>R1 Wiring 1</strong> writes <em>"Arduino pin 9 → 220 Ω → LED long leg"</em>, here is the chain of connections you are building:</p>
+
+<div class="chain">[Arduino pin 9] ── wire ── [resistor] ── [LED long leg] ── [LED short leg] ── wire ── [GND]</div>
+
+<p>On the breadboard, each arrow above is one shared column. Using the exact layout from R1 Wiring 1:</p>
+
+<ul>
+  <li>A jumper wire from Arduino pin 9 plugs into one hole on the breadboard.</li>
+  <li>One leg of the 220 Ω resistor plugs into the <strong>same numbered column</strong> as that jumper — they are now connected.</li>
+  <li>The resistor's other leg plugs into a <strong>new column</strong> — a fresh, separate connection.</li>
+  <li>The LED's long leg plugs into that same new column — now current can flow from pin 9 → resistor → LED.</li>
+  <li>The LED's short leg plugs into its own column, and a jumper from that column goes to the blue GND rail.</li>
+</ul>
+
+<p>The breadboard is doing the wiring for you — you just pick which column each leg goes into.</p>
+
+<h2>Two things to check if something is not working yet</h2>
+
+<div class="tip">
+<strong>Check 1 — are the LED's two legs in two different columns?</strong> If both legs share a column, the long leg and the short leg are connected directly, which shorts the LED and it will not light. Pull one leg and move it one column over.
+</div>
+
+<div class="tip">
+<strong>Check 2 — are both legs of the LED (and of the resistor) in the same half of the board?</strong> Both above the centre gap, or both below it. If one leg is above the gap and the other is below, the two sides are not connected and the circuit is broken. Pull the leg and move it to the same half.
+</div>
+
+<h2>You have what you need</h2>
+
+<p>Your next card is <strong>R1 — Wiring Reference</strong>. Keep R0 on your workbench — if something is not working later, the two checks above will usually find it.</p>
+
+<footer>
+  R0 — How a breadboard works · Project 1 Light Signals
+</footer>
+
+</div>
+</body>
+</html>

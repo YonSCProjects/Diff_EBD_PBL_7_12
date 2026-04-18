@@ -1,0 +1,97 @@
+/* Picture-board style — minimal, image-primary, zero-text (except milestone ID).
+ * Used by Channel C spoken-companion mode: student points Claude at the ID,
+ * Claude speaks the instructions, student matches build to image.
+ */
+
+@page { size: A4 landscape; margin: 10mm; }
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.board {
+  width: 100%;
+  height: 100vh;
+  min-height: 190mm;
+  padding: 6mm 8mm;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Milestone ID chip — top corner, large, unambiguous.
+ * This is the ONLY text on the card. The student reads just the chip to
+ * Claude to orient ("I'm on T1 M3"). */
+.id-chip {
+  position: absolute;
+  top: 6mm;
+  left: 8mm;
+  background: #000;
+  color: #fff;
+  padding: 8pt 18pt;
+  font-size: 36pt;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  letter-spacing: 2pt;
+  border-radius: 4pt;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Optional sub-label for the teacher — very small, bottom corner.
+ * Not meant for the student to read; lets the teacher scan a stack of
+ * sheets and find the one they want. */
+.teacher-tag {
+  position: absolute;
+  bottom: 4mm;
+  right: 8mm;
+  font-size: 9pt;
+  color: #888;
+  letter-spacing: 0.5pt;
+}
+
+/* Image occupies the full remaining area after the chip. */
+.image-frame {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12mm 4mm 4mm 4mm;
+}
+
+.image-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+/* A small row of dots at the bottom shows total milestones + highlights current.
+ * Zero text; pure visual progress indicator. */
+.progress-dots {
+  position: absolute;
+  bottom: 8mm;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5mm;
+}
+
+.progress-dots .dot {
+  width: 8mm;
+  height: 8mm;
+  border: 2pt solid #000;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.progress-dots .dot.active {
+  background: #000;
+}

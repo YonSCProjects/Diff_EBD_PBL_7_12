@@ -20,7 +20,7 @@ An eight-project Arduino and ESP32 workshop program designed for 3–8 students 
 
 The program combines three ingredients: **differentiated instruction** with three readiness versions per project; **hands-on physical computing** that produces visible, tangible results every 15 minutes; and **Claude Code** (an AI coding assistant) integrated as both a pair-programming collaborator and a conversational tutorial channel.
 
-The design rests on **nine research-grounded principles** distilled from 77 verified peer-reviewed sources. The full research document, per-project files, student-facing materials (in Hebrew and English), and a reproducible build pipeline are available in the project repository.
+The design rests on **ten research-grounded principles** — nine distilled from 77 verified peer-reviewed sources, plus a tenth added from a 2025 staff-training lecture at Agourim school on flexibility in defining ways of participation, with partial empirical support from three further peer-reviewed articles. The full research document, per-project files, student-facing materials (in Hebrew and English), and a reproducible build pipeline are available in the project repository.
 
 ---
 
@@ -48,9 +48,9 @@ The program rests on four threads of evidence, each attached to the design choic
 
 ---
 
-## The 9 design principles
+## The 10 design principles
 
-Every design decision in the program traces to one or more of these nine research-grounded principles. Each principle states a rule, names its strongest evidence, and describes what it looks like in practice.
+Every design decision in the program traces to one or more of these ten research-grounded principles. Each principle states a rule, names its strongest evidence, and describes what it looks like in practice.
 
 ### Principle 1 — Predictable routine is load-bearing
 
@@ -105,6 +105,12 @@ Structure alone does not work. The teacher–student relationship is first-class
 The program must be runnable by one teacher managing 3–8 students without burnout. Pre-prepared materials, navigation-card discipline, and predictable session rhythms are non-negotiable. If the teacher experiences significant burnout as a result of the program, this is a red flag requiring re-examination of the design.
 
 *Evidence: Gilmour et al. (2022) — teacher burnout profile linked to classroom management quality; Sciacca (2025) — "the kids drive so much more of their own learning" (teacher S.F.).*
+
+### Principle 10 — Flexibility in defining ways of participation
+
+Participation is not one shape. A student can participate actively (follows the navigation cards), passively (present but not executing independently), or separately (outside the shared activity — alternative location, own corner, or in extreme cases even absent from the session and working from home). All three are legitimate. The workshop's job is to see the participation style the student is offering today, validate it, and build from it — not to push every student toward the active style every session. Belonging is an existential need — for challenging, avoidant, or resistant students no less than for "regular" students. The principle translates into per-student anchor logs, structured (not spontaneous) **validation-and-reinforcement scripts**, rewording descriptions like "not cooperating" to include capacities and anchors, and co-planning with the student using the principle of delay.
+
+*Evidence: Primary source — Michal & Smadar (2025) staff lecture, Agourim school (educational/clinical practice grounding). Empirical support — Norder, de Boer & Minnaert (2025) documents "being alone" as a functional participation mode for SEBD adolescents; Downs et al. (2019) shows EBD-at-risk students are disproportionately sensitive to teacher praise and reprimand (basis for the structured reinforcement scripts and language reframes); Bloom-Williams, Crosland & Fuller (2023) shows alternative seating produces moderate-to-large effects on in-seat behaviour (Tau 0.72–0.84).*
 
 ---
 

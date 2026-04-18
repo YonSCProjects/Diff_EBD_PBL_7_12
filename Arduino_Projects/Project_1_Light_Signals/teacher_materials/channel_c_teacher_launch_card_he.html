@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>ערוץ C — כרטיס הפעלה למורה</title>
+<style>
+  @page { size: A5 portrait; margin: 8mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card { max-width: 148mm; padding: 6mm; position: relative; }
+  h1 {
+    font-size: 15pt;
+    margin: 0 0 2pt 0;
+  }
+  .sub {
+    font-size: 9pt;
+    color: #555;
+    margin-bottom: 6pt;
+  }
+  .rule {
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.4pt;
+    color: #0050a0;
+    font-weight: bold;
+    margin: 5pt 0 1pt 0;
+  }
+  ol, ul { margin: 1pt 0; padding-inline-start: 14pt; }
+  li { margin: 1pt 0; }
+  .must {
+    background: #fffbe0;
+    border-inline-start: 3pt solid #d4a017;
+    padding: 4pt 8pt;
+    margin: 5pt 0;
+    font-size: 9.5pt;
+  }
+  .trigger {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 2pt 8pt;
+    border-radius: 3pt;
+    font-family: Arial, sans-serif;
+    font-size: 9.5pt;
+    direction: rtl;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    background: #f0f0f0;
+    padding: 1pt 4pt;
+    font-size: 9pt;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  footer {
+    position: absolute;
+    bottom: 4mm;
+    left: 6mm;
+    right: 6mm;
+    border-top: 1pt dashed #999;
+    padding-top: 2pt;
+    font-size: 7.5pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<h1>ערוץ C · פרויקט 1 · הפעלה</h1>
+<div class="sub">מלווה דיבורי מלא · לתלמידים בקריאה/כתיבה מוגבלת</div>
+
+<div class="rule">1 · הכנה לפני שהתלמיד נכנס</div>
+<ul>
+  <li>אוזניות + מיקרופון פעיל למחשב</li>
+  <li>פותחים את Claude Code ומדביקים את <code>claude_code_channel_c_spoken_companion_he.md</code> כהוראת מערכת</li>
+  <li>פותחים Arduino IDE עם תיקיית <code>ino_files/</code></li>
+  <li>מגש חלקים: 3 לדים, 3 נגדים 220Ω, 1 נגד 10kΩ, 1 כפתור, חוטים</li>
+  <li>8 לוחיות תמונה (M1–M8) מונחות מסודר בערימה</li>
+</ul>
+
+<div class="rule">2 · אבן דרך 1 — אני ליד</div>
+<p style="margin: 2pt 0;">M1 היא אבן דרך משותפת. נשארים ליד. החל מ-M2 אפשר להסתובב; חוזרים לבדיקה אחרי כל אבן דרך. קלוד יזכור היכן התלמיד עצר בסשן הקודם ויתחיל משם ברגע שהתלמיד יאמר את המילים הראשונות שלו.</p>
+
+<div class="rule">3 · מה לשמוע</div>
+<p style="margin: 2pt 0;">בסוף כל אבן דרך קלוד אומר בקול רם:</p>
+<div style="font-size:9pt; margin: 2pt 0 4pt 4pt;">"<em>סיימנו אבן דרך N — [מצב החומרה].</em>"</div>
+<p style="margin: 2pt 0;">זה אות ההתקדמות. אם לא שומעים אותו למשך פגישה ארוכה, ניגשים לבדוק.</p>
+
+<div class="rule">4 · אחרי הפגישה</div>
+<ul>
+  <li>בודקים את ההיסטוריה של Claude Code (איך הסשן הלך)</li>
+  <li>מעדכנים את יומן העוגנים של התלמיד (<span style="font-size:9pt;">student_anchor_log_he.html חלק 6</span>)</li>
+  <li>אם התלמיד סיים M2 — מצוין. אם סיים רק M1 — גם מצוין. יש לצפות שההתקדמות תהיה בגלים ולכן אין למדוד אותה לפי מספר אבני הדרך שהושלמו בשיעור מסוים.</li>
+</ul>
+
+<div class="must" style="background: #eef3f8; border-inline-start-color: #5a7391;">
+<strong>זה פיילוט.</strong> אחרי 2–3 סשנים מדברים עם התלמיד: להמשיך בערוץ C? לעבור לערוץ B (כרטיסיות כתובות שקלוד מקריא)? לצאת לכרטיסיות רגילות? החלטה שלו, בהנחיה שלנו.
+</div>
+
+<footer>ערוץ C · מלווה דיבורי · פרויקט 1 · עיקרון 7 + עיקרון 10</footer>
+
+</div>
+</body>
+</html>

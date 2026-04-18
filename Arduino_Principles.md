@@ -8,7 +8,7 @@
 
 ## How the principles were chosen
 
-Phase A produced ~20 candidate principles across three clusters. Phase B reduced them to the **9 principles below** using three criteria:
+Phase A produced ~20 candidate principles across three clusters. Phase B reduced them to the **9 principles** through Principle 9; **Principle 10** was added in a later iteration from a staff-training lecture at Agourim school (Michal & Smadar, 2025) on flexibility in defining ways of participation — see Principle 10's evidence section for the reasoning and the explicit caveat that its support comes from clinical practice at the school rather than from the verified 65-article corpus. The 10 principles together were selected using three criteria:
 
 1. **Citation strength** — each principle rests on at least 2 verified articles; most rest on 3–5. No principle depends on a single study or on inferential extension alone.
 2. **Translatability** — each principle translates into a concrete design rule for the 8 Arduino projects (no abstract theorizing).
@@ -22,7 +22,7 @@ Principles dropped or merged:
 
 ---
 
-## The 9 Principles
+## The 10 Principles
 
 ### Principle 1 — Predictable routine is load-bearing for executive function
 
@@ -193,7 +193,34 @@ Principles dropped or merged:
 
 ---
 
+### Principle 10 — Flexibility in defining ways of participation
+
+**Statement.** Participation is not one shape. A student can participate **actively** (engages with the card and the session as designed), **passively** (physically present in the workshop space but not executing tasks independently), or **separately** (outside the shared activity — in an adjacent space, at a different table, seemingly disengaged, or absent from this session and working from home). All three are legitimate. The workshop's job is to see the participation style the student is offering today, legitimize it, and build from it — not to push every student toward the active style at every session. Belonging and a sense of having value are existential needs; a student who is not in the "active" zone still needs to feel like a participant, and making that possible is a first-class design concern.
+
+**Evidence.** **Primary source:** a staff lecture at Agourim school (Michal & Smadar, 2025) on flexibility in participation styles, grounded in several years of clinical practice with the same EBD student population this workshop serves. The lecture presented two case examples that anchor the principle: (a) a seventh-grade student who could not sit in class but completed advanced English assignments on a hallway sofa; staff reframed the sofa from "leaving class" to "her working anchor," coordinated two structured acknowledgments per day, and over weeks she moved from war-of-attrition dynamics to sustained engagement; (b) a seventh-grade student with severe morning dysregulation who was given scheduled rest (sleep) for the first two hours of each school day, after which he could participate meaningfully for the rest of the day. In both cases, the staff's first move was to stop pushing for "active" participation and instead build around the student's actual capacity, which became a bridge rather than a concession.
+
+**This principle has no direct support in the verified 65-article corpus.** It is grounded in the clinical practice of the school's educational/therapeutic staff, not in the research base the other nine principles rest on. It is most closely aligned with three of those nine:
+- **Principle 5 (structured autonomy, not forced compliance)** — the subrule "a student's refusal to engage with a specific project on a specific day is diagnostic, not defiant" is an early articulation of the same idea that Principle 10 makes explicit and extends beyond project-level refusal into session-level and moment-level participation style.
+- **Principle 8 (the relationship is the multiplier)** — the mechanism through which separate-style participation can become meaningful is the sustained adult presence Principle 8 commits to. Principle 10 specifies *what the adult is doing during sustained presence with a separate-style student*: seeing the anchor, naming it, legitimizing it, acknowledging it structurally.
+- **Principle 2 (the navigation card traces the path)** — the card's authority does not depend on the student being "active"; a student working from a hallway sofa or a beanbag corner can still follow a navigation card. Principle 10 removes the implicit assumption that "following the card" looks the same for every student.
+
+**Honest caveat:** This principle is the newest in the list, rests on clinical rather than empirical grounding, and is flagged explicitly in the master document's Honest Limitations section. The per-student accommodations it recommends (anchor logs, structured acknowledgment scripts, co-planning conversations, regression playbooks) are piloted practices, not evidence-based interventions.
+
+**Design rule for the Arduino projects.**
+- **Name the three participation styles** (active / passive in space / passive adjacent / separate in room / separate at home) as a vocabulary the staff team uses when discussing a specific student. The language itself is a design intervention — it displaces "not cooperating" and "no motivation" with descriptions of capacity and style.
+- **No card or teacher-side document uses "not cooperating," "doesn't want to," "refuses," "lazy," or the Hebrew equivalents** (`לא משתף פעולה`, `לא רוצה`, `מתעצל`, `אין מוטיבציה`, `מלחמת התשה`, `אין סבלנות`, `אין התקדמות`). Substitutions: describe the capacity limit ("it is hard for her to sit in class for long"), name what the student is actually doing ("she is asking for help in the way she has"), or point to the anchor ("she is working on English from the sofa").
+- **Every workshop-participating student has a Per-student Anchor & Accommodation Log** (see [teacher_materials/student_anchor_log.html](Arduino_Projects/Project_1_Light_Signals/teacher_materials/student_anchor_log.html) and the Hebrew version). The log records the student's current participation style, identified anchors, co-planned accommodations, and a structured acknowledgment script. The log is filled in through observation and through co-planning conversations with the student — not written at them.
+- **Acknowledgments are structured, not spontaneous.** A prepared short sentence, delivered at a decided frequency, by a decided person, at a decided moment, without lingering or inspecting — see [teacher_materials/acknowledgment_scripts.html](Arduino_Projects/Project_1_Light_Signals/teacher_materials/acknowledgment_scripts.html). The dose matters: too few and it is invisible; too many (every adult who passes by) and it becomes overwhelming and loses meaning.
+- **Co-plan accommodations with the student using the principle of delay.** Ask, listen, do not answer yes/no on the spot. Collect the student's ideas. Come back with the staff team's response the next day or the next session. Prepare questions and candidate options in case the student offers nothing the first time.
+- **Wave motion is expected, not an emergency.** Progress is non-linear; regressions return even after breakthroughs; accumulated effort does not disappear when a student has a hard week. The staff-side response to a regression is to consult the anchor log and return to the known-good anchors, not to treat regression as failure of the program.
+- **Environmental adaptation is legitimization, not concession.** A beanbag corner, an alternative seat with back to the board, a personal work area outside the main group, a scheduled rest slot, a day-off arrangement — each of these becomes a bridge to sustained participation when named and legitimized, and a source of conflict when framed as "special treatment" or "we gave in."
+- **Tier movement downward carries no shame** (Principle 5 already says this for tier movement; Principle 10 extends it to participation style movement within a session — a student who was active last session and is separate this session is still a participant, and the acknowledgment script still applies).
+
+---
+
 ## How the principles map to the 8 Arduino projects
+
+**Principle 10 applies across every project and every session** — it is not project-specific; it is the stance the workshop takes toward every student regardless of which project they are on. The table below lists project-specific principle loads for Principles 1–9; Principle 10 is assumed throughout.
 
 | # | Project | Primary principles this project demonstrates |
 |---|---------|---------------------------------------------|
@@ -204,7 +231,7 @@ Principles dropped or merged:
 | 5 | Remote-Controlled Car | 1, 2, 3, 4, 5, 6, 7, 8 |
 | 6 | ESP32 Wi-Fi Controller | 1, 2, 3, 4, 5, 6, 7, 8 — I2C prerequisite for Project 8 introduced |
 | 7 | Camera-Equipped Explorer | 1, 2, 3, 4, 5, 6, 7, 8 |
-| 8 | Tiny ESP32 Quadcopter (8.5×20mm) | **All 9 principles.** This is the capstone where every principle is load-bearing simultaneously — routine protects EF under the stress of first flight; navigation cards handle the fine-motor wiring steps; physical-first wiring before firmware; hyper-chunked safety protocol; structured autonomy in flight sequences; movement breaks between high-focus tuning sessions; Claude Code generates the firmware from the README pseudocode; peer collaboration during build, strict one-at-a-time during flight; teacher sustainability protected by pre-assembled Tier-1 cores and a dedicated safety checklist. |
+| 8 | Tiny ESP32 Quadcopter (8.5×20mm) | **Principles 1–9 all load-bearing simultaneously** (plus 10 as always). Routine protects EF under the stress of first flight; navigation cards handle the fine-motor wiring steps; physical-first wiring before firmware; hyper-chunked safety protocol; structured autonomy in flight sequences; movement breaks between high-focus tuning sessions; Claude Code generates the firmware from the README pseudocode; peer collaboration during build, strict one-at-a-time during flight; teacher sustainability protected by pre-assembled Tier-1 cores and a dedicated safety checklist. |
 
 Every project file in `Arduino_Projects/` will include a `[Principles: #N, #M, …]` tag at each major design choice showing which of these principles it embodies.
 

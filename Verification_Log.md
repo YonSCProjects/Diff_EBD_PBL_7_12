@@ -1,15 +1,16 @@
 # Verification Log
 
 Last sweep: 2026-04-10
-Last incremental run: 2026-04-11 (3 new citations added: rows 70–72)
+Last incremental run: 2026-04-18 (Arduino_Principles.md — Principle 10 addition; no new academic citations; 1 non-article source noted)
 Verifier: article-verifier agent
 
 ## Summary
-- Files scanned: 6 (sweep); + Arduino_PBL_Program.md (incremental 2026-04-11)
+- Files scanned: 6 (sweep); + Arduino_PBL_Program.md (incremental 2026-04-11); + Arduino_Principles.md Principle 10 section (incremental 2026-04-18)
 - Unique citations found: 81
 - Verified: 69
 - Partial / Corrected: 12
 - Unverified (removed): 0
+- Non-article grounding sources accepted: 1 (see section below)
 
 Scanned files (project root only):
 - Detailed_Article_Summaries.md
@@ -120,3 +121,13 @@ Verification method: Crossref API for every citation with a DOI; WebSearch fallb
 ## Unverified — REMOVED (0)
 
 No citations were fully unverifiable. Every citation that was in doubt was resolved as either Verified or Partial / Corrected. In particular, Sciacca (2025) was initially difficult to verify because the dissertation is in ProQuest only, but the ProQuest link provided in the bibliography resolves to a real record (Jennifer Lee Sciacca, Wilkes University, 2025), so it was accepted as Verified.
+
+---
+
+## Non-article evidence sources (1)
+
+These are grounding sources for principles that explicitly disclaim corpus support. They are not academic publications and do not require DOI verification. They are logged here for transparency and traceability, per project convention.
+
+| # | As cited | Source file(s) | Nature | Accepted by | Date noted |
+|---|----------|----------------|--------|-------------|------------|
+| NA1 | Michal & Smadar (2025). Staff lecture, Agourim school. | Arduino_Principles.md, Principle 10 | Internal school staff lecture (clinical practice grounding). The principle explicitly states it has no direct support in the verified 65-article corpus and carries an honest-caveat marker in the Honest Limitations section, consistent with the treatment of Principle 7. No DOI verification attempted or appropriate. | Yon (project author, attendee of the lecture) | 2026-04-18 |

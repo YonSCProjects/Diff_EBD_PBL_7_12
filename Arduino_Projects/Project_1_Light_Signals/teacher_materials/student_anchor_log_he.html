@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>סדנת רובוטיקה — יומן עוגנים והתאמות לתלמיד</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .sheet {
+    max-width: 210mm;
+    padding: 2mm 4mm;
+  }
+  .header {
+    border-bottom: 2.5pt solid #000;
+    padding-bottom: 6pt;
+    margin-bottom: 8pt;
+  }
+  h1 {
+    font-size: 16pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 9.5pt;
+    color: #555;
+    margin-top: 2pt;
+  }
+  h2 {
+    font-size: 11.5pt;
+    margin: 8pt 0 3pt 0;
+    padding: 2pt 6pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .student-line {
+    margin: 4pt 0 8pt 0;
+    display: flex;
+    gap: 12pt;
+    flex-wrap: wrap;
+    font-size: 10pt;
+  }
+  .field {
+    flex: 1 1 auto;
+    min-width: 120pt;
+  }
+  .field .label {
+    font-weight: bold;
+    margin-inline-end: 4pt;
+  }
+  .field .blank {
+    display: inline-block;
+    border-bottom: 1pt solid #000;
+    min-width: 100pt;
+    min-height: 14pt;
+  }
+  .styles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4pt 14pt;
+    font-size: 10pt;
+    margin: 4pt 0 8pt 0;
+  }
+  .styles label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4pt;
+  }
+  .styles .box {
+    display: inline-block;
+    width: 13pt;
+    height: 13pt;
+    border: 1.5pt solid #000;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    margin: 2pt 0 6pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  th, td {
+    border: 1pt solid #666;
+    padding: 4pt 6pt;
+    vertical-align: top;
+    text-align: right;
+  }
+  th {
+    background: #f0f0f0;
+    font-weight: bold;
+    font-size: 9.5pt;
+  }
+  td.row-h {
+    height: 34pt;
+    min-height: 34pt;
+  }
+  td.row-t {
+    height: 28pt;
+    min-height: 28pt;
+  }
+  .guide {
+    background: #eef3f8;
+    border-inline-start: 3pt solid #5a7391;
+    padding: 4pt 8pt;
+    margin: 2pt 0 6pt 0;
+    font-size: 9pt;
+    color: #234;
+  }
+  footer {
+    margin-top: 8pt;
+    padding-top: 4pt;
+    border-top: 1pt dashed #999;
+    font-size: 8.5pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<div class="header">
+  <h1>יומן עוגנים והתאמות לתלמיד</h1>
+  <div class="subtitle">סדנת רובוטיקה · בית ספר עגורים · דף אחד לכל תלמיד, מונח על שולחן המורה</div>
+</div>
+
+<div class="student-line">
+  <div class="field"><span class="label">כינוי:</span><span class="blank"></span></div>
+  <div class="field"><span class="label">עודכן:</span><span class="blank" style="min-width:70pt;"></span></div>
+  <div class="field"><span class="label">מעקב הבא:</span><span class="blank" style="min-width:70pt;"></span></div>
+</div>
+
+<h2>1 · סגנון ההשתתפות בתקופה זו</h2>
+
+<div class="guide">בוחרים את הסגנון שהתלמיד מציע <em>עכשיו</em>. הסגנון משתנה; אותו תלמיד עשוי להיות פעיל בפגישה אחת ונפרד בפגישה שאחריה. כל חמשת הסגנונות לגיטימיים. רושמים את התאריך — השדה הזה הוא תמונת-מצב, לא פסק דין.</div>
+
+<div class="styles">
+  <label><span class="box"></span> פעיל (משתתף בכרטיסייה ובסשן כפי שתוכנן)</label>
+  <label><span class="box"></span> סביל בחלל (יושב בעמדה שלו, מתבונן, אינו פועל מיוזמתו)</label>
+  <label><span class="box"></span> סביל סמוך (קרוב לקבוצה, לא בעמדה שלו)</label>
+  <label><span class="box"></span> נפרד בחדר (בפינה אחרת, מושב חלופי, מרחב עבודה משלו)</label>
+  <label><span class="box"></span> נפרד בבית (לא בחדר בפגישה הזו)</label>
+</div>
+
+<h2>2 · עוגנים ידועים</h2>
+
+<div class="guide">איפה / מתי / מה נראה שעובד. עוגן = מה שהתלמיד מציע עכשיו באמת. דוגמאות: "בונה משק הרפייה", "תמיד מגיע בימי פריצינג", "נח 20 דקות ראשונות לפני שמתחיל".</div>
+
+<table>
+  <tr><th style="width:35%;">איפה / מתי</th><th style="width:35%;">מה קורה שם</th><th style="width:30%;">מה אנחנו אומרים / עושים</th></tr>
+  <tr><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td></tr>
+  <tr><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td></tr>
+  <tr><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td></tr>
+</table>
+
+<h2>3 · ניסוחים מחדש עבור התלמיד הזה</h2>
+
+<div class="guide">לתפוס את עצמנו. מחליפים שפה של כישלון / אי-שיתוף-פעולה בשפה של יכולת / עוגן.</div>
+
+<table>
+  <tr><th style="width:50%;">לא להשתמש</th><th style="width:50%;">להשתמש במקום</th></tr>
+  <tr><td class="row-t"></td><td class="row-t"></td></tr>
+  <tr><td class="row-t"></td><td class="row-t"></td></tr>
+  <tr><td class="row-t"></td><td class="row-t"></td></tr>
+</table>
+
+<h2>4 · התאמות שתוכננו יחד</h2>
+
+<div class="guide">בונים <em>עם</em> התלמיד. עובדים לפי עקרון ההשהיה — אוספים את הרעיונות שלו, חוזרים עם תגובת הצוות. רושמים את מה שאמר.</div>
+
+<table>
+  <tr><th style="width:50%;">ההתאמה</th><th style="width:25%;">הוסכם בתאריך</th><th style="width:25%;">מה התלמיד אמר</th></tr>
+  <tr><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td></tr>
+  <tr><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td></tr>
+  <tr><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td></tr>
+</table>
+
+<h2>5 · תסריטי הוקרה מובנים</h2>
+
+<div class="guide">משפט אחד מוכן לכל רגע עוגן. נאמר על ידי האדם המיועד בתדירות שהוחלטה. לא מתעכבים, לא בודקים, לא מציפים. כשאפשר — מתכננים את המשפט יחד עם התלמיד.</div>
+
+<table>
+  <tr><th style="width:36%;">המשפט המדויק</th><th style="width:20%;">האדם המיועד</th><th style="width:12%;">תדירות</th><th style="width:20%;">מתי / טריגר</th><th style="width:12%;">תוכנן עם התלמיד?</th></tr>
+  <tr><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td></tr>
+  <tr><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td><td class="row-h"></td></tr>
+</table>
+
+<h2>6 · יומן גליות (תנועת גלים)</h2>
+
+<div class="guide">נסיגות חוזרות גם אחרי פריצות. היומן אינו מודד כישלון — הוא אוסף עדויות למה שעוזר ולמה שכבר נבנה.</div>
+
+<table>
+  <tr><th style="width:15%;">תאריך</th><th style="width:30%;">נקודת שפל שזוהתה</th><th style="width:30%;">מה עזר</th><th style="width:25%;">מה הצטבר</th></tr>
+  <tr><td class="row-t"></td><td class="row-t"></td><td class="row-t"></td><td class="row-t"></td></tr>
+  <tr><td class="row-t"></td><td class="row-t"></td><td class="row-t"></td><td class="row-t"></td></tr>
+  <tr><td class="row-t"></td><td class="row-t"></td><td class="row-t"></td><td class="row-t"></td></tr>
+</table>
+
+<footer>
+  יומן עוגנים והתאמות לתלמיד · עיקרון 10 — גמישות בסגנונות השתתפות
+</footer>
+
+</div>
+</body>
+</html>

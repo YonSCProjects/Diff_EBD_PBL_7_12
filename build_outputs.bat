@@ -66,9 +66,14 @@ echo [8/9] Generating Arduino_Project_1.pdf ...
 call npx --yes md-to-pdf --config-file md-to-pdf.config.js "Arduino_Projects\Project_1_Light_Signals\Arduino_Project_1.md" >nul 2>&1
 if errorlevel 1 ( echo ERROR ) else ( move /Y "Arduino_Projects\Project_1_Light_Signals\Arduino_Project_1.pdf" build_output\ >nul & echo       Done. )
 
-echo [9/9] Generating Arduino_Project_1.html ...
+echo [9/10] Generating Arduino_Project_1.html ...
 call npx --yes md-to-pdf --config-file md-to-pdf.config.js --as-html "Arduino_Projects\Project_1_Light_Signals\Arduino_Project_1.md" >nul 2>&1
 if errorlevel 1 ( echo ERROR ) else ( move /Y "Arduino_Projects\Project_1_Light_Signals\Arduino_Project_1.html" build_output\ >nul & echo       Done. )
+
+REM --- Cards-only bundle (Hebrew): Project_1_Cards_he.html + .pdf ---
+echo [10/10] Generating Project_1_Cards_he.html + .pdf (standalone cards bundle) ...
+call node build_cards_only.js he >nul 2>&1
+if errorlevel 1 ( echo ERROR ) else ( echo       Done. )
 
 echo.
 echo ============================================================

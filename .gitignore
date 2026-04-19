@@ -1,6 +1,12 @@
 # Generated outputs (Phase E build pipeline)
 # These are regenerated from source .md files — do not commit.
-build_output/
+# Use the `/*` form (not the directory form) so that re-inclusion negations below
+# actually take effect — git can't re-include files under an ignored directory.
+build_output/*
+
+# Exception: commit the cards-only bundle so it can be shared without a rebuild.
+!build_output/Project_1_Cards*.html
+!build_output/Project_1_Cards*.pdf
 
 # Node modules (if md-to-pdf is installed locally)
 node_modules/

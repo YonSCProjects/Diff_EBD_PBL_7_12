@@ -1,0 +1,3566 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>פרויקט 1 — אותות אור: חוברת כרטיסיות (עזר ומשימה)</title>
+<style>/* Project 1 — Light Signals: shared task card stylesheet
+ * Used by all Tier 1, Tier 2, and Tier 3 task cards, and by the HTML tutorial.
+ * Matches the R1-R5 reference card visual style so students can switch
+ * between printed cards and HTML tutorial without cognitive friction.
+ * A4 portrait, 14pt body text, high contrast, laminate-ready.
+ */
+
+@page { size: A4 portrait; margin: 15mm; }
+
+* { box-sizing: border-box; }
+
+body {
+  /* Arial first for reliable Hebrew rendering (Windows Arial has
+   * consistent regular and bold Hebrew glyphs across Windows versions;
+   * Segoe UI's Hebrew bold can fall back to synthesized bold which
+   * looks visually different). Segoe UI and -apple-system kept as
+   * fallbacks for LTR English on non-Windows systems. */
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+  font-size: 14pt;
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  max-width: 210mm;
+  padding: 12mm;
+  margin: 0 auto;
+}
+
+/* Header with milestone badge, title, subtitle */
+
+.header {
+  border-bottom: 3pt solid #000;
+  padding-bottom: 10pt;
+  margin-bottom: 14pt;
+}
+
+.milestone-badge {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 4pt 12pt;
+  font-size: 11pt;
+  font-weight: bold;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  margin-bottom: 8pt;
+}
+
+.milestone-badge.celebration {
+  background: #d4a017;
+  color: #fff;
+}
+
+h1 {
+  font-size: 26pt;
+  margin: 4pt 0 6pt 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 12pt;
+  color: #555;
+  margin-top: 3pt;
+}
+
+/* Why-this-milestone callout (pale blue italic).
+ * Uses border-inline-start so it renders correctly under both LTR
+ * (border on the left) and RTL Hebrew (border on the right). */
+
+.why {
+  background: #f0f4fa;
+  border-inline-start: 5pt solid #0050a0;
+  padding: 10pt 14pt;
+  margin: 14pt 0;
+  font-style: italic;
+  font-size: 13pt;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: flow-root;
+}
+
+/* Safety net: when a blue .why callout immediately follows an ASCII
+ * wiring diagram or a code block, force the .why onto a new page.
+ * Chromium occasionally violates break-inside: avoid in tight layouts
+ * where the only alternative would push content to the next page —
+ * this explicit page-break-before guarantees the atomic box never
+ * splits in the wiring-block -> why sequence common to T1-M3/M5/M7. */
+.wiring-block + .why,
+.code-block + .why,
+pre + .why {
+  page-break-before: always;
+  break-before: page;
+}
+
+.why ul {
+  margin: 6pt 0 2pt 0;
+  padding-inline-start: 22pt;
+}
+
+.why li {
+  margin: 3pt 0;
+  line-height: 1.45;
+}
+
+/* Together-milestone notice (first-milestone distinctive) */
+
+.together-notice {
+  background: #fff3d6;
+  border: 2pt solid #d4a017;
+  padding: 14pt 18pt;
+  margin: 14pt 0;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.together-notice strong {
+  display: block;
+  font-size: 16pt;
+  margin-bottom: 4pt;
+}
+
+/* Section headers — black bar with white text, same as R1-R5 */
+
+h2 {
+  font-size: 17pt;
+  margin: 18pt 0 8pt 0;
+  padding: 5pt 12pt;
+  background: #000;
+  color: #fff;
+}
+
+p { margin: 6pt 0; }
+
+/* Checklist — big checkboxes for scannability */
+
+.checklist {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 10pt 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-block: 6pt;
+  padding-inline-start: 34pt;
+  padding-inline-end: 0;
+  margin: 4pt 0;
+  line-height: 1.5;
+  border-bottom: 1pt dashed #ddd;
+}
+
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  inset-inline-start: 4pt;
+  top: 3pt;
+  font-size: 22pt;
+  line-height: 1;
+}
+
+.checklist li:last-child {
+  border-bottom: none;
+}
+
+/* Screen-interactive: clicking toggles a ✓ and persists in localStorage
+ * per nickname (see card.js). Print view strips interactivity and keeps
+ * the plain empty boxes so the laminated card still works with a marker. */
+.checklist li {
+  cursor: pointer;
+  user-select: none;
+}
+
+.checklist li.checked::before {
+  content: "☑";
+}
+
+.checklist li.checked {
+  color: #666;
+  text-decoration: line-through;
+  text-decoration-color: #aaa;
+}
+
+/* Nickname indicator strip (screen only) */
+.nickname-indicator {
+  background: #f5f5f5;
+  border: 1pt solid #ccc;
+  padding: 6pt 12pt;
+  margin: 0 0 10pt 0;
+  font-size: 11pt;
+  display: flex;
+  gap: 10pt;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nickname-indicator strong {
+  font-weight: bold;
+}
+
+.nickname-indicator button {
+  font-size: 10pt;
+  padding: 3pt 10pt;
+  border: 1pt solid #888;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nickname-indicator button:hover {
+  background: #e8e8e8;
+}
+
+/* Code snippet block — the full .ino printed for reading on paper */
+
+.code-block {
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  line-height: 1.4;
+  white-space: pre;
+  overflow-x: auto;
+  page-break-inside: avoid;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+.code-block .filename {
+  display: block;
+  font-size: 10pt;
+  color: #666;
+  margin-bottom: 8pt;
+  font-style: italic;
+}
+
+/* ASCII wiring diagram block */
+
+.wiring-block {
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 12pt;
+  line-height: 1.3;
+  white-space: pre;
+  page-break-inside: avoid;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* Image slot — living placeholder for Fritzing or photo */
+
+.image-slot {
+  border: 2pt dashed #667;
+  background: #f0f4fa;
+  padding: 14pt 18pt;
+  margin: 12pt 0;
+  font-size: 11pt;
+  page-break-inside: avoid;
+}
+
+.image-slot-header {
+  font-weight: bold;
+  color: #334;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 11pt;
+  margin-bottom: 6pt;
+}
+
+.image-slot p {
+  margin: 4pt 0;
+  font-size: 11pt;
+}
+
+/* Wiring figure — Fritzing breadboard diagram + caption */
+
+.wiring-figure {
+  border: 1pt solid #b8c4d8;
+  background: #fafcff;
+  padding: 10pt 12pt 8pt;
+  margin: 12pt 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  text-align: center;
+}
+
+.wiring-figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 260pt;
+  height: auto;
+  margin: 0 auto;
+}
+
+.wiring-figure figcaption {
+  margin-top: 6pt;
+  font-size: 10pt;
+  color: #455;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.wiring-figure figcaption strong {
+  color: #223;
+}
+
+/* Expected-result block (green) */
+
+.expected {
+  background: #e8f5e9;
+  border-inline-start: 5pt solid #2e7d32;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+}
+
+.expected strong {
+  display: block;
+  margin-bottom: 4pt;
+  color: #1b5e20;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 12pt;
+}
+
+/* Done-when block (double border) */
+
+.done-when {
+  background: #fff;
+  border: 3pt double #000;
+  padding: 14pt 18pt;
+  margin: 16pt 0;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.done-when strong {
+  display: block;
+  font-size: 12pt;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  margin-bottom: 6pt;
+}
+
+.done-when ul {
+  margin: 6pt 0 0 0;
+  padding-inline-start: 20pt;
+  font-weight: normal;
+  font-size: 13pt;
+}
+
+.done-when ul li {
+  margin: 3pt 0;
+  padding-block: 5pt;
+  line-height: 1.6;
+  border-bottom: 1pt solid #e0e0e0;
+}
+
+.done-when ul li:last-child {
+  border-bottom: none;
+}
+
+/* Stuck protocol short version (pale yellow) */
+
+.stuck {
+  background: #fffbe0;
+  border-inline-start: 5pt solid #d4a017;
+  padding: 10pt 14pt;
+  margin: 12pt 0;
+  font-size: 13pt;
+}
+
+.stuck strong {
+  display: block;
+  margin-bottom: 3pt;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+.stuck ul {
+  margin: 6pt 0 2pt 0;
+  padding-inline-start: 22pt;
+}
+
+.stuck ul li {
+  margin: 3pt 0;
+  line-height: 1.45;
+}
+
+.stuck ul li strong {
+  display: inline;
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: inherit;
+  letter-spacing: 0;
+}
+
+/* Warning block (pale red, for the button pull-down pitfall especially) */
+
+.warning {
+  background: #fef0f0;
+  border-inline-start: 5pt solid #b00;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+  font-size: 13pt;
+}
+
+.warning strong {
+  color: #b00;
+  display: block;
+  margin-bottom: 3pt;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+/* Recognition line block — Milestone 1 together-ritual */
+
+.recognition-line {
+  background: #fff3d6;
+  border: 3pt solid #d4a017;
+  padding: 14pt 18pt;
+  margin: 14pt 0;
+  text-align: center;
+  font-size: 16pt;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.recognition-line::before {
+  content: "\201C";
+  font-size: 24pt;
+  vertical-align: -4pt;
+  color: #d4a017;
+}
+
+.recognition-line::after {
+  content: "\201D";
+  font-size: 24pt;
+  vertical-align: -4pt;
+  color: #d4a017;
+}
+
+/* RTL: swap opening/closing quotes so the opening quote sits at the
+ * visual start (right side) of the recognition line in Hebrew. */
+[dir="rtl"] .recognition-line::before { content: "\201D"; }
+[dir="rtl"] .recognition-line::after { content: "\201C"; }
+
+/* Celebration block — Milestone 8 project complete */
+
+.celebration {
+  background: #fff3d6;
+  border: 3pt solid #d4a017;
+  padding: 16pt 20pt;
+  margin: 16pt 0;
+  text-align: center;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.celebration .title {
+  font-size: 22pt;
+  color: #8b6000;
+  display: block;
+  margin-bottom: 8pt;
+}
+
+/* Prompt template (Tier 2+ Claude Code Level 2 interactions) */
+
+.prompt-template {
+  background: #f4f7fb;
+  border: 1pt solid #99b;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 12pt;
+  white-space: pre-wrap;
+  line-height: 1.45;
+  page-break-inside: avoid;
+}
+
+/* Choice-point block (Tier 2 pattern choice, button behaviour choice) */
+
+.choice-point {
+  background: #f0f4fa;
+  border: 2pt solid #0050a0;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+}
+
+.choice-point strong {
+  display: block;
+  color: #0050a0;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 12pt;
+  margin-bottom: 6pt;
+}
+
+.choice-point .option {
+  background: #fff;
+  border: 1pt solid #99b;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+}
+
+.choice-point .option strong {
+  color: #000;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14pt;
+  margin-bottom: 2pt;
+}
+
+/* Tier 3 planner fill-in-the-blank fields */
+
+.field {
+  border: 1pt solid #000;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  min-height: 60pt;
+  background: #fafafa;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-bottom: 4pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+}
+
+.field .hint {
+  color: #666;
+  font-size: 11pt;
+  font-style: italic;
+  margin-bottom: 6pt;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 20pt;
+  padding-top: 10pt;
+  border-top: 1pt dashed #999;
+  font-size: 10pt;
+  color: #666;
+  text-align: center;
+}
+
+/* Print-specific tweaks */
+
+@media print {
+  body { font-size: 13pt; }
+  .card { padding: 10mm; }
+  a { color: #000; text-decoration: underline; }
+
+  /* Print = laminated artifact: always show empty boxes, no interactivity,
+   * no nickname strip, no strikethrough on checked items. */
+  .nickname-indicator { display: none; }
+  .checklist li { cursor: default; }
+  .checklist li.checked { color: #000; text-decoration: none; }
+  .checklist li.checked::before { content: "☐"; }
+
+  /* Keep callout boxes from splitting across a page break — a callout
+   * broken mid-box is disorienting and defeats the box's visual framing.
+   * .choice-point is intentionally excluded: it can be tall (3 options)
+   * and forcing it whole often leaves a near-empty first page. Instead
+   * we keep each individual .option inside it together.
+   * Tables are also excluded here — they use a separate rule below
+   * that allows row-level splits with repeating headers. */
+  .why, .together-notice, .expected, .done-when, .stuck,
+  .warning, .important, .recognition-line, .celebration,
+  .prompt-template, .image-slot, .field, .living-placeholder,
+  .step {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Paragraphs and list items are atomic — never split mid-sentence or
+   * mid-item. Card paragraphs are short, so whitespace cost is minimal
+   * while the readability win is non-negotiable. */
+  p {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Extend heading-to-body bonding to the second following sibling so a
+   * heading + short lead-in + list/table move together (prevents
+   * heading + one line stranded at page bottom with body starting on
+   * the next page). */
+  h2 + * + *, h3 + * + *, h4 + * + * {
+    page-break-before: avoid;
+    break-before: avoid-page;
+  }
+
+  /* Tables: allow row-level splits with repeating <thead> on the
+   * continuation page. A whole-table keep-together is opt-in via
+   * .table-keep-together. */
+  table {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tbody tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .table-keep-together {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .choice-point .option {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Keep each option's title (<strong>) bonded to its following .option
+   * body so the title never strands at the bottom of a page. */
+  .choice-point strong {
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+  .choice-point strong + .option {
+    page-break-before: avoid;
+    break-before: avoid-page;
+  }
+
+  /* Living placeholders are authoring scaffolding for image slots —
+   * they must never reach a laminated student card. */
+  .living-placeholder { display: none; }
+
+  /* Two-page cards: when the recognition line appears mid-card, force
+   * the "what you should see" + "done when" + "stuck" cluster onto
+   * page 2 so the ceremonial line closes page 1 cleanly. */
+  .recognition-line + .expected {
+    page-break-before: always;
+  }
+}
+
+/* =====================================================================
+ * Tutorial-specific styles
+ * Used by project_1_tutorial.html, which links to this same stylesheet
+ * so the tutorial visually matches the printed task cards.
+ * ===================================================================*/
+
+/* Tutorial intro block (blue, introduces how to use the tutorial) */
+
+.tutorial-intro {
+  background: #e3f2fd;
+  border: 3pt solid #1565c0;
+  padding: 18pt 22pt;
+  margin: 20pt 0;
+  font-size: 14pt;
+}
+
+.tutorial-intro h2 {
+  margin-top: 0;
+  background: #1565c0;
+}
+
+.tutorial-intro p {
+  margin: 8pt 0;
+  line-height: 1.55;
+}
+
+/* Tutorial navigation (table of contents with anchor links) */
+
+.tutorial-nav {
+  background: #f5f5f5;
+  border: 1pt solid #aaa;
+  padding: 16pt 22pt;
+  margin: 20pt 0;
+}
+
+.tutorial-nav h2 {
+  margin-top: 0;
+}
+
+.tutorial-nav h3 {
+  font-size: 15pt;
+  margin: 12pt 0 4pt 0;
+  color: #000;
+  border-bottom: 1pt solid #999;
+  padding-bottom: 3pt;
+}
+
+.tutorial-nav ol {
+  margin: 6pt 0;
+  padding-inline-start: 24pt;
+  list-style: decimal;
+}
+
+.tutorial-nav li {
+  margin: 5pt 0;
+  line-height: 1.4;
+}
+
+.tutorial-nav a {
+  color: #0050a0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tutorial-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Tier divider (big black bar between Tier 1 / Tier 2 / Tier 3 sections) */
+
+.tier-divider {
+  background: #000;
+  color: #fff;
+  padding: 20pt 24pt;
+  margin: 34pt 0 22pt 0;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+}
+
+.tier-divider .tier-subtitle {
+  display: block;
+  font-size: 13pt;
+  font-weight: normal;
+  letter-spacing: 0.5pt;
+  text-transform: none;
+  margin-top: 6pt;
+  opacity: 0.85;
+}
+
+/* "Open this sketch" action link — a prominent clickable button */
+
+.open-link {
+  display: block;
+  background: #0050a0;
+  color: #fff !important;
+  padding: 12pt 18pt;
+  margin: 12pt 0;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: center;
+  border-radius: 4pt;
+  border: 2pt solid #003875;
+}
+
+.open-link:hover {
+  background: #003875;
+}
+
+.open-link::before {
+  content: "📎 ";
+  font-size: 16pt;
+}
+
+/* Inline action link (for "see R1 Wiring" and similar) */
+
+.inline-link {
+  color: #0050a0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.inline-link:hover {
+  color: #003875;
+}
+
+/* File-path box (fallback — shown next to .open-link for students whose
+ * browser does not open .ino files directly) */
+
+.file-path {
+  display: block;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 6pt 10pt;
+  margin: -6pt 0 12pt 0;
+  color: #555;
+  text-align: center;
+}
+
+.file-path::before {
+  content: "File path (open in Arduino IDE via File \2192  Sketchbook): ";
+  font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: 10pt;
+  font-style: italic;
+}
+
+/* Orphan-heading prevention: keep a heading bonded to the block that follows.
+ * Chicago §2.113, APA-7 §2.27 — heading must be followed by body content
+ * on the same page, never stranded at page bottom. */
+h1, h2, h3, h4, h5, h6,
+.section-title {
+  page-break-after: avoid;
+  break-after: avoid-page;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+p, li {
+  orphans: 3;
+  widows: 3;
+}
+
+h2 + p, h2 + ul, h2 + ol, h2 + .code-block, h2 + .wiring-block, h2 + pre, h2 + table, h2 + blockquote,
+h3 + p, h3 + ul, h3 + ol, h3 + .code-block, h3 + .wiring-block, h3 + pre, h3 + table, h3 + blockquote,
+h4 + p, h4 + ul, h4 + ol, h4 + .code-block, h4 + .wiring-block, h4 + pre, h4 + table, h4 + blockquote,
+.section-title + * {
+  page-break-before: avoid;
+  break-before: avoid-page;
+}
+
+/* Milestone section (each task card's screen equivalent) */
+
+.milestone-section {
+  scroll-margin-top: 20pt;
+  page-break-after: always;
+  border-bottom: 2pt dashed #ccc;
+  margin-bottom: 20pt;
+  padding-bottom: 20pt;
+}
+
+.milestone-section:last-of-type {
+  border-bottom: none;
+}
+
+/* Back-to-top link at the end of each milestone.
+ * text-align: end renders as "right" under LTR and "left" under RTL,
+ * so the link always sits at the visual end of its container. */
+
+.back-to-top {
+  text-align: end;
+  margin-top: 16pt;
+  font-size: 11pt;
+}
+
+.back-to-top a {
+  color: #0050a0;
+  text-decoration: none;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
+
+/* Tutorial content wrapper (centers content in browser view) */
+
+.tutorial-content {
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 12mm;
+}
+
+/* Screen-only hint: tells the student what they are looking at */
+
+@media screen {
+  .screen-hint {
+    display: block;
+    background: #fff8e1;
+    border: 1pt solid #f9a825;
+    padding: 8pt 12pt;
+    margin: 12pt 0;
+    font-size: 11pt;
+    font-style: italic;
+    color: #555;
+  }
+}
+
+@media print {
+  .screen-hint { display: none; }
+  .tier-divider { page-break-before: always; }
+  .tutorial-nav { page-break-after: always; }
+  .back-to-top { display: none; }
+  .open-link {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2pt solid #000 !important;
+  }
+  .file-path { display: block; }
+}
+
+/* =====================================================================
+ * Hebrew RTL overrides — Pattern E6 (no box-level bold on Hebrew callouts)
+ * Windows Arial synthesises Hebrew bold inconsistently (thickens regular
+ * glyphs rather than using a true bold face), so box-level bold on a
+ * Hebrew-language callout looks visibly different from the surrounding
+ * regular text. Individual <strong> tags inside these boxes still provide
+ * emphasis via the semantic tag, so the important labels stay bold.
+ * English LTR cards are unaffected — this override only fires under [dir="rtl"].
+ * ===================================================================*/
+
+[dir="rtl"] .together-notice,
+[dir="rtl"] .done-when,
+[dir="rtl"] .celebration,
+[dir="rtl"] .recognition-line,
+[dir="rtl"] .milestone-badge,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .expected strong,
+[dir="rtl"] .warning strong,
+[dir="rtl"] .done-when strong {
+  font-weight: normal;
+}
+
+/* Hebrew RTL: uppercase + letter-spacing are Latin-type conventions
+ * and render poorly on Hebrew glyphs (no case, and letter-spacing
+ * pushes Hebrew letters apart awkwardly). Override on all callout
+ * headings and bump size for a clearer visual hierarchy. */
+[dir="rtl"] .expected strong,
+[dir="rtl"] .done-when strong,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .warning strong {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14pt;
+  margin-bottom: 6pt;
+}
+
+/* Expected block: paragraph spacing so the primary observable fact
+ * reads as a clean lead line and the explanation sits below it. */
+.expected p {
+  margin: 4pt 0 0 0;
+  line-height: 1.55;
+}
+
+.expected p.expected-note {
+  font-size: 12pt;
+  color: #444;
+  margin-top: 6pt;
+}
+
+/* Prompt templates hold Hebrew prose fill-in labels under RTL — per
+ * Pattern E5, Hebrew text never uses monospace. Keep monospace for
+ * LTR prompt templates (English code examples). */
+[dir="rtl"] .prompt-template {
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+}
+
+/* Field labels (Tier 3 planner) — strip Latin uppercase and letter-
+ * spacing when rendered under RTL; Hebrew has no case and glyphs
+ * render poorly with Latin letter-spacing. */
+[dir="rtl"] .field label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Fill-in-blank utility (Tier 2 choice-commitment, planner fields).
+ * Replaces inline style="border-bottom: 1pt solid; ..." across cards. */
+.fill-blank {
+  border-bottom: 1pt solid #000;
+  display: inline-block;
+  min-width: 60pt;
+}
+
+/* Inline <code> in RTL context: isolate the LTR run so neutral characters
+ * (backslash, colon, parentheses) resolve inside the LTR island rather than
+ * being absorbed into the surrounding RTL paragraph and reordering visually.
+ * Also allow long paths to break if they would overflow the column. */
+[dir="rtl"] code {
+  unicode-bidi: isolate;
+  direction: ltr;
+}
+
+code {
+  overflow-wrap: anywhere;
+}
+
+/* Hebrew RTL: the .r-ref inline circle used in task cards to reference
+ * R1-R5 reference cards. Matches the circled style of the top-corner
+ * card-ID badge so "R2" in body text looks identical to "R2" in the corner. */
+
+[dir="rtl"] .r-ref,
+.r-ref {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18pt;
+  height: 18pt;
+  border: 1.5pt solid #000;
+  border-radius: 50%;
+  font-size: 10pt;
+  font-weight: bold;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  top: -1pt;
+}
+
+/* Hebrew RTL: card-ID badge in the top corner. Hebrew cards position at
+ * top-left (heading flows from the right, badge sits in empty space on
+ * the left). English cards use the same badge but positioned top-right,
+ * handled per-file via an additional .card-id-en class if needed.
+ * For now, Hebrew task cards add the badge via .card-id and RTL honors top-left. */
+
+.card-id {
+  position: absolute;
+  top: 6mm;
+  left: 6mm;
+  width: 44pt;
+  height: 44pt;
+  border: 2.5pt solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15pt;
+  font-weight: bold;
+  background: #fff;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.5pt;
+  z-index: 10;
+}
+
+.card {
+  position: relative;
+}
+
+/* Together-milestone image icon (Hebrew + English). Used inside the
+ * .together-notice block to visually mark the together-milestone pattern.
+ * Source: images/together_milestone_icon.png (Yon-provided). */
+
+.together-icon {
+  display: block;
+  width: 60pt;
+  height: 60pt;
+  margin: 0 auto 10pt auto;
+  object-fit: contain;
+}
+</style>
+<style>
+  /* Bundle-level: the first card shouldn't force a blank leading page. */
+  .appendix-card:first-of-type { page-break-before: auto !important; }
+  body { margin: 0; padding: 0; }
+</style>
+</head>
+<body>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .orient {
+    background: #eef3f8;
+    border-inline-start: 5pt solid #5a7391;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 12.5pt;
+    color: #234;
+  }
+  .big-msg {
+    background: #fff8e1;
+    border: 2pt solid #f57c00;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 15pt;
+    text-align: right;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border-inline-start: 5pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key strong { color: #000; }
+  .tip {
+    background: #f1f8e9;
+    border-inline-start: 5pt solid #558b2f;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont { color: #b00; font-weight: bold; }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 260pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.5;
+    text-align: center;
+    direction: rtl;
+  }
+  .wiring-figure figcaption strong { color: #223; }
+  .bb-ascii {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    border: 1pt solid #ccc;
+    padding: 8pt 8pt;
+    margin: 10pt 0;
+    line-height: 1.35;
+    white-space: pre;
+    overflow-x: auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: left;
+  }
+  .chain {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    background: #fafcff;
+    border: 1pt solid #b8c4d8;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    text-align: center;
+    direction: ltr;
+    unicode-bidi: isolate;
+    page-break-inside: avoid;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R0</div>
+
+<div class="header">
+  <h1><span class="section-icon">🧩</span>איך עובד ברדבורד</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="orient">
+קוראים את הכרטיסייה הזאת לפני הפגישה הראשונה. לא צריך לשנן אותה — משאירים אותה על שולחן העבודה וחוזרים לכל חלק כשנתקעים.
+</div>
+
+<div class="big-msg">
+ברדבורד מאפשר לבנות מעגלים חשמליים בלי להלחים. מכניסים את הרגליים של הרכיבים (לדים, נגדים, חוטים) לתוך החורים, והלוח מחבר ביניהם בפנים — בלי כלים. בסוף אפשר להוציא הכל ולהשתמש בחלקים שוב.
+</div>
+
+<h2><span class="section-icon">🗺️</span>בלוח יש ארבעה אזורים</h2>
+
+<div class="wiring-figure">
+  <img src="../images/w0_empty_breadboard_breadboard.svg" alt="ברדבורד ריק: שתי מסילות מתח אופקיות בחלק העליון (מסומנות + ו-−), שני חצאים של טורים ממוספרים המופרדים על ידי מרווח מרכזי, ועוד שתי מסילות מתח בחלק התחתון.">
+  <figcaption><strong>הברדבורד האמיתי.</strong> למעלה ולמטה — <strong>מסילות מתח</strong> בצבע אדום וכחול (מסומנות + ו-−). בין לבין — רשת של טורים ממוספרים המופרדים על ידי <strong>מרווח מרכזי</strong>. השורות מסומנות <strong>a–e</strong> בחצי העליון ו-<strong>f–j</strong> בחצי התחתון.</figcaption>
+</div>
+
+<div class="bb-ascii">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+
+     a  ● ● ● ● ● ● ● ● ● ● ●
+     b  ● ● ● ● ● ● ● ● ● ● ●
+     c  ● ● ● ● ● ● ● ● ● ● ●       top half
+     d  ● ● ● ● ● ● ● ● ● ● ●
+     e  ● ● ● ● ● ● ● ● ● ● ●
+                                    ← centre gap
+     f  ● ● ● ● ● ● ● ● ● ● ●
+     g  ● ● ● ● ● ● ● ● ● ● ●
+     h  ● ● ● ● ● ● ● ● ● ● ●       bottom half
+     i  ● ● ● ● ● ● ● ● ● ● ●
+     j  ● ● ● ● ● ● ● ● ● ● ●
+
+     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+        1 2 3 4 5 6 7 8 9 10 …</div>
+
+<div class="key">
+<strong>שני הכללים שחשוב להכיר</strong>
+<ul>
+  <li><strong>בתוך טור ממוספר אחד, השורות a–e מחוברות ביניהן.</strong> החורים a5, b5, c5, d5, e5 כולם חולקים חיבור חשמלי אחד. כל מה שמכניסים לחמשת החורים האלה — מחובר ביחד.</li>
+  <li><strong>השורות f–j מחוברות באותה צורה, אבל בנפרד מ-a–e.</strong> המרווח המרכזי שובר את החיבור — החורים e5 ו-f5 <strong>לא</strong> מחוברים ביניהם.</li>
+</ul>
+</div>
+
+<div class="key">
+<strong>שתי מסילות המתח</strong>
+<ul>
+  <li>המסילה ה<span style="color:#c00;"><strong>אדומה</strong></span> (מסומנת +) עוברת לאורך כל הלוח. כל החורים לאורך המסילה האדומה מחוברים ביניהם. משמשת ל-<strong>5 V</strong>.</li>
+  <li>המסילה ה<span style="color:#036;"><strong>כחולה</strong></span> (מסומנת −) גם עוברת לאורך כל הלוח. כל החורים לאורך המסילה הכחולה מחוברים. משמשת ל-<strong>GND</strong> (הארקה).</li>
+  <li>מכיוון שכל מסילה עוברת לאורך כל הלוח, אפשר לשאוב מתח מכל מקום לאורכה — אין צורך בחוט נפרד לכל לד.</li>
+</ul>
+</div>
+
+<h2><span class="section-icon">💡</span>איך מניחים לד על הברדבורד</h2>
+
+<p>ללד יש <strong>שתי רגליים באורכים שונים</strong>. הרגל הארוכה היא הצד של הפלוס; הרגל הקצרה היא הצד של המינוס. כל רגל צריכה <strong>טור ממוספר משלה</strong> — אם שתי הרגליים נכנסות לאותו טור, הלד יוצר קצר ולא יאיר.</p>
+
+<div class="tip">
+<strong>כלל אצבע:</strong> מכניסים את הלד כך ששתי הרגליים נכנסות לשני טורים ממוספרים שונים (לדוגמה, הרגל הארוכה בטור 9 והרגל הקצרה בטור 8). גם לנגדים — שתי רגליים בשני טורים שונים.
+</div>
+
+<h2><span class="section-icon">🔗</span>מה משמעות "רגל 9 ← נגד 220 אוהם ← לד" על הברדבורד</h2>
+
+<p>כאשר כרטיסיית העזר <span class="r-ref">R1</span> (חיווט 1) כותבת <em>"Arduino pin 9 → 220 Ω → LED long leg"</em>, זו שרשרת החיבורים שבונים:</p>
+
+<div class="chain">[Arduino pin 9] ── wire ── [resistor] ── [LED long leg] ── [LED short leg] ── wire ── [GND]</div>
+
+<p>על הברדבורד, כל חץ בשרשרת למעלה הוא טור משותף אחד. לפי החיווט ב-<span class="r-ref">R1</span> חיווט 1:</p>
+
+<ul>
+  <li>חוט ג'אמפר מרגל 9 של הארדואינו נכנס לחור אחד בברדבורד.</li>
+  <li>רגל אחת של נגד 220 אוהם נכנסת ל<strong>אותו טור ממוספר</strong> שאליו הכנסנו את הג'אמפר — עכשיו הם מחוברים.</li>
+  <li>הרגל השנייה של הנגד נכנסת ל<strong>טור חדש</strong> — חיבור נפרד לגמרי.</li>
+  <li>הרגל הארוכה של הלד נכנסת לאותו טור חדש — עכשיו הזרם יכול לזרום: רגל 9 ← נגד ← לד.</li>
+  <li>הרגל הקצרה של הלד נכנסת לטור משלה, ומשם חוט ג'אמפר חוזר למסילת ה-GND הכחולה.</li>
+</ul>
+
+<p>הברדבורד עושה את החיווט בשבילנו — רק בוחרים לאיזה טור כל רגל נכנסת.</p>
+
+<h2><span class="section-icon">🔍</span>שני דברים לבדוק אם משהו עדיין לא עובד</h2>
+
+<div class="tip">
+<strong>בדיקה 1 — האם שתי הרגליים של הלד בשני טורים שונים?</strong> אם שתי הרגליים באותו טור, הארוכה והקצרה מחוברות ישירות — זה קצר, והלד לא יאיר. מוציאים רגל אחת ומעבירים אותה טור אחד הצידה.
+</div>
+
+<div class="tip">
+<strong>בדיקה 2 — האם כל רגל חולקת את הטור שלה עם בדיוק השכן הנכון?</strong> עוברים על השרשרת בקול רם: "הג'אמפר מרגל 9 ורגל אחת של הנגד נכנסים ל<em>אותו</em> טור; הרגל השנייה של הנגד והרגל הארוכה של הלד נכנסות ל<em>אותו</em> טור; הרגל הקצרה של הלד והג'אמפר ל-GND נכנסים ל<em>אותו</em> טור". אם זוג כלשהו נמצא ב<em>טורים שונים</em> — השרשרת שבורה שם. מעבירים את הרגל לטור המתאים.
+</div>
+
+<h2><span class="section-icon">✅</span>יש לכם את מה שצריך</h2>
+
+<p>הכרטיסייה הבאה היא <span class="r-ref">R1</span> — חיווט. משאירים את <span class="r-ref">R0</span> על שולחן העבודה — אם משהו לא עובד בהמשך, שתי הבדיקות למעלה לרוב ימצאו את הבעיה.</p>
+
+<footer>
+  R0 — איך עובד ברדבורד · פרויקט 1 אותות אור
+</footer>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    /* Arial first for reliable Hebrew rendering (both regular and bold glyphs
+     * are consistent across Windows versions). Segoe UI and -apple-system
+     * kept as fallbacks for LTR fallback behaviour on non-Windows systems. */
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 10mm;
+    position: relative;
+  }
+  /* Card identifier badge — top-left corner of the card.
+   * Uses physical "left" (not inline-start) so it sits in the same
+   * physical corner regardless of LTR/RTL language direction.
+   * In Hebrew RTL the badge sits at the END of the reading flow
+   * (far from the heading text which starts on the right), so it
+   * never overlaps with content. */
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 12pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 11pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .key {
+    /* Yellow background + orange border are the visual emphasis.
+     * Box-level font-weight: bold was removed because synthesized
+     * Hebrew bold renders inconsistently on Windows — individual
+     * <strong> tags within the box still get bold for specific
+     * critical words, which is where the reader's eye should land. */
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+  }
+  .wiring {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13pt;
+    background: #f4f4f4;
+    padding: 12pt;
+    border: 1pt solid #ccc;
+    white-space: pre;
+    line-height: 1.3;
+    margin: 8pt 0;
+    direction: ltr;
+    text-align: left;
+  }
+  .living-placeholder {
+    border: 2pt dashed #667;
+    background: #f0f4fa;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-size: 11pt;
+    page-break-inside: avoid;
+  }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 300pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.5;
+    text-align: center;
+    direction: rtl;
+  }
+  .wiring-figure figcaption strong {
+    color: #223;
+  }
+  .lp-header {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #334;
+    letter-spacing: 0.5pt;
+    margin-bottom: 6pt;
+  }
+  .lp-section {
+    margin: 6pt 0;
+  }
+  .lp-section strong {
+    color: #000;
+    display: block;
+    margin-bottom: 2pt;
+  }
+  .lp-section ul {
+    margin: 3pt 0 3pt 0;
+    padding-inline-start: 18pt;
+  }
+  .lp-section li {
+    margin: 2pt 0;
+    line-height: 1.4;
+  }
+  .lp-section code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #fff;
+    padding: 1pt 4pt;
+    border: 1pt solid #ccd;
+    border-radius: 2pt;
+    direction: ltr;
+    display: inline-block;
+  }
+  .lp-section a {
+    color: #0050a0;
+    word-break: break-all;
+    direction: ltr;
+    display: inline-block;
+  }
+  .color-band {
+    /* Kept distinctive via background colour and padding, but uses the
+     * regular body font — Latin monospace fonts (Consolas, Courier New)
+     * have unreadable Hebrew glyphs and should never wrap Hebrew text. */
+    background: #efefef;
+    padding: 2pt 5pt;
+    border-radius: 2pt;
+    font-size: 13pt;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  .do {
+    color: #060;
+    font-weight: bold;
+  }
+  /* Inline code in running text (pin numbers, file paths, etc.) */
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  /* Section-icon class for the recurring-concept visual markers.
+   * Placed BEFORE the text in HTML source order, which in RTL
+   * Hebrew renders the icon visually on the RIGHT side of the
+   * heading/block (matching Yon's preference). Same HTML also
+   * works correctly for LTR English, where "before the text
+   * in source order" = visually on the left. */
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  footer {
+    margin-top: 14pt;
+    padding-top: 6pt;
+    border-top: 1pt dashed #999;
+    font-size: 9pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R1</div>
+
+<div class="header">
+  <h1>חיווט פרויקט 1</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור • כרטיסייה לעמדת התלמיד</div>
+</div>
+
+<p><strong>הכרטיסייה הזאת מראה איך לחבר את הלדים, הנגדים והכפתור בפרויקט 1.</strong> שומרים אותה ליד הברדבורד. אם מתבלבלים בחיווט, קודם מסתכלים על הכרטיסייה הזאת לפני שקוראים למורה.</p>
+
+<h2><span class="section-icon">⚠️</span>הכללים החשובים ביותר</h2>
+
+<div class="key">
+הרגל הארוכה של הלד = <span class="do">חיובי (+)</span>. היא הולכת ל<strong>נגד</strong>, ומשם לרגל של הארדואינו.
+</div>
+
+<div class="key">
+הרגל הקצרה של הלד = <span class="do">שלילי (−)</span>. היא הולכת ל-<strong>GND</strong> של הארדואינו.
+</div>
+
+<div class="key">
+לכל לד צריך <strong>נגד של 220 אוהם</strong> משלו (פסי צבע: <span class="color-band">אדום · אדום · חום</span>). בלי נגד = לד שרוף.
+</div>
+
+<div class="key">
+לכפתור צריך <strong>נגד הורדה של 10 קילו-אוהם</strong> (פסי צבע: <span class="color-band">חום · שחור · כתום</span>). בלעדיו הכפתור קורא ערכים אקראיים.
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 1 — לד אחד על רגל 9 (<span class="section-icon">🏁</span>אבן דרך 3)</h2>
+
+<div class="wiring">Arduino pin 9  ───[220 Ω]───┬─── LED long leg
+                           │
+                           ▼
+                      LED short leg ─── Arduino GND</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w1_single_led_breadboard.svg" alt="תרשים ברדבורד: ארדואינו Uno עם לד אחד — רגל 9 דרך נגד 220 אוהם לרגל הארוכה של הלד, רגל קצרה ל-GND.">
+  <figcaption><strong>רגל 9 ← נגד 220 אוהם ← רגל ארוכה של הלד.</strong> רגל קצרה ← <strong>GND</strong>. נבנה בפריצינג עבור הפרויקט.</figcaption>
+</figure>
+
+<h2><span class="section-icon">🔌</span>חיווט 2 — שני לדים על רגליים 9 ו-10 (<span class="section-icon">🏁</span>אבן דרך 5)</h2>
+
+<p>אותו חיווט כמו בחיווט 1, אבל מוסיפים <strong>לד שני בצבע אחר</strong> בשורה סמוכה בברדבורד, עם נגד 220 אוהם משלו שהולך ל<strong>רגל 10</strong>.</p>
+
+<div class="wiring">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w2_two_leds_breadboard.svg" alt="תרשים ברדבורד: ארדואינו Uno עם שני לדים במקביל — רגל 9 דרך נגד 220 אוהם ללד 1 (אדום), רגל 10 דרך נגד 220 אוהם ללד 2 (צהוב), שתי הרגליים הקצרות חוזרות ל-GND.">
+  <figcaption><strong>רגל 9 ← 220 אוהם ← לד 1</strong> · <strong>רגל 10 ← 220 אוהם ← לד 2</strong>. שתי הרגליים הקצרות ← <strong>GND</strong>. אותה תבנית כמו חיווט 1, מספרי רגליים שונים.</figcaption>
+</figure>
+
+<h2><span class="section-icon">🔌</span>חיווט 3 — הוספת הכפתור (<span class="section-icon">🏁</span>אבן דרך 7)</h2>
+
+<p>הכפתור נעוץ מעל <strong>המרווח המרכזי</strong> של הברדבורד, כך שארבע הרגליים שלו נוחתות בארבע שורות שונות.</p>
+
+<div class="wiring">Arduino 5 V ──────────────┬─── Button pin A
+                          │
+                          ▼
+                      Button pin B ────┬─── Arduino pin 2
+                                       │
+                                       └─[10 kΩ]── Arduino GND</div>
+
+<p><span class="section-icon">⚠️</span><span class="dont">חשוב:</span> נגד ההורדה של 10 קילו-אוהם הולך בין <strong>רגל 2 לבין GND</strong>, <span class="dont">לא בין 5 V לבין GND</span>. אם מחווטים אותו בין 5 V לבין GND, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w3_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שני לדים על רגליים 9 ו-10 וכפתור נעוץ מעל המרווח המרכזי — צד אחד ל-5 V, הצד השני לרגל 2 ודרך נגד הורדה 10 קילו-אוהם ל-GND.">
+  <figcaption><strong>רגל A של הכפתור ← 5 V</strong> · <strong>רגל B של הכפתור ← רגל 2</strong> ודרך <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. זה חיווט pull-<em>down</em>: הנגד יושב בין רגל 2 ל-GND, <strong>לא</strong> בין 5 V ל-GND.</figcaption>
+</figure>
+
+<h2><span class="section-icon">🔌</span>חיווט 4 — שלושה לדים לתבנית רדיפה (גרסה 2 בלבד)</h2>
+
+<p>נחוץ רק אם בחרתם ב<strong>תבנית הרדיפה</strong> בגרסה 2. מוסיפים לד שלישי על רגל 11 עם נגד 220 אוהם משלו, מחווט באותה צורה כמו לדים 1 ו-2.</p>
+
+<div class="wiring">Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
+                           ▼
+                      LED 3 short leg ─── Arduino GND</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w4_three_leds_chasing_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים במקביל — רגל 9 דרך נגד 220 אוהם ללד 1 (אדום), רגל 10 דרך נגד 220 אוהם ללד 2 (צהוב), רגל 11 דרך נגד 220 אוהם ללד 3 (ירוק), כל הרגליים הקצרות ל-GND. בלי כפתור.">
+  <figcaption><strong>רגל 9 ← 220 אוהם ← לד 1</strong> · <strong>רגל 10 ← 220 אוהם ← לד 2</strong> · <strong>רגל 11 ← 220 אוהם ← לד 3</strong>. אותה תבנית, שלוש רגליים. בלי כפתור.</figcaption>
+</figure>
+
+<h2><span class="section-icon">🔌</span>חיווט 5 — שלושה לדים + כפתור (גרסה 2 <span class="section-icon">🏁</span>אבן דרך 4 — אפשרות ב')</h2>
+
+<p>נחוץ רק למי שבחרו ב<strong>תבנית הרדיפה</strong> בגרסה 2 ומוסיפים את הכפתור באבן דרך 4. משלב את חיווט 4 (שלושה לדים על רגליים 9, 10, 11) עם חיווט 3 (כפתור על רגל 2 עם נגד הורדה 10 קילו-אוהם).</p>
+
+<div class="wiring">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND
+
+Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
+                           ▼
+                      LED 3 short leg ─── Arduino GND
+
+Arduino 5 V ──────────────┬─── Button pin A
+                          ▼
+                      Button pin B ────┬─── Arduino pin 2
+                                       └─[10 kΩ]── Arduino GND</div>
+
+<p><span class="section-icon">⚠️</span><span class="dont">אותו כלל של נגד הורדה:</span> נגד 10 קילו-אוהם הולך בין <strong>רגל 2 ל-GND</strong>, לא בין 5 V ל-GND.</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w5_three_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים על רגליים 9, 10, 11 עם נגדים של 220 אוהם, ועוד כפתור עם נגד הורדה 10 קילו-אוהם על רגל 2 — הכל על ברדבורד אחד.">
+  <figcaption><strong>רגליים 9 / 10 / 11 ← 220 אוהם ← לדים 1 / 2 / 3 ← GND</strong> · <strong>כפתור ← רגל 2</strong> עם <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. החיווט המלא של גרסה 2 אפשרות ב' + אבן דרך 4.</figcaption>
+</figure>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    margin: 14pt 0;
+    padding: 12pt 14pt;
+    background: #f6f6f6;
+    border-inline-start: 5pt solid #000;
+  }
+  .step-number {
+    font-size: 28pt;
+    font-weight: bold;
+    margin-inline-end: 14pt;
+    min-width: 38pt;
+    color: #000;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+  }
+  .step-text {
+    flex: 1;
+  }
+  .step-text strong {
+    display: block;
+    font-size: 16pt;
+    margin-bottom: 3pt;
+  }
+  .important {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 16pt 0;
+    font-size: 13pt;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R2</div>
+
+<div class="header">
+  <h1><span class="section-icon">🪄</span>תקועים? קודם מנסים את זה</h1>
+  <div class="subtitle">פרויקט 1 • כרטיסייה לעמדת התלמיד</div>
+</div>
+
+<p>אם נתקעים בשלב כלשהו של כרטיסיית ניווט, שווה לנסות את חמשת הצעדים האלה — צעדים 1 או 2 פותרים את רוב המקרים. אפשר לקרוא למורה בכל שלב, כולל עכשיו.</p>
+
+<div class="step">
+  <div class="step-number">1</div>
+  <div class="step-text">
+    <strong>קוראים שוב את השלב</strong>
+    קוראים שוב את השלב הנוכחי בכרטיסיית הניווט, לאט. לפעמים הקריאה השנייה עונה על השאלה.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">2</div>
+  <div class="step-text">
+    <strong>בודקים את כרטיסיית החיווט <span class="r-ref">R1</span></strong>
+    כ-60% מהמקרים של "הלד שלי לא עובד" הם טעויות חיווט. <span class="r-ref">R1</span> מראה בדיוק איך המעגל אמור להיראות.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">3</div>
+  <div class="step-text">
+    <strong>בודקים את שאר כרטיסיות העזר</strong>
+    <span class="r-ref">R3</span> (פניות לקלוד קוד), <span class="r-ref">R4</span> (בטיחות), <span class="r-ref">R5</span> (איזה קובץ קוד לפתוח). אולי אחת מהן עונה על השאלה.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">4</div>
+  <div class="step-text">
+    <strong>קוראים למורה</strong>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">5</div>
+  <div class="step-text">
+    <strong>אם המורה עסוק: משימת הגיבוי</strong>
+    ממיינים את ערכת הנגדים שעל השולחן לפי ערך פסי הצבע. המורה בדרך אליכם.
+  </div>
+</div>
+
+<div class="important">
+<strong>אתם לא מפריעים.</strong> לקרוא למורה כשתקועים זה בדיוק מה שהמורה מצפה שתעשו. להיתקע זה לא להיכשל — זהו חלק בלתי נפרד מלמידה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .prompt-template {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 12pt 14pt;
+    margin: 10pt 0;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    direction: rtl;
+  }
+  .prompt-template.ltr {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    text-align: left;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+  }
+  .rule {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+    background: #f4f4f4;
+    padding: 1pt 4pt;
+    border-radius: 2pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R3</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>איך מדברים עם קלוד קוד</h1>
+  <div class="subtitle">פרויקט 1 • תבניות פניות לקלוד קוד</div>
+</div>
+
+<p>קלוד קוד הוא שותף התכנות שלכם. הוא רץ בחלון שמכוון לתיקיית פרויקט 1 שלכם, אז הוא רואה את הקוד שאתם עובדים עליו. יש שתי דרכים להשתמש בו.</p>
+
+<h2>ערוץ A — עזרה עם הקוד</h2>
+
+<div class="rule">
+<strong>גרסה 1:</strong> פותחים את הקובץ מ-<span class="r-ref">R5</span> ומעלים. אין צורך בפנייה לקלוד קוד לפני שהקוד עובד — הקוד כבר נכתב בשבילכם. אם ההעלאה נכשלת, כרטיסיית העזר <span class="r-ref">R2</span> מוליכה אתכם.
+</div>
+
+<p><strong>גרסה 2:</strong> לפני ששואלים את קלוד קוד משהו על הקוד שלכם, <strong>ממלאים את שלושת הסעיפים האלה בכרטיסיית הניווט</strong>:</p>
+
+<div class="rule">
+<strong>(א)</strong> מה אני רוצה שיקרה: <em>[מתארים את ההתנהגות הרצויה]</em><br>
+<strong>(ב)</strong> מה קורה עכשיו: <em>[מתארים מה הקוד עושה עכשיו]</em><br>
+<strong>(ג)</strong> מה כבר ניסיתי: <em>[מה כבר הסתכלנו עליו או חשבנו עליו]</em>
+</div>
+
+<p>ואז משתמשים בתבנית הפנייה הזאת:</p>
+
+<pre class="prompt-template">אני עובד על [שם קובץ הקוד].
+
+(א) מה אני רוצה שיקרה:
+[התשובה שלכם]
+
+(ב) מה קורה עכשיו:
+[התשובה שלכם]
+
+(ג) מה כבר ניסיתי:
+[התשובה שלכם]
+
+תוכל לעזור לי להבין מה לשנות?</pre>
+
+<div class="key">
+<span class="section-icon">⚠️</span>(א), (ב) ו-(ג) אינם סתם אופציות. הם עוזרים לנו לחשוב על הבעיה לפני שקלוד קוד עונה, ועוזרים לקלוד קוד להגיע לתשובה שתהיה שימושית עבורנו.
+</div>
+
+<p>אחרי שקלוד קוד עונה, מבצעים את השינוי בארדואינו IDE, מעלים, ובודקים. אז עונים על השאלה הזאת בכרטיסיית הניווט:</p>
+
+<div class="rule">
+<strong>בדיקת הבנה:</strong> במשפט אחד, מה קלוד קוד שינה בקוד?
+</div>
+
+<h2>ערוץ B — כשרוצים שיקריאו לכם את המשימה</h2>
+
+<p>ערוץ B מוביל אתכם דרך כרטיסיית הניווט הנוכחית בצורת שיחה. אפשר להשתמש בו כשקשה להתקדם עם הכרטיסייה המודפסת, או כשמעדיפים לשמוע את ההוראות שלב אחר שלב. משתמשים בתבנית הזאת:</p>
+
+<pre class="prompt-template">אני בפרויקט 1, גרסה [1 או 2], אבן דרך [מספר].
+תוביל אותי דרך המשימה.</pre>
+
+<p>קלוד קוד יקריא את תוכן הכרטיסייה בקטעים קצרים וישאל אתכם לאשר כל שלב לפני שממשיכים הלאה. אתם עדיין מסמנים ✓ בכרטיסייה המודפסת תוך כדי — ערוץ B לא מחליף את הכרטיסייה, הוא רק עוזר לכם לעבור אותה.</p>
+
+<div class="key">
+ערוץ B <strong>לא מומלץ לאבן דרך 1</strong> של אף פרויקט, כי אבן דרך 1 היא אבן דרך משותפת שבה המורה לידכם. לשמוע את קלוד קוד מדבר בזמן שהמורה גם מדבר אליכם — זה מבלבל.
+</div>
+
+<div class="rule">
+<strong>גרסה 3 — דיאלוג חופשי:</strong> אם אתם עובדים בגרסה 3 על פרויקט בעיצוב פתוח, אפשר לדבר עם קלוד קוד בחופשיות על מה שאתם מנסים לבנות. אותו כלל של (א)(ב)(ג) עדיין חל — מתארים מה אתם רוצים לפני ששואלים.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .big-msg {
+    background: #e8f5e9;
+    border: 2pt solid #2e7d32;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 16pt;
+    text-align: center;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  .rule {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R4</div>
+
+<div class="header">
+  <h1><span class="section-icon">⚠️</span>תזכורת בטיחות</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+פרויקט 1 מאוד בטוח. הארדואינו עובד על 5 וולט — מתח נמוך מכדי לפגוע בכם. אבל עדיין אפשר לקלקל דברים אם מחווטים משהו לא נכון. קוראים את שלושת הכללים האלה ויהיה בסדר.
+</div>
+
+<h2>כלל 1 — לא מחברים 5 V ישירות ל-GND</h2>
+
+<div class="rule">
+<span class="dont">לא</span> מחברים חוט ישירות מ-<strong>5 V</strong> ל-<strong>GND</strong>. זה נקרא <em>קצר חשמלי</em>. זה יגרום לארדואינו לאתחל את עצמו או להיכבות כדי להגן על עצמו. אף אחד לא ייפגע, אבל המעגל יפסיק לעבוד עד שמסירים את החוט הבעייתי.
+</div>
+
+<p>הרגל של 5 V מזינה את הלדים, החיישנים והכפתורים שאתם מחברים. הרגל של GND היא נתיב החזרה של החשמל. הן אף פעם לא צריכות לגעת ישירות אחת בשנייה.</p>
+
+<h2>כלל 2 — לכל לד צריך נגד</h2>
+
+<div class="rule">
+<span class="dont">לא</span> מחברים לד ישירות לרגל 5 V בלי נגד. הלד יאיר חזק מאוד לשנייה-שתיים, יתחמם, וייכבה לתמיד. המורה יאמר "בגלל זה אנחנו משתמשים בנגד" ואז תצטרכו לד חדש.
+</div>
+
+<p>לכל לד בפרויקט 1 יש <strong>נגד של 220 אוהם</strong> (פסי צבע: אדום, אדום, חום) בין הרגל הארוכה שלו לרגל של הארדואינו. אם אתם רואים לד במעגל שלכם בלי נגד, קודם כל מתקנים את זה.</p>
+
+<h2>כלל 3 — לכבל ה-USB יש כיוון אחד נכון</h2>
+
+<div class="rule">
+הקצה המרובע של כבל ה-USB נכנס לארדואינו רק בצורה אחת. אם זה לא נכנס, לא מפעילים כוח — תשברו את המחבר. הופכים את התקע ומנסים שוב.
+</div>
+
+<h2>אם משהו מפסיק לעבוד</h2>
+
+<p><strong>אם משהו הפסיק לעבוד, הצעד הכי שימושי הוא לעצור ולהסתכל על החיווט</strong> — להמשיך ללחוץ על כפתורים לרוב לא עוזר. אם לא רואים מה לא בסדר, קוראים למורה. בשביל זה יש את פרוטוקול <span class="r-ref">R2</span> למצב בו נתקעים. לטעות בחיווט זה חלק מתהליך הלמידה של ארדואינו.</p>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0;
+    font-size: 13pt;
+  }
+  th, td {
+    border: 1pt solid #000;
+    padding: 8pt 10pt;
+    text-align: right;
+    vertical-align: top;
+  }
+  th {
+    background: #eee;
+    font-weight: bold;
+  }
+  .file-name {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 11pt;
+    background: #f4f4f4;
+    padding: 2pt 5pt;
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+  }
+  .path-box {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    word-break: break-all;
+    direction: ltr;
+    text-align: left;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R5</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>איזה קוד פותחים ומתי</h1>
+  <div class="subtitle">פרויקט 1 • אינדקס קובצי הקוד</div>
+</div>
+
+<h2>איפה נמצאים הקבצים של פרויקט 1</h2>
+
+<p>כל קובצי הקוד של פרויקט 1 נמצאים בתיקיית פרויקט 1 שלכם ב-Google Drive. הנתיב במחשב הסדנה דומה לזה (מחליפים את הכינוי שלכם במקום המסומן):</p>
+
+<div class="path-box" dir="ltr">G:\My Drive\Arduino_Projects\&lt;הכינוי שלכם&gt;\Project_1_Light_Signals\ino_files\</div>
+
+<p class="expected-note">אם הנתיב לא עובד במחשב שלכם, שואלים את המורה פעם אחת ורושמים את הנתיב האמיתי כאן: <span class="fill-blank">&nbsp;</span></p>
+
+<p>בתוך <code>ino_files</code> תמצאו שבע תיקיות קוד. לכל תיקייה יש קובץ <code>.ino</code> אחד בתוכה עם אותו שם של התיקייה.</p>
+
+<div class="key">
+פותחים קוד בלחיצה כפולה על קובץ ה-<code>.ino</code>, או דרך <strong>File → Open</strong> בארדואינו IDE ובחירה בקובץ.
+</div>
+
+<h2>קובצי הקוד של גרסה 1 — איזה קוד לאיזו אבן דרך</h2>
+
+<table>
+  <thead>
+    <tr><th>אבן דרך</th><th>פותחים את הקובץ הזה</th><th>מה קורה</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>אבן דרך 2</td>
+      <td><span class="file-name">01_blink_L_fast/<br>01_blink_L_fast.ino</span></td>
+      <td>הלד המובנה "L" בארדואינו מהבהב מהר מקודם</td>
+    </tr>
+    <tr>
+      <td>אבן דרך 4</td>
+      <td><span class="file-name">02_blink_external/<br>02_blink_external.ino</span></td>
+      <td>הלד שעל הברדבורד (רגל 9) מהבהב פעם בשנייה</td>
+    </tr>
+    <tr>
+      <td>אבן דרך 6</td>
+      <td><span class="file-name">03_blink_alternating/<br>03_blink_alternating.ino</span></td>
+      <td>שני לדים (רגליים 9 ו-10) מהבהבים לסירוגין</td>
+    </tr>
+    <tr>
+      <td>אבן דרך 8</td>
+      <td><span class="file-name">04_button_control/<br>04_button_control.ino</span></td>
+      <td>הכפתור מחליף איזה משני הלדים דולק</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>אבני דרך 1, 3, 5, 7 — אין העלאת קוד.</strong> אבני הדרך האלה הן חומרה בלבד (חיבור, חיווט, בלי שינויי קוד).</p>
+
+<h2>קובצי קוד התחלתיים של גרסה 2 — בוחרים לפי התבנית</h2>
+
+<table>
+  <thead>
+    <tr><th>הבחירה שלכם</th><th>פותחים את הקובץ הזה</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>תבנית לסירוגין (2 לדים)</td>
+      <td><span class="file-name">T2_alternating_starter/<br>T2_alternating_starter.ino</span></td>
+    </tr>
+    <tr>
+      <td>תבנית רדיפה (3 לדים)</td>
+      <td><span class="file-name">T2_chasing_starter/<br>T2_chasing_starter.ino</span></td>
+    </tr>
+    <tr>
+      <td>תבנית נשימה (לד אחד, עמעום PWM)</td>
+      <td><span class="file-name">T2_breathing_starter/<br>T2_breathing_starter.ino</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>בגרסה 2, מעלים את הקוד ההתחלתי קודם כדי לראות אותו עובד, ואז משתמשים בקלוד קוד (ראו <span class="r-ref">R3</span>) כדי לשנות אותו שיתאים לעיצוב שלכם.</p>
+
+<h2>גרסה 3 — אין קוד התחלתי</h2>
+
+<p>בגרסה 3 אתם מעצבים את התבנית שלכם מאפס עם קלוד קוד. הקוד המוגמר שלכם נמצא באותה התיקייה — בוחרים שם שאתם אוהבים (משהו כמו <code>my_signature_pattern.ino</code>).</p>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T1·M1</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 1 מתוך 8</div>
+  <h1><span class="section-icon">🏁</span>פותחים את עמדת העבודה ומחברים את הארדואינו</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="together-notice">
+  <img src="../images/together_milestone_icon.png" class="together-icon" alt="">
+  <strong>זו אבן דרך משותפת.</strong>
+  המורה לידכם לאורך כל אבן הדרך הזאת. לא עובדים עליה לבד. אם המורה ליד תלמיד אחר כרגע, מחכים בעמדת העבודה ומתחילים למיין את ערכת הנגדים שעל השולחן. המורה יגיע אליכם.
+</div>
+
+<div class="why">
+זו אבן הדרך הראשונה שלכם בתוכנית הארדואינו. בסוף אבן הדרך הזאת יהיה לכם:
+<ul>
+  <li>תיקייה עם הכינוי שלכם</li>
+  <li>הארדואינו מחובר למחשב</li>
+  <li>הלד הירוק הקטן שעל הארדואינו מהבהב</li>
+</ul>
+לוקח 5 עד 10 דקות. המורה לידכם לאורך כל הדרך.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים (כשהמורה לידכם)</h2>
+
+<ul class="checklist">
+  <li><strong>בוחרים כינוי לתיקייה</strong> (רק אם עדיין אין לכם אחד). בוחרים שם שנעים לכם לראות — דמות, חיה, מילה אהובה, כל דבר. זה יהיה השם לכל השנה. אומרים למורה מה בחרתם.</li>
+  <li>פותחים את סייר הקבצים של Windows (לוחצים על Windows + E, או על אייקון התיקייה בשורת המשימות).</li>
+  <li>נכנסים לתיקייה הזאת: <code>G:\My Drive\Arduino_Projects\</code></li>
+  <li>מוצאים את תיקיית הכינוי שלכם, או יוצרים אותה יחד עם המורה אם היא עדיין לא קיימת.</li>
+  <li>בתוך תיקיית הכינוי, יוצרים תיקייה חדשה בשם <code dir="ltr">Project_1_Light_Signals</code>.</li>
+  <li>קוראים למורה. המורה יפתח יחד אתכם את קלוד קוד ויכוון אותו לתיקיית <code dir="ltr">Project_1_Light_Signals</code>.</li>
+  <li>מחברים את הארדואינו Uno למחשב בכבל USB (הקצה המרובע לארדואינו, הקצה השטוח למחשב).</li>
+  <li>מסתכלים על לוח הארדואינו. מוצאים את הלד הירוק הקטן עם האות "L" ליד רגל 13. הוא אמור להבהב פעם בשנייה.</li>
+  <li>פותחים את Arduino IDE — הקיצור נמצא על שולחן העבודה.</li>
+  <li>בתפריט Tools בוחרים <strong>Board → Arduino Uno</strong>.</li>
+  <li>באותו תפריט Tools בודקים שב-<strong>Port</strong> מופיעה יציאת COM (למשל COM3 או COM4).</li>
+</ul>
+
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong><br>
+באבן הדרך הזאת רק פותחים את קלוד קוד — עדיין לא כותבים קוד ולא שואלים אותו שאלות. המורה יראה לכם בפעם הראשונה איך הוא נראה. באבן הדרך הבאה מתחילים להשתמש בו.
+</div>
+
+<p class="recognition-line">זו התיקייה שלכם, זה הפרויקט שלכם, פרויקט 1 מתחיל עכשיו.</p>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>הלד הירוק הקטן עם האות "L" ליד רגל 13 מהבהב פעם בשנייה.</p>
+  <p class="expected-note">זה הקוד שהגיע עם הארדואינו מהיצרן. האור המהבהב מוכיח שהארדואינו עובד ושחיבור ה-USB תקין.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>יש לכם תיקיית כינוי משלכם ב-<code dir="ltr">G:\My Drive\Arduino_Projects\</code></li>
+    <li>יש בתוכה תיקייה חדשה בשם <code dir="ltr">Project_1_Light_Signals</code></li>
+    <li>הלד הירוק "L" על הארדואינו מהבהב</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  זו אבן דרך משותפת — המורה ילווה אתכם דרכה. <strong>אם המורה עם מישהו אחר כרגע:</strong>
+  <ul>
+    <li>מחכים בעמדת העבודה.</li>
+    <li>ממיינים את ערכת הנגדים שעל השולחן לפי הרצועות הצבעוניות (יש כרטיסייה עזר ליד הערכה).</li>
+    <li>כשהמורה מגיע, מציגים היכן עצרתם: "כבר חיברתי את הארדואינו" / "הגעתי עד שלב ___."</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T1·M2</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 2 מתוך 8</div>
+  <h1><span class="section-icon">🏁</span>מעלים את הקוד הראשון</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+הארדואינו הגיע עם קוד שכבר נמצא עליו — בגלל זה הלד "L" הבהב באבן דרך 1. באבן דרך זו מעלים קוד אחר שגורם ללד "L" להבהב מהר יותר. זו הפעם הראשונה שלוחצים על כפתור ה-Upload. אבן דרך זו קצרה — בערך 5 דקות.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code>01_blink_L_fast.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/01_blink_L_fast/</code>.</li>
+  <li>מסתכלים על סרגל הכלים של Arduino IDE. מוצאים את כפתור ה-Upload — הכפתור עם חץ שמצביע ימינה.</li>
+  <li>לוחצים על Upload. עוקבים אחרי סרגל ההתקדמות בתחתית ה-IDE.</li>
+  <li>כשההעלאה מסתיימת, אמורה להופיע ההודעה הירוקה "Done uploading" בתחתית.</li>
+  <li>מסתכלים על הלד "L" על לוח הארדואינו. הוא אמור להבהב עכשיו מהר יותר מקודם — בערך שלוש פעמים בשנייה.</li>
+</ul>
+
+<h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong><br>
+העלאה של קובץ מוכן = ערוץ A גרסה 1. הקובץ כבר כתוב, רק מעלים אותו. באבן דרך 3 של גרסה 2 מתחילים לשנות קוד עם קלוד קוד.
+</div>
+
+<p>זה הקוד המלא של <code dir="ltr">01_blink_L_fast.ino</code>. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
+
+<pre class="code-block"><span class="filename">01_blink_L_fast.ino</span>// Blinks the built-in "L" LED faster than the factory sketch.
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(150);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(150);
+}</pre>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>הלד הירוק "L" על לוח הארדואינו מהבהב עכשיו בערך שלוש פעמים בשנייה. ב-Arduino IDE מופיע "Done uploading" בירוק בתחתית.</p>
+  <p class="expected-note">ההבהוב מהיר יותר מההבהוב של היצרן באבן דרך 1 — זה אומר שההעלאה הראשונה שלכם עבדה.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>הלד "L" מהבהב מהר יותר מקודם</li>
+    <li>ב-Arduino IDE מופיע "Done uploading" בירוק</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  אם ה-Upload נכשל: בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM. אם ה-IDE אומר "Arduino not found," מוציאים את כבל ה-USB, מחכים שלוש שניות, ומחברים בחזרה. אם עדיין תקועים אחרי זה, קוראים למורה. פרוטוקול ההיתקעות המלא נמצא בכרטיסיית העזר <span class="r-ref">R2</span>.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T1·M3</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 3 מתוך 8</div>
+  <h1><span class="section-icon">🔌</span>מחווטים את הלד החיצוני הראשון</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+באבן דרך זו מחווטים לד על הברדבורד בפעם הראשונה. זו אבן דרך של חומרה בלבד — בלי העלאת קוד. הקוד מגיע באבן דרך 4.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בוחרים לד אחד ממגש החלקים. כל צבע בסדר.</li>
+  <li>מסתכלים על שתי הרגליים של הלד. <strong>הרגל הארוכה היא חיובית (+)</strong> ו<strong>הרגל הקצרה היא שלילית (−)</strong>.</li>
+  <li>בוחרים נגד של 220 אוהם ממגש החלקים. פסי הצבע שלו: <strong>אדום · אדום · חום</strong>.</li>
+  <li>מכניסים את הלד לברדבורד כך שכל רגל נמצאת בשורה שונה (לא באותה שורה — זה יקצר ביניהן).</li>
+  <li>מחברים את הרגל הארוכה (+) של הלד ל<strong>רגל דיגיטלית 9</strong> של הארדואינו, דרך הנגד של 220 אוהם. הנגד יושב בין הרגל הארוכה של הלד לבין רגל 9.</li>
+  <li>מחברים את הרגל הקצרה (−) של הלד לרגל <strong>GND</strong> של הארדואינו בעזרת חוט ג'אמפר.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">Arduino pin 9  ───[220 Ω]───┬─── LED long leg (+)
+                           │
+                           ▼
+                      LED short leg (−) ─── Arduino GND</pre>
+
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong>
+<p>באבן דרך זו רק מחווטים — אין העלאת קוד ואין פנייה לקלוד קוד. הוא מחכה לאבן הדרך הבאה.</p>
+</div>
+
+<p>תרשים מלא עם כל ארבעת מצבי החיווט נמצא בכרטיסיית העזר <span class="r-ref">R1</span>.</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w1_single_led_breadboard.svg" alt="תרשים ברדבורד: רגל 9 של ארדואינו דרך נגד 220 אוהם לרגל הארוכה של הלד, רגל קצרה ל-GND.">
+  <figcaption><strong>רגל 9 ← נגד 220 אוהם ← רגל ארוכה של הלד.</strong> רגל קצרה ← <strong>GND</strong>. גרסה מלאה בכרטיסיית עזר <span class="r-ref">R1</span> (חיווט 1).</figcaption>
+</figure>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>הלד מחובר לברדבורד. הרגל הארוכה עוברת דרך הנגד לרגל 9, והרגל הקצרה מחוברת ל-GND.</p>
+  <p class="expected-note"><strong>הלד עדיין לא מאיר</strong> — עדיין לא העלינו קוד שיפעיל אותו. זה יקרה באבן דרך 4. עכשיו רק בודקים שהחיווט נכון.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>הלד מוכנס לברדבורד כאשר שתי הרגליים בשורות שונות</li>
+    <li>הרגל הארוכה מחוברת לרגל 9 דרך נגד של 220 אוהם</li>
+    <li>הרגל הקצרה מחוברת ל-GND</li>
+    <li>המורה (או בבדיקה עצמית מול כרטיסיית העזר <span class="r-ref">R1</span>) אישר שהחיווט נכון</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  קודם כל בודקים את כרטיסיית העזר <span class="r-ref">R1</span> (חיווט) — היא מראה בדיוק איך הלד אמור להיראות בברדבורד. אם עדיין לא בטוחים איזו רגל ארוכה או איזה חור מתחבר לרגל 9, קוראים למורה. זו אבן הדרך הראשונה של חיווט, והמורה יעזור.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T1·M4</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 4 מתוך 8</div>
+  <h1><span class="section-icon">🏁</span>מעלים את הקוד ומאירים את הלד</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+זה הרגע שבו כל מה שעשיתם עד עכשיו מתחבר יחד. באבן דרך 3 חיווטתם את הלד. עכשיו מעלים קוד שגורם לו להבהב. הלד שעל הברדבורד שלכם אמור להתחיל להבהב בזכות קוד שאתם העליתם. זו אבן הדרך הכי חשובה בפרויקט 1 — הרגע שמוכיח ש"משהו שחיווטתי" מגיב ל"קוד שהעליתי".
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code>02_blink_external.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/02_blink_external/</code>.</li>
+  <li>לוחצים על כפתור ה-Upload (החץ שמצביע ימינה בסרגל הכלים).</li>
+  <li>מחכים שההודעה "Done uploading" תופיע בירוק בתחתית ה-IDE.</li>
+  <li>מסתכלים על הלד שעל הברדבורד. הוא אמור להבהב פעם בשנייה.</li>
+  <li>אם הוא לא מהבהב, מריצים את פרוטוקול ההיתקעות בתחתית הכרטיסייה לפני שקוראים למורה.</li>
+</ul>
+
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong><br>
+העלאה של קובץ מוכן = ערוץ A גרסה 1. עוד לא מדברים עם קלוד קוד.
+</div>
+
+<h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+
+<pre class="code-block"><span class="filename">02_blink_external.ino</span>// Blinks the external LED wired to digital pin 9.
+
+const int LED_PIN = 9;
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(500);
+  digitalWrite(LED_PIN, LOW);
+  delay(500);
+}</pre>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>הלד החיצוני על הברדבורד מהבהב פעם בשנייה.</p>
+  <p class="expected-note">זה הרגע שבו קוד שהעליתם גורם למשהו פיזי לקרות על החיווט שלכם. הלד "L" על לוח הארדואינו (מאבן דרך 2) הפסיק להבהב מהר — החלפתם את הקוד הישן בחדש.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>הלד החיצוני על הברדבורד מהבהב פעם בשנייה</li>
+    <li>ב-Arduino IDE מופיע "Done uploading" בירוק</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים? הלד לא מהבהב? מנסים קודם את זה:</strong>
+  <ul>
+    <li><strong>בודקים את כיוון הלד.</strong> הרגל הארוכה (+) מחוברת לנגד ומשם לרגל 9. הרגל הקצרה (−) מחוברת ל-GND. אם הן הפוכות, הלד לא יאיר. הופכים את הלד.</li>
+    <li><strong>בודקים את הנגד.</strong> הנגד חייב להיות בטור — בין רגל 9 לבין הרגל הארוכה של הלד — לא סתם תקוע איפשהו בברדבורד. רואים את כרטיסיית העזר <span class="r-ref">R1</span>.</li>
+    <li><strong>בודקים שה-Upload באמת עבד.</strong> מחפשים את ההודעה הירוקה "Done uploading" בתחתית ה-IDE. אם רואים טקסט שגיאה אדום במקום, ההעלאה לא הצליחה.</li>
+    <li><strong>אם עדיין תקועים, קוראים למורה.</strong> זו אבן הדרך הראשונה של חיווט + העלאה — מבקשים עזרה בלי לחשוש.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T1·M5</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 5 מתוך 8</div>
+  <h1><span class="section-icon">🔌</span>מוסיפים לד שני</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+באבן דרך זו מוסיפים לד שני ליד הראשון. אותה תבנית חיווט כמו באבן דרך 3, רק שורה אחת הצידה בברדבורד. לא מעלים קוד באבן דרך זו — הקוד שמשתמש בשני הלדים מגיע באבן דרך 6.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בוחרים לד שני ממגש החלקים. <strong>בוחרים צבע שונה</strong> מהלד הראשון (אם הראשון היה אדום, בוחרים ירוק או צהוב — כל שילוב בסדר, כל עוד אפשר להבחין ביניהם).</li>
+  <li>בוחרים עוד נגד של 220 אוהם (פסי צבע אדום · אדום · חום).</li>
+  <li>מכניסים את הלד השני לברדבורד, שורה אחת הצידה מהלד הראשון. כל רגל בשורה שונה, כמו באבן דרך 3.</li>
+  <li>מחברים את הרגל הארוכה (+) של הלד השני ל<strong>רגל דיגיטלית 10</strong> של הארדואינו, דרך הנגד של 220 אוהם.</li>
+  <li>מחברים את הרגל הקצרה (−) של הלד השני לרגל GND של הארדואינו בעזרת חוט ג'אמפר.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND</pre>
+
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong><br>
+באבן דרך זו רק מוסיפים לד — אין קוד חדש ואין פנייה לקלוד קוד. הוא מחכה לאבן הדרך הבאה.
+</div>
+
+<p>תרשים מלא של החיווט עם שני לדים נמצא בכרטיסיית העזר <span class="r-ref">R1</span> (חיווט 2).</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w2_two_leds_breadboard.svg" alt="תרשים ברדבורד: שני לדים במקביל — רגל 9 דרך נגד 220 אוהם ללד 1, רגל 10 דרך נגד 220 אוהם ללד 2, שתי הרגליים הקצרות ל-GND.">
+  <figcaption><strong>רגל 9 ← 220 אוהם ← לד 1</strong> · <strong>רגל 10 ← 220 אוהם ← לד 2</strong>. שתי הרגליים הקצרות ← <strong>GND</strong>. אותה תבנית כמו חיווט 1, מספרי רגליים שונים.</figcaption>
+</figure>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>על הברדבורד יש עכשיו שני לדים, זה לצד זה, כל אחד עם הנגד שלו. <strong>הלד הראשון עדיין מהבהב</strong>; הלד השני עדיין לא מאיר.</p>
+  <p class="expected-note">הקוד שהעליתם באבן דרך 4 עדיין רץ על הארדואינו ויודע רק על רגל 9. באבן דרך 6 מעלים קוד חדש שמשתמש בשתי הרגליים.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>שני לדים מחוברים לברדבורד, שורה אחת אחד מהשני</li>
+    <li>הרגל הארוכה של הלד השני עוברת דרך נגד של 220 אוהם לרגל 10</li>
+    <li>הרגל הקצרה של הלד השני מחוברת ל-GND</li>
+    <li>אפשר להבחין בין שני הלדים לפי הצבע שלהם</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  החיווט הוא אותה תבנית כמו באבן דרך 3 — רק שורה אחת הצידה. אם החיווט באבן דרך 3 יצא נכון, זה אמור להרגיש דומה. בודקים את כרטיסיית העזר <span class="r-ref">R1</span> (חיווט 2) — שם נמצא התרשים המלא. אם הלד הראשון הפסיק להבהב בזמן חיווט השני, אולי הג'אמפר שלו התנתק — בודקים שוב את החיווט של הלד הראשון.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T1·M6</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 6 מתוך 8</div>
+  <h1><span class="section-icon">🏁</span>מעלים את קוד ההבהוב לסירוגין</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+עכשיו הארדואינו שולט בשני דברים בו־זמנית. מעלים קוד חדש שמהבהב את שני הלדים — אבל אף פעם לא יחד. כשאחד דולק, השני כבוי. זו הפעם הראשונה שרואים את הארדואינו עושה יותר מדבר אחד באותו קוד.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code>03_blink_alternating.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/03_blink_alternating/</code>.</li>
+  <li>לוחצים על כפתור ה-Upload.</li>
+  <li>מחכים להודעה "Done uploading" בירוק.</li>
+  <li>מסתכלים על שני הלדים. הם אמורים להתחלף לסירוגין — כשלד 1 דולק, לד 2 כבוי, ואז להפך.</li>
+</ul>
+
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong><br>
+העלאה של קובץ מוכן = ערוץ A גרסה 1. עוד לא מדברים עם קלוד קוד.
+</div>
+
+<h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+
+<pre class="code-block"><span class="filename">03_blink_alternating.ino</span>// Blinks two external LEDs in alternation.
+// When one is on, the other is off.
+
+const int LED_1 = 9;
+const int LED_2 = 10;
+
+void setup() {
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_1, HIGH);
+  digitalWrite(LED_2, LOW);
+  delay(500);
+
+  digitalWrite(LED_1, LOW);
+  digitalWrite(LED_2, HIGH);
+  delay(500);
+}</pre>
+
+<p>שמים לב: בכל חצי של ה-loop יש שתי קריאות <code>digitalWrite</code> — אחת מדליקה את לד 1 והשנייה מכבה את לד 2. אחר כך השהייה, ואחר כך ההפך. ככה "שני דברים בו־זמנית" עובדים בתוך loop אחד של ארדואינו.</p>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>שני הלדים מתחלפים לסירוגין — לד 1 דולק בזמן שלד 2 כבוי, אחר כך לד 2 דולק בזמן שלד 1 כבוי, וחוזר חלילה פעם בערך בשנייה.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>שני הלדים מהבהבים לסירוגין</li>
+    <li>ההודעה "Done uploading" הופיעה בירוק ב-IDE</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li><strong>שני הלדים נשארים דולקים כל הזמן:</strong> כנראה שאחד מהם מחובר ל-5 V במקום לרגל דיגיטלית. בודקים את כרטיסיית העזר <span class="r-ref">R1</span> חיווט 2.</li>
+    <li><strong>רק לד אחד עובד:</strong> השני מחובר הפוך (הופכים אותו) או שהנגד שלו לא מחובר.</li>
+    <li><strong>אף אחד מהלדים לא עובד:</strong> ייתכן שה-Upload נכשל — מחפשים טקסט שגיאה אדום ב-IDE.</li>
+    <li><strong>אם לא מצליחים להבין מ-<span class="r-ref">R1</span>, קוראים למורה.</strong></li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T1·M7</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 1 • אבן דרך 7 מתוך 8</div>
+  <h1><span class="section-icon">🔌</span>מחווטים את הכפתור</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+זו אבן דרך החיווט הקשה ביותר בפרויקט 1. מוסיפים כפתור לחיצה ונגד מיוחד בשם נגד הורדה. נגד ההורדה חשוב — אם מחווטים אותו במקום הלא נכון, הארדואינו יאתחל את עצמו או שהכפתור לא יעבוד. קוראים בזהירות. אם לא בטוחים — קוראים למורה. זו אבן דרך של חומרה בלבד — הקוד שמשתמש בכפתור מגיע באבן דרך 8.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בוחרים כפתור לחיצה ממגש החלקים. יש לו ארבע רגליים.</li>
+  <li>מכניסים את הכפתור לברדבורד <strong>לרוחב החריץ המרכזי</strong> כך שכל אחת מארבע הרגליים שלו נמצאת בשורה שונה (לא כולן באותה שורה). אם הכפתור שטוח על הברדבורד, המיקום צריך להשתנות — מסובבים ב-90 מעלות.</li>
+  <li>בוחרים <strong>נגד של 10 קילו-אוהם</strong> ממגש החלקים. פסי הצבע שלו <strong>חום · שחור · כתום</strong>. (שונה מהנגד של 220 אוהם של הלד!)</li>
+  <li>מחברים צד אחד של הכפתור (רגל A) ל<strong>5 V</strong> של הארדואינו.</li>
+  <li>מחברים את הצד השני של הכפתור (רגל B) ל<strong>רגל דיגיטלית 2</strong> של הארדואינו.</li>
+  <li>מרגל B, מחברים גם דרך הנגד של 10 קילו-אוהם ל<strong>GND</strong>. זה נגד ההורדה — הוא מחזיק את רגל 2 על 0 וולט כשהכפתור לא לחוץ.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">Arduino 5 V ──────────────┬─── Button pin A
+                          │
+                          ▼
+                      Button pin B ────┬─── Arduino pin 2
+                                       │
+                                       └─[10 kΩ]── Arduino GND</pre>
+
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong><br>
+באבן דרך זו רק מחווטים את הכפתור — אין קוד חדש ואין פנייה לקלוד קוד. הוא מחכה לאבן הדרך הבאה.
+</div>
+
+<p>תרשים מלא של החיווט עם נגד ההורדה נמצא בכרטיסיית העזר <span class="r-ref">R1</span> (חיווט 3).</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w3_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שני לדים על רגליים 9 ו-10 וכפתור מעל המרווח המרכזי — צד אחד ל-5V, הצד השני לרגל 2 ודרך נגד הורדה 10 קילו-אוהם ל-GND.">
+  <figcaption><strong>רגל A של הכפתור ← 5V</strong> · <strong>רגל B של הכפתור ← רגל 2</strong> ודרך <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. הנגד יושב בין רגל 2 ל-GND, <strong>לא</strong> בין 5V ל-GND.</figcaption>
+</figure>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>חשוב — הטעות הנפוצה ביותר</strong>
+  נגד ההורדה של 10 קילו-אוהם חייב להיות בין <strong>רגל 2 ל-GND</strong>. <strong>לא</strong> בין 5 V ל-GND. אם שמים אותו בין 5 V ל-GND, הלחיצה על הכפתור יוצרת קצר והארדואינו יאתחל את עצמו. זו הטעות הנפוצה ביותר בפרויקט 1. לפני שמחברים שוב — עוקבים באצבע: מרגל 2 ל-GND? בטוח. מ-5 V ל-GND? זה הפתרון — מעבירים את הנגד לרגל 2 ← GND. אפשר לקרוא למורה אם רוצים עזרה.
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>הכפתור מחובר לרוחב החריץ המרכזי של הברדבורד. צד אחד שלו הולך ל-5 V. הצד השני הולך לרגל 2, וגם דרך הנגד של 10 קילו-אוהם ל-GND. שני הלדים מקודם עדיין מחווטים.</p>
+  <p class="expected-note"><strong>עדיין לא קורה שום דבר חדש</strong> כשלוחצים על הכפתור — הקוד הנוכחי לא יודע על הכפתור. אבן דרך 8 משנה את זה.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>הכפתור על הברדבורד, לרוחב החריץ המרכזי</li>
+    <li>רגל A של הכפתור מחוברת ל-5 V</li>
+    <li>רגל B של הכפתור מחוברת לרגל 2</li>
+    <li>נגד של 10 קילו-אוהם יושב בין רגל 2 ל-GND (נגד ההורדה)</li>
+    <li>שני הלדים מאבני דרך 3 ו-5 עדיין מחווטים ועדיין מתחלפים לסירוגין</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  זו אבן דרך החיווט הקשה ביותר בפרויקט 1. המורה מצפה לעזור באבן דרך זו — קוראים לו. לפני שקוראים, בודקים את כרטיסיית העזר <span class="r-ref">R1</span> חיווט 3 למיקום נגד ההורדה. אם הארדואינו ממשיך להתאתחל או להיכבות, כמעט בטוח שנגד ההורדה בצד הלא נכון — מוציאים את ה-USB, מתקנים את הנגד, ומחברים בחזרה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T1·M8</div>
+
+<div class="header">
+  <div class="milestone-badge celebration">גרסה 1 • אבן דרך 8 מתוך 8 • אבן הדרך האחרונה</div>
+  <h1><span class="section-icon">🏁</span>מעלים את הקוד שנשלט בכפתור</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+זו אבן הדרך האחרונה של פרויקט 1. אחריה, פרויקט 1 הושלם. הקוד שמעלים עכשיו משתמש בכפתור שחיווטתם באבן דרך 7 כדי להחליף איזה לד דולק. כשלוחצים על הכפתור, לד אחד נכבה והשני מאיר. זה הפרויקט האינטראקטיבי הראשון שלכם בארדואינו — הקלט שלכם — לחיצה על הכפתור — משנה את הפלט של הארדואינו: איזה לד מאיר.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code>04_button_control.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/04_button_control/</code>.</li>
+  <li>לוחצים על כפתור ה-Upload.</li>
+  <li>מחכים להודעה "Done uploading" בירוק.</li>
+  <li>מסתכלים על הברדבורד. לד אחד אמור להיות דולק, השני כבוי. (זה המצב של "הכפתור לא לחוץ".)</li>
+  <li>לוחצים ומחזיקים את הכפתור. הלדים אמורים להתחלף — זה שהיה דולק נכבה, וזה שהיה כבוי מאיר עכשיו.</li>
+  <li>משחררים את הכפתור. הלדים מתחלפים בחזרה.</li>
+  <li>לוחצים ומשחררים כמה פעמים. הכפתור אמור להחליף איזה לד מאיר בכל פעם, בצורה יציבה.</li>
+</ul>
+
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong><br>
+העלאה של קובץ מוכן = ערוץ A גרסה 1. השלמתם את כל גרסה 1 של פרויקט 1 עם פנייה אחת בלבד לקלוד קוד (באבן דרך 1). בגרסה 2 מתחילים להשתמש בו באמת.
+</div>
+
+<h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
+
+<pre class="code-block"><span class="filename">04_button_control.ino</span>// A push-button controls which of two LEDs is on.
+
+const int LED_1 = 9;
+const int LED_2 = 10;
+const int BUTTON = 2;
+
+void setup() {
+  pinMode(LED_1, OUTPUT);
+  pinMode(LED_2, OUTPUT);
+  pinMode(BUTTON, INPUT);
+}
+
+void loop() {
+  int buttonState = digitalRead(BUTTON);
+
+  if (buttonState == HIGH) {
+    // Button is pressed: LED 2 on, LED 1 off.
+    digitalWrite(LED_1, LOW);
+    digitalWrite(LED_2, HIGH);
+  } else {
+    // Button not pressed: LED 1 on, LED 2 off.
+    digitalWrite(LED_1, HIGH);
+    digitalWrite(LED_2, LOW);
+  }
+}</pre>
+
+<p>שמים לב ל-<code>if ... else</code> שבתוך ה-loop. ככה הארדואינו מקבל החלטה. הוא קורא את הכפתור, ובהתאם לאם הכפתור לחוץ (<code>HIGH</code>) או לא (<code>LOW</code>), מדליק את אחד הלדים. זו התבנית הבסיסית של כל פרויקט אינטראקטיבי בארדואינו: קלט → החלטה → פלט.</p>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>כשהכפתור לא לחוץ: לד 1 (על רגל 9) דולק, לד 2 (על רגל 10) כבוי. כשלוחצים ומחזיקים את הכפתור: לד 1 נכבה ולד 2 מאיר. כששחררים, לד 1 שוב מאיר.</p>
+  <p class="expected-note">ההחלפה מיידית — בלחיצה ובשחרור.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>לחיצה על הכפתור מחליפה בצורה יציבה איזה לד מאיר</li>
+    <li>שחרור הכפתור מחליף חזרה</li>
+  </ul>
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את פרויקט 1!</span>
+  חיווטתם ברדבורד מאפס. העליתם ארבעה קבצי קוד. בניתם מעגל אינטראקטיבי עם לדים וכפתור. אפשר לבקש מהמורה תמונה של פרויקט 1 הגמור שלכם (אם רוצים) — זו הנדסת חשמל אמיתית — ועשיתם אותה בעצמכם.
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים? הכפתור לא עושה כלום?</strong>
+  <ul>
+    <li><strong>הסיבה הנפוצה ביותר:</strong> נגד ההורדה של 10 קילו-אוהם במקום הלא נכון. בודקים בכרטיסיית העזר <span class="r-ref">R1</span> חיווט 3: נגד ההורדה חייב להיות בין <strong>רגל 2 ל-GND</strong>, לא בין 5 V ל-GND.</li>
+    <li><strong>אם הכפתור עדיין לא עובד אחרי בדיקת מיקום הנגד, קוראים למורה.</strong></li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T2·M1</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 2 • אבן דרך 1 מתוך 5</div>
+  <h1><span class="section-icon">🏁</span>הפעלה ראשונית — עמדת עבודה, לד ראשון, העלאה ראשונה</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+אבן דרך זו מכסה את כל מה שגרסה 1 עושה באבני דרך 1 עד 4, אבל זזה מהר יותר כי באבני הדרך הבאות מקבלים החלטות עיצוב, והבסיס לא אמור להימשך שיעור שלם.
+</div>
+
+<div class="together-notice">
+  <img src="../images/together_milestone_icon.png" class="together-icon" alt="">
+  <strong>אם זו הפעם הראשונה שלכם בסדנה — זו אבן דרך משותפת.</strong>
+  המורה יעבור אתכם על בחירת הכינוי ויצירת התיקייה. אם המורה ליד תלמיד אחר כרגע, מחכים בעמדה ומתחילים למיין את ערכת הנגדים.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את סייר הקבצים של Windows.</li>
+  <li>נכנסים לתיקייה <code dir="ltr">G:\My Drive\Arduino_Projects\</code>.</li>
+  <li>יוצרים או מוצאים את תיקיית הכינוי שלכם (יחד עם המורה אם זו הפעם הראשונה).</li>
+  <li>בתוך תיקיית הכינוי, יוצרים תיקייה חדשה בשם <code dir="ltr">Project_1_Light_Signals</code>.</li>
+  <li>קוראים למורה שיפתח אתכם את קלוד קוד ויכוון אותו לתיקיית פרויקט 1.</li>
+  <li>מחברים את הארדואינו Uno עם כבל USB. מוודאים שהלד "L" על הלוח מהבהב מהקוד של היצרן.</li>
+  <li>מחווטים לד אחד על הברדבורד: רגל ארוכה → נגד 220 אוהם → רגל 9, רגל קצרה → GND. תרשים מלא ב-<span class="r-ref">R1</span> חיווט 1.</li>
+  <li>פותחים את <code dir="ltr">ino_files/02_blink_external/02_blink_external.ino</code> ב-Arduino IDE.</li>
+  <li>לוחצים על Upload ומוודאים שהלד החיצוני מהבהב פעם בשנייה.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>לד אחד מחווט על רגל 9 ומהבהב פעם בשנייה. תיקיית פרויקט 1 קיימת ב-Google Drive וקלוד קוד פתוח עליה.</p>
+  <p class="expected-note">הבסיס מוכן. באבן הדרך הבאה מתחילים להחליט על תבניות עיצוב.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>תיקיות הכינוי והפרויקט קיימות</li>
+    <li>לד אחד מחווט על רגל 9 ומהבהב</li>
+    <li>קלוד קוד פתוח ומכוון לתיקיית פרויקט 1 שלכם</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li>אם משהו מרגיש מהר מדי — מפרקים את ההקמה, החיווט וההעלאה לחלקים קטנים יותר.</li>
+    <li>כרטיסיות הניווט של גרסה 1 (T1_M1 עד T1_M4) מכסות את אותם שלבים ביתר פירוט.</li>
+    <li>קוראים למורה — מעבר מגרסה 1 לגרסה 2 הוא רגע שבו עדיף לא להיאבק לבד.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T2·M2</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 2 • אבן דרך 2 מתוך 5</div>
+  <h1><span class="section-icon">🏁</span>בוחרים תבנית</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+זו החלטת העיצוב האמיתית הראשונה שלכם בפרויקט 1. בוחרים איזו תבנית אור לבנות: לסירוגין, רדיפה, או נשימה. כל אחת נראית ומרגישה שונה. הבחירה שלכם — אין תשובה "נכונה". בוחרים את מה שאהבתם, ואז מחווטים את הלדים הנדרשים לה.
+</div>
+
+<h2><span class="section-icon">📋</span>בוחרים אחת משלוש התבניות האלה</h2>
+
+<div class="choice-point">
+  <strong>אפשרות א — תבנית לסירוגין (2 לדים)</strong>
+  <div class="option">
+    <strong>איך זה נראה:</strong> שני לדים מהבהבים בניגוד — כשאחד דולק, השני כבוי.<br>
+    <strong>מה מחווטים:</strong> אותו דבר כמו גרסה 1 אבן דרך 5 — מוסיפים לד שני על רגל 10 עם נגד 220 אוהם משלו.<br>
+    <strong>קוד התחלתי:</strong> <code>ino_files/T2_alternating_starter/T2_alternating_starter.ino</code>
+  </div>
+
+  <strong>אפשרות ב — תבנית רדיפה (3 לדים)</strong>
+  <div class="option">
+    <strong>איך זה נראה:</strong> שלושה לדים מאירים בזה אחר זה, כמו אורות מרדף בשלט.<br>
+    <strong>מה מחווטים:</strong> מוסיפים לד שני על רגל 10 וגם לד שלישי על רגל 11, כל אחד עם נגד 220 אוהם משלו.<br>
+    <strong>קוד התחלתי:</strong> <code>ino_files/T2_chasing_starter/T2_chasing_starter.ino</code>
+  </div>
+
+  <strong>אפשרות ג — תבנית נשימה (לד אחד, עמעום PWM)</strong>
+  <div class="option">
+    <strong>איך זה נראה:</strong> לד אחד מתעמעם ומתבהיר בחלקות — נהיה בהיר יותר, אחר כך עמום יותר, אחר כך שוב בהיר יותר, לנצח.<br>
+    <strong>מה מחווטים:</strong> שום דבר חדש. משתמשים רק בלד הראשון מאבן דרך 1, על רגל 9.<br>
+    <strong>קוד התחלתי:</strong> <code>ino_files/T2_breathing_starter/T2_breathing_starter.ino</code>
+  </div>
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בוחרים א, ב, או ג. כותבים את הבחירה שלכם כאן: <span class="fill-blank">&nbsp;</span></li>
+  <li>מחווטים כל לד נוסף שהתבנית שבחרתם דורשת. (אפשרות א: עוד לד אחד על רגל 10. אפשרות ב: עוד שני לדים על רגליים 10 ו-11. אפשרות ג: בלי חיווט חדש.)</li>
+  <li>פותחים את הקוד ההתחלתי של הבחירה שלכם ב-Arduino IDE.</li>
+  <li>לוחצים על Upload ומסתכלים.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>התבנית שבחרתם רצה על הברדבורד שלכם. באפשרות א: שני לדים לסירוגין. באפשרות ב: שלושה לדים ברדיפה. באפשרות ג: לד אחד בנשימה.</p>
+  <p class="expected-note">מסתכלים כמה שניות — באבן הדרך הבאה משנים אותה: מהירה יותר, איטית יותר, או שונה.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>כתבתם את הבחירה שלכם (א, ב, או ג) על הכרטיסייה</li>
+    <li>החומרה מחווטת לתבנית שבחרתם</li>
+    <li>הקוד ההתחלתי הועלה ורץ</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  התבנית לא רצה? בודקים את החיווט של התבנית שבחרתם מול כרטיסיית העזר <span class="r-ref">R1</span>. אפשרות ב (רדיפה) צריכה שלושה לדים מחווטים, לא שניים. אפשרות ג (נשימה) משתמשת רק בלד הראשון אבל הקוד משתמש ב-<code>analogWrite</code> שזה שונה מ-<code>digitalWrite</code> — אם הלד פשוט נשאר בבהירות מלאה, ייתכן שהקוד לא הועלה. מבקשים עזרה מהמורה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T2·M2b</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 2 • אפשרות ב' (רדיפה) — חיווט נוסף</div>
+  <h1><span class="section-icon">🔌</span>מחווטים לד שלישי</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+הכרטיסייה הזאת רלוונטית רק למי שבחרו ב<strong>אפשרות ב' — תבנית רדיפה</strong> באבן דרך 2. לרדיפה צריך שלושה לדים: אחד על רגל 9, אחד על רגל 10, ואחד על רגל 11. השניים הראשונים כבר מחווטים מגרסה 1 (אבני דרך 3 ו-5). עכשיו מוסיפים את השלישי. אותה תבנית חיווט, שורה אחת הצידה. לא מעלים קוד — קוד המתחיל של הרדיפה מגיע עם אבן דרך 2.
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>אפשר לדלג אם בחרתם אפשרות א' או אפשרות ג'.</strong>
+  <p>אפשרות א' (מתחלף) צריכה רק שני לדים — החיווט שלכם מוכן. אפשרות ג' (נשימה) צריכה רק לד אחד — החיווט שלכם מוכן.</p>
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בוחרים לד שלישי ממגש החלקים — <strong>בצבע שלישי</strong>, שונה מלדים 1 ו-2 (כדי לראות את הרדיפה בבירור).</li>
+  <li>בוחרים עוד נגד של 220 אוהם (פסי צבע אדום · אדום · חום).</li>
+  <li>מכניסים את הלד השלישי לברדבורד, שורה אחת הצידה מהלד השני. כל רגל בשורה שונה, כמו באבני דרך 3 ו-5.</li>
+  <li>מחברים את הרגל הארוכה (+) של הלד השלישי ל<strong>רגל דיגיטלית 11</strong> של הארדואינו, דרך הנגד של 220 אוהם.</li>
+  <li>מחברים את הרגל הקצרה (−) של הלד השלישי לרגל GND של הארדואינו.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
+                           ▼
+                      LED 1 short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
+                           ▼
+                      LED 2 short leg ─── Arduino GND
+
+Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
+                           ▼
+                      LED 3 short leg ─── Arduino GND</pre>
+
+<div class="why">
+<strong>💻 קלוד קוד באבן הדרך הזאת</strong><br>
+באבן דרך זו רק מוסיפים לד — אין קוד חדש ואין פנייה לקלוד קוד. קוד הרדיפה מגיע עם אבן דרך 2.
+</div>
+
+<p>תרשים מלא של החיווט עם שלושה לדים נמצא בכרטיסיית העזר <span class="r-ref">R1</span> (חיווט 4).</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w4_three_leds_chasing_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים במקביל — רגל 9 דרך נגד 220 אוהם ללד 1, רגל 10 דרך נגד 220 אוהם ללד 2, רגל 11 דרך נגד 220 אוהם ללד 3, כל הרגליים הקצרות ל-GND. בלי כפתור.">
+  <figcaption><strong>רגל 9 ← 220 אוהם ← לד 1</strong> · <strong>רגל 10 ← 220 אוהם ← לד 2</strong> · <strong>רגל 11 ← 220 אוהם ← לד 3</strong>. כל הרגליים הקצרות ← <strong>GND</strong>. אותה תבנית, שלוש רגליים. בלי כפתור.</figcaption>
+</figure>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>שלושה לדים בשלושה צבעים שונים, זה לצד זה בברדבורד, כל אחד עם נגד 220 אוהם משלו לרגל שונה (9, 10, 11). אף אחד לא מאיר עדיין — הקוד שמריץ את הרדיפה מגיע כשמעלים את קוד המתחיל של הרדיפה מאבן דרך 2.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>שלושה לדים בברדבורד, שורה אחת בין כל אחד, בשלושה צבעים שונים</li>
+    <li>הרגל הארוכה של לד 3 עוברת דרך נגד של 220 אוהם לרגל 11</li>
+    <li>הרגל הקצרה של לד 3 מחוברת ל-GND</li>
+    <li>שני הלדים הראשונים מגרסה 1 עדיין מחווטים לרגליים 9 ו-10</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  החיווט הוא אותה תבנית כמו באבני דרך 3 ו-5 — רק שורה אחת הצידה, לרגל 11. בודקים את כרטיסיית העזר <span class="r-ref">R1</span> (חיווט 4) — שם נמצא התרשים המלא של שלושת הלדים. אם אחד מהלדים הקודמים הפסיק לעבוד בזמן שחיווטתם את החדש, כנראה שג'אמפר התנתק — מחברים אותו מחדש. אם צריך עזרה, קוראים למורה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T2·M3</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 2 • אבן דרך 3 מתוך 5</div>
+  <h1><span class="section-icon">💻</span>משנים את הקוד בעזרת קלוד קוד</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+זו הפעם הראשונה שאתם משתמשים בקלוד קוד כשותף תכנות (ערוץ A — גרסה 2). תתארו שינוי שאתם רוצים לעשות בקוד שהעליתם באבן דרך 2, וקלוד קוד יעזור לכם להבין מה לשנות. חשוב: מתארים את הבעיה לפני שמבקשים פתרון. המשמעת הזאת אינה אופציונלית — כך ערוץ A גרסה 2 עובד בתוכנית זו, וכך שומרים על בעלות על הלמידה שלנו.
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 1 — ממלאים את (א)(ב)(ג) על הכרטיסייה לפני שמדברים עם קלוד קוד</h2>
+
+<p>בוחרים שינוי שאתם רוצים לעשות בתבנית שלכם. שינויים קלים לנסות: לעשות אותה מהירה יותר, איטית יותר, לשנות על איזו רגל לד נמצא, להוסיף השהייה אחרי כל מחזור.</p>
+
+<div class="prompt-template">(א) מה אני רוצה שיקרה:
+_________________________________________________
+_________________________________________________
+
+(ב) מה קורה עכשיו:
+_________________________________________________
+_________________________________________________
+
+(ג) מה כבר ניסיתי (או הסתכלתי עליו):
+_________________________________________________
+_________________________________________________</div>
+
+<h2><span class="section-icon">💻</span>שלב 2 — שולחים את הפנייה לקלוד קוד</h2>
+
+<p>בחלון של קלוד קוד, מדביקים את התבנית הזאת (עם התשובות שלכם), וגם מדביקים את הקוד הנוכחי של הקובץ:</p>
+
+<div class="prompt-template">אני עובד על הקוד ההתחלתי שלי בגרסה 2 של פרויקט 1.
+
+(א) מה אני רוצה שיקרה:
+[התשובה שלכם משלב 1]
+
+(ב) מה קורה עכשיו:
+[התשובה שלכם משלב 1]
+
+(ג) מה כבר ניסיתי:
+[התשובה שלכם משלב 1]
+
+הנה הקוד הנוכחי שלי:
+[מדביקים כאן את כל קובץ הקוד]
+
+תוכל לעזור לי להבין מה לשנות?</div>
+
+<h2><span class="section-icon">📋</span>שלב 3 — קוראים את התשובה של קלוד, מבצעים את השינוי, מעלים, בודקים</h2>
+
+<ul class="checklist">
+  <li>קוראים את התשובה של קלוד קוד בעיון. לא מדביקים סתם — מבינים איזו שורה שונה מהגרסה הישנה.</li>
+  <li>פותחים את הקוד ב-Arduino IDE ומבצעים את השינוי.</li>
+  <li>לוחצים על Upload.</li>
+  <li>מסתכלים על הלדים. ההתנהגות השתנתה כמו שרציתם?</li>
+  <li>אם לא, חוזרים לשלב 1 עם (א)(ב)(ג) חדשים ומנסים שוב.</li>
+</ul>
+
+<h2><span class="section-icon">📋</span>בדיקת הבנה</h2>
+
+<p>עונים על זה במשפט אחד (בקול רם, או כותבים למטה):</p>
+
+<div class="prompt-template">אחרי שקלוד קוד עזר לי, הדבר שהשתנה בקוד שלי הוא:
+_________________________________________________
+_________________________________________________</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  התבנית שלכם רצה אחרת מקודם — מהר יותר, איטית יותר, עם תזמון שונה, או עם רגליים שונות. אפשר להצביע על שורת קוד אחת ולומר "זו השורה שהשתנתה". זה מצב ההצלחה של ערוץ A גרסה 2.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>מילאתם את (א), (ב) ו-(ג) על הכרטיסייה לפני שדיברתם עם קלוד קוד</li>
+    <li>התבנית שלכם רצה אחרת מהקוד ההתחלתי</li>
+    <li>אתם יכולים לומר במשפט אחד מה קלוד קוד שינה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  אם התשובה של קלוד קוד לא עבדה: בלי פאניקה. חוזרים ל-(א)(ב)(ג) ומתארים מה קרה בצורה יותר ספציפית. "זה עדיין מהבהב אותו דבר" פחות שימושי מ"שני הלדים עכשיו דולקים יחד וזה לא מה שרציתי." בכרטיסיית העזר <span class="r-ref">R3</span> יש פירוט נוסף על איך פונים לקלוד קוד.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T2·M4</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 2 • אבן דרך 4 מתוך 5</div>
+  <h1><span class="section-icon">🔌</span>מוסיפים את הכפתור, בוחרים את התנהגותו</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+באבן דרך זו מוסיפים כפתור לחיצה לברדבורד ומחליטים מה הכפתור יעשה. יש שלוש אפשרויות. בוחרים את זו שמתאימה לתבנית שאתם בונים. אחר כך משתמשים בקלוד קוד כדי לשנות את הקוד כך שהכפתור באמת יעשה את זה.
+</div>
+
+<h2><span class="section-icon">🔌</span>שלב 1 — מחווטים את הכפתור</h2>
+
+<p>אותו חיווט כמו גרסה 1 אבן דרך 7: הכפתור לרוחב החריץ המרכזי, רגל A ל-5 V, רגל B לרגל 2 של הארדואינו, ונגד הורדה של 10 קילו-אוהם מרגל 2 ל-GND. בכרטיסיית העזר <span class="r-ref">R1</span> חיווט 3 יש תרשים מלא.</p>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>תזכורת על נגד ההורדה</strong>
+  הנגד של 10 קילו-אוהם הולך בין רגל 2 ל-GND. לא בין 5 V ל-GND. טעות כאן גורמת לארדואינו להתאתחל. לא בטוחים? — קודם כל מתקנים את זה עם <span class="r-ref">R1</span>.
+</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w5_three_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים על רגליים 9, 10, 11 עם נגדים של 220 אוהם, ועוד כפתור עם נגד הורדה 10 קילו-אוהם על רגל 2.">
+  <figcaption><strong>בתמונה: אפשרות ב' (רדיפה)</strong> — שלושה לדים + כפתור. <strong>אפשרות א' (לסירוגין):</strong> אותו חיווט של הכפתור, רק עם לדים 1 ו-2 — ראו <span class="r-ref">R1</span> חיווט 3. <strong>אפשרות ג' (נשימה):</strong> אותו חיווט של הכפתור, רק עם לד 1. בכל שלוש האפשרויות הכפתור זהה: 5V ← כפתור ← רגל 2, עם נגד הורדה 10 קילו-אוהם ← GND.</figcaption>
+</figure>
+
+<h2><span class="section-icon">📋</span>שלב 2 — בוחרים התנהגות אחת לכפתור</h2>
+
+<div class="choice-point">
+  <strong>התנהגות א — החלפת מצב</strong>
+  <div class="option">
+    לחיצה אחת — מפעיל. עוד לחיצה — עוצר. עוד לחיצה — מפעיל שוב.
+  </div>
+
+  <strong>התנהגות ב — מעבר בין תבניות</strong>
+  <div class="option">
+    הלחיצה על הכפתור עוברת בין תבניות שונות. לחיצה אחת — לסירוגין, עוד לחיצה — רדיפה, עוד לחיצה — נשימה, עוד לחיצה — חוזרים לסירוגין. (לאפשרות הזאת צריך את כל שלושת הלדים מחווטים.)
+  </div>
+
+  <strong>התנהגות ג — שליטת מהירות</strong>
+  <div class="option">
+    כשהכפתור לחוץ — התבנית רצה מהר יותר. בשחרור הכפתור — חוזרים למהירות רגילה.
+  </div>
+</div>
+
+<p>כותבים את הבחירה שלכם כאן: <span class="fill-blank">&nbsp;</span></p>
+
+<h2><span class="section-icon">💻</span>שלב 3 — משתמשים בקלוד קוד גרסה 2 כדי שהכפתור יעשה את ההתנהגות שבחרתם</h2>
+
+<p>אותה משמעת של (א)(ב)(ג) כמו באבן דרך 3. מתארים קודם את ההתנהגות שאתם רוצים. אחר כך מבקשים מקלוד קוד לעזור לשנות את הקוד.</p>
+
+<div class="prompt-template">(א) מה אני רוצה שיקרה:
+________________________________
+
+(ב) מה קורה עכשיו:
+________________________________
+
+(ג) מה כבר ניסיתי:
+________________________________</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>הכפתור משנה את התבנית שלכם בדרך שבחרתם. התנהגות א: לחיצה מפעילה ועוצרת. התנהגות ב: לחיצה עוברת בין תבניות. התנהגות ג: כשהכפתור לחוץ — ריצה מהירה יותר.</p>
+  <p class="expected-note">אפשר להראות את ההתנהגות למורה ולומר "זה מה שבניתי".</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>הכפתור מחווט עם נגד ההורדה של 10 קילו-אוהם במיקום הנכון</li>
+    <li>בחרתם התנהגות לכפתור (א, ב, או ג)</li>
+    <li>הקוד שונה דרך קלוד קוד גרסה 2 לבצע את ההתנהגות שבחרתם</li>
+    <li>הכפתור באמת עושה את מה שבחרתם</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  הכפתור לא עושה כלום? קודם כל בודקים את מיקום נגד ההורדה ב-<span class="r-ref">R1</span>. אם החיווט נכון אבל הכפתור עדיין לא עובד, כנראה שהקוד צריך <code>pinMode(BUTTON, INPUT);</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">setup()</span> ו-<code>digitalRead()</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">loop()</span>. אפשר לבקש מקלוד קוד לבדוק את הקוד בשביל זה. אם התשובה של קלוד לא עוזרת, קוראים למורה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T2·M5</div>
+
+<div class="header">
+  <div class="milestone-badge celebration">גרסה 2 • אבן דרך 5 מתוך 5 • אבן הדרך האחרונה</div>
+  <h1><span class="section-icon">🏁</span>תבנית חתימה ותצוגה</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+זו אבן הדרך האחרונה של פרויקט 1 בגרסה 2. בחרתם תבנית (אבן דרך 2), שיניתם אותה עם קלוד קוד (אבן דרך 3), הוספתם כפתור עם התנהגות ספציפית (אבן דרך 4). עכשיו מחברים את הכל ל"תבנית חתימה" — הגרסה האישית שלכם של פרויקט 1, עם בחירות הצבע שלכם, התזמון שלכם, התנהגות הכפתור שלכם. בסוף מראים אותה למורה והוא מצלם תמונה לפורטפוליו (אם רוצים).
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 1 — מחליטים על תבנית החתימה שלכם</h2>
+
+<p>כותבים במילים שלכם מה אתם רוצים שהתבנית הסופית שלכם תעשה:</p>
+
+<div class="prompt-template">תבנית החתימה שלי תעשה:
+_________________________________________________
+_________________________________________________
+_________________________________________________
+_________________________________________________</div>
+
+<h2><span class="section-icon">🔌</span>שלב 2 — בונים אותה</h2>
+
+<ul class="checklist">
+  <li>מוודאים שהלדים והכפתור שלכם עדיין מחווטים כראוי מאבני דרך 3 ו-4.</li>
+  <li>משתמשים בקלוד קוד גרסה 2 (או גרסה 3 אם מרגישים בטוחים) כדי שהתבנית הסופית תתאים לתיאור שלכם.</li>
+  <li>מעלים, מסתכלים, משפרים. אם זה לא בדיוק נכון, חוזרים לקלוד קוד עם (א)(ב)(ג) חדשים ומנסים שוב.</li>
+  <li>ממשיכים עד שהתבנית מתאימה למה שרציתם — או עד שמחליטים שהדרך שזה יצא בפועל טובה יותר ממה שתכננתם.</li>
+</ul>
+
+<h2><span class="section-icon">📋</span>שלב 3 — מראים את זה למורה</h2>
+
+<ul class="checklist">
+  <li>קוראים למורה כשמרוצים מתבנית החתימה שלכם.</li>
+  <li>מראים לו את התבנית רצה. אומרים במשפט או שניים מה בניתם ומה הכפתור עושה.</li>
+  <li>אם רוצים, אפשר לבקש מהמורה לצלם תמונה של פרויקט 1 הגמור שלכם. אפשר להשתמש בתמונה מאוחר יותר להראות למשפחה או לחברים.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
+  <p>הגרסה האישית שלכם של פרויקט 1 רצה על הברדבורד — לדים מהבהבים בתבנית שעיצבתם, הכפתור עושה את מה שבחרתם, הצבעים שבחרתם.</p>
+  <p class="expected-note">המורה ראה אותה ויש לכם תמונה (אם רציתם).</p>
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את גרסה 2 של פרויקט 1!</span>
+  בחרתם תבנית, שיניתם קוד עם קלוד קוד, חיווטתם כפתור, בחרתם התנהגות, ובניתם אותה — תבנית שהיא שלכם. זו המהות של גרסה 2 בכל תוכנית הארדואינו.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש</strong>
+  <ul>
+    <li>תבנית החתימה שלכם רצה על הברדבורד</li>
+    <li>הכפתור עושה את מה שבחרתם</li>
+    <li>הראיתם למורה ו(אם רציתם) קיבלתם תמונה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  אם אי אפשר להחליט מה תבנית החתימה צריכה להיות, מנסים לשלב שתיים מהתבניות שאהבתם מאבני דרך 2 ו-3 — למשל, "לסירוגין, אבל מהר יותר מברירת המחדל, והכפתור מפעיל ועוצר". זה נחשב תבנית חתימה. המטרה של אבן הדרך היא בעלות, לא מקוריות.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">T3</div>
+
+<div class="header">
+  <div class="milestone-badge">גרסה 3 • מתכנן פרויקט</div>
+  <h1><span class="section-icon">🏁</span>מעצבים את פרויקט 1 שלכם</h1>
+  <div class="subtitle">פרויקט 1 • אותות אור</div>
+</div>
+
+<div class="why">
+גרסה 3 היא לתלמידים שרוצים לעצב גרסה משלהם של פרויקט 1 מאפס, במקום לעקוב אחרי אבני הדרך של גרסאות 1 או 2. בגרסה 3 בוחרים רעיון שימושי אמיתי — מנורת מצב רוח, איתות לאופניים, משחק תגובה לשני שחקנים, שולח קוד מורס, כל דבר שמשתמש בלדים ואולי בכפתור — ובונים אותו. אין אבני דרך ממוספרות. יש את המתכנן הזה. ממלאים אותו, בונים, ומראים.
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 1 — מתכננים</h2>
+
+<div class="field">
+  <label>מה הפרויקט שלכם הולך להיות? (משפט או שניים)</label>
+  <div class="hint">דוגמה: "מנורת מצב רוח לשולחן שלי. שלושה לדים. הכפתור בוחר את מצב הרוח של הצבע — רגוע, אנרגטי, או ניטרלי."</div>
+</div>
+
+<div class="field">
+  <label>למי זה מיועד? (לעצמכם, לבן משפחה, לחיית מחמד, לבית הספר, לשימוש מסוים)</label>
+  <div class="hint">לדעת למי זה מיועד עוזר להחליט החלטות עיצוב. "איתות לאופניים בשבילי" שונה מ"תזכורת ויזואלית לאח הקטן שלי לצחצח שיניים".</div>
+</div>
+
+<div class="field">
+  <label>איזו חומרה צריך? (לדים, נגדים, כפתור, חוטי ג'אמפר — כמה מכל אחד)</label>
+  <div class="hint">ברוב פרויקטי גרסה 3 משתמשים במה שיש במגש החלקים שלכם: 2–4 לדים, 2–4 נגדים, כפתור, חוטי ג'אמפר. אם צריך משהו לא רגיל, שואלים את המורה לפני שמתחילים.</div>
+</div>
+
+<div class="field">
+  <label>מה ההתנהגות? (מתארים במילים שלכם)</label>
+  <div class="hint">זה השדה הכי חשוב. כמה שיותר ספציפי. "הלדים עושים משהו" לא מספיק. "כשאני לוחץ על הכפתור, הלדים עוברים בין אדום ← צהוב ← ירוק ← כבוי, לחיצה אחת כל פעם, ונשארים על הצבע שעצרתם בו" מספיק כדי להתחיל לקודד.</div>
+</div>
+
+<h2><span class="section-icon">🔌</span>שלב 2 — בונים</h2>
+
+<div class="field">
+  <label>מציירים את החיווט על נייר, אחר כך מחווטים אותו על הברדבורד.</label>
+  <div class="hint">משתמשים בכרטיסיית העזר <span class="r-ref">R1</span> כבסיס. החיווט שלכם הוא כנראה וריאציה של חיווט 1, 2, או 3. מציירים אותו על נייר לפני שמחווטים — אפילו ציור גס עוזר.</div>
+</div>
+
+<div class="field">
+  <label>מצלמים תמונה של החיווט הגמור. מסמנים כאן: <em>תמונה צולמה / עדיין לא / לא רוצה תמונה</em></label>
+</div>
+
+<h2><span class="section-icon">💻</span>שלב 3 — קוד (ערוץ A — גרסה 3)</h2>
+
+<p>בגרסה 3 משתמשים בקלוד קוד במצב דיאלוג חופשי (ערוץ A גרסה 3). מתארים מה אנחנו מנסים לבנות, קלוד קוד עוזר לנו לכתוב את הקוד, ומשפרים יחד עד שזה עובד. אותה משמעת של (א)(ב)(ג) עדיין חלה — מתארים את הבעיה לפני שמבקשים פתרון.</p>
+
+<div class="field">
+  <label>הפנייה הראשונה לקלוד קוד (מנסחים אותה כאן לפני ששולחים)</label>
+  <div class="hint">משהו כמו: "אני בונה מנורת מצב רוח לשולחן שלי. שלושה לדים על רגליים 9, 10, 11 עם נגדים של 220 אוהם, וכפתור לחיצה על רגל 2 עם נגד הורדה של 10 קילו-אוהם. אני רוצה שלחיצה על הכפתור תעבור בין שילובי צבעים. תוכל לעזור לי לכתוב את הקוד בארדואינו?"</div>
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 4 — בודקים</h2>
+
+<div class="field">
+  <label>זה עושה מה שרציתם?</label>
+  <div class="hint">אם לא: מה שונה? כותבים את זה, חוזרים לקלוד קוד עם (א)(ב)(ג) חדשים, ומשפרים.</div>
+</div>
+
+<div class="field">
+  <label>זה לפעמים עובד ולפעמים לא? מה שמתם לב?</label>
+  <div class="hint">באגים לא יציבים הם בדרך כלל חיווט (ג'אמפר שהתנתק) או תזמון (השהייה שקצרה או ארוכה מדי).</div>
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 5 — מראים</h2>
+
+<ul class="checklist">
+  <li>כשמרוצים (או כשמחליטים שזה טוב כמו שזה הולך להיות היום), קוראים למורה.</li>
+  <li>מראים את הפרויקט שלכם. מסבירים במשפט או שניים מה זה עושה ולמה בניתם אותו.</li>
+  <li>אם רוצים, מצלמים תמונה של הפרויקט הגמור ושומרים אותה בתיקיית פרויקט 1 שלכם ב-Google Drive.</li>
+</ul>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את גרסה 3 של פרויקט 1!</span>
+  עיצבתם, בניתם ותכנתתם את הגרסה שלכם של פרויקט 1 מאפס. זו סוג העבודה שכל תוכנית הארדואינו בונה לקראתה.
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים בשלב כלשהו?</strong>
+  גרסה 3 פתוחה — וזו המטרה שלה. להיות תקועים זה חלק מעיצוב פרויקט משלכם. משתמשים בקלוד קוד כדי לחשוב על הבעיה, וקוראים למורה אחרי יותר מ-10 דקות על אותה בעיה. שיחה בגרסה 3 היא שיחת עיצוב, לא שיחת תקלות — מספרים מה מנסים לבנות ומה לא עובד.
+</div>
+
+</div>
+</section>
+</body>
+</html>

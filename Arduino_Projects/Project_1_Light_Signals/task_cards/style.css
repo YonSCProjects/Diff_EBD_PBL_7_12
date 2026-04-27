@@ -111,6 +111,7 @@ pre + .why {
 .together-notice {
   background: #fff3d6;
   border: 2pt solid #d4a017;
+  border-radius: 4pt;
   padding: 14pt 18pt;
   margin: 14pt 0;
   font-size: 14pt;
@@ -337,6 +338,7 @@ p { margin: 6pt 0; }
 .done-when {
   background: #fff;
   border: 3pt double #000;
+  border-radius: 4pt;
   padding: 14pt 18pt;
   margin: 16pt 0;
   font-size: 14pt;
@@ -430,6 +432,7 @@ p { margin: 6pt 0; }
 .recognition-line {
   background: #fff3d6;
   border: 3pt solid #d4a017;
+  border-radius: 4pt;
   padding: 14pt 18pt;
   margin: 14pt 0;
   text-align: center;
@@ -462,6 +465,7 @@ p { margin: 6pt 0; }
 .celebration {
   background: #fff3d6;
   border: 3pt solid #d4a017;
+  border-radius: 4pt;
   padding: 16pt 20pt;
   margin: 16pt 0;
   text-align: center;
@@ -495,6 +499,7 @@ p { margin: 6pt 0; }
 .choice-point {
   background: #f0f4fa;
   border: 2pt solid #0050a0;
+  border-radius: 4pt;
   padding: 12pt 14pt;
   margin: 14pt 0;
 }
@@ -511,6 +516,7 @@ p { margin: 6pt 0; }
 .choice-point .option {
   background: #fff;
   border: 1pt solid #99b;
+  border-radius: 3pt;
   padding: 8pt 12pt;
   margin: 6pt 0;
 }

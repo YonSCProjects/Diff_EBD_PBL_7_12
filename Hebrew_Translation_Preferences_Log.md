@@ -30,7 +30,7 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 
 **Rule:** When stating **rules, disciplines, or procedural meta-guidance** (why a rule exists, what a discipline accomplishes, how a practice is meant to work), prefer first-person plural (עוזרים לנו, עבורנו, שלנו) over second-person plural (עוזר לכם, עבורכם, שלכם).
 
-**Scope and exception:** This pattern applies to *procedural* meta-guidance only — rules, disciplines, the "why" behind a practice, explanations of workflow logic. It does **NOT** apply to *personal* orientation openers — the warm second-person framing that positions a specific milestone or project for a specific student (e.g., `זו אבן הדרך הראשונה שלכם בתוכנית הארדואינו` in the opening why-block of a first-milestone task card). In those personal-orientation contexts, second-person possessive (שלכם) adds warmth and ownership and should be kept. The rule of thumb: if the sentence could be spoken to any student in any workshop in exactly the same form, use first-person plural inclusive; if it's addressed to a specific student in a specific moment of their journey, second-person is appropriate.
+**Scope and exception:** This pattern applies to *procedural* meta-guidance only — rules, disciplines, the "why" behind a practice, explanations of workflow logic. It does **NOT** apply to *personal* orientation openers — the warm second-person framing that positions a specific stage or project for a specific student (historically e.g., `זה השלב הראשון שלכם בתוכנית הארדואינו` in the opening why-block of a first-stage task card). In those personal-orientation contexts, second-person possessive (שלכם) adds warmth and ownership and should be kept. The rule of thumb: if the sentence could be spoken to any student in any workshop in exactly the same form, use first-person plural inclusive; if it's addressed to a specific student in a specific moment of their journey, second-person is appropriate.
 
 **Why:** First-person plural in procedural meta-guidance creates a "we are in this together" inclusive tone — student, teacher, and Claude Code as co-participants in the same practice. But in personal orientation contexts (opening of a first-milestone card, recognition lines, direct teacher-to-student address), the second-person warmth is exactly what the moment needs. Don't strip warmth where warmth is the point.
 
@@ -41,7 +41,7 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 - → `(א), (ב) ו-(ג) אינם סתם אופציות. הם עוזרים לנו לחשוב על הבעיה לפני שקלוד קוד עונה, ועוזרים לקלוד קוד להגיע לתשובה שתהיה שימושית עבורנו.`
 
 *Do NOT apply the rule (personal orientation):*
-- `זו אבן הדרך הראשונה שלכם בתוכנית הארדואינו.` — Yon kept `שלכם` here during T1_M1 review on 2026-04-12. The sentence is the opening of the why-block of a first-ever-milestone card, addressing a specific student at a specific moment. Stripping `שלכם` to `זו אבן הדרך הראשונה בתוכנית הארדואינו` was proposed and rejected: the reduced form is more "clinical" and loses the welcoming tone that belongs in this specific context.
+- `זו אבן הדרך הראשונה שלכם בתוכנית הארדואינו.` — Yon kept `שלכם` here during T1_M1 review on 2026-04-12. The sentence was the opening of the why-block of a first-ever-stage card, addressing a specific student at a specific moment. Stripping `שלכם` to `זו אבן הדרך הראשונה בתוכנית הארדואינו` was proposed and rejected at the time: the reduced form is more "clinical" and loses the welcoming tone that belongs in this specific context. **Status note (2026-04-27):** the sentence has since been removed from T1_M1 entirely as part of the cut-the-excess-talk pass; the principle behind A2 still stands and applies to any future personal-orientation opener that gets re-introduced. (Also see Pattern B5: any re-introduced version should now use `השלב הראשון`, not `אבן הדרך הראשונה`.)
 
 ### Pattern A5 — Permissive `אפשר ל-` for optional/backup tasks vs plural impersonal for primary instructions
 
@@ -127,6 +127,31 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 - `(רמה 2)` in a Channel A section header → `(גרסה 2)`
 - `ערוץ A רמה 3` → `ערוץ A גרסה 3` (or phrased as `ערוץ A - בגרסה 3 - דיאלוג חופשי`)
 
+### Pattern B5 — Use `שלב` (not `אבן דרך`) in student-facing materials
+
+**Rule:** In materials students directly read — task cards (`task_cards_he/`), reference cards (`reference_cards_he/`), tutorials (`project_*_tutorial_he.html`), and Claude Code channel scaffolds (`claude_code_channel_*_he.md`) — use the masculine `שלב` for what the program internally calls a "milestone." Keep `אבן דרך` only in teacher-facing materials (`teacher_materials/`) and the professional program overview (`Arduino_PBL_Program_Overview_he.md`).
+
+**Why:** `אבן דרך` is a beautiful Hebrew idiom but lies outside the working vocabulary of many EBD students. Using it on a navigation card a student is trying to act on adds a comprehension barrier on top of an already loaded task. Yon's principle (stated 2026-04-27 during the T1_M1 manual-review pass): this is a robotics workshop, not a Hebrew lesson — keep the vocabulary inside the student's natural register. Adult/professional contexts (teacher materials, the PSGA program overview) retain `אבן דרך` because their readers handle the idiom comfortably.
+
+**Gender note:** `אבן דרך` is feminine, `שלב` is masculine. Every replacement also requires flipping agreement on adjacent demonstratives, adjectives, and predicate verbs:
+
+| Before (fem) | After (masc) |
+|---|---|
+| `אבן דרך 1 מתוך 8` | `שלב 1 מתוך 8` |
+| `זו אבן דרך משותפת` | `זה שלב משותף` |
+| `אבן הדרך הזאת` | `השלב הזה` |
+| `אבן הדרך הראשונה / האחרונה / הבאה / הקודמת` | `השלב הראשון / האחרון / הבא / הקודם` |
+| `אבן הדרך הכי חשובה / מורכבת` | `השלב הכי חשוב / מורכב` |
+| `אבני דרך` (plural) | `שלבים` |
+| `אבני הדרך הבאות` | `השלבים הבאים` |
+| `שלב N היא ...` | `שלב N הוא ...` |
+| `שלב N הושלמה` | `שלב N הושלם` |
+| `שלב N אינה מומלצת` | `שלב N אינו מומלץ` |
+| `דרכה` (referring to milestone) | `דרכו` |
+| `שבה` (relative pronoun referring to milestone) | `שבו` |
+
+**Cascade evidence (2026-04-27):** A scripted cascade across the Project 1 Hebrew student-facing files (`task_cards_he/*.html`, `reference_cards_he/*.html`, `project_1_tutorial_he.html`, both `claude_code_channel_*_he.md` scaffolds) made 329 replacements — 299 noun-phrase substitutions plus 30 follow-on agreement fixes. The teacher-materials and program-overview files were intentionally untouched.
+
 ---
 
 ## Category C — Phrasing and idioms
@@ -155,10 +180,10 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 
 **Rule:** Section titles should be standalone and scannable. Include the explicit noun subject; trim narrative connectives like "of / for / regarding."
 
-**Why:** A title that reads as a fragment (e.g., `איזה לאיזו אבן דרך` — "which to which milestone") is confusing because the subject is omitted. Adding the explicit subject (`איזה קוד לאיזו אבן דרך` — "which code to which milestone") restores clarity.
+**Why:** A title that reads as a fragment (e.g., `איזה לאיזה שלב` — "which to which stage") is confusing because the subject is omitted. Adding the explicit subject (`איזה קוד לאיזה שלב` — "which code to which stage") restores clarity.
 
 **Examples:**
-- `קובצי הקוד של גרסה 1 — איזה לאיזו אבן דרך` → `קובצי הקוד של גרסה 1 — איזה קוד לאיזו אבן דרך`
+- `קובצי הקוד של גרסה 1 — איזה לאיזה שלב` → `קובצי הקוד של גרסה 1 — איזה קוד לאיזה שלב` (originally documented 2026-04-11 with `אבן דרך`; vocabulary updated to `שלב` per Pattern B5 cascade 2026-04-27)
 
 ### Pattern C3 — Masculine default is acceptable when the specific referent is male
 

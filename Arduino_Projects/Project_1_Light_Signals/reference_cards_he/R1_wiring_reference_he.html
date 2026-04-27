@@ -244,7 +244,7 @@
 לכפתור צריך <strong>נגד הורדה של 10 קילו-אוהם</strong> (פסי צבע: <span class="color-band">חום · שחור · כתום</span>). בלעדיו הכפתור קורא ערכים אקראיים.
 </div>
 
-<h2><span class="section-icon">🔌</span>חיווט 1 — לד אחד על רגל 9 (<span class="section-icon">🏁</span>אבן דרך 3)</h2>
+<h2><span class="section-icon">🔌</span>חיווט 1 — לד אחד על רגל 9 (<span class="section-icon">🏁</span>שלב 3)</h2>
 
 <div class="wiring">Arduino pin 9  ───[220 Ω]───┬─── LED long leg
                            │
@@ -256,7 +256,7 @@
   <figcaption><strong>רגל 9 ← נגד 220 אוהם ← רגל ארוכה של הלד.</strong> רגל קצרה ← <strong>GND</strong>. נבנה בפריצינג עבור הפרויקט.</figcaption>
 </figure>
 
-<h2><span class="section-icon">🔌</span>חיווט 2 — שני לדים על רגליים 9 ו-10 (<span class="section-icon">🏁</span>אבן דרך 5)</h2>
+<h2><span class="section-icon">🔌</span>חיווט 2 — שני לדים על רגליים 9 ו-10 (<span class="section-icon">🏁</span>שלב 5)</h2>
 
 <p>אותו חיווט כמו בחיווט 1, אבל מוסיפים <strong>לד שני בצבע אחר</strong> בשורה סמוכה בברדבורד, עם נגד 220 אוהם משלו שהולך ל<strong>רגל 10</strong>.</p>
 
@@ -273,7 +273,7 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
   <figcaption><strong>רגל 9 ← 220 אוהם ← לד 1</strong> · <strong>רגל 10 ← 220 אוהם ← לד 2</strong>. שתי הרגליים הקצרות ← <strong>GND</strong>. אותה תבנית כמו חיווט 1, מספרי רגליים שונים.</figcaption>
 </figure>
 
-<h2><span class="section-icon">🔌</span>חיווט 3 — הוספת הכפתור (<span class="section-icon">🏁</span>אבן דרך 7)</h2>
+<h2><span class="section-icon">🔌</span>חיווט 3 — הוספת הכפתור (<span class="section-icon">🏁</span>שלב 7)</h2>
 
 <p>הכפתור נעוץ מעל <strong>המרווח המרכזי</strong> של הברדבורד, כך שארבע הרגליים שלו נוחתות בארבע שורות שונות.</p>
 
@@ -304,9 +304,9 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
   <figcaption><strong>רגל 9 ← 220 אוהם ← לד 1</strong> · <strong>רגל 10 ← 220 אוהם ← לד 2</strong> · <strong>רגל 11 ← 220 אוהם ← לד 3</strong>. אותה תבנית, שלוש רגליים. בלי כפתור.</figcaption>
 </figure>
 
-<h2><span class="section-icon">🔌</span>חיווט 5 — שלושה לדים + כפתור (גרסה 2 <span class="section-icon">🏁</span>אבן דרך 4 — אפשרות ב')</h2>
+<h2><span class="section-icon">🔌</span>חיווט 5 — שלושה לדים + כפתור (גרסה 2 <span class="section-icon">🏁</span>שלב 4 — אפשרות ב')</h2>
 
-<p>נחוץ רק למי שבחרו ב<strong>תבנית הרדיפה</strong> בגרסה 2 ומוסיפים את הכפתור באבן דרך 4. משלב את חיווט 4 (שלושה לדים על רגליים 9, 10, 11) עם חיווט 3 (כפתור על רגל 2 עם נגד הורדה 10 קילו-אוהם).</p>
+<p>נחוץ רק למי שבחרו ב<strong>תבנית הרדיפה</strong> בגרסה 2 ומוסיפים את הכפתור בשלב 4. משלב את חיווט 4 (שלושה לדים על רגליים 9, 10, 11) עם חיווט 3 (כפתור על רגל 2 עם נגד הורדה 10 קילו-אוהם).</p>
 
 <div class="wiring">Arduino pin 9  ───[220 Ω]───┬─── LED 1 long leg
                            ▼
@@ -329,7 +329,7 @@ Arduino 5 V ──────────────┬─── Button pin A
 
 <figure class="wiring-figure">
   <img src="../images/w5_three_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים על רגליים 9, 10, 11 עם נגדים של 220 אוהם, ועוד כפתור עם נגד הורדה 10 קילו-אוהם על רגל 2 — הכל על ברדבורד אחד.">
-  <figcaption><strong>רגליים 9 / 10 / 11 ← 220 אוהם ← לדים 1 / 2 / 3 ← GND</strong> · <strong>כפתור ← רגל 2</strong> עם <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. החיווט המלא של גרסה 2 אפשרות ב' + אבן דרך 4.</figcaption>
+  <figcaption><strong>רגליים 9 / 10 / 11 ← 220 אוהם ← לדים 1 / 2 / 3 ← GND</strong> · <strong>כפתור ← רגל 2</strong> עם <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. החיווט המלא של גרסה 2 אפשרות ב' + שלב 4.</figcaption>
 </figure>
 
 </div>

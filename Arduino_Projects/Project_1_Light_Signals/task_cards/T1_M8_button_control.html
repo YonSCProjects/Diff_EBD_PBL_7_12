@@ -32,6 +32,7 @@ In this milestone you upload code that uses the button: pressing it switches whi
   <li>Press and release a few times. The button should switch which LED is lit every time, reliably.</li>
 </ul>
 
+<div class="screen-only">
 <h2>The sketch you are uploading</h2>
 
 <pre class="code-block"><span class="filename">04_button_control.ino</span>// A push-button controls which of two LEDs is on.
@@ -61,6 +62,7 @@ void loop() {
 }</pre>
 
 <p>Notice the <code>if ... else</code> in the loop. That is how the Arduino makes a decision. It reads the button, and depending on whether the button is pressed (<code>HIGH</code>) or not (<code>LOW</code>), it turns on one LED or the other. This is the fundamental pattern for every interactive Arduino project: read input → decide → write output.</p>
+</div>
 
 <div class="expected">
   <strong>What you should see</strong>

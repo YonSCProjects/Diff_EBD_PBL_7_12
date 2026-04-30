@@ -592,6 +592,14 @@ footer {
   .card { padding: 10mm; }
   a { color: #000; text-decoration: underline; }
 
+  /* Screen-only blocks: hidden on the laminated card but visible in
+   * the browser/HTML view. Used for the "code listing" sections
+   * ("הקוד שמעלים" / "The sketch you are uploading" + intro paragraph
+   * + code-block). The student sees the same code when they open the
+   * .ino file in Arduino IDE per the action steps, so duplicating it
+   * on the printed card adds bulk without action value. */
+  .screen-only { display: none; }
+
   /* Print = laminated artifact: always show empty boxes, no interactivity,
    * no nickname strip, no strikethrough on checked items. */
   .nickname-indicator { display: none; }

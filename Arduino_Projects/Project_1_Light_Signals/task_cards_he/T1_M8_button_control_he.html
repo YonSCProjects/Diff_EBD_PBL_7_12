@@ -33,6 +33,7 @@
   <li>לוחצים ומשחררים כמה פעמים. הכפתור אמור להחליף איזה לד מאיר בכל פעם, בצורה יציבה.</li>
 </ul>
 
+<div class="screen-only">
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
 <pre class="code-block"><span class="filename">04_button_control.ino</span>// A push-button controls which of two LEDs is on.
@@ -62,6 +63,7 @@ void loop() {
 }</pre>
 
 <p>שמים לב ל-<code>if ... else</code> שבתוך ה-loop. ככה הארדואינו מקבל החלטה. הוא קורא את הכפתור, ובהתאם לאם הכפתור לחוץ (<code>HIGH</code>) או לא (<code>LOW</code>), מדליק את אחד הלדים. זו התבנית הבסיסית של כל פרויקט אינטראקטיבי בארדואינו: קלט → החלטה → פלט.</p>
+</div>
 
 <div class="expected">
   <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>

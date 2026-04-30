@@ -597,6 +597,14 @@ footer {
   .card { padding: 10mm; }
   a { color: #000; text-decoration: underline; }
 
+  /* Screen-only blocks: hidden on the laminated card but visible in
+   * the browser/HTML view. Used for the "code listing" sections
+   * ("הקוד שמעלים" / "The sketch you are uploading" + intro paragraph
+   * + code-block). The student sees the same code when they open the
+   * .ino file in Arduino IDE per the action steps, so duplicating it
+   * on the printed card adds bulk without action value. */
+  .screen-only { display: none; }
+
   /* Print = laminated artifact: always show empty boxes, no interactivity,
    * no nickname strip, no strikethrough on checked items. */
   .nickname-indicator { display: none; }
@@ -2517,6 +2525,7 @@ Arduino 5 V ──────────────┬─── Button pin A
   <li>מסתכלים על הלד "L" על לוח הארדואינו. הוא אמור להבהב עכשיו מהר יותר מקודם — בערך שלוש פעמים בשנייה.</li>
 </ul>
 
+<div class="screen-only">
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
 <p>זה הקוד המלא של <code dir="ltr">01_blink_L_fast.ino</code>. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
@@ -2533,6 +2542,7 @@ void loop() {
   digitalWrite(LED_BUILTIN, LOW);
   delay(150);
 }</pre>
+</div>
 
 <div class="expected">
   <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
@@ -2645,6 +2655,7 @@ void loop() {
   <li>אם הוא לא מהבהב, מריצים את פרוטוקול ההיתקעות בתחתית הכרטיסייה לפני שקוראים למורה.</li>
 </ul>
 
+<div class="screen-only">
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
 <pre class="code-block"><span class="filename">02_blink_external.ino</span>// Blinks the external LED wired to digital pin 9.
@@ -2661,6 +2672,7 @@ void loop() {
   digitalWrite(LED_PIN, LOW);
   delay(500);
 }</pre>
+</div>
 
 <div class="expected">
   <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
@@ -2775,6 +2787,7 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
   <li>מסתכלים על שני הלדים. הם אמורים להתחלף לסירוגין — כשלד 1 דולק, לד 2 כבוי, ואז להפך.</li>
 </ul>
 
+<div class="screen-only">
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
 <pre class="code-block"><span class="filename">03_blink_alternating.ino</span>// Blinks two external LEDs in alternation.
@@ -2799,6 +2812,7 @@ void loop() {
 }</pre>
 
 <p>שמים לב: בכל חצי של ה-loop יש שתי קריאות <code>digitalWrite</code> — אחת מדליקה את לד 1 והשנייה מכבה את לד 2. אחר כך השהייה, ואחר כך ההפך. ככה "שני דברים בו־זמנית" עובדים בתוך loop אחד של ארדואינו.</p>
+</div>
 
 <div class="expected">
   <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
@@ -2922,6 +2936,7 @@ void loop() {
   <li>לוחצים ומשחררים כמה פעמים. הכפתור אמור להחליף איזה לד מאיר בכל פעם, בצורה יציבה.</li>
 </ul>
 
+<div class="screen-only">
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
 <pre class="code-block"><span class="filename">04_button_control.ino</span>// A push-button controls which of two LEDs is on.
@@ -2951,6 +2966,7 @@ void loop() {
 }</pre>
 
 <p>שמים לב ל-<code>if ... else</code> שבתוך ה-loop. ככה הארדואינו מקבל החלטה. הוא קורא את הכפתור, ובהתאם לאם הכפתור לחוץ (<code>HIGH</code>) או לא (<code>LOW</code>), מדליק את אחד הלדים. זו התבנית הבסיסית של כל פרויקט אינטראקטיבי בארדואינו: קלט → החלטה → פלט.</p>
+</div>
 
 <div class="expected">
   <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>

@@ -29,6 +29,7 @@ In this milestone you upload code that blinks the two LEDs in alternation — wh
   <li>Watch your two LEDs. They should alternate — when LED 1 is on, LED 2 is off, then swap.</li>
 </ul>
 
+<div class="screen-only">
 <h2>The sketch you are uploading</h2>
 
 <pre class="code-block"><span class="filename">03_blink_alternating.ino</span>// Blinks two external LEDs in alternation.
@@ -53,6 +54,7 @@ void loop() {
 }</pre>
 
 <p>Notice something: there are two <code>digitalWrite</code> calls in each half of the loop. One turns LED 1 on while the other turns LED 2 off. Then a delay. Then the opposite. That is how "two things at once" works inside a single Arduino loop.</p>
+</div>
 
 <div class="expected">
   <strong>What you should see</strong>

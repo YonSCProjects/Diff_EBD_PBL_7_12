@@ -101,6 +101,18 @@ pre + .why {
   break-before: page;
 }
 
+/* Keep "מה עושים" / "What to do" together with all its checklist items.
+ * When a second h2 follows a .checklist (e.g. "הקוד שמעלים" / "תרשים
+ * החיווט" after the action list), force the page break to happen there
+ * rather than mid-checklist. This guarantees the action list is read as
+ * one coherent unit on the page where its h2 lives. */
+@media print {
+  .checklist + h2 {
+    page-break-before: always;
+    break-before: page;
+  }
+}
+
 .why ul {
   margin: 6pt 0 2pt 0;
   padding-inline-start: 22pt;

@@ -37,7 +37,7 @@ All hardware is assumed to be in the Agourim workshop kit. This list is the stud
 | 1 | Per-student Project 1 folder on the shared Workshop Drive | Path: `G:\My Drive\Arduino_Projects\<student_nickname>\Project_1_Light_Signals\`, where `<student_nickname>` is a nickname the student chose at their first workshop session (see §5.1 and §5.5 of the master document on the nickname architecture). Created at Milestone 1 in a together-ritual between the student and the teacher (see Milestone 1 below). This folder is the student's persistent workspace for Project 1 — their pre-written sketches, their modifications, their photos, and any notes they write all live here across sessions and across the whole year. |
 | 1 | Claude Code launched pointed at the student's Project 1 folder | Invoked via the shared robotics-workshop Google account, with the student's Project 1 folder as the working directory. Claude Code can read and write the student's actual sketch files. See §5.5 of the master document for the dual-channel (pair programmer / scaffolded tutorial) operational detail. |
 
-**Cohort kit for 8 students:** 8× each of the above (per-student columns). Plus the parts library stock: spare LEDs, spare resistors, spare jumper wires, and the "sort the resistor pack" backup-task bin (see *Setup and Wait Protocol* below).
+**Cohort kit for 8 students:** 8× each of the above (per-student columns). Plus the parts library stock: spare LEDs, spare resistors, spare jumper wires.
 
 ## Session structure
 
@@ -74,9 +74,8 @@ Project 1 is designed to fit **two 45-minute sessions** for a Tier 1 student wor
    - Confirm the student's workstation has Arduino IDE open with the correct Board (Arduino Uno) and Port (COMx) selected — see the setup check in the next paragraph.
    - Have your private nickname-to-real-name mapping sheet (the tracking sheet from §5.8 of the master document) ready to record a new nickname if this is the student's first workshop session. The mapping lives in your private notes, not on the shared Drive.
 5. **Place the laminated reference cards** at each station: wiring reference, stuck-protocol reference, Claude Code prompt templates (Tier 2+ only), safety reminder.
-6. **Place the backup-task bin** at each station: a small tray of ~30 mixed resistors from the workshop parts library. The backup task card reads: *"If you need to wait for the teacher and you've already tried the 'stuck' steps, sort these resistors by colour-code band value. Put them in order from smallest (1 Ω) to largest (1 MΩ)."* This is a quiet, tactile, mildly educational task that previews Project 3's sensor threshold work. Students who have already learned to read resistor colour codes from Project 3 or later can instead practice reading 4-band and 5-band codes side by side.
-7. **Confirm the cool-down corner** is set up at the back of the workshop (§5.6 of the master document). Not Project 1-specific but always part of session setup.
-8. **Review the tracking sheet** (§5.8 of the master document) for the expected students today and note any students whose last-session row had a red-card incident — those students need an intentional relational check-in during Arrival.
+6. **Confirm the cool-down corner** is set up at the back of the workshop (§5.6 of the master document). Not Project 1-specific but always part of session setup.
+7. **Review the tracking sheet** (§5.8 of the master document) for the expected students today and note any students whose last-session row had a red-card incident — those students need an intentional relational check-in during Arrival.
 
 ### The "stuck" protocol (same on every task card)
 
@@ -86,7 +85,7 @@ If a student gets stuck on any step, before calling the teacher they try in orde
 2. **Check the wiring reference card** at the station. For hardware steps, ~60% of stuck moments are wiring errors the reference card catches.
 3. **Check the stuck-protocol reference card** at the station. It lists the most common upload errors and wiring mistakes with short fixes ("Arduino not found → check COM port"; "LED doesn't light → flip the LED; long leg is +").
 4. **Call the teacher** by raising a hand or saying the teacher's name. (No cup signalling, no flag — just the student's voice or hand. This is a deliberate Principle 8 choice — the call itself is a small relational moment.)
-5. **If the teacher is busy** — work on the backup task (sort the resistor pack) until the teacher rotates to the workstation.
+5. **If the teacher is busy** — wait at the workstation until the teacher rotates over.
 
 ### Principle 8 note — the call itself is the intervention
 
@@ -157,7 +156,7 @@ The exact words matter less than the recognition — the student has just watche
 >
 > *Done when:* You have your own nickname folder, your `Project_1_Light_Signals` folder inside it, Claude Code is open, the Arduino is plugged in, and the green light on the Arduino is blinking.
 >
-> *Stuck? Try this first:* This is a together-milestone — the teacher will walk you through it. If the teacher is with another student right now, wait at your workstation and work on sorting the resistor pack on your desk until the teacher comes to you.
+> *Stuck? Try this first:* This is a together-milestone — the teacher will walk you through it. If the teacher is with another student right now, wait at your workstation. The teacher will come to you.
 
 **Channel A Level 1 note.** No sketch upload at this milestone. The factory sketch is already installed on the Arduino and the newly-created `Project_1_Light_Signals` folder is empty of sketches — that is normal. Sketches start appearing at Milestone 2, when the pre-written `01_blink_L_fast.ino` is copied into the folder.
 

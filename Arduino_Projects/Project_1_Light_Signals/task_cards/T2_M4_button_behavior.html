@@ -2,29 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Project 1 Task Card — Tier 2 Milestone 4: Add the button, pick its behaviour</title>
+<title>Project 1 Task Card — Milestone 4: Add the button, pick its behaviour</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="card">
+<div class="card-id">V2</div>
+
 
 <div class="header">
-  <div class="milestone-badge">Tier 2 • Milestone 4 of 5</div>
+  <div class="milestone-badge">Milestone 4 of 5</div>
   <h1>Add the button, pick its behaviour</h1>
   <div class="subtitle">Project 1 • Light Signals</div>
 </div>
 
 <div class="why">
-In this milestone you add a push-button to your breadboard and decide what the button does. There are three options. Pick the one that fits the pattern you are building. Then use Claude Code to change your sketch so the button actually does it.
+In this milestone you add a push-button and pick what it does (3 options). Then use Claude Code to change your sketch accordingly.
 </div>
 
 <h2>Step 1 — Wire the button</h2>
 
-<p>Same button wiring as Tier 1 Milestone 7: button straddles the centre gap, pin A to 5 V, pin B to Arduino pin 2, and a 10 kΩ pull-down resistor from pin 2 to GND. The LEDs you already have on the breadboard stay wired — you are only adding the button.</p>
+<p>Button wiring: button straddles the centre gap, pin A to 5 V, pin B to Arduino pin 2, and a 10 kΩ pull-down resistor from pin 2 to GND. The LEDs you already have on the breadboard stay wired — you are only adding the button.</p>
 
 <div class="warning">
   <strong>Pull-down reminder</strong>
-  The 10 kΩ resistor goes between pin 2 and GND. Not between 5 V and GND. Getting this wrong causes the Arduino to reset. Check reference card R1 if you are unsure.
+  <p>The 10 kΩ resistor goes between pin 2 and GND. Not between 5 V and GND.</p>
+  <p class="li-detail">Getting this wrong causes the Arduino to reset.</p>
 </div>
 
 <figure class="wiring-figure">
@@ -53,7 +56,7 @@ In this milestone you add a push-button to your breadboard and decide what the b
 
 <p>Write your choice here: <span style="border-bottom: 1pt solid #000; display: inline-block; min-width: 60pt;">&nbsp;</span></p>
 
-<h2>Step 3 — Use Claude Code Level 2 to make the button do your chosen behaviour</h2>
+<h2>Step 3 — Use Claude Code to make the button do your chosen behaviour</h2>
 
 <p>Same (a)(b)(c) discipline as Milestone 3. Describe the behaviour you want first. Then ask Claude Code to help you modify the sketch.</p>
 
@@ -76,14 +79,14 @@ In this milestone you add a push-button to your breadboard and decide what the b
   <ul>
     <li>The button is wired with the 10 kΩ pull-down in the correct position</li>
     <li>You chose a button behaviour (A, B, or C)</li>
-    <li>Your sketch has been modified via Claude Code Level 2 to do the chosen behaviour</li>
+    <li>Your sketch has been modified via Claude Code to do the chosen behaviour</li>
     <li>The button actually does what you chose</li>
   </ul>
 </div>
 
 <div class="stuck">
   <strong>Stuck?</strong>
-  Button does nothing? First check the pull-down position on R1. If wiring is correct but the button still does not work, the sketch probably needs <code>pinMode(BUTTON, INPUT);</code> in setup() and a <code>digitalRead()</code> in the loop. Ask Claude Code to check your code for that. If Claude's answer does not help, call the teacher.
+  Button does nothing? First check the pull-down position. If wiring is correct but the button still does not work, the sketch probably needs <code>pinMode(BUTTON, INPUT);</code> in setup() and a <code>digitalRead()</code> in the loop. Ask Claude Code to check your code for that. If Claude's answer does not help, call the teacher.
 </div>
 
 </div>

@@ -2,26 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Project 1 Task Card — Tier 1 Milestone 8: Upload the button-controlled sketch (Final milestone)</title>
+<title>Project 1 Task Card — Milestone 8: Upload the button-controlled sketch (Final milestone)</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="card">
+<div class="card-id">V1</div>
+
 
 <div class="header">
-  <div class="milestone-badge celebration">Tier 1 • Milestone 8 of 8 • Final milestone</div>
+  <div class="milestone-badge celebration">Milestone 8 of 8 • Final milestone</div>
   <h1>Upload the button-controlled sketch</h1>
   <div class="subtitle">Project 1 • Light Signals</div>
 </div>
 
 <div class="why">
-This is the last milestone of Project 1. After this, Project 1 is complete. The sketch you upload now uses the button you wired in Milestone 7 to switch which LED is on. When you press the button, one LED turns off and the other turns on. This is your first interactive Arduino project — your input (the button press) changes the Arduino's output (which LED is lit).
+In this milestone you upload code that uses the button: pressing it switches which LED is on. Your first interactive Arduino project — input (the button) changes output (the LEDs).
 </div>
 
 <h2>What to do</h2>
 
 <ul class="checklist">
-  <li>Open the file <code>04_button_control.ino</code> in the Arduino IDE. It is in your Project 1 folder under <code>ino_files/04_button_control/</code>.</li>
+  <li>Open the file <code>04_button_control.ino</code> in the Arduino IDE.<span class="li-detail">It is in your Project 1 folder under <code>ino_files/04_button_control/</code>.</span></li>
   <li>Click the Upload button.</li>
   <li>Wait for "Done uploading" in green.</li>
   <li>Look at your breadboard. One LED should be on, the other off. (This is the "button not pressed" state.)</li>
@@ -81,7 +83,7 @@ void loop() {
 
 <div class="stuck">
   <strong>Stuck? Button does nothing?</strong>
-  The most common cause is the 10 kΩ pull-down resistor being in the wrong place. Check reference card R1 Wiring 3: the pull-down must be between <strong>pin 2 and GND</strong>, not between 5 V and GND. If the button still does nothing after you verify the pull-down position, call the teacher.
+  The most common cause is the 10 kΩ pull-down resistor being in the wrong place. The pull-down must be between <strong>pin 2 and GND</strong>, not between 5 V and GND. If the button still does nothing after you verify the pull-down position, call the teacher.
 </div>
 
 </div>

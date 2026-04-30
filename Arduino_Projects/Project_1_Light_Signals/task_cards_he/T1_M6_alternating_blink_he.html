@@ -2,38 +2,33 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
-<title>כרטיסיית ניווט פרויקט 1 — גרסה 1 שלב 6: מעלים את קוד ההבהוב לסירוגין</title>
+<title>כרטיסיית ניווט פרויקט 1 — שלב 6: מעלים את קוד ההבהוב לסירוגין</title>
 <link rel="stylesheet" href="../task_cards/style.css">
 <script src="../task_cards/card.js" defer></script>
 </head>
 <body>
 <div class="card">
 
-<div class="card-id">T1·M6</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 1 • שלב 6 מתוך 8</div>
+  <div class="milestone-badge">שלב 6 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>מעלים את קוד ההבהוב לסירוגין</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-עכשיו הארדואינו שולט בשני דברים בו־זמנית. מעלים קוד חדש שמהבהב את שני הלדים — אבל אף פעם לא יחד. כשאחד דולק, השני כבוי. זו הפעם הראשונה שרואים את הארדואינו עושה יותר מדבר אחד באותו קוד.
+בשלב זה מעלים קוד שמהבהב את שני הלדים לסירוגין — כשאחד דולק, השני כבוי.
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
 
 <ul class="checklist">
-  <li>פותחים את הקובץ <code>03_blink_alternating.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/03_blink_alternating/</code>.</li>
+  <li>פותחים את הקובץ <code dir="ltr">03_blink_alternating.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code dir="ltr">ino_files/03_blink_alternating/</code>.</span></li>
   <li>לוחצים על כפתור ה-Upload.</li>
   <li>מחכים להודעה "Done uploading" בירוק.</li>
   <li>מסתכלים על שני הלדים. הם אמורים להתחלף לסירוגין — כשלד 1 דולק, לד 2 כבוי, ואז להפך.</li>
 </ul>
-
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-העלאה של קובץ מוכן = ערוץ A גרסה 1. עוד לא מדברים עם קלוד קוד.
-</div>
 
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
@@ -76,10 +71,10 @@ void loop() {
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
   <ul>
-    <li><strong>שני הלדים נשארים דולקים כל הזמן:</strong> כנראה שאחד מהם מחובר ל-5 V במקום לרגל דיגיטלית. בודקים את כרטיסיית העזר <span class="r-ref">R1</span> חיווט 2.</li>
+    <li><strong>שני הלדים נשארים דולקים כל הזמן:</strong> כנראה שאחד מהם מחובר ל-5 V במקום לרגל דיגיטלית.</li>
     <li><strong>רק לד אחד עובד:</strong> השני מחובר הפוך (הופכים אותו) או שהנגד שלו לא מחובר.</li>
     <li><strong>אף אחד מהלדים לא עובד:</strong> ייתכן שה-Upload נכשל — מחפשים טקסט שגיאה אדום ב-IDE.</li>
-    <li><strong>אם לא מצליחים להבין מ-<span class="r-ref">R1</span>, קוראים למורה.</strong></li>
+    <li><strong>אם לא מצליחים להבין, קוראים למורה.</strong></li>
   </ul>
 </div>
 

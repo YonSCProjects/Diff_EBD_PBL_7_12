@@ -129,14 +129,21 @@ pre + .why {
   margin-bottom: 4pt;
 }
 
-/* Section headers — black bar with white text, same as R1-R5 */
+/* Section headers — soft cream panel with a warm gold accent strip on the
+ * inline-start edge. Replaces the previous solid-black bar (which read as
+ * harsh / heavy under print and screen). The cream + gold pairing matches
+ * the .together-notice and .recognition-line callouts so the card has one
+ * consistent warm-accent palette. Tutorial overrides (e.g. .tutorial-intro
+ * h2) keep their own colors via higher specificity. */
 
 h2 {
   font-size: 17pt;
   margin: 18pt 0 8pt 0;
-  padding: 5pt 12pt;
-  background: #000;
-  color: #fff;
+  padding: 7pt 14pt;
+  background: #f1e5c8;
+  color: #1a2a3a;
+  border-inline-start: 5pt solid #a87833;
+  border-radius: 3pt;
 }
 
 p { margin: 6pt 0; }
@@ -988,6 +995,18 @@ h4 + p, h4 + ul, h4 + ol, h4 + .code-block, h4 + .wiring-block, h4 + pre, h4 + t
   min-width: 60pt;
 }
 
+/* Secondary detail line within a checklist item — keeps the primary action
+ * on its own line and tucks supplementary detail (file path, location)
+ * underneath in smaller, dimmer text. Reduces visual noise in bullets that
+ * mix RTL Hebrew prose with multiple LTR <code> islands. */
+.li-detail {
+  display: block;
+  margin-top: 4pt;
+  font-size: 12pt;
+  color: #555;
+  line-height: 1.45;
+}
+
 /* Inline <code> in RTL context: isolate the LTR run so neutral characters
  * (backslash, colon, parentheses) resolve inside the LTR island rather than
  * being absorbed into the surrounding RTL paragraph and reordering visually.
@@ -1026,16 +1045,16 @@ code {
   top: -1pt;
 }
 
-/* Hebrew RTL: card-ID badge in the top corner. Hebrew cards position at
- * top-left (heading flows from the right, badge sits in empty space on
- * the left). English cards use the same badge but positioned top-right,
- * handled per-file via an additional .card-id-en class if needed.
- * For now, Hebrew task cards add the badge via .card-id and RTL honors top-left. */
+/* Card-ID badge in the top corner. inset-inline-end resolves to "right" in
+ * LTR (English heading flows from the left, so the badge sits in the empty
+ * top-right corner) and to "left" in RTL (Hebrew heading flows from the
+ * right, so the badge sits in the empty top-left corner). One rule, both
+ * languages. */
 
 .card-id {
   position: absolute;
   top: 6mm;
-  left: 6mm;
+  inset-inline-end: 6mm;
   width: 44pt;
   height: 44pt;
   border: 2.5pt solid #000;
@@ -2417,10 +2436,10 @@ Arduino 5 V ──────────────┬─── Button pin A
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T1·M1</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 1 • שלב 1 מתוך 8</div>
+  <div class="milestone-badge">שלב 1 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>פותחים את עמדת העבודה ומחברים את הארדואינו</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -2464,22 +2483,22 @@ Arduino 5 V ──────────────┬─── Button pin A
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T1·M2</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 1 • שלב 2 מתוך 8</div>
+  <div class="milestone-badge">שלב 2 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>מעלים את הקוד הראשון</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-הארדואינו הגיע עם קוד שכבר נמצא עליו — בגלל זה הלד "L" הבהב בשלב 1. בשלב זה מעלים קוד אחר שגורם ללד "L" להבהב מהר יותר. זו הפעם הראשונה שלוחצים על כפתור ה-Upload. שלב זה קצר — בערך 5 דקות.
+בשלב זה מעלים לארדואינו קוד חדש שגורם ללד "L" להבהב מהר יותר.
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
 
 <ul class="checklist">
-  <li>פותחים את הקובץ <code>01_blink_L_fast.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/01_blink_L_fast/</code>.</li>
+  <li>פותחים את הקובץ <code dir="ltr">01_blink_L_fast.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code dir="ltr">ino_files/01_blink_L_fast/</code>.</span></li>
   <li>מסתכלים על סרגל הכלים של Arduino IDE. מוצאים את כפתור ה-Upload — הכפתור עם חץ שמצביע ימינה.</li>
   <li>לוחצים על Upload. עוקבים אחרי סרגל ההתקדמות בתחתית ה-IDE.</li>
   <li>כשההעלאה מסתיימת, אמורה להופיע ההודעה הירוקה "Done uploading" בתחתית.</li>
@@ -2487,11 +2506,6 @@ Arduino 5 V ──────────────┬─── Button pin A
 </ul>
 
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
-
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-העלאה של קובץ מוכן = ערוץ A גרסה 1. הקובץ כבר כתוב, רק מעלים אותו. בשלב 3 של גרסה 2 מתחילים לשנות קוד עם קלוד קוד.
-</div>
 
 <p>זה הקוד המלא של <code dir="ltr">01_blink_L_fast.ino</code>. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
 
@@ -2524,7 +2538,11 @@ void loop() {
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  אם ה-Upload נכשל: בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM. אם ה-IDE אומר "Arduino not found," מוציאים את כבל ה-USB, מחכים שלוש שניות, ומחברים בחזרה. אם עדיין תקועים אחרי זה, קוראים למורה. פרוטוקול ההיתקעות המלא נמצא בכרטיסיית העזר <span class="r-ref">R2</span>.
+  <ul>
+    <li><strong>אם ה-Upload נכשל:</strong> בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM.</li>
+    <li><strong>אם ה-IDE אומר "Arduino not found,"</strong> מוציאים את כבל ה-USB, מחכים שלוש שניות, ומחברים בחזרה.</li>
+    <li><strong>אם עדיין תקועים אחרי זה,</strong> קוראים למורה.</li>
+  </ul>
 </div>
 
 </div>
@@ -2532,16 +2550,16 @@ void loop() {
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T1·M3</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 1 • שלב 3 מתוך 8</div>
+  <div class="milestone-badge">שלב 3 מתוך 8</div>
   <h1><span class="section-icon">🔌</span>מחווטים את הלד החיצוני הראשון</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-בשלב זה מחווטים לד על הברדבורד בפעם הראשונה. זה שלב של חומרה בלבד — בלי העלאת קוד. הקוד מגיע בשלב 4.
+בשלב זה מחווטים לד על הברדבורד בפעם הראשונה.
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
@@ -2562,16 +2580,9 @@ void loop() {
                            ▼
                       LED short leg (−) ─── Arduino GND</pre>
 
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong>
-<p>בשלב זה רק מחווטים — אין העלאת קוד ואין פנייה לקלוד קוד. הוא מחכה לשלב הבא.</p>
-</div>
-
-<p>תרשים מלא עם כל ארבעת מצבי החיווט נמצא בכרטיסיית העזר <span class="r-ref">R1</span>.</p>
-
 <figure class="wiring-figure">
   <img src="../images/w1_single_led_breadboard.svg" alt="תרשים ברדבורד: רגל 9 של ארדואינו דרך נגד 220 אוהם לרגל הארוכה של הלד, רגל קצרה ל-GND.">
-  <figcaption><strong>רגל 9 ← נגד 220 אוהם ← רגל ארוכה של הלד.</strong> רגל קצרה ← <strong>GND</strong>. גרסה מלאה בכרטיסיית עזר <span class="r-ref">R1</span> (חיווט 1).</figcaption>
+  <figcaption><strong>רגל 9 ← נגד 220 אוהם ← רגל ארוכה של הלד.</strong> רגל קצרה ← <strong>GND</strong>.</figcaption>
 </figure>
 
 <div class="expected">
@@ -2586,13 +2597,13 @@ void loop() {
     <li>הלד מוכנס לברדבורד כאשר שתי הרגליים בשורות שונות</li>
     <li>הרגל הארוכה מחוברת לרגל 9 דרך נגד של 220 אוהם</li>
     <li>הרגל הקצרה מחוברת ל-GND</li>
-    <li>המורה (או בבדיקה עצמית מול כרטיסיית העזר <span class="r-ref">R1</span>) אישר שהחיווט נכון</li>
+    <li>המורה אישר שהחיווט נכון</li>
   </ul>
 </div>
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  קודם כל בודקים את כרטיסיית העזר <span class="r-ref">R1</span> (חיווט) — היא מראה בדיוק איך הלד אמור להיראות בברדבורד. אם עדיין לא בטוחים איזו רגל ארוכה או איזה חור מתחבר לרגל 9, קוראים למורה. זה השלב הראשון של חיווט, והמורה יעזור.
+  אם לא בטוחים איזו רגל ארוכה או איזה חור מתחבר לרגל 9, קוראים למורה. זה השלב הראשון של חיווט, והמורה יעזור.
 </div>
 
 </div>
@@ -2600,32 +2611,27 @@ void loop() {
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T1·M4</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 1 • שלב 4 מתוך 8</div>
+  <div class="milestone-badge">שלב 4 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>מעלים את הקוד ומאירים את הלד</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-זה הרגע שבו כל מה שעשיתם עד עכשיו מתחבר יחד. בשלב 3 חיווטתם את הלד. עכשיו מעלים קוד שגורם לו להבהב. הלד שעל הברדבורד שלכם אמור להתחיל להבהב בזכות קוד שאתם העליתם. זה השלב הכי חשוב בפרויקט 1 — הרגע שמוכיח ש"משהו שחיווטתי" מגיב ל"קוד שהעליתי".
+בשלב זה מעלים קוד שגורם ללד שחיווטתם להבהב — הרגע שבו "משהו שחיווטתי" מגיב ל"קוד שהעליתי".
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
 
 <ul class="checklist">
-  <li>פותחים את הקובץ <code>02_blink_external.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/02_blink_external/</code>.</li>
+  <li>פותחים את הקובץ <code dir="ltr">02_blink_external.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code dir="ltr">ino_files/02_blink_external/</code>.</span></li>
   <li>לוחצים על כפתור ה-Upload (החץ שמצביע ימינה בסרגל הכלים).</li>
   <li>מחכים שההודעה "Done uploading" תופיע בירוק בתחתית ה-IDE.</li>
   <li>מסתכלים על הלד שעל הברדבורד. הוא אמור להבהב פעם בשנייה.</li>
   <li>אם הוא לא מהבהב, מריצים את פרוטוקול ההיתקעות בתחתית הכרטיסייה לפני שקוראים למורה.</li>
 </ul>
-
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-העלאה של קובץ מוכן = ערוץ A גרסה 1. עוד לא מדברים עם קלוד קוד.
-</div>
 
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
@@ -2662,7 +2668,7 @@ void loop() {
   <strong><span class="section-icon">🪄</span>תקועים? הלד לא מהבהב? מנסים קודם את זה:</strong>
   <ul>
     <li><strong>בודקים את כיוון הלד.</strong> הרגל הארוכה (+) מחוברת לנגד ומשם לרגל 9. הרגל הקצרה (−) מחוברת ל-GND. אם הן הפוכות, הלד לא יאיר. הופכים את הלד.</li>
-    <li><strong>בודקים את הנגד.</strong> הנגד חייב להיות בטור — בין רגל 9 לבין הרגל הארוכה של הלד — לא סתם תקוע איפשהו בברדבורד. רואים את כרטיסיית העזר <span class="r-ref">R1</span>.</li>
+    <li><strong>בודקים את הנגד.</strong> הנגד חייב להיות בטור — בין רגל 9 לבין הרגל הארוכה של הלד — לא סתם תקוע איפשהו בברדבורד.</li>
     <li><strong>בודקים שה-Upload באמת עבד.</strong> מחפשים את ההודעה הירוקה "Done uploading" בתחתית ה-IDE. אם רואים טקסט שגיאה אדום במקום, ההעלאה לא הצליחה.</li>
     <li><strong>אם עדיין תקועים, קוראים למורה.</strong> זה השלב הראשון של חיווט + העלאה — מבקשים עזרה בלי לחשוש.</li>
   </ul>
@@ -2673,16 +2679,16 @@ void loop() {
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T1·M5</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 1 • שלב 5 מתוך 8</div>
+  <div class="milestone-badge">שלב 5 מתוך 8</div>
   <h1><span class="section-icon">🔌</span>מוסיפים לד שני</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-בשלב זה מוסיפים לד שני ליד הראשון. אותה תבנית חיווט כמו בשלב 3, רק שורה אחת הצידה בברדבורד. לא מעלים קוד בשלב זה — הקוד שמשתמש בשני הלדים מגיע בשלב 6.
+בשלב זה מוסיפים לד שני ליד הראשון.
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
@@ -2704,13 +2710,6 @@ void loop() {
 Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
                            ▼
                       LED 2 short leg ─── Arduino GND</pre>
-
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-בשלב זה רק מוסיפים לד — אין קוד חדש ואין פנייה לקלוד קוד. הוא מחכה לשלב הבא.
-</div>
-
-<p>תרשים מלא של החיווט עם שני לדים נמצא בכרטיסיית העזר <span class="r-ref">R1</span> (חיווט 2).</p>
 
 <figure class="wiring-figure">
   <img src="../images/w2_two_leds_breadboard.svg" alt="תרשים ברדבורד: שני לדים במקביל — רגל 9 דרך נגד 220 אוהם ללד 1, רגל 10 דרך נגד 220 אוהם ללד 2, שתי הרגליים הקצרות ל-GND.">
@@ -2735,7 +2734,7 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  החיווט הוא אותה תבנית כמו בשלב 3 — רק שורה אחת הצידה. אם החיווט בשלב 3 יצא נכון, זה אמור להרגיש דומה. בודקים את כרטיסיית העזר <span class="r-ref">R1</span> (חיווט 2) — שם נמצא התרשים המלא. אם הלד הראשון הפסיק להבהב בזמן חיווט השני, אולי הג'אמפר שלו התנתק — בודקים שוב את החיווט של הלד הראשון.
+  החיווט הוא אותה תבנית כמו בשלב 3 — רק שורה אחת הצידה. אם החיווט בשלב 3 יצא נכון, זה אמור להרגיש דומה. אם הלד הראשון הפסיק להבהב בזמן חיווט השני, אולי הג'אמפר שלו התנתק — בודקים שוב את החיווט של הלד הראשון.
 </div>
 
 </div>
@@ -2743,31 +2742,26 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T1·M6</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 1 • שלב 6 מתוך 8</div>
+  <div class="milestone-badge">שלב 6 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>מעלים את קוד ההבהוב לסירוגין</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-עכשיו הארדואינו שולט בשני דברים בו־זמנית. מעלים קוד חדש שמהבהב את שני הלדים — אבל אף פעם לא יחד. כשאחד דולק, השני כבוי. זו הפעם הראשונה שרואים את הארדואינו עושה יותר מדבר אחד באותו קוד.
+בשלב זה מעלים קוד שמהבהב את שני הלדים לסירוגין — כשאחד דולק, השני כבוי.
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
 
 <ul class="checklist">
-  <li>פותחים את הקובץ <code>03_blink_alternating.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/03_blink_alternating/</code>.</li>
+  <li>פותחים את הקובץ <code dir="ltr">03_blink_alternating.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code dir="ltr">ino_files/03_blink_alternating/</code>.</span></li>
   <li>לוחצים על כפתור ה-Upload.</li>
   <li>מחכים להודעה "Done uploading" בירוק.</li>
   <li>מסתכלים על שני הלדים. הם אמורים להתחלף לסירוגין — כשלד 1 דולק, לד 2 כבוי, ואז להפך.</li>
 </ul>
-
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-העלאה של קובץ מוכן = ערוץ A גרסה 1. עוד לא מדברים עם קלוד קוד.
-</div>
 
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
@@ -2810,10 +2804,10 @@ void loop() {
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
   <ul>
-    <li><strong>שני הלדים נשארים דולקים כל הזמן:</strong> כנראה שאחד מהם מחובר ל-5 V במקום לרגל דיגיטלית. בודקים את כרטיסיית העזר <span class="r-ref">R1</span> חיווט 2.</li>
+    <li><strong>שני הלדים נשארים דולקים כל הזמן:</strong> כנראה שאחד מהם מחובר ל-5 V במקום לרגל דיגיטלית.</li>
     <li><strong>רק לד אחד עובד:</strong> השני מחובר הפוך (הופכים אותו) או שהנגד שלו לא מחובר.</li>
     <li><strong>אף אחד מהלדים לא עובד:</strong> ייתכן שה-Upload נכשל — מחפשים טקסט שגיאה אדום ב-IDE.</li>
-    <li><strong>אם לא מצליחים להבין מ-<span class="r-ref">R1</span>, קוראים למורה.</strong></li>
+    <li><strong>אם לא מצליחים להבין, קוראים למורה.</strong></li>
   </ul>
 </div>
 
@@ -2822,16 +2816,16 @@ void loop() {
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T1·M7</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 1 • שלב 7 מתוך 8</div>
+  <div class="milestone-badge">שלב 7 מתוך 8</div>
   <h1><span class="section-icon">🔌</span>מחווטים את הכפתור</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-זה שלב החיווט הקשה ביותר בפרויקט 1. מוסיפים כפתור לחיצה ונגד מיוחד בשם נגד הורדה. נגד ההורדה חשוב — אם מחווטים אותו במקום הלא נכון, הארדואינו יאתחל את עצמו או שהכפתור לא יעבוד. קוראים בזהירות. אם לא בטוחים — קוראים למורה. זה שלב של חומרה בלבד — הקוד שמשתמש בכפתור מגיע בשלב 8.
+בשלב זה מוסיפים כפתור לחיצה ונגד הורדה. שלב החיווט הקשה ביותר בפרויקט — אם לא בטוחים, קוראים למורה.
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
@@ -2853,13 +2847,6 @@ void loop() {
                       Button pin B ────┬─── Arduino pin 2
                                        │
                                        └─[10 kΩ]── Arduino GND</pre>
-
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-בשלב זה רק מחווטים את הכפתור — אין קוד חדש ואין פנייה לקלוד קוד. הוא מחכה לשלב הבא.
-</div>
-
-<p>תרשים מלא של החיווט עם נגד ההורדה נמצא בכרטיסיית העזר <span class="r-ref">R1</span> (חיווט 3).</p>
 
 <figure class="wiring-figure">
   <img src="../images/w3_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שני לדים על רגליים 9 ו-10 וכפתור מעל המרווח המרכזי — צד אחד ל-5V, הצד השני לרגל 2 ודרך נגד הורדה 10 קילו-אוהם ל-GND.">
@@ -2890,7 +2877,8 @@ void loop() {
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  זה שלב החיווט הקשה ביותר בפרויקט 1. המורה מצפה לעזור בשלב זה — קוראים לו. לפני שקוראים, בודקים את כרטיסיית העזר <span class="r-ref">R1</span> חיווט 3 למיקום נגד ההורדה. אם הארדואינו ממשיך להתאתחל או להיכבות, כמעט בטוח שנגד ההורדה בצד הלא נכון — מוציאים את ה-USB, מתקנים את הנגד, ומחברים בחזרה.
+  <p>זה שלב החיווט הקשה ביותר בפרויקט 1. המורה מצפה לעזור בשלב זה — קוראים לו.</p>
+  <p><strong>אם הארדואינו ממשיך להתאתחל או להיכבות,</strong> כמעט בטוח שנגד ההורדה בצד הלא נכון — מוציאים את ה-USB, מתקנים את הנגד, ומחברים בחזרה.</p>
 </div>
 
 </div>
@@ -2898,22 +2886,22 @@ void loop() {
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T1·M8</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge celebration">גרסה 1 • שלב 8 מתוך 8 • השלב האחרון</div>
+  <div class="milestone-badge celebration">שלב 8 מתוך 8 • השלב האחרון</div>
   <h1><span class="section-icon">🏁</span>מעלים את הקוד שנשלט בכפתור</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-זה השלב האחרון של פרויקט 1. אחריה, פרויקט 1 הושלם. הקוד שמעלים עכשיו משתמש בכפתור שחיווטתם בשלב 7 כדי להחליף איזה לד דולק. כשלוחצים על הכפתור, לד אחד נכבה והשני מאיר. זה הפרויקט האינטראקטיבי הראשון שלכם בארדואינו — הקלט שלכם — לחיצה על הכפתור — משנה את הפלט של הארדואינו: איזה לד מאיר.
+בשלב זה מעלים קוד שמשתמש בכפתור: לחיצה על הכפתור מחליפה איזה לד דולק. הפרויקט האינטראקטיבי הראשון שלכם — הקלט (הכפתור) משנה את הפלט (הלדים).
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
 
 <ul class="checklist">
-  <li>פותחים את הקובץ <code>04_button_control.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/04_button_control/</code>.</li>
+  <li>פותחים את הקובץ <code dir="ltr">04_button_control.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code dir="ltr">ino_files/04_button_control/</code>.</span></li>
   <li>לוחצים על כפתור ה-Upload.</li>
   <li>מחכים להודעה "Done uploading" בירוק.</li>
   <li>מסתכלים על הברדבורד. לד אחד אמור להיות דולק, השני כבוי. (זה המצב של "הכפתור לא לחוץ".)</li>
@@ -2921,11 +2909,6 @@ void loop() {
   <li>משחררים את הכפתור. הלדים מתחלפים בחזרה.</li>
   <li>לוחצים ומשחררים כמה פעמים. הכפתור אמור להחליף איזה לד מאיר בכל פעם, בצורה יציבה.</li>
 </ul>
-
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-העלאה של קובץ מוכן = ערוץ A גרסה 1. השלמתם את כל גרסה 1 של פרויקט 1 עם פנייה אחת בלבד לקלוד קוד (בשלב 1). בגרסה 2 מתחילים להשתמש בו באמת.
-</div>
 
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
@@ -2979,7 +2962,7 @@ void loop() {
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים? הכפתור לא עושה כלום?</strong>
   <ul>
-    <li><strong>הסיבה הנפוצה ביותר:</strong> נגד ההורדה של 10 קילו-אוהם במקום הלא נכון. בודקים בכרטיסיית העזר <span class="r-ref">R1</span> חיווט 3: נגד ההורדה חייב להיות בין <strong>רגל 2 ל-GND</strong>, לא בין 5 V ל-GND.</li>
+    <li><strong>הסיבה הנפוצה ביותר:</strong> נגד ההורדה של 10 קילו-אוהם במקום הלא נכון. נגד ההורדה חייב להיות בין <strong>רגל 2 ל-GND</strong>, לא בין 5 V ל-GND.</li>
     <li><strong>אם הכפתור עדיין לא עובד אחרי בדיקת מיקום הנגד, קוראים למורה.</strong></li>
   </ul>
 </div>
@@ -2989,16 +2972,16 @@ void loop() {
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T2·M1</div>
+<div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 2 • שלב 1 מתוך 5</div>
+  <div class="milestone-badge">שלב 1 מתוך 5</div>
   <h1><span class="section-icon">🏁</span>הפעלה ראשונית — עמדת עבודה, לד ראשון, העלאה ראשונה</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-שלב זה מכסה את כל מה שגרסה 1 עושה בשלבים 1 עד 4, אבל זזה מהר יותר כי בשלבים הבאים מקבלים החלטות עיצוב, והבסיס לא אמור להימשך שיעור שלם.
+בשלב זה — הפעלה מרוכזת: פותחים עמדת עבודה, מחווטים לד אחד, מעלים את הקוד הראשון.
 </div>
 
 <div class="together-notice">
@@ -3016,7 +2999,7 @@ void loop() {
   <li>בתוך התיקייה שלכם, יוצרים תיקייה חדשה בשם <code dir="ltr">Project_1_Light_Signals</code>.</li>
   <li>קוראים למורה שיפתח אתכם את קלוד קוד ויכוון אותו לתיקיית פרויקט 1.</li>
   <li>מחברים את הארדואינו Uno עם כבל USB. מוודאים שהלד "L" על הלוח מהבהב מהקוד של היצרן.</li>
-  <li>מחווטים לד אחד על הברדבורד: רגל ארוכה → נגד 220 אוהם → רגל 9, רגל קצרה → GND. תרשים מלא ב-<span class="r-ref">R1</span> חיווט 1.</li>
+  <li>מחווטים לד אחד על הברדבורד: רגל ארוכה → נגד 220 אוהם → רגל 9, רגל קצרה → GND.</li>
   <li>פותחים את <code dir="ltr">ino_files/02_blink_external/02_blink_external.ino</code> ב-Arduino IDE.</li>
   <li>לוחצים על Upload ומוודאים שהלד החיצוני מהבהב פעם בשנייה.</li>
 </ul>
@@ -3040,8 +3023,8 @@ void loop() {
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
   <ul>
     <li>אם משהו מרגיש מהר מדי — מפרקים את ההקמה, החיווט וההעלאה לחלקים קטנים יותר.</li>
-    <li>כרטיסיות הניווט של גרסה 1 (T1_M1 עד T1_M4) מכסות את אותם שלבים ביתר פירוט.</li>
-    <li>קוראים למורה — מעבר מגרסה 1 לגרסה 2 הוא רגע שבו עדיף לא להיאבק לבד.</li>
+    <li>אפשר לבקש מהמורה את הכרטיסיות המפורטות יותר (T1_M1 עד T1_M4) אם צריך.</li>
+    <li>קוראים למורה — מעבר לקצב הזה הוא רגע שבו עדיף לא להיאבק לבד.</li>
   </ul>
 </div>
 
@@ -3050,16 +3033,16 @@ void loop() {
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T2·M2</div>
+<div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 2 • שלב 2 מתוך 5</div>
+  <div class="milestone-badge">שלב 2 מתוך 5</div>
   <h1><span class="section-icon">🏁</span>בוחרים תבנית</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-זו החלטת העיצוב האמיתית הראשונה שלכם בפרויקט 1. בוחרים איזו תבנית אור לבנות: לסירוגין, רדיפה, או נשימה. כל אחת נראית ומרגישה שונה. הבחירה שלכם — אין תשובה "נכונה". בוחרים את מה שאהבתם, ואז מחווטים את הלדים הנדרשים לה.
+בשלב זה בוחרים תבנית אור — לסירוגין, רדיפה, או נשימה — ומחווטים את הלדים הנדרשים. הבחירה שלכם, אין תשובה "נכונה".
 </div>
 
 <h2><span class="section-icon">📋</span>בוחרים אחת משלוש התבניות האלה</h2>
@@ -3068,7 +3051,7 @@ void loop() {
   <strong>אפשרות א — תבנית לסירוגין (2 לדים)</strong>
   <div class="option">
     <strong>איך זה נראה:</strong> שני לדים מהבהבים בניגוד — כשאחד דולק, השני כבוי.<br>
-    <strong>מה מחווטים:</strong> אותו דבר כמו גרסה 1 שלב 5 — מוסיפים לד שני על רגל 10 עם נגד 220 אוהם משלו.<br>
+    <strong>מה מחווטים:</strong> מוסיפים לד שני על רגל 10 עם נגד 220 אוהם משלו.<br>
     <strong>קוד התחלתי:</strong> <code>ino_files/T2_alternating_starter/T2_alternating_starter.ino</code>
   </div>
 
@@ -3113,7 +3096,7 @@ void loop() {
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  התבנית לא רצה? בודקים את החיווט של התבנית שבחרתם מול כרטיסיית העזר <span class="r-ref">R1</span>. אפשרות ב (רדיפה) צריכה שלושה לדים מחווטים, לא שניים. אפשרות ג (נשימה) משתמשת רק בלד הראשון אבל הקוד משתמש ב-<code>analogWrite</code> שזה שונה מ-<code>digitalWrite</code> — אם הלד פשוט נשאר בבהירות מלאה, ייתכן שהקוד לא הועלה. מבקשים עזרה מהמורה.
+  התבנית לא רצה? אפשרות ב (רדיפה) צריכה שלושה לדים מחווטים, לא שניים. אפשרות ג (נשימה) משתמשת רק בלד הראשון אבל הקוד משתמש ב-<code>analogWrite</code> שזה שונה מ-<code>digitalWrite</code> — אם הלד פשוט נשאר בבהירות מלאה, ייתכן שהקוד לא הועלה. מבקשים עזרה מהמורה.
 </div>
 
 </div>
@@ -3121,16 +3104,16 @@ void loop() {
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T2·M2b</div>
+<div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 2 • אפשרות ב' (רדיפה) — חיווט נוסף</div>
+  <div class="milestone-badge">אפשרות ב' (רדיפה) — חיווט נוסף</div>
   <h1><span class="section-icon">🔌</span>מחווטים לד שלישי</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-הכרטיסייה הזאת רלוונטית רק למי שבחרו ב<strong>אפשרות ב' — תבנית רדיפה</strong> בשלב 2. לרדיפה צריך שלושה לדים: אחד על רגל 9, אחד על רגל 10, ואחד על רגל 11. השניים הראשונים כבר מחווטים מגרסה 1 (שלבים 3 ו-5). עכשיו מוסיפים את השלישי. אותה תבנית חיווט, שורה אחת הצידה. לא מעלים קוד — קוד המתחיל של הרדיפה מגיע עם שלב 2.
+כרטיסייה זו רלוונטית רק לתבנית הרדיפה (<strong>אפשרות ב'</strong>). מוסיפים לד שלישי על רגל 11 — אותה תבנית חיווט כמו לדים 1 ו-2.
 </div>
 
 <div class="warning">
@@ -3162,13 +3145,6 @@ Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
                            ▼
                       LED 3 short leg ─── Arduino GND</pre>
 
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-בשלב זה רק מוסיפים לד — אין קוד חדש ואין פנייה לקלוד קוד. קוד הרדיפה מגיע עם שלב 2.
-</div>
-
-<p>תרשים מלא של החיווט עם שלושה לדים נמצא בכרטיסיית העזר <span class="r-ref">R1</span> (חיווט 4).</p>
-
 <figure class="wiring-figure">
   <img src="../images/w4_three_leds_chasing_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים במקביל — רגל 9 דרך נגד 220 אוהם ללד 1, רגל 10 דרך נגד 220 אוהם ללד 2, רגל 11 דרך נגד 220 אוהם ללד 3, כל הרגליים הקצרות ל-GND. בלי כפתור.">
   <figcaption><strong>רגל 9 ← 220 אוהם ← לד 1</strong> · <strong>רגל 10 ← 220 אוהם ← לד 2</strong> · <strong>רגל 11 ← 220 אוהם ← לד 3</strong>. כל הרגליים הקצרות ← <strong>GND</strong>. אותה תבנית, שלוש רגליים. בלי כפתור.</figcaption>
@@ -3185,13 +3161,13 @@ Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
     <li>שלושה לדים בברדבורד, שורה אחת בין כל אחד, בשלושה צבעים שונים</li>
     <li>הרגל הארוכה של לד 3 עוברת דרך נגד של 220 אוהם לרגל 11</li>
     <li>הרגל הקצרה של לד 3 מחוברת ל-GND</li>
-    <li>שני הלדים הראשונים מגרסה 1 עדיין מחווטים לרגליים 9 ו-10</li>
+    <li>שני הלדים הראשונים עדיין מחווטים לרגליים 9 ו-10</li>
   </ul>
 </div>
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  החיווט הוא אותה תבנית כמו בשלבים 3 ו-5 — רק שורה אחת הצידה, לרגל 11. בודקים את כרטיסיית העזר <span class="r-ref">R1</span> (חיווט 4) — שם נמצא התרשים המלא של שלושת הלדים. אם אחד מהלדים הקודמים הפסיק לעבוד בזמן שחיווטתם את החדש, כנראה שג'אמפר התנתק — מחברים אותו מחדש. אם צריך עזרה, קוראים למורה.
+  החיווט הוא אותה תבנית כמו בשלבים 3 ו-5 — רק שורה אחת הצידה, לרגל 11. אם אחד מהלדים הקודמים הפסיק לעבוד בזמן שחיווטתם את החדש, כנראה שג'אמפר התנתק — מחברים אותו מחדש. אם צריך עזרה, קוראים למורה.
 </div>
 
 </div>
@@ -3199,16 +3175,16 @@ Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T2·M3</div>
+<div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 2 • שלב 3 מתוך 5</div>
+  <div class="milestone-badge">שלב 3 מתוך 5</div>
   <h1><span class="section-icon">💻</span>משנים את הקוד בעזרת קלוד קוד</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-זו הפעם הראשונה שאתם משתמשים בקלוד קוד כשותף תכנות (ערוץ A — גרסה 2). תתארו שינוי שאתם רוצים לעשות בקוד שהעליתם בשלב 2, וקלוד קוד יעזור לכם להבין מה לשנות. חשוב: מתארים את הבעיה לפני שמבקשים פתרון. המשמעת הזאת אינה אופציונלית — כך ערוץ A גרסה 2 עובד בתוכנית זו, וכך שומרים על בעלות על הלמידה שלנו.
+בשלב זה משתמשים בקלוד קוד כשותף תכנות לראשונה. מתארים שינוי שרוצים לעשות בקוד, וקלוד קוד עוזר. חשוב: מתארים את הבעיה לפני שמבקשים פתרון.
 </div>
 
 <h2><span class="section-icon">📋</span>שלב 1 — ממלאים את (א)(ב)(ג) על הכרטיסייה לפני שמדברים עם קלוד קוד</h2>
@@ -3231,7 +3207,7 @@ _________________________________________________</div>
 
 <p>בחלון של קלוד קוד, מדביקים את התבנית הזאת (עם התשובות שלכם), וגם מדביקים את הקוד הנוכחי של הקובץ:</p>
 
-<div class="prompt-template">אני עובד על הקוד ההתחלתי שלי בגרסה 2 של פרויקט 1.
+<div class="prompt-template">אני עובד על הקוד ההתחלתי שלי בפרויקט 1.
 
 (א) מה אני רוצה שיקרה:
 [התשובה שלכם משלב 1]
@@ -3267,7 +3243,7 @@ _________________________________________________</div>
 
 <div class="expected">
   <strong><span class="section-icon">👀</span>מה אמורים לראות</strong>
-  התבנית שלכם רצה אחרת מקודם — מהר יותר, איטית יותר, עם תזמון שונה, או עם רגליים שונות. אפשר להצביע על שורת קוד אחת ולומר "זו השורה שהשתנתה". זה מצב ההצלחה של ערוץ A גרסה 2.
+  התבנית שלכם רצה אחרת מקודם — מהר יותר, איטית יותר, עם תזמון שונה, או עם רגליים שונות. אפשר להצביע על שורת קוד אחת ולומר "זו השורה שהשתנתה".
 </div>
 
 <div class="done-when">
@@ -3281,7 +3257,7 @@ _________________________________________________</div>
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  אם התשובה של קלוד קוד לא עבדה: בלי פאניקה. חוזרים ל-(א)(ב)(ג) ומתארים מה קרה בצורה יותר ספציפית. "זה עדיין מהבהב אותו דבר" פחות שימושי מ"שני הלדים עכשיו דולקים יחד וזה לא מה שרציתי." בכרטיסיית העזר <span class="r-ref">R3</span> יש פירוט נוסף על איך פונים לקלוד קוד.
+  אם התשובה של קלוד קוד לא עבדה: בלי פאניקה. חוזרים ל-(א)(ב)(ג) ומתארים מה קרה בצורה יותר ספציפית. "זה עדיין מהבהב אותו דבר" פחות שימושי מ"שני הלדים עכשיו דולקים יחד וזה לא מה שרציתי."
 </div>
 
 </div>
@@ -3289,30 +3265,31 @@ _________________________________________________</div>
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T2·M4</div>
+<div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 2 • שלב 4 מתוך 5</div>
+  <div class="milestone-badge">שלב 4 מתוך 5</div>
   <h1><span class="section-icon">🔌</span>מוסיפים את הכפתור, בוחרים את התנהגותו</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-בשלב זה מוסיפים כפתור לחיצה לברדבורד ומחליטים מה הכפתור יעשה. יש שלוש אפשרויות. בוחרים את זו שמתאימה לתבנית שאתם בונים. אחר כך משתמשים בקלוד קוד כדי לשנות את הקוד כך שהכפתור באמת יעשה את זה.
+בשלב זה מוסיפים כפתור לברדבורד ובוחרים מה יעשה (3 אפשרויות). אחר כך משתמשים בקלוד קוד כדי לשנות את הקוד בהתאם.
 </div>
 
 <h2><span class="section-icon">🔌</span>שלב 1 — מחווטים את הכפתור</h2>
 
-<p>אותו חיווט כמו גרסה 1 שלב 7: הכפתור לרוחב החריץ המרכזי, רגל A ל-5 V, רגל B לרגל 2 של הארדואינו, ונגד הורדה של 10 קילו-אוהם מרגל 2 ל-GND. בכרטיסיית העזר <span class="r-ref">R1</span> חיווט 3 יש תרשים מלא.</p>
+<p>חיווט הכפתור: הכפתור לרוחב החריץ המרכזי, רגל A ל-5 V, רגל B לרגל 2 של הארדואינו, ונגד הורדה של 10 קילו-אוהם מרגל 2 ל-GND.</p>
 
 <div class="warning">
   <strong><span class="section-icon">⚠️</span>תזכורת על נגד ההורדה</strong>
-  הנגד של 10 קילו-אוהם הולך בין רגל 2 ל-GND. לא בין 5 V ל-GND. טעות כאן גורמת לארדואינו להתאתחל. לא בטוחים? — קודם כל מתקנים את זה עם <span class="r-ref">R1</span>.
+  <p>הנגד של 10 קילו-אוהם הולך בין רגל 2 ל-GND. לא בין 5 V ל-GND.</p>
+  <p class="li-detail">טעות כאן גורמת לארדואינו להתאתחל.</p>
 </div>
 
 <figure class="wiring-figure">
   <img src="../images/w5_three_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים על רגליים 9, 10, 11 עם נגדים של 220 אוהם, ועוד כפתור עם נגד הורדה 10 קילו-אוהם על רגל 2.">
-  <figcaption><strong>בתמונה: אפשרות ב' (רדיפה)</strong> — שלושה לדים + כפתור. <strong>אפשרות א' (לסירוגין):</strong> אותו חיווט של הכפתור, רק עם לדים 1 ו-2 — ראו <span class="r-ref">R1</span> חיווט 3. <strong>אפשרות ג' (נשימה):</strong> אותו חיווט של הכפתור, רק עם לד 1. בכל שלוש האפשרויות הכפתור זהה: 5V ← כפתור ← רגל 2, עם נגד הורדה 10 קילו-אוהם ← GND.</figcaption>
+  <figcaption><strong>בתמונה: אפשרות ב' (רדיפה)</strong> — שלושה לדים + כפתור. <strong>אפשרות א' (לסירוגין):</strong> אותו חיווט של הכפתור, רק עם לדים 1 ו-2. <strong>אפשרות ג' (נשימה):</strong> אותו חיווט של הכפתור, רק עם לד 1. בכל שלוש האפשרויות הכפתור זהה: 5V ← כפתור ← רגל 2, עם נגד הורדה 10 קילו-אוהם ← GND.</figcaption>
 </figure>
 
 <h2><span class="section-icon">📋</span>שלב 2 — בוחרים התנהגות אחת לכפתור</h2>
@@ -3336,7 +3313,7 @@ _________________________________________________</div>
 
 <p>כותבים את הבחירה שלכם כאן: <span class="fill-blank">&nbsp;</span></p>
 
-<h2><span class="section-icon">💻</span>שלב 3 — משתמשים בקלוד קוד גרסה 2 כדי שהכפתור יעשה את ההתנהגות שבחרתם</h2>
+<h2><span class="section-icon">💻</span>שלב 3 — משתמשים בקלוד קוד כדי שהכפתור יעשה את ההתנהגות שבחרתם</h2>
 
 <p>אותה משמעת של (א)(ב)(ג) כמו בשלב 3. מתארים קודם את ההתנהגות שאתם רוצים. אחר כך מבקשים מקלוד קוד לעזור לשנות את הקוד.</p>
 
@@ -3360,14 +3337,14 @@ ________________________________</div>
   <ul>
     <li>הכפתור מחווט עם נגד ההורדה של 10 קילו-אוהם במיקום הנכון</li>
     <li>בחרתם התנהגות לכפתור (א, ב, או ג)</li>
-    <li>הקוד שונה דרך קלוד קוד גרסה 2 לבצע את ההתנהגות שבחרתם</li>
+    <li>הקוד שונה דרך קלוד קוד לבצע את ההתנהגות שבחרתם</li>
     <li>הכפתור באמת עושה את מה שבחרתם</li>
   </ul>
 </div>
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  הכפתור לא עושה כלום? קודם כל בודקים את מיקום נגד ההורדה ב-<span class="r-ref">R1</span>. אם החיווט נכון אבל הכפתור עדיין לא עובד, כנראה שהקוד צריך <code>pinMode(BUTTON, INPUT);</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">setup()</span> ו-<code>digitalRead()</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">loop()</span>. אפשר לבקש מקלוד קוד לבדוק את הקוד בשביל זה. אם התשובה של קלוד לא עוזרת, קוראים למורה.
+  הכפתור לא עושה כלום? קודם כל בודקים את מיקום נגד ההורדה. אם החיווט נכון אבל הכפתור עדיין לא עובד, כנראה שהקוד צריך <code>pinMode(BUTTON, INPUT);</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">setup()</span> ו-<code>digitalRead()</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">loop()</span>. אפשר לבקש מקלוד קוד לבדוק את הקוד בשביל זה. אם התשובה של קלוד לא עוזרת, קוראים למורה.
 </div>
 
 </div>
@@ -3375,16 +3352,16 @@ ________________________________</div>
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T2·M5</div>
+<div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge celebration">גרסה 2 • שלב 5 מתוך 5 • השלב האחרון</div>
+  <div class="milestone-badge celebration">שלב 5 מתוך 5 • השלב האחרון</div>
   <h1><span class="section-icon">🏁</span>תבנית חתימה ותצוגה</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-זה השלב האחרון של פרויקט 1 בגרסה 2. בחרתם תבנית (שלב 2), שיניתם אותה עם קלוד קוד (שלב 3), הוספתם כפתור עם התנהגות ספציפית (שלב 4). עכשיו מחברים את הכל ל"תבנית חתימה" — הגרסה האישית שלכם של פרויקט 1, עם בחירות הצבע שלכם, התזמון שלכם, התנהגות הכפתור שלכם. בסוף מראים אותה למורה והוא מצלם תמונה לפורטפוליו (אם רוצים).
+בשלב זה מחברים את כל הבחירות שלכם ל"תבנית חתימה" — הגרסה האישית של פרויקט 1. בסוף מראים אותה למורה.
 </div>
 
 <h2><span class="section-icon">📋</span>שלב 1 — מחליטים על תבנית החתימה שלכם</h2>
@@ -3401,7 +3378,7 @@ _________________________________________________</div>
 
 <ul class="checklist">
   <li>מוודאים שהלדים והכפתור שלכם עדיין מחווטים כראוי משלבים 3 ו-4.</li>
-  <li>משתמשים בקלוד קוד גרסה 2 (או גרסה 3 אם מרגישים בטוחים) כדי שהתבנית הסופית תתאים לתיאור שלכם.</li>
+  <li>משתמשים בקלוד קוד כדי שהתבנית הסופית תתאים לתיאור שלכם.</li>
   <li>מעלים, מסתכלים, משפרים. אם זה לא בדיוק נכון, חוזרים לקלוד קוד עם (א)(ב)(ג) חדשים ומנסים שוב.</li>
   <li>ממשיכים עד שהתבנית מתאימה למה שרציתם — או עד שמחליטים שהדרך שזה יצא בפועל טובה יותר ממה שתכננתם.</li>
 </ul>
@@ -3421,8 +3398,8 @@ _________________________________________________</div>
 </div>
 
 <div class="celebration">
-  <span class="title">🎉 השלמתם את גרסה 2 של פרויקט 1!</span>
-  בחרתם תבנית, שיניתם קוד עם קלוד קוד, חיווטתם כפתור, בחרתם התנהגות, ובניתם אותה — תבנית שהיא שלכם. זו המהות של גרסה 2 בכל תוכנית הארדואינו.
+  <span class="title">🎉 השלמתם את פרויקט 1!</span>
+  בחרתם תבנית, שיניתם קוד עם קלוד קוד, חיווטתם כפתור, בחרתם התנהגות, ובניתם אותה — תבנית שהיא שלכם.
 </div>
 
 <div class="done-when">
@@ -3444,16 +3421,16 @@ _________________________________________________</div>
 <section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
 <div class="card">
 
-<div class="card-id">T3</div>
+<div class="card-id">V3</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 3 • מתכנן פרויקט</div>
+  <div class="milestone-badge">מתכנן פרויקט</div>
   <h1><span class="section-icon">🏁</span>מעצבים את פרויקט 1 שלכם</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-גרסה 3 היא לתלמידים שרוצים לעצב גרסה משלהם של פרויקט 1 מאפס, במקום לעקוב אחרי השלבים של גרסאות 1 או 2. בגרסה 3 בוחרים רעיון שימושי אמיתי — מנורת מצב רוח, איתות לאופניים, משחק תגובה לשני שחקנים, שולח קוד מורס, כל דבר שמשתמש בלדים ואולי בכפתור — ובונים אותו. אין שלבים ממוספרות. יש את המתכנן הזה. ממלאים אותו, בונים, ומראים.
+מעצבים גרסה משלכם של פרויקט 1 מאפס. בוחרים רעיון אמיתי (מנורת מצב רוח, איתות לאופניים, משחק תגובה לשני שחקנים…) ובונים אותו. ממלאים את המתכנן, בונים, ומראים.
 </div>
 
 <h2><span class="section-icon">📋</span>שלב 1 — מתכננים</h2>
@@ -3470,7 +3447,7 @@ _________________________________________________</div>
 
 <div class="field">
   <label>איזו חומרה צריך? (לדים, נגדים, כפתור, חוטי ג'אמפר — כמה מכל אחד)</label>
-  <div class="hint">ברוב פרויקטי גרסה 3 משתמשים במה שיש במגש החלקים שלכם: 2–4 לדים, 2–4 נגדים, כפתור, חוטי ג'אמפר. אם צריך משהו לא רגיל, שואלים את המורה לפני שמתחילים.</div>
+  <div class="hint">ברוב הפרויקטים כאן משתמשים במה שיש במגש החלקים שלכם: 2–4 לדים, 2–4 נגדים, כפתור, חוטי ג'אמפר. אם צריך משהו לא רגיל, שואלים את המורה לפני שמתחילים.</div>
 </div>
 
 <div class="field">
@@ -3482,16 +3459,16 @@ _________________________________________________</div>
 
 <div class="field">
   <label>מציירים את החיווט על נייר, אחר כך מחווטים אותו על הברדבורד.</label>
-  <div class="hint">משתמשים בכרטיסיית העזר <span class="r-ref">R1</span> כבסיס. החיווט שלכם הוא כנראה וריאציה של חיווט 1, 2, או 3. מציירים אותו על נייר לפני שמחווטים — אפילו ציור גס עוזר.</div>
+  <div class="hint">החיווט שלכם הוא כנראה וריאציה של מה שכבר בניתם קודם. מציירים אותו על נייר לפני שמחווטים — אפילו ציור גס עוזר.</div>
 </div>
 
 <div class="field">
   <label>מצלמים תמונה של החיווט הגמור. מסמנים כאן: <em>תמונה צולמה / עדיין לא / לא רוצה תמונה</em></label>
 </div>
 
-<h2><span class="section-icon">💻</span>שלב 3 — קוד (ערוץ A — גרסה 3)</h2>
+<h2><span class="section-icon">💻</span>שלב 3 — קוד</h2>
 
-<p>בגרסה 3 משתמשים בקלוד קוד במצב דיאלוג חופשי (ערוץ A גרסה 3). מתארים מה אנחנו מנסים לבנות, קלוד קוד עוזר לנו לכתוב את הקוד, ומשפרים יחד עד שזה עובד. אותה משמעת של (א)(ב)(ג) עדיין חלה — מתארים את הבעיה לפני שמבקשים פתרון.</p>
+<p>כאן משתמשים בקלוד קוד במצב דיאלוג חופשי. מתארים מה אנחנו מנסים לבנות, קלוד קוד עוזר לנו לכתוב את הקוד, ומשפרים יחד עד שזה עובד. אותה משמעת של (א)(ב)(ג) עדיין חלה — מתארים את הבעיה לפני שמבקשים פתרון.</p>
 
 <div class="field">
   <label>הפנייה הראשונה לקלוד קוד (מנסחים אותה כאן לפני ששולחים)</label>
@@ -3519,13 +3496,13 @@ _________________________________________________</div>
 </ul>
 
 <div class="celebration">
-  <span class="title">🎉 השלמתם את גרסה 3 של פרויקט 1!</span>
-  עיצבתם, בניתם ותכנתתם את הגרסה שלכם של פרויקט 1 מאפס. זו סוג העבודה שכל תוכנית הארדואינו בונה לקראתה.
+  <span class="title">🎉 השלמתם את פרויקט 1!</span>
+  עיצבתם, בניתם ותכנתתם את הגרסה שלכם של פרויקט 1 מאפס.
 </div>
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים בשלב כלשהו?</strong>
-  גרסה 3 פתוחה — וזו המטרה שלה. להיות תקועים זה חלק מעיצוב פרויקט משלכם. משתמשים בקלוד קוד כדי לחשוב על הבעיה, וקוראים למורה אחרי יותר מ-10 דקות על אותה בעיה. שיחה בגרסה 3 היא שיחת עיצוב, לא שיחת תקלות — מספרים מה מנסים לבנות ומה לא עובד.
+  המתכנן פתוח — וזו המטרה שלו. להיות תקועים זה חלק מעיצוב פרויקט משלכם. משתמשים בקלוד קוד כדי לחשוב על הבעיה, וקוראים למורה אחרי יותר מ-10 דקות על אותה בעיה. שיחה כאן היא שיחת עיצוב, לא שיחת תקלות — מספרים מה מנסים לבנות ומה לא עובד.
 </div>
 
 </div>

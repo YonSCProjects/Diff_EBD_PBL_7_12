@@ -124,14 +124,21 @@ pre + .why {
   margin-bottom: 4pt;
 }
 
-/* Section headers — black bar with white text, same as R1-R5 */
+/* Section headers — soft cream panel with a warm gold accent strip on the
+ * inline-start edge. Replaces the previous solid-black bar (which read as
+ * harsh / heavy under print and screen). The cream + gold pairing matches
+ * the .together-notice and .recognition-line callouts so the card has one
+ * consistent warm-accent palette. Tutorial overrides (e.g. .tutorial-intro
+ * h2) keep their own colors via higher specificity. */
 
 h2 {
   font-size: 17pt;
   margin: 18pt 0 8pt 0;
-  padding: 5pt 12pt;
-  background: #000;
-  color: #fff;
+  padding: 7pt 14pt;
+  background: #f1e5c8;
+  color: #1a2a3a;
+  border-inline-start: 5pt solid #a87833;
+  border-radius: 3pt;
 }
 
 p { margin: 6pt 0; }
@@ -983,6 +990,18 @@ h4 + p, h4 + ul, h4 + ol, h4 + .code-block, h4 + .wiring-block, h4 + pre, h4 + t
   min-width: 60pt;
 }
 
+/* Secondary detail line within a checklist item — keeps the primary action
+ * on its own line and tucks supplementary detail (file path, location)
+ * underneath in smaller, dimmer text. Reduces visual noise in bullets that
+ * mix RTL Hebrew prose with multiple LTR <code> islands. */
+.li-detail {
+  display: block;
+  margin-top: 4pt;
+  font-size: 12pt;
+  color: #555;
+  line-height: 1.45;
+}
+
 /* Inline <code> in RTL context: isolate the LTR run so neutral characters
  * (backslash, colon, parentheses) resolve inside the LTR island rather than
  * being absorbed into the surrounding RTL paragraph and reordering visually.
@@ -1021,16 +1040,16 @@ code {
   top: -1pt;
 }
 
-/* Hebrew RTL: card-ID badge in the top corner. Hebrew cards position at
- * top-left (heading flows from the right, badge sits in empty space on
- * the left). English cards use the same badge but positioned top-right,
- * handled per-file via an additional .card-id-en class if needed.
- * For now, Hebrew task cards add the badge via .card-id and RTL honors top-left. */
+/* Card-ID badge in the top corner. inset-inline-end resolves to "right" in
+ * LTR (English heading flows from the left, so the badge sits in the empty
+ * top-right corner) and to "left" in RTL (Hebrew heading flows from the
+ * right, so the badge sits in the empty top-left corner). One rule, both
+ * languages. */
 
 .card-id {
   position: absolute;
   top: 6mm;
-  left: 6mm;
+  inset-inline-end: 6mm;
   width: 44pt;
   height: 44pt;
   border: 2.5pt solid #000;

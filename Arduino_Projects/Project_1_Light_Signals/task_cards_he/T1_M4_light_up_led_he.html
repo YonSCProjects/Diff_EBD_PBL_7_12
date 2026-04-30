@@ -2,39 +2,34 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
-<title>כרטיסיית ניווט פרויקט 1 — גרסה 1 שלב 4: מעלים את הקוד ומאירים את הלד</title>
+<title>כרטיסיית ניווט פרויקט 1 — שלב 4: מעלים את הקוד ומאירים את הלד</title>
 <link rel="stylesheet" href="../task_cards/style.css">
 <script src="../task_cards/card.js" defer></script>
 </head>
 <body>
 <div class="card">
 
-<div class="card-id">T1·M4</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">גרסה 1 • שלב 4 מתוך 8</div>
+  <div class="milestone-badge">שלב 4 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>מעלים את הקוד ומאירים את הלד</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-זה הרגע שבו כל מה שעשיתם עד עכשיו מתחבר יחד. בשלב 3 חיווטתם את הלד. עכשיו מעלים קוד שגורם לו להבהב. הלד שעל הברדבורד שלכם אמור להתחיל להבהב בזכות קוד שאתם העליתם. זה השלב הכי חשוב בפרויקט 1 — הרגע שמוכיח ש"משהו שחיווטתי" מגיב ל"קוד שהעליתי".
+בשלב זה מעלים קוד שגורם ללד שחיווטתם להבהב — הרגע שבו "משהו שחיווטתי" מגיב ל"קוד שהעליתי".
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
 
 <ul class="checklist">
-  <li>פותחים את הקובץ <code>02_blink_external.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/02_blink_external/</code>.</li>
+  <li>פותחים את הקובץ <code dir="ltr">02_blink_external.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code dir="ltr">ino_files/02_blink_external/</code>.</span></li>
   <li>לוחצים על כפתור ה-Upload (החץ שמצביע ימינה בסרגל הכלים).</li>
   <li>מחכים שההודעה "Done uploading" תופיע בירוק בתחתית ה-IDE.</li>
   <li>מסתכלים על הלד שעל הברדבורד. הוא אמור להבהב פעם בשנייה.</li>
   <li>אם הוא לא מהבהב, מריצים את פרוטוקול ההיתקעות בתחתית הכרטיסייה לפני שקוראים למורה.</li>
 </ul>
-
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-העלאה של קובץ מוכן = ערוץ A גרסה 1. עוד לא מדברים עם קלוד קוד.
-</div>
 
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
@@ -71,7 +66,7 @@ void loop() {
   <strong><span class="section-icon">🪄</span>תקועים? הלד לא מהבהב? מנסים קודם את זה:</strong>
   <ul>
     <li><strong>בודקים את כיוון הלד.</strong> הרגל הארוכה (+) מחוברת לנגד ומשם לרגל 9. הרגל הקצרה (−) מחוברת ל-GND. אם הן הפוכות, הלד לא יאיר. הופכים את הלד.</li>
-    <li><strong>בודקים את הנגד.</strong> הנגד חייב להיות בטור — בין רגל 9 לבין הרגל הארוכה של הלד — לא סתם תקוע איפשהו בברדבורד. רואים את כרטיסיית העזר <span class="r-ref">R1</span>.</li>
+    <li><strong>בודקים את הנגד.</strong> הנגד חייב להיות בטור — בין רגל 9 לבין הרגל הארוכה של הלד — לא סתם תקוע איפשהו בברדבורד.</li>
     <li><strong>בודקים שה-Upload באמת עבד.</strong> מחפשים את ההודעה הירוקה "Done uploading" בתחתית ה-IDE. אם רואים טקסט שגיאה אדום במקום, ההעלאה לא הצליחה.</li>
     <li><strong>אם עדיין תקועים, קוראים למורה.</strong> זה השלב הראשון של חיווט + העלאה — מבקשים עזרה בלי לחשוש.</li>
   </ul>

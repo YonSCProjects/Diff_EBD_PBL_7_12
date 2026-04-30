@@ -2,29 +2,29 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
-<title>כרטיסיית ניווט פרויקט 1 — גרסה 1 שלב 8: מעלים את הקוד שנשלט בכפתור (השלב האחרון)</title>
+<title>כרטיסיית ניווט פרויקט 1 — שלב 8: מעלים את הקוד שנשלט בכפתור (השלב האחרון)</title>
 <link rel="stylesheet" href="../task_cards/style.css">
 <script src="../task_cards/card.js" defer></script>
 </head>
 <body>
 <div class="card">
 
-<div class="card-id">T1·M8</div>
+<div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge celebration">גרסה 1 • שלב 8 מתוך 8 • השלב האחרון</div>
+  <div class="milestone-badge celebration">שלב 8 מתוך 8 • השלב האחרון</div>
   <h1><span class="section-icon">🏁</span>מעלים את הקוד שנשלט בכפתור</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
 
 <div class="why">
-זה השלב האחרון של פרויקט 1. אחריה, פרויקט 1 הושלם. הקוד שמעלים עכשיו משתמש בכפתור שחיווטתם בשלב 7 כדי להחליף איזה לד דולק. כשלוחצים על הכפתור, לד אחד נכבה והשני מאיר. זה הפרויקט האינטראקטיבי הראשון שלכם בארדואינו — הקלט שלכם — לחיצה על הכפתור — משנה את הפלט של הארדואינו: איזה לד מאיר.
+בשלב זה מעלים קוד שמשתמש בכפתור: לחיצה על הכפתור מחליפה איזה לד דולק. הפרויקט האינטראקטיבי הראשון שלכם — הקלט (הכפתור) משנה את הפלט (הלדים).
 </div>
 
 <h2><span class="section-icon">📋</span>מה עושים</h2>
 
 <ul class="checklist">
-  <li>פותחים את הקובץ <code>04_button_control.ino</code> ב-Arduino IDE. הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code>ino_files/04_button_control/</code>.</li>
+  <li>פותחים את הקובץ <code dir="ltr">04_button_control.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 1 שלכם, בתוך <code dir="ltr">ino_files/04_button_control/</code>.</span></li>
   <li>לוחצים על כפתור ה-Upload.</li>
   <li>מחכים להודעה "Done uploading" בירוק.</li>
   <li>מסתכלים על הברדבורד. לד אחד אמור להיות דולק, השני כבוי. (זה המצב של "הכפתור לא לחוץ".)</li>
@@ -32,11 +32,6 @@
   <li>משחררים את הכפתור. הלדים מתחלפים בחזרה.</li>
   <li>לוחצים ומשחררים כמה פעמים. הכפתור אמור להחליף איזה לד מאיר בכל פעם, בצורה יציבה.</li>
 </ul>
-
-<div class="why">
-<strong>💻 קלוד קוד בשלב הזה</strong><br>
-העלאה של קובץ מוכן = ערוץ A גרסה 1. השלמתם את כל גרסה 1 של פרויקט 1 עם פנייה אחת בלבד לקלוד קוד (בשלב 1). בגרסה 2 מתחילים להשתמש בו באמת.
-</div>
 
 <h2><span class="section-icon">💻</span>הקוד שמעלים</h2>
 
@@ -90,7 +85,7 @@ void loop() {
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים? הכפתור לא עושה כלום?</strong>
   <ul>
-    <li><strong>הסיבה הנפוצה ביותר:</strong> נגד ההורדה של 10 קילו-אוהם במקום הלא נכון. בודקים בכרטיסיית העזר <span class="r-ref">R1</span> חיווט 3: נגד ההורדה חייב להיות בין <strong>רגל 2 ל-GND</strong>, לא בין 5 V ל-GND.</li>
+    <li><strong>הסיבה הנפוצה ביותר:</strong> נגד ההורדה של 10 קילו-אוהם במקום הלא נכון. נגד ההורדה חייב להיות בין <strong>רגל 2 ל-GND</strong>, לא בין 5 V ל-GND.</li>
     <li><strong>אם הכפתור עדיין לא עובד אחרי בדיקת מיקום הנגד, קוראים למורה.</strong></li>
   </ul>
 </div>

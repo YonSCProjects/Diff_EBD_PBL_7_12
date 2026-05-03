@@ -12,7 +12,7 @@
 
 <div class="header">
   <div class="milestone-badge">Project #1 — Light Signals: Milestone 4 of 5</div>
-  <h1>Add the button, pick its behaviour</h1>
+  <h1><span class="section-icon">🏁</span>Add the button, pick its behaviour</h1>
   <div class="subtitle">Project 1 • Light Signals</div>
 </div>
 
@@ -20,22 +20,22 @@
 In this milestone you add a push-button and pick what it does (3 options). Then use Claude Code to change your sketch accordingly.
 </div>
 
-<h2>Step 1 — Wire the button</h2>
+<h2><span class="section-icon">🔌</span>Step 1 — Wire the button</h2>
 
 <p>Button wiring: button straddles the centre gap, pin A to 5 V, pin B to Arduino pin 2, and a 10 kΩ pull-down resistor from pin 2 to GND. The LEDs you already have on the breadboard stay wired — you are only adding the button.</p>
 
 <div class="warning">
-  <strong>Pull-down reminder</strong>
+  <strong><span class="section-icon">⚠️</span>Pull-down reminder</strong>
   <p>The 10 kΩ resistor goes between pin 2 and GND. Not between 5 V and GND.</p>
-  <p class="li-detail">Getting this wrong causes the Arduino to reset.</p>
+  <p>Getting this wrong causes the Arduino to reset.</p>
 </div>
 
 <figure class="wiring-figure">
   <img src="../images/w5_three_leds_and_button_pulldown_breadboard.svg" alt="Breadboard diagram: three LEDs on pins 9, 10, 11 with 220 Ω resistors, plus a push-button with 10 kΩ pull-down on pin 2.">
-  <figcaption><strong>Option B (chasing) shown above</strong> — three LEDs + button. <strong>Option A (alternating):</strong> same button wiring, but only LEDs 1 and 2 — see R1 Wiring 3. <strong>Option C (breathing):</strong> same button wiring, but only LED 1. In all three cases the button section is identical: 5 V → button → pin 2, with 10 kΩ pull-down to GND.</figcaption>
+  <figcaption><strong>Button section (all options):</strong> 5 V → button → pin 2, with 10 kΩ pull-down to GND. Option A: LEDs 1–2. Option B: LEDs 1–3 (shown). Option C: LED 1 only.</figcaption>
 </figure>
 
-<h2>Step 2 — Pick ONE button behaviour</h2>
+<h2><span class="section-icon">📋</span>Step 2 — Pick ONE button behaviour</h2>
 
 <div class="choice-point">
   <strong>Behaviour A — Toggle</strong>
@@ -54,11 +54,11 @@ In this milestone you add a push-button and pick what it does (3 options). Then 
   </div>
 </div>
 
-<p>Write your choice here: <span style="border-bottom: 1pt solid #000; display: inline-block; min-width: 60pt;">&nbsp;</span></p>
+<p>Write your choice here: <span class="fill-blank">&nbsp;</span></p>
 
-<h2>Step 3 — Use Claude Code to make the button do your chosen behaviour</h2>
+<h2><span class="section-icon">💻</span>Step 3 — Use Claude Code to make the button do your chosen behaviour</h2>
 
-<p>Same (a)(b)(c) discipline as Milestone 3. Describe the behaviour you want first. Then ask Claude Code to help you modify the sketch.</p>
+<p>Same (a)(b)(c) discipline as before. Describe the behaviour you want first. Then ask Claude Code to help you modify the sketch.</p>
 
 <div class="prompt-template">(a) What I want to happen:
 [describe your chosen behaviour — A, B, or C — in your own words]
@@ -70,12 +70,12 @@ In this milestone you add a push-button and pick what it does (3 options). Then 
 [what you have already looked at or changed]</div>
 
 <div class="expected">
-  <strong>What you should see</strong>
+  <strong><span class="section-icon">👀</span>What you should see</strong>
   The button changes your pattern in the way you picked. Behaviour A: pressing starts and stops. Behaviour B: pressing cycles through patterns. Behaviour C: pressing makes it faster. You can show the behaviour to the teacher and say "this is what I built."
 </div>
 
 <div class="done-when">
-  <strong>Done when</strong>
+  <strong><span class="section-icon">✅</span>Done when</strong>
   <ul>
     <li>The button is wired with the 10 kΩ pull-down in the correct position</li>
     <li>You chose a button behaviour (A, B, or C)</li>
@@ -85,7 +85,7 @@ In this milestone you add a push-button and pick what it does (3 options). Then 
 </div>
 
 <div class="stuck">
-  <strong>Stuck?</strong>
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
   Button does nothing? First check the pull-down position. If wiring is correct but the button still does not work, the sketch probably needs <code>pinMode(BUTTON, INPUT);</code> in setup() and a <code>digitalRead()</code> in the loop. Ask Claude Code to check your code for that. If Claude's answer does not help, call the teacher.
 </div>
 

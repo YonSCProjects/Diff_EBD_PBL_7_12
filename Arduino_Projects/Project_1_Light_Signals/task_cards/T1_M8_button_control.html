@@ -12,7 +12,7 @@
 
 <div class="header">
   <div class="milestone-badge celebration">Project #1 — Light Signals: Milestone 8 of 8 • Final milestone</div>
-  <h1>Upload the button-controlled sketch</h1>
+  <h1><span class="section-icon">🏁</span>Upload the button-controlled sketch</h1>
   <div class="subtitle">Project 1 • Light Signals</div>
 </div>
 
@@ -20,7 +20,7 @@
 In this milestone you upload code that uses the button: pressing it switches which LED is on. Your first interactive Arduino project — input (the button) changes output (the LEDs).
 </div>
 
-<h2>What to do</h2>
+<h2><span class="section-icon">📋</span>What to do</h2>
 
 <ul class="checklist">
   <li>Open the file <code>04_button_control.ino</code> in the Arduino IDE.<span class="li-detail">It is in your Project 1 folder under <code>ino_files/04_button_control/</code>.</span></li>
@@ -33,7 +33,7 @@ In this milestone you upload code that uses the button: pressing it switches whi
 </ul>
 
 <div class="screen-only">
-<h2>The sketch you are uploading</h2>
+<h2><span class="section-icon">💻</span>The sketch you are uploading</h2>
 
 <pre class="code-block"><span class="filename">04_button_control.ino</span>// A push-button controls which of two LEDs is on.
 
@@ -65,12 +65,12 @@ void loop() {
 </div>
 
 <div class="expected">
-  <strong>What you should see</strong>
+  <strong><span class="section-icon">👀</span>What you should see</strong>
   With the button NOT pressed: LED 1 (on pin 9) is on, LED 2 (on pin 10) is off. When you press and hold the button: LED 1 turns off and LED 2 turns on. Releasing goes back to LED 1 on. The switch happens instantly when you press and again when you release.
 </div>
 
 <div class="done-when">
-  <strong>Done when</strong>
+  <strong><span class="section-icon">✅</span>Done when</strong>
   <ul>
     <li>Pressing the button reliably switches which LED is lit</li>
     <li>Releasing the button switches it back</li>
@@ -78,14 +78,14 @@ void loop() {
   </ul>
 </div>
 
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck? Button does nothing?</strong>
+  The most common cause is the 10 kΩ pull-down resistor being in the wrong place. The pull-down must be between <strong>pin 2 and GND</strong>, not between 5 V and GND. If the button still does nothing after you verify the pull-down position, call the teacher.
+</div>
+
 <div class="celebration">
   <span class="title">🎉 You just completed Project 1!</span>
   You wired a breadboard from scratch. You uploaded four sketches. You built an interactive circuit with LEDs and a button. Ask the teacher for a photo of your finished Project 1 build (if you want one) — this is real electrical engineering and you did it.
-</div>
-
-<div class="stuck">
-  <strong>Stuck? Button does nothing?</strong>
-  The most common cause is the 10 kΩ pull-down resistor being in the wrong place. The pull-down must be between <strong>pin 2 and GND</strong>, not between 5 V and GND. If the button still does nothing after you verify the pull-down position, call the teacher.
 </div>
 
 </div>

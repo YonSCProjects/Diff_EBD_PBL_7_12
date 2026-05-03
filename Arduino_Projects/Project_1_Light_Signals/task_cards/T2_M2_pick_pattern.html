@@ -12,7 +12,7 @@
 
 <div class="header">
   <div class="milestone-badge">Project #1 — Light Signals: Milestone 2 of 5</div>
-  <h1>Pick your pattern</h1>
+  <h1><span class="section-icon">🏁</span>Pick your pattern</h1>
   <div class="subtitle">Project 1 • Light Signals</div>
 </div>
 
@@ -20,7 +20,7 @@
 In this milestone you pick a light pattern — alternating, chasing, or breathing — and wire the LEDs you need. Your choice, no "correct" answer.
 </div>
 
-<h2>Pick ONE of these three patterns</h2>
+<h2><span class="section-icon">📋</span>Pick ONE of these three patterns</h2>
 
 <div class="choice-point">
   <strong>Option A — Alternating pattern (2 LEDs)</strong>
@@ -40,27 +40,27 @@ In this milestone you pick a light pattern — alternating, chasing, or breathin
   <strong>Option C — Breathing pattern (1 LED, PWM fade)</strong>
   <div class="option">
     <strong>What it looks like:</strong> one LED fades smoothly in and out — it gets brighter, then dimmer, then brighter again, forever.<br>
-    <strong>What you wire:</strong> nothing new. Use only the first LED from Milestone 1, on pin 9.<br>
+    <strong>What you wire:</strong> nothing new. Use only the LED already wired on pin 9.<br>
     <strong>Starter sketch:</strong> <code>ino_files/T2_breathing_starter/T2_breathing_starter.ino</code>
   </div>
 </div>
 
-<h2>What to do</h2>
+<h2><span class="section-icon">📋</span>What to do</h2>
 
 <ul class="checklist">
-  <li>Pick A, B, or C. Write your choice here: <span style="border-bottom: 1pt solid #000; display: inline-block; min-width: 60pt;">&nbsp;</span></li>
+  <li>Pick A, B, or C. Write your choice here: <span class="fill-blank">&nbsp;</span></li>
   <li>Wire any additional LEDs your chosen pattern needs. (Option A: one more LED on pin 10. Option B: two more LEDs on pins 10 and 11. Option C: no new wiring.)</li>
   <li>Open the starter sketch for your choice in the Arduino IDE.</li>
   <li>Click Upload and watch.</li>
 </ul>
 
 <div class="expected">
-  <strong>What you should see</strong>
+  <strong><span class="section-icon">👀</span>What you should see</strong>
   The pattern you chose is running on your breadboard. For Option A: two LEDs alternating. For Option B: three LEDs chasing. For Option C: one LED breathing in and out. Take a few seconds to watch it — in the next milestone you will modify it to be faster, slower, or different.
 </div>
 
 <div class="done-when">
-  <strong>Done when</strong>
+  <strong><span class="section-icon">✅</span>Done when</strong>
   <ul>
     <li>You have written your choice (A, B, or C) on this card</li>
     <li>The hardware is wired for your chosen pattern</li>
@@ -69,7 +69,7 @@ In this milestone you pick a light pattern — alternating, chasing, or breathin
 </div>
 
 <div class="stuck">
-  <strong>Stuck?</strong>
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
   Pattern not running? Option B (chasing) needs THREE LEDs wired, not two. Option C (breathing) uses only the first LED but the sketch uses <code>analogWrite</code> which is different from <code>digitalWrite</code> — if the LED just stays at full brightness, the sketch may have failed to upload. Call the teacher if you need help.
 </div>
 

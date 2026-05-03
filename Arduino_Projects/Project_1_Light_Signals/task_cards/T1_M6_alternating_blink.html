@@ -12,7 +12,7 @@
 
 <div class="header">
   <div class="milestone-badge">Project #1 — Light Signals: Milestone 6 of 8</div>
-  <h1>Upload the alternating-blink sketch</h1>
+  <h1><span class="section-icon">🏁</span>Upload the alternating-blink sketch</h1>
   <div class="subtitle">Project 1 • Light Signals</div>
 </div>
 
@@ -20,7 +20,7 @@
 In this milestone you upload code that blinks the two LEDs in alternation — when one is on, the other is off.
 </div>
 
-<h2>What to do</h2>
+<h2><span class="section-icon">📋</span>What to do</h2>
 
 <ul class="checklist">
   <li>Open the file <code>03_blink_alternating.ino</code> in the Arduino IDE.<span class="li-detail">It is in your Project 1 folder under <code>ino_files/03_blink_alternating/</code>.</span></li>
@@ -30,7 +30,7 @@ In this milestone you upload code that blinks the two LEDs in alternation — wh
 </ul>
 
 <div class="screen-only">
-<h2>The sketch you are uploading</h2>
+<h2><span class="section-icon">💻</span>The sketch you are uploading</h2>
 
 <pre class="code-block"><span class="filename">03_blink_alternating.ino</span>// Blinks two external LEDs in alternation.
 // When one is on, the other is off.
@@ -57,12 +57,12 @@ void loop() {
 </div>
 
 <div class="expected">
-  <strong>What you should see</strong>
+  <strong><span class="section-icon">👀</span>What you should see</strong>
   Your two LEDs alternate — LED 1 on while LED 2 is off, then LED 2 on while LED 1 is off, repeating about once per second. If both LEDs stay on all the time, or both stay off, or only one works, see the stuck section below.
 </div>
 
 <div class="done-when">
-  <strong>Done when</strong>
+  <strong><span class="section-icon">✅</span>Done when</strong>
   <ul>
     <li>Both LEDs are blinking in alternation</li>
     <li>"Done uploading" showed in green in the IDE</li>
@@ -70,8 +70,13 @@ void loop() {
 </div>
 
 <div class="stuck">
-  <strong>Stuck?</strong>
-  <strong>Both LEDs stay on all the time:</strong> one of them is probably wired to 5 V instead of to a digital pin. <strong>Only one LED works:</strong> the other is wired backwards (flip it) or its resistor is not connected. <strong>Neither LED works:</strong> Upload may have failed — look for red error text in the IDE. Call the teacher if you cannot figure it out.
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li><strong>If both LEDs stay on all the time:</strong> one of them is probably wired to 5 V instead of a digital pin.</li>
+    <li><strong>If only one LED works:</strong> the other is wired backwards (flip it) or its resistor is not connected.</li>
+    <li><strong>If neither LED works:</strong> Upload may have failed — look for red error text in the IDE.</li>
+    <li>If still stuck, call the teacher.</li>
+  </ul>
 </div>
 
 </div>

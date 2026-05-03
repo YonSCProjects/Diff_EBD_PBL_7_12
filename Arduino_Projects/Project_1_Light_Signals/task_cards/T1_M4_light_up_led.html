@@ -12,7 +12,7 @@
 
 <div class="header">
   <div class="milestone-badge">Project #1 — Light Signals: Milestone 4 of 8</div>
-  <h1>Upload the sketch and light up the LED</h1>
+  <h1><span class="section-icon">🏁</span>Upload the sketch and light up the LED</h1>
   <div class="subtitle">Project 1 • Light Signals</div>
 </div>
 
@@ -20,7 +20,7 @@
 In this milestone you upload a sketch that blinks the LED you wired — the moment "something I wired" responds to "code I uploaded."
 </div>
 
-<h2>What to do</h2>
+<h2><span class="section-icon">📋</span>What to do</h2>
 
 <ul class="checklist">
   <li>Open the file <code>02_blink_external.ino</code> in the Arduino IDE.<span class="li-detail">It is in your Project 1 folder under <code>ino_files/02_blink_external/</code>.</span></li>
@@ -31,7 +31,7 @@ In this milestone you upload a sketch that blinks the LED you wired — the mome
 </ul>
 
 <div class="screen-only">
-<h2>The sketch you are uploading</h2>
+<h2><span class="section-icon">💻</span>The sketch you are uploading</h2>
 
 <pre class="code-block"><span class="filename">02_blink_external.ino</span>// Blinks the external LED wired to digital pin 9.
 
@@ -50,12 +50,12 @@ void loop() {
 </div>
 
 <div class="expected">
-  <strong>What you should see</strong>
-  Your external LED on the breadboard is blinking on and off about once per second. This is the moment code you uploaded makes something physical happen on your own wiring. Take a second to notice that the LED on the Arduino board (the "L" LED from Milestone 2) has stopped blinking fast — because you replaced that sketch with this one.
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  Your external LED on the breadboard is blinking on and off about once per second. This is the moment code you uploaded makes something physical happen on your own wiring. Take a second to notice that the "L" LED on the Arduino board has stopped blinking fast — because you replaced that sketch with this one.
 </div>
 
 <div class="done-when">
-  <strong>Done when</strong>
+  <strong><span class="section-icon">✅</span>Done when</strong>
   <ul>
     <li>The external LED on your breadboard is blinking once per second</li>
     <li>The Arduino IDE shows "Done uploading" in green</li>
@@ -63,11 +63,13 @@ void loop() {
 </div>
 
 <div class="stuck">
-  <strong>Stuck? LED not blinking? Try these first:</strong>
-  1. <strong>Check the LED orientation.</strong> The long leg (+) goes to the resistor and then to pin 9. The short leg (−) goes to GND. If you have them backwards, the LED will not light. Flip the LED.<br>
-  2. <strong>Check the resistor.</strong> The resistor must be in series — between pin 9 and the LED's long leg — not just stuck somewhere in the breadboard.<br>
-  3. <strong>Check that Upload actually worked.</strong> Look for the green "Done uploading" message at the bottom of the IDE. If you see red error text instead, the upload did not happen.<br>
-  4. <strong>If still stuck, call the teacher.</strong> This is the first wiring + upload milestone and it is normal to need help.
+  <strong><span class="section-icon">🪄</span>Stuck? LED not blinking?</strong>
+  <ul>
+    <li><strong>Check the LED orientation.</strong> The long leg (+) goes to the resistor and then to pin 9. The short leg (−) goes to GND. If they are backwards, flip the LED.</li>
+    <li><strong>Check the resistor.</strong> The resistor must be in series — between pin 9 and the LED's long leg — not just stuck somewhere in the breadboard.</li>
+    <li><strong>Check that Upload worked.</strong> Look for the green "Done uploading" message at the bottom of the IDE. Red error text means the upload did not happen.</li>
+    <li>If still stuck, call the teacher.</li>
+  </ul>
 </div>
 
 </div>

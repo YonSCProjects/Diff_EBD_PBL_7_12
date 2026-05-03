@@ -417,14 +417,24 @@ p { margin: 6pt 0; }
   letter-spacing: 0.5pt;
 }
 
+/* Each scenario in the stuck list gets its own airy white card with a
+ * soft gold border. The cards stack with breathing room between them so
+ * an ADHD/EBD student can scan one scenario at a time without a wall-of-
+ * text feel. The list-marker is dropped because the card itself carries
+ * the visual separation. */
 .stuck ul {
-  margin: 6pt 0 2pt 0;
-  padding-inline-start: 22pt;
+  list-style: none;
+  margin: 10pt 0 2pt 0;
+  padding-inline-start: 0;
 }
 
 .stuck ul li {
-  margin: 3pt 0;
-  line-height: 1.45;
+  background: #fff;
+  border: 1pt solid #e8d088;
+  border-radius: 4pt;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+  line-height: 1.5;
 }
 
 .stuck ul li strong {

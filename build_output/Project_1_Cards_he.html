@@ -422,14 +422,24 @@ p { margin: 6pt 0; }
   letter-spacing: 0.5pt;
 }
 
+/* Each scenario in the stuck list gets its own airy white card with a
+ * soft gold border. The cards stack with breathing room between them so
+ * an ADHD/EBD student can scan one scenario at a time without a wall-of-
+ * text feel. The list-marker is dropped because the card itself carries
+ * the visual separation. */
 .stuck ul {
-  margin: 6pt 0 2pt 0;
-  padding-inline-start: 22pt;
+  list-style: none;
+  margin: 10pt 0 2pt 0;
+  padding-inline-start: 0;
 }
 
 .stuck ul li {
-  margin: 3pt 0;
-  line-height: 1.45;
+  background: #fff;
+  border: 1pt solid #e8d088;
+  border-radius: 4pt;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+  line-height: 1.5;
 }
 
 .stuck ul li strong {
@@ -2911,8 +2921,10 @@ void loop() {
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  <p>זה שלב החיווט הקשה ביותר בפרויקט 1. המורה מצפה לעזור בשלב זה — קוראים לו.</p>
-  <p><strong>אם הארדואינו ממשיך להתאתחל או להיכבות,</strong> כמעט בטוח שנגד ההורדה בצד הלא נכון — מוציאים את ה-USB, מתקנים את הנגד, ומחברים בחזרה.</p>
+  <ul>
+    <li>זה שלב החיווט הקשה ביותר בפרויקט 1. המורה מצפה לעזור בשלב זה — קוראים לו.</li>
+    <li><strong>אם הארדואינו ממשיך להתאתחל או להיכבות,</strong> כמעט בטוח שנגד ההורדה בצד הלא נכון — מוציאים את ה-USB, מתקנים את הנגד, ומחברים בחזרה.</li>
+  </ul>
 </div>
 
 </div>
@@ -3203,7 +3215,11 @@ Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
 
 <div class="stuck">
   <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  החיווט הוא אותה תבנית כמו בשלבים 3 ו-5 — רק שורה אחת הצידה, לרגל 11. אם אחד מהלדים הקודמים הפסיק לעבוד בזמן שחיווטתם את החדש, כנראה שג'אמפר התנתק — מחברים אותו מחדש. אם צריך עזרה, קוראים למורה.
+  <ul>
+    <li>אותה תבנית חיווט כמו לדים 1 ו-2 — רק שורה אחת הצידה, לרגל 11.</li>
+    <li><strong>אם אחד מהלדים הקודמים הפסיק לעבוד</strong> בזמן שחיווטתם את החדש, כנראה שג'אמפר התנתק — מחברים אותו מחדש.</li>
+    <li>אם צריך עזרה, קוראים למורה.</li>
+  </ul>
 </div>
 
 </div>
@@ -3379,8 +3395,12 @@ ________________________________</div>
 </div>
 
 <div class="stuck">
-  <strong><span class="section-icon">🪄</span>תקועים?</strong>
-  הכפתור לא עושה כלום? קודם כל בודקים את מיקום נגד ההורדה. אם החיווט נכון אבל הכפתור עדיין לא עובד, כנראה שהקוד צריך <code>pinMode(BUTTON, INPUT);</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">setup()</span> ו-<code>digitalRead()</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">loop()</span>. אפשר לבקש מקלוד קוד לבדוק את הקוד בשביל זה. אם התשובה של קלוד לא עוזרת, קוראים למורה.
+  <strong><span class="section-icon">🪄</span>תקועים? הכפתור לא עושה כלום?</strong>
+  <ul>
+    <li><strong>קודם כל בודקים את מיקום נגד ההורדה</strong> — בין רגל 2 ל-GND.</li>
+    <li>אם החיווט נכון אבל הכפתור עדיין לא עובד, כנראה שהקוד צריך <code>pinMode(BUTTON, INPUT);</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">setup()</span> ו-<code>digitalRead()</code> ב-<span dir="ltr" style="unicode-bidi: isolate;">loop()</span>. אפשר לבקש מקלוד קוד לבדוק את הקוד בשביל זה.</li>
+    <li>אם התשובה של קלוד לא עוזרת, קוראים למורה.</li>
+  </ul>
 </div>
 
 </div>

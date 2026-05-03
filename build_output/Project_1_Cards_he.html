@@ -43,25 +43,33 @@ body {
   margin-bottom: 14pt;
 }
 
+/* Card-locator line — the very-top descriptive string that lets a teacher /
+ * student find the right card at a glance. Format:
+ *   "פרויקט #1 — אותות אור: שלב 1 מתוך 8"
+ *   "Project #1 — Light Signals: Milestone 1 of 8"
+ * Quiet by design (small, dimmed). The card's identity comes from the h1
+ * below; this line just answers "which card is this?". */
 .milestone-badge {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  padding: 4pt 12pt;
-  font-size: 11pt;
+  display: block;
+  font-size: 16pt;
   font-weight: bold;
-  letter-spacing: 1pt;
-  text-transform: uppercase;
+  color: #222;
+  letter-spacing: 0.3pt;
   margin-bottom: 8pt;
 }
 
 .milestone-badge.celebration {
-  background: #d4a017;
-  color: #fff;
+  color: #8b6000;
+}
+
+/* Subtitle now lives inside the .milestone-badge locator string, so the
+ * separate subtitle line is redundant — hide it. */
+.subtitle {
+  display: none;
 }
 
 h1 {
-  font-size: 26pt;
+  font-size: 22pt;
   margin: 4pt 0 6pt 0;
   line-height: 1.2;
 }
@@ -1073,22 +1081,22 @@ code {
 
 .card-id {
   position: absolute;
-  top: 6mm;
-  inset-inline-end: 6mm;
-  width: 44pt;
-  height: 44pt;
-  border: 2.5pt solid #000;
+  top: 5mm;
+  left: 5mm;
+  width: 30pt;
+  height: 30pt;
+  border: 2pt solid #000;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15pt;
+  font-size: 11pt;
   font-weight: bold;
   background: #fff;
   direction: ltr;
   unicode-bidi: isolate;
   font-family: Arial, sans-serif;
-  letter-spacing: 0.5pt;
+  letter-spacing: 0.3pt;
   z-index: 10;
 }
 
@@ -2459,7 +2467,7 @@ Arduino 5 V ──────────────┬─── Button pin A
 <div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 1 מתוך 8</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 1 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>פותחים את עמדת העבודה ומחברים את הארדואינו</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -2506,7 +2514,7 @@ Arduino 5 V ──────────────┬─── Button pin A
 <div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 2 מתוך 8</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 2 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>מעלים את הקוד הראשון</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -2575,7 +2583,7 @@ void loop() {
 <div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 3 מתוך 8</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 3 מתוך 8</div>
   <h1><span class="section-icon">🔌</span>מחווטים את הלד החיצוני הראשון</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -2636,7 +2644,7 @@ void loop() {
 <div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 4 מתוך 8</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 4 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>מעלים את הקוד ומאירים את הלד</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -2706,7 +2714,7 @@ void loop() {
 <div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 5 מתוך 8</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 5 מתוך 8</div>
   <h1><span class="section-icon">🔌</span>מוסיפים לד שני</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -2769,7 +2777,7 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
 <div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 6 מתוך 8</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 6 מתוך 8</div>
   <h1><span class="section-icon">🏁</span>מעלים את קוד ההבהוב לסירוגין</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -2845,7 +2853,7 @@ void loop() {
 <div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 7 מתוך 8</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 7 מתוך 8</div>
   <h1><span class="section-icon">🔌</span>מחווטים את הכפתור</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -2915,7 +2923,7 @@ void loop() {
 <div class="card-id">V1</div>
 
 <div class="header">
-  <div class="milestone-badge celebration">שלב 8 מתוך 8 • השלב האחרון</div>
+  <div class="milestone-badge celebration">פרויקט #1 — אותות אור: שלב 8 מתוך 8 • השלב האחרון</div>
   <h1><span class="section-icon">🏁</span>מעלים את הקוד שנשלט בכפתור</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -3003,7 +3011,7 @@ void loop() {
 <div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 1 מתוך 5</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 1 מתוך 5</div>
   <h1><span class="section-icon">🏁</span>הפעלה ראשונית — עמדת עבודה, לד ראשון, העלאה ראשונה</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -3064,7 +3072,7 @@ void loop() {
 <div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 2 מתוך 5</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 2 מתוך 5</div>
   <h1><span class="section-icon">🏁</span>בוחרים תבנית</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -3135,7 +3143,7 @@ void loop() {
 <div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">אפשרות ב' (רדיפה) — חיווט נוסף</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: אפשרות ב' (רדיפה) — חיווט נוסף</div>
   <h1><span class="section-icon">🔌</span>מחווטים לד שלישי</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -3206,7 +3214,7 @@ Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
 <div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 3 מתוך 5</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 3 מתוך 5</div>
   <h1><span class="section-icon">💻</span>משנים את הקוד בעזרת קלוד קוד</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -3296,7 +3304,7 @@ _________________________________________________</div>
 <div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge">שלב 4 מתוך 5</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: שלב 4 מתוך 5</div>
   <h1><span class="section-icon">🔌</span>מוסיפים את הכפתור, בוחרים את התנהגותו</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -3383,7 +3391,7 @@ ________________________________</div>
 <div class="card-id">V2</div>
 
 <div class="header">
-  <div class="milestone-badge celebration">שלב 5 מתוך 5 • השלב האחרון</div>
+  <div class="milestone-badge celebration">פרויקט #1 — אותות אור: שלב 5 מתוך 5 • השלב האחרון</div>
   <h1><span class="section-icon">🏁</span>תבנית חתימה ותצוגה</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>
@@ -3452,7 +3460,7 @@ _________________________________________________</div>
 <div class="card-id">V3</div>
 
 <div class="header">
-  <div class="milestone-badge">מתכנן פרויקט</div>
+  <div class="milestone-badge">פרויקט #1 — אותות אור: מתכנן פרויקט</div>
   <h1><span class="section-icon">🏁</span>מעצבים את פרויקט 1 שלכם</h1>
   <div class="subtitle">פרויקט 1 • אותות אור</div>
 </div>

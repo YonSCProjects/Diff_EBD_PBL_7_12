@@ -152,6 +152,27 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 
 **Cascade evidence (2026-04-27):** A scripted cascade across the Project 1 Hebrew student-facing files (`task_cards_he/*.html`, `reference_cards_he/*.html`, `project_1_tutorial_he.html`, both `claude_code_channel_*_he.md` scaffolds) made 329 replacements — 299 noun-phrase substitutions plus 30 follow-on agreement fixes. The teacher-materials and program-overview files were intentionally untouched.
 
+### Pattern B6 — Unified component vocabulary: `רגל` for Arduino pins, `הלד` for the LED
+
+**Rule:** In all student-facing Hebrew cards, use `רגל` (not `פין`) for an Arduino pin, and `הלד` / `לד` (not `נורת ה-LED` / `נורת LED`) for the LED component. This is a fixed unified-vocabulary decision Yon stated explicitly on 2026-05-19: *"Use רגל in all cards instead of פין. Use הלד instead of נורת ה-LED in all cards."*
+
+**Why:** One word per concept keeps the student's working vocabulary minimal. `רגל` already serves for the LED's own legs and for the breadboard rows, so reusing it for the Arduino pin avoids introducing `פין` as a second term for "a thing you connect a wire to." `לד` is the short, established Israeli-maker word; `נורת ה-LED` is a longer, more clinical phrasing that also drags feminine gender agreement into otherwise-masculine sentences.
+
+**Gender note:** `נורה` / `נורת` is feminine, `לד` is masculine. Every replacement also flips agreement on adjacent adjectives, demonstratives, and predicate verbs:
+
+| Before (fem, נורה/נורת) | After (masc, לד) |
+|---|---|
+| `נורת ה-LED` | `הלד` |
+| `נורת LED אחת` | `לד אחד` |
+| `הנורה הראשונה` | `הלד הראשון` |
+| `נורת ה-LED ... מהבהבת` | `הלד ... מהבהב` |
+| `נורת ה-LED ... אמורה להאיר` | `הלד ... אמור להאיר` |
+| `שתי נורות ה-LED` (plural) | `שני הלדים` |
+| `פין דיגיטלי 9` | `רגל דיגיטלית 9` (פין masc → רגל fem: `דיגיטלי` → `דיגיטלית`) |
+| `פין 2` / `פין 10` | `רגל 2` / `רגל 10` |
+
+**Scope:** All Hebrew student-facing cards. Applied across T1_M3–T1_M8 on 2026-05-19. The `L`-marked built-in indicator LED on the Arduino board is a separate case — it stays `נורה המסומנת L` (see T1_M2), since it is a board indicator, not the project's LED component.
+
 ---
 
 ## Category C — Phrasing and idioms
@@ -296,6 +317,17 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 - `שקלוטד` → `שקלוד` (inserted ט)
 - `קןד` → `קוד` (ן instead of ו — shifted by one key)
 - `(א)ת(ב) ו (ג)` → `(א), (ב) ו-(ג)` (normalized punctuation/connectives)
+
+### Pattern F2 — Pasted "improved text" is plain text: map onto existing HTML, preserve markup
+
+**Rule:** When Yon pastes a card's "improved text," it is plain text with all HTML formatting stripped. Apply it as a text update onto the existing card structure — do NOT rewrite the HTML. Specifically: keep every existing `<strong>`, `<code>`, `<span>`, figure, and code-block; re-wrap the same emphasized phrase if its wording changed. The pasted text also carries paste artifacts to silently fix (per F1): detached prepositions where the one-letter prefix got split off by a space.
+
+**Why:** Yon's instruction on 2026-05-19 was *"just the text, no design changes."* The pasted block looks unformatted because the source tool stripped markup, not because Yon wants the bold/code styling removed. Detached `ב `/`ל ` prefixes (`מביטים ב סרגל`) are ungrammatical in Hebrew — the preposition is always a bound prefix — and are a copy-paste artifact, not intended text.
+
+**Examples:**
+- `מביטים ב סרגל הכלים` → `מביטים בסרגל הכלים` (attach the bound preposition)
+- `מביטים ב הלד` → `מביטים בלד` (ב + ה contracts; the ה is absorbed)
+- Pasted `הרגל הארוכה היא הרגל החיובית (+)` with no bold → keep the card's existing `<strong>הרגל הארוכה היא הרגל החיובית (+)</strong>` wrapper around the updated wording.
 
 ---
 

@@ -148,10 +148,16 @@ async function buildMergedPdf() {
         continue;
       }
       const page = await browser.newPage();
-      await page.setJavaScriptEnabled(false);
+      // card.js opens a window.prompt() for the student nickname; auto-dismiss
+      // it so page load doesn't block. The interactive indicator is print-hidden
+      // anyway, so dismissing has no effect on the PDF.
+      page.on('dialog', (d) => d.dismiss().catch(() => {}));
       await page.emulateMediaType('print');
       const url = 'file:///' + full.replace(/\\/g, '/');
       await page.goto(url, { waitUntil: 'load', timeout: 60000 });
+      // Wait for fonts to finish loading — otherwise a cold Chromium start
+      // can render with fallback metrics and reflow content onto extra pages.
+      await page.evaluate(() => document.fonts.ready);
       const buf = await page.pdf({
         format: 'A4',
         printBackground: true,

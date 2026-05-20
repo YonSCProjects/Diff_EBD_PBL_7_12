@@ -171,7 +171,7 @@ Patterns are organized by category: verb form, phrasing, lexical choices, visual
 | `פין דיגיטלי 9` | `רגל דיגיטלית 9` (פין masc → רגל fem: `דיגיטלי` → `דיגיטלית`) |
 | `פין 2` / `פין 10` | `רגל 2` / `רגל 10` |
 
-**Scope:** All Hebrew student-facing cards. Applied across T1_M3–T1_M8 on 2026-05-19. The `L`-marked built-in indicator LED on the Arduino board is a separate case — it stays `נורה המסומנת L` (see T1_M2), since it is a board indicator, not the project's LED component.
+**Scope:** All Hebrew student-facing cards, **including the built-in `L`-marked indicator LED on the Arduino board** (corrected 2026-05-19 after an initial carve-out attempt). The L indicator is also called `הלד` — render it as `הלד "L"` inline, or `הלד ... המסומן באות L` when the marker is being introduced for the first time. Do NOT use `נורה המסומנת L`. Applied across T1_M1, T1_M2, and T1_M3–T1_M8 on 2026-05-19.
 
 ---
 

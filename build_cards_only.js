@@ -16,9 +16,14 @@ const path = require('path');
 const puppeteer = require('puppeteer');
 const { PDFDocument } = require('pdf-lib');
 
-const lang = process.argv[2];
-if (!['en', 'he'].includes(lang)) {
-  console.error('Usage: node build_cards_only.js <en|he>');
+// Args may be given in any order: a language (en|he) and an optional project
+// key (1|2). Defaults to project 1 for backward compatibility, so the original
+// `node build_cards_only.js he` invocation still builds Project 1.
+const args = process.argv.slice(2);
+const lang = args.find((a) => ['en', 'he'].includes(a));
+const projectKey = args.find((a) => ['1', '2'].includes(a)) || '1';
+if (!lang) {
+  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2]');
   process.exit(1);
 }
 
@@ -29,41 +34,86 @@ if (!fs.existsSync(OUT)) fs.mkdirSync(OUT);
 const isHe = lang === 'he';
 const suffix = isHe ? '_he' : '';
 
-const projectDir = path.join(ROOT, 'Arduino_Projects', 'Project_1_Light_Signals');
+const PROJECTS = {
+  '1': {
+    dir: 'Project_1_Light_Signals',
+    outBase: 'Project_1_Cards',
+    titleHe: 'פרויקט 1 — אותות אור: חוברת כרטיסיות (עזר ומשימה)',
+    titleEn: 'Project 1 — Light Signals: Cards Bundle (Reference + Task)',
+  },
+  '2': {
+    dir: 'Project_2_Reaction_Time_Game',
+    outBase: 'Project_2_Cards',
+    titleHe: 'פרויקט 2 — משחק זמן תגובה: חוברת כרטיסיות (עזר ומשימה)',
+    titleEn: 'Project 2 — Reaction-Time Game: Cards Bundle (Reference + Task)',
+  },
+};
+
+// Card render order per project. 'R:' stems live in reference_cards[_he];
+// 'T:' stems live in task_cards[_he]. The language suffix is applied below.
+const CARD_STEMS = {
+  '1': [
+    'R:R0_breadboard_basics',
+    'R:R1_wiring_reference',
+    'R:R2_stuck_protocol',
+    'R:R3_claude_code_prompts',
+    'R:R4_safety_reminder',
+    'R:R5_sketch_index',
+    'T:T1_M1_setup_workspace',
+    'T:T1_M2_first_upload',
+    'T:T1_M3_wire_first_led',
+    'T:T1_M4_light_up_led',
+    'T:T1_M5_add_second_led',
+    'T:T1_M6_alternating_blink',
+    'T:T1_M7_wire_button',
+    'T:T1_M8_button_control',
+    'T:T2_M1_startup',
+    'T:T2_M2_pick_pattern',
+    'T:T2_M2b_wire_third_led',
+    'T:T2_M3_claude_code_level2',
+    'T:T2_M4_button_behavior',
+    'T:T2_M5_signature_pattern',
+    'T:T3_project_planner',
+  ],
+  '2': [
+    'R:R0_breadboard_basics',
+    'R:R1_wiring_reference',
+    'R:R2_stuck_protocol',
+    'R:R3_claude_code_prompts',
+    'R:R4_safety_reminder',
+    'R:R5_sketch_index',
+    'T:T1_M1_wire_led_and_button',
+    'T:T1_M2_upload_wait_flash_measure',
+    'T:T1_M3_play_five_rounds',
+    'T:T1_M4_add_buzzer',
+    'T:T1_M5_upload_buzzer_sketch',
+    'T:T1_M6_record_fastest_time',
+    'T:T2_M1_startup',
+    'T:T2_M2_pick_feedback_mode',
+    'T:T2_M2b_wire_three_leds',
+    'T:T2_M3_pick_difficulty_and_modify',
+    'T:T2_M4_upload_test_tune',
+    'T:T2_M5_signature_game',
+    'T:T3_project_planner',
+  ],
+};
+
+const P = PROJECTS[projectKey];
+const projectDir = path.join(ROOT, 'Arduino_Projects', P.dir);
 const refDir = path.join(projectDir, isHe ? 'reference_cards_he' : 'reference_cards');
 const taskDir = path.join(projectDir, isHe ? 'task_cards_he' : 'task_cards');
 
-const cardOrder = [
-  [refDir, `R0_breadboard_basics${suffix}.html`],
-  [refDir, `R1_wiring_reference${suffix}.html`],
-  [refDir, `R2_stuck_protocol${suffix}.html`],
-  [refDir, `R3_claude_code_prompts${suffix}.html`],
-  [refDir, `R4_safety_reminder${suffix}.html`],
-  [refDir, `R5_sketch_index${suffix}.html`],
-  [taskDir, `T1_M1_setup_workspace${suffix}.html`],
-  [taskDir, `T1_M2_first_upload${suffix}.html`],
-  [taskDir, `T1_M3_wire_first_led${suffix}.html`],
-  [taskDir, `T1_M4_light_up_led${suffix}.html`],
-  [taskDir, `T1_M5_add_second_led${suffix}.html`],
-  [taskDir, `T1_M6_alternating_blink${suffix}.html`],
-  [taskDir, `T1_M7_wire_button${suffix}.html`],
-  [taskDir, `T1_M8_button_control${suffix}.html`],
-  [taskDir, `T2_M1_startup${suffix}.html`],
-  [taskDir, `T2_M2_pick_pattern${suffix}.html`],
-  [taskDir, `T2_M2b_wire_third_led${suffix}.html`],
-  [taskDir, `T2_M3_claude_code_level2${suffix}.html`],
-  [taskDir, `T2_M4_button_behavior${suffix}.html`],
-  [taskDir, `T2_M5_signature_pattern${suffix}.html`],
-  [taskDir, `T3_project_planner${suffix}.html`],
-];
+const cardOrder = CARD_STEMS[projectKey].map((stem) => {
+  const [kind, name] = stem.split(':');
+  const dir = kind === 'R' ? refDir : taskDir;
+  return [dir, `${name}${suffix}.html`];
+});
 
-const outName = `Project_1_Cards${suffix}`;
+const outName = `${P.outBase}${suffix}`;
 const outHtml = path.join(OUT, `${outName}.html`);
 const outPdf = path.join(OUT, `${outName}.pdf`);
 
-const pageTitle = isHe
-  ? 'פרויקט 1 — אותות אור: חוברת כרטיסיות (עזר ומשימה)'
-  : 'Project 1 — Light Signals: Cards Bundle (Reference + Task)';
+const pageTitle = isHe ? P.titleHe : P.titleEn;
 
 function buildMergedHtml() {
   console.log(`[HTML] Merging ${cardOrder.length} cards into ${outHtml}`);

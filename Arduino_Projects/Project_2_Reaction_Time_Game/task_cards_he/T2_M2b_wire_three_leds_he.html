@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית ניווט פרויקט 2 — שלב 2ב': מחווטים את שלושת הלדים (רק במצב א')</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<script src="../task_cards/card.js" defer></script>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #2 — משחק זמן תגובה: שלב 2ב' (מצב א') — חיווט נוסף</div>
+  <h1><span class="section-icon">🔌</span>מחווטים את שלושת הלדים</h1>
+  <div class="subtitle">פרויקט 2 • משחק זמן תגובה</div>
+</div>
+
+<div class="why">
+כרטיסייה זו רלוונטית רק אם בחרתם <strong>מצב א' — שלושה לדים</strong>. מוסיפים עוד שני לדים: בינוני על רגל 10 ואיטי על רגל 11 — אותה תבנית חיווט כמו הלד שכבר יש לכם על רגל 9.
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>אפשר לדלג אם בחרתם מצב ב' או מצב ג'.</strong>
+  <p>מצב ב' (זמזם) ומצב ג' (מסך טורי) לא צריכים לדים נוספים — החיווט שלכם כבר מוכן. עוברים ישר לשלב 3.</p>
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בוחרים עוד <strong>שני לדים</strong> ממגש החלקים — <strong>בשני צבעים שונים</strong> מהלד הראשון (מומלץ צהוב לבינוני ואדום לאיטי).</li>
+  <li>בוחרים עוד <strong>שני נגדים של 220 אוהם</strong> (פסים: <strong>אדום · אדום · חום</strong>) — אחד לכל לד.</li>
+  <li><strong>הלד הבינוני:</strong> מכניסים אותו לברדבורד, טור אחד הצידה מהלד הראשון. כל רגל בטור שונה.</li>
+  <li>מחברים את הרגל הארוכה (+) של הלד הבינוני ל<strong>רגל דיגיטלית 10</strong> דרך נגד 220 אוהם, ואת הרגל הקצרה (−) ל-<strong>GND</strong>.</li>
+  <li><strong>הלד האיטי:</strong> מכניסים אותו לברדבורד, טור אחד הצידה מהלד הבינוני. כל רגל בטור שונה.</li>
+  <li>מחברים את הרגל הארוכה (+) של הלד האיטי ל<strong>רגל דיגיטלית 11</strong> דרך נגד 220 אוהם, ואת הרגל הקצרה (−) ל-<strong>GND</strong>.</li>
+  <li>בודקים שהלד והכפתור מהשלבים הקודמים עדיין מחווטים — לא נוגעים בהם.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">Arduino pin 9  ───[220 Ω]───┬─── LED fast (green) long leg
+                           ▼
+                  LED fast short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED medium (yellow) long leg
+                           ▼
+                  LED medium short leg ─── Arduino GND
+
+Arduino pin 11 ───[220 Ω]───┬─── LED slow (red) long leg
+                           ▼
+                  LED slow short leg ─── Arduino GND</pre>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_03_three_leds_button_buzzer_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים זה לצד זה — רגל 9 דרך נגד 220 אוהם ללד המהיר (ירוק), רגל 10 דרך נגד 220 אוהם ללד הבינוני (צהוב), רגל 11 דרך נגד 220 אוהם ללד האיטי (אדום), כל הרגליים הקצרות ל-GND. הכפתור והזמזם נשארים במקומם.">
+  <figcaption><strong>רגל 9 ← 220 אוהם ← לד מהיר (ירוק)</strong> · <strong>רגל 10 ← 220 אוהם ← לד בינוני (צהוב)</strong> · <strong>רגל 11 ← 220 אוהם ← לד איטי (אדום)</strong>. כל הרגליים הקצרות ← <strong>GND</strong>. אותה תבנית, שלוש רגליים.</figcaption>
+</figure>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>שלושה לדים בשלושה צבעים שונים, זה לצד זה בברדבורד, כל אחד עם נגד 220 אוהם משלו לרגל שונה (9, 10, 11). הכפתור עדיין במקומו.</p>
+  <p class="expected-note"><strong>אף לד לא מאיר עדיין</strong> — עוד לא שינינו את הקוד. הקוד שמאיר את הלד המתאים לפי מהירות התגובה מגיע בשלב 3.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>הלד הבינוני מחובר: הרגל הארוכה דרך נגד 220 אוהם לרגל 10, הקצרה ל-GND</li>
+    <li>הלד האיטי מחובר: הרגל הארוכה דרך נגד 220 אוהם לרגל 11, הקצרה ל-GND</li>
+    <li>הלד הראשון עדיין מחווט לרגל 9, והכפתור עדיין במקומו</li>
+    <li>המורה אישר שהחיווט נכון</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li>אותה תבנית חיווט כמו הלד הראשון — רק טור אחד הצידה בכל פעם, לרגל 10 ואז לרגל 11.</li>
+    <li>שתי רגליים של אותו לד חייבות להיות ב<strong>טורים שונים</strong> — אם הן באותו טור, ייווצר קצר.</li>
+    <li><strong>אם הכפתור או הלד הראשון הפסיקו לעבוד</strong> בזמן החיווט, כנראה ג'אמפר התנתק — מחברים אותו מחדש.</li>
+    <li>אם צריך עזרה, קוראים למורה.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

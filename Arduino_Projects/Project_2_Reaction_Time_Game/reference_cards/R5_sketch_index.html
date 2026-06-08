@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reference Card R5 — Project 2 Sketch Index</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    right: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0;
+    font-size: 13pt;
+  }
+  th, td {
+    border: 1pt solid #000;
+    padding: 8pt 10pt;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eee;
+    font-weight: bold;
+  }
+  .file-name {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    background: #f4f4f4;
+    padding: 2pt 5pt;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">R5</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>Which file to open at which milestone</h1>
+  <div class="subtitle">Project 2 • Sketch Index</div>
+</div>
+
+<h2>Where your Project 2 files live</h2>
+
+<p>All your Project 2 sketches are in your Project 2 folder on Google Drive. To get there: in the File Explorer sidebar click <strong>Google Drive</strong>, go to <strong>My Drive → Arduino_Projects</strong>, open your nickname folder, then open <span class="file-name">Project_2_Reaction_Time_Game</span> and inside it <span class="file-name">ino_files</span>.</p>
+
+<p>If you cannot find the folder, ask the teacher once and write down how to get there here: ____________________</p>
+
+<p>Inside <span class="file-name">ino_files</span> each sketch sits in its own folder. Each folder contains one <span class="file-name">.ino</span> file with the same name as the folder.</p>
+
+<div class="key">
+Open a sketch by double-clicking the <span class="file-name">.ino</span> file, or by using <strong>File → Open</strong> in the Arduino IDE and pointing at the file.
+</div>
+
+<h2>Tier 1 sketches — which one for which milestone</h2>
+
+<table>
+  <thead>
+    <tr><th>Milestone</th><th>Open this file</th><th>What happens</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>M2</td>
+      <td><span class="file-name">01_wait_flash_measure/<br>01_wait_flash_measure.ino</span></td>
+      <td>The Arduino waits a few random seconds, turns on the LED (pin 9), measures how fast you press the button, and prints your reaction time on the Serial Monitor</td>
+    </tr>
+    <tr>
+      <td>M5</td>
+      <td><span class="file-name">02_wait_flash_measure_buzzer/<br>02_wait_flash_measure_buzzer.ino</span></td>
+      <td>The same game, but now the buzzer (pin 8) beeps at the "go" moment and plays a success tone on the press — on top of the Serial Monitor reading</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>M1, M3, M4, M6 — no sketch upload.</strong> M1 and M4 are hardware only (wiring the LED and button, and adding the buzzer). M3 and M6 are playing the game and recording your fastest time.</p>
+
+<h2>Tier 2 starter sketches — pick one for your feedback mode</h2>
+
+<table>
+  <thead>
+    <tr><th>The feedback mode you chose</th><th>Open this file</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mode A — Three LEDs (fast / medium / slow)</td>
+      <td><span class="file-name">T2_three_led_feedback_starter/<br>T2_three_led_feedback_starter.ino</span></td>
+    </tr>
+    <tr>
+      <td>Mode B — Buzzer pattern</td>
+      <td><span class="file-name">T2_buzzer_pattern_starter/<br>T2_buzzer_pattern_starter.ino</span></td>
+    </tr>
+    <tr>
+      <td>Mode C — Serial Monitor readout</td>
+      <td><span class="file-name">T2_serial_readout_starter/<br>T2_serial_readout_starter.ino</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>At Tier 2, you upload the starter sketch first to see it work, then use Claude Code (see <span class="r-ref">R3</span>) to modify it — for example to shorten how long the LED stays on — so it matches your own design.</p>
+
+<h2>Tier 3 — no starter sketch</h2>
+
+<p>At Tier 3 you design your own game from scratch with Claude Code (for example a two-player game or a multi-round scored game). Your finished sketch lives in the same folder — pick any name you like (something like <span class="file-name">my_reaction_game.ino</span>).</p>
+
+</div>
+</body>
+</html>

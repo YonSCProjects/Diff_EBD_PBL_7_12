@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Project 2 — Reaction-Time Game · Workstation Leaderboard</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Comic Sans MS', 'Segoe UI', Arial, -apple-system, sans-serif;
+    color: #15233a;
+    background: #fff;
+  }
+  .poster {
+    width: 194mm;
+    min-height: 281mm;
+    margin: 0 auto;
+    padding: 6mm 6mm 8mm 6mm;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- Title block ---------- */
+  .title-block {
+    text-align: center;
+    border: 4pt solid #1b3a6b;
+    border-radius: 14pt;
+    padding: 10pt 12pt 12pt 12pt;
+    background:
+      radial-gradient(circle at 12% 20%, rgba(255,209,102,0.35) 0 14pt, transparent 15pt),
+      radial-gradient(circle at 88% 24%, rgba(239,71,111,0.30) 0 12pt, transparent 13pt),
+      linear-gradient(135deg, #eaf3ff 0%, #fef6e6 100%);
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 13pt;
+    font-weight: bold;
+    letter-spacing: 1pt;
+    color: #fff;
+    background: #ef476f;
+    padding: 3pt 14pt;
+    border-radius: 999pt;
+    transform: rotate(-2deg);
+    margin-bottom: 6pt;
+  }
+  h1 {
+    font-size: 38pt;
+    line-height: 1.04;
+    margin: 4pt 0 2pt 0;
+    color: #1b3a6b;
+    text-shadow: 2pt 2pt 0 #ffd166;
+  }
+  .h1-emoji { font-size: 30pt; }
+  .tagline {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #2a9d8f;
+    margin-top: 4pt;
+  }
+
+  /* ---------- How-to strip ---------- */
+  .howto {
+    display: flex;
+    justify-content: center;
+    gap: 8pt;
+    margin: 10pt 0 8pt 0;
+    flex-wrap: wrap;
+  }
+  .step {
+    flex: 1 1 0;
+    min-width: 150pt;
+    background: #fff;
+    border: 2.5pt solid #2a9d8f;
+    border-radius: 12pt;
+    padding: 7pt 9pt;
+    font-size: 11.5pt;
+    line-height: 1.25;
+  }
+  .step .num {
+    display: inline-block;
+    width: 20pt; height: 20pt;
+    line-height: 20pt;
+    text-align: center;
+    border-radius: 50%;
+    background: #2a9d8f;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 5pt;
+  }
+  .step b { color: #1b3a6b; }
+
+  /* ---------- Leaderboard ---------- */
+  .board-head {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #1b3a6b;
+    text-align: center;
+    margin: 6pt 0 4pt 0;
+  }
+  .board-head .crown { font-size: 18pt; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    flex: 1 1 auto;
+  }
+  col.col-nick { width: 38%; }
+  col.col-time { width: 32%; }
+  col.col-var  { width: 30%; }
+  thead th {
+    background: #1b3a6b;
+    color: #fff;
+    font-size: 13pt;
+    padding: 8pt 6pt;
+    border: 2pt solid #1b3a6b;
+    text-align: center;
+  }
+  thead th .sub {
+    display: block;
+    font-size: 9.5pt;
+    font-weight: normal;
+    opacity: 0.9;
+  }
+  tbody td {
+    border: 1.5pt solid #9bb1cc;
+    height: 46pt;
+    padding: 2pt 8pt;
+    vertical-align: middle;
+    font-size: 12pt;
+  }
+  tbody tr:nth-child(odd) td { background: #f3f8ff; }
+  tbody tr:nth-child(even) td { background: #fffdf5; }
+  td.c-time, td.c-var { text-align: center; color: #9bb1cc; }
+  .ms { font-size: 9.5pt; }
+  /* tier badge column hint inside variant cell stays subtle */
+
+  /* ---------- Footer ---------- */
+  .foot {
+    margin-top: 8pt;
+    text-align: center;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ef476f;
+  }
+  .foot .small {
+    display: block;
+    font-size: 9.5pt;
+    font-weight: normal;
+    color: #6b7c93;
+    margin-top: 3pt;
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="title-block">
+    <span class="kicker">WORKSTATION LEADERBOARD</span>
+    <h1><span class="h1-emoji">⚡</span> Project 2 — Reaction-Time Game <span class="h1-emoji">🎮</span></h1>
+    <div class="tagline">How fast are YOU? Wait for the light… then SMACK that button! 🟢👆</div>
+  </div>
+
+  <div class="howto">
+    <div class="step"><span class="num">1</span> Play your rounds and watch the <b>Serial Monitor</b> for your times.</div>
+    <div class="step"><span class="num">2</span> Find your <b>smallest number</b> — that's your fastest time. Smaller = faster! ⏱️</div>
+    <div class="step"><span class="num">3</span> Write your <b>nickname</b> and <b>fastest time</b> on a blank row below. ✏️</div>
+  </div>
+
+  <div class="board-head"><span class="crown">👑</span> Our Group's Fastest Reactions <span class="crown">🏆</span></div>
+
+  <table>
+    <colgroup>
+      <col class="col-nick">
+      <col class="col-time">
+      <col class="col-var">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Nickname</th>
+        <th>Fastest time<span class="sub">milliseconds (ms) — smaller is faster</span></th>
+        <th>Tier 2 variant name<span class="sub">e.g. "Lightning Round"</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td></td><td class="c-time">ms</td><td class="c-var"></td></tr>
+      <tr><td></td><td class="c-time">ms</td><td class="c-var"></td></tr>
+      <tr><td></td><td class="c-time">ms</td><td class="c-var"></td></tr>
+      <tr><td></td><td class="c-time">ms</td><td class="c-var"></td></tr>
+      <tr><td></td><td class="c-time">ms</td><td class="c-var"></td></tr>
+      <tr><td></td><td class="c-time">ms</td><td class="c-var"></td></tr>
+      <tr><td></td><td class="c-time">ms</td><td class="c-var"></td></tr>
+      <tr><td></td><td class="c-time">ms</td><td class="c-var"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="foot">
+    Beat your own time and write a NEW number — every round is a fresh start! 🎉
+    <span class="small">Project 2 · Reaction-Time Game · tape this poster at the workstation</span>
+  </div>
+
+</div>
+</body>
+</html>

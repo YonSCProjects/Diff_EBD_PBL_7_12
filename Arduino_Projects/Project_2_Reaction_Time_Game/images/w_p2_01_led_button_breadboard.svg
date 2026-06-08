@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" font-family="Arial, 'Segoe UI', sans-serif">
+  <rect x="2" y="2" width="756" height="296" rx="12" fill="#fafafa" stroke="#c9c9c9" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="24" y="38" font-size="20" font-weight="bold" fill="#111">Project 2 · Circuit 1 — LED + Button</text>
+  <text x="24" y="60" font-size="13" fill="#666">Reaction-Time Game base circuit · pin map: LED=D9, Button=D2</text>
+
+  <!-- LED chain -->
+  <circle cx="40" cy="110" r="6" fill="#f28a00"/>
+  <text x="56" y="115" font-size="15" fill="#111"><tspan font-weight="bold">Arduino D9</tspan> ──[ 220 Ω ]── LED long leg (+)</text>
+  <text x="120" y="140" font-size="15" fill="#111">LED short leg (−) ── <tspan font-weight="bold">GND</tspan></text>
+  <circle cx="40" cy="135" r="6" fill="#000000"/>
+
+  <!-- Button chain -->
+  <circle cx="40" cy="195" r="6" fill="#cc1414"/>
+  <text x="56" y="200" font-size="15" fill="#111"><tspan font-weight="bold">Arduino 5 V</tspan> ── Button pin A</text>
+  <circle cx="40" cy="222" r="6" fill="#f28a00"/>
+  <text x="56" y="227" font-size="15" fill="#111">Button pin B ── <tspan font-weight="bold">Arduino D2</tspan></text>
+  <circle cx="40" cy="249" r="6" fill="#000000"/>
+  <text x="56" y="254" font-size="15" fill="#111">Button pin B ──[ 10 kΩ pull-down ]── <tspan font-weight="bold">GND</tspan></text>
+
+  <text x="24" y="288" font-size="11.5" font-style="italic" fill="#999">Schematic (preliminary). A photo-style breadboard image will replace this diagram.</text>
+</svg>

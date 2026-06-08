@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 2 Task Card — Milestone 4: Upload, test, and tune your variant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 4 of 5</div>
+  <h1><span class="section-icon">💻</span>Upload, test, and tune your variant</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+Last milestone you changed your sketch with Claude Code. Now you upload it, play five rounds, and check the game runs exactly the way you wanted — your chosen feedback mode and your chosen difficulty.
+</div>
+
+<h2><span class="section-icon">⬆️</span>Step 1 — Upload your sketch and play 5 rounds</h2>
+
+<ul class="checklist">
+  <li>Open your updated sketch in the Arduino IDE and click Upload. Wait for the green "Done uploading" message.</li>
+  <li>Open the <strong>Serial Monitor</strong> (the magnifying-glass icon) so you can see your reaction times.</li>
+  <li>Play <strong>5 rounds</strong>: wait for the "go" light, press the button as fast as you can, and read your reaction time.</li>
+  <li>Check that your chosen feedback mode works — the three LEDs (Mode A), the buzzer pattern (Mode B), or the Serial Monitor message (Mode C).</li>
+  <li>Check that your chosen difficulty is right — the LED stays on for 2 seconds (Easy) or only 0.5 seconds (Hard).</li>
+</ul>
+
+<h2><span class="section-icon">📋</span>Step 2 — Tune the thresholds (only for Mode A or Mode B)</h2>
+
+<p>If you picked <strong>Mode A (three LEDs)</strong> or <strong>Mode B (buzzer pattern)</strong>, the game sorts every reaction time into <strong>fast / medium / slow</strong>. Maybe the thresholds do not feel fair to you — for example, everything comes out "slow". You decide what feels fair for you.</p>
+
+<div class="prompt-template">"Fast" for me = under _______ milliseconds
+"Medium" for me = between _______ and _______ milliseconds
+"Slow" for me = over _______ milliseconds</div>
+
+<p>If you want help changing the thresholds in the code, this is one more small Claude Code ask (Level 2). Fill in the (a)(b)(c) first, then ask:</p>
+
+<div class="prompt-template">I am working on my Project 2 reaction-time game.
+
+(a) What I want: a time under 250 ms should count as "fast".
+(b) What is happening now: almost everything comes out "slow".
+(c) What I have tried: I played 5 rounds and wrote down my times.
+
+Here is my current code:
+[paste the whole sketch file here]
+
+Can you help me change the fast/medium/slow thresholds?</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>The game runs the way you chose: your feedback shows after every press, and the LED stays on for the difficulty you picked. If you tuned the thresholds, a fast press comes out "fast" and a slow press comes out "slow".</p>
+  <p class="expected-note">You can show your variant to the teacher and say "this is the game I built."</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The updated sketch is uploaded and you have played 5 rounds</li>
+    <li>Your chosen feedback mode works (three LEDs / buzzer / Serial Monitor)</li>
+    <li>Your chosen difficulty is right (LED stays on for 2 seconds or 0.5 seconds)</li>
+    <li>(Mode A/B) the fast/medium/slow thresholds feel fair to you</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li>If the buzzer or LEDs do not react, the updated sketch may not have uploaded — upload again and wait for "Done uploading".</li>
+    <li>If the thresholds still do not feel fair after a few tries, go back to (a)(b)(c) and tell Claude Code exactly what is happening — for example "a 300 ms press is counted as slow and I want it to be medium."</li>
+    <li>If it still does not work, call the teacher.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

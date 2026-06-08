@@ -7,6 +7,8 @@ build_output/*
 # Exception: commit the cards-only bundle so it can be shared without a rebuild.
 !build_output/Project_1_Cards*.html
 !build_output/Project_1_Cards*.pdf
+!build_output/Project_2_Cards*.html
+!build_output/Project_2_Cards*.pdf
 
 # Node modules (if md-to-pdf is installed locally)
 node_modules/

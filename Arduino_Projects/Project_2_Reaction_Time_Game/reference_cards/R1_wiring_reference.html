@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reference Card R1 — Project 2 Wiring</title>
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 10mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 12pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 11pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 8pt 12pt;
+    margin: 8pt 0;
+    font-weight: bold;
+    font-size: 14pt;
+  }
+  .wiring {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13pt;
+    background: #f4f4f4;
+    padding: 12pt;
+    border: 1pt solid #ccc;
+    white-space: pre;
+    line-height: 1.3;
+    margin: 8pt 0;
+  }
+  .living-placeholder {
+    border: 2pt dashed #667;
+    background: #f0f4fa;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-size: 11pt;
+    page-break-inside: avoid;
+  }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 300pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .wiring-figure figcaption strong {
+    color: #223;
+  }
+  .lp-header {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #334;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+    margin-bottom: 6pt;
+  }
+  .lp-section {
+    margin: 6pt 0;
+  }
+  .lp-section strong {
+    color: #000;
+    display: block;
+    margin-bottom: 2pt;
+  }
+  .lp-section ul {
+    margin: 3pt 0 3pt 0;
+    padding-left: 18pt;
+  }
+  .lp-section li {
+    margin: 2pt 0;
+    line-height: 1.4;
+  }
+  .lp-section code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #fff;
+    padding: 1pt 4pt;
+    border: 1pt solid #ccd;
+    border-radius: 2pt;
+  }
+  .lp-section a {
+    color: #0050a0;
+    word-break: break-all;
+  }
+  .color-band {
+    font-family: 'Consolas', monospace;
+    background: #efefef;
+    padding: 2pt 5pt;
+    border-radius: 2pt;
+    font-size: 12pt;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  .do {
+    color: #060;
+    font-weight: bold;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="header">
+  <h1>R1 — Wiring Reference</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game • Student workstation card</div>
+</div>
+
+<p><strong>This card shows you how to wire the LED, the button, and the buzzer for Project 2.</strong> Keep it next to your breadboard. If you get confused about wiring, look at this card first before you call the teacher.</p>
+
+<h2><span class="section-icon">⚠️</span>The most important rules</h2>
+
+<div class="key">
+LED long leg = <span class="do">positive (+)</span>. It goes to the <strong>resistor</strong>, then to the Arduino pin.
+</div>
+
+<div class="key">
+LED short leg = <span class="do">negative (−)</span>. It goes to the Arduino <strong>GND</strong>.
+</div>
+
+<div class="key">
+Every LED needs its own <strong>220 Ω resistor</strong> (colour bands: <span class="color-band">red · red · brown</span>). No resistor = burnt LED.
+</div>
+
+<div class="key">
+The button needs a <strong>10 kΩ pull-down resistor</strong> (colour bands: <span class="color-band">brown · black · orange</span>). Without it the button reads random values.
+</div>
+
+<div class="key">
+The <strong>buzzer</strong> has no polarity and needs no resistor. One leg goes to <strong>digital pin 8</strong>, the other to <strong>GND</strong>. <span class="dont">Never connect the buzzer straight to 5 V.</span>
+</div>
+
+<h2><span class="section-icon">🔌</span>Wiring 1 — LED + button (Milestone 1)</h2>
+
+<p>The base circuit of the game: one LED on <strong>pin 9</strong> through a 220 Ω resistor, and a button on <strong>pin 2</strong> with a 10 kΩ pull-down resistor. This is exactly the circuit you built in Project 1.</p>
+
+<div class="wiring">Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
+                         ▼
+                    LED short leg (−) ── Arduino GND
+
+Arduino 5 V ─────────────┬── Button pin A
+                         ▼
+                    Button pin B ──┬── Arduino pin 2
+                                   └─[10 kΩ]── Arduino GND</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_01_led_button_breadboard.svg" alt="Breadboard diagram: an LED on pin 9 through a 220 Ω resistor to GND, and a push-button across the centre gap — one side to 5 V, the other to pin 2 and through a 10 kΩ pull-down resistor to GND.">
+  <figcaption><strong>LED: pin 9 → 220 Ω → long leg</strong>, short leg → <strong>GND</strong>. <strong>Button: pin A → 5 V</strong>, pin B → pin 2 and through a <strong>10 kΩ pull-down → GND</strong>.</figcaption>
+</figure>
+
+<p><span class="dont">Important:</span> the 10 kΩ pull-down resistor goes between <strong>pin 2 and GND</strong>, <span class="dont">not between 5 V and GND</span>. If you wire it between 5 V and GND, pressing the button creates a short circuit and the Arduino will reset.</p>
+
+<h2><span class="section-icon">🔌</span>Wiring 2 — LED + button + buzzer (Milestone 4)</h2>
+
+<p>Same as Wiring 1, plus the <strong>buzzer</strong>: one leg to <strong>pin 8</strong>, the other leg to <strong>GND</strong>. The buzzer's two legs go in <strong>different breadboard columns</strong> — not the same column, which would short it.</p>
+
+<div class="wiring">Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
+                         ▼
+                    LED short leg (−) ── Arduino GND
+
+Arduino 5 V ─────────────┬── Button pin A
+                         ▼
+                    Button pin B ──┬── Arduino pin 2
+                                   └─[10 kΩ]── Arduino GND
+
+Arduino pin 8 ───────────── Buzzer leg 1
+Arduino GND  ───────────── Buzzer leg 2</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_02_led_button_buzzer_breadboard.svg" alt="Breadboard diagram: an LED on pin 9 through a 220 Ω resistor, a button on pin 2 with a 10 kΩ pull-down, and a buzzer — one leg to pin 8, the other to GND.">
+  <figcaption><strong>Buzzer: one leg → pin 8</strong>, the other leg → <strong>GND</strong>. The buzzer is added on top of Wiring 1 — no polarity, no resistor. <span class="dont">Never connect the buzzer to 5 V.</span></figcaption>
+</figure>
+
+<h2><span class="section-icon">🔌</span>Wiring 3 — Three LEDs + button + buzzer (Tier 2, feedback Mode A)</h2>
+
+<p>Only needed if you chose the <strong>three-LED feedback mode</strong> in Tier 2 (Milestone 2b). Add two more LEDs to Wiring 2: the <strong>medium LED on pin 10</strong> and the <strong>slow LED on pin 11</strong>, each with its own 220 Ω resistor, exactly like the "go" LED on pin 9.</p>
+
+<div class="wiring">Arduino pin 9  ──[220 Ω]──┬── LED fast long leg
+                          ▼
+                     LED fast short leg ── Arduino GND
+
+Arduino pin 10 ──[220 Ω]──┬── LED medium long leg
+                          ▼
+                     LED medium short leg ── Arduino GND
+
+Arduino pin 11 ──[220 Ω]──┬── LED slow long leg
+                          ▼
+                     LED slow short leg ── Arduino GND
+
+Arduino 5 V ─────────────┬── Button pin A
+                         ▼
+                    Button pin B ──┬── Arduino pin 2
+                                   └─[10 kΩ]── Arduino GND
+
+Arduino pin 8 ───────────── Buzzer leg 1
+Arduino GND  ───────────── Buzzer leg 2</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_03_three_leds_button_buzzer_breadboard.svg" alt="Breadboard diagram: three LEDs — pin 9 through 220 Ω to the fast LED, pin 10 through 220 Ω to the medium LED, pin 11 through 220 Ω to the slow LED — plus a button on pin 2 with a 10 kΩ pull-down and a buzzer on pin 8.">
+  <figcaption><strong>Pin 9 → fast LED</strong> · <strong>Pin 10 → medium LED</strong> · <strong>Pin 11 → slow LED</strong>, each through a 220 Ω resistor to GND. Added to the button (pin 2) and buzzer (pin 8) of Wiring 2.</figcaption>
+</figure>
+
+<h2><span class="section-icon">🔌</span>Wiring 4 — Two-button variant (Tier 3 only)</h2>
+
+<p>Only needed if you are building the <strong>two-player game</strong> in Tier 3. Add a <strong>second button</strong> on <strong>pin 3</strong> with its own 10 kΩ pull-down resistor, wired exactly like the first button.</p>
+
+<div class="wiring">Arduino 5 V ─────────────┬── Button 1 pin A
+                         ▼
+                    Button 1 pin B ──┬── Arduino pin 2
+                                     └─[10 kΩ]── Arduino GND
+
+Arduino 5 V ─────────────┬── Button 2 pin A
+                         ▼
+                    Button 2 pin B ──┬── Arduino pin 3
+                                     └─[10 kΩ]── Arduino GND</div>
+
+<p><span class="dont">Same pull-down rule:</span> each button's 10 kΩ resistor goes between <strong>its input pin (2 or 3) and GND</strong>, not between 5 V and GND.</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_04_two_buttons_variant_breadboard.svg" alt="Breadboard diagram: two buttons — button 1 on pin 2 and button 2 on pin 3, each with a 10 kΩ pull-down resistor to GND and the other side to 5 V — alongside the LED and buzzer of the base circuit.">
+  <figcaption><strong>Button 1 → pin 2</strong> · <strong>Button 2 → pin 3</strong>, each with a <strong>10 kΩ pull-down → GND</strong>. Same pattern as the first button, different pin. Added to the LED and buzzer of the base circuit.</figcaption>
+</figure>
+
+</div>
+</body>
+</html>

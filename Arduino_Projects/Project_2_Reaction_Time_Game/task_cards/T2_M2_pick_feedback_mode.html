@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 2 Task Card — Milestone 2: Pick your feedback mode</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 2 of 5</div>
+  <h1><span class="section-icon">🏁</span>Pick your feedback mode</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+This is the first design choice of the project. You have already seen the game work — now you choose <strong>how the game tells you your result</strong>: with LEDs, with the buzzer, or on the Serial Monitor. Your choice, no "correct" answer.
+</div>
+
+<h2><span class="section-icon">📋</span>Pick ONE of these three feedback modes</h2>
+
+<div class="choice-point">
+  <strong>Mode A — Three LEDs (fast / medium / slow)</strong>
+  <div class="option">
+    <strong>How it works:</strong> an LED lights up to match your speed — a fast reaction lights the <strong>green</strong> LED (pin 9), a medium one the <strong>yellow</strong> LED (pin 10), and a slow one the <strong>red</strong> LED (pin 11).<br>
+    <strong>What you wire:</strong> two extra LEDs, each with its own 220 Ω resistor. <strong>So you have one more wiring card after this one.</strong><br>
+    <strong>Starter sketch:</strong> <code>ino_files/T2_three_led_feedback_starter/T2_three_led_feedback_starter.ino</code>
+  </div>
+
+  <strong>Mode B — Buzzer pattern</strong>
+  <div class="option">
+    <strong>How it works:</strong> the buzzer plays a different sound for each category — for example one high beep for fast, two beeps for medium, and a low buzz for slow.<br>
+    <strong>What you wire:</strong> nothing new. Use only the buzzer you already wired.<br>
+    <strong>Starter sketch:</strong> <code>ino_files/T2_buzzer_pattern_starter/T2_buzzer_pattern_starter.ino</code>
+  </div>
+
+  <strong>Mode C — Rich Serial Monitor readout</strong>
+  <div class="option">
+    <strong>How it works:</strong> the Serial Monitor shows a detailed message with a category word — for example <code>FAST! 210 ms</code> or <code>SLOW… 540 ms</code>.<br>
+    <strong>What you wire:</strong> nothing new. Use only the Serial Monitor.<br>
+    <strong>Starter sketch:</strong> <code>ino_files/T2_serial_readout_starter/T2_serial_readout_starter.ino</code>
+  </div>
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>Read all three modes and think about which one appeals to you most.</li>
+  <li>Pick A, B, or C. Write your choice here: <span class="fill-blank">&nbsp;</span></li>
+  <li><strong>If you chose Mode A</strong> (three LEDs) — your next card is <strong>Milestone 2b</strong>, where you wire two more LEDs.</li>
+  <li><strong>If you chose Mode B or Mode C</strong> — skip Milestone 2b and go straight to <strong>Milestone 3</strong>.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>You have clearly marked which feedback mode you chose — A, B, or C — and written it on the card. You know which card comes next.</p>
+  <p class="expected-note">You do not change any code or upload anything yet — that comes in the next milestones. Right now you are just deciding.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>You have written your choice (A, B, or C) on this card</li>
+    <li>You know where you go next: Mode A → Milestone 2b, Mode B or C → Milestone 3</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  Not sure what to pick? There is no "wrong" choice — they all work. If you like lights, pick Mode A. If you like sounds, pick Mode B. If you like seeing words and numbers, pick Mode C. If you are still torn, call the teacher and choose together.
+</div>
+
+</div>
+</body>
+</html>

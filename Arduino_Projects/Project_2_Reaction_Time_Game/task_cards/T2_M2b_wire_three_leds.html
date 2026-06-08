@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 2 Task Card — Milestone 2b: Wire the three LEDs (Mode A only)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 2b (Mode A) — extra wiring</div>
+  <h1><span class="section-icon">🔌</span>Wire the three LEDs</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+Only do this card if you picked <strong>Mode A — three LEDs</strong>. You add two more LEDs: medium on pin 10 and slow on pin 11 — same wiring pattern as the LED you already have on pin 9.
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>Skip this card if you chose Mode B or Mode C.</strong>
+  <p>Mode B (buzzer) and Mode C (Serial Monitor) need no extra LEDs — your wiring is already done. Go straight to Milestone 3.</p>
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>Pick two more <strong>LEDs</strong> from your parts tray — in <strong>two colours different</strong> from the first LED (yellow for medium and red for slow work well).</li>
+  <li>Pick two more <strong>220 Ω resistors</strong> (bands: <strong>red · red · brown</strong>) — one per LED.</li>
+  <li><strong>The medium LED:</strong> plant it on the breadboard, one strip over from the first LED. Each leg in a different row.</li>
+  <li>Connect the medium LED's long leg (+) to <strong>digital pin 10</strong> through a 220 Ω resistor, and the short leg (−) to <strong>GND</strong>.</li>
+  <li><strong>The slow LED:</strong> plant it on the breadboard, one strip over from the medium LED. Each leg in a different row.</li>
+  <li>Connect the slow LED's long leg (+) to <strong>digital pin 11</strong> through a 220 Ω resistor, and the short leg (−) to <strong>GND</strong>.</li>
+  <li>Check that the LED and button from the earlier milestones are still wired — do not touch them.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>Wiring diagram</h2>
+
+<pre class="wiring-block">Arduino pin 9  ───[220 Ω]───┬─── LED fast (green) long leg
+                           ▼
+                  LED fast short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED medium (yellow) long leg
+                           ▼
+                  LED medium short leg ─── Arduino GND
+
+Arduino pin 11 ───[220 Ω]───┬─── LED slow (red) long leg
+                           ▼
+                  LED slow short leg ─── Arduino GND</pre>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_03_three_leds_button_buzzer_breadboard.svg" alt="Breadboard diagram: three LEDs side by side — pin 9 through 220 Ω to the fast LED (green), pin 10 through 220 Ω to the medium LED (yellow), pin 11 through 220 Ω to the slow LED (red), all short legs to GND. The button and buzzer stay in place.">
+  <figcaption><strong>Pin 9 → 220 Ω → fast LED (green)</strong> · <strong>Pin 10 → 220 Ω → medium LED (yellow)</strong> · <strong>Pin 11 → 220 Ω → slow LED (red)</strong>. All short legs → Arduino <strong>GND</strong>. Same pattern, three pins.</figcaption>
+</figure>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>Three LEDs in three different colours, side by side on the breadboard, each with its own 220 Ω resistor going to a different pin (9, 10, 11). The button is still in place.</p>
+  <p class="expected-note"><strong>No LED lights up yet</strong> — you have not changed the sketch. The code that lights the right LED for your reaction speed comes at Milestone 3.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The medium LED is wired: long leg through a 220 Ω resistor to pin 10, short leg to GND</li>
+    <li>The slow LED is wired: long leg through a 220 Ω resistor to pin 11, short leg to GND</li>
+    <li>The first LED is still on pin 9, and the button is still in place</li>
+    <li>The teacher has confirmed the wiring is correct</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li>Same wiring pattern as the first LED — just one strip over each time, to pin 10 then pin 11.</li>
+    <li>The two legs of one LED must be in <strong>different rows</strong> — if they share a row, you create a short.</li>
+    <li><strong>If the button or first LED stopped working</strong> while you were wiring, a jumper wire probably came loose — re-seat it.</li>
+    <li>Call the teacher if you need help.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

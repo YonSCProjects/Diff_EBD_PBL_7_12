@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית ניווט פרויקט 2 — שלב 2: בוחרים מצב משוב</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<script src="../task_cards/card.js" defer></script>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #2 — משחק זמן תגובה: שלב 2 מתוך 5</div>
+  <h1><span class="section-icon">🏁</span>בוחרים מצב משוב</h1>
+  <div class="subtitle">פרויקט 2 • משחק זמן תגובה</div>
+</div>
+
+<div class="why">
+זוהי נקודת הבחירה הראשונה בפרויקט. כבר ראיתם את המשחק עובד — עכשיו אתם בוחרים <strong>איך המשחק מספר לכם את התוצאה</strong>: בעזרת לדים, בעזרת הזמזם, או בעזרת המסך הטורי. הבחירה שלכם, אין תשובה "נכונה".
+</div>
+
+<h2><span class="section-icon">📋</span>בוחרים אחד משלושה מצבי המשוב האלה</h2>
+
+<div class="choice-point">
+  <strong>מצב א — שלושה לדים (מהיר / בינוני / איטי)</strong>
+  <div class="option">
+    <strong>איך זה עובד:</strong> מאיר לד שמתאים למהירות שלכם — תגובה מהירה מאירה לד <strong>ירוק</strong> (רגל 9), בינונית לד <strong>צהוב</strong> (רגל 10), ואיטית לד <strong>אדום</strong> (רגל 11).<br>
+    <strong>מה צריך לחווט:</strong> שני לדים נוספים, כל אחד עם נגד 220 אוהם משלו. <strong>לכן יש לכם עוד כרטיסיית חיווט אחרי השלב הזה.</strong><br>
+    <strong>קוד התחלתי:</strong> <code dir="ltr">ino_files/T2_three_led_feedback_starter/T2_three_led_feedback_starter.ino</code>
+  </div>
+
+  <strong>מצב ב — תבנית זמזם</strong>
+  <div class="option">
+    <strong>איך זה עובד:</strong> הזמזם משמיע צליל שונה לכל קטגוריה — למשל ביפ גבוה אחד למהיר, שני ביפים לבינוני, וזמזום נמוך לאיטי.<br>
+    <strong>מה צריך לחווט:</strong> שום דבר חדש. משתמשים רק בזמזם שכבר חיווטתם.<br>
+    <strong>קוד התחלתי:</strong> <code dir="ltr">ino_files/T2_buzzer_pattern_starter/T2_buzzer_pattern_starter.ino</code>
+  </div>
+
+  <strong>מצב ג — קריאה עשירה במסך הטורי</strong>
+  <div class="option">
+    <strong>איך זה עובד:</strong> המסך הטורי (Serial Monitor) מציג הודעה מפורטת עם מילת קטגוריה — למשל <code dir="ltr">FAST! 210 ms</code> או <code dir="ltr">SLOW… 540 ms</code>.<br>
+    <strong>מה צריך לחווט:</strong> שום דבר חדש. משתמשים רק במסך הטורי.<br>
+    <strong>קוד התחלתי:</strong> <code dir="ltr">ino_files/T2_serial_readout_starter/T2_serial_readout_starter.ino</code>
+  </div>
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>קוראים את שלושת המצבים וחושבים איזה הכי מדבר אליכם.</li>
+  <li>בוחרים א, ב, או ג. כותבים את הבחירה שלכם כאן: <span class="fill-blank">&nbsp;</span></li>
+  <li><strong>אם בחרתם מצב א</strong> (שלושה לדים) — הכרטיסייה הבאה שלכם היא <strong>שלב 2b</strong>, שבו מחווטים שני לדים נוספים.</li>
+  <li><strong>אם בחרתם מצב ב או מצב ג</strong> — מדלגים על שלב 2b ועוברים ישר ל<strong>שלב 3</strong>.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>סימנתם בבירור איזה מצב משוב בחרתם — א, ב, או ג — וכתבתם אותו על הכרטיסייה. אתם יודעים מה הכרטיסייה הבאה שלכם.</p>
+  <p class="expected-note">עדיין לא משנים קוד ולא מעלים כלום — זה יקרה בשלבים הבאים. בשלב הזה רק מחליטים.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>כתבתם את הבחירה שלכם (א, ב, או ג) על הכרטיסייה</li>
+    <li>אתם יודעים לאן ממשיכים: מצב א ← שלב 2b, מצב ב או ג ← שלב 3</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  לא בטוחים מה לבחור? אין בחירה "לא נכונה" — כולן עובדות. אם אתם אוהבים אורות, בוחרים מצב א. אם אתם אוהבים צלילים, בוחרים מצב ב. אם אתם אוהבים לראות מילים ומספרים, בוחרים מצב ג. אם עדיין מתלבטים, קוראים למורה ובוחרים יחד.
+</div>
+
+</div>
+</body>
+</html>

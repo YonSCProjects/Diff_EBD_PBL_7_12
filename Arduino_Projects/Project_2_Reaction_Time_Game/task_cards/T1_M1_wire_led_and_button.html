@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 2 Task Card — Milestone 1: Wire the LED and button</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 1 of 6</div>
+  <h1><span class="section-icon">🔌</span>Wire the LED and button</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+In this milestone you rebuild the Project 1 base circuit — an LED and a button. This is the foundation of the reaction-time game: the LED turns on, and you press the button as fast as you can.
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>In the File Explorer sidebar click <strong>Google Drive</strong>, then go to <strong>My Drive → Arduino_Projects</strong>.</li>
+  <li>Open your nickname folder.</li>
+  <li>Create a new folder inside it called <strong>Project_2_Reaction_Time_Game</strong>.</li>
+  <li>Open Claude Code together with the teacher and point it at your new folder.</li>
+  <li>Pick one LED from the parts tray. Any colour is fine.</li>
+  <li><strong>The LED:</strong> plant it in the breadboard so its two legs land in different rows (not the same row — that would short them). The <strong>long leg is positive (+)</strong>, the <strong>short leg is negative (−)</strong>.</li>
+  <li>Connect the long leg (+) to <strong>digital pin 9</strong> through a <strong>220 Ω resistor</strong> (bands: <strong>red · red · brown</strong>), and the short leg (−) to <strong>GND</strong> with a jumper wire.</li>
+  <li><strong>The button:</strong> pick a tactile push-button (four pins) and plant it <strong>across the centre gap</strong> of the breadboard. If it does not sit right, rotate it 90 degrees.</li>
+  <li>Connect one side of the button (pin A) to <strong>5 V</strong>, and the other side (pin B) to <strong>digital pin 2</strong>.</li>
+  <li>From pin B, also connect through a <strong>10 kΩ resistor</strong> (bands: <strong>brown · black · orange</strong>) to <strong>GND</strong>. This is the pull-down resistor — it holds pin 2 at 0 V when the button is not pressed.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>Wiring diagram</h2>
+
+<pre class="wiring-block">Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
+                         ▼
+                    LED short leg (−) ── Arduino GND
+
+Arduino 5 V ─────────────┬── Button pin A
+                         ▼
+                    Button pin B ──┬── Arduino pin 2
+                                   └─[10 kΩ]── Arduino GND</pre>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_01_led_button_breadboard.svg" alt="Breadboard diagram: an LED on pin 9 through a 220 Ω resistor to GND, and a push-button across the centre gap — one side to 5 V, the other to pin 2 and through a 10 kΩ pull-down resistor to GND.">
+  <figcaption><strong>LED: pin 9 → 220 Ω → long leg</strong>, short leg → GND. <strong>Button: pin A → 5 V</strong>, pin B → pin 2 and through a <strong>10 kΩ pull-down → GND</strong>.</figcaption>
+</figure>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>Important — the most common mistake</strong>
+  The 10 kΩ pull-down resistor must go between <strong>pin 2 and GND</strong>, not between 5 V and GND. If you put it between 5 V and GND, pressing the button creates a short circuit and the Arduino resets itself. Trace it with your finger: does it go from pin 2 to GND? Then you are safe. Call the teacher if you would like help.
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>The LED is wired to pin 9 through its resistor, and the button straddles the centre gap — one side to 5 V, the other to pin 2 and through the pull-down resistor to GND.</p>
+  <p class="expected-note"><strong>Nothing lights up or happens yet</strong> — you have not uploaded a sketch. That comes at Milestone 2. Right now you are just checking the wiring is correct.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The LED is on the breadboard with its legs in different rows, long leg to pin 9 through a 220 Ω resistor, short leg to GND</li>
+    <li>The button straddles the centre gap: pin A to 5 V, pin B to pin 2</li>
+    <li>A 10 kΩ resistor sits between pin 2 and GND (the pull-down)</li>
+    <li>The teacher has confirmed the wiring is correct</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  You did this wiring in Project 1, but if you are unsure, call the teacher. If the Arduino keeps resetting or turning off, the pull-down resistor is almost certainly on the wrong side.
+</div>
+
+</div>
+</body>
+</html>

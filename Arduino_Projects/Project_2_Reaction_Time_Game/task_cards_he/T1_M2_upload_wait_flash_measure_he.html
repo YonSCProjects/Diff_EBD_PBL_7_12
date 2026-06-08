@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית ניווט פרויקט 2 — שלב 2: מעלים את קוד ההמתנה–הבזק–מדידה</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<script src="../task_cards/card.js" defer></script>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #2 — משחק זמן תגובה: שלב 2 מתוך 6</div>
+  <h1><span class="section-icon">💻</span>מעלים את קוד ההמתנה–הבזק–מדידה</h1>
+  <div class="subtitle">פרויקט 2 • משחק זמן תגובה</div>
+</div>
+
+<div class="why">
+בשלב זה מעלים לארדואינו קוד מוכן שמפעיל את המשחק: הלד נדלק אחרי המתנה, ואתם לוחצים מהר — והקוד מודד כמה מהר.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code dir="ltr">01_wait_flash_measure.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 2 שלכם, בתוך <code dir="ltr">ino_files/01_wait_flash_measure/</code>. אם אינכם בטוחים איזה קובץ לפתוח — בודקים בכרטיס העזר <strong>R5</strong>.</span></li>
+  <li><strong>לא משנים שום שורה בקוד.</strong> רק פותחים ומעלים.</li>
+  <li>לוחצים על כפתור ה-Upload — הכפתור עם החץ שפונה ימינה. עוקבים אחר סרגל ההתקדמות בתחתית ה-IDE.</li>
+  <li>כשההעלאה מסתיימת, אמורה להופיע ההודעה הירוקה <strong>Done uploading</strong> בתחתית.</li>
+  <li>פותחים את ה<strong>מסך הטורי (Serial Monitor)</strong>: לוחצים על סמל <strong>זכוכית המגדלת</strong> בפינה הימנית-עליונה של ה-IDE. מוודאים שמהירות התקשורת (baud) מוגדרת ל-<strong>9600</strong>.</li>
+  <li>קוראים את ההודעות במסך הטורי, מחכים שהלד יאיר, ולוחצים על הכפתור הכי מהר שאפשר. אחרי הלחיצה הראשונה יופיע זמן התגובה שלכם <strong>במילי-שניות (ms)</strong>.</li>
+</ul>
+
+<div class="screen-only">
+<h2><span class="section-icon">💡</span>מה הקוד עושה</h2>
+
+<p>הקוד מחכה זמן אקראי של 2 עד 5 שניות, מדליק את הלד שעל רגל 9, ומשתמש בפקודה <code dir="ltr">millis()</code> כדי למדוד כמה מהר לחצתם — את התוצאה הוא מדפיס למסך הטורי. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>במסך הטורי מופיעות הוראות המשחק, אחר כך הלד נדלק, ואחרי הלחיצה מופיע זמן התגובה שלכם במילי-שניות. ב-Arduino IDE מופיע Done uploading בירוק בתחתית.</p>
+  <p class="expected-note">המספר הוא מספר המילי-שניות שלקח לכם ללחוץ מרגע שהלד נדלק — ככל שהוא קטן יותר, כך הגבתם מהר יותר.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>ב-Arduino IDE מופיע Done uploading בירוק</li>
+    <li>המסך הטורי פתוח ומראה זמן תגובה אחרי הלחיצה הראשונה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li><strong>אם נראה שכלום לא קורה אחרי ההעלאה:</strong> כנראה שהמסך הטורי לא פתוח. לוחצים על סמל זכוכית המגדלת ובודקים שה-baud מוגדר ל-9600 — שם מופיעות הוראות המשחק.</li>
+    <li><strong>אם ה-Upload נכשל:</strong> בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM. אם המסך הטורי פתוח, סוגרים אותו, מעלים שוב, ואז פותחים אותו בחזרה.</li>
+    <li><strong>אם ה-IDE אומר "Arduino not found,"</strong> מוציאים את כבל ה-USB, מחכים שלוש שניות, ומחברים בחזרה.</li>
+    <li><strong>אם עדיין תקועים אחרי זה,</strong> קוראים למורה לעזרה.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

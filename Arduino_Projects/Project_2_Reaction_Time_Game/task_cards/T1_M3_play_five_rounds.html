@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 2 Task Card — Milestone 3: Play the game five times</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 3 of 6</div>
+  <h1><span class="section-icon">🎮</span>Play the game five times</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+This is the moment the game works and it is fun — wait for the LED, press as fast as you can, and watch your reaction time appear on the screen.
+</div>
+
+<h2><span class="section-icon">📋</span>How to play — one round</h2>
+
+<ul class="checklist">
+  <li>Make sure the <strong>Serial Monitor</strong> is open. That is where the instructions and your reaction time show up.</li>
+  <li><strong>Wait.</strong> The LED is off. Do not press yet — the wait time is different each round, so you cannot guess when.</li>
+  <li><strong>The LED turns on — press the button as fast as you can!</strong></li>
+  <li>Read your <strong>reaction time</strong> on the Serial Monitor. It is in milliseconds (ms) — the smaller the number, the faster you reacted.</li>
+</ul>
+
+<h2><span class="section-icon">🏆</span>Now play five rounds</h2>
+
+<ul class="checklist">
+  <li>Repeat the round <strong>five times</strong>.</li>
+  <li>Each round, <strong>try to beat your own best</strong> — get a smaller number than last time.</li>
+  <li>Notice: the wait before the LED turns on is <strong>different every round</strong> — the Arduino picks a random number. That is what makes the game fair.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>Each round: the LED is off, then turns on after a different wait. The moment you press, your reaction time appears on the Serial Monitor in milliseconds.</p>
+  <p class="expected-note">Your reaction times change from round to round — that is completely normal. The wait before the LED also changes each time, because it is random.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>You have played five full rounds</li>
+    <li>You can point on the Serial Monitor to your <strong>fastest</strong> reaction time</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck? Game not responding? Try this first:</strong>
+  <ul>
+    <li><strong>Is the Serial Monitor open?</strong> Without it you see nothing. Open it from the magnifying-glass icon in the Arduino IDE.</li>
+    <li><strong>LED never turns on?</strong> Check that the Milestone 2 upload worked ("Done uploading" in green) and that the LED is the right way round — long leg (+) to the resistor and on to pin 9.</li>
+    <li><strong>Press not counted?</strong> Most likely the 10 kΩ pull-down resistor is not between pin 2 and GND. Check the wiring against Milestone 1.</li>
+    <li><strong>If still stuck, call the teacher.</strong></li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

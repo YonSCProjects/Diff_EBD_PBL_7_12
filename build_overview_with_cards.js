@@ -12,9 +12,13 @@ const { execSync } = require('child_process');
 const puppeteer = require('puppeteer');
 const { PDFDocument } = require('pdf-lib');
 
-const lang = process.argv[2];
-if (!['en', 'he'].includes(lang)) {
-  console.error('Usage: node build_overview_with_cards.js <en|he>');
+// Args in any order: a language (en|he) and an optional project key (1|2).
+// Defaults to project 1 for backward compatibility.
+const args = process.argv.slice(2);
+const lang = args.find((a) => ['en', 'he'].includes(a));
+const projectKey = args.find((a) => ['1', '2'].includes(a)) || '1';
+if (!lang) {
+  console.error('Usage: node build_overview_with_cards.js <en|he> [project: 1|2]');
   process.exit(1);
 }
 
@@ -30,38 +34,71 @@ const overviewConfig = isHe ? 'md-to-pdf-he.config.js' : 'md-to-pdf.config.js';
 const overviewPdf = overviewMd.replace('.md', '.pdf');
 const finalPdf = path.join(OUT, overviewPdf);
 
-const projectDir = path.join(
-  ROOT,
-  'Arduino_Projects',
-  'Project_1_Light_Signals'
-);
+const suffix = isHe ? '_he' : '';
+
+// Card render order per project. 'R:' stems live in reference_cards[_he];
+// 'T:' stems live in task_cards[_he].
+const CARD_STEMS = {
+  '1': [
+    'R:R0_breadboard_basics',
+    'R:R1_wiring_reference',
+    'R:R2_stuck_protocol',
+    'R:R3_claude_code_prompts',
+    'R:R4_safety_reminder',
+    'R:R5_sketch_index',
+    'T:T1_M1_setup_workspace',
+    'T:T1_M2_first_upload',
+    'T:T1_M3_wire_first_led',
+    'T:T1_M4_light_up_led',
+    'T:T1_M5_add_second_led',
+    'T:T1_M6_alternating_blink',
+    'T:T1_M7_wire_button',
+    'T:T1_M8_button_control',
+    'T:T2_M1_startup',
+    'T:T2_M2_pick_pattern',
+    'T:T2_M2b_wire_third_led',
+    'T:T2_M3_claude_code_level2',
+    'T:T2_M4_button_behavior',
+    'T:T2_M5_signature_pattern',
+    'T:T3_project_planner',
+  ],
+  '2': [
+    'R:R0_breadboard_basics',
+    'R:R1_wiring_reference',
+    'R:R2_stuck_protocol',
+    'R:R3_claude_code_prompts',
+    'R:R4_safety_reminder',
+    'R:R5_sketch_index',
+    'T:T1_M1_wire_led_and_button',
+    'T:T1_M2_upload_wait_flash_measure',
+    'T:T1_M3_play_five_rounds',
+    'T:T1_M4_add_buzzer',
+    'T:T1_M5_upload_buzzer_sketch',
+    'T:T1_M6_record_fastest_time',
+    'T:T2_M1_startup',
+    'T:T2_M2_pick_feedback_mode',
+    'T:T2_M2b_wire_three_leds',
+    'T:T2_M3_pick_difficulty_and_modify',
+    'T:T2_M4_upload_test_tune',
+    'T:T2_M5_signature_game',
+    'T:T3_project_planner',
+  ],
+};
+
+const PROJECT_DIRS = {
+  '1': 'Project_1_Light_Signals',
+  '2': 'Project_2_Reaction_Time_Game',
+};
+
+const projectDir = path.join(ROOT, 'Arduino_Projects', PROJECT_DIRS[projectKey]);
 const refDir = path.join(projectDir, isHe ? 'reference_cards_he' : 'reference_cards');
 const taskDir = path.join(projectDir, isHe ? 'task_cards_he' : 'task_cards');
 
-const suffix = isHe ? '_he' : '';
-const cardOrder = [
-  [refDir, `R0_breadboard_basics${suffix}.html`],
-  [refDir, `R1_wiring_reference${suffix}.html`],
-  [refDir, `R2_stuck_protocol${suffix}.html`],
-  [refDir, `R3_claude_code_prompts${suffix}.html`],
-  [refDir, `R4_safety_reminder${suffix}.html`],
-  [refDir, `R5_sketch_index${suffix}.html`],
-  [taskDir, `T1_M1_setup_workspace${suffix}.html`],
-  [taskDir, `T1_M2_first_upload${suffix}.html`],
-  [taskDir, `T1_M3_wire_first_led${suffix}.html`],
-  [taskDir, `T1_M4_light_up_led${suffix}.html`],
-  [taskDir, `T1_M5_add_second_led${suffix}.html`],
-  [taskDir, `T1_M6_alternating_blink${suffix}.html`],
-  [taskDir, `T1_M7_wire_button${suffix}.html`],
-  [taskDir, `T1_M8_button_control${suffix}.html`],
-  [taskDir, `T2_M1_startup${suffix}.html`],
-  [taskDir, `T2_M2_pick_pattern${suffix}.html`],
-  [taskDir, `T2_M2b_wire_third_led${suffix}.html`],
-  [taskDir, `T2_M3_claude_code_level2${suffix}.html`],
-  [taskDir, `T2_M4_button_behavior${suffix}.html`],
-  [taskDir, `T2_M5_signature_pattern${suffix}.html`],
-  [taskDir, `T3_project_planner${suffix}.html`],
-];
+const cardOrder = CARD_STEMS[projectKey].map((stem) => {
+  const [kind, name] = stem.split(':');
+  const dir = kind === 'R' ? refDir : taskDir;
+  return [dir, `${name}${suffix}.html`];
+});
 
 const MARKER = '<!-- INSERT_CARDS_HERE -->';
 

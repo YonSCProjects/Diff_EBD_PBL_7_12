@@ -1,0 +1,3171 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Project 2 — Reaction-Time Game: Cards Bundle (Reference + Task)</title>
+<style>/* Project 1 — Light Signals: shared task card stylesheet
+ * Used by all Tier 1, Tier 2, and Tier 3 task cards, and by the HTML tutorial.
+ * Matches the R1-R5 reference card visual style so students can switch
+ * between printed cards and HTML tutorial without cognitive friction.
+ * A4 portrait, 14pt body text, high contrast, laminate-ready.
+ */
+
+@page { size: A4 portrait; margin: 15mm; }
+
+* { box-sizing: border-box; }
+
+body {
+  /* Arial first for reliable Hebrew rendering (Windows Arial has
+   * consistent regular and bold Hebrew glyphs across Windows versions;
+   * Segoe UI's Hebrew bold can fall back to synthesized bold which
+   * looks visually different). Segoe UI and -apple-system kept as
+   * fallbacks for LTR English on non-Windows systems. */
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+  font-size: 14pt;
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  max-width: 210mm;
+  padding: 12mm;
+  margin: 0 auto;
+}
+
+/* Header with milestone badge, title, subtitle */
+
+.header {
+  border-bottom: 3pt solid #000;
+  padding-bottom: 10pt;
+  margin-bottom: 14pt;
+}
+
+/* Card-locator line — the very-top descriptive string that lets a teacher /
+ * student find the right card at a glance. Format:
+ *   "פרויקט #1 — אותות אור: שלב 1 מתוך 8"
+ *   "Project #1 — Light Signals: Milestone 1 of 8"
+ * Quiet by design (small, dimmed). The card's identity comes from the h1
+ * below; this line just answers "which card is this?". */
+.milestone-badge {
+  display: block;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 0.3pt;
+  margin-bottom: 8pt;
+}
+
+.milestone-badge.celebration {
+  color: #8b6000;
+}
+
+/* Subtitle now lives inside the .milestone-badge locator string, so the
+ * separate subtitle line is redundant — hide it. */
+.subtitle {
+  display: none;
+}
+
+h1 {
+  font-size: 22pt;
+  margin: 4pt 0 6pt 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 12pt;
+  color: #555;
+  margin-top: 3pt;
+}
+
+/* Why-this-milestone callout (pale blue italic).
+ * Uses border-inline-start so it renders correctly under both LTR
+ * (border on the left) and RTL Hebrew (border on the right). */
+
+.why {
+  background: #f0f4fa;
+  border-inline-start: 5pt solid #0050a0;
+  padding: 10pt 14pt;
+  margin: 14pt 0;
+  font-style: italic;
+  font-size: 13pt;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: flow-root;
+}
+
+/* Safety net: when a blue .why callout immediately follows an ASCII
+ * wiring diagram or a code block, force the .why onto a new page.
+ * Chromium occasionally violates break-inside: avoid in tight layouts
+ * where the only alternative would push content to the next page —
+ * this explicit page-break-before guarantees the atomic box never
+ * splits in the wiring-block -> why sequence common to T1-M3/M5/M7. */
+.wiring-block + .why,
+.code-block + .why,
+pre + .why {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* Keep "מה עושים" / "What to do" together with all its checklist items.
+ * When a second h2 follows a .checklist (e.g. "הקוד שמעלים" / "תרשים
+ * החיווט" after the action list), force the page break to happen there
+ * rather than mid-checklist. This guarantees the action list is read as
+ * one coherent unit on the page where its h2 lives. */
+@media print {
+  .checklist + h2 {
+    page-break-before: always;
+    break-before: page;
+  }
+}
+
+.why ul {
+  margin: 6pt 0 2pt 0;
+  padding-inline-start: 22pt;
+}
+
+.why li {
+  margin: 3pt 0;
+  line-height: 1.45;
+}
+
+/* Together-milestone notice (first-milestone distinctive) */
+
+.together-notice {
+  background: #fff3d6;
+  border: 2pt solid #d4a017;
+  border-radius: 4pt;
+  padding: 14pt 18pt;
+  margin: 14pt 0;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.together-notice strong {
+  display: block;
+  font-size: 16pt;
+  margin-bottom: 4pt;
+}
+
+/* Section headers — soft cream panel with a warm gold accent strip on the
+ * inline-start edge. Replaces the previous solid-black bar (which read as
+ * harsh / heavy under print and screen). The cream + gold pairing matches
+ * the .together-notice and .recognition-line callouts so the card has one
+ * consistent warm-accent palette. Tutorial overrides (e.g. .tutorial-intro
+ * h2) keep their own colors via higher specificity. */
+
+h2 {
+  font-size: 17pt;
+  margin: 18pt 0 8pt 0;
+  padding: 7pt 14pt;
+  background: #f1e5c8;
+  color: #1a2a3a;
+  border-inline-start: 5pt solid #a87833;
+  border-radius: 3pt;
+}
+
+p { margin: 6pt 0; }
+
+/* Checklist — big checkboxes for scannability */
+
+.checklist {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 10pt 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-block: 6pt;
+  padding-inline-start: 34pt;
+  padding-inline-end: 0;
+  margin: 4pt 0;
+  line-height: 1.5;
+  border-bottom: 1pt dashed #ddd;
+}
+
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  inset-inline-start: 4pt;
+  top: 3pt;
+  font-size: 22pt;
+  line-height: 1;
+}
+
+.checklist li:last-child {
+  border-bottom: none;
+}
+
+/* Screen-interactive: clicking toggles a ✓ and persists in localStorage
+ * per nickname (see card.js). Print view strips interactivity and keeps
+ * the plain empty boxes so the laminated card still works with a marker. */
+.checklist li {
+  cursor: pointer;
+  user-select: none;
+}
+
+.checklist li.checked::before {
+  content: "☑";
+}
+
+.checklist li.checked {
+  color: #666;
+  text-decoration: line-through;
+  text-decoration-color: #aaa;
+}
+
+/* Nickname indicator strip (screen only) */
+.nickname-indicator {
+  background: #f5f5f5;
+  border: 1pt solid #ccc;
+  padding: 6pt 12pt;
+  margin: 0 0 10pt 0;
+  font-size: 11pt;
+  display: flex;
+  gap: 10pt;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nickname-indicator strong {
+  font-weight: bold;
+}
+
+.nickname-indicator button {
+  font-size: 10pt;
+  padding: 3pt 10pt;
+  border: 1pt solid #888;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nickname-indicator button:hover {
+  background: #e8e8e8;
+}
+
+/* Code snippet block — the full .ino printed for reading on paper */
+
+.code-block {
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  line-height: 1.4;
+  white-space: pre;
+  overflow-x: auto;
+  page-break-inside: avoid;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+.code-block .filename {
+  display: block;
+  font-size: 10pt;
+  color: #666;
+  margin-bottom: 8pt;
+  font-style: italic;
+}
+
+/* ASCII wiring diagram block */
+
+.wiring-block {
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 12pt;
+  line-height: 1.3;
+  white-space: pre;
+  page-break-inside: avoid;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* Image slot — living placeholder for Fritzing or photo */
+
+.image-slot {
+  border: 2pt dashed #667;
+  background: #f0f4fa;
+  padding: 14pt 18pt;
+  margin: 12pt 0;
+  font-size: 11pt;
+  page-break-inside: avoid;
+}
+
+.image-slot-header {
+  font-weight: bold;
+  color: #334;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 11pt;
+  margin-bottom: 6pt;
+}
+
+.image-slot p {
+  margin: 4pt 0;
+  font-size: 11pt;
+}
+
+/* Wiring figure — Fritzing breadboard diagram + caption */
+
+.wiring-figure {
+  border: 1pt solid #b8c4d8;
+  background: #fafcff;
+  padding: 10pt 12pt 8pt;
+  margin: 12pt 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  text-align: center;
+}
+
+.wiring-figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 260pt;
+  height: auto;
+  margin: 0 auto;
+}
+
+.wiring-figure figcaption {
+  margin-top: 6pt;
+  font-size: 10pt;
+  color: #455;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.wiring-figure figcaption strong {
+  color: #223;
+}
+
+/* Expected-result block (green) */
+
+.expected {
+  background: #e8f5e9;
+  border-inline-start: 5pt solid #2e7d32;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+}
+
+.expected strong {
+  display: block;
+  margin-bottom: 4pt;
+  color: #1b5e20;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 12pt;
+}
+
+/* Done-when block (double border) */
+
+.done-when {
+  background: #fff;
+  border: 3pt double #000;
+  border-radius: 4pt;
+  padding: 14pt 18pt;
+  margin: 16pt 0;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.done-when strong {
+  display: block;
+  font-size: 12pt;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  margin-bottom: 6pt;
+}
+
+.done-when ul {
+  margin: 6pt 0 0 0;
+  padding-inline-start: 20pt;
+  font-weight: normal;
+  font-size: 13pt;
+}
+
+.done-when ul li {
+  margin: 3pt 0;
+  padding-block: 5pt;
+  line-height: 1.6;
+  border-bottom: 1pt solid #e0e0e0;
+}
+
+.done-when ul li:last-child {
+  border-bottom: none;
+}
+
+/* Stuck protocol short version (pale yellow) */
+
+.stuck {
+  background: #fffbe0;
+  border-inline-start: 5pt solid #d4a017;
+  padding: 10pt 14pt;
+  margin: 12pt 0;
+  font-size: 13pt;
+}
+
+.stuck strong {
+  display: block;
+  margin-bottom: 3pt;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+/* Each scenario in the stuck list gets its own airy white card with a
+ * soft gold border. The cards stack with breathing room between them so
+ * an ADHD/EBD student can scan one scenario at a time without a wall-of-
+ * text feel. The list-marker is dropped because the card itself carries
+ * the visual separation. */
+.stuck ul {
+  list-style: none;
+  margin: 10pt 0 2pt 0;
+  padding-inline-start: 0;
+}
+
+.stuck ul li {
+  background: #fff;
+  border: 1pt solid #e8d088;
+  border-radius: 4pt;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+  line-height: 1.5;
+}
+
+.stuck ul li strong {
+  display: inline;
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: inherit;
+  letter-spacing: 0;
+}
+
+/* Warning block (pale red, for the button pull-down pitfall especially) */
+
+.warning {
+  background: #fef0f0;
+  border-inline-start: 5pt solid #b00;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+  font-size: 13pt;
+}
+
+.warning strong {
+  color: #b00;
+  display: block;
+  margin-bottom: 3pt;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+/* Choice-preview block (pale blue, "look ahead") — used on start-up cards
+ * to introduce upcoming choice points without making them actionable yet.
+ * Distinct hue from the green .expected and red .warning so a student reads
+ * it as "coming up", not "do now". */
+.choice-preview {
+  background: #e8f1fb;
+  border-inline-start: 5pt solid #1565c0;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+  font-size: 13pt;
+}
+
+.choice-preview strong {
+  display: block;
+  margin-bottom: 4pt;
+  color: #0d47a1;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+.choice-preview ul {
+  margin: 6pt 0 4pt 0;
+  padding-inline-start: 20pt;
+}
+
+.choice-preview ul li {
+  margin: 5pt 0;
+  line-height: 1.6;
+}
+
+/* Recognition line block — Milestone 1 together-ritual */
+
+.recognition-line {
+  background: #fff3d6;
+  border: 3pt solid #d4a017;
+  border-radius: 4pt;
+  padding: 14pt 18pt;
+  margin: 14pt 0;
+  text-align: center;
+  font-size: 16pt;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.recognition-line::before {
+  content: "\201C";
+  font-size: 24pt;
+  vertical-align: -4pt;
+  color: #d4a017;
+}
+
+.recognition-line::after {
+  content: "\201D";
+  font-size: 24pt;
+  vertical-align: -4pt;
+  color: #d4a017;
+}
+
+/* RTL: swap opening/closing quotes so the opening quote sits at the
+ * visual start (right side) of the recognition line in Hebrew. */
+[dir="rtl"] .recognition-line::before { content: "\201D"; }
+[dir="rtl"] .recognition-line::after { content: "\201C"; }
+
+/* Celebration block — Milestone 8 project complete */
+
+.celebration {
+  background: #fff3d6;
+  border: 3pt solid #d4a017;
+  border-radius: 4pt;
+  padding: 16pt 20pt;
+  margin: 16pt 0;
+  text-align: center;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.celebration .title {
+  font-size: 22pt;
+  color: #8b6000;
+  display: block;
+  margin-bottom: 8pt;
+}
+
+/* Prompt template (Tier 2+ Claude Code Level 2 interactions) */
+
+.prompt-template {
+  background: #f4f7fb;
+  border: 1pt solid #99b;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 12pt;
+  white-space: pre-wrap;
+  line-height: 1.45;
+  page-break-inside: avoid;
+}
+
+/* Choice-point block (Tier 2 pattern choice, button behaviour choice) */
+
+.choice-point {
+  background: #f0f4fa;
+  border: 2pt solid #0050a0;
+  border-radius: 4pt;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+}
+
+.choice-point strong {
+  display: block;
+  color: #0050a0;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 12pt;
+  margin-bottom: 6pt;
+}
+
+.choice-point .option {
+  background: #fff;
+  border: 1pt solid #99b;
+  border-radius: 3pt;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+}
+
+.choice-point .option strong {
+  color: #000;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14pt;
+  margin-bottom: 2pt;
+}
+
+/* Tier 3 planner fill-in-the-blank fields */
+
+.field {
+  border: 1pt solid #000;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  min-height: 60pt;
+  background: #fafafa;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-bottom: 4pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+}
+
+.field .hint {
+  color: #666;
+  font-size: 11pt;
+  font-style: italic;
+  margin-bottom: 6pt;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 20pt;
+  padding-top: 10pt;
+  border-top: 1pt dashed #999;
+  font-size: 10pt;
+  color: #666;
+  text-align: center;
+}
+
+/* Print-specific tweaks */
+
+@media print {
+  body { font-size: 13pt; }
+  .card { padding: 10mm; }
+  a { color: #000; text-decoration: underline; }
+
+  /* Screen-only blocks: hidden on the laminated card but visible in
+   * the browser/HTML view. Used for the "code listing" sections
+   * ("הקוד שמעלים" / "The sketch you are uploading" + intro paragraph
+   * + code-block). The student sees the same code when they open the
+   * .ino file in Arduino IDE per the action steps, so duplicating it
+   * on the printed card adds bulk without action value. */
+  .screen-only { display: none; }
+
+  /* Print = laminated artifact: always show empty boxes, no interactivity,
+   * no nickname strip, no strikethrough on checked items. */
+  .nickname-indicator { display: none; }
+  .checklist li { cursor: default; }
+  .checklist li.checked { color: #000; text-decoration: none; }
+  .checklist li.checked::before { content: "☐"; }
+
+  /* Keep callout boxes from splitting across a page break — a callout
+   * broken mid-box is disorienting and defeats the box's visual framing.
+   * .choice-point is intentionally excluded: it can be tall (3 options)
+   * and forcing it whole often leaves a near-empty first page. Instead
+   * we keep each individual .option inside it together.
+   * Tables are also excluded here — they use a separate rule below
+   * that allows row-level splits with repeating headers. */
+  .why, .together-notice, .expected, .done-when, .stuck,
+  .warning, .choice-preview, .important, .recognition-line, .celebration,
+  .prompt-template, .image-slot, .field, .living-placeholder,
+  .step {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Paragraphs and list items are atomic — never split mid-sentence or
+   * mid-item. Card paragraphs are short, so whitespace cost is minimal
+   * while the readability win is non-negotiable. */
+  p {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Extend heading-to-body bonding to the second following sibling so a
+   * heading + short lead-in + list/table move together (prevents
+   * heading + one line stranded at page bottom with body starting on
+   * the next page). */
+  h2 + * + *, h3 + * + *, h4 + * + * {
+    page-break-before: avoid;
+    break-before: avoid-page;
+  }
+
+  /* Tables: allow row-level splits with repeating <thead> on the
+   * continuation page. A whole-table keep-together is opt-in via
+   * .table-keep-together. */
+  table {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tbody tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .table-keep-together {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .choice-point .option {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Keep each option's title (<strong>) bonded to its following .option
+   * body so the title never strands at the bottom of a page. */
+  .choice-point strong {
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+  .choice-point strong + .option {
+    page-break-before: avoid;
+    break-before: avoid-page;
+  }
+
+  /* Living placeholders are authoring scaffolding for image slots —
+   * they must never reach a laminated student card. */
+  .living-placeholder { display: none; }
+
+  /* Two-page cards: when the recognition line appears mid-card, force
+   * the "what you should see" + "done when" + "stuck" cluster onto
+   * page 2 so the ceremonial line closes page 1 cleanly. */
+  .recognition-line + .expected {
+    page-break-before: always;
+  }
+}
+
+/* =====================================================================
+ * Tutorial-specific styles
+ * Used by project_1_tutorial.html, which links to this same stylesheet
+ * so the tutorial visually matches the printed task cards.
+ * ===================================================================*/
+
+/* Tutorial intro block (blue, introduces how to use the tutorial) */
+
+.tutorial-intro {
+  background: #e3f2fd;
+  border: 3pt solid #1565c0;
+  padding: 18pt 22pt;
+  margin: 20pt 0;
+  font-size: 14pt;
+}
+
+.tutorial-intro h2 {
+  margin-top: 0;
+  background: #1565c0;
+}
+
+.tutorial-intro p {
+  margin: 8pt 0;
+  line-height: 1.55;
+}
+
+/* Tutorial navigation (table of contents with anchor links) */
+
+.tutorial-nav {
+  background: #f5f5f5;
+  border: 1pt solid #aaa;
+  padding: 16pt 22pt;
+  margin: 20pt 0;
+}
+
+.tutorial-nav h2 {
+  margin-top: 0;
+}
+
+.tutorial-nav h3 {
+  font-size: 15pt;
+  margin: 12pt 0 4pt 0;
+  color: #000;
+  border-bottom: 1pt solid #999;
+  padding-bottom: 3pt;
+}
+
+.tutorial-nav ol {
+  margin: 6pt 0;
+  padding-inline-start: 24pt;
+  list-style: decimal;
+}
+
+.tutorial-nav li {
+  margin: 5pt 0;
+  line-height: 1.4;
+}
+
+.tutorial-nav a {
+  color: #0050a0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tutorial-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Tier divider (big black bar between Tier 1 / Tier 2 / Tier 3 sections) */
+
+.tier-divider {
+  background: #000;
+  color: #fff;
+  padding: 20pt 24pt;
+  margin: 34pt 0 22pt 0;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+}
+
+.tier-divider .tier-subtitle {
+  display: block;
+  font-size: 13pt;
+  font-weight: normal;
+  letter-spacing: 0.5pt;
+  text-transform: none;
+  margin-top: 6pt;
+  opacity: 0.85;
+}
+
+/* "Open this sketch" action link — a prominent clickable button */
+
+.open-link {
+  display: block;
+  background: #0050a0;
+  color: #fff !important;
+  padding: 12pt 18pt;
+  margin: 12pt 0;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: center;
+  border-radius: 4pt;
+  border: 2pt solid #003875;
+}
+
+.open-link:hover {
+  background: #003875;
+}
+
+.open-link::before {
+  content: "📎 ";
+  font-size: 16pt;
+}
+
+/* Inline action link (for "see R1 Wiring" and similar) */
+
+.inline-link {
+  color: #0050a0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.inline-link:hover {
+  color: #003875;
+}
+
+/* File-path box (fallback — shown next to .open-link for students whose
+ * browser does not open .ino files directly) */
+
+.file-path {
+  display: block;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 6pt 10pt;
+  margin: -6pt 0 12pt 0;
+  color: #555;
+  text-align: center;
+}
+
+.file-path::before {
+  content: "File path (open in Arduino IDE via File \2192  Sketchbook): ";
+  font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: 10pt;
+  font-style: italic;
+}
+
+/* Orphan-heading prevention: keep a heading bonded to the block that follows.
+ * Chicago §2.113, APA-7 §2.27 — heading must be followed by body content
+ * on the same page, never stranded at page bottom. */
+h1, h2, h3, h4, h5, h6,
+.section-title {
+  page-break-after: avoid;
+  break-after: avoid-page;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+p, li {
+  orphans: 3;
+  widows: 3;
+}
+
+h2 + p, h2 + ul, h2 + ol, h2 + .code-block, h2 + .wiring-block, h2 + pre, h2 + table, h2 + blockquote,
+h3 + p, h3 + ul, h3 + ol, h3 + .code-block, h3 + .wiring-block, h3 + pre, h3 + table, h3 + blockquote,
+h4 + p, h4 + ul, h4 + ol, h4 + .code-block, h4 + .wiring-block, h4 + pre, h4 + table, h4 + blockquote,
+.section-title + * {
+  page-break-before: avoid;
+  break-before: avoid-page;
+}
+
+/* Milestone section (each task card's screen equivalent) */
+
+.milestone-section {
+  scroll-margin-top: 20pt;
+  page-break-after: always;
+  border-bottom: 2pt dashed #ccc;
+  margin-bottom: 20pt;
+  padding-bottom: 20pt;
+}
+
+.milestone-section:last-of-type {
+  border-bottom: none;
+}
+
+/* Back-to-top link at the end of each milestone.
+ * text-align: end renders as "right" under LTR and "left" under RTL,
+ * so the link always sits at the visual end of its container. */
+
+.back-to-top {
+  text-align: end;
+  margin-top: 16pt;
+  font-size: 11pt;
+}
+
+.back-to-top a {
+  color: #0050a0;
+  text-decoration: none;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
+
+/* Tutorial content wrapper (centers content in browser view) */
+
+.tutorial-content {
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 12mm;
+}
+
+/* Screen-only hint: tells the student what they are looking at */
+
+@media screen {
+  .screen-hint {
+    display: block;
+    background: #fff8e1;
+    border: 1pt solid #f9a825;
+    padding: 8pt 12pt;
+    margin: 12pt 0;
+    font-size: 11pt;
+    font-style: italic;
+    color: #555;
+  }
+}
+
+@media print {
+  .screen-hint { display: none; }
+  .tier-divider { page-break-before: always; }
+  .tutorial-nav { page-break-after: always; }
+  .back-to-top { display: none; }
+  .open-link {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2pt solid #000 !important;
+  }
+  .file-path { display: block; }
+}
+
+/* =====================================================================
+ * Hebrew RTL overrides — Pattern E6 (no box-level bold on Hebrew callouts)
+ * Windows Arial synthesises Hebrew bold inconsistently (thickens regular
+ * glyphs rather than using a true bold face), so box-level bold on a
+ * Hebrew-language callout looks visibly different from the surrounding
+ * regular text. Individual <strong> tags inside these boxes still provide
+ * emphasis via the semantic tag, so the important labels stay bold.
+ * English LTR cards are unaffected — this override only fires under [dir="rtl"].
+ * ===================================================================*/
+
+[dir="rtl"] .together-notice,
+[dir="rtl"] .done-when,
+[dir="rtl"] .celebration,
+[dir="rtl"] .recognition-line,
+[dir="rtl"] .milestone-badge,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .expected strong,
+[dir="rtl"] .warning strong,
+[dir="rtl"] .done-when strong {
+  font-weight: normal;
+}
+
+/* Hebrew RTL: uppercase + letter-spacing are Latin-type conventions
+ * and render poorly on Hebrew glyphs (no case, and letter-spacing
+ * pushes Hebrew letters apart awkwardly). Override on all callout
+ * headings and bump size for a clearer visual hierarchy. */
+[dir="rtl"] .expected strong,
+[dir="rtl"] .done-when strong,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .warning strong {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14pt;
+  margin-bottom: 6pt;
+}
+
+/* Expected block: paragraph spacing so the primary observable fact
+ * reads as a clean lead line and the explanation sits below it. */
+.expected p {
+  margin: 4pt 0 0 0;
+  line-height: 1.55;
+}
+
+.expected p.expected-note {
+  font-size: 12pt;
+  color: #444;
+  margin-top: 6pt;
+}
+
+/* Prompt templates hold Hebrew prose fill-in labels under RTL — per
+ * Pattern E5, Hebrew text never uses monospace. Keep monospace for
+ * LTR prompt templates (English code examples). */
+[dir="rtl"] .prompt-template {
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+}
+
+/* Field labels (Tier 3 planner) — strip Latin uppercase and letter-
+ * spacing when rendered under RTL; Hebrew has no case and glyphs
+ * render poorly with Latin letter-spacing. */
+[dir="rtl"] .field label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Fill-in-blank utility (Tier 2 choice-commitment, planner fields).
+ * Replaces inline style="border-bottom: 1pt solid; ..." across cards. */
+.fill-blank {
+  border-bottom: 1pt solid #000;
+  display: inline-block;
+  min-width: 60pt;
+}
+
+/* Secondary detail line within a checklist item — keeps the primary action
+ * on its own line and tucks supplementary detail (file path, location)
+ * underneath in smaller, dimmer text. Reduces visual noise in bullets that
+ * mix RTL Hebrew prose with multiple LTR <code> islands. */
+.li-detail {
+  display: block;
+  margin-top: 4pt;
+  font-size: 12pt;
+  color: #555;
+  line-height: 1.45;
+}
+
+/* Inline <code> in RTL context: isolate the LTR run so neutral characters
+ * (backslash, colon, parentheses) resolve inside the LTR island rather than
+ * being absorbed into the surrounding RTL paragraph and reordering visually.
+ * Also allow long paths to break if they would overflow the column. */
+[dir="rtl"] code {
+  unicode-bidi: isolate;
+  direction: ltr;
+}
+
+code {
+  overflow-wrap: anywhere;
+}
+
+/* Hebrew RTL: the .r-ref inline circle used in task cards to reference
+ * R1-R5 reference cards. Matches the circled style of the top-corner
+ * card-ID badge so "R2" in body text looks identical to "R2" in the corner. */
+
+[dir="rtl"] .r-ref,
+.r-ref {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18pt;
+  height: 18pt;
+  border: 1.5pt solid #000;
+  border-radius: 50%;
+  font-size: 10pt;
+  font-weight: bold;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  top: -1pt;
+}
+
+/* Card-ID badge in the top corner. inset-inline-end resolves to "right" in
+ * LTR (English heading flows from the left, so the badge sits in the empty
+ * top-right corner) and to "left" in RTL (Hebrew heading flows from the
+ * right, so the badge sits in the empty top-left corner). One rule, both
+ * languages. */
+
+.card-id {
+  position: absolute;
+  top: 5mm;
+  left: 5mm;
+  width: 30pt;
+  height: 30pt;
+  border: 2pt solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11pt;
+  font-weight: bold;
+  background: #fff;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.3pt;
+  z-index: 10;
+}
+
+.card {
+  position: relative;
+}
+
+/* Together-milestone image icon (Hebrew + English). Used inside the
+ * .together-notice block to visually mark the together-milestone pattern.
+ * Source: images/together_milestone_icon.png (Yon-provided). */
+
+.together-icon {
+  display: block;
+  width: 60pt;
+  height: 60pt;
+  margin: 0 auto 10pt auto;
+  object-fit: contain;
+}
+</style>
+<style>
+  /* Bundle-level: the first card shouldn't force a blank leading page. */
+  .appendix-card:first-of-type { page-break-before: auto !important; }
+  body { margin: 0; padding: 0; }
+</style>
+</head>
+<body>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .orient {
+    background: #eef3f8;
+    border-left: 5pt solid #5a7391;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 12.5pt;
+    color: #234;
+  }
+  .big-msg {
+    background: #fff8e1;
+    border: 2pt solid #f57c00;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 15pt;
+    text-align: left;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border-left: 5pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key strong {
+    color: #000;
+  }
+  .tip {
+    background: #f1f8e9;
+    border-left: 5pt solid #558b2f;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 260pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .wiring-figure figcaption strong {
+    color: #223;
+  }
+  .bb-ascii {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    border: 1pt solid #ccc;
+    padding: 8pt 8pt;
+    margin: 10pt 0;
+    line-height: 1.35;
+    white-space: pre;
+    overflow-x: auto;       /* screen only; print clips at page edge */
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .chain {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    background: #fafcff;
+    border: 1pt solid #b8c4d8;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    text-align: center;
+    page-break-inside: avoid;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="header">
+  <h1>R0 — How a breadboard works</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="orient">
+Read this before your first session. You do not need to memorise it — keep it on your workbench and come back to any section when you get stuck.
+</div>
+
+<div class="big-msg">
+A breadboard lets you build circuits without soldering. You push the legs of parts (LEDs, resistors, the buzzer, wires) into the holes, and the board connects them together inside — no tools needed. When you are done, you can pull everything out and reuse the parts.
+</div>
+
+<h2>The board has four areas</h2>
+
+<div class="wiring-figure">
+  <img src="../images/w0_empty_breadboard_breadboard.svg" alt="Empty breadboard: two horizontal power rails at the top (marked + and −), then two halves of numbered columns separated by a centre gap, then two more power rails at the bottom.">
+  <figcaption><strong>The real breadboard.</strong> Two red/blue <strong>power rails</strong> at top and bottom (marked + and −). In between, a grid of numbered columns split by a <strong>centre gap</strong>. Rows are labelled <strong>a–e</strong> on the top half and <strong>f–j</strong> on the bottom half.</figcaption>
+</div>
+
+<div class="bb-ascii">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+
+     a  ● ● ● ● ● ● ● ● ● ● ●
+     b  ● ● ● ● ● ● ● ● ● ● ●
+     c  ● ● ● ● ● ● ● ● ● ● ●       top half
+     d  ● ● ● ● ● ● ● ● ● ● ●
+     e  ● ● ● ● ● ● ● ● ● ● ●
+                                    ← centre gap
+     f  ● ● ● ● ● ● ● ● ● ● ●
+     g  ● ● ● ● ● ● ● ● ● ● ●
+     h  ● ● ● ● ● ● ● ● ● ● ●       bottom half
+     i  ● ● ● ● ● ● ● ● ● ● ●
+     j  ● ● ● ● ● ● ● ● ● ● ●
+
+     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+        1 2 3 4 5 6 7 8 9 10 …</div>
+
+<div class="key">
+<strong>The two rules that matter</strong>
+<ul>
+  <li><strong>Inside one numbered column, rows a–e are connected.</strong> Holes a5, b5, c5, d5, e5 all share the same electrical connection. Anything you push into those 5 holes is wired together.</li>
+  <li><strong>Rows f–j are connected the same way, but separately from a–e.</strong> The centre gap breaks the connection — holes e5 and f5 are <strong>not</strong> connected to each other.</li>
+</ul>
+</div>
+
+<div class="key">
+<strong>The two power rails</strong>
+<ul>
+  <li>The <span style="color:#c00;"><strong>red</strong></span> rail (marked +) runs the full length of the board. Every hole along the red rail is connected. Used for <strong>5 V</strong>.</li>
+  <li>The <span style="color:#036;"><strong>blue</strong></span> rail (marked −) also runs the full length. Every hole along the blue rail is connected. Used for <strong>GND</strong> (ground).</li>
+  <li>Because each rail runs the full length, you can tap power from anywhere along it — you do not need a separate wire for each LED.</li>
+</ul>
+</div>
+
+<h2>How to place an LED on the breadboard</h2>
+
+<p>An LED has <strong>two legs of different lengths</strong>. The long leg is the plus side; the short leg is the minus side. Each leg needs its <strong>own numbered column</strong> — if both legs go into the same column, the LED is short-circuited and will not light.</p>
+
+<div class="tip">
+<strong>Rule of thumb:</strong> plant the LED so its two legs go into two different numbered columns (for example, long leg in column 9, short leg in column 8). Resistors work the same way — legs in two different columns.
+</div>
+
+<h2>What "pin 9 → 220 Ω → LED" means on the breadboard</h2>
+
+<p>When reference card <strong>R1 (Project 2 wiring)</strong> writes <em>"Arduino pin 9 → 220 Ω → LED long leg"</em>, here is the chain of connections you are building:</p>
+
+<div class="chain">[Arduino pin 9] ── wire ── [resistor] ── [LED long leg] ── [LED short leg] ── wire ── [GND]</div>
+
+<p>On the breadboard, each arrow above is one shared column. Using the exact layout from R1 (Project 2 wiring):</p>
+
+<ul>
+  <li>A jumper wire from Arduino pin 9 plugs into one hole on the breadboard.</li>
+  <li>One leg of the 220 Ω resistor plugs into the <strong>same numbered column</strong> as that jumper — they are now connected.</li>
+  <li>The resistor's other leg plugs into a <strong>new column</strong> — a fresh, separate connection.</li>
+  <li>The LED's long leg plugs into that same new column — now current can flow from pin 9 → resistor → LED.</li>
+  <li>The LED's short leg plugs into its own column, and a jumper from that column goes to the blue GND rail.</li>
+</ul>
+
+<div class="key">
+<strong>The buzzer — the new part in Project 2</strong>
+<ul>
+  <li>The buzzer connects in a short chain: <strong>pin 8 → buzzer → GND</strong>. One buzzer leg to digital pin 8, the other leg to the GND rail.</li>
+  <li>The small (passive piezo) buzzer <strong>needs no resistor</strong>, and it does not matter which way round you connect its legs.</li>
+  <li>Like every part — the two legs go into <strong>two different columns</strong>, or it shorts and the buzzer will not beep.</li>
+  <li><span class="dont">Never wire the buzzer directly between 5 V and GND.</span> Always drive it from pin 8, so the Arduino controls it.</li>
+</ul>
+</div>
+
+<p>The breadboard is doing the wiring for you — you just pick which column each leg goes into.</p>
+
+<h2>Two things to check if something is not working yet</h2>
+
+<div class="tip">
+<strong>Check 1 — are the LED's two legs in two different columns?</strong> If both legs share a column, the long leg and the short leg are connected directly, which shorts the LED and it will not light. Pull one leg and move it one column over. The same is true for the buzzer — its two legs in different columns.
+</div>
+
+<div class="tip">
+<strong>Check 2 — does each leg share its column with exactly the right neighbour?</strong> Trace the chain out loud: "pin 9 jumper and resistor leg go into the <em>same</em> column; the resistor's other leg and the LED long leg go into the <em>same</em> column; the LED short leg and the GND jumper go into the <em>same</em> column." If any of those pairs are in <em>different</em> columns, the chain is broken there. Move the leg into the matching column.
+</div>
+
+<h2>You have what you need</h2>
+
+<p>Your next card is <strong>R1 — Project 2 wiring</strong>. Keep R0 on your workbench — if something is not working later, the two checks above will usually find it.</p>
+
+<footer>
+  R0 — How a breadboard works · Project 2 Reaction-Time Game
+</footer>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 10mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 12pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 11pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 8pt 12pt;
+    margin: 8pt 0;
+    font-weight: bold;
+    font-size: 14pt;
+  }
+  .wiring {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13pt;
+    background: #f4f4f4;
+    padding: 12pt;
+    border: 1pt solid #ccc;
+    white-space: pre;
+    line-height: 1.3;
+    margin: 8pt 0;
+  }
+  .living-placeholder {
+    border: 2pt dashed #667;
+    background: #f0f4fa;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-size: 11pt;
+    page-break-inside: avoid;
+  }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 300pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .wiring-figure figcaption strong {
+    color: #223;
+  }
+  .lp-header {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #334;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+    margin-bottom: 6pt;
+  }
+  .lp-section {
+    margin: 6pt 0;
+  }
+  .lp-section strong {
+    color: #000;
+    display: block;
+    margin-bottom: 2pt;
+  }
+  .lp-section ul {
+    margin: 3pt 0 3pt 0;
+    padding-left: 18pt;
+  }
+  .lp-section li {
+    margin: 2pt 0;
+    line-height: 1.4;
+  }
+  .lp-section code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #fff;
+    padding: 1pt 4pt;
+    border: 1pt solid #ccd;
+    border-radius: 2pt;
+  }
+  .lp-section a {
+    color: #0050a0;
+    word-break: break-all;
+  }
+  .color-band {
+    font-family: 'Consolas', monospace;
+    background: #efefef;
+    padding: 2pt 5pt;
+    border-radius: 2pt;
+    font-size: 12pt;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  .do {
+    color: #060;
+    font-weight: bold;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="header">
+  <h1>R1 — Wiring Reference</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game • Student workstation card</div>
+</div>
+
+<p><strong>This card shows you how to wire the LED, the button, and the buzzer for Project 2.</strong> Keep it next to your breadboard. If you get confused about wiring, look at this card first before you call the teacher.</p>
+
+<h2><span class="section-icon">⚠️</span>The most important rules</h2>
+
+<div class="key">
+LED long leg = <span class="do">positive (+)</span>. It goes to the <strong>resistor</strong>, then to the Arduino pin.
+</div>
+
+<div class="key">
+LED short leg = <span class="do">negative (−)</span>. It goes to the Arduino <strong>GND</strong>.
+</div>
+
+<div class="key">
+Every LED needs its own <strong>220 Ω resistor</strong> (colour bands: <span class="color-band">red · red · brown</span>). No resistor = burnt LED.
+</div>
+
+<div class="key">
+The button needs a <strong>10 kΩ pull-down resistor</strong> (colour bands: <span class="color-band">brown · black · orange</span>). Without it the button reads random values.
+</div>
+
+<div class="key">
+The <strong>buzzer</strong> has no polarity and needs no resistor. One leg goes to <strong>digital pin 8</strong>, the other to <strong>GND</strong>. <span class="dont">Never connect the buzzer straight to 5 V.</span>
+</div>
+
+<h2><span class="section-icon">🔌</span>Wiring 1 — LED + button (Milestone 1)</h2>
+
+<p>The base circuit of the game: one LED on <strong>pin 9</strong> through a 220 Ω resistor, and a button on <strong>pin 2</strong> with a 10 kΩ pull-down resistor. This is exactly the circuit you built in Project 1.</p>
+
+<div class="wiring">Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
+                         ▼
+                    LED short leg (−) ── Arduino GND
+
+Arduino 5 V ─────────────┬── Button pin A
+                         ▼
+                    Button pin B ──┬── Arduino pin 2
+                                   └─[10 kΩ]── Arduino GND</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_01_led_button_breadboard.svg" alt="Breadboard diagram: an LED on pin 9 through a 220 Ω resistor to GND, and a push-button across the centre gap — one side to 5 V, the other to pin 2 and through a 10 kΩ pull-down resistor to GND.">
+  <figcaption><strong>LED: pin 9 → 220 Ω → long leg</strong>, short leg → <strong>GND</strong>. <strong>Button: pin A → 5 V</strong>, pin B → pin 2 and through a <strong>10 kΩ pull-down → GND</strong>.</figcaption>
+</figure>
+
+<p><span class="dont">Important:</span> the 10 kΩ pull-down resistor goes between <strong>pin 2 and GND</strong>, <span class="dont">not between 5 V and GND</span>. If you wire it between 5 V and GND, pressing the button creates a short circuit and the Arduino will reset.</p>
+
+<h2><span class="section-icon">🔌</span>Wiring 2 — LED + button + buzzer (Milestone 4)</h2>
+
+<p>Same as Wiring 1, plus the <strong>buzzer</strong>: one leg to <strong>pin 8</strong>, the other leg to <strong>GND</strong>. The buzzer's two legs go in <strong>different breadboard columns</strong> — not the same column, which would short it.</p>
+
+<div class="wiring">Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
+                         ▼
+                    LED short leg (−) ── Arduino GND
+
+Arduino 5 V ─────────────┬── Button pin A
+                         ▼
+                    Button pin B ──┬── Arduino pin 2
+                                   └─[10 kΩ]── Arduino GND
+
+Arduino pin 8 ───────────── Buzzer leg 1
+Arduino GND  ───────────── Buzzer leg 2</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_02_led_button_buzzer_breadboard.svg" alt="Breadboard diagram: an LED on pin 9 through a 220 Ω resistor, a button on pin 2 with a 10 kΩ pull-down, and a buzzer — one leg to pin 8, the other to GND.">
+  <figcaption><strong>Buzzer: one leg → pin 8</strong>, the other leg → <strong>GND</strong>. The buzzer is added on top of Wiring 1 — no polarity, no resistor. <span class="dont">Never connect the buzzer to 5 V.</span></figcaption>
+</figure>
+
+<h2><span class="section-icon">🔌</span>Wiring 3 — Three LEDs + button + buzzer (Tier 2, feedback Mode A)</h2>
+
+<p>Only needed if you chose the <strong>three-LED feedback mode</strong> in Tier 2 (Milestone 2b). Add two more LEDs to Wiring 2: the <strong>medium LED on pin 10</strong> and the <strong>slow LED on pin 11</strong>, each with its own 220 Ω resistor, exactly like the "go" LED on pin 9.</p>
+
+<div class="wiring">Arduino pin 9  ──[220 Ω]──┬── LED fast long leg
+                          ▼
+                     LED fast short leg ── Arduino GND
+
+Arduino pin 10 ──[220 Ω]──┬── LED medium long leg
+                          ▼
+                     LED medium short leg ── Arduino GND
+
+Arduino pin 11 ──[220 Ω]──┬── LED slow long leg
+                          ▼
+                     LED slow short leg ── Arduino GND
+
+Arduino 5 V ─────────────┬── Button pin A
+                         ▼
+                    Button pin B ──┬── Arduino pin 2
+                                   └─[10 kΩ]── Arduino GND
+
+Arduino pin 8 ───────────── Buzzer leg 1
+Arduino GND  ───────────── Buzzer leg 2</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_03_three_leds_button_buzzer_breadboard.svg" alt="Breadboard diagram: three LEDs — pin 9 through 220 Ω to the fast LED, pin 10 through 220 Ω to the medium LED, pin 11 through 220 Ω to the slow LED — plus a button on pin 2 with a 10 kΩ pull-down and a buzzer on pin 8.">
+  <figcaption><strong>Pin 9 → fast LED</strong> · <strong>Pin 10 → medium LED</strong> · <strong>Pin 11 → slow LED</strong>, each through a 220 Ω resistor to GND. Added to the button (pin 2) and buzzer (pin 8) of Wiring 2.</figcaption>
+</figure>
+
+<h2><span class="section-icon">🔌</span>Wiring 4 — Two-button variant (Tier 3 only)</h2>
+
+<p>Only needed if you are building the <strong>two-player game</strong> in Tier 3. Add a <strong>second button</strong> on <strong>pin 3</strong> with its own 10 kΩ pull-down resistor, wired exactly like the first button.</p>
+
+<div class="wiring">Arduino 5 V ─────────────┬── Button 1 pin A
+                         ▼
+                    Button 1 pin B ──┬── Arduino pin 2
+                                     └─[10 kΩ]── Arduino GND
+
+Arduino 5 V ─────────────┬── Button 2 pin A
+                         ▼
+                    Button 2 pin B ──┬── Arduino pin 3
+                                     └─[10 kΩ]── Arduino GND</div>
+
+<p><span class="dont">Same pull-down rule:</span> each button's 10 kΩ resistor goes between <strong>its input pin (2 or 3) and GND</strong>, not between 5 V and GND.</p>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_04_two_buttons_variant_breadboard.svg" alt="Breadboard diagram: two buttons — button 1 on pin 2 and button 2 on pin 3, each with a 10 kΩ pull-down resistor to GND and the other side to 5 V — alongside the LED and buzzer of the base circuit.">
+  <figcaption><strong>Button 1 → pin 2</strong> · <strong>Button 2 → pin 3</strong>, each with a <strong>10 kΩ pull-down → GND</strong>. Same pattern as the first button, different pin. Added to the LED and buzzer of the base circuit.</figcaption>
+</figure>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    margin: 14pt 0;
+    padding: 12pt 14pt;
+    background: #f6f6f6;
+    border-left: 5pt solid #000;
+  }
+  .step-number {
+    font-size: 28pt;
+    font-weight: bold;
+    margin-right: 14pt;
+    min-width: 38pt;
+    color: #000;
+    line-height: 1;
+  }
+  .step-text {
+    flex: 1;
+  }
+  .step-text strong {
+    display: block;
+    font-size: 16pt;
+    margin-bottom: 3pt;
+  }
+  .important {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 16pt 0;
+    font-size: 13pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="header">
+  <h1>R2 — Stuck? Try This First</h1>
+  <div class="subtitle">Project 2 • Student workstation card</div>
+</div>
+
+<p>If you get stuck on any task card, these four steps are worth trying — steps 1 or 2 solve most cases. If you would rather call the teacher instead, step 4 is always open.</p>
+
+<div class="step">
+  <div class="step-number">1</div>
+  <div class="step-text">
+    <strong>Re-read the step</strong>
+    Read the task card's current step again, slowly. Sometimes the second reading answers the question.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">2</div>
+  <div class="step-text">
+    <strong>Check the wiring reference card (R1)</strong>
+    About 60% of "my LED isn't working" moments are wiring mistakes. R1 shows you exactly how the Project 2 circuit should look.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">3</div>
+  <div class="step-text">
+    <strong>Check the other reference cards</strong>
+    R3 (Claude Code prompts), R4 (safety), R5 (which sketch file to open). One of them may answer your question.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">4</div>
+  <div class="step-text">
+    <strong>Call the teacher</strong>
+    Raise your hand or say the teacher's name. The teacher will come to you. (You do not need a cup or a flag — just call.)
+  </div>
+</div>
+
+<div class="important">
+<strong>You are not interrupting.</strong> Calling the teacher when you are stuck is exactly what the teacher expects you to do. Being stuck is not a failure — it is a normal part of learning Arduino, and figuring out <em>what</em> you are stuck on is useful information for the next step.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .prompt-template {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 12pt 14pt;
+    margin: 10pt 0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    white-space: pre-wrap;
+    line-height: 1.45;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-weight: bold;
+    font-size: 14pt;
+  }
+  .rule {
+    background: #fef0f0;
+    border-left: 5pt solid #b00;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="header">
+  <h1>R3 — Claude Code Prompt Templates</h1>
+  <div class="subtitle">Project 2 • How to talk to Claude Code</div>
+</div>
+
+<p>Claude Code is your coding collaborator. It runs in a window pointed at your Project 2 folder, so it can see the sketches you are working on. There are two ways to use it.</p>
+
+<h2>Channel A — When you want help with code (Level 2)</h2>
+
+<p>Before you ask Claude Code anything about your code, <strong>fill in these three things on your task card</strong>:</p>
+
+<div class="rule">
+<strong>(a)</strong> What I want to happen: <em>[describe the behaviour you want]</em><br>
+<strong>(b)</strong> What is currently happening: <em>[describe what the sketch does now]</em><br>
+<strong>(c)</strong> What I have tried: <em>[what you have already looked at or considered]</em>
+</div>
+
+<p>Then use this prompt template:</p>
+
+<div class="prompt-template">I am working on [sketch file name].
+
+(a) What I want to happen:
+[your answer]
+
+(b) What is currently happening:
+[your answer]
+
+(c) What I have tried:
+[your answer]
+
+Can you help me figure out what to change?</div>
+
+<div class="key">
+The (a)(b)(c) is not optional. It helps you think about the problem before Claude Code answers, and it helps Claude Code give you a useful answer. Skipping it usually gets a worse answer.
+</div>
+
+<p>After Claude Code answers, you make the change in the Arduino IDE, upload it, and test. Then answer this question on your task card:</p>
+
+<div class="rule">
+<strong>Comprehension check:</strong> In one sentence, what did Claude Code change?
+</div>
+
+<h2>A worked Level 2 example from Project 2 — change the LED time</h2>
+
+<p>In Project 2 the real code change is setting how long the LED stays on: <strong>2 seconds</strong> (easy) or <strong>0.5 seconds</strong> (hard). Here is how you fill in the three things before you prompt:</p>
+
+<div class="rule">
+<strong>(a)</strong> What I want to happen: <em>The LED should stay on for 0.5 seconds instead of 2 seconds.</em><br>
+<strong>(b)</strong> What is currently happening: <em>The LED stays on for 2 seconds.</em><br>
+<strong>(c)</strong> What I have tried: <em>I looked for the line with the delay number but I am not sure which line it is.</em>
+</div>
+
+<p>Then use this short template, and paste your current code where it says [paste]:</p>
+
+<div class="prompt-template">Here is my current delay. How do I make the LED stay on for only 0.5 seconds instead of 2 seconds? Here is my code:
+[paste]</div>
+
+<div class="key">
+It is <strong>one line</strong> in the code. After Claude Code answers, change <strong>only that number</strong> in the Arduino IDE, upload, and check that the game feels different.
+</div>
+
+<h2>Channel B — When you want the task card read to you</h2>
+
+<p>Channel B walks you through your current task card conversationally. Use it when the printed card feels hard to read, or when you prefer hearing instructions one step at a time. Use this prompt:</p>
+
+<div class="prompt-template">I'm on Project 2, Tier [1 or 2], Milestone [number].
+Walk me through it.</div>
+
+<p>Claude Code will read the card's content in small pieces and ask you to confirm each step before moving on. You still check off the printed card as you go — Channel B does not replace the card, it just helps you work through it.</p>
+
+<div class="key">
+Channel B is <strong>not recommended for Milestone 1</strong> of any project, because Milestone 1 is a together-milestone where the teacher is next to you. Hearing Claude Code speak while the teacher is also speaking is confusing.
+</div>
+
+<h2>Channel A Level 3 — Free dialogue (Tier 3 only)</h2>
+
+<p>If you are working at Tier 3 on an open-design project, you can talk to Claude Code freely about what you are trying to build. The same (a)(b)(c) discipline still applies — describe what you want before you ask.</p>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .big-msg {
+    background: #e8f5e9;
+    border: 2pt solid #2e7d32;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 16pt;
+    text-align: center;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  .rule {
+    background: #fef0f0;
+    border-left: 5pt solid #b00;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="header">
+  <h1>R4 — Safety Reminder</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="big-msg">
+Project 2 is very safe too. The Arduino runs on 5 volts, which is too low to hurt you, and the new buzzer you add in this project is completely safe as well. But you can still break components if you wire something wrong. Read these three rules and you will be fine.
+</div>
+
+<h2>Rule 1 — Never connect 5 V directly to GND</h2>
+
+<div class="rule">
+<span class="dont">Do not</span> put a jumper wire straight from <strong>5 V</strong> to <strong>GND</strong>. This is called a <em>short circuit</em>. It will make the Arduino reset itself or turn off to protect itself. No one gets hurt, but the circuit stops working until you remove the bad wire.
+</div>
+
+<p>The 5 V pin powers the LEDs, sensors, and buttons you connect. The GND pin is the return path for the electricity. They should never touch each other directly.</p>
+
+<h2>Rule 2 — Every LED needs a resistor, and the buzzer has one right hook-up</h2>
+
+<div class="rule">
+<span class="dont">Do not</span> connect an LED directly to a 5 V pin with no resistor. The LED will light up very brightly for a second or two, get hot, and burn out. Every LED in Project 2 has a <strong>220 Ω resistor</strong> (colour bands: red, red, brown) between its long leg and the Arduino pin. If you see an LED in your circuit without a resistor, fix it before you upload anything.
+</div>
+
+<div class="rule">
+The buzzer in Project 2 is a <strong>small passive piezo buzzer</strong>, and it is safe when you drive it from <strong>digital pin 8</strong> with the <code>tone()</code> command — one leg to pin 8, the other leg to <strong>GND</strong>. No resistor is needed. <span class="dont">Do not</span> connect the buzzer directly between <strong>5 V</strong> and <strong>GND</strong> — that would make it buzz non-stop and can damage it.
+</div>
+
+<h2>Rule 3 — USB cable has one right way</h2>
+
+<div class="rule">
+The USB cable's square end fits into the Arduino only one way. If it does not go in, do not push harder — you will break the connector. Flip the plug over and try again.
+</div>
+
+<h2>If something stops working</h2>
+
+<p><strong>If something stops working, the most useful next move is to pause and look at the wiring</strong> — more button-pressing usually does not help. If you cannot see what is wrong, call the teacher. That is what the stuck protocol (R2) is for. Wiring things wrong is part of learning Arduino.</p>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    right: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0;
+    font-size: 13pt;
+  }
+  th, td {
+    border: 1pt solid #000;
+    padding: 8pt 10pt;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eee;
+    font-weight: bold;
+  }
+  .file-name {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    background: #f4f4f4;
+    padding: 2pt 5pt;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R5</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>Which file to open at which milestone</h1>
+  <div class="subtitle">Project 2 • Sketch Index</div>
+</div>
+
+<h2>Where your Project 2 files live</h2>
+
+<p>All your Project 2 sketches are in your Project 2 folder on Google Drive. To get there: in the File Explorer sidebar click <strong>Google Drive</strong>, go to <strong>My Drive → Arduino_Projects</strong>, open your nickname folder, then open <span class="file-name">Project_2_Reaction_Time_Game</span> and inside it <span class="file-name">ino_files</span>.</p>
+
+<p>If you cannot find the folder, ask the teacher once and write down how to get there here: ____________________</p>
+
+<p>Inside <span class="file-name">ino_files</span> each sketch sits in its own folder. Each folder contains one <span class="file-name">.ino</span> file with the same name as the folder.</p>
+
+<div class="key">
+Open a sketch by double-clicking the <span class="file-name">.ino</span> file, or by using <strong>File → Open</strong> in the Arduino IDE and pointing at the file.
+</div>
+
+<h2>Tier 1 sketches — which one for which milestone</h2>
+
+<table>
+  <thead>
+    <tr><th>Milestone</th><th>Open this file</th><th>What happens</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>M2</td>
+      <td><span class="file-name">01_wait_flash_measure/<br>01_wait_flash_measure.ino</span></td>
+      <td>The Arduino waits a few random seconds, turns on the LED (pin 9), measures how fast you press the button, and prints your reaction time on the Serial Monitor</td>
+    </tr>
+    <tr>
+      <td>M5</td>
+      <td><span class="file-name">02_wait_flash_measure_buzzer/<br>02_wait_flash_measure_buzzer.ino</span></td>
+      <td>The same game, but now the buzzer (pin 8) beeps at the "go" moment and plays a success tone on the press — on top of the Serial Monitor reading</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>M1, M3, M4, M6 — no sketch upload.</strong> M1 and M4 are hardware only (wiring the LED and button, and adding the buzzer). M3 and M6 are playing the game and recording your fastest time.</p>
+
+<h2>Tier 2 starter sketches — pick one for your feedback mode</h2>
+
+<table>
+  <thead>
+    <tr><th>The feedback mode you chose</th><th>Open this file</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mode A — Three LEDs (fast / medium / slow)</td>
+      <td><span class="file-name">T2_three_led_feedback_starter/<br>T2_three_led_feedback_starter.ino</span></td>
+    </tr>
+    <tr>
+      <td>Mode B — Buzzer pattern</td>
+      <td><span class="file-name">T2_buzzer_pattern_starter/<br>T2_buzzer_pattern_starter.ino</span></td>
+    </tr>
+    <tr>
+      <td>Mode C — Serial Monitor readout</td>
+      <td><span class="file-name">T2_serial_readout_starter/<br>T2_serial_readout_starter.ino</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>At Tier 2, you upload the starter sketch first to see it work, then use Claude Code (see <span class="r-ref">R3</span>) to modify it — for example to shorten how long the LED stays on — so it matches your own design.</p>
+
+<h2>Tier 3 — no starter sketch</h2>
+
+<p>At Tier 3 you design your own game from scratch with Claude Code (for example a two-player game or a multi-round scored game). Your finished sketch lives in the same folder — pick any name you like (something like <span class="file-name">my_reaction_game.ino</span>).</p>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 1 of 6</div>
+  <h1><span class="section-icon">🔌</span>Wire the LED and button</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+In this milestone you rebuild the Project 1 base circuit — an LED and a button. This is the foundation of the reaction-time game: the LED turns on, and you press the button as fast as you can.
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>In the File Explorer sidebar click <strong>Google Drive</strong>, then go to <strong>My Drive → Arduino_Projects</strong>.</li>
+  <li>Open your nickname folder.</li>
+  <li>Create a new folder inside it called <strong>Project_2_Reaction_Time_Game</strong>.</li>
+  <li>Open Claude Code together with the teacher and point it at your new folder.</li>
+  <li>Pick one LED from the parts tray. Any colour is fine.</li>
+  <li><strong>The LED:</strong> plant it in the breadboard so its two legs land in different rows (not the same row — that would short them). The <strong>long leg is positive (+)</strong>, the <strong>short leg is negative (−)</strong>.</li>
+  <li>Connect the long leg (+) to <strong>digital pin 9</strong> through a <strong>220 Ω resistor</strong> (bands: <strong>red · red · brown</strong>), and the short leg (−) to <strong>GND</strong> with a jumper wire.</li>
+  <li><strong>The button:</strong> pick a tactile push-button (four pins) and plant it <strong>across the centre gap</strong> of the breadboard. If it does not sit right, rotate it 90 degrees.</li>
+  <li>Connect one side of the button (pin A) to <strong>5 V</strong>, and the other side (pin B) to <strong>digital pin 2</strong>.</li>
+  <li>From pin B, also connect through a <strong>10 kΩ resistor</strong> (bands: <strong>brown · black · orange</strong>) to <strong>GND</strong>. This is the pull-down resistor — it holds pin 2 at 0 V when the button is not pressed.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>Wiring diagram</h2>
+
+<pre class="wiring-block">Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
+                         ▼
+                    LED short leg (−) ── Arduino GND
+
+Arduino 5 V ─────────────┬── Button pin A
+                         ▼
+                    Button pin B ──┬── Arduino pin 2
+                                   └─[10 kΩ]── Arduino GND</pre>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_01_led_button_breadboard.svg" alt="Breadboard diagram: an LED on pin 9 through a 220 Ω resistor to GND, and a push-button across the centre gap — one side to 5 V, the other to pin 2 and through a 10 kΩ pull-down resistor to GND.">
+  <figcaption><strong>LED: pin 9 → 220 Ω → long leg</strong>, short leg → GND. <strong>Button: pin A → 5 V</strong>, pin B → pin 2 and through a <strong>10 kΩ pull-down → GND</strong>.</figcaption>
+</figure>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>Important — the most common mistake</strong>
+  The 10 kΩ pull-down resistor must go between <strong>pin 2 and GND</strong>, not between 5 V and GND. If you put it between 5 V and GND, pressing the button creates a short circuit and the Arduino resets itself. Trace it with your finger: does it go from pin 2 to GND? Then you are safe. Call the teacher if you would like help.
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>The LED is wired to pin 9 through its resistor, and the button straddles the centre gap — one side to 5 V, the other to pin 2 and through the pull-down resistor to GND.</p>
+  <p class="expected-note"><strong>Nothing lights up or happens yet</strong> — you have not uploaded a sketch. That comes at Milestone 2. Right now you are just checking the wiring is correct.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The LED is on the breadboard with its legs in different rows, long leg to pin 9 through a 220 Ω resistor, short leg to GND</li>
+    <li>The button straddles the centre gap: pin A to 5 V, pin B to pin 2</li>
+    <li>A 10 kΩ resistor sits between pin 2 and GND (the pull-down)</li>
+    <li>The teacher has confirmed the wiring is correct</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  You did this wiring in Project 1, but if you are unsure, call the teacher. If the Arduino keeps resetting or turning off, the pull-down resistor is almost certainly on the wrong side.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 2 of 6</div>
+  <h1><span class="section-icon">💻</span>Upload the wait-flash-measure sketch</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+In this milestone you upload a ready-made sketch that runs the game: the LED turns on after a wait, you press fast — and the code measures how fast.
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>Open the file <code>01_wait_flash_measure.ino</code> in the Arduino IDE.<span class="li-detail">The file is in your Project 2 folder under <code>ino_files/01_wait_flash_measure/</code>. If you are not sure which file to open, check reference card <strong>R5</strong>.</span></li>
+  <li><strong>Do not change any line of the code.</strong> Just open it and upload.</li>
+  <li>Click the Upload button — the right-arrow button (→). Watch the progress bar at the bottom of the IDE.</li>
+  <li>When upload finishes, you should see the green message <strong>"Done uploading"</strong> at the bottom.</li>
+  <li>Open the <strong>Serial Monitor</strong>: click the <strong>magnifying-glass icon</strong> in the top-right of the IDE. Make sure the baud rate is set to <strong>9600</strong>.</li>
+  <li>Read the messages in the Serial Monitor, wait for the LED to light up, and press the button as fast as you can. After your first press, your reaction time appears <strong>in milliseconds (ms)</strong>.</li>
+</ul>
+
+<div class="screen-only">
+<h2><span class="section-icon">💡</span>What the sketch does</h2>
+
+<p>The sketch waits a random 2–5 seconds, lights the LED on pin 9, and uses <code>millis()</code> to measure how fast you pressed — then prints the result to the Serial Monitor. You do not need to understand every line — just read it if you want to.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>The Serial Monitor shows the game's instructions, then the LED lights up, and after your press your reaction time appears in milliseconds. The Arduino IDE shows "Done uploading" in green at the bottom.</p>
+  <p class="expected-note">The number is how many milliseconds it took you to press after the LED lit — the smaller it is, the faster you reacted.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The Arduino IDE shows "Done uploading" in green</li>
+    <li>The Serial Monitor is open and shows a reaction time after your first press</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li><strong>If nothing seems to happen after upload:</strong> the Serial Monitor is probably not open. Click the magnifying-glass icon and check the baud is set to 9600 — that is where the game's instructions appear.</li>
+    <li><strong>If Upload fails:</strong> check that Tools → Board shows "Arduino Uno" and Tools → Port shows a COM port. If the Serial Monitor is open, close it, upload again, then reopen it.</li>
+    <li><strong>If the IDE says "Arduino not found,"</strong> unplug the USB cable, wait three seconds, plug it back in.</li>
+    <li><strong>If still stuck after that,</strong> call the teacher.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 3 of 6</div>
+  <h1><span class="section-icon">🎮</span>Play the game five times</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+This is the moment the game works and it is fun — wait for the LED, press as fast as you can, and watch your reaction time appear on the screen.
+</div>
+
+<h2><span class="section-icon">📋</span>How to play — one round</h2>
+
+<ul class="checklist">
+  <li>Make sure the <strong>Serial Monitor</strong> is open. That is where the instructions and your reaction time show up.</li>
+  <li><strong>Wait.</strong> The LED is off. Do not press yet — the wait time is different each round, so you cannot guess when.</li>
+  <li><strong>The LED turns on — press the button as fast as you can!</strong></li>
+  <li>Read your <strong>reaction time</strong> on the Serial Monitor. It is in milliseconds (ms) — the smaller the number, the faster you reacted.</li>
+</ul>
+
+<h2><span class="section-icon">🏆</span>Now play five rounds</h2>
+
+<ul class="checklist">
+  <li>Repeat the round <strong>five times</strong>.</li>
+  <li>Each round, <strong>try to beat your own best</strong> — get a smaller number than last time.</li>
+  <li>Notice: the wait before the LED turns on is <strong>different every round</strong> — the Arduino picks a random number. That is what makes the game fair.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>Each round: the LED is off, then turns on after a different wait. The moment you press, your reaction time appears on the Serial Monitor in milliseconds.</p>
+  <p class="expected-note">Your reaction times change from round to round — that is completely normal. The wait before the LED also changes each time, because it is random.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>You have played five full rounds</li>
+    <li>You can point on the Serial Monitor to your <strong>fastest</strong> reaction time</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck? Game not responding? Try this first:</strong>
+  <ul>
+    <li><strong>Is the Serial Monitor open?</strong> Without it you see nothing. Open it from the magnifying-glass icon in the Arduino IDE.</li>
+    <li><strong>LED never turns on?</strong> Check that the Milestone 2 upload worked ("Done uploading" in green) and that the LED is the right way round — long leg (+) to the resistor and on to pin 9.</li>
+    <li><strong>Press not counted?</strong> Most likely the 10 kΩ pull-down resistor is not between pin 2 and GND. Check the wiring against Milestone 1.</li>
+    <li><strong>If still stuck, call the teacher.</strong></li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 4 of 6</div>
+  <h1><span class="section-icon">🔊</span>Add the buzzer</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+In this milestone you add a buzzer to the circuit. Soon the game will be able to make a sound as well as a light — so you can react to sound as well as light.
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>Pick a small piezo buzzer from the parts tray. It is the round, flat one with two legs.</li>
+  <li>Plant the buzzer in the breadboard so its two legs land in different columns — not the same column, that would short it.</li>
+  <li>Connect one leg of the buzzer to <strong>digital pin 8</strong> with a jumper wire.</li>
+  <li>Connect the other leg of the buzzer to <strong>GND</strong> with a jumper wire.</li>
+  <li>This small buzzer needs no resistor, and it has no positive or negative side — either leg can go to either place.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>Wiring diagram</h2>
+
+<pre class="wiring-block">Arduino pin 8 ───────────┬── Buzzer leg 1
+                         ▼
+                    Buzzer leg 2 ── Arduino GND</pre>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_02_led_button_buzzer_breadboard.svg" alt="Breadboard diagram: the LED on pin 9 through a 220 Ω resistor to GND, the button across the centre gap, plus a piezo buzzer with its two legs in different columns — one leg to pin 8, the other leg to GND.">
+  <figcaption><strong>Buzzer: one leg → pin 8</strong>, the other leg → <strong>GND</strong>. The LED and button stay exactly as in Milestone 1.</figcaption>
+</figure>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>Important — do not wire it straight to 5 V</strong>
+  Never connect the buzzer directly between <strong>5 V and GND</strong>. Always drive it from <strong>pin 8</strong>, so the Arduino controls it. A buzzer wired straight to 5 V will sound non-stop and can draw too much current. Trace it with your finger: does one leg go to pin 8? Then you are safe. Call the teacher if you would like help.
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>The breadboard now has an LED, a button, and a buzzer. One leg of the buzzer goes to pin 8, the other to GND.</p>
+  <p class="expected-note"><strong>The buzzer does not beep yet</strong> — you have not uploaded a sketch that drives it. That comes at Milestone 5. Right now you are just checking the wiring is correct.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The buzzer is on the breadboard with its two legs in different columns</li>
+    <li>One leg of the buzzer is connected to pin 8</li>
+    <li>The other leg of the buzzer is connected to GND</li>
+    <li>The teacher has confirmed the wiring is correct</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  If both buzzer legs are in the same column, move one to another column. Check that one leg really reaches pin 8 (not a different pin) and the other is in GND. If you are unsure, call the teacher.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 5 of 6</div>
+  <h1><span class="section-icon">💻</span>Upload the updated sketch with buzzer feedback</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+In this milestone you upload a new version of the code — the same game exactly, but now the buzzer beeps at the "go" moment and plays a short success tone when you press the button.
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>Open the file <code>02_wait_flash_measure_buzzer.ino</code> in the Arduino IDE.<span class="li-detail">It is in your Project 2 folder, next to the sketch you uploaded before.</span></li>
+  <li>Do not change anything in the code — just upload it.</li>
+  <li>Click the Upload button.</li>
+  <li>Wait for "Done uploading" in green.</li>
+  <li>Play one round: wait for the "go", hear the beep, and press the button as fast as you can.</li>
+</ul>
+
+<div class="screen-only">
+<h2><span class="section-icon">💻</span>What is new in this sketch</h2>
+
+<p>You can peek at the code in the IDE. It does exactly what the previous sketch did, but it now has <code>tone()</code> lines the old one did not — these are the lines that drive the buzzer:</p>
+
+<pre class="code-block"><span class="filename">02_wait_flash_measure_buzzer.ino</span>// At the "go" moment — turn the LED on and beep
+digitalWrite(LED_GO, HIGH);
+tone(BUZZER, 1000, 100);   // ← new line: short beep
+
+// When the button is pressed — a short success tone
+tone(BUZZER, 1500, 120);   // ← new line: success tone</pre>
+
+<p>This is the code shown on code card <strong>R5</strong>. You do not need to write or change it — just upload it and listen.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>Every round, the buzzer beeps the moment the LED turns on (the "go"), then plays a short tone the moment you press the button. The reaction time is still printed on the Serial Monitor, just like before — now the game can be heard, not only seen.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>"Done uploading" showed in green in the IDE</li>
+    <li>In a round, the buzzer beeps at the "go" moment</li>
+    <li>A short tone plays the moment you press the button</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li><strong>No beep at all:</strong> the old sketch may still be on the board — make sure you uploaded <code>02_wait_flash_measure_buzzer.ino</code> and not the previous file, then upload again.</li>
+    <li><strong>Still no beep after re-uploading:</strong> check the buzzer wiring — one leg to digital pin 8 and the other to GND (see card R5 and the wiring card).</li>
+    <li><strong>Upload failed:</strong> look for red error text in the IDE. If the Serial Monitor is open, close it and upload again.</li>
+    <li>If still stuck, call the teacher.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge celebration">Project #2 — Reaction-Time Game: Milestone 6 of 6 • Final milestone</div>
+  <h1><span class="section-icon">🏆</span>Write your fastest time on the poster</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+In this milestone you look back over all the rounds you played, find your fastest reaction time, and write it on the Project 2 poster — so the whole group can see how fast you are.
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>Open the Serial Monitor and look at the reaction times from all the rounds you played.</li>
+  <li>Find the <strong>smallest number</strong> — that is your fastest reaction time. (Each number is in milliseconds, and smaller means faster.)</li>
+  <li>Go to the Project 2 poster taped at your workstation and find the row with your nickname.</li>
+  <li>In the "fastest time" column, write the number you found, next to your nickname.</li>
+  <li>Call the teacher to celebrate your time together.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>Your nickname is on the poster with your fastest reaction time next to it. The poster is now the group's leaderboard — everyone can see their own time and their friends' times.</p>
+  <p class="expected-note">You can always play more rounds and try to improve your time — then erase it and write a new, better number.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>Your fastest reaction time is written on the poster next to your nickname</li>
+    <li>The teacher has celebrated with you</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  Not sure which number is the fastest? Remember: the smallest one wins. If the numbers have already scrolled off the Serial Monitor, just play another round or two to get a fresh time. You can always call the teacher for help.
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 You just completed Project 2!</span>
+  You built a real reaction-time game: an LED, a button and a buzzer, with code that measures how fast you are using <code>millis()</code> and prints the time to the Serial Monitor. Your time is now up on the poster for you and the whole group to see. Ask the teacher for a photo of your finished build (if you want one) — and start thinking about what you want to build next.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 1 of 5</div>
+  <h1><span class="section-icon">🚀</span>Start-up — set up the game and play one round</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+A compressed start-up: set up the folder, wire the LED and button, upload the starter sketch, and play one round to confirm the game works. Then take a peek at the two choices waiting for you next.
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li><strong>Folder:</strong> open your Project 2 folder and launch Claude Code on it. In the File Explorer sidebar click <strong>Google Drive</strong>, go to <strong>My Drive → Arduino_Projects</strong>, open your nickname folder, and create a new folder inside it called <strong>Project_2_Reaction_Time_Game</strong>.</li>
+  <li><strong>LED:</strong> plant an LED in the breadboard with its two legs in different rows. Connect the long leg (+) to <strong>digital pin 9</strong> through a <strong>220 Ω resistor</strong> (red · red · brown), and the short leg (−) to <strong>GND</strong>.</li>
+  <li><strong>Button:</strong> plant a push-button <strong>across the centre gap</strong>. One side to <strong>5 V</strong>, the other side to <strong>digital pin 2</strong>, and from that same side also through a <strong>10 kΩ pull-down resistor</strong> (brown · black · orange) to <strong>GND</strong>. (Full details on reference card R1.)</li>
+  <li><strong>Starter sketch:</strong> open <code dir="ltr">ino_files/01_wait_flash_measure/01_wait_flash_measure.ino</code> in the Arduino IDE and click Upload.</li>
+  <li><strong>One round:</strong> open the <strong>Serial Monitor</strong> (the magnifying-glass icon). Wait for the LED to turn on, press the button as fast as you can, and read your reaction time in milliseconds.</li>
+  <li><strong>Look ahead:</strong> read the two choices waiting for you (below).</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>After Upload you get a green "Done uploading" message. The Serial Monitor shows the game's instructions, and after your first press it shows your reaction time in milliseconds.</p>
+  <p class="expected-note">The game works! In the next milestones you make it <strong>yours</strong> — you choose how it gives feedback and how hard it is, and you change the code yourself with Claude Code's help.</p>
+</div>
+
+<div class="choice-preview">
+  <strong><span class="section-icon">🔀</span>The two choices waiting for you</strong>
+  <ul>
+    <li><strong>Milestone 2 — how the game gives feedback:</strong> three LEDs (fast / medium / slow), a buzzer pattern, or a rich Serial Monitor readout. Pick one.</li>
+    <li><strong>Milestone 3 — difficulty:</strong> easy (the LED stays on for 2 seconds) or hard (the LED stays on for only 0.5 seconds). Here you <strong>change the code yourself</strong> with Claude Code.</li>
+  </ul>
+  <p class="expected-note">No need to decide now — just read, so you know what is coming. Details for each option are on the reference cards.</p>
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>Heads up — you change the code yourself</strong>
+  In this tier you <strong>modify the code</strong> (Channel A, Level 2): describe what you want, ask Claude Code, read the answer, edit, and re-upload. It is not copying — you understand what you changed. You will practise this at Milestone 3.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The game is wired (LED on pin 9, button on pin 2 with its pull-down) and running from the starter sketch</li>
+    <li>You played one round and saw a reaction time on the Serial Monitor</li>
+    <li>You have read the two choices coming up at Milestones 2 and 3</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li>This milestone packs several small steps into one. If anything is unclear, slow down and do it step by step.</li>
+    <li>If the Serial Monitor is blank — check it is open and the baud rate is 9600.</li>
+    <li>If the button does not respond — the pull-down resistor is almost certainly on the wrong side. Check it against reference card R1.</li>
+    <li>Call the teacher — you can have the detailed Tier 1 cards for any part.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 2 of 5</div>
+  <h1><span class="section-icon">🏁</span>Pick your feedback mode</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+This is the first design choice of the project. You have already seen the game work — now you choose <strong>how the game tells you your result</strong>: with LEDs, with the buzzer, or on the Serial Monitor. Your choice, no "correct" answer.
+</div>
+
+<h2><span class="section-icon">📋</span>Pick ONE of these three feedback modes</h2>
+
+<div class="choice-point">
+  <strong>Mode A — Three LEDs (fast / medium / slow)</strong>
+  <div class="option">
+    <strong>How it works:</strong> an LED lights up to match your speed — a fast reaction lights the <strong>green</strong> LED (pin 9), a medium one the <strong>yellow</strong> LED (pin 10), and a slow one the <strong>red</strong> LED (pin 11).<br>
+    <strong>What you wire:</strong> two extra LEDs, each with its own 220 Ω resistor. <strong>So you have one more wiring card after this one.</strong><br>
+    <strong>Starter sketch:</strong> <code>ino_files/T2_three_led_feedback_starter/T2_three_led_feedback_starter.ino</code>
+  </div>
+
+  <strong>Mode B — Buzzer pattern</strong>
+  <div class="option">
+    <strong>How it works:</strong> the buzzer plays a different sound for each category — for example one high beep for fast, two beeps for medium, and a low buzz for slow.<br>
+    <strong>What you wire:</strong> nothing new. Use only the buzzer you already wired.<br>
+    <strong>Starter sketch:</strong> <code>ino_files/T2_buzzer_pattern_starter/T2_buzzer_pattern_starter.ino</code>
+  </div>
+
+  <strong>Mode C — Rich Serial Monitor readout</strong>
+  <div class="option">
+    <strong>How it works:</strong> the Serial Monitor shows a detailed message with a category word — for example <code>FAST! 210 ms</code> or <code>SLOW… 540 ms</code>.<br>
+    <strong>What you wire:</strong> nothing new. Use only the Serial Monitor.<br>
+    <strong>Starter sketch:</strong> <code>ino_files/T2_serial_readout_starter/T2_serial_readout_starter.ino</code>
+  </div>
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>Read all three modes and think about which one appeals to you most.</li>
+  <li>Pick A, B, or C. Write your choice here: <span class="fill-blank">&nbsp;</span></li>
+  <li><strong>If you chose Mode A</strong> (three LEDs) — your next card is <strong>Milestone 2b</strong>, where you wire two more LEDs.</li>
+  <li><strong>If you chose Mode B or Mode C</strong> — skip Milestone 2b and go straight to <strong>Milestone 3</strong>.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>You have clearly marked which feedback mode you chose — A, B, or C — and written it on the card. You know which card comes next.</p>
+  <p class="expected-note">You do not change any code or upload anything yet — that comes in the next milestones. Right now you are just deciding.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>You have written your choice (A, B, or C) on this card</li>
+    <li>You know where you go next: Mode A → Milestone 2b, Mode B or C → Milestone 3</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  Not sure what to pick? There is no "wrong" choice — they all work. If you like lights, pick Mode A. If you like sounds, pick Mode B. If you like seeing words and numbers, pick Mode C. If you are still torn, call the teacher and choose together.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 2b (Mode A) — extra wiring</div>
+  <h1><span class="section-icon">🔌</span>Wire the three LEDs</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+Only do this card if you picked <strong>Mode A — three LEDs</strong>. You add two more LEDs: medium on pin 10 and slow on pin 11 — same wiring pattern as the LED you already have on pin 9.
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>Skip this card if you chose Mode B or Mode C.</strong>
+  <p>Mode B (buzzer) and Mode C (Serial Monitor) need no extra LEDs — your wiring is already done. Go straight to Milestone 3.</p>
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>Pick two more <strong>LEDs</strong> from your parts tray — in <strong>two colours different</strong> from the first LED (yellow for medium and red for slow work well).</li>
+  <li>Pick two more <strong>220 Ω resistors</strong> (bands: <strong>red · red · brown</strong>) — one per LED.</li>
+  <li><strong>The medium LED:</strong> plant it on the breadboard, one strip over from the first LED. Each leg in a different row.</li>
+  <li>Connect the medium LED's long leg (+) to <strong>digital pin 10</strong> through a 220 Ω resistor, and the short leg (−) to <strong>GND</strong>.</li>
+  <li><strong>The slow LED:</strong> plant it on the breadboard, one strip over from the medium LED. Each leg in a different row.</li>
+  <li>Connect the slow LED's long leg (+) to <strong>digital pin 11</strong> through a 220 Ω resistor, and the short leg (−) to <strong>GND</strong>.</li>
+  <li>Check that the LED and button from the earlier milestones are still wired — do not touch them.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>Wiring diagram</h2>
+
+<pre class="wiring-block">Arduino pin 9  ───[220 Ω]───┬─── LED fast (green) long leg
+                           ▼
+                  LED fast short leg ─── Arduino GND
+
+Arduino pin 10 ───[220 Ω]───┬─── LED medium (yellow) long leg
+                           ▼
+                  LED medium short leg ─── Arduino GND
+
+Arduino pin 11 ───[220 Ω]───┬─── LED slow (red) long leg
+                           ▼
+                  LED slow short leg ─── Arduino GND</pre>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_03_three_leds_button_buzzer_breadboard.svg" alt="Breadboard diagram: three LEDs side by side — pin 9 through 220 Ω to the fast LED (green), pin 10 through 220 Ω to the medium LED (yellow), pin 11 through 220 Ω to the slow LED (red), all short legs to GND. The button and buzzer stay in place.">
+  <figcaption><strong>Pin 9 → 220 Ω → fast LED (green)</strong> · <strong>Pin 10 → 220 Ω → medium LED (yellow)</strong> · <strong>Pin 11 → 220 Ω → slow LED (red)</strong>. All short legs → Arduino <strong>GND</strong>. Same pattern, three pins.</figcaption>
+</figure>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>Three LEDs in three different colours, side by side on the breadboard, each with its own 220 Ω resistor going to a different pin (9, 10, 11). The button is still in place.</p>
+  <p class="expected-note"><strong>No LED lights up yet</strong> — you have not changed the sketch. The code that lights the right LED for your reaction speed comes at Milestone 3.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The medium LED is wired: long leg through a 220 Ω resistor to pin 10, short leg to GND</li>
+    <li>The slow LED is wired: long leg through a 220 Ω resistor to pin 11, short leg to GND</li>
+    <li>The first LED is still on pin 9, and the button is still in place</li>
+    <li>The teacher has confirmed the wiring is correct</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li>Same wiring pattern as the first LED — just one strip over each time, to pin 10 then pin 11.</li>
+    <li>The two legs of one LED must be in <strong>different rows</strong> — if they share a row, you create a short.</li>
+    <li><strong>If the button or first LED stopped working</strong> while you were wiring, a jumper wire probably came loose — re-seat it.</li>
+    <li>Call the teacher if you need help.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 3 of 5</div>
+  <h1><span class="section-icon">💻</span>Pick difficulty and modify the code</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+This is the second choice point, and the big step of the project: for the first time you change the code yourself, with Claude Code's help. You pick how long the LED stays on — and that sets how hard the game is.
+</div>
+
+<h2><span class="section-icon">🎯</span>Step 1 — Pick a difficulty</h2>
+
+<p>Pick <strong>one</strong> of the two. Both are perfectly fine — it is your choice:</p>
+
+<ul class="checklist">
+  <li><strong>Easy:</strong> the LED stays on for <strong>2 seconds</strong>. Slower reactions still count. (This is what the code does now.)</li>
+  <li><strong>Hard:</strong> the LED stays on for only <strong>0.5 seconds</strong>. Only a fast reaction is quick enough.</li>
+</ul>
+
+<p>In our game we move from "easy" to "hard" — that is, we change the time from 2 seconds to 0.5 seconds. It is one line in the code.</p>
+
+<h2><span class="section-icon">📋</span>Step 2 — Fill in the (a)(b)(c) on this card before talking to Claude Code</h2>
+
+<p>Fill it in first, in pencil. That way you know what you are asking for before you open Claude Code.</p>
+
+<div class="prompt-template">(a) What I want to happen:
+_________________________________________________
+_________________________________________________
+
+(b) What is currently happening:
+_________________________________________________
+_________________________________________________
+
+(c) What I have tried (or looked at):
+_________________________________________________
+_________________________________________________</div>
+
+<h2><span class="section-icon">💻</span>Step 3 — Send the prompt to Claude Code</h2>
+
+<p>In the Claude Code window, paste this prompt, and paste your current sketch code where it says [paste]:</p>
+
+<div class="prompt-template">Here is my current delay. How do I make the LED stay on for only 0.5 seconds instead of 2 seconds? Here is my code:
+[paste]</div>
+
+<h2><span class="section-icon">📋</span>Step 4 — Read the answer, change one line, upload, test</h2>
+
+<ul class="checklist">
+  <li>Read Claude Code's response carefully. Find the <strong>one line</strong> that sets how long the LED stays on (the delay number).</li>
+  <li>Open your sketch in the Arduino IDE and change <strong>only that number</strong> — leave the rest alone.</li>
+  <li>Click Upload.</li>
+  <li>Play a round: does the LED stay on for a shorter time now? Does it feel harder?</li>
+  <li>If nothing changed, go back to Step 2 and describe what happened more specifically.</li>
+</ul>
+
+<h2><span class="section-icon">📋</span>Comprehension check</h2>
+
+<p>Answer this in one sentence (out loud, or write it below):</p>
+
+<div class="prompt-template">After Claude Code helped me, the line I changed in my code was:
+_________________________________________________
+_________________________________________________</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>The LED lights up for the time you chose — 0.5 seconds (hard) or 2 seconds (easy). The game feels different: on hard you have less time to press.</p>
+  <p class="expected-note">You can point at one line of code and say "this is the line that sets how long the LED stays on."</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>You picked a difficulty — easy or hard</li>
+    <li>You filled in (a), (b), and (c) on this card before talking to Claude Code</li>
+    <li>You changed how long the LED stays on, and the change works when you play</li>
+    <li>You can say in one sentence which line you changed</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  If Claude Code's answer did not work: don't panic. Go back to (a)(b)(c) and describe what happened more specifically. "It didn't change" is less useful than "the LED still stays on for a long time like before, not shorter." If you are still stuck, call the teacher.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 4 of 5</div>
+  <h1><span class="section-icon">💻</span>Upload, test, and tune your variant</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+Last milestone you changed your sketch with Claude Code. Now you upload it, play five rounds, and check the game runs exactly the way you wanted — your chosen feedback mode and your chosen difficulty.
+</div>
+
+<h2><span class="section-icon">⬆️</span>Step 1 — Upload your sketch and play 5 rounds</h2>
+
+<ul class="checklist">
+  <li>Open your updated sketch in the Arduino IDE and click Upload. Wait for the green "Done uploading" message.</li>
+  <li>Open the <strong>Serial Monitor</strong> (the magnifying-glass icon) so you can see your reaction times.</li>
+  <li>Play <strong>5 rounds</strong>: wait for the "go" light, press the button as fast as you can, and read your reaction time.</li>
+  <li>Check that your chosen feedback mode works — the three LEDs (Mode A), the buzzer pattern (Mode B), or the Serial Monitor message (Mode C).</li>
+  <li>Check that your chosen difficulty is right — the LED stays on for 2 seconds (Easy) or only 0.5 seconds (Hard).</li>
+</ul>
+
+<h2><span class="section-icon">📋</span>Step 2 — Tune the thresholds (only for Mode A or Mode B)</h2>
+
+<p>If you picked <strong>Mode A (three LEDs)</strong> or <strong>Mode B (buzzer pattern)</strong>, the game sorts every reaction time into <strong>fast / medium / slow</strong>. Maybe the thresholds do not feel fair to you — for example, everything comes out "slow". You decide what feels fair for you.</p>
+
+<div class="prompt-template">"Fast" for me = under _______ milliseconds
+"Medium" for me = between _______ and _______ milliseconds
+"Slow" for me = over _______ milliseconds</div>
+
+<p>If you want help changing the thresholds in the code, this is one more small Claude Code ask (Level 2). Fill in the (a)(b)(c) first, then ask:</p>
+
+<div class="prompt-template">I am working on my Project 2 reaction-time game.
+
+(a) What I want: a time under 250 ms should count as "fast".
+(b) What is happening now: almost everything comes out "slow".
+(c) What I have tried: I played 5 rounds and wrote down my times.
+
+Here is my current code:
+[paste the whole sketch file here]
+
+Can you help me change the fast/medium/slow thresholds?</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>The game runs the way you chose: your feedback shows after every press, and the LED stays on for the difficulty you picked. If you tuned the thresholds, a fast press comes out "fast" and a slow press comes out "slow".</p>
+  <p class="expected-note">You can show your variant to the teacher and say "this is the game I built."</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The updated sketch is uploaded and you have played 5 rounds</li>
+    <li>Your chosen feedback mode works (three LEDs / buzzer / Serial Monitor)</li>
+    <li>Your chosen difficulty is right (LED stays on for 2 seconds or 0.5 seconds)</li>
+    <li>(Mode A/B) the fast/medium/slow thresholds feel fair to you</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li>If the buzzer or LEDs do not react, the updated sketch may not have uploaded — upload again and wait for "Done uploading".</li>
+    <li>If the thresholds still do not feel fair after a few tries, go back to (a)(b)(c) and tell Claude Code exactly what is happening — for example "a 300 ms press is counted as slow and I want it to be medium."</li>
+    <li>If it still does not work, call the teacher.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge celebration">Project #2 — Reaction-Time Game: Milestone 5 of 5 • Final milestone</div>
+  <h1><span class="section-icon">🏆</span>Signature game — name it and share</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+In this milestone your variant already works exactly how you wanted — now you give it a name, write your fastest time on the poster, and play a round head-to-head against a peer or the teacher.
+</div>
+
+<h2><span class="section-icon">🏷️</span>Step 1 — Name your game</h2>
+
+<p>Your variant — the feedback mode and difficulty you chose — is your <strong>signature game</strong>. Give it a name that fits it (for example "Lightning Round", "Owl Mode").</p>
+
+<div class="prompt-template">My reaction-time game is called:
+_________________________________________________
+
+My fastest time (in milliseconds):
+_________________________________________________</div>
+
+<h2><span class="section-icon">📋</span>Step 2 — Record it on the poster</h2>
+
+<ul class="checklist">
+  <li>Find the <strong>Project 2 poster</strong> taped at your workstation.</li>
+  <li>On the <strong>Tier 2 line</strong> of the poster, write your <strong>game name</strong> and your <strong>fastest time</strong>.</li>
+  <li>If you are not sure of your fastest time, play a few more rounds and check the numbers on the Serial Monitor.</li>
+</ul>
+
+<h2><span class="section-icon">🎮</span>Step 3 — Play a round against someone</h2>
+
+<ul class="checklist">
+  <li>Invite a peer from the group, or the teacher, to play one round of your signature game against you.</li>
+  <li>Explain the rules in a sentence or two: when to press, and what the feedback tells you (the LEDs / the buzzer / the Serial Monitor).</li>
+  <li>Play one fun round — it does not matter who wins, what matters is that someone else saw your game working.</li>
+  <li>If you want, ask the teacher to take a photo of your game (only if you agree). You can keep it for your portfolio or show family.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>Your version of the reaction-time game running on your breadboard with the name you chose, your fastest time written on the Tier 2 line of the poster, and someone else having played a round against you.</p>
+  <p class="expected-note">The teacher has seen the game and celebrated with you, and you have a photo (if you wanted one).</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>You gave your game a name</li>
+    <li>You wrote the name and your fastest time on the Tier 2 line of the poster</li>
+    <li>You played a round against a peer or the teacher — someone else saw your game</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  If it is hard to decide on a name, think about how your game feels: fast? tough? funny? Even a simple name like "[Your name]'s game" counts completely. If no peer is free to play against you right now, the teacher is always happy to be your opponent. Call the teacher if you would like help.
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 You just completed Project 2!</span>
+  You picked a feedback mode, picked a difficulty, modified code with Claude Code yourself, and built a reaction-time game that is your own — with a name, a best time, and someone who saw it working.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="ltr" lang="en" style="page-break-before: always;">
+<div class="card">
+<div class="card-id">V3</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Project Planner</div>
+  <h1><span class="section-icon">🏁</span>Design your own reaction-time game</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+You design your own version of the reaction-time game. Pick a variant — a two-player head-to-head game, or a multi-round scored game across five rounds — and build it. Fill in the planner, build, show.
+</div>
+
+<h2><span class="section-icon">📋</span>Phase 1 — Plan (PLAN)</h2>
+
+<div class="field">
+  <label>Which variant do you choose? Circle one:</label>
+  <div class="hint">
+    <strong>(1) Two players, head-to-head:</strong> add a second button (on <strong>digital pin 3</strong>) with its own pull-down resistor. The LED turns on, the two players race to press first, and the game shows who won.<br>
+    <strong>(2) Multi-round scored game across 5 rounds:</strong> one player plays five rounds, the game keeps score (for example a total reaction time, or points by speed), and shows the final result at the end.
+  </div>
+</div>
+
+<div class="field">
+  <label>Describe the game flow in your own words. What happens from start to finish?</label>
+  <div class="hint">This is the most important field. Be as specific as you can. Example (two players): "The LED waits 2–5 seconds and turns on. The first player to press wins the round. If someone presses before the LED is on, they lose the round. The buzzer plays a win beep, and the Serial Monitor prints who won."</div>
+</div>
+
+<div class="field">
+  <label>How does the game show the result? (feedback)</label>
+  <div class="hint">Choose: an LED lights for the winner, a buzzer beep, a message on the Serial Monitor, or a mix. You can use the go LED, the buzzer, and anything already on the breadboard.</div>
+</div>
+
+<div class="field">
+  <label>What hardware do you need? (buttons, LEDs, resistors, buzzer, jumper wires — how many of each)</label>
+  <div class="hint">The two-player variant needs an extra button and an extra 10 kΩ pull-down resistor. The scored variant usually needs no new hardware at all. If you need something unusual, ask the teacher before you start.</div>
+</div>
+
+<h2><span class="section-icon">🔌</span>Phase 2 — Build (BUILD)</h2>
+
+<div class="field">
+  <label>Sketch your wiring on paper, then wire it on the breadboard.</label>
+  <div class="hint">Your wiring is a variation on the game you already built. For the two-player variant: add a second button <strong>across the centre gap</strong> — one side to <strong>5 V</strong>, the other side to <strong>digital pin 3</strong> and through a <strong>10 kΩ pull-down resistor</strong> (bands: <strong>brown · black · orange</strong>) to <strong>GND</strong>. Exactly like the first button, just on pin 3.</div>
+</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_04_two_buttons_variant_breadboard.svg" alt="Breadboard diagram for the two-player variant: the go LED on pin 9 through a 220 Ω resistor, the buzzer on pin 8, player 1's button on pin 2 with a pull-down to GND, and player 2's button on pin 3 with its own pull-down to GND.">
+  <figcaption><strong>Two-player variant:</strong> player 2's button on <strong>pin 3</strong> with its own pull-down resistor (10 kΩ) to GND, alongside the existing button on pin 2. The LED and buzzer stay on pins 9 and 8.</figcaption>
+</figure>
+
+<div class="field">
+  <label>Take a photo of your finished wiring. Note here: <em>photo taken / not yet / I don't want one</em></label>
+</div>
+
+<h2><span class="section-icon">💻</span>Phase 3 — Code (CODE)</h2>
+
+<p>You use Claude Code in free-dialogue mode here. You describe what you are trying to build, Claude Code helps you write the sketch, and you iterate together until it works. The same (a)(b)(c) discipline still applies — describe the problem before asking for a solution. There is no pre-written sketch here — you build it from your description.</p>
+
+<div class="field">
+  <label>First prompt to Claude Code (draft it here before you send it)</label>
+  <div class="hint">Example (two players): "I am building a two-player reaction-time game. An LED on pin 9, a buzzer on pin 8, player 1's button on pin 2 and player 2's button on pin 3, each with a 10 kΩ pull-down. After a random wait I want the LED to turn on, and the first player to press wins the round — and I want the Serial Monitor to print who won. Can you help me write the Arduino sketch?"</div>
+</div>
+
+<h2><span class="section-icon">📋</span>Phase 4 — Test (TEST)</h2>
+
+<div class="field">
+  <label>Does it do what you planned?</label>
+  <div class="hint">If no: what is different? Write it down, go back to Claude Code with a new (a)(b)(c), iterate. The plan can change as you go — that is completely fine.</div>
+</div>
+
+<div class="field">
+  <label>Does it sometimes work and sometimes not? What did you notice?</label>
+  <div class="hint">Intermittent bugs are usually either wiring (a loose jumper, or a missing pull-down on the second button) or timing (a delay that is too short or too long, or someone pressing too early).</div>
+</div>
+
+<h2><span class="section-icon">📋</span>Phase 5 — Show (SHOW)</h2>
+
+<ul class="checklist">
+  <li>When you are happy with it (or when you have decided it is as good as it is going to be today), call the teacher.</li>
+  <li>Show your game — ideally play a real round against a friend or the teacher. Explain in one or two sentences what it does and why you built it this way.</li>
+  <li>If you want, take a photo of the finished game and save it to your Project 2 folder on Google Drive.</li>
+</ul>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck at any phase?</strong>
+  This planner is open-ended and that is its point. Being stuck is part of designing your own game. Use Claude Code to think through the problem, and call the teacher when you feel like you have been going in circles on the same thing. A teacher conversation here is a design conversation, not a troubleshooting one — tell them what you are trying to build and what is not working.
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 You just completed Project 2!</span>
+  You designed, built, and programmed your own variant of the reaction-time game from scratch.
+</div>
+
+</div>
+</section>
+</body>
+</html>

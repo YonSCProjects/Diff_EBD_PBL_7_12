@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 2 Task Card — Project Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+<div class="card-id">V3</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Project Planner</div>
+  <h1><span class="section-icon">🏁</span>Design your own reaction-time game</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+You design your own version of the reaction-time game. Pick a variant — a two-player head-to-head game, or a multi-round scored game across five rounds — and build it. Fill in the planner, build, show.
+</div>
+
+<h2><span class="section-icon">📋</span>Phase 1 — Plan (PLAN)</h2>
+
+<div class="field">
+  <label>Which variant do you choose? Circle one:</label>
+  <div class="hint">
+    <strong>(1) Two players, head-to-head:</strong> add a second button (on <strong>digital pin 3</strong>) with its own pull-down resistor. The LED turns on, the two players race to press first, and the game shows who won.<br>
+    <strong>(2) Multi-round scored game across 5 rounds:</strong> one player plays five rounds, the game keeps score (for example a total reaction time, or points by speed), and shows the final result at the end.
+  </div>
+</div>
+
+<div class="field">
+  <label>Describe the game flow in your own words. What happens from start to finish?</label>
+  <div class="hint">This is the most important field. Be as specific as you can. Example (two players): "The LED waits 2–5 seconds and turns on. The first player to press wins the round. If someone presses before the LED is on, they lose the round. The buzzer plays a win beep, and the Serial Monitor prints who won."</div>
+</div>
+
+<div class="field">
+  <label>How does the game show the result? (feedback)</label>
+  <div class="hint">Choose: an LED lights for the winner, a buzzer beep, a message on the Serial Monitor, or a mix. You can use the go LED, the buzzer, and anything already on the breadboard.</div>
+</div>
+
+<div class="field">
+  <label>What hardware do you need? (buttons, LEDs, resistors, buzzer, jumper wires — how many of each)</label>
+  <div class="hint">The two-player variant needs an extra button and an extra 10 kΩ pull-down resistor. The scored variant usually needs no new hardware at all. If you need something unusual, ask the teacher before you start.</div>
+</div>
+
+<h2><span class="section-icon">🔌</span>Phase 2 — Build (BUILD)</h2>
+
+<div class="field">
+  <label>Sketch your wiring on paper, then wire it on the breadboard.</label>
+  <div class="hint">Your wiring is a variation on the game you already built. For the two-player variant: add a second button <strong>across the centre gap</strong> — one side to <strong>5 V</strong>, the other side to <strong>digital pin 3</strong> and through a <strong>10 kΩ pull-down resistor</strong> (bands: <strong>brown · black · orange</strong>) to <strong>GND</strong>. Exactly like the first button, just on pin 3.</div>
+</div>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_04_two_buttons_variant_breadboard.svg" alt="Breadboard diagram for the two-player variant: the go LED on pin 9 through a 220 Ω resistor, the buzzer on pin 8, player 1's button on pin 2 with a pull-down to GND, and player 2's button on pin 3 with its own pull-down to GND.">
+  <figcaption><strong>Two-player variant:</strong> player 2's button on <strong>pin 3</strong> with its own pull-down resistor (10 kΩ) to GND, alongside the existing button on pin 2. The LED and buzzer stay on pins 9 and 8.</figcaption>
+</figure>
+
+<div class="field">
+  <label>Take a photo of your finished wiring. Note here: <em>photo taken / not yet / I don't want one</em></label>
+</div>
+
+<h2><span class="section-icon">💻</span>Phase 3 — Code (CODE)</h2>
+
+<p>You use Claude Code in free-dialogue mode here. You describe what you are trying to build, Claude Code helps you write the sketch, and you iterate together until it works. The same (a)(b)(c) discipline still applies — describe the problem before asking for a solution. There is no pre-written sketch here — you build it from your description.</p>
+
+<div class="field">
+  <label>First prompt to Claude Code (draft it here before you send it)</label>
+  <div class="hint">Example (two players): "I am building a two-player reaction-time game. An LED on pin 9, a buzzer on pin 8, player 1's button on pin 2 and player 2's button on pin 3, each with a 10 kΩ pull-down. After a random wait I want the LED to turn on, and the first player to press wins the round — and I want the Serial Monitor to print who won. Can you help me write the Arduino sketch?"</div>
+</div>
+
+<h2><span class="section-icon">📋</span>Phase 4 — Test (TEST)</h2>
+
+<div class="field">
+  <label>Does it do what you planned?</label>
+  <div class="hint">If no: what is different? Write it down, go back to Claude Code with a new (a)(b)(c), iterate. The plan can change as you go — that is completely fine.</div>
+</div>
+
+<div class="field">
+  <label>Does it sometimes work and sometimes not? What did you notice?</label>
+  <div class="hint">Intermittent bugs are usually either wiring (a loose jumper, or a missing pull-down on the second button) or timing (a delay that is too short or too long, or someone pressing too early).</div>
+</div>
+
+<h2><span class="section-icon">📋</span>Phase 5 — Show (SHOW)</h2>
+
+<ul class="checklist">
+  <li>When you are happy with it (or when you have decided it is as good as it is going to be today), call the teacher.</li>
+  <li>Show your game — ideally play a real round against a friend or the teacher. Explain in one or two sentences what it does and why you built it this way.</li>
+  <li>If you want, take a photo of the finished game and save it to your Project 2 folder on Google Drive.</li>
+</ul>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck at any phase?</strong>
+  This planner is open-ended and that is its point. Being stuck is part of designing your own game. Use Claude Code to think through the problem, and call the teacher when you feel like you have been going in circles on the same thing. A teacher conversation here is a design conversation, not a troubleshooting one — tell them what you are trying to build and what is not working.
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 You just completed Project 2!</span>
+  You designed, built, and programmed your own variant of the reaction-time game from scratch.
+</div>
+
+</div>
+</body>
+</html>

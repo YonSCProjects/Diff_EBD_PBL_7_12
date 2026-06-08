@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Arial, 'Segoe UI', sans-serif">
+  <rect x="2" y="2" width="756" height="356" rx="12" fill="#fafafa" stroke="#c9c9c9" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="24" y="38" font-size="20" font-weight="bold" fill="#111">Project 2 · Circuit 3 — Three LEDs + Button + Buzzer</text>
+  <text x="24" y="60" font-size="13" fill="#666">Tier 2 three-LED feedback · LEDs=D9/D10/D11, Button=D2, Buzzer=D8</text>
+
+  <!-- Three LEDs -->
+  <circle cx="40" cy="100" r="6" fill="#f28a00"/>
+  <text x="56" y="105" font-size="15" fill="#111"><tspan font-weight="bold">D9</tspan>  ──[ 220 Ω ]── FAST LED (green)  ──  short leg ── <tspan font-weight="bold">GND</tspan></text>
+  <circle cx="40" cy="127" r="6" fill="#f28a00"/>
+  <text x="56" y="132" font-size="15" fill="#111"><tspan font-weight="bold">D10</tspan> ──[ 220 Ω ]── MEDIUM LED (yellow) ── short leg ── <tspan font-weight="bold">GND</tspan></text>
+  <circle cx="40" cy="154" r="6" fill="#f28a00"/>
+  <text x="56" y="159" font-size="15" fill="#111"><tspan font-weight="bold">D11</tspan> ──[ 220 Ω ]── SLOW LED (red)    ── short leg ── <tspan font-weight="bold">GND</tspan></text>
+
+  <!-- Button -->
+  <circle cx="40" cy="210" r="6" fill="#cc1414"/>
+  <text x="56" y="215" font-size="15" fill="#111"><tspan font-weight="bold">5 V</tspan> ── Button pin A  ·  pin B ── <tspan font-weight="bold">D2</tspan>  ·  pin B ──[ 10 kΩ ]── <tspan font-weight="bold">GND</tspan></text>
+
+  <!-- Buzzer -->
+  <circle cx="40" cy="262" r="6" fill="#f28a00"/>
+  <text x="56" y="267" font-size="15" fill="#111"><tspan font-weight="bold">D8</tspan> ── Buzzer leg 1  ·  leg 2 ── <tspan font-weight="bold">GND</tspan></text>
+
+  <text x="24" y="344" font-size="11.5" font-style="italic" fill="#999">Schematic (preliminary). A photo-style breadboard image will replace this diagram.</text>
+</svg>

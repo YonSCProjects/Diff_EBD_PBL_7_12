@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 2 Task Card — Milestone 5: Upload the updated sketch with buzzer feedback</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 5 of 6</div>
+  <h1><span class="section-icon">💻</span>Upload the updated sketch with buzzer feedback</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+In this milestone you upload a new version of the code — the same game exactly, but now the buzzer beeps at the "go" moment and plays a short success tone when you press the button.
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li>Open the file <code>02_wait_flash_measure_buzzer.ino</code> in the Arduino IDE.<span class="li-detail">It is in your Project 2 folder, next to the sketch you uploaded before.</span></li>
+  <li>Do not change anything in the code — just upload it.</li>
+  <li>Click the Upload button.</li>
+  <li>Wait for "Done uploading" in green.</li>
+  <li>Play one round: wait for the "go", hear the beep, and press the button as fast as you can.</li>
+</ul>
+
+<div class="screen-only">
+<h2><span class="section-icon">💻</span>What is new in this sketch</h2>
+
+<p>You can peek at the code in the IDE. It does exactly what the previous sketch did, but it now has <code>tone()</code> lines the old one did not — these are the lines that drive the buzzer:</p>
+
+<pre class="code-block"><span class="filename">02_wait_flash_measure_buzzer.ino</span>// At the "go" moment — turn the LED on and beep
+digitalWrite(LED_GO, HIGH);
+tone(BUZZER, 1000, 100);   // ← new line: short beep
+
+// When the button is pressed — a short success tone
+tone(BUZZER, 1500, 120);   // ← new line: success tone</pre>
+
+<p>This is the code shown on code card <strong>R5</strong>. You do not need to write or change it — just upload it and listen.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>Every round, the buzzer beeps the moment the LED turns on (the "go"), then plays a short tone the moment you press the button. The reaction time is still printed on the Serial Monitor, just like before — now the game can be heard, not only seen.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>"Done uploading" showed in green in the IDE</li>
+    <li>In a round, the buzzer beeps at the "go" moment</li>
+    <li>A short tone plays the moment you press the button</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li><strong>No beep at all:</strong> the old sketch may still be on the board — make sure you uploaded <code>02_wait_flash_measure_buzzer.ino</code> and not the previous file, then upload again.</li>
+    <li><strong>Still no beep after re-uploading:</strong> check the buzzer wiring — one leg to digital pin 8 and the other to GND (see card R5 and the wiring card).</li>
+    <li><strong>Upload failed:</strong> look for red error text in the IDE. If the Serial Monitor is open, close it and upload again.</li>
+    <li>If still stuck, call the teacher.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

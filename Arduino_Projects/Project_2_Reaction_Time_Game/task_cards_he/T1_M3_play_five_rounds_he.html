@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית ניווט פרויקט 2 — שלב 3: משחקים חמישה סבבים</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<script src="../task_cards/card.js" defer></script>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #2 — משחק זמן תגובה: שלב 3 מתוך 6</div>
+  <h1><span class="section-icon">🎮</span>משחקים חמישה סבבים</h1>
+  <div class="subtitle">פרויקט 2 • משחק זמן תגובה</div>
+</div>
+
+<div class="why">
+זה הרגע שבו המשחק עובד והוא כיף — מחכים ללד, לוחצים הכי מהר שאפשר, ורואים את זמן התגובה שלכם על המסך.
+</div>
+
+<h2><span class="section-icon">📋</span>איך משחקים — סבב אחד</h2>
+
+<ul class="checklist">
+  <li>מוודאים שה<strong>מסך הטורי (Serial Monitor)</strong> פתוח. שם רואים את ההוראות ואת זמן התגובה.</li>
+  <li><strong>מחכים.</strong> הלד כבוי. אסור ללחוץ עדיין — זמן ההמתנה משתנה בכל סבב, אז אי אפשר לנחש מתי.</li>
+  <li><strong>הלד נדלק — לוחצים על הכפתור הכי מהר שאפשר!</strong></li>
+  <li>קוראים את <strong>זמן התגובה</strong> שמופיע על המסך הטורי. המספר במילי-שניות (מ"ש) — ככל שהוא קטן יותר, הגבתם מהר יותר.</li>
+</ul>
+
+<h2><span class="section-icon">🏆</span>עכשיו משחקים חמישה סבבים</h2>
+
+<ul class="checklist">
+  <li>חוזרים על הסבב <strong>חמש פעמים</strong>.</li>
+  <li>בכל סבב <strong>מנסים לשבור את השיא שלכם</strong> — להגיע למספר קטן יותר מהפעם הקודמת.</li>
+  <li>שמים לב: זמן ההמתנה עד שהלד נדלק <strong>שונה בכל סבב</strong> — הארדואינו בוחר מספר אקראי. זה מה שעושה את המשחק הוגן.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>בכל סבב: הלד כבוי, ואז נדלק אחרי המתנה שונה. ברגע שלוחצים, על המסך הטורי מופיע זמן התגובה במילי-שניות.</p>
+  <p class="expected-note">זמני התגובה שלכם משתנים מסבב לסבב — וזה בסדר גמור. גם זמן ההמתנה לפני הלד שונה בכל פעם, כי הוא אקראי.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>שיחקתם חמישה סבבים מלאים</li>
+    <li>אתם יכולים להצביע על המסך הטורי על זמן התגובה <strong>הכי מהיר</strong> שלכם</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים? המשחק לא מגיב? מנסים קודם את זה:</strong>
+  <ul>
+    <li><strong>המסך הטורי פתוח?</strong> בלעדיו לא רואים כלום. פותחים אותו מסמל הזכוכית המגדלת ב-Arduino IDE.</li>
+    <li><strong>הלד לא נדלק בכלל?</strong> בודקים שההעלאה משלב 2 הצליחה (Done uploading בירוק) ושכיוון הלד נכון — רגל ארוכה (+) לנגד ולרגל 9.</li>
+    <li><strong>הלחיצה לא נספרת?</strong> רוב הסיכויים שנגד ההורדה (10 קילו-אוהם) לא בין רגל 2 ל-GND. בודקים את החיווט מול שלב 1.</li>
+    <li><strong>אם עדיין תקועים, קוראים למורה לעזרה.</strong></li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

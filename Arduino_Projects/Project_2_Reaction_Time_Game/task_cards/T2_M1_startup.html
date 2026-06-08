@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 2 Task Card — Milestone 1: Start-up</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">Project #2 — Reaction-Time Game: Milestone 1 of 5</div>
+  <h1><span class="section-icon">🚀</span>Start-up — set up the game and play one round</h1>
+  <div class="subtitle">Project 2 • Reaction-Time Game</div>
+</div>
+
+<div class="why">
+A compressed start-up: set up the folder, wire the LED and button, upload the starter sketch, and play one round to confirm the game works. Then take a peek at the two choices waiting for you next.
+</div>
+
+<h2><span class="section-icon">📋</span>What to do</h2>
+
+<ul class="checklist">
+  <li><strong>Folder:</strong> open your Project 2 folder and launch Claude Code on it. In the File Explorer sidebar click <strong>Google Drive</strong>, go to <strong>My Drive → Arduino_Projects</strong>, open your nickname folder, and create a new folder inside it called <strong>Project_2_Reaction_Time_Game</strong>.</li>
+  <li><strong>LED:</strong> plant an LED in the breadboard with its two legs in different rows. Connect the long leg (+) to <strong>digital pin 9</strong> through a <strong>220 Ω resistor</strong> (red · red · brown), and the short leg (−) to <strong>GND</strong>.</li>
+  <li><strong>Button:</strong> plant a push-button <strong>across the centre gap</strong>. One side to <strong>5 V</strong>, the other side to <strong>digital pin 2</strong>, and from that same side also through a <strong>10 kΩ pull-down resistor</strong> (brown · black · orange) to <strong>GND</strong>. (Full details on reference card R1.)</li>
+  <li><strong>Starter sketch:</strong> open <code dir="ltr">ino_files/01_wait_flash_measure/01_wait_flash_measure.ino</code> in the Arduino IDE and click Upload.</li>
+  <li><strong>One round:</strong> open the <strong>Serial Monitor</strong> (the magnifying-glass icon). Wait for the LED to turn on, press the button as fast as you can, and read your reaction time in milliseconds.</li>
+  <li><strong>Look ahead:</strong> read the two choices waiting for you (below).</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>What you should see</strong>
+  <p>After Upload you get a green "Done uploading" message. The Serial Monitor shows the game's instructions, and after your first press it shows your reaction time in milliseconds.</p>
+  <p class="expected-note">The game works! In the next milestones you make it <strong>yours</strong> — you choose how it gives feedback and how hard it is, and you change the code yourself with Claude Code's help.</p>
+</div>
+
+<div class="choice-preview">
+  <strong><span class="section-icon">🔀</span>The two choices waiting for you</strong>
+  <ul>
+    <li><strong>Milestone 2 — how the game gives feedback:</strong> three LEDs (fast / medium / slow), a buzzer pattern, or a rich Serial Monitor readout. Pick one.</li>
+    <li><strong>Milestone 3 — difficulty:</strong> easy (the LED stays on for 2 seconds) or hard (the LED stays on for only 0.5 seconds). Here you <strong>change the code yourself</strong> with Claude Code.</li>
+  </ul>
+  <p class="expected-note">No need to decide now — just read, so you know what is coming. Details for each option are on the reference cards.</p>
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>Heads up — you change the code yourself</strong>
+  In this tier you <strong>modify the code</strong> (Channel A, Level 2): describe what you want, ask Claude Code, read the answer, edit, and re-upload. It is not copying — you understand what you changed. You will practise this at Milestone 3.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>Done when</strong>
+  <ul>
+    <li>The game is wired (LED on pin 9, button on pin 2 with its pull-down) and running from the starter sketch</li>
+    <li>You played one round and saw a reaction time on the Serial Monitor</li>
+    <li>You have read the two choices coming up at Milestones 2 and 3</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>Stuck?</strong>
+  <ul>
+    <li>This milestone packs several small steps into one. If anything is unclear, slow down and do it step by step.</li>
+    <li>If the Serial Monitor is blank — check it is open and the baud rate is 9600.</li>
+    <li>If the button does not respond — the pull-down resistor is almost certainly on the wrong side. Check it against reference card R1.</li>
+    <li>Call the teacher — you can have the detailed Tier 1 cards for any part.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

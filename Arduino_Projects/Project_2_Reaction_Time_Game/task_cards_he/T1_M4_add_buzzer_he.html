@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית ניווט פרויקט 2 — שלב 4: מוסיפים את הזמזם</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<script src="../task_cards/card.js" defer></script>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #2 — משחק זמן תגובה: שלב 4 מתוך 6</div>
+  <h1><span class="section-icon">🔊</span>מוסיפים את הזמזם</h1>
+  <div class="subtitle">פרויקט 2 • משחק זמן תגובה</div>
+</div>
+
+<div class="why">
+בשלב זה מוסיפים זמזם למעגל. בקרוב המשחק יוכל גם להשמיע צליל, ולא רק להאיר — כך מגיבים גם לאור וגם לקול.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בוחרים זמזם פּיֵזו קטן ממגש החלקים. הוא העגול והשטוח עם שתי רגליים.</li>
+  <li>מכניסים את הזמזם לברדבורד כך ששתי רגליו בטורים שונים — לא באותו טור, זה ייצור קצר.</li>
+  <li>מחברים רגל אחת של הזמזם ל<strong>רגל דיגיטלית 8</strong> של הארדואינו בעזרת חוט ג'אמפר.</li>
+  <li>מחברים את הרגל השנייה של הזמזם ל-<strong>GND</strong> בעזרת חוט ג'אמפר.</li>
+  <li>הזמזם הקטן הזה לא צריך נגד, ואין לו צד חיובי או שלילי — אפשר לחבר כל רגל לכל צד.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">Arduino pin 8 ───────────┬── Buzzer leg 1
+                         ▼
+                    Buzzer leg 2 ── Arduino GND</pre>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p2_02_led_button_buzzer_breadboard.svg" alt="תרשים ברדבורד: הלד על רגל 9 דרך נגד 220 אוהם ל-GND, הכפתור לרוחב החריץ המרכזי, ובנוסף זמזם פיזו ששתי רגליו בטורים שונים — רגל אחת לרגל 8, הרגל השנייה ל-GND.">
+  <figcaption><strong>זמזם: רגל אחת ← רגל 8</strong>, הרגל השנייה ← <strong>GND</strong>. הלד והכפתור נשארים בדיוק כמו בשלב 1.</figcaption>
+</figure>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>חשוב — לא לחבר ישר ל-5 V</strong>
+  אסור לחבר את הזמזם ישירות בין <strong>5 V ל-GND</strong>. תמיד מפעילים אותו מ<strong>רגל 8</strong>, כדי שהארדואינו ישלוט בו. זמזם שמחובר ישר ל-5 V יזמזם בלי הפסקה ועלול למשוך זרם גדול מדי. עוקבים באצבע: רגל אחת לרגל 8? בטוח. אפשר לקרוא למורה לעזרה.
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>על הברדבורד יש עכשיו לד, כפתור וזמזם. רגל אחת של הזמזם מחוברת לרגל 8, והשנייה ל-GND.</p>
+  <p class="expected-note"><strong>הזמזם עדיין לא מזמזם</strong> — עוד לא העלינו קוד שמפעיל אותו. זה יקרה בשלב 5. בשלב הזה רק בודקים שהחיווט נכון.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>הזמזם על הברדבורד כששתי רגליו בטורים שונים</li>
+    <li>רגל אחת של הזמזם מחוברת לרגל 8</li>
+    <li>הרגל השנייה של הזמזם מחוברת ל-GND</li>
+    <li>המורה אישר שהחיווט נכון</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  אם שתי רגלי הזמזם נמצאות באותו טור — מזיזים אחת לטור אחר. בודקים שרגל אחת באמת מגיעה לרגל 8 ולא לרגל אחרת, ושהשנייה ב-GND. אם לא בטוחים — קוראים למורה לעזרה.
+</div>
+
+</div>
+</body>
+</html>

@@ -57,6 +57,13 @@ body {
   color: #8b6000;
 }
 
+/* Section icons (the emoji before headings and callout labels). A small,
+ * consistent trailing gap so the icon doesn't butt against the text.
+ * margin-inline-end resolves to the correct side in both LTR and RTL. */
+.section-icon {
+  margin-inline-end: 4pt;
+}
+
 /* Subtitle now lives inside the .milestone-badge locator string, so the
  * separate subtitle line is redundant — hide it. */
 .subtitle {
@@ -1118,7 +1125,7 @@ code {
 .card-id {
   position: absolute;
   top: 5mm;
-  left: 5mm;
+  inset-inline-end: 5mm;
   width: 30pt;
   height: 30pt;
   border: 2pt solid #000;

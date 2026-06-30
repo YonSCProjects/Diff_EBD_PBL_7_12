@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית עזר R5 — אינדקס קובצי הקוד של פרויקט 3</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0;
+    font-size: 13pt;
+  }
+  th, td {
+    border: 1pt solid #000;
+    padding: 8pt 10pt;
+    text-align: right;
+    vertical-align: top;
+  }
+  th {
+    background: #eee;
+    font-weight: bold;
+  }
+  .file-name {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 11pt;
+    background: #f4f4f4;
+    padding: 2pt 5pt;
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+  }
+  .path-box {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    word-break: break-all;
+    direction: ltr;
+    text-align: left;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">R5</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>איזה קוד פותחים ומתי</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי • מפת הקבצים</div>
+</div>
+
+<h2>איפה נמצאים הקבצים של פרויקט 3</h2>
+
+<p>כל קובצי הקוד של פרויקט 3 נמצאים בתיקיית פרויקט 3 שלכם ב-Google Drive. כדי להגיע אליהם: בסרגל הצד של סייר הקבצים לוחצים על <strong>Google Drive</strong>, הולכים ל-<strong>My Drive ← Arduino_Projects</strong>, נכנסים לתיקייה עם הכינוי שלכם, ואז לתיקייה <code>Project_3_Dont_Get_Too_Close</code> ובתוכה לתיקייה <code>ino_files</code>.</p>
+
+<div class="path-box">G:\My Drive\Arduino_Projects\&lt;your_nickname&gt;\Project_3_Dont_Get_Too_Close\ino_files\</div>
+
+<p class="expected-note">אם אתם לא מוצאים את התיקייה, שואלים את המורה פעם אחת ורושמים כאן איך מגיעים אליה: <span class="fill-blank">&nbsp;</span></p>
+
+<p>בתוך <code>ino_files</code> כל קובץ קוד יושב בתיקייה משלו. לכל תיקייה יש קובץ <code>.ino</code> אחד בתוכה עם אותו שם של התיקייה.</p>
+
+<div class="key">
+פותחים קוד בלחיצה כפולה על קובץ ה-<code>.ino</code>, או דרך <strong>File → Open</strong> בארדואינו IDE ובחירה בקובץ.
+</div>
+
+<h2>קובצי הקוד של גרסה 1 — איזה קוד לאיזה שלב</h2>
+
+<table>
+  <thead>
+    <tr><th>שלב</th><th>פותחים את הקובץ הזה</th><th>מה קורה</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>שלב 2</td>
+      <td><span class="file-name">01_distance_to_serial/<br>01_distance_to_serial.ino</span></td>
+      <td>הארדואינו מודד שוב ושוב את המרחק לעצם הקרוב ביותר ומדפיס אותו בסנטימטרים במסך הטורי (Serial Monitor). מזיזים יד לכיוון החיישן והמספר קטֵן; מרחיקים אותה והמספר גדֵל</td>
+    </tr>
+    <tr>
+      <td>שלב 3</td>
+      <td><span class="file-name">02_distance_led_alarm/<br>02_distance_led_alarm.ino</span></td>
+      <td>אותה מדידת מרחק, ובנוסף: כשהמרחק יורד מתחת ל-20 ס"מ הלד (רגל 9) מאיר, וכשהעצם מתרחק הלד נכבה. זהו ה<strong>סף</strong> הראשון שרואים בפעולה</td>
+    </tr>
+    <tr>
+      <td>שלב 4</td>
+      <td><span class="file-name">03_distance_full_alarm/<br>03_distance_full_alarm.ino</span></td>
+      <td>האזעקה המלאה: כשהמרחק יורד מתחת ל-20 ס"מ הלד (רגל 9) מאיר <strong>וגם</strong> הזמזם (רגל 8) מצפצף. אור וגם צליל — אזעקת קרבה שלמה</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>שלבים 1, 5, 6 — אין העלאת קוד.</strong> שלב 1 הוא חומרה בלבד (חיווט חיישן המרחק). שלבים 5 ו-6 הם בדיקת האזעקה על עצמים אמיתיים והצגת הפרויקט.</p>
+
+<div class="key">
+מספר מרחק <strong>גדול מאוד</strong> (למשל 999) כשאין שום דבר מול החיישן הוא <strong>תקין — לא תקלה</strong>. החיישן פשוט לא שמע הד חוזר, אז הוא מדווח "רחוק מאוד". כשמקרבים יד מול החיישן המספר יקטַן מיד.
+</div>
+
+<h2>קובץ קוד התחלתי של גרסה 2</h2>
+
+<table>
+  <thead>
+    <tr><th>פותחים את הקובץ הזה</th><th>מה יש בו</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="file-name">T2_alarm_starter/<br>T2_alarm_starter.ino</span></td>
+      <td>האזעקה המלאה (חיישן + לד + זמזם), עם ארבעה קבועים מסומנים בראש הקובץ שאותם משנים בגרסה 2:
+        <ul>
+          <li><code>THRESHOLD_CM</code> — מרחק הסף</li>
+          <li><code>USE_LED</code> — האם הלד מגיב</li>
+          <li><code>USE_BUZZER</code> — האם הזמזם מגיב</li>
+          <li><code>PULSING</code> — האם האזעקה פועמת או דולקת ברצף</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>בגרסה 2, מעלים את הקוד ההתחלתי קודם כדי לראות את האזעקה עובדת בסף ברירת המחדל (20 ס"מ), ואז משתמשים בקלוד קוד (ראו <span class="r-ref">R3</span>) כדי לשנות אותו — למשל לקבוע סף אחר או לבחור מה האזעקה עושה — שיתאים לעיצוב שלכם.</p>
+
+<h2>גרסה 3 — אין קוד התחלתי</h2>
+
+<p>בגרסה 3 אתם מעצבים את אזעקת הקרבה שלכם מאפס עם קלוד קוד (למשל אזעקת מגירה, התרעת מעבר בפתח, או אזעקה דו-שלבית עם לד אזהרה צהוב נוסף ברגל 10). הקוד המוגמר שלכם נמצא באותה התיקייה — בוחרים שם שאתם אוהבים (משהו כמו <code>my_proximity_alarm.ino</code>).</p>
+
+</div>
+</body>
+</html>

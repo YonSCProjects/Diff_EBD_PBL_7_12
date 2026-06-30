@@ -1,0 +1,3424 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>פרויקט 3 — לא להתקרב יותר מדי: חוברת כרטיסיות (עזר ומשימה)</title>
+<style>/* Project 1 — Light Signals: shared task card stylesheet
+ * Used by all Tier 1, Tier 2, and Tier 3 task cards, and by the HTML tutorial.
+ * Matches the R1-R5 reference card visual style so students can switch
+ * between printed cards and HTML tutorial without cognitive friction.
+ * A4 portrait, 14pt body text, high contrast, laminate-ready.
+ */
+
+@page { size: A4 portrait; margin: 15mm; }
+
+* { box-sizing: border-box; }
+
+body {
+  /* Arial first for reliable Hebrew rendering (Windows Arial has
+   * consistent regular and bold Hebrew glyphs across Windows versions;
+   * Segoe UI's Hebrew bold can fall back to synthesized bold which
+   * looks visually different). Segoe UI and -apple-system kept as
+   * fallbacks for LTR English on non-Windows systems. */
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+  font-size: 14pt;
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  max-width: 210mm;
+  padding: 12mm;
+  margin: 0 auto;
+}
+
+/* Header with milestone badge, title, subtitle */
+
+.header {
+  border-bottom: 3pt solid #000;
+  padding-bottom: 10pt;
+  margin-bottom: 14pt;
+}
+
+/* Card-locator line — the very-top descriptive string that lets a teacher /
+ * student find the right card at a glance. Format:
+ *   "פרויקט #1 — אותות אור: שלב 1 מתוך 8"
+ *   "Project #1 — Light Signals: Milestone 1 of 8"
+ * Quiet by design (small, dimmed). The card's identity comes from the h1
+ * below; this line just answers "which card is this?". */
+.milestone-badge {
+  display: block;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 0.3pt;
+  margin-bottom: 8pt;
+}
+
+.milestone-badge.celebration {
+  color: #8b6000;
+}
+
+/* Section icons (the emoji before headings and callout labels). A small,
+ * consistent trailing gap so the icon doesn't butt against the text.
+ * margin-inline-end resolves to the correct side in both LTR and RTL. */
+.section-icon {
+  margin-inline-end: 4pt;
+}
+
+/* Subtitle now lives inside the .milestone-badge locator string, so the
+ * separate subtitle line is redundant — hide it. */
+.subtitle {
+  display: none;
+}
+
+h1 {
+  font-size: 22pt;
+  margin: 4pt 0 6pt 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 12pt;
+  color: #555;
+  margin-top: 3pt;
+}
+
+/* Why-this-milestone callout (pale blue italic).
+ * Uses border-inline-start so it renders correctly under both LTR
+ * (border on the left) and RTL Hebrew (border on the right). */
+
+.why {
+  background: #f0f4fa;
+  border-inline-start: 5pt solid #0050a0;
+  padding: 10pt 14pt;
+  margin: 14pt 0;
+  font-style: italic;
+  font-size: 13pt;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: flow-root;
+}
+
+/* Safety net: when a blue .why callout immediately follows an ASCII
+ * wiring diagram or a code block, force the .why onto a new page.
+ * Chromium occasionally violates break-inside: avoid in tight layouts
+ * where the only alternative would push content to the next page —
+ * this explicit page-break-before guarantees the atomic box never
+ * splits in the wiring-block -> why sequence common to T1-M3/M5/M7. */
+.wiring-block + .why,
+.code-block + .why,
+pre + .why {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* Keep "מה עושים" / "What to do" together with all its checklist items.
+ * When a second h2 follows a .checklist (e.g. "הקוד שמעלים" / "תרשים
+ * החיווט" after the action list), force the page break to happen there
+ * rather than mid-checklist. This guarantees the action list is read as
+ * one coherent unit on the page where its h2 lives. */
+@media print {
+  .checklist + h2 {
+    page-break-before: always;
+    break-before: page;
+  }
+}
+
+.why ul {
+  margin: 6pt 0 2pt 0;
+  padding-inline-start: 22pt;
+}
+
+.why li {
+  margin: 3pt 0;
+  line-height: 1.45;
+}
+
+/* Together-milestone notice (first-milestone distinctive) */
+
+.together-notice {
+  background: #fff3d6;
+  border: 2pt solid #d4a017;
+  border-radius: 4pt;
+  padding: 14pt 18pt;
+  margin: 14pt 0;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.together-notice strong {
+  display: block;
+  font-size: 16pt;
+  margin-bottom: 4pt;
+}
+
+/* Section headers — soft cream panel with a warm gold accent strip on the
+ * inline-start edge. Replaces the previous solid-black bar (which read as
+ * harsh / heavy under print and screen). The cream + gold pairing matches
+ * the .together-notice and .recognition-line callouts so the card has one
+ * consistent warm-accent palette. Tutorial overrides (e.g. .tutorial-intro
+ * h2) keep their own colors via higher specificity. */
+
+h2 {
+  font-size: 17pt;
+  margin: 18pt 0 8pt 0;
+  padding: 7pt 14pt;
+  background: #f1e5c8;
+  color: #1a2a3a;
+  border-inline-start: 5pt solid #a87833;
+  border-radius: 3pt;
+}
+
+/* In-card sub-divider heading (e.g. "חלק א׳ / חלק ב׳" on two-part milestones
+ * like T1_M3 / T1_M4). Lighter than the h2 cream panel — no background, just a
+ * thin warm accent on the inline-start edge — so the h1 > h2 > h3 hierarchy
+ * stays clear. .tutorial-nav h3 keeps its own look via higher specificity. */
+h3 {
+  font-size: 15pt;
+  margin: 16pt 0 6pt 0;
+  padding: 3pt 12pt;
+  color: #1a2a3a;
+  border-inline-start: 4pt solid #c9a86a;
+}
+
+/* Base table styling — pin-map / sketch-index tables (R1, R5). Without this the
+ * shared stylesheet left tables unstyled (no grid, no padding). The @media
+ * print block already handles row-level breaks + repeating <thead>. Header
+ * shading reuses the h2 cream so tables match the card family palette. */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10pt 0;
+  font-size: 13pt;
+}
+
+th, td {
+  border: 1pt solid #999;
+  padding: 6pt 10pt;
+  text-align: inherit;
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+thead th {
+  background: #f1e5c8;
+}
+
+/* "Key point" callout — a calm, noticeable highlight for an important note or
+ * reassurance (e.g. "a big number is normal, not a bug"). Defined globally so
+ * task cards get a styled, print-safe box. Reference cards that define .key in
+ * their own <style> block keep their local look (inline rule wins by order). */
+.key {
+  background: #fff8e1;
+  border: 2pt solid #f0c040;
+  border-radius: 4pt;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+  font-size: 13pt;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Optional planner field (Tier 3) — dashed border + muted fill so it reads as
+ * skippable at a glance, distinct from the required solid-border fields. */
+.field-optional {
+  border-style: dashed;
+  border-color: #888;
+  background: #f4f4f4;
+}
+
+p { margin: 6pt 0; }
+
+/* Checklist — big checkboxes for scannability */
+
+.checklist {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 10pt 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-block: 6pt;
+  padding-inline-start: 34pt;
+  padding-inline-end: 0;
+  margin: 4pt 0;
+  line-height: 1.5;
+  border-bottom: 1pt dashed #ddd;
+}
+
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  inset-inline-start: 4pt;
+  top: 3pt;
+  font-size: 22pt;
+  line-height: 1;
+}
+
+.checklist li:last-child {
+  border-bottom: none;
+}
+
+/* Screen-interactive: clicking toggles a ✓ and persists in localStorage
+ * per nickname (see card.js). Print view strips interactivity and keeps
+ * the plain empty boxes so the laminated card still works with a marker. */
+.checklist li {
+  cursor: pointer;
+  user-select: none;
+}
+
+.checklist li.checked::before {
+  content: "☑";
+}
+
+.checklist li.checked {
+  color: #666;
+  text-decoration: line-through;
+  text-decoration-color: #aaa;
+}
+
+/* Nickname indicator strip (screen only) */
+.nickname-indicator {
+  background: #f5f5f5;
+  border: 1pt solid #ccc;
+  padding: 6pt 12pt;
+  margin: 0 0 10pt 0;
+  font-size: 11pt;
+  display: flex;
+  gap: 10pt;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nickname-indicator strong {
+  font-weight: bold;
+}
+
+.nickname-indicator button {
+  font-size: 10pt;
+  padding: 3pt 10pt;
+  border: 1pt solid #888;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nickname-indicator button:hover {
+  background: #e8e8e8;
+}
+
+/* Code snippet block — the full .ino printed for reading on paper */
+
+.code-block {
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  line-height: 1.4;
+  white-space: pre;
+  overflow-x: auto;
+  page-break-inside: avoid;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+.code-block .filename {
+  display: block;
+  font-size: 10pt;
+  color: #666;
+  margin-bottom: 8pt;
+  font-style: italic;
+}
+
+/* ASCII wiring diagram block */
+
+.wiring-block {
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 12pt;
+  line-height: 1.3;
+  white-space: pre;
+  page-break-inside: avoid;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* Image slot — living placeholder for Fritzing or photo */
+
+.image-slot {
+  border: 2pt dashed #667;
+  background: #f0f4fa;
+  padding: 14pt 18pt;
+  margin: 12pt 0;
+  font-size: 11pt;
+  page-break-inside: avoid;
+}
+
+.image-slot-header {
+  font-weight: bold;
+  color: #334;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 11pt;
+  margin-bottom: 6pt;
+}
+
+.image-slot p {
+  margin: 4pt 0;
+  font-size: 11pt;
+}
+
+/* Wiring figure — Fritzing breadboard diagram + caption */
+
+.wiring-figure {
+  border: 1pt solid #b8c4d8;
+  background: #fafcff;
+  padding: 10pt 12pt 8pt;
+  margin: 12pt 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  text-align: center;
+}
+
+.wiring-figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 260pt;
+  height: auto;
+  margin: 0 auto;
+}
+
+.wiring-figure figcaption {
+  margin-top: 6pt;
+  font-size: 10pt;
+  color: #455;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.wiring-figure figcaption strong {
+  color: #223;
+}
+
+/* Expected-result block (green) */
+
+.expected {
+  background: #e8f5e9;
+  border-inline-start: 5pt solid #2e7d32;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+}
+
+.expected strong {
+  display: block;
+  margin-bottom: 4pt;
+  color: #1b5e20;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 12pt;
+}
+
+/* Done-when block (double border) */
+
+.done-when {
+  background: #fff;
+  border: 3pt double #000;
+  border-radius: 4pt;
+  padding: 14pt 18pt;
+  margin: 16pt 0;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.done-when strong {
+  display: block;
+  font-size: 12pt;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  margin-bottom: 6pt;
+}
+
+.done-when ul {
+  margin: 6pt 0 0 0;
+  padding-inline-start: 20pt;
+  font-weight: normal;
+  font-size: 13pt;
+}
+
+.done-when ul li {
+  margin: 3pt 0;
+  padding-block: 5pt;
+  line-height: 1.6;
+  border-bottom: 1pt solid #e0e0e0;
+}
+
+.done-when ul li:last-child {
+  border-bottom: none;
+}
+
+/* Stuck protocol short version (pale yellow) */
+
+.stuck {
+  background: #fffbe0;
+  border-inline-start: 5pt solid #d4a017;
+  padding: 10pt 14pt;
+  margin: 12pt 0;
+  font-size: 13pt;
+}
+
+.stuck strong {
+  display: block;
+  margin-bottom: 3pt;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+/* Each scenario in the stuck list gets its own airy white card with a
+ * soft gold border. The cards stack with breathing room between them so
+ * an ADHD/EBD student can scan one scenario at a time without a wall-of-
+ * text feel. The list-marker is dropped because the card itself carries
+ * the visual separation. */
+.stuck ul {
+  list-style: none;
+  margin: 10pt 0 2pt 0;
+  padding-inline-start: 0;
+}
+
+.stuck ul li {
+  background: #fff;
+  border: 1pt solid #e8d088;
+  border-radius: 4pt;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+  line-height: 1.5;
+}
+
+.stuck ul li strong {
+  display: inline;
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: inherit;
+  letter-spacing: 0;
+}
+
+/* Warning block (pale red, for the button pull-down pitfall especially) */
+
+.warning {
+  background: #fef0f0;
+  border-inline-start: 5pt solid #b00;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+  font-size: 13pt;
+}
+
+.warning strong {
+  color: #b00;
+  display: block;
+  margin-bottom: 3pt;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+/* Choice-preview block (pale blue, "look ahead") — used on start-up cards
+ * to introduce upcoming choice points without making them actionable yet.
+ * Distinct hue from the green .expected and red .warning so a student reads
+ * it as "coming up", not "do now". */
+.choice-preview {
+  background: #e8f1fb;
+  border-inline-start: 5pt solid #1565c0;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+  font-size: 13pt;
+}
+
+.choice-preview strong {
+  display: block;
+  margin-bottom: 4pt;
+  color: #0d47a1;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+.choice-preview ul {
+  margin: 6pt 0 4pt 0;
+  padding-inline-start: 20pt;
+}
+
+.choice-preview ul li {
+  margin: 5pt 0;
+  line-height: 1.6;
+}
+
+/* Recognition line block — Milestone 1 together-ritual */
+
+.recognition-line {
+  background: #fff3d6;
+  border: 3pt solid #d4a017;
+  border-radius: 4pt;
+  padding: 14pt 18pt;
+  margin: 14pt 0;
+  text-align: center;
+  font-size: 16pt;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.recognition-line::before {
+  content: "\201C";
+  font-size: 24pt;
+  vertical-align: -4pt;
+  color: #d4a017;
+}
+
+.recognition-line::after {
+  content: "\201D";
+  font-size: 24pt;
+  vertical-align: -4pt;
+  color: #d4a017;
+}
+
+/* RTL: swap opening/closing quotes so the opening quote sits at the
+ * visual start (right side) of the recognition line in Hebrew. */
+[dir="rtl"] .recognition-line::before { content: "\201D"; }
+[dir="rtl"] .recognition-line::after { content: "\201C"; }
+
+/* Celebration block — Milestone 8 project complete */
+
+.celebration {
+  background: #fff3d6;
+  border: 3pt solid #d4a017;
+  border-radius: 4pt;
+  padding: 16pt 20pt;
+  margin: 16pt 0;
+  text-align: center;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.celebration .title {
+  font-size: 22pt;
+  color: #8b6000;
+  display: block;
+  margin-bottom: 8pt;
+}
+
+/* Prompt template (Tier 2+ Claude Code Level 2 interactions) */
+
+.prompt-template {
+  background: #f4f7fb;
+  border: 1pt solid #99b;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 12pt;
+  white-space: pre-wrap;
+  line-height: 1.45;
+  page-break-inside: avoid;
+}
+
+/* Choice-point block (Tier 2 pattern choice, button behaviour choice) */
+
+.choice-point {
+  background: #f0f4fa;
+  border: 2pt solid #0050a0;
+  border-radius: 4pt;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+}
+
+.choice-point strong {
+  display: block;
+  color: #0050a0;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 12pt;
+  margin-bottom: 6pt;
+}
+
+.choice-point .option {
+  background: #fff;
+  border: 1pt solid #99b;
+  border-radius: 3pt;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+}
+
+.choice-point .option strong {
+  color: #000;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14pt;
+  margin-bottom: 2pt;
+}
+
+/* Tier 3 planner fill-in-the-blank fields */
+
+.field {
+  border: 1pt solid #000;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  min-height: 60pt;
+  background: #fafafa;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-bottom: 4pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+}
+
+.field .hint {
+  color: #666;
+  font-size: 11pt;
+  font-style: italic;
+  margin-bottom: 6pt;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 20pt;
+  padding-top: 10pt;
+  border-top: 1pt dashed #999;
+  font-size: 10pt;
+  color: #666;
+  text-align: center;
+}
+
+/* Print-specific tweaks */
+
+@media print {
+  body { font-size: 13pt; }
+  .card { padding: 10mm; }
+  a { color: #000; text-decoration: underline; }
+
+  /* Screen-only blocks: hidden on the laminated card but visible in
+   * the browser/HTML view. Used for the "code listing" sections
+   * ("הקוד שמעלים" / "The sketch you are uploading" + intro paragraph
+   * + code-block). The student sees the same code when they open the
+   * .ino file in Arduino IDE per the action steps, so duplicating it
+   * on the printed card adds bulk without action value. */
+  .screen-only { display: none; }
+
+  /* Print = laminated artifact: always show empty boxes, no interactivity,
+   * no nickname strip, no strikethrough on checked items. */
+  .nickname-indicator { display: none; }
+  .checklist li { cursor: default; }
+  .checklist li.checked { color: #000; text-decoration: none; }
+  .checklist li.checked::before { content: "☐"; }
+
+  /* Keep callout boxes from splitting across a page break — a callout
+   * broken mid-box is disorienting and defeats the box's visual framing.
+   * .choice-point is intentionally excluded: it can be tall (3 options)
+   * and forcing it whole often leaves a near-empty first page. Instead
+   * we keep each individual .option inside it together.
+   * Tables are also excluded here — they use a separate rule below
+   * that allows row-level splits with repeating headers. */
+  .why, .together-notice, .expected, .done-when, .stuck,
+  .warning, .choice-preview, .important, .recognition-line, .celebration,
+  .prompt-template, .image-slot, .field, .living-placeholder,
+  .step {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Paragraphs and list items are atomic — never split mid-sentence or
+   * mid-item. Card paragraphs are short, so whitespace cost is minimal
+   * while the readability win is non-negotiable. */
+  p {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Extend heading-to-body bonding to the second following sibling so a
+   * heading + short lead-in + list/table move together (prevents
+   * heading + one line stranded at page bottom with body starting on
+   * the next page). */
+  h2 + * + *, h3 + * + *, h4 + * + * {
+    page-break-before: avoid;
+    break-before: avoid-page;
+  }
+
+  /* Tables: allow row-level splits with repeating <thead> on the
+   * continuation page. A whole-table keep-together is opt-in via
+   * .table-keep-together. */
+  table {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tbody tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .table-keep-together {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .choice-point .option {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Keep each option's title (<strong>) bonded to its following .option
+   * body so the title never strands at the bottom of a page. */
+  .choice-point strong {
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+  .choice-point strong + .option {
+    page-break-before: avoid;
+    break-before: avoid-page;
+  }
+
+  /* Living placeholders are authoring scaffolding for image slots —
+   * they must never reach a laminated student card. */
+  .living-placeholder { display: none; }
+
+  /* Two-page cards: when the recognition line appears mid-card, force
+   * the "what you should see" + "done when" + "stuck" cluster onto
+   * page 2 so the ceremonial line closes page 1 cleanly. */
+  .recognition-line + .expected {
+    page-break-before: always;
+  }
+}
+
+/* =====================================================================
+ * Tutorial-specific styles
+ * Used by project_1_tutorial.html, which links to this same stylesheet
+ * so the tutorial visually matches the printed task cards.
+ * ===================================================================*/
+
+/* Tutorial intro block (blue, introduces how to use the tutorial) */
+
+.tutorial-intro {
+  background: #e3f2fd;
+  border: 3pt solid #1565c0;
+  padding: 18pt 22pt;
+  margin: 20pt 0;
+  font-size: 14pt;
+}
+
+.tutorial-intro h2 {
+  margin-top: 0;
+  background: #1565c0;
+}
+
+.tutorial-intro p {
+  margin: 8pt 0;
+  line-height: 1.55;
+}
+
+/* Tutorial navigation (table of contents with anchor links) */
+
+.tutorial-nav {
+  background: #f5f5f5;
+  border: 1pt solid #aaa;
+  padding: 16pt 22pt;
+  margin: 20pt 0;
+}
+
+.tutorial-nav h2 {
+  margin-top: 0;
+}
+
+.tutorial-nav h3 {
+  font-size: 15pt;
+  margin: 12pt 0 4pt 0;
+  color: #000;
+  border-bottom: 1pt solid #999;
+  padding-bottom: 3pt;
+}
+
+.tutorial-nav ol {
+  margin: 6pt 0;
+  padding-inline-start: 24pt;
+  list-style: decimal;
+}
+
+.tutorial-nav li {
+  margin: 5pt 0;
+  line-height: 1.4;
+}
+
+.tutorial-nav a {
+  color: #0050a0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tutorial-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Tier divider (big black bar between Tier 1 / Tier 2 / Tier 3 sections) */
+
+.tier-divider {
+  background: #000;
+  color: #fff;
+  padding: 20pt 24pt;
+  margin: 34pt 0 22pt 0;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+}
+
+.tier-divider .tier-subtitle {
+  display: block;
+  font-size: 13pt;
+  font-weight: normal;
+  letter-spacing: 0.5pt;
+  text-transform: none;
+  margin-top: 6pt;
+  opacity: 0.85;
+}
+
+/* "Open this sketch" action link — a prominent clickable button */
+
+.open-link {
+  display: block;
+  background: #0050a0;
+  color: #fff !important;
+  padding: 12pt 18pt;
+  margin: 12pt 0;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: center;
+  border-radius: 4pt;
+  border: 2pt solid #003875;
+}
+
+.open-link:hover {
+  background: #003875;
+}
+
+.open-link::before {
+  content: "📎 ";
+  font-size: 16pt;
+}
+
+/* Inline action link (for "see R1 Wiring" and similar) */
+
+.inline-link {
+  color: #0050a0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.inline-link:hover {
+  color: #003875;
+}
+
+/* File-path box (fallback — shown next to .open-link for students whose
+ * browser does not open .ino files directly) */
+
+.file-path {
+  display: block;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 6pt 10pt;
+  margin: -6pt 0 12pt 0;
+  color: #555;
+  text-align: center;
+}
+
+.file-path::before {
+  content: "File path (open in Arduino IDE via File \2192  Sketchbook): ";
+  font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: 10pt;
+  font-style: italic;
+}
+
+/* Orphan-heading prevention: keep a heading bonded to the block that follows.
+ * Chicago §2.113, APA-7 §2.27 — heading must be followed by body content
+ * on the same page, never stranded at page bottom. */
+h1, h2, h3, h4, h5, h6,
+.section-title {
+  page-break-after: avoid;
+  break-after: avoid-page;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+p, li {
+  orphans: 3;
+  widows: 3;
+}
+
+h2 + p, h2 + ul, h2 + ol, h2 + .code-block, h2 + .wiring-block, h2 + pre, h2 + table, h2 + blockquote,
+h3 + p, h3 + ul, h3 + ol, h3 + .code-block, h3 + .wiring-block, h3 + pre, h3 + table, h3 + blockquote,
+h4 + p, h4 + ul, h4 + ol, h4 + .code-block, h4 + .wiring-block, h4 + pre, h4 + table, h4 + blockquote,
+.section-title + * {
+  page-break-before: avoid;
+  break-before: avoid-page;
+}
+
+/* Milestone section (each task card's screen equivalent) */
+
+.milestone-section {
+  scroll-margin-top: 20pt;
+  page-break-after: always;
+  border-bottom: 2pt dashed #ccc;
+  margin-bottom: 20pt;
+  padding-bottom: 20pt;
+}
+
+.milestone-section:last-of-type {
+  border-bottom: none;
+}
+
+/* Back-to-top link at the end of each milestone.
+ * text-align: end renders as "right" under LTR and "left" under RTL,
+ * so the link always sits at the visual end of its container. */
+
+.back-to-top {
+  text-align: end;
+  margin-top: 16pt;
+  font-size: 11pt;
+}
+
+.back-to-top a {
+  color: #0050a0;
+  text-decoration: none;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
+
+/* Tutorial content wrapper (centers content in browser view) */
+
+.tutorial-content {
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 12mm;
+}
+
+/* Screen-only hint: tells the student what they are looking at */
+
+@media screen {
+  .screen-hint {
+    display: block;
+    background: #fff8e1;
+    border: 1pt solid #f9a825;
+    padding: 8pt 12pt;
+    margin: 12pt 0;
+    font-size: 11pt;
+    font-style: italic;
+    color: #555;
+  }
+}
+
+@media print {
+  .screen-hint { display: none; }
+  .tier-divider { page-break-before: always; }
+  .tutorial-nav { page-break-after: always; }
+  .back-to-top { display: none; }
+  .open-link {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2pt solid #000 !important;
+  }
+  .file-path { display: block; }
+}
+
+/* =====================================================================
+ * Hebrew RTL overrides — Pattern E6 (no box-level bold on Hebrew callouts)
+ * Windows Arial synthesises Hebrew bold inconsistently (thickens regular
+ * glyphs rather than using a true bold face), so box-level bold on a
+ * Hebrew-language callout looks visibly different from the surrounding
+ * regular text. Individual <strong> tags inside these boxes still provide
+ * emphasis via the semantic tag, so the important labels stay bold.
+ * English LTR cards are unaffected — this override only fires under [dir="rtl"].
+ * ===================================================================*/
+
+[dir="rtl"] .together-notice,
+[dir="rtl"] .done-when,
+[dir="rtl"] .celebration,
+[dir="rtl"] .recognition-line,
+[dir="rtl"] .milestone-badge,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .expected strong,
+[dir="rtl"] .warning strong,
+[dir="rtl"] .done-when strong {
+  font-weight: normal;
+}
+
+/* Hebrew RTL: uppercase + letter-spacing are Latin-type conventions
+ * and render poorly on Hebrew glyphs (no case, and letter-spacing
+ * pushes Hebrew letters apart awkwardly). Override on all callout
+ * headings and bump size for a clearer visual hierarchy. */
+[dir="rtl"] .expected strong,
+[dir="rtl"] .done-when strong,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .warning strong {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14pt;
+  margin-bottom: 6pt;
+}
+
+/* Expected block: paragraph spacing so the primary observable fact
+ * reads as a clean lead line and the explanation sits below it. */
+.expected p {
+  margin: 4pt 0 0 0;
+  line-height: 1.55;
+}
+
+.expected p.expected-note {
+  font-size: 12pt;
+  color: #444;
+  margin-top: 6pt;
+}
+
+/* Prompt templates hold Hebrew prose fill-in labels under RTL — per
+ * Pattern E5, Hebrew text never uses monospace. Keep monospace for
+ * LTR prompt templates (English code examples). */
+[dir="rtl"] .prompt-template {
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+}
+
+/* Field labels (Tier 3 planner) — strip Latin uppercase and letter-
+ * spacing when rendered under RTL; Hebrew has no case and glyphs
+ * render poorly with Latin letter-spacing. */
+[dir="rtl"] .field label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Fill-in-blank utility (Tier 2 choice-commitment, planner fields).
+ * Replaces inline style="border-bottom: 1pt solid; ..." across cards. */
+.fill-blank {
+  border-bottom: 1pt solid #000;
+  display: inline-block;
+  min-width: 60pt;
+}
+
+/* Secondary detail line within a checklist item — keeps the primary action
+ * on its own line and tucks supplementary detail (file path, location)
+ * underneath in smaller, dimmer text. Reduces visual noise in bullets that
+ * mix RTL Hebrew prose with multiple LTR <code> islands. */
+.li-detail {
+  display: block;
+  margin-top: 4pt;
+  font-size: 12pt;
+  color: #555;
+  line-height: 1.45;
+}
+
+/* Inline <code> in RTL context: isolate the LTR run so neutral characters
+ * (backslash, colon, parentheses) resolve inside the LTR island rather than
+ * being absorbed into the surrounding RTL paragraph and reordering visually.
+ * Also allow long paths to break if they would overflow the column. */
+[dir="rtl"] code {
+  unicode-bidi: isolate;
+  direction: ltr;
+}
+
+code {
+  overflow-wrap: anywhere;
+}
+
+/* Hebrew RTL: the .r-ref inline circle used in task cards to reference
+ * R1-R5 reference cards. Matches the circled style of the top-corner
+ * card-ID badge so "R2" in body text looks identical to "R2" in the corner. */
+
+[dir="rtl"] .r-ref,
+.r-ref {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18pt;
+  height: 18pt;
+  border: 1.5pt solid #000;
+  border-radius: 50%;
+  font-size: 10pt;
+  font-weight: bold;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  top: -1pt;
+}
+
+/* Card-ID badge in the top corner. inset-inline-end resolves to "right" in
+ * LTR (English heading flows from the left, so the badge sits in the empty
+ * top-right corner) and to "left" in RTL (Hebrew heading flows from the
+ * right, so the badge sits in the empty top-left corner). One rule, both
+ * languages. */
+
+.card-id {
+  position: absolute;
+  top: 5mm;
+  inset-inline-end: 5mm;
+  width: 30pt;
+  height: 30pt;
+  border: 2pt solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11pt;
+  font-weight: bold;
+  background: #fff;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.3pt;
+  z-index: 10;
+}
+
+.card {
+  position: relative;
+}
+
+/* Together-milestone image icon (Hebrew + English). Used inside the
+ * .together-notice block to visually mark the together-milestone pattern.
+ * Source: images/together_milestone_icon.png (Yon-provided). */
+
+.together-icon {
+  display: block;
+  width: 60pt;
+  height: 60pt;
+  margin: 0 auto 10pt auto;
+  object-fit: contain;
+}
+</style>
+<style>
+  /* Bundle-level: the first card shouldn't force a blank leading page. */
+  .appendix-card:first-of-type { page-break-before: auto !important; }
+  body { margin: 0; padding: 0; }
+</style>
+</head>
+<body>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .orient {
+    background: #eef3f8;
+    border-inline-start: 5pt solid #5a7391;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 12.5pt;
+    color: #234;
+  }
+  .big-msg {
+    background: #fff8e1;
+    border: 2pt solid #f57c00;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 15pt;
+    text-align: right;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border-inline-start: 5pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key strong { color: #000; }
+  .tip {
+    background: #f1f8e9;
+    border-inline-start: 5pt solid #558b2f;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont { color: #b00; font-weight: bold; }
+  .wiring-figure {
+    border: 1pt solid #b8c4d8;
+    background: #fafcff;
+    padding: 10pt 12pt 8pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    text-align: center;
+  }
+  .wiring-figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 260pt;
+    height: auto;
+    margin: 0 auto;
+  }
+  .wiring-figure figcaption {
+    margin-top: 6pt;
+    font-size: 10pt;
+    color: #455;
+    line-height: 1.5;
+    text-align: center;
+    direction: rtl;
+  }
+  .wiring-figure figcaption strong { color: #223; }
+  .bb-ascii {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    border: 1pt solid #ccc;
+    padding: 8pt 8pt;
+    margin: 10pt 0;
+    line-height: 1.35;
+    white-space: pre;
+    overflow-x: auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: left;
+  }
+  .chain {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    background: #fafcff;
+    border: 1pt solid #b8c4d8;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    text-align: center;
+    direction: ltr;
+    unicode-bidi: isolate;
+    page-break-inside: avoid;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R0</div>
+
+<div class="header">
+  <h1><span class="section-icon">🧩</span>איך עובד ברדבורד</h1>
+  <div class="subtitle">פרויקט #3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="orient">
+קוראים את הכרטיסייה הזאת לפני הפגישה הראשונה. לא צריך לשנן אותה — משאירים אותה על שולחן העבודה וחוזרים לכל חלק כשנתקעים.
+</div>
+
+<div class="big-msg">
+ברדבורד מאפשר לבנות מעגלים חשמליים בלי להלחים. מכניסים את הרגליים של הרכיבים (חיישן המרחק, לד, נגד, זמזם, חוטים) לתוך החורים, והלוח מחבר ביניהם בפנים — בלי כלים. בסוף אפשר להוציא הכל ולהשתמש בחלקים שוב.
+</div>
+
+<h2><span class="section-icon">🗺️</span>בלוח יש ארבעה אזורים</h2>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד ריק (יתווסף בהמשך)</div>
+  <p>תרשים של ברדבורד ריק: למעלה ולמטה — שתי <strong>מסילות מתח</strong> אופקיות בצבע אדום וכחול (מסומנות + ו-−), העוברות לאורך כל הלוח. בין לבין — רשת של טורים ממוספרים (1–30) המופרדים על ידי <strong>מרווח מרכזי</strong>. השורות מסומנות a–e בחצי העליון ו-f–j בחצי התחתון. עד שהתרשים מוכן, תרשים הטקסט שלמטה הוא ההפניה.</p>
+</div>
+
+<div class="bb-ascii">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+
+     a  ● ● ● ● ● ● ● ● ● ● ●
+     b  ● ● ● ● ● ● ● ● ● ● ●
+     c  ● ● ● ● ● ● ● ● ● ● ●       top half
+     d  ● ● ● ● ● ● ● ● ● ● ●
+     e  ● ● ● ● ● ● ● ● ● ● ●
+                                    ← centre gap
+     f  ● ● ● ● ● ● ● ● ● ● ●
+     g  ● ● ● ● ● ● ● ● ● ● ●
+     h  ● ● ● ● ● ● ● ● ● ● ●       bottom half
+     i  ● ● ● ● ● ● ● ● ● ● ●
+     j  ● ● ● ● ● ● ● ● ● ● ●
+
+     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+        1 2 3 4 5 6 7 8 9 10 …</div>
+
+<div class="key">
+<strong>שני הכללים שחשוב להכיר</strong>
+<ul>
+  <li><strong>בתוך טור ממוספר אחד, השורות a–e מחוברות ביניהן.</strong> החורים a5, b5, c5, d5, e5 כולם חולקים חיבור חשמלי אחד. כל מה שמכניסים לחמשת החורים האלה — מחובר ביחד.</li>
+  <li><strong>השורות f–j מחוברות באותה צורה, אבל בנפרד מ-a–e.</strong> המרווח המרכזי שובר את החיבור — החורים e5 ו-f5 <strong>לא</strong> מחוברים ביניהם.</li>
+</ul>
+</div>
+
+<div class="key">
+<strong>שתי מסילות המתח</strong>
+<ul>
+  <li>המסילה ה<span style="color:#c00;"><strong>אדומה</strong></span> (מסומנת +) עוברת לאורך כל הלוח. כל החורים לאורך המסילה האדומה מחוברים ביניהם. משמשת ל-<strong>5 V</strong>.</li>
+  <li>המסילה ה<span style="color:#036;"><strong>כחולה</strong></span> (מסומנת −) גם עוברת לאורך כל הלוח. כל החורים לאורך המסילה הכחולה מחוברים. משמשת ל-<strong>GND</strong> (הארקה).</li>
+  <li>מכיוון שכל מסילה עוברת לאורך כל הלוח, אפשר לשאוב מתח מכל מקום לאורכה — אין צורך בחוט נפרד לכל רכיב.</li>
+</ul>
+</div>
+
+<h2><span class="section-icon">💡</span>איך מניחים לד על הברדבורד</h2>
+
+<p>ללד יש <strong>שתי רגליים באורכים שונים</strong>. הרגל הארוכה היא הצד של הפלוס; הרגל הקצרה היא הצד של המינוס. כל רגל צריכה <strong>טור ממוספר משלה</strong> — אם שתי הרגליים נכנסות לאותו טור, הלד יוצר קצר ולא יאיר.</p>
+
+<div class="tip">
+<strong>כלל אצבע:</strong> מכניסים את הלד כך ששתי הרגליים נכנסות לשני טורים ממוספרים שונים (לדוגמה, הרגל הארוכה בטור 9 והרגל הקצרה בטור 8). גם לנגדים — שתי רגליים בשני טורים שונים.
+</div>
+
+<h2><span class="section-icon">🔗</span>מה משמעות "רגל 9 ← נגד 220 אוהם ← לד" על הברדבורד</h2>
+
+<p>כאשר כרטיסיית העזר <span class="r-ref">R1</span> (חיווט פרויקט 3) כותבת <em>"Arduino pin 9 → 220 Ω → LED long leg"</em>, זו שרשרת החיבורים שבונים:</p>
+
+<div class="chain">[Arduino pin 9] ── wire ── [resistor] ── [LED long leg] ── [LED short leg] ── wire ── [GND]</div>
+
+<p>על הברדבורד, כל חץ בשרשרת למעלה הוא טור משותף אחד. לפי החיווט ב-<span class="r-ref">R1</span> חיווט פרויקט 3:</p>
+
+<ul>
+  <li>חוט ג'אמפר מרגל 9 של הארדואינו נכנס לחור אחד בברדבורד.</li>
+  <li>רגל אחת של נגד 220 אוהם נכנסת ל<strong>אותו טור ממוספר</strong> שאליו הכנסנו את הג'אמפר — עכשיו הם מחוברים.</li>
+  <li>הרגל השנייה של הנגד נכנסת ל<strong>טור חדש</strong> — חיבור נפרד לגמרי.</li>
+  <li>הרגל הארוכה של הלד נכנסת לאותו טור חדש — עכשיו הזרם יכול לזרום: רגל 9 ← נגד ← לד.</li>
+  <li>הרגל הקצרה של הלד נכנסת לטור משלה, ומשם חוט ג'אמפר חוזר למסילת ה-GND הכחולה.</li>
+</ul>
+
+<div class="key">
+<strong>הזמזם — רכיב מוכר מפרויקט 2</strong>
+<ul>
+  <li>הזמזם מתחבר בשרשרת קצרה: <strong>רגל 8 ← זמזם ← GND</strong>. רגל אחת של הזמזם לרגל דיגיטלית 8, הרגל השנייה למסילת ה-GND.</li>
+  <li>הזמזם הקטן (פיזו פסיבי) <strong>לא צריך נגד</strong>, ולא משנה לאיזה כיוון מחברים את רגליו.</li>
+  <li>כמו בכל רכיב — שתי הרגליים נכנסות ל<strong>שני טורים שונים</strong>, אחרת ייווצר קצר והזמזם לא יצפצף.</li>
+  <li><span class="dont">לעולם לא מחברים את הזמזם ישירות בין 5 V ל-GND.</span> תמיד מפעילים אותו מרגל 8, כדי שהארדואינו ישלוט בו.</li>
+</ul>
+</div>
+
+<div class="key">
+<strong>חיישן המרחק — הרכיב החדש בפרויקט 3</strong>
+<ul>
+  <li>לחיישן המרחק העל-קולי (HC-SR04) יש <strong>ארבע רגליים</strong> מסומנות: VCC, Trig, Echo, GND. כל אחת נכנסת ל<strong>טור משלה</strong>.</li>
+  <li>VCC נכנס לטור שמחובר ל-<strong>5 V</strong>, ו-GND לטור שמחובר ל-<strong>GND</strong> — בדיוק כמו כל רכיב שצורך מתח.</li>
+  <li>Trig ו-Echo הן רגלי האות: Trig לרגל דיגיטלית <strong>12</strong>, Echo לרגל דיגיטלית <strong>11</strong>. דרכן הארדואינו שולח את הצליל וקורא את ההד שחוזר.</li>
+  <li>מניחים את החיישן כך ששתי ה"עיניים" העגולות פונות <strong>אל מחוץ לקצה הברדבורד</strong>, במקום שבו יד או עצם יכולים לעבור מולן.</li>
+  <li><span class="dont">VCC ו-GND הפוכים זה לזה — לא מתחלפים.</span> VCC תמיד ל-5V, GND תמיד ל-GND. בודקים פעמיים לפני שמדליקים את הארדואינו.</li>
+</ul>
+</div>
+
+<p>הברדבורד עושה את החיווט בשבילנו — רק בוחרים לאיזה טור כל רגל נכנסת.</p>
+
+<h2><span class="section-icon">🔍</span>שני דברים לבדוק אם משהו עדיין לא עובד</h2>
+
+<div class="tip">
+<strong>בדיקה 1 — האם שתי הרגליים של הלד בשני טורים שונים?</strong> אם שתי הרגליים באותו טור, הארוכה והקצרה מחוברות ישירות — זה קצר, והלד לא יאיר. מוציאים רגל אחת ומעבירים אותה טור אחד הצידה. אותו דבר נכון לזמזם ולחיישן — כל רגל בטור משלה. לחיישן יש <strong>ארבע רגליים</strong> (VCC, Trig, Echo, GND), וכל אחת חייבת טור נפרד משלה — אם שתיים מהן חולקות אותו טור, הן מתחברות בטעות והחיישן לא יקרא את המרחק נכון.
+</div>
+
+<div class="tip">
+<strong>בדיקה 2 — האם כל רגל חולקת את הטור שלה עם בדיוק השכן הנכון?</strong> עוברים על השרשרת בקול רם: "הג'אמפר מרגל 9 ורגל אחת של הנגד נכנסים ל<em>אותו</em> טור; הרגל השנייה של הנגד והרגל הארוכה של הלד נכנסות ל<em>אותו</em> טור; הרגל הקצרה של הלד והג'אמפר ל-GND נכנסים ל<em>אותו</em> טור". אם זוג כלשהו נמצא ב<em>טורים שונים</em> — השרשרת שבורה שם. מעבירים את הרגל לטור המתאים.
+</div>
+
+<h2><span class="section-icon">✅</span>יש לכם את מה שצריך</h2>
+
+<p>הכרטיסייה הבאה היא <span class="r-ref">R1</span> — חיווט פרויקט 3. משאירים את <span class="r-ref">R0</span> על שולחן העבודה — אם משהו לא עובד בהמשך, שתי הבדיקות למעלה לרוב ימצאו את הבעיה.</p>
+
+<footer>
+  R0 — איך עובד ברדבורד · פרויקט #3 לא להתקרב יותר מדי
+</footer>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">R1</div>
+
+<div class="header">
+  <h1><span class="section-icon">🔌</span>תרשימי החיווט</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי • כרטיסיית עזר לעמדת התלמיד</div>
+</div>
+
+<p>הכרטיסייה הזאת מראה איך מחברים את <strong>חיישן המרחק</strong>, את <strong>הלד</strong> ואת <strong>הזמזם</strong> בפרויקט 3. שומרים אותה ליד הברדבורד. אם מתבלבלים בחיווט, קודם מסתכלים על הכרטיסייה הזאת לפני שקוראים למורה.</p>
+
+<p>יש כאן <strong>ארבעה חיווטים</strong>. כל אחד בונה על הקודם: מתחילים מהחיישן לבדו, מוסיפים לד, מוסיפים זמזם, ובסוף — לגרסה 3 בלבד — לד אזהרה שני.</p>
+
+<h2><span class="section-icon">⚠️</span>הכללים החשובים ביותר</h2>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>לפני שמחווטים — קוראים את אלה</strong>
+  <ul>
+    <li>בחיישן יש <strong>ארבע רגליים מסומנות</strong>: VCC, Trig, Echo, GND. בודקים את התווית שכתובה על החיישן עצמו מול התרשים. קל להחליף בין <strong>Trig</strong> ל-<strong>Echo</strong>, או בין <strong>VCC</strong> ל-<strong>GND</strong>.</li>
+    <li>הרגל הארוכה של הלד = <strong>חיובי (+)</strong>. היא הולכת ל<strong>נגד</strong>, ומשם לרגל דיגיטלית של הארדואינו. הרגל הקצרה = <strong>שלילי (−)</strong> — היא הולכת ל-<strong>GND</strong>.</li>
+    <li>לכל לד צריך <strong>נגד של 220 אוהם</strong> משלו (פסי צבע: אדום · אדום · חום). בלי נגד = לד שרוף.</li>
+    <li>ל<strong>זמזם</strong> אין כיוון ולא צריך לו נגד. רגל אחת הולכת ל<strong>רגל דיגיטלית 8</strong>, הרגל השנייה ל-<strong>GND</strong>. לעולם לא מחברים את הזמזם ישירות ל-5 V.</li>
+    <li>רגליו של החיישן ורגלי הלד נכנסות ל<strong>טורים שונים</strong> בברדבורד (טור = פס ממוספר 1–30) — אף פעם לא שתי רגליים של אותו רכיב באותו טור.</li>
+  </ul>
+</div>
+
+<h2><span class="section-icon">📋</span>מפת הרגליים</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>רכיב / אות</th>
+      <th>אל</th>
+      <th>מופיע ב-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>חיישן — <code>Trig</code></td><td>רגל <code>12</code></td><td>חיווט 1</td></tr>
+    <tr><td>חיישן — <code>Echo</code></td><td>רגל <code>11</code></td><td>חיווט 1</td></tr>
+    <tr><td>חיישן — <code>VCC</code></td><td><code>5 V</code></td><td>חיווט 1</td></tr>
+    <tr><td>חיישן — <code>GND</code></td><td><code>GND</code></td><td>חיווט 1</td></tr>
+    <tr><td>לד אזעקה (דרך נגד 220 אוהם)</td><td>רגל <code>9</code></td><td>חיווט 2</td></tr>
+    <tr><td>זמזם</td><td>רגל <code>8</code></td><td>חיווט 3</td></tr>
+    <tr><td>לד אזהרה שני (דרך נגד 220 אוהם)</td><td>רגל <code>10</code></td><td>חיווט 4 — גרסה 3</td></tr>
+  </tbody>
+</table>
+
+<h2><span class="section-icon">🔌</span>חיווט 1 — חיישן המרחק לבדו (שלב 1)</h2>
+
+<p>מעגל הבסיס של הפרויקט: רק חיישן המרחק <strong>(HC-SR04)</strong>, ארבע רגליו מחוברות. זה החיווט של שלב 1, לפני שמוסיפים לד או זמזם.</p>
+
+<p>מכניסים את ארבע הרגליים בטור ישר אחד בברדבורד, כך ששתי ה"עיניים" העגולות פונות החוצה מעבר לקצה הברדבורד — במקום שבו יד יכולה לעבור מולן.</p>
+
+<pre class="wiring-block" dir="ltr">HC-SR04            Arduino
+  VCC  ───────────  5V
+  Trig ───────────  pin 12
+  Echo ───────────  pin 11
+  GND  ───────────  GND</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
+  <p>תרשים Fritzing <code>w_p3_01_hcsr04</code>: חיישן HC-SR04 על הברדבורד עם ארבע רגליו — VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11. שתי ה"עיניים" העגולות פונות אל מחוץ לקצה הברדבורד. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 2 — חיישן + לד אזעקה (שלב 3)</h2>
+
+<p>אותו חיווט כמו בחיווט 1, ומוסיפים <strong>לד</strong> אחד על <strong>רגל 9</strong> דרך נגד 220 אוהם: הרגל הארוכה ← נגד ← רגל 9, הרגל הקצרה ← GND. זה בדיוק חיווט הלד שעשיתם בפרויקט 1 ובפרויקט 2.</p>
+
+<pre class="wiring-block" dir="ltr">HC-SR04            Arduino
+  VCC  ───────────  5V
+  Trig ───────────  pin 12
+  Echo ───────────  pin 11
+  GND  ───────────  GND
+
+Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
+                         ▼
+                    LED short leg (−) ── Arduino GND</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
+  <p>תרשים Fritzing <code>w_p3_02_hcsr04_led</code>: חיווט 1 (חיישן HC-SR04 — VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11) ובנוסף לד על רגל 9 דרך נגד 220 אוהם — הרגל הארוכה דרך הנגד לרגל 9, הרגל הקצרה ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 3 — חיישן + לד + זמזם = אזעקה מלאה (שלב 4)</h2>
+
+<p>אותו חיווט כמו בחיווט 2, ומוסיפים את ה<strong>זמזם</strong>: רגל אחת ל<strong>רגל 8</strong>, הרגל השנייה ל-<strong>GND</strong>. שתי רגלי הזמזם נכנסות ל<strong>טורים שונים</strong> בברדבורד — לא לאותו טור, זה ייצור קצר. עכשיו יש אזעקת קרבה מלאה: אור וגם צליל.</p>
+
+<pre class="wiring-block" dir="ltr">HC-SR04            Arduino
+  VCC  ───────────  5V
+  Trig ───────────  pin 12
+  Echo ───────────  pin 11
+  GND  ───────────  GND
+
+Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
+                         ▼
+                    LED short leg (−) ── Arduino GND
+
+Arduino pin 8 ───────────── Buzzer leg 1
+Arduino GND  ───────────── Buzzer leg 2</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
+  <p>תרשים Fritzing <code>w_p3_03_hcsr04_led_buzzer</code>: חיווט 2 (חיישן HC-SR04 + לד על רגל 9 דרך נגד 220 אוהם) ובנוסף זמזם — רגל אחת לרגל 8, הרגל השנייה ל-GND. שתי רגלי הזמזם בטורים שונים. אין לזמזם כיוון ואין לו נגד; אף פעם לא מחברים אותו ל-5V. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 4 — אזעקה בשני שלבים (גרסה 3 בלבד)</h2>
+
+<p>נחוץ רק למי שבונים <strong>אזעקה בשני שלבים</strong> בגרסה 3: לד אזהרה <strong>(צהוב)</strong> שמאיר כשמשהו מתקרב, ולד אזעקה <strong>(אדום)</strong> שמאיר כשמתקרבים עוד יותר. מוסיפים לחיווט 3 <strong>לד שני</strong> על <strong>רגל 10</strong> עם נגד 220 אוהם משלו, מחווט בדיוק כמו לד האזעקה על רגל 9.</p>
+
+<pre class="wiring-block" dir="ltr">HC-SR04             Arduino
+  VCC  ────────────  5V
+  Trig ────────────  pin 12
+  Echo ────────────  pin 11
+  GND  ────────────  GND
+
+Arduino pin 9  ──[220 Ω]──┬── alarm LED long leg (+)
+                          ▼
+                     alarm LED short leg (−) ── Arduino GND
+
+Arduino pin 10 ──[220 Ω]──┬── warning LED long leg (+)
+                          ▼
+                     warning LED short leg (−) ── Arduino GND
+
+Arduino pin 8 ───────────── Buzzer leg 1
+Arduino GND  ───────────── Buzzer leg 2</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
+  <p>תרשים Fritzing <code>w_p3_04_two_stage</code>: חיווט 3 (חיישן + לד אזעקה על רגל 9 + זמזם על רגל 8) ובנוסף לד אזהרה שני על רגל 10 דרך נגד 220 אוהם משלו — הרגל הארוכה דרך הנגד לרגל 10, הרגל הקצרה ל-GND. כל לד עם הנגד שלו. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    margin: 14pt 0;
+    padding: 12pt 14pt;
+    background: #f6f6f6;
+    border-inline-start: 5pt solid #000;
+  }
+  .step-number {
+    font-size: 28pt;
+    font-weight: bold;
+    margin-inline-end: 14pt;
+    min-width: 38pt;
+    color: #000;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+  }
+  .step-text {
+    flex: 1;
+  }
+  .step-text strong {
+    display: block;
+    font-size: 16pt;
+    margin-bottom: 3pt;
+  }
+  .important {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 16pt 0;
+    font-size: 13pt;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R2</div>
+
+<div class="header">
+  <h1><span class="section-icon">🪄</span>תקועים? קודם מנסים את זה</h1>
+  <div class="subtitle">פרויקט 3 • כרטיסייה לעמדת התלמיד</div>
+</div>
+
+<p>אם נתקעים בשלב כלשהו של כרטיסיית ניווט, שווה לנסות את ארבעת הצעדים האלה — צעדים 1 או 2 פותרים את רוב המקרים. אפשר לקרוא למורה בכל שלב, כולל עכשיו.</p>
+
+<div class="step">
+  <div class="step-number">1</div>
+  <div class="step-text">
+    <strong>קוראים שוב את השלב</strong>
+    קוראים שוב את השלב הנוכחי בכרטיסיית הניווט, לאט. לפעמים הקריאה השנייה עונה על השאלה.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">2</div>
+  <div class="step-text">
+    <strong>בודקים את כרטיסיית החיווט <span class="r-ref">R1</span></strong>
+    כ-60% מהמקרים של "הלד שלי לא עובד" הם טעויות חיווט. <span class="r-ref">R1</span> מראה בדיוק איך מעגל החיווט של פרויקט 3 אמור להיראות.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">3</div>
+  <div class="step-text">
+    <strong>בודקים את שאר כרטיסיות העזר</strong>
+    <span class="r-ref">R3</span> (פניות לקלוד קוד), <span class="r-ref">R4</span> (בטיחות), <span class="r-ref">R5</span> (איזה קובץ קוד לפתוח). אולי אחת מהן עונה על השאלה.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">4</div>
+  <div class="step-text">
+    <strong>קוראים למורה</strong>
+  </div>
+</div>
+
+<div class="important">
+<strong>אתם לא מפריעים.</strong> לקרוא למורה כשתקועים זה בדיוק מה שהמורה מצפה שתעשו. להיתקע זה לא להיכשל — זהו חלק בלתי נפרד מלמידה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .prompt-template {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 12pt 14pt;
+    margin: 10pt 0;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    direction: rtl;
+  }
+  .prompt-template.ltr {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    text-align: left;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .rule {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+    background: #f4f4f4;
+    padding: 1pt 4pt;
+    border-radius: 2pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R3</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>איך מדברים עם קלוד קוד</h1>
+  <div class="subtitle">פרויקט 3 • תבניות פניות לקלוד קוד</div>
+</div>
+
+<p>קלוד קוד הוא שותף התכנות שלכם. הוא רץ בחלון שמכוון לתיקיית פרויקט 3 שלכם, אז הוא רואה את הקוד שאתם עובדים עליו. יש שתי דרכים להשתמש בו.</p>
+
+<h2>ערוץ A — עזרה עם הקוד</h2>
+
+<div class="rule">
+<strong>גרסה 1:</strong> פותחים את הקובץ מ-<span class="r-ref">R5</span> ומעלים. אין צורך בפנייה לקלוד קוד לפני שהקוד עובד — הקוד כבר נכתב בשבילכם. אם ההעלאה נכשלת, כרטיסיית העזר <span class="r-ref">R2</span> מוליכה אתכם.
+</div>
+
+<p><strong>גרסה 2:</strong> לפני ששואלים את קלוד קוד משהו על הקוד שלכם, <strong>ממלאים את שלושת הסעיפים האלה בכרטיסיית הניווט</strong>:</p>
+
+<div class="rule">
+<strong>(א)</strong> מה אני רוצה שיקרה: <em>[מתארים את ההתנהגות הרצויה]</em><br>
+<strong>(ב)</strong> מה קורה עכשיו: <em>[מתארים מה הקוד עושה עכשיו]</em><br>
+<strong>(ג)</strong> מה כבר ניסיתי: <em>[מה כבר הסתכלנו עליו או חשבנו עליו]</em>
+</div>
+
+<p>ואז משתמשים בתבנית הפנייה הזאת:</p>
+
+<pre class="prompt-template">אני עובד על [שם קובץ הקוד].
+
+(א) מה אני רוצה שיקרה:
+[התשובה שלכם]
+
+(ב) מה קורה עכשיו:
+[התשובה שלכם]
+
+(ג) מה כבר ניסיתי:
+[התשובה שלכם]
+
+תוכל לעזור לי להבין מה לשנות?</pre>
+
+<div class="key">
+<span class="section-icon">⚠️</span>(א), (ב) ו-(ג) אינם סתם אופציות. הם עוזרים לנו לחשוב על הבעיה לפני שקלוד קוד עונה, ועוזרים לקלוד קוד להגיע לתשובה שתהיה שימושית עבורנו.
+</div>
+
+<p>אחרי שקלוד קוד עונה, מבצעים את השינוי בארדואינו IDE, מעלים, ובודקים. אז עונים על השאלה הזאת בכרטיסיית הניווט:</p>
+
+<div class="rule">
+<strong>בדיקת הבנה:</strong> במשפט אחד, מה קלוד קוד שינה בקוד?
+</div>
+
+<h2>דוגמה אמיתית מפרויקט 3 — לשנות את סף המרחק</h2>
+
+<p>בפרויקט 3 שינוי אמיתי בקוד הוא לקבוע מאיזה מרחק האזעקה מתחילה. ברירת המחדל היא <strong>20 ס"מ</strong> — מרחק של יד מושטת. אם רוצים שהאזעקה תגיב לאזור רחב יותר, למשל פתח של דלת, אפשר לשנות את הסף ל-<strong>50 ס"מ</strong>. ככה ממלאים את שלושת הסעיפים לפני הפנייה:</p>
+
+<div class="rule">
+<strong>(א)</strong> מה אני רוצה שיקרה: <em>שהאזעקה תתחיל כשמשהו מתקרב לפחות מ-50 ס"מ, במקום 20 ס"מ.</em><br>
+<strong>(ב)</strong> מה קורה עכשיו: <em>האזעקה מתחילה רק כשמשהו מתקרב לפחות מ-20 ס"מ.</em><br>
+<strong>(ג)</strong> מה כבר ניסיתי: <em>חיפשתי את השורה עם המספר של הסף אבל לא בטוח איזו שורה זו.</em>
+</div>
+
+<p>ואז משתמשים בתבנית הקצרה הזאת, ומדביקים את הקוד הנוכחי במקום [מדביקים כאן]:</p>
+
+<pre class="prompt-template">הנה הקוד של האזעקה שלי. איך אשנה אותו כך שהאזעקה תתחיל במרחק של 50 ס"מ במקום 20 ס"מ? הנה הקוד שלי:
+[מדביקים כאן]</pre>
+
+<div class="key">
+זו <strong>שורה אחת</strong> בקוד — המספר של הסף. אחרי שקלוד קוד עונה, משנים <strong>רק את המספר הזה</strong> בארדואינו IDE, מעלים, ובודקים שהאזעקה מתחילה ממרחק שונה.
+</div>
+
+<h2>דוגמה שנייה — אזעקה מהבהבת במקום קבועה</h2>
+
+<p>שינוי אפשרי נוסף הוא <strong>איך</strong> האזעקה מגיבה. כברירת מחדל הלד והזמזם נשארים פעילים ברצף כל עוד משהו קרוב. אפשר לבקש שבמקום זה הם יהבהבו — יאירו ויכבו, יצפצפו ויפסיקו — כדי שהאזעקה תרגיש דחופה יותר. גם זה <strong>שינוי הגדרה אחת</strong> בלבד: בקובץ יש הגדרה בשם <code>PULSING</code> שכרגע מוגדרת ל-<code>false</code>, וצריך לשנות אותה ל-<code>true</code>. ככה ממלאים את שלושת הסעיפים:</p>
+
+<div class="rule">
+<strong>(א)</strong> מה אני רוצה שיקרה: <em>שהלד והזמזם יהבהבו — יאירו ויכבו שוב ושוב — כשמשהו קרוב.</em><br>
+<strong>(ב)</strong> מה קורה עכשיו: <em>הלד נשאר דולק ברצף והזמזם מצפצף ברצף כל עוד משהו קרוב.</em><br>
+<strong>(ג)</strong> מה כבר ניסיתי: <em>חיפשתי את ההגדרה <code>PULSING</code> בקובץ אבל לא בטוח אם רק לשנות אותה ל-<code>true</code> זה כל מה שצריך.</em>
+</div>
+
+<p>ואז משתמשים בתבנית הקצרה הזאת:</p>
+
+<pre class="prompt-template">הנה הקוד של האזעקה שלי. אני רוצה שהלד והזמזם יהבהבו — יאירו ויכבו שוב ושוב — במקום להישאר פעילים ברצף כשמשהו קרוב. אני חושב שזה קשור להגדרה PULSING. איזו הגדרה אני צריך לשנות? הנה הקוד שלי:
+[מדביקים כאן]</pre>
+
+<div class="key">
+גם זה <strong>הגדרה אחת</strong> בקוד — בדיוק כמו שינוי הסף. צריך למצוא את ההגדרה <code>PULSING</code> ולשנות אותה מ-<code>false</code> ל-<code>true</code>. הקוד שגורם להבהוב כבר כתוב בקובץ — אנחנו רק מדליקים אותו. אחרי שקלוד קוד עונה, משנים <strong>רק את ההגדרה הזאת</strong> בארדואינו IDE, מעלים, ובודקים שהאזעקה מהבהבת.
+</div>
+
+<h2>ערוץ B — כשרוצים שיקריאו לכם את המשימה</h2>
+
+<p>ערוץ B מוביל אתכם דרך כרטיסיית הניווט הנוכחית בצורת שיחה. אפשר להשתמש בו כשקשה להתקדם עם הכרטיסייה המודפסת, או כשמעדיפים לשמוע את ההוראות שלב אחר שלב. משתמשים בתבנית הזאת:</p>
+
+<pre class="prompt-template">אני בפרויקט 3, גרסה [1 או 2], שלב [מספר].
+תוביל אותי דרך המשימה.</pre>
+
+<p>קלוד קוד יקריא את תוכן הכרטיסייה בקטעים קצרים וישאל אתכם לאשר כל שלב לפני שממשיכים הלאה. אתם עדיין מסמנים ✓ בכרטיסייה המודפסת תוך כדי — ערוץ B לא מחליף את הכרטיסייה, הוא רק עוזר לכם לעבור אותה.</p>
+
+<div class="key">
+ערוץ B <strong>לא מומלץ לשלב 1</strong> של אף פרויקט, כי שלב 1 הוא שלב משותף שבו המורה לידכם. לשמוע את קלוד קוד מדבר בזמן שהמורה גם מדבר אליכם — זה מבלבל.
+</div>
+
+<div class="rule">
+<strong>גרסה 3 — דיאלוג חופשי:</strong> אם אתם עובדים בגרסה 3 על פרויקט בעיצוב פתוח, אפשר לדבר עם קלוד קוד בחופשיות על מה שאתם מנסים לבנות. אותו כלל של (א)(ב)(ג) עדיין חל — מתארים מה אתם רוצים לפני ששואלים.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .big-msg {
+    background: #e8f5e9;
+    border: 2pt solid #2e7d32;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 16pt;
+    text-align: center;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  .rule {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R4</div>
+
+<div class="header">
+  <h1><span class="section-icon">⚠️</span>תזכורת בטיחות</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="big-msg">
+גם פרויקט 3 מאוד בטוח. הארדואינו וחיישן המרחק עובדים שניהם על 5 וולט — מתח נמוך מכדי לפגוע בכם.
+</div>
+
+<div class="why">
+החיישן החדש של הפרויקט והזמזם שמכירים מפרויקט 2 לגמרי בטוחים. אין כאן זרם חזק, אין מנוע ואין סוללה. אבל עדיין אפשר לקלקל רכיבים אם מחווטים משהו לא נכון. קוראים את שלושת הכללים האלה ויהיה בסדר.
+</div>
+
+<h2>כלל 1 — לא מחברים 5 V ישירות ל-GND</h2>
+
+<div class="rule">
+<span class="dont">לא</span> מחברים חוט ישירות מ-<strong>5 V</strong> ל-<strong>GND</strong>. זה נקרא <em>קצר חשמלי</em>. זה יגרום לארדואינו לאתחל את עצמו או להיכבות כדי להגן על עצמו. אף אחד לא ייפגע, אבל המעגל יפסיק לעבוד עד שמסירים את החוט הבעייתי.
+</div>
+
+<p>הרגל של 5 V מזינה את החיישן, הלד והזמזם שאתם מחברים. הרגל של GND היא נתיב החזרה של החשמל. הן אף פעם לא צריכות לגעת ישירות אחת בשנייה.</p>
+
+<h2>כלל 2 — לכל לד צריך נגד, ולזמזם יש חיבור נכון</h2>
+
+<div class="rule">
+<span class="dont">לא</span> מחברים לד ישירות לרגל 5 V בלי נגד. הלד יאיר חזק מאוד לשנייה-שתיים, יתחמם, וייכבה לתמיד. ללד האזעקה בפרויקט 3 יש <strong>נגד של 220 אוהם</strong> (פסי צבע: אדום, אדום, חום) בין הרגל הארוכה שלו לרגל של הארדואינו. אם אתם רואים לד במעגל בלי נגד, קודם כל מתקנים את זה.
+</div>
+
+<div class="rule">
+הזמזם בפרויקט 3 הוא <strong>זמזם פיזו פסיבי קטן</strong> — אותו זמזם מפרויקט 2 — והוא בטוח כשמפעילים אותו מ<strong>רגל דיגיטלית 8</strong> בעזרת הפקודה <code>tone()</code> — רגל אחת לרגל 8, הרגל השנייה ל-<strong>GND</strong>. אין צורך בנגד. <span class="dont">לא</span> מחברים את הזמזם ישירות ל-<strong>5 V</strong> — זה יגרום לו לזמזם ללא הפסקה ועלול לקלקל אותו.
+</div>
+
+<h2>כלל 3 — לחיישן המרחק יש סדר רגליים נכון</h2>
+
+<div class="rule">
+לחיישן <strong>HC-SR04</strong> ארבע רגליים: <strong>VCC</strong>, <strong>Trig</strong>, <strong>Echo</strong>, <strong>GND</strong>. אם מחליפים בטעות בין <strong>Trig</strong> ל-<strong>Echo</strong>, או בין <strong>VCC</strong> ל-<strong>GND</strong>, החיישן פשוט מפסיק להראות מרחק — אין סכנת חשמל ואין חום. כשהמרחק על המסך לא הגיוני, בודקים את ארבע הרגליים מול כרטיסיית החיווט <span class="r-ref">R1</span> ומתקנים.
+</div>
+
+<p>וזה חשוב: כשאין כלום מול החיישן, המספר על המסך קופץ לערך גדול (למשל 999). <strong>זה נורמלי לגמרי, לא תקלה ולא מסוכן</strong> — החיישן פשוט לא שמע הד שחזר, אז הוא מדווח "רחוק". מספר גדול או קופצני אינו סימן לבעיה בטיחותית.</p>
+
+<h2>אם משהו מפסיק לעבוד</h2>
+
+<p><strong>אם משהו הפסיק לעבוד, הצעד הכי שימושי הוא לעצור ולהסתכל על החיווט</strong> — להמשיך ללחוץ ולהזיז דברים לרוב לא עוזר. אם לא רואים מה לא בסדר, קוראים למורה. בשביל זה יש את פרוטוקול <span class="r-ref">R2</span> למצב בו נתקעים. לטעות בחיווט זה חלק מתהליך הלמידה של ארדואינו.</p>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0;
+    font-size: 13pt;
+  }
+  th, td {
+    border: 1pt solid #000;
+    padding: 8pt 10pt;
+    text-align: right;
+    vertical-align: top;
+  }
+  th {
+    background: #eee;
+    font-weight: bold;
+  }
+  .file-name {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 11pt;
+    background: #f4f4f4;
+    padding: 2pt 5pt;
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+  }
+  .path-box {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    word-break: break-all;
+    direction: ltr;
+    text-align: left;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R5</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>איזה קוד פותחים ומתי</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי • מפת הקבצים</div>
+</div>
+
+<h2>איפה נמצאים הקבצים של פרויקט 3</h2>
+
+<p>כל קובצי הקוד של פרויקט 3 נמצאים בתיקיית פרויקט 3 שלכם ב-Google Drive. כדי להגיע אליהם: בסרגל הצד של סייר הקבצים לוחצים על <strong>Google Drive</strong>, הולכים ל-<strong>My Drive ← Arduino_Projects</strong>, נכנסים לתיקייה עם הכינוי שלכם, ואז לתיקייה <code>Project_3_Dont_Get_Too_Close</code> ובתוכה לתיקייה <code>ino_files</code>.</p>
+
+<div class="path-box">G:\My Drive\Arduino_Projects\&lt;your_nickname&gt;\Project_3_Dont_Get_Too_Close\ino_files\</div>
+
+<p class="expected-note">אם אתם לא מוצאים את התיקייה, שואלים את המורה פעם אחת ורושמים כאן איך מגיעים אליה: <span class="fill-blank">&nbsp;</span></p>
+
+<p>בתוך <code>ino_files</code> כל קובץ קוד יושב בתיקייה משלו. לכל תיקייה יש קובץ <code>.ino</code> אחד בתוכה עם אותו שם של התיקייה.</p>
+
+<div class="key">
+פותחים קוד בלחיצה כפולה על קובץ ה-<code>.ino</code>, או דרך <strong>File → Open</strong> בארדואינו IDE ובחירה בקובץ.
+</div>
+
+<h2>קובצי הקוד של גרסה 1 — איזה קוד לאיזה שלב</h2>
+
+<table>
+  <thead>
+    <tr><th>שלב</th><th>פותחים את הקובץ הזה</th><th>מה קורה</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>שלב 2</td>
+      <td><span class="file-name">01_distance_to_serial/<br>01_distance_to_serial.ino</span></td>
+      <td>הארדואינו מודד שוב ושוב את המרחק לעצם הקרוב ביותר ומדפיס אותו בסנטימטרים במסך הטורי (Serial Monitor). מזיזים יד לכיוון החיישן והמספר קטֵן; מרחיקים אותה והמספר גדֵל</td>
+    </tr>
+    <tr>
+      <td>שלב 3</td>
+      <td><span class="file-name">02_distance_led_alarm/<br>02_distance_led_alarm.ino</span></td>
+      <td>אותה מדידת מרחק, ובנוסף: כשהמרחק יורד מתחת ל-20 ס"מ הלד (רגל 9) מאיר, וכשהעצם מתרחק הלד נכבה. זהו ה<strong>סף</strong> הראשון שרואים בפעולה</td>
+    </tr>
+    <tr>
+      <td>שלב 4</td>
+      <td><span class="file-name">03_distance_full_alarm/<br>03_distance_full_alarm.ino</span></td>
+      <td>האזעקה המלאה: כשהמרחק יורד מתחת ל-20 ס"מ הלד (רגל 9) מאיר <strong>וגם</strong> הזמזם (רגל 8) מצפצף. אור וגם צליל — אזעקת קרבה שלמה</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>שלבים 1, 5, 6 — אין העלאת קוד.</strong> שלב 1 הוא חומרה בלבד (חיווט חיישן המרחק). שלבים 5 ו-6 הם בדיקת האזעקה על עצמים אמיתיים והצגת הפרויקט.</p>
+
+<div class="key">
+מספר מרחק <strong>גדול מאוד</strong> (למשל 999) כשאין שום דבר מול החיישן הוא <strong>תקין — לא תקלה</strong>. החיישן פשוט לא שמע הד חוזר, אז הוא מדווח "רחוק מאוד". כשמקרבים יד מול החיישן המספר יקטַן מיד.
+</div>
+
+<h2>קובץ קוד התחלתי של גרסה 2</h2>
+
+<table>
+  <thead>
+    <tr><th>פותחים את הקובץ הזה</th><th>מה יש בו</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="file-name">T2_alarm_starter/<br>T2_alarm_starter.ino</span></td>
+      <td>האזעקה המלאה (חיישן + לד + זמזם), עם ארבעה קבועים מסומנים בראש הקובץ שאותם משנים בגרסה 2:
+        <ul>
+          <li><code>THRESHOLD_CM</code> — מרחק הסף</li>
+          <li><code>USE_LED</code> — האם הלד מגיב</li>
+          <li><code>USE_BUZZER</code> — האם הזמזם מגיב</li>
+          <li><code>PULSING</code> — האם האזעקה פועמת או דולקת ברצף</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>בגרסה 2, מעלים את הקוד ההתחלתי קודם כדי לראות את האזעקה עובדת בסף ברירת המחדל (20 ס"מ), ואז משתמשים בקלוד קוד (ראו <span class="r-ref">R3</span>) כדי לשנות אותו — למשל לקבוע סף אחר או לבחור מה האזעקה עושה — שיתאים לעיצוב שלכם.</p>
+
+<h2>גרסה 3 — אין קוד התחלתי</h2>
+
+<p>בגרסה 3 אתם מעצבים את אזעקת הקרבה שלכם מאפס עם קלוד קוד (למשל אזעקת מגירה, התרעת מעבר בפתח, או אזעקה דו-שלבית עם לד אזהרה צהוב נוסף ברגל 10). הקוד המוגמר שלכם נמצא באותה התיקייה — בוחרים שם שאתם אוהבים (משהו כמו <code>my_proximity_alarm.ino</code>).</p>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 1 מתוך 6</div>
+  <h1><span class="section-icon">🔌</span>מחווטים את חיישן המרחק</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+בשלב זה מחברים את החלק החדש של הפרויקט — <strong>חיישן מרחק על-קולי</strong>. החיישן שולח צליל שאוזניים לא שומעות, מקשיב להד שחוזר, ומחשב כמה רחוק נמצא העצם הקרוב אליו. הוא הלב של אזעקת הקרבה שנבנה כאן.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בסרגל הצד של סייר הקבצים לוחצים על <strong>Google Drive</strong>, ואז הולכים ל-<strong>My Drive ← Arduino_Projects</strong>.</li>
+  <li>נכנסים לתיקייה עם הכינוי שלכם.</li>
+  <li>בתוכה יוצרים תיקייה חדשה בשם <strong>Project_3_Dont_Get_Too_Close</strong>.</li>
+  <li>פותחים יחד עם המורה את קלוד קוד ומגדירים אותו לעבוד בתיקייה החדשה.</li>
+  <li>בוחרים את חיישן המרחק <strong>(HC-SR04)</strong> ממגש החלקים. יש לו ארבע רגליים מסומנות: <strong>VCC</strong>, <strong>Trig</strong>, <strong>Echo</strong>, <strong>GND</strong>.</li>
+  <li>מכניסים את ארבע הרגליים בטור ישר אחד בברדבורד, כך ששתי ה"עיניים" העגולות פונות החוצה מעבר לקצה הברדבורד — במקום שבו יד יכולה לעבור מולן.</li>
+  <li>מחברים את <strong>VCC</strong> ל-<strong>5 V</strong>.</li>
+  <li>מחברים את <strong>GND</strong> ל-<strong>GND</strong>.</li>
+  <li>מחברים את <strong>Trig</strong> לרגל דיגיטלית <strong>12</strong>.</li>
+  <li>מחברים את <strong>Echo</strong> לרגל דיגיטלית <strong>11</strong>.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">HC-SR04            Arduino
+  VCC  ───────────  5V
+  Trig ───────────  pin 12
+  Echo ───────────  pin 11
+  GND  ───────────  GND</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
+  <p>תרשים Fritzing <code>w_p3_01_hcsr04</code>: חיישן HC-SR04 על הברדבורד עם ארבע רגליו — VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11. שתי ה"עיניים" פונות אל מחוץ לקצה הברדבורד. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>ארבע רגליו של החיישן מחוברות: VCC ל-5 V, GND ל-GND, Trig לרגל 12, Echo לרגל 11. שתי ה"עיניים" פונות החוצה מעבר לקצה הברדבורד.</p>
+  <p class="expected-note"><strong>עדיין לא רואים מספר ולא שומעים כלום</strong> — עוד לא העלינו קוד. זה יקרה בשלב 2. בשלב הזה רק בודקים שהחיווט נכון.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>VCC מחובר ל-5 V, ו-GND מחובר ל-GND</li>
+    <li>Trig מחובר לרגל 12, ו-Echo מחובר לרגל 11</li>
+    <li>שתי ה"עיניים" של החיישן פונות החוצה מעבר לקצה הברדבורד</li>
+    <li>המורה אישר שהחיווט נכון</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  קל להחליף בטעות בין <strong>Trig</strong> ל-<strong>Echo</strong>, או בין <strong>VCC</strong> ל-<strong>GND</strong>. בודקים את התוויות שכתובות על החיישן עצמו מול תרשים החיווט. אם החיישן לא יושב יציב בברדבורד, לוחצים עליו בעדינות עד שכל ארבע הרגליים נכנסות. אם לא בטוחים — קוראים למורה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 2 מתוך 6</div>
+  <h1><span class="section-icon">💻</span>מעלים את קוד המרחק וצופים במספר משתנה</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+בשלב זה מעלים לארדואינו קוד מוכן שקורא את חיישן המרחק. החיישן מודד שוב ושוב כמה רחוק נמצא העצם הקרוב אליו, והקוד מדפיס את המרחק ב<strong>סנטימטרים</strong> למסך. אין חיווט חדש — החיישן כבר מחובר משלב 1. כל מה שעושים כאן: מעלים את הקוד, פותחים את מסך המעקב, ומזיזים יד מול החיישן כדי לראות את המספר משתנה.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code dir="ltr">01_distance_to_serial.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 3 שלכם, בתוך <code dir="ltr">ino_files/01_distance_to_serial/</code>. אם אינכם בטוחים איזה קובץ לפתוח — בודקים בכרטיס העזר <span class="r-ref">R5</span>.</span></li>
+  <li><strong>לא משנים שום שורה בקוד.</strong> רק פותחים ומעלים.</li>
+  <li>לוחצים על כפתור ה-Upload — הכפתור עם החץ שפונה ימינה. עוקבים אחר סרגל ההתקדמות בתחתית ה-IDE.</li>
+  <li>כשההעלאה מסתיימת, אמורה להופיע ההודעה הירוקה <strong>Done uploading</strong> בתחתית.</li>
+  <li>פותחים את ה-<strong>Serial Monitor (מסך המעקב)</strong>: לוחצים על סמל <strong>זכוכית המגדלת</strong> בפינה הימנית-עליונה של ה-IDE. מוודאים שמהירות התקשורת (baud) מוגדרת ל-<strong>9600</strong>.</li>
+  <li>במסך המעקב מופיע עכשיו מרחק בסנטימטרים, ומתעדכן שוב ושוב.</li>
+  <li>מזיזים יד <strong>לאט</strong> לכיוון שתי ה"עיניים" של החיישן ומסתכלים איך המספר <strong>קטֵן</strong>. מרחיקים את היד — והמספר <strong>גדֵל</strong>.<span class="li-detail">מספר רגיל נע בין כמה ס"מ למאות — מספר גדול מאוד (כמו 999) זה תקין, לא תקלה.</span></li>
+</ul>
+
+<div class="key">
+  <strong><span class="section-icon">⚠️</span>מספר גדול מאוד זה תקין — לא תקלה</strong>
+  <p>כשאין כלום מול החיישן, לפעמים מופיע מספר גדול מאוד (למשל <strong>999</strong>). זה <strong>לא</strong> תקלה ולא באג — פשוט החיישן לא שמע שום הד שחוזר, אז הוא מדווח "רחוק מאוד". כשמקרבים יד או עצם, המספר יורד מיד. חיישנים אמיתיים לא מושלמים, וזה בסדר גמור.</p>
+</div>
+
+<div class="screen-only">
+<h2><span class="section-icon">💡</span>מה הקוד עושה</h2>
+
+<p>הקוד שולח מהחיישן צליל קצר שאוזניים לא שומעות, מקשיב להד שחוזר, ומחשב מתוך זמן ההד כמה רחוק נמצא העצם הקרוב — את המרחק בסנטימטרים הוא מדפיס למסך המעקב, שוב ושוב, פעמים רבות בשנייה. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>במסך המעקב מופיעה שורה כמו <code dir="ltr">Distance: 34 cm</code> שמתעדכנת שוב ושוב. כשמקרבים יד אל החיישן המספר קטֵן, וכשמרחיקים אותה המספר גדֵל. ב-Arduino IDE מופיע Done uploading בירוק בתחתית.</p>
+  <p class="expected-note">מספר גדול מאוד (כמו 999) כשאין כלום מול החיישן הוא תקין — זה אומר "רחוק", לא "תקלה".</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>ב-Arduino IDE מופיע Done uploading בירוק</li>
+    <li>מסך המעקב פתוח ומראה מרחק בסנטימטרים</li>
+    <li>המספר קטֵן כשמקרבים יד אל החיישן וגדֵל כשמרחיקים אותה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li><strong>אם מסך המעקב ריק או שלא מופיע מרחק:</strong> כנראה שמסך המעקב לא פתוח, או שה-baud לא מוגדר ל-9600. לוחצים על סמל זכוכית המגדלת ובודקים שה-baud מוגדר ל-9600.</li>
+    <li><strong>אם המספר תמיד 999 או קופץ בלי קשר ליד:</strong> בודקים את חיווט החיישן משלב 1 — VCC ל-5 V, GND ל-GND, Trig לרגל 12, Echo לרגל 11. קל להחליף בטעות בין Trig ל-Echo.</li>
+    <li><strong>אם ה-Upload נכשל:</strong> בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM. אם מסך המעקב פתוח, סוגרים אותו, מעלים שוב, ואז פותחים אותו בחזרה.</li>
+    <li><strong>אם עדיין תקועים אחרי זה,</strong> קוראים למורה לעזרה.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 3 מתוך 6</div>
+  <h1><span class="section-icon">🔌</span>מוסיפים לד ומעלים קוד שמאיר אותו כשמתקרבים</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+בשלב הקודם ראינו את המרחק מופיע על המסך. עכשיו מוסיפים <strong>לד</strong>, ומעלים קוד שמאיר אותו לבד כשמשהו מתקרב מדי. כך נולדת האזעקה הראשונה: מספר מהעולם — המרחק — חוצה <strong>סף</strong>, וזה מאיר את האור.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<h3>חלק א' — מחווטים את הלד</h3>
+
+<ul class="checklist">
+  <li>בוחרים לד אחד ממגש החלקים. כל צבע מתאים, ואדום מתאים במיוחד לאזעקה.</li>
+  <li>מביטים בשתי הרגליים של הלד. <strong>הרגל הארוכה היא הרגל החיובית (+)</strong> ו<strong>הרגל הקצרה היא הרגל השלילית (−)</strong>.</li>
+  <li>בוחרים נגד של 220 אוהם ממגש החלקים. פסי הצבע שלו: <strong>אדום · אדום · חום</strong>.</li>
+  <li>מכניסים את הלד לברדבורד כך שכל רגל תהיה בטור אחר. לא מכניסים את שתי הרגליים לאותו טור — זה ייצור קצר.</li>
+  <li>מחברים את הרגל הארוכה (+) של הלד ל<strong>רגל דיגיטלית 9</strong> של הארדואינו, דרך הנגד של 220 אוהם. הנגד מחובר בין הרגל הארוכה של הלד לבין רגל 9.</li>
+  <li>מחברים את הרגל הקצרה (−) של הלד לרגל <strong>GND</strong> של הארדואינו בעזרת חוט ג'אמפר.</li>
+</ul>
+
+<h3>חלק ב' — מעלים את הקוד</h3>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code dir="ltr">02_distance_led_alarm.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 3 שלכם, בתוך <code dir="ltr">ino_files/02_distance_led_alarm/</code>. אם אינכם בטוחים איזה קובץ לפתוח — בודקים בכרטיס העזר <span class="r-ref">R5</span>.</span></li>
+  <li><strong>לא משנים שום שורה בקוד.</strong> רק פותחים ומעלים.</li>
+  <li>לוחצים על כפתור ה-Upload — הכפתור עם החץ שפונה ימינה. מחכים שתופיע ההודעה הירוקה <strong>Done uploading</strong> בתחתית.</li>
+  <li>פותחים את המסך הטורי (Serial Monitor) ו<strong>משאירים אותו פתוח</strong> במהלך הבדיקה, כדי לראות את המספר חוצה את ה-20 ס"מ בדיוק ברגע שהלד מאיר.</li>
+  <li>מקרבים יד לאט אל שתי ה"עיניים" של החיישן, ובודקים שהלד מאיר כשהיד קרובה, וכבה כשמרחיקים אותה.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט של הלד</h2>
+
+<pre class="wiring-block" dir="ltr">Arduino pin 9  ───[220 Ω]───┬─── LED long leg (+)
+                           │
+                           ▼
+                      LED short leg (−) ─── Arduino GND</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
+  <p>תרשים Fritzing <code>w_p3_02_hcsr04_led</code>: אותו חיווט של החיישן משלב 1 (VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11), ובנוסף לד על הברדבורד — הרגל הארוכה (+) דרך נגד 220 אוהם לרגל 9, והרגל הקצרה (−) ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה לחיווט הלד.</p>
+</div>
+
+<div class="screen-only">
+<h2><span class="section-icon">💡</span>מה הקוד עושה</h2>
+
+<p>הקוד ממשיך למדוד את המרחק בכל רגע, בדיוק כמו בשלב הקודם. בנוסף הוא משווה כל מדידה ל<strong>סף</strong> של <strong>20 ס"מ</strong>: אם המרחק <strong>קטן</strong> מ-20 ס"מ — הלד מאיר; אם המרחק <strong>גדול</strong> מ-20 ס"מ — הלד כבה. זה כל הרעיון של סף: קו אחד שמחליט מתי משהו מאיר ומתי הוא כבה.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>הלד מחובר: הרגל הארוכה עוברת דרך הנגד לרגל 9, והרגל הקצרה מחוברת ל-GND. כשמקרבים יד אל החיישן עד כ-20 ס"מ — הלד מאיר; כשמרחיקים את היד — הלד כבה.</p>
+  <p class="expected-note">כשאין כלום מול החיישן, המספר במסך הטורי עשוי להיות גדול מאוד (למשל 999) — <strong>זה תקין, לא תקלה.</strong> פשוט לא חזר הד, אז החיישן מדווח "רחוק", והלד כבוי. זה בדיוק מה שאמור לקרות כשאף אחד לא קרוב.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>הלד מוכנס לברדבורד כאשר שתי הרגליים בטורים שונים</li>
+    <li>הרגל הארוכה מחוברת לרגל 9 דרך נגד של 220 אוהם, והרגל הקצרה מחוברת ל-GND</li>
+    <li>הקוד <code dir="ltr">02_distance_led_alarm.ino</code> הועלה ומופיע Done uploading בירוק</li>
+    <li>הלד מאיר כשיד קרובה לחיישן עד כ-20 ס"מ, וכבה כשמרחיקים אותה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li><strong>אם הלד לא מאיר בכלל:</strong> בודקים שהרגל הקצרה (−) מחוברת ל-GND ושהרגל הארוכה (+) עוברת דרך הנגד לרגל 9 — לד מחובר הפוך לא יאיר. בודקים את חיווט הלד מול כרטיס העזר <span class="r-ref">R1</span>.</li>
+    <li><strong>אם הלד לא מאיר גם כשהיד קרובה:</strong> ייתכן שהחיישן פונה אל קיר או אל השולחן וקורא כל הזמן "רחוק". מסובבים את שתי ה"עיניים" כך שיפנו אל חלל פתוח, ומקרבים יד לאט מולן.</li>
+    <li><strong>אם ה-Upload נכשל:</strong> בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM. אם המסך הטורי פתוח, סוגרים אותו, מעלים שוב, ואז פותחים אותו בחזרה.</li>
+    <li><strong>אם עדיין תקועים אחרי זה,</strong> קוראים למורה לעזרה.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 4 מתוך 6</div>
+  <h1><span class="section-icon">🔊</span>מוסיפים זמזם ומעלים את האזעקה המלאה</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+זהו שלב הפרס. בשלב הקודם הלד מאיר כשמשהו מתקרב — ועכשיו מוסיפים <strong>זמזם</strong>, אותו זמזם פּיֵזו שכבר מכירים מפרויקט 2. כשהמרחק יקטן מ-20 ס"מ, הלד יאיר <strong>וגם</strong> הזמזם יצפצף — אור וקול ביחד. בסוף השלב הזה יש אזעקת קרבה שלמה.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<p>השלב הזה בנוי משני חלקים: קודם מחווטים את הזמזם, ואז מעלים את הקוד של האזעקה המלאה.</p>
+
+<h3>חלק א' — מחווטים את הזמזם</h3>
+
+<ul class="checklist">
+  <li>בוחרים את הזמזם פּיֵזו הקטן ממגש החלקים. הוא העגול והשטוח עם שתי רגליים — אותו זמזם מפרויקט 2.</li>
+  <li>מכניסים את הזמזם לברדבורד כך ששתי רגליו בטורים שונים — לא באותו טור, זה ייצור קצר.</li>
+  <li>מחברים רגל אחת של הזמזם ל<strong>רגל דיגיטלית 8</strong> של הארדואינו בעזרת חוט ג'אמפר.</li>
+  <li>מחברים את הרגל השנייה של הזמזם ל-<strong>GND</strong> בעזרת חוט ג'אמפר.</li>
+  <li>הזמזם הקטן הזה לא צריך נגד, ואין לו צד חיובי או שלילי — אפשר לחבר כל רגל לכל צד.</li>
+  <li>החיישן והלד נשארים בדיוק כמו שהם — לא נוגעים בהם.</li>
+</ul>
+
+<h3>חלק ב' — מעלים את האזעקה המלאה</h3>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code dir="ltr">03_distance_full_alarm.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתוך תיקיית פרויקט 3 שלכם, ליד הקבצים הקודמים שהעליתם.</span></li>
+  <li>לא משנים שום דבר בקוד — רק מעלים אותו.</li>
+  <li>לוחצים על כפתור ה-Upload.</li>
+  <li>מחכים להודעה Done uploading בירוק.</li>
+  <li>מקרבים יד לאט אל החיישן — עד פחות מ-20 ס"מ. בודקים: הלד מאיר? הזמזם מצפצף?</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">HC-SR04            Arduino          (already wired)
+  VCC  ───────────  5V
+  Trig ───────────  pin 12
+  Echo ───────────  pin 11
+  GND  ───────────  GND
+
+LED  (+ leg) ── 220Ω ── pin 9       (already wired)
+LED  (- leg) ──────────  GND
+
+Buzzer leg 1 ──────────  pin 8      (NEW in this step)
+Buzzer leg 2 ──────────  GND</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
+  <p>תרשים Fritzing <code>w_p3_03_hcsr04_led_buzzer</code>: חיישן HC-SR04 על הברדבורד (VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11), לד על רגל 9 דרך נגד 220 אוהם ל-GND, ובנוסף זמזם פּיֵזו ששתי רגליו בטורים שונים — רגל אחת לרגל 8, הרגל השנייה ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>חשוב — לא לחבר ישר ל-5 V</strong>
+  אסור לחבר את הזמזם ישירות בין <strong>5 V ל-GND</strong>. תמיד מפעילים אותו מ<strong>רגל 8</strong>, כדי שהארדואינו ישלוט בו. זמזם שמחובר ישר ל-5 V יזמזם בלי הפסקה ועלול למשוך זרם גדול מדי. עוקבים באצבע: רגל אחת לרגל 8? בטוח. עוד על בטיחות הזמזם בכרטיס <span class="r-ref">R4</span>.
+</div>
+
+<div class="screen-only">
+<h2><span class="section-icon">💻</span>מה חדש בקוד הזה</h2>
+
+<p>אפשר להציץ בקוד ב-IDE. הוא עושה בדיוק מה שהקוד הקודם עשה — מודד מרחק ומאיר את הלד מתחת ל-20 ס"מ — אבל נוספו בו שורות <code>tone()</code> ו-<code>noTone()</code> שמפעילות ומשתיקות את הזמזם יחד עם הלד:</p>
+
+<pre class="code-block"><span class="filename">03_distance_full_alarm.ino</span>if (distanceCm &lt; THRESHOLD_CM) {
+  digitalWrite(LED_PIN, HIGH);     // קרוב מדי ← הלד מאיר
+  tone(BUZZER_PIN, ALARM_TONE);    // ← שורה חדשה: הזמזם מצפצף
+} else {
+  digitalWrite(LED_PIN, LOW);      // רחוק מספיק ← הלד כבוי
+  noTone(BUZZER_PIN);              // ← שורה חדשה: הזמזם שותק
+}</pre>
+
+<p>זה הקוד שמופיע גם בכרטיס הקוד <span class="r-ref">R5</span>. לא צריך לכתוב או לשנות — רק מעלים, ומקרבים יד.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>כשמקרבים יד אל החיישן עד פחות מ-20 ס"מ — הלד מאיר <strong>וגם</strong> הזמזם מצפצף, ביחד. כשמרחיקים את היד — שניהם נעצרים. המרחק עדיין מודפס ב-Serial Monitor (מסך המעקב), בדיוק כמו קודם, ולצידו ההודעה "TOO CLOSE!" כשהאזעקה פעילה.</p>
+  <p class="expected-note"><strong>מספר גדול כשאין כלום מול החיישן זה תקין, לא תקלה</strong> — החיישן פשוט לא שמע הד וכותב מספר גדול (למשל 999). זה אומר "רחוק", לא "שבור".</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>הזמזם על הברדבורד כששתי רגליו בטורים שונים — רגל אחת לרגל 8, השנייה ל-GND</li>
+    <li>ההודעה Done uploading הופיעה בירוק ב-IDE</li>
+    <li>יד שמתקרבת עד כ-20 ס"מ מאירה את הלד <strong>וגם</strong> מפעילה את הזמזם</li>
+    <li>כשמרחיקים את היד — הלד כבה והזמזם משתתק</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li><strong>הלד מאיר אבל אין צפצוף:</strong> בודקים את חיווט הזמזם — רגל אחת לרגל 8 והשנייה ל-GND. אם שתי הרגליים באותו טור, מזיזים אחת לטור אחר. בודקים מול כרטיס העזר <span class="r-ref">R1</span>.</li>
+    <li><strong>אין לא אור ולא צליל:</strong> אולי הקוד הקודם עדיין עליו — מוודאים שהעליתם את <code dir="ltr">03_distance_full_alarm.ino</code> ולא את הקובץ הקודם, ומעלים שוב.</li>
+    <li><strong>ההעלאה נכשלה:</strong> מחפשים טקסט שגיאה אדום ב-IDE. אם ה-Serial Monitor פתוח, סוגרים אותו ומעלים שוב.</li>
+    <li><strong>אם לא מצליחים להבין, קוראים למורה לעזרה.</strong></li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 5 מתוך 6</div>
+  <h1><span class="section-icon">👀</span>בודקים את האזעקה על עצמים אמיתיים</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+האזעקה כבר עובדת — הלד מאיר והזמזם מצפצף כשמשהו מתקרב. עכשיו מגלים איך היא מתנהגת בעולם האמיתי: מנסים אותה על עצמים שונים, רואים מאיזה מרחק היא מתחילה לצפצף, ולומדים אילו משטחים החיישן "רואה" טוב ואילו פחות.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>מקרבים <strong>יד</strong> לאט אל מול שתי ה"עיניים" של החיישן, עד שהאזעקה מגיבה. שמים לב בערך מאיזה מרחק היא התחילה — בערך <strong>20 ס"מ</strong>.</li>
+  <li>מסיטים את היד אחורה ושמים לב מתי האזעקה <strong>נכבית</strong>.</li>
+  <li>מחליקים <strong>ספר</strong> על השולחן לכיוון החיישן, ובודקים אם האזעקה מגיבה כשהוא מתקרב.</li>
+  <li>מרימים את הברדבורד ונושאים אותו לאט לכיוון <strong>קיר</strong> — האזעקה אמורה להגיב כשהקיר קרוב מספיק.</li>
+  <li>מנסים <strong>בקבוק מים</strong> מול החיישן ובודקים מאיזה מרחק האזעקה מגיבה.</li>
+  <li>מנסים משטח רך כמו <strong>שרוול של סוודר</strong> מול החיישן ובודקים אם האזעקה מגיבה.<br><span class="expected-note">שמים לב: משטח שטוח וקשה שמופנה ישר אל החיישן נקרא טוב; משטח רך, מעוגל או נטוי בזווית — פחות.</span></li>
+</ul>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>שימו לב — זה לא תקלה</strong>
+  <p>כשאין כלום מול החיישן, המספר על המסך יכול לקפוץ למשהו <strong>גדול מאוד</strong> (למשל 999). זה תקין לגמרי, לא באג — החיישן פשוט לא שמע הד שחוזר, אז הוא מדווח "רחוק". חיישנים אמיתיים אינם מושלמים, וזה בסדר גמור.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>כשעצם מתקרב אל מתחת לכ-20 ס"מ — הלד מאיר והזמזם מצפצף. כשהעצם מתרחק — שניהם נפסקים. עם יד או ספר זה עובד בבירור; עם שרוול רך או עצם בזווית, החיישן לפעמים לא מגיב או מגיב פחות יציב.</p>
+  <p class="expected-note">לא כל משטח נקרא אותו דבר — וזה חלק מאיך שחיישן על-קולי עובד, לא תקלה.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>הפעלתם את האזעקה עם <strong>לפחות שני עצמים שונים</strong> (למשל יד וספר)</li>
+    <li>אתם יכולים להראות בערך <strong>כמה קרוב</strong> עצם צריך להיות כדי שהאזעקה תגיב</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים? האזעקה לא מגיבה? מנסים קודם את זה:</strong>
+  <ul>
+    <li><strong>שום עצם לא מפעיל את האזעקה?</strong> בודקים שההעלאה משלב 4 הצליחה (Done uploading בירוק) ושארבע רגלי החיישן מחוברות נכון — VCC ל-5 V, GND ל-GND, Trig לרגל 12, Echo לרגל 11.</li>
+    <li><strong>האזעקה דלוקה כל הזמן?</strong> רוב הסיכויים שהחיישן מופנה ישר אל קיר או חפץ קרוב, אז הוא תמיד "רואה" משהו קרוב. מסובבים אותו כך ששתי ה"עיניים" פונות לחלל פתוח.</li>
+    <li><strong>משטח רך לא מפעיל את האזעקה?</strong> זה לא תקלה — חומר רך או נטוי מפזר את ההד, אז החיישן קורא אותו פחות טוב. מנסים עצם שטוח וקשה כמו ספר.</li>
+    <li><strong>האזעקה הפסיקה להגיב אחרי שהזזתם את הברדבורד?</strong> בודקים שאף חוט לא יצא מהמקום שלו תוך כדי ההזזה.</li>
+    <li><strong>אם עדיין תקועים, קוראים למורה לעזרה.</strong></li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge celebration">פרויקט #3 — לא להתקרב יותר מדי: שלב 6 מתוך 6 • השלב האחרון</div>
+  <h1><span class="section-icon">🏆</span>מציגים את האזעקה וחוגגים</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+האזעקה שלכם עובדת — לד וזמזם שמגיבים יחד כשמשהו מתקרב יותר מדי. בשלב זה מחליטים <strong>על מה האזעקה שלכם שומרת</strong> — קלמר, פינה של השולחן, פתח של דלת — רושמים את זה על הפוסטר של פרויקט 3, ומציגים את האזעקה העובדת. כשנותנים לאזעקה תפקיד, המעגל הופך מ"תרגיל" ל<strong>דבר שלכם שעושה עבודה אמיתית</strong>.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>מסתכלים על האזעקה המוכנה — חיישן המרחק, הלד והזמזם — ובודקים שהיא עדיין מגיבה כשמתקרבים אליה.</li>
+  <li>חושבים רגע: <strong>על מה האזעקה שלכם יכולה לשמור?</strong> קלמר על השולחן, פינה של השולחן, פתח של דלת, או כל דבר אחר שאתם בוחרים.</li>
+  <li>ניגשים לפוסטר של פרויקט 3 שתלוי בעמדה שלכם, ומוצאים את השורה עם הכינוי שלכם.</li>
+  <li>רושמים בעמודת "מה האזעקה שלי שומרת" את מה שבחרתם, ליד הכינוי שלכם.</li>
+  <li>קוראים למורה כדי להראות לו את האזעקה העובדת ולחגוג יחד.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>הכינוי שלכם מופיע על הפוסטר, ולידו כתוב על מה האזעקה שלכם שומרת. כשמקרבים יד או חפץ אל החיישן — הלד מאיר והזמזם מצפצף; כשמתרחקים — הכול נעצר. עכשיו זו לא רק אזעקה שעובדת, זו <strong>האזעקה שלכם</strong>, ויש לה תפקיד.</p>
+  <p class="expected-note">אם החיישן מראה מספר גדול מאוד (למשל 999) כשאין כלום מולו — זה תקין לגמרי, לא תקלה. החיישן פשוט לא שמע הד וגילה ש"רחוק".</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>רשום על הפוסטר, ליד הכינוי שלכם, על מה האזעקה שלכם שומרת</li>
+    <li>הראיתם את האזעקה העובדת למישהו — למורה או לחבר</li>
+    <li>המורה חגג איתכם</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  לא בטוחים על מה האזעקה שלכם יכולה לשמור? מסתכלים מסביב — מה היה משמח אתכם שיֵדע מתי מישהו מתקרב אליו? קלמר, מגירה, פינה של השולחן. אין תשובה נכונה אחת. אם האזעקה לא מגיבה כרגע, מקרבים יד אט-אט אל שתי ה"עיניים" של החיישן ובודקים שהלד מאיר. אפשר תמיד לקרוא למורה.
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את פרויקט 3!</span>
+  בניתם אזעקת קרבה אמיתית: חיישן מרחק על-קולי שמודד כמה רחוק נמצא העצם הקרוב אליו, ולד וזמזם שמתחילים לפעול ברגע שמשהו עובר את הסף. עכשיו נתתם לאזעקה שלכם תפקיד, ורשמתם אותו על הפוסטר בשבילכם ובשביל כל הקבוצה. אפשר לבקש מהמורה תמונה של הפרויקט הגמור שלכם (אם רוצים) — ולחשוב מה תרצו שהאזעקה הבאה שלכם תשמור עליו.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 1 מתוך 5</div>
+  <h1><span class="section-icon">🚀</span>התחלה — מקימים את האזעקה ובודקים שהיא עובדת</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+בשלב זה — הפעלה מרוכזת: מקימים את התיקייה, מחווטים את חיישן המרחק, את הלד ואת הזמזם, מעלים את קוד הבסיס ובודקים שהאזעקה מגיבה כשמשהו מתקרב. ואז מציצים בשתי הבחירות שמחכות לכם בהמשך. שימו לב — בשלב הזה מרכיבים מחדש שלושה חלקים יחד (חיישן, לד וזמזם), אז הוא יכול לקחת יותר זמן מהרגיל ואפילו להימשך על פני שני מפגשים — וזה בסדר גמור. לוקחים את הזמן, צעד-צעד.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li><strong>תיקייה:</strong> פותחים את תיקיית פרויקט 3 ומפעילים עליה את קלוד קוד. בסרגל הצד של סייר הקבצים לוחצים על <strong>Google Drive</strong>, הולכים ל-<strong>My Drive ← Arduino_Projects</strong>, נכנסים לתיקייה עם הכינוי שלכם, ויוצרים בתוכה תיקייה חדשה בשם <strong>Project_3_Dont_Get_Too_Close</strong>.</li>
+  <li><strong>חיישן מרחק:</strong> מכניסים את חיישן המרחק <strong>(HC-SR04)</strong> לברדבורד כך ששתי ה"עיניים" העגולות פונות החוצה, מעבר לקצה הברדבורד. (פרטים מלאים בכרטיס העזר <span class="r-ref">R1</span>.)</li>
+  <li>מחברים את <strong>VCC</strong> ל-<strong>5 V</strong>.</li>
+  <li>מחברים את <strong>GND</strong> ל-<strong>GND</strong>.</li>
+  <li>מחברים את <strong>Trig</strong> ל<strong>רגל דיגיטלית 12</strong>.</li>
+  <li>מחברים את <strong>Echo</strong> ל<strong>רגל דיגיטלית 11</strong>.</li>
+  <li><strong>לד:</strong> מכניסים לד לברדבורד כששתי הרגליים בטורים שונים. מחברים את הרגל הארוכה (+) ל<strong>רגל דיגיטלית 9</strong> דרך נגד <strong>220 אוהם</strong> (אדום · אדום · חום), ואת הרגל הקצרה (−) ל-<strong>GND</strong>.</li>
+  <li><strong>זמזם:</strong> מכניסים את הזמזם (מפרויקט 2) לברדבורד. מחברים רגל אחת ל<strong>רגל דיגיטלית 8</strong> ואת הרגל השנייה ל-<strong>GND</strong>. <strong>אף פעם לא מחברים את הזמזם ישירות ל-5 V.</strong></li>
+  <li><strong>קוד בסיס:</strong> פותחים ב-Arduino IDE את <code dir="ltr">ino_files/T2_alarm_starter/T2_alarm_starter.ino</code> ולוחצים Upload.</li>
+  <li><strong>בדיקה:</strong> פותחים את ה<strong>מסך הטורי (Serial Monitor)</strong> (סמל הזכוכית המגדלת) ומקרבים יד אל החיישן. מתחת ל-<strong>20 ס"מ</strong> האזעקה נדלקת — הלד מאיר והזמזם מצפצף. כשמרחיקים את היד, הכול נכבה.</li>
+  <li><strong>הצצה קדימה:</strong> קוראים את שתי הבחירות שמחכות לכם (למטה).</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">HC-SR04             Arduino
+  VCC  ───────────  5V
+  Trig ───────────  pin 12
+  Echo ───────────  pin 11
+  GND  ───────────  GND
+
+LED (+) ── 220Ω ──  pin 9
+LED (−) ──────────  GND
+
+Buzzer  ──────────  pin 8
+Buzzer  ──────────  GND</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
+  <p>תרשים Fritzing <code>w_p3_03_hcsr04_led_buzzer</code>: האזעקה המלאה על הברדבורד — חיישן HC-SR04 (VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11) ושתי ה"עיניים" פונות אל מחוץ לקצה הברדבורד, לד על רגל 9 דרך נגד 220 אוהם (הרגל הארוכה דרך הנגד לרגל 9, הקצרה ל-GND), וזמזם עם רגל אחת לרגל 8 והשנייה ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>אחרי ה-Upload מופיעה הודעה ירוקה "Done uploading". במסך הטורי מופיע המרחק בסנטימטרים, והמספר קטֵן ככל שהיד מתקרבת לחיישן. מתחת ל-20 ס"מ הלד מאיר והזמזם מצפצף; כשמרחיקים את היד, הכול נכבה.</p>
+  <p class="expected-note">כשאין שום דבר מול החיישן, המספר יכול לקפוץ למשהו גדול מאוד (למשל 999) — <strong>זה נורמלי, לא תקלה</strong>. החיישן פשוט לא שמע הד שחוזר, ולכן הוא מדווח "רחוק". האזעקה עובדת! בשלבים הבאים תהפכו אותה לאזעקה <strong>שלכם</strong> — תבחרו מאיזה מרחק היא נדלקת ומה היא עושה, ותשנו את הקוד בעצמכם בעזרת קלוד קוד.</p>
+</div>
+
+<div class="choice-preview">
+  <strong><span class="section-icon">🔀</span>שתי הבחירות שמחכות לכם</strong>
+  <ul>
+    <li><strong>שלב 2 — מאיזה מרחק האזעקה נדלקת (הסף):</strong> 5 ס"מ (מגע כמעט), 20 ס"מ (טווח יד — ברירת המחדל), או 50 ס"מ (אזור רחב). בוחרים אחד.</li>
+    <li><strong>שלב 3 — מה האזעקה עושה (התגובה):</strong> רק לד, רק זמזם, או שניהם; וגם — קבועה (נשארת דולקת) או מהבהבת (נדלקת ונכבית). כאן <strong>משנים את הקוד בעצמכם</strong> בעזרת קלוד קוד.</li>
+  </ul>
+  <p class="expected-note">אין צורך להחליט עכשיו — רק לקרוא, כדי לדעת מה מגיע. פרטים על כל אופציה בכרטיסי העזר.</p>
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>שימו לב — שינוי קוד בכוחות עצמכם</strong>
+  בגרסה הזו אתם <strong>משנים את הקוד</strong> (ערוץ A, גרסה 2): מתארים מה אתם רוצים, שואלים את קלוד קוד, קוראים את התשובה, עורכים, ומעלים מחדש. זו לא העתקה — אתם מבינים מה שיניתם. את זה תתרגלו בשלב 3.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>האזעקה מחווטת במלואה — חיישן (Trig 12, Echo 11, VCC 5 V, GND), לד על רגל 9 וזמזם על רגל 8 — ופועלת מקוד הבסיס</li>
+    <li>הקרבתם יד וראיתם את המרחק קטֵן במסך הטורי, ומתחת ל-20 ס"מ האזעקה נדלקה</li>
+    <li>קראתם את שתי הבחירות שמחכות בשלבים 2 ו-3</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li>השלב הזה מרכז כמה צעדים קטנים לאחד. אם משהו לא ברור — מאטים ועושים צעד-צעד.</li>
+    <li>אם המסך הטורי ריק — בודקים שהוא פתוח ושקצב התקשורת (baud) הוא 9600.</li>
+    <li>אם המרחק תמיד 0 או מספר ענק שמקפץ — כנראה <strong>Trig</strong> ו-<strong>Echo</strong> הוחלפו, או רגל של החיישן לא יושבת בברדבורד. בודקים מול כרטיס העזר <span class="r-ref">R1</span>.</li>
+    <li>אם הלד לא מאיר — בודקים שהרגל הקצרה (−) ל-GND ושהנגד במקום. אם הזמזם לא מצפצף — בודקים שרגל אחת על רגל 8 והשנייה ל-GND.</li>
+    <li>קוראים למורה — אפשר לקבל את הכרטיסים המפורטים של גרסה 1 לכל חלק.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 2 מתוך 5</div>
+  <h1><span class="section-icon">🏁</span>בחירה א': בוחרים את מרחק הסף</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+זוהי נקודת הבחירה הראשונה בפרויקט. כבר ראיתם את האזעקה הבסיסית עובדת — עכשיו אתם בוחרים <strong>כמה קרוב זה "קרוב מדי"</strong>. זה ה<strong>סף</strong>: המרחק שבו האזעקה נדלקת. חושבים על מה הייתם רוצים לשמור עליו, ובוחרים מרחק שמתאים לזה. הבחירה שלכם, אין תשובה "נכונה".
+</div>
+
+<h2><span class="section-icon">📋</span>בוחרים אחד משלושת מרחקי הסף האלה</h2>
+
+<div class="choice-point">
+  <strong>אפשרות א — 5 ס"מ: מלכודת חוטים</strong>
+  <div class="option">
+    <strong>מתי האזעקה נדלקת:</strong> רק כשמשהו כמעט נוגע בחיישן. צריך להתקרב ממש עד הסוף כדי להפעיל אותה.<br>
+    <strong>למה זה מתאים:</strong> לשמירה על <strong>חפץ קטן אחד</strong> — אם מישהו ינסה להרים אותו, היד שלו תיכנס למרחק של 5 ס"מ והאזעקה תצעק.
+  </div>
+
+  <strong>אפשרות ב — 20 ס"מ: מרחק יד</strong>
+  <div class="option">
+    <strong>מתי האזעקה נדלקת:</strong> כשיד מתקרבת בערך כמו להושיט אצבע אל החיישן. זוהי ברירת המחדל — המרחק שבו האזעקה כבר עבדה אצלכם.<br>
+    <strong>למה זה מתאים:</strong> ל"<strong>אל תיגעו בדברים שלי</strong>" — היד של מי שמושיט אל הערמה שלכם נכנסת למרחק הזה והאזעקה נדלקת.
+  </div>
+
+  <strong>אפשרות ג — 50 ס"מ: אזור</strong>
+  <div class="option">
+    <strong>מתי האזעקה נדלקת:</strong> כשמשהו נכנס ל<strong>אזור רחב</strong> מול החיישן — לא צריך להתקרב, מספיק להיכנס לתחום.<br>
+    <strong>למה זה מתאים:</strong> לשמירה על <strong>פתח דלת או פינת שולחן</strong> — כל מי שעובר באזור מפעיל את האזעקה.
+  </div>
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>חושבים: מה הייתם רוצים שהאזעקה שלכם תשמור עליו? חפץ קטן, הדברים שלכם, או אזור שלם?</li>
+  <li>קוראים את שלושת מרחקי הסף ובוחרים את זה שמתאים למה שדמיינתם.</li>
+  <li>בוחרים א, ב, או ג. כותבים את מרחק הסף שלכם (5, 20, או 50 ס"מ) כאן: <span class="fill-blank">&nbsp;</span></li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>בחרתם מרחק סף — 5, 20, או 50 ס"מ — וכתבתם אותו על הכרטיסייה. אתם יודעים על מה האזעקה שלכם אמורה לשמור.</p>
+  <p class="expected-note">עדיין לא משנים קוד ולא מעלים כלום — את הסף בקוד נשנה בשלב הבא. בשלב הזה רק מחליטים. <strong>אם החיישן לא רואה כלום מולו, הוא יראה מספר גדול מאוד (למשל 999) — וזה תקין, לא תקלה.</strong> פשוט אין לו ממה להחזיר הד.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>בחרתם מרחק סף: 5, 20, או 50 ס"מ</li>
+    <li>כתבתם את מרחק הסף שלכם על הכרטיסייה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  לא בטוחים מה לבחור? אין בחירה "לא נכונה" — כולן עובדות. אם אתם רוצים לשמור על חפץ קטן אחד, בוחרים 5 ס"מ. אם אתם רוצים לשמור על הדברים שלכם, בוחרים 20 ס"מ. אם אתם רוצים לשמור על אזור רחב כמו פתח או פינה, בוחרים 50 ס"מ. אפשר תמיד לשנות את הסף בהמשך, אז לא צריך להחליט מושלם עכשיו. אם עדיין מתלבטים, קוראים למורה ובוחרים יחד.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 3 מתוך 5</div>
+  <h1><span class="section-icon">💻</span>בחירה ב': בוחרים את התגובה ומשנים את הקוד עם קלוד קוד</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+זו נקודת הבחירה השנייה, וגם הצעד הגדול של הפרויקט: בפעם הזאת משנים את הקוד בעצמכם, בעזרת קלוד קוד. בוחרים <strong>מה האזעקה עושה</strong> כשמשהו מתקרב יותר מדי, ומכניסים גם את <strong>הסף</strong> שבחרתם בשלב הקודם לתוך הקוד. זה צעד גדול יותר מהרגיל — קחו את הזמן שלכם. אפשר לעשות אותו בשני חלקים: קודם הסף, ואחר כך התגובה.
+</div>
+
+<h2><span class="section-icon">🎯</span>שלב 1 — בוחרים את התגובה</h2>
+
+<p>שתי בחירות קטנות. בכל אחת בוחרים <strong>אחת</strong> — כל האפשרויות בסדר גמור, זו הבחירה שלכם:</p>
+
+<p><strong>מה פועל כשמשהו מתקרב יותר מדי?</strong></p>
+<ul class="checklist">
+  <li><strong>אור בלבד</strong> — רק הלד מאיר.</li>
+  <li><strong>צליל בלבד</strong> — רק הזמזם מצפצף.</li>
+  <li><strong>שניהם</strong> — הלד והזמזם יחד. (זה מה שיש בקוד עכשיו.)</li>
+</ul>
+
+<p style="margin-top:1.4em; padding-top:1em; border-top:1px solid #d0d0d0;"><strong>איך זה נראה ונשמע?</strong></p>
+<ul class="checklist">
+  <li><strong>קבוע</strong> — האזעקה דולקת ומצפצפת ברציפות כל עוד העצם קרוב. (זה מה שיש בקוד עכשיו.)</li>
+  <li><strong>פועם</strong> — האזעקה נדלקת ונכבית, נדלקת ונכבית, שוב ושוב.</li>
+</ul>
+
+<h2><span class="section-icon">📋</span>שלב 2 — ממלאים את (א), (ב) ו-(ג) על הכרטיסייה לפני שמדברים עם קלוד קוד</h2>
+
+<p>ממלאים קודם, בעיפרון. ככה אתם יודעים מה אתם מבקשים לפני שאתם פותחים את קלוד קוד. ההסבר על המשמעת הזאת נמצא בכרטיסייה <span class="r-ref">R3</span>.</p>
+
+<div class="prompt-template">(א) מה אני רוצה שיקרה:
+_________________________________________________
+_________________________________________________
+
+(ב) מה קורה עכשיו:
+_________________________________________________
+_________________________________________________
+
+(ג) מה כבר ניסיתי (או הסתכלתי עליו):
+_________________________________________________
+_________________________________________________</div>
+
+<h2><span class="section-icon">💻</span>שלב 3 — שולחים את הפניות לקלוד קוד</h2>
+
+<p>בקוד ההתחלתי <code>T2_alarm_starter.ino</code> יש למעלה ארבע הגדרות מסומנות, שאתם משנים — ולא נוגעים בשאר:</p>
+
+<ul class="checklist">
+  <li><code>THRESHOLD_CM</code> — מה נחשב "קרוב מדי", בסנטימטרים.</li>
+  <li><code>USE_LED</code> — האם הלד מאיר? <code>true</code> או <code>false</code>.</li>
+  <li><code>USE_BUZZER</code> — האם הזמזם מצפצף? <code>true</code> או <code>false</code>.</li>
+  <li><code>PULSING</code> — <code>false</code> = קבוע, <code>true</code> = פועם.</li>
+</ul>
+
+<p>בחלון של קלוד קוד מדביקים את הפנייה, וגם מדביקים את הקוד הנוכחי של הקובץ במקום [מדביקים כאן]. הנה שתי דוגמאות — אחת לסף, אחת לגרום לאזעקה לפעום:</p>
+
+<p><strong>פנייה 1 — משנים את הסף למספר שבחרתם בשלב הקודם:</strong></p>
+
+<div class="prompt-template">אני רוצה שהאזעקה תידלק כשמשהו מתקרב לפחות מ-50 ס"מ במקום 20 ס"מ. איזה מספר אני משנה בקוד? הנה הקוד שלי:
+[מדביקים כאן]</div>
+
+<p><strong>פנייה 2 — גורמים לאזעקה לפעום במקום להישאר במצב קבוע:</strong></p>
+
+<div class="prompt-template">אני רוצה שהזמזם יצפצף שוב ושוב, נדלק וכבה, במקום להישאר דולק ברציפות כל עוד משהו קרוב. הנה הקוד שלי:
+[מדביקים כאן]</div>
+
+<h2><span class="section-icon">📋</span>שלב 4 — קוראים את התשובה, משנים, מעלים, בודקים</h2>
+
+<ul class="checklist">
+  <li>קוראים את התשובה של קלוד קוד בעיון. מחפשים את ההגדרות שצריך לשנות למעלה בקוד — <code>THRESHOLD_CM</code> למספר שבחרתם, ואת <code>USE_LED</code> / <code>USE_BUZZER</code> / <code>PULSING</code> לתגובה שבחרתם.</li>
+  <li>פותחים את הקוד ב-Arduino IDE ומשנים <strong>רק את ההגדרות האלה</strong> — לא נוגעים בשאר.</li>
+  <li>לוחצים על Upload.</li>
+  <li>מקרבים יד לחיישן ובודקים: האזעקה נדלקת במרחק שבחרתם? היא מגיבה כמו שרציתם — אור, צליל או שניהם, קבוע או פועם?</li>
+  <li>אם לא השתנה, חוזרים לשלב 2 ומתארים מה קרה בצורה יותר ספציפית.</li>
+</ul>
+
+<h2><span class="section-icon">📋</span>בדיקת הבנה</h2>
+
+<p>אחרי שקלוד עזר לכם — תוכלו לומר במשפט אחד מה שיניתם? עונים בקול רם, או כותבים למטה:</p>
+
+<div class="prompt-template">אחרי שקלוד קוד עזר לי, מה ששיניתי בקוד הוא:
+_________________________________________________
+_________________________________________________</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>האזעקה מגיבה כמו שבחרתם: נדלקת במרחק שבחרתם, עם אור או צליל או שניהם, קבוע או פועם. כשמרחיקים את היד — היא נרגעת.</p>
+  <p class="expected-note">כשאין כלום מול החיישן, מסך המעקב יכול להראות מספר גדול מאוד (למשל 999). זה <strong>תקין, לא תקלה</strong> — החיישן פשוט לא שמע הד חוזר. אתם יכולים להצביע על ההגדרות שלמעלה בקוד ולומר "אלה הם הדברים ששיניתי".</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>בחרתם את התגובה — אור / צליל / שניהם, וגם קבוע או פועם</li>
+    <li>מילאתם את (א), (ב) ו-(ג) על הכרטיסייה לפני שדיברתם עם קלוד קוד</li>
+    <li>שיניתם את הסף ואת התגובה בקוד, והשינוי עובד כשבודקים על החיישן</li>
+    <li>אתם יכולים לומר במשפט אחד מה שיניתם</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  אם התשובה של קלוד קוד לא עבדה: בלי פאניקה. חוזרים ל-(א), (ב) ו-(ג) ומתארים מה קרה בצורה יותר ספציפית. "זה לא השתנה" פחות שימושי מ"הזמזם עדיין דולק ברציפות, הוא לא פועם". אם עדיין תקועים — קוראים למורה לעזרה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 4 מתוך 5</div>
+  <h1><span class="section-icon">💻</span>מעלים, בודקים ומכווננים את הסף</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+בשלב הקודם בחרתם את הסף ואת התגובה של האזעקה, ושיניתם את הקוד בעזרת קלוד קוד. בשלב הקודם כבר העליתם ובדקתם פעם אחת — עכשיו בודקים שוב, הפעם כדי לכוונן. מעלים את הקוד, בודקים אותו מול הדבר האמיתי שאתם רוצים לשמור עליו, <strong>ומכווננים את הסף</strong> עד שהוא מרגיש נכון. אזעקה טובה לא מחושבת מראש — היא נמצאת על ידי ניסיון.
+</div>
+
+<h2><span class="section-icon">⬆️</span>שלב 1 — מעלים ובודקים מול הדבר האמיתי</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקוד המעודכן שלכם ב-Arduino IDE ולוחצים על Upload. מחכים להודעה הירוקה "Done uploading".</li>
+  <li>פותחים את <strong>מסך המעקב (Serial Monitor)</strong> (סמל הזכוכית המגדלת) כדי לראות את המרחק בסנטימטרים תוך כדי בדיקה.</li>
+  <li>מביאים אל מול החיישן את <strong>הדבר האמיתי שבחרתם לשמור עליו</strong> — היד, מגירה שנפתחת, ספר שמחליק, או פתח הדלת.</li>
+  <li>בודקים: האם האזעקה נדלקת בדיוק היכן שרציתם — לא מוקדם מדי, ולא מאוחר מדי?</li>
+  <li>בודקים שהתגובה שבחרתם עובדת — לד, זמזם, או שניהם; קבוע או מהבהב/מצפצף.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>במסך המעקב המרחק קטֵן ככל שהעצם מתקרב לחיישן, וגדֵל ככל שהוא מתרחק. כשהמרחק יורד מתחת לסף שבחרתם — האזעקה נדלקת בתגובה שבחרתם, ונכבית כשהעצם מתרחק.</p>
+  <p class="expected-note">כשאין שום דבר מול החיישן, ייתכן שתראו מספר גדול מאוד (למשל 999). <strong>זה תקין, לא תקלה</strong> — החיישן פשוט לא שמע הד חוזר, אז הוא מדווח "רחוק מאוד".</p>
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 2 — מכווננים את הסף עד שהוא מרגיש נכון</h2>
+
+<p>הסף שבחרתם הוא נקודת התחלה, לא תשובה סופית. כמעט תמיד צריך לכוונן אותו קצת אחרי שבודקים מול הדבר האמיתי. מסתכלים על המרחק במסך המעקב כשהעצם נמצא בדיוק במקום שבו אתם רוצים שהאזעקה תתחיל — המספר הזה הוא רמז טוב לסף החדש.</p>
+
+<div class="prompt-template">הסף עכשיו = _______ ס"מ
+מה קורה: האזעקה נדלקת _______ (מוקדם מדי / מאוחר מדי)
+הסף שאני רוצה לנסות = _______ ס"מ</div>
+
+<p>אם 50 ס"מ קופץ יותר מדי בפינה שלכם — מנסים 40. אם 5 ס"מ מפספס את העצם שלכם — מנסים 8. <strong>אין מספר נכון אחד</strong>; מנסים, בודקים, ומשנים שוב עד שזה מרגיש נכון בשבילכם.</p>
+
+<p>לשנות את הסף זה לשנות מספר אחד בקוד. אם נוח לכם — משנים אותו ישירות ב-IDE ומעלים שוב. אם רוצים עזרה, זאת פנייה קטנה נוספת לקלוד קוד (גרסה 2). ממלאים את (א), (ב) ו-(ג) קודם, ואז מבקשים:</p>
+
+<div class="prompt-template">אני עובד על אזעקת הקרבה שלי בפרויקט 3.
+
+(א) מה אני רוצה: שהאזעקה תידלק כשמשהו מתקרב ל-40 ס"מ.
+(ב) מה קורה עכשיו: ב-50 ס"מ היא קופצת ונדלקת כל הזמן בפינה שלי.
+(ג) מה כבר ניסיתי: בדקתי מול הקיר וראיתי במסך המעקב שהמרחק מתחיל בערך ב-45.
+
+הנה הקוד הנוכחי שלי:
+[מדביקים כאן את כל קובץ הקוד]
+
+תוכל לעזור לי לשנות את מספר הסף?</div>
+
+<p>קוראים את התשובה של קלוד, משנים את המספר ב-IDE, מעלים שוב, ובודקים שוב מול הדבר האמיתי. חוזרים על זה כמה פעמים שצריך — זה בדיוק מה שמהנדסים עושים עם חיישנים. בדרך כלל מספיק ניסיון אחד או שניים. אם עברו 15 דקות ועדיין מכווננים — זה בסדר, ממשיכים בפעם הבאה.</p>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>הקוד המעודכן הועלה ובדקתם אותו מול הדבר האמיתי שאתם רוצים לשמור עליו</li>
+    <li>התגובה שבחרתם עובדת (לד / זמזם / שניהם; קבוע או מהבהב)</li>
+    <li>בדקתם לפחות פעם אחת מול הדבר האמיתי, וראיתם שהאזעקה מגיבה במרחק שכתבתם</li>
+    <li>אתם יכולים לומר באיזה מספר שיניתם את הסף</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li>אם האזעקה לא מגיבה אחרי השינוי, ייתכן שעוד לא עלה הקוד המעודכן — מעלים שוב ומחכים ל-"Done uploading".</li>
+    <li>אם האזעקה דולקת כל הזמן, ייתכן שהחיישן מכוון אל קיר קרוב והמרחק תמיד קטן מהסף — מסובבים את החיישן כך שה"עיניים" פונות אל המרחב הפתוח, ובודקים שוב במסך המעקב.</li>
+    <li>אם אחרי כמה ניסיונות הסף עדיין לא מרגיש נכון, חוזרים ל-(א), (ב) ו-(ג) ומתארים לקלוד קוד מה בדיוק יוצא — למשל "האזעקה נדלקת רק כשהיד כמעט נוגעת בחיישן, ואני רוצה שהיא תידלק כבר מרחוק יותר".</li>
+    <li>אם זה עדיין לא עובד, קוראים למורה.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge celebration">פרויקט #3 — לא להתקרב יותר מדי: שלב 5 מתוך 5 • השלב האחרון</div>
+  <h1><span class="section-icon">🏆</span>האזעקה החתומה — נותנים שם ומציגים</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+בשלב זה הגרסה שלכם כבר עובדת בדיוק כמו שרציתם — האזעקה מגיבה במרחק שבחרתם ובדרך שבחרתם. עכשיו נותנים לה שם, רושמים על הפוסטר מה היא שומרת, ומציגים אותה לחבר או למורה.
+</div>
+
+<h2><span class="section-icon">🏷️</span>שלב 1 — נותנים לאזעקה שלכם שם</h2>
+
+<p>הגרסה שלכם — המרחק שבחרתם והתגובה שבחרתם — היא <strong>האזעקה החתומה</strong> שלכם. נותנים לה שם שמתאים למה שהיא שומרת (למשל "שומר המגירה", "אזור אסור", "מגן החטיפים").</p>
+
+<div class="prompt-template">השם של האזעקה שלי הוא:
+_________________________________________________
+
+מה האזעקה שלי שומרת:
+_________________________________________________</div>
+
+<h2><span class="section-icon">📋</span>שלב 2 — רושמים על הפוסטר</h2>
+
+<ul class="checklist">
+  <li>מוצאים את <strong>פוסטר פרויקט 3</strong> שתלוי בעמדה שלכם.</li>
+  <li>על <strong>שורת גרסה 2</strong> של הפוסטר רושמים את <strong>שם האזעקה</strong> שלכם ואת <strong>מה שהיא שומרת</strong>.</li>
+  <li>אם בא לכם, אפשר להוסיף גם את המרחק שבחרתם (5, 20 או 50 ס"מ) ואת התגובה (אור, צליל או שניהם).</li>
+</ul>
+
+<h2><span class="section-icon">🔔</span>שלב 3 — מציגים את האזעקה למישהו</h2>
+
+<ul class="checklist">
+  <li>מזמינים חבר מהקבוצה או את המורה לראות את האזעקה שלכם עובדת.</li>
+  <li>מסבירים במשפט או שניים מה האזעקה שומרת, מאיזה מרחק היא מגיבה, ומה היא עושה — אור, צליל או שניהם.</li>
+  <li>מקרבים יד או חפץ אל החיישן ומראים איך האזעקה מגיבה כשמגיעים קרוב מספיק, ונרגעת כשמתרחקים.</li>
+  <li>אם בא לכם, מבקשים מהמורה לצלם תמונה של האזעקה שלכם (רק אם אתם מסכימים). אפשר לשמור אותה לתיק העבודות או להראות למשפחה.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>הגרסה שלכם של אזעקת הקרבה רצה על הברדבורד עם השם שבחרתם, מה שהיא שומרת רשום על שורת גרסה 2 בפוסטר, ומישהו אחר ראה אותה מגיבה ונרגעת.</p>
+  <p class="expected-note">המורה ראה את האזעקה וחגג איתכם, ויש לכם תמונה (אם רציתם).</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימנו כש:</strong>
+  <ul>
+    <li>נתתם לאזעקה שלכם שם</li>
+    <li>רשמתם את השם ואת מה שהיא שומרת על שורת גרסה 2 בפוסטר</li>
+    <li>הצגתם את האזעקה לחבר או למורה — מישהו אחר ראה אותה עובדת</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  אם קשה לכם להחליט על שם, חושבים על מה שהאזעקה שלכם שומרת: מגירה? פינה בשולחן? שקית חטיפים? אפילו שם פשוט כמו "האזעקה של [השם שלכם]" נחשב לגמרי. אם אין כרגע חבר פנוי לראות — המורה תמיד שמח להיות הצופה. אפשר לקרוא למורה לעזרה.
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את פרויקט 3!</span>
+  בחרתם מאיזה מרחק האזעקה מופעלת, בחרתם איך היא מגיבה, שיניתם קוד עם קלוד קוד בעצמכם, ובניתם אזעקת קרבה שהיא שלכם — עם שם, עם תפקיד אמיתי לשמור, ועם מישהו שראה אותה עובדת.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V3</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: מתכנן הפרויקט</div>
+  <h1><span class="section-icon">🏁</span>מעצבים את אזעקת הקרבה שלכם</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+מעצבים אזעקת קרבה משלכם — כזו שעושה <strong>עבודה אמיתית</strong>. בוחרים מה היא שומרת, מחליטים כמה קרוב זה "קרוב מדי", ובונים אותה מההתחלה. ממלאים את המתכנן, בונים, מתכנתים עם קלוד קוד, בודקים בשטח, ומראים.
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 1 — מתכננים (PLAN)</h2>
+
+<div class="field">
+  <label>איזו אזעקה בונים? מקיפים אחת:</label>
+  <div class="hint">
+    <strong>אזעקת מגירה</strong> — מצפצפת כשהמגירה נפתחת.<br>
+    <strong>התרעת דלת</strong> — מתריעה כשמישהו נכנס בפתח.<br>
+    <strong>קערת חיה</strong> — נדלקת כשמשהו מתקרב לקערה.<br>
+    <strong>רעיון משלכם</strong> — כל דבר שכדאי לשמור עליו במרחק. אם זה משהו לא רגיל, שואלים את המורה לפני שמתחילים.
+  </div>
+</div>
+
+<div class="field">
+  <label>איזה מקום האזעקה שומרת? מתארים אותו במילים שלכם.</label>
+  <div class="hint">כמה שיותר ספציפי. לדוגמה: "המגירה העליונה בשולחן, שבה אני שומר את הדברים החשובים שלי" או "הפתח של החדר, כדי לדעת מתי מישהו נכנס".</div>
+</div>
+
+<div class="field">
+  <label>מה הסף? כמה קרוב זה "קרוב מדי"? (בס"מ)</label>
+  <div class="hint">בוחרים מרחק שמתאים למקום ששומרים: סף קטן (כ-5 ס"מ) לעצם בודד ממש צמוד, סף בינוני (כ-20 ס"מ) ל"אל תושיט יד לדברים שלי", או סף גדול (כ-50 ס"מ) לאזור רחב כמו פתח דלת. את המספר המדויק מכוונים אחר כך בשלב הבדיקה.</div>
+</div>
+
+<div class="field">
+  <label>מה האזעקה עושה כשמשהו מתקרב מדי? (התגובה)</label>
+  <div class="hint">בוחרים: הלד מאיר, הזמזם מצפצף, או שניהם. אפשר גם להחליט אם זה קבוע (דולק כל עוד העצם קרוב) או מהבהב/מצפצף לסירוגין. משתמשים בלד ובזמזם שכבר על הברדבורד.</div>
+</div>
+
+<div class="field field-optional">
+  <label>רעיון נוסף — אזעקה בשני שלבים (לא חובה)</label>
+  <div class="hint">אפשר להוסיף לד צהוב <strong>"מתקרב"</strong> על <strong>רגל דיגיטלית 10</strong>, שמאיר <em>לפני</em> הלד האדום של האזעקה. כך מקבלים שני אזורים: כשמתקרבים — הצהוב מאיר כאזהרה; כשמתקרבים יותר מדי — האדום והזמזם מגיבים. מציירים את שני האזורים על נייר לפני שבונים.</div>
+</div>
+
+<h2><span class="section-icon">🔌</span>שלב 2 — בונים (BUILD)</h2>
+
+<div class="field">
+  <label>מציירים את החיווט על נייר, אחר כך מחווטים אותו על הברדבורד.</label>
+  <div class="hint">החיווט הוא אזעקת הקרבה המלאה שכבר מכירים: חיישן המרחק (VCC ל-5 V, GND ל-GND, Trig לרגל 12, Echo לרגל 11), הלד על <strong>רגל 9</strong> דרך נגד 220 אוהם (פסים: <strong>אדום · אדום · חום</strong>), והזמזם על <strong>רגל 8</strong>. רגלי החיישן ורגלי הלד נכנסות ל<strong>טורים</strong> שונים. ההפניה היא מעגל 4 בכרטיסיית החיווט <span class="r-ref">R1</span> (<code>w_p3_04_two_stage</code>).</div>
+  <div class="hint"><strong>רק אם בחרתם אזעקה בשני שלבים:</strong> מוסיפים לד צהוב שני על <strong>רגל 10</strong>, עם נגד 220 אוהם משלו — בדיוק כמו הלד האדום, רק על רגל 10. אם דילגתם על שני השלבים — מתעלמים מהשורה הזו ומהלד הצהוב בתרשים.</div>
+</div>
+
+<pre class="wiring-block" dir="ltr">HC-SR04            Arduino
+  VCC  ───────────  5V
+  Trig ───────────  pin 12
+  Echo ───────────  pin 11
+  GND  ───────────  GND
+
+LED (red, alarm)   pin 9  (via 220Ω) , GND
+LED (yellow, warn) pin 10 (via 220Ω) , GND   ← two-stage only
+Buzzer             pin 8 , GND</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
+  <p>תרשים Fritzing <code>w_p3_04_two_stage</code>: חיישן HC-SR04 (VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11), לד אדום על רגל 9 דרך נגד 220 אוהם ל-GND, זמזם על רגל 8 ל-GND, ולד צהוב נוסף לאזעקה בשני שלבים על רגל 10 דרך נגד 220 אוהם משלו ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
+</div>
+
+<div class="field">
+  <label>מצלמים תמונה של החיווט הגמור. מסמנים כאן: <em>תמונה צולמה / עדיין לא / לא רוצה תמונה</em></label>
+</div>
+
+<h2><span class="section-icon">💻</span>שלב 3 — קוד (CODE)</h2>
+
+<p>כאן משתמשים בקלוד קוד בגרסה 3 — דיאלוג חופשי. מתארים מה מנסים לבנות, קלוד קוד עוזר לנו לכתוב או להרחיב את הקוד, ומשפרים יחד עד שזה עובד. אותה משמעת של (א), (ב) ו-(ג) עדיין חלה — מתארים את הבעיה לפני שמבקשים פתרון. אין כאן קוד מוכן מראש — בונים אותו מהתיאור שלכם.</p>
+
+<div class="field">
+  <label>הפנייה הראשונה לקלוד קוד (מנסחים אותה כאן לפני ששולחים)</label>
+  <div class="hint">מתארים מה רוצים שהאזעקה תעשה, על איזו רגל כל חלק, ומה הסף. <strong>דוגמה לרעיון מתקדם</strong> לגרסה 3: <strong>אזעקת מגירה שמצפצפת רק כשהמגירה נפתחת, ולא כל הזמן שמשהו קרוב.</strong> לדוגמה: "אני בונה אזעקת מגירה. החיישן בתוך המגירה, לד על רגל 9 וזמזם על רגל 8. אני רוצה שהזמזם יצפצף רק ברגע שהמגירה נפתחת — כלומר ברגע שהמרחק קופץ מקרוב לרחוק — ולא כל הזמן שמשהו קרוב לחיישן. תוכל לעזור לי לכתוב את הקוד בארדואינו?" אזעקה בשני שלבים (הלד הצהוב מהשלב הקודם) היא רעיון מתקדם נוסף שאפשר לבקש מקלוד קוד לעזור לתכנת — כך התוכנית שלכם והקוד הולכים יד ביד.</div>
+</div>
+
+<div class="field">
+  <label>אחרי שקלוד קוד עזר — אפשר לומר במשפט אחד מה הקוד עושה?</label>
+  <div class="hint">מעלים את הקוד לארדואינו ובודקים. אם זה לא עובד כמו שרצינו, חוזרים לקלוד קוד עם (א), (ב) ו-(ג) חדשים.</div>
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 4 — בודקים (TEST)</h2>
+
+<div class="field">
+  <label>זה עושה את העבודה האמיתית שתכננתם? בודקים אותה במקום האמיתי.</label>
+  <div class="hint">מנסים את האזעקה בדיוק במקום שהיא אמורה לשמור — פותחים את המגירה האמיתית, עומדים בפתח האמיתי, מקרבים יד לקערה. אם משהו שונה ממה שתכננתם, כותבים מה, חוזרים לקלוד קוד, ומשפרים. התוכנית יכולה להשתנות תוך כדי — זה בסדר גמור.</div>
+</div>
+
+<div class="field">
+  <label>הסף מרגיש נכון? מכוונים אותו עד שהוא מדויק.</label>
+  <div class="hint">אם האזעקה נדלקת מוקדם מדי — מקטינים את הסף; אם מאוחר מדי — מגדילים אותו. מכוונים את המספר עד שהאזעקה נכנסת לפעולה בדיוק במרחק שרציתם. מספר מרחק גדול (למשל 999) כשאין כלום מול החיישן הוא <strong>תקין, לא תקלה</strong> — החיישן פשוט לא שמע הד שחזר.</div>
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 5 — מראים (SHOW)</h2>
+
+<ul class="checklist">
+  <li>כשמרוצים (או כשמחליטים שזה טוב כמו שזה הולך להיות היום), קוראים למורה.</li>
+  <li>מראים את האזעקה עושה את העבודה שלה — ועדיף להפעיל אותה במקום האמיתי, מול המורה או מול חבר. מסבירים במשפט או שניים מה היא שומרת ולמה בניתם אותה ככה.</li>
+  <li>אם רוצים, מצלמים תמונה של האזעקה הגמורה ושומרים אותה בתיקיית פרויקט 3 שלכם ב-Google Drive, לתיק העבודות בבית.</li>
+</ul>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים בשלב כלשהו?</strong>
+  המתכנן פתוח — וזו המטרה שלו. להיתקע זה חלק מלעצב אזעקה משלכם. משתמשים בקלוד קוד כדי לחשוב על הבעיה, וקוראים למורה כשמרגישים שהולכים במעגלים סביב אותה בעיה. שיחה כאן היא שיחת עיצוב, לא שיחת תקלות — מספרים מה מנסים לבנות ומה לא עובד.
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את פרויקט 3!</span>
+  עיצבתם, בניתם ותכנתתם אזעקת קרבה משלכם — כזו שעושה עבודה אמיתית — מאפס.
+</div>
+
+</div>
+</section>
+</body>
+</html>

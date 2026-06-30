@@ -21,9 +21,9 @@ const { PDFDocument } = require('pdf-lib');
 // `node build_cards_only.js he` invocation still builds Project 1.
 const args = process.argv.slice(2);
 const lang = args.find((a) => ['en', 'he'].includes(a));
-const projectKey = args.find((a) => ['1', '2'].includes(a)) || '1';
+const projectKey = args.find((a) => ['1', '2', '3'].includes(a)) || '1';
 if (!lang) {
-  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2]');
+  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3]');
   process.exit(1);
 }
 
@@ -46,6 +46,12 @@ const PROJECTS = {
     outBase: 'Project_2_Cards',
     titleHe: 'פרויקט 2 — משחק זמן תגובה: חוברת כרטיסיות (עזר ומשימה)',
     titleEn: 'Project 2 — Reaction-Time Game: Cards Bundle (Reference + Task)',
+  },
+  '3': {
+    dir: 'Project_3_Dont_Get_Too_Close',
+    outBase: 'Project_3_Cards',
+    titleHe: 'פרויקט 3 — לא להתקרב יותר מדי: חוברת כרטיסיות (עזר ומשימה)',
+    titleEn: 'Project 3 — Don\'t Get Too Close: Cards Bundle (Reference + Task)',
   },
 };
 
@@ -94,6 +100,26 @@ const CARD_STEMS = {
     'T:T2_M3_pick_difficulty_and_modify',
     'T:T2_M4_upload_test_tune',
     'T:T2_M5_signature_game',
+    'T:T3_project_planner',
+  ],
+  '3': [
+    'R:R0_breadboard_basics',
+    'R:R1_wiring_reference',
+    'R:R2_stuck_protocol',
+    'R:R3_claude_code_prompts',
+    'R:R4_safety_reminder',
+    'R:R5_sketch_index',
+    'T:T1_M1_wire_sensor',
+    'T:T1_M2_upload_distance_sketch',
+    'T:T1_M3_add_led_threshold',
+    'T:T1_M4_add_buzzer_full_alarm',
+    'T:T1_M5_test_real_objects',
+    'T:T1_M6_show_celebrate',
+    'T:T2_M1_startup',
+    'T:T2_M2_pick_threshold',
+    'T:T2_M3_pick_response_and_modify',
+    'T:T2_M4_test_and_tune',
+    'T:T2_M5_signature_alarm',
     'T:T3_project_planner',
   ],
 };

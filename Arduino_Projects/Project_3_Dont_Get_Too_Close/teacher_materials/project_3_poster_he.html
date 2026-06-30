@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>פרויקט 3 — לא להתקרב יותר מדי · פוסטר העמדה</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    color: #15233a;
+    background: #fff;
+    direction: rtl;
+  }
+  .poster {
+    width: 194mm;
+    min-height: 281mm;
+    margin: 0 auto;
+    padding: 6mm 6mm 8mm 6mm;
+    display: flex;
+    flex-direction: column;
+    page-break-inside: avoid;
+  }
+
+  /* ---------- כותרת ---------- */
+  .title-block {
+    text-align: center;
+    border: 4pt solid #1b3a6b;
+    border-radius: 14pt;
+    page-break-inside: avoid;
+    padding: 10pt 12pt 12pt 12pt;
+    background:
+      radial-gradient(circle at 12% 20%, rgba(255,209,102,0.35) 0 14pt, transparent 15pt),
+      radial-gradient(circle at 88% 24%, rgba(239,71,111,0.30) 0 12pt, transparent 13pt),
+      linear-gradient(135deg, #eaf3ff 0%, #fef6e6 100%);
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 13pt;
+    font-weight: bold;
+    letter-spacing: 0.5pt;
+    color: #fff;
+    background: #ef476f;
+    padding: 3pt 14pt;
+    border-radius: 999pt;
+    transform: rotate(-2deg);
+    margin-bottom: 6pt;
+  }
+  h1 {
+    font-size: 34pt;
+    line-height: 1.1;
+    margin: 4pt 0 2pt 0;
+    color: #1b3a6b;
+    text-shadow: 2pt 2pt 0 #ffd166;
+  }
+  .h1-emoji { font-size: 28pt; }
+  .tagline {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #2a9d8f;
+    margin-top: 6pt;
+  }
+
+  /* ---------- רצועת ההסבר ---------- */
+  .howto {
+    display: flex;
+    justify-content: center;
+    gap: 8pt;
+    margin: 10pt 0 8pt 0;
+    flex-wrap: wrap;
+  }
+  .step {
+    flex: 1 1 0;
+    min-width: 150pt;
+    background: #fff;
+    border: 2.5pt solid #2a9d8f;
+    border-radius: 12pt;
+    padding: 7pt 9pt;
+    font-size: 12pt;
+    line-height: 1.3;
+  }
+  .step .num {
+    display: inline-block;
+    width: 20pt; height: 20pt;
+    line-height: 20pt;
+    text-align: center;
+    border-radius: 50%;
+    background: #2a9d8f;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 5pt;
+  }
+  .step b { color: #1b3a6b; }
+
+  /* ---------- כותרת לוח ---------- */
+  .board-head {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #1b3a6b;
+    text-align: center;
+    margin: 8pt 0 4pt 0;
+  }
+  .board-head .crown { font-size: 17pt; }
+  .board-head .tier {
+    display: inline-block;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #fff;
+    background: #1b3a6b;
+    border-radius: 999pt;
+    padding: 1pt 9pt;
+    margin-left: 6pt;
+    vertical-align: middle;
+  }
+  .board-head .tier.t2 { background: #ef476f; }
+
+  /* ---------- טבלאות ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    page-break-inside: avoid;
+  }
+  /* גרסה 1 */
+  col.col-nick  { width: 38%; }
+  col.col-guard { width: 62%; }
+  /* גרסה 2 */
+  col.col-nick2  { width: 28%; }
+  col.col-name2  { width: 32%; }
+  col.col-guard2 { width: 40%; }
+
+  thead th {
+    background: #1b3a6b;
+    color: #fff;
+    font-size: 14pt;
+    padding: 8pt 6pt;
+    border: 2pt solid #1b3a6b;
+    text-align: center;
+  }
+  table.t2 thead th { background: #ef476f; border-color: #ef476f; }
+  thead th .sub {
+    display: block;
+    font-size: 10pt;
+    font-weight: normal;
+    opacity: 0.9;
+  }
+  tbody td {
+    border: 1.5pt solid #9bb1cc;
+    height: 44pt;
+    padding: 2pt 8pt;
+    vertical-align: middle;
+    font-size: 12pt;
+  }
+  tbody tr:nth-child(odd) td { background: #f3f8ff; }
+  tbody tr:nth-child(even) td { background: #fffdf5; }
+  table.t2 tbody td { border-color: #e7a9b8; }
+  table.t2 tbody tr:nth-child(odd) td { background: #fff2f5; }
+  table.t2 tbody tr:nth-child(even) td { background: #fffdf5; }
+
+  /* ---------- כותרת תחתונה ---------- */
+  .foot {
+    margin-top: auto;
+    padding-top: 8pt;
+    text-align: center;
+    font-size: 13pt;
+    font-weight: bold;
+    color: #ef476f;
+  }
+  .foot .small {
+    display: block;
+    font-size: 10pt;
+    font-weight: normal;
+    color: #6b7c93;
+    margin-top: 3pt;
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="title-block">
+    <span class="kicker">פוסטר העמדה</span>
+    <h1><span class="h1-emoji">📡</span> פרויקט 3 — לא להתקרב יותר מדי <span class="h1-emoji">🚨</span></h1>
+    <div class="tagline">החיישן מודד מרחק כל הזמן — וכשמשהו מתקרב יותר מדי, האזעקה נדלקת! ✋📏</div>
+  </div>
+
+  <div class="howto">
+    <div class="step"><span class="num">1</span> בונים את אזעקת הקרבה ובודקים שהיא עובדת — האור מאיר והזמזם מצפצף כשהיד מתקרבת. 🔆🔊</div>
+    <div class="step"><span class="num">2</span> חושבים: <b>על מה האזעקה שלי שומרת?</b> קלמר, פינה בשולחן, מגירה, דלת — מה שתבחרו. 🛡️</div>
+    <div class="step"><span class="num">3</span> כותבים את <b>הכינוי</b> ואת <b>מה שהאזעקה שומרת</b> בשורה ריקה למטה. ✏️</div>
+  </div>
+
+  <div class="board-head"><span class="crown">🛡️</span> על מה האזעקות שלנו שומרות <span class="tier">גרסה 1</span></div>
+
+  <table>
+    <colgroup>
+      <col class="col-nick">
+      <col class="col-guard">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>כינוי</th>
+        <th>על מה האזעקה שלי שומרת<span class="sub">לדוגמה: הקלמר שלי, פינת השולחן, המגירה</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="board-head"><span class="crown">🏷️</span> אזעקות עם שם משלהן <span class="tier t2">גרסה 2</span></div>
+
+  <table class="t2">
+    <colgroup>
+      <col class="col-nick2">
+      <col class="col-name2">
+      <col class="col-guard2">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>כינוי</th>
+        <th>שם האזעקה<span class="sub">לדוגמה: "שומר המגירה"</span></th>
+        <th>על מה היא שומרת<span class="sub">המקום או החפץ</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="foot">
+    כל אזעקה שומרת על משהו אחר — וכולן ביחד הן הקבוצה שלנו! 🎉
+    <span class="small">פרויקט 3 · לא להתקרב יותר מדי · תולים את הפוסטר בעמדה</span>
+  </div>
+
+</div>
+</body>
+</html>

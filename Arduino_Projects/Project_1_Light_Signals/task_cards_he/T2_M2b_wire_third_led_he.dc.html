@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 1 · אותות אור
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול יוצרים · אפשרות ב (רדיפה)</div>
+      </div>
+
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מחווטים לד שלישי</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:58ch;">רק לתבנית הרדיפה (<strong style="color:#fff;">אפשרות ב</strong>). מוסיפים לד שלישי על רגל 11 — אותה תבנית כמו לדים 1 ו-2.</p>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <!-- SKIP -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.1 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.13 32);">אפשר לדלג אם בחרתם אפשרות א או ג</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.07 32);">לסירוגין (א) צריכה רק שני לדים, ונשימה (ג) רק לד אחד — החיווט שלכם כבר מוכן. עוברים ישר לשלב 3.</p>
+        </div>
+      </div>
+
+      <!-- DIAGRAM -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">תרשים החיווט</h2>
+      </div>
+
+      <!-- schematic SVG (3 LEDs) -->
+      <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85); margin-bottom:14px;">
+        <div dir="ltr" style="padding:22px 18px 14px; display:flex; justify-content:center;">
+          <svg viewBox="0 0 640 280" width="600" style="max-width:100%; height:auto; font-family:'Rubik',sans-serif;">
+            <defs><linearGradient id="ardP1M2b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13a7ad"/><stop offset="1" stop-color="#0a7d82"/></linearGradient></defs>
+            <rect x="14" y="22" width="86" height="240" rx="8" fill="url(#ardP1M2b)" stroke="#075f63" stroke-width="1"/>
+            <text x="57" y="16" fill="#5a6068" font-size="12" font-weight="700" text-anchor="middle">Arduino</text>
+            <rect x="84" y="40" width="30" height="20" rx="3" fill="#0c0c0e"/><rect x="90" y="44" width="18" height="12" rx="2" fill="#d8b04a"/><text x="70" y="55" fill="#fff" font-size="12" font-weight="800" text-anchor="middle" font-family="'JetBrains Mono',monospace">9</text>
+            <rect x="84" y="104" width="30" height="20" rx="3" fill="#0c0c0e"/><rect x="88" y="108" width="22" height="12" rx="2" fill="#d8b04a"/><text x="68" y="119" fill="#fff" font-size="12" font-weight="800" text-anchor="middle" font-family="'JetBrains Mono',monospace">10</text>
+            <rect x="84" y="168" width="30" height="20" rx="3" fill="#0c0c0e"/><rect x="88" y="172" width="22" height="12" rx="2" fill="#d8b04a"/><text x="68" y="183" fill="#fff" font-size="12" font-weight="800" text-anchor="middle" font-family="'JetBrains Mono',monospace">11</text>
+            <rect x="84" y="228" width="30" height="20" rx="3" fill="#0c0c0e"/><rect x="90" y="232" width="18" height="12" rx="2" fill="#d8b04a"/><text x="66" y="243" fill="#fff" font-size="11" font-weight="800" text-anchor="middle" font-family="'JetBrains Mono',monospace">GND</text>
+
+            <!-- LED 1 (existing) green -->
+            <path d="M114 50 H164" fill="none" stroke="#d8493f" stroke-width="4" stroke-linecap="round"/>
+            <rect x="164" y="36" width="98" height="28" rx="5" fill="#e7d3b8" stroke="#caa978" stroke-width="1.5"/><polyline points="172,50 181,39 191,61 201,39 211,61 221,39 231,61 241,39 254,50" fill="none" stroke="#7a5a32" stroke-width="2"/><text x="208" y="30" fill="#5a6068" font-size="10" font-weight="700" text-anchor="middle">220 Ω</text>
+            <path d="M262 50 H296" fill="none" stroke="#d8493f" stroke-width="4" stroke-linecap="round"/><circle cx="318" cy="50" r="17" fill="#3fd06a" stroke="#1f9d4d" stroke-width="2"/><text x="318" y="26" fill="#5a6068" font-size="10" font-weight="700" text-anchor="middle">לד 1</text>
+            <path d="M335 50 H470 V242 H114" fill="none" stroke="#2b2f36" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- LED 2 (existing) yellow -->
+            <path d="M114 114 H164" fill="none" stroke="#d8493f" stroke-width="4" stroke-linecap="round"/>
+            <rect x="164" y="100" width="98" height="28" rx="5" fill="#e7d3b8" stroke="#caa978" stroke-width="1.5"/><polyline points="172,114 181,103 191,125 201,103 211,125 221,103 231,125 241,103 254,114" fill="none" stroke="#7a5a32" stroke-width="2"/><text x="208" y="94" fill="#5a6068" font-size="10" font-weight="700" text-anchor="middle">220 Ω</text>
+            <path d="M262 114 H296" fill="none" stroke="#d8493f" stroke-width="4" stroke-linecap="round"/><circle cx="318" cy="114" r="17" fill="#f2cf3a" stroke="#c79a2e" stroke-width="2"/><text x="318" y="90" fill="#5a6068" font-size="10" font-weight="700" text-anchor="middle">לד 2</text>
+            <path d="M335 114 H446 V242" fill="none" stroke="#2b2f36" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- LED 3 (new) red highlighted -->
+            <path d="M114 178 H164" fill="none" stroke="#d8493f" stroke-width="4.5" stroke-linecap="round"/>
+            <rect x="164" y="164" width="98" height="28" rx="5" fill="#e7d3b8" stroke="#caa978" stroke-width="1.5"/><polyline points="172,178 181,167 191,189 201,167 211,189 221,167 231,189 241,167 254,178" fill="none" stroke="#7a5a32" stroke-width="2"/><text x="208" y="158" fill="#5a6068" font-size="10" font-weight="700" text-anchor="middle">220 Ω</text>
+            <path d="M262 178 H296" fill="none" stroke="#d8493f" stroke-width="4.5" stroke-linecap="round"/><circle cx="318" cy="178" r="18" fill="#e8533f" stroke="#b8331f" stroke-width="2.5"/><text x="318" y="210" fill="#1f7a42" font-size="10.5" font-weight="800" text-anchor="middle">לד 3 (חדש)</text>
+            <path d="M336 178 H422 V242" fill="none" stroke="#2b2f36" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div dir="ltr" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; padding:11px 12px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:11.5px; font-weight:600;">
+          <span style="display:inline-flex; align-items:center; gap:5px; color:oklch(0.5 0.14 145);"><span style="width:9px; height:9px; border-radius:50%; background:oklch(0.65 0.18 145);"></span>9 → לד 1</span>
+          <span style="display:inline-flex; align-items:center; gap:5px; color:oklch(0.52 0.12 90);"><span style="width:9px; height:9px; border-radius:50%; background:oklch(0.78 0.15 90);"></span>10 → לד 2</span>
+          <span style="display:inline-flex; align-items:center; gap:5px; color:oklch(0.52 0.16 28);"><span style="width:9px; height:9px; border-radius:50%; background:oklch(0.62 0.2 28);"></span>11 → לד 3</span>
+          <span style="display:inline-flex; align-items:center; gap:5px; color:oklch(0.4 0.012 260);"><span style="width:14px; height:3px; border-radius:2px; background:oklch(0.3 0.012 260);"></span>כל הקצרות → GND · בלי כפתור</span>
+        </div>
+      </div>
+
+      <!-- Fritzing breadboard diagram -->
+      <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:30px; text-align:center;">
+        <img src="../images/w4_three_leds_chasing_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים במקביל — רגל 9 דרך נגד 220 אוהם ללד 1, רגל 10 דרך נגד 220 אוהם ללד 2, רגל 11 דרך נגד 220 אוהם ללד 3, כל הרגליים הקצרות ל-GND. בלי כפתור." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+      </div>
+
+      <!-- STEPS -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה עושים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בוחרים לד שלישי <strong>בצבע שלישי</strong>, שונה מ-1 ו-2 (כדי לראות את הרדיפה בבירור), ועוד נגד 220 אוהם.</p>
+        </div>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מכניסים את הלד השלישי טור אחד הצידה מהשני. כל רגל בטור שונה.</p>
+        </div>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">רגל ארוכה (+) ל<strong>רגל 11</strong> דרך נגד 220 אוהם, רגל קצרה (−) ל-<strong>GND</strong>.</p>
+        </div>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בודקים ששני הלדים הראשונים <strong>עדיין מחוברים</strong> לרגליים 9 ו-10.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה אמורים לראות</div>
+          <p style="margin:0; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">שלושה לדים בשלושה צבעים שונים, זה לצד זה, כל אחד עם נגד 220 אוהם לרגל שונה (9, 10, 11). <strong>אף אחד לא מאיר עדיין</strong> — קוד הרדיפה מגיע כשמעלים את הקוד ההתחלתי משלב 2.</p>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימנו כש…
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שלושה לדים בברדבורד, טור אחד בין כל אחד, בשלושה צבעים</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>רגל ארוכה של לד 3 דרך נגד 220 אוהם לרגל 11</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>רגל קצרה של לד 3 מחוברת ל-GND</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שני הלדים הראשונים עדיין מחווטים לרגליים 9 ו-10</span></div>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.45 0.12 300); margin-bottom:11px;">
+          <span style="font-size:20px;">🪄</span>תקועים?
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>אותה תבנית כמו לדים 1 ו-2 — רק טור אחד הצידה, לרגל 11.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>אם לד קודם הפסיק לעבוד בזמן החיווט — כנראה ג'אמפר התנתק. מחברים מחדש.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>צריך עזרה? קוראים למורה.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:1180}}">
+class Component extends DCLogic {
+  state = { checked: {} };
+  KEY = 'tc_p1t2m2b_checks';
+  componentDidMount() {
+    try { const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) }); } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  renderVals() {
+    const v = {};
+    for (let i = 1; i <= 14; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

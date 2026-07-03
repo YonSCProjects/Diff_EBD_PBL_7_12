@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית עזר R0 — איך עובד ברדבורד</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .orient {
+    background: #eef3f8;
+    border-inline-start: 5pt solid #5a7391;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 12.5pt;
+    color: #234;
+  }
+  .big-msg {
+    background: #fff8e1;
+    border: 2pt solid #f57c00;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 15pt;
+    text-align: right;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border-inline-start: 5pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key strong { color: #000; }
+  .tip {
+    background: #f1f8e9;
+    border-inline-start: 5pt solid #558b2f;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont { color: #b00; font-weight: bold; }
+  .bb-ascii {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    border: 1pt solid #ccc;
+    padding: 8pt 8pt;
+    margin: 10pt 0;
+    line-height: 1.35;
+    white-space: pre;
+    overflow-x: auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: left;
+  }
+  .chain {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    background: #fafcff;
+    border: 1pt solid #b8c4d8;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    text-align: center;
+    direction: ltr;
+    unicode-bidi: isolate;
+    page-break-inside: avoid;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">R0</div>
+
+<div class="header">
+  <h1><span class="section-icon">🧩</span>איך עובד ברדבורד</h1>
+  <div class="subtitle">פרויקט #4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="orient">
+קוראים את הכרטיסייה הזאת לפני הפגישה הראשונה. לא צריך לשנן אותה — משאירים אותה על שולחן העבודה וחוזרים לכל חלק כשנתקעים.
+</div>
+
+<div class="big-msg">
+ברדבורד מאפשר לבנות מעגלים חשמליים בלי להלחים. מכניסים את הרגליים של הרכיבים ואת חוטי הג'אמפר לתוך החורים, והלוח מחבר ביניהם בפנים — בלי כלים. בסוף אפשר להוציא הכל ולהשתמש בחלקים שוב.
+</div>
+
+<h2><span class="section-icon">🗺️</span>בלוח יש ארבעה אזורים</h2>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_00_empty_breadboard</div>
+  <p>כאן ייכנס תרשים של ברדבורד ריק: מסילות המתח (+ ו-−) למעלה ולמטה, וביניהן טורים ממוספרים המופרדים במרווח המרכזי. השורות מסומנות a–e בחצי אחד ו-f–j בחצי השני. בינתיים — התרשים המצויר למטה מראה את אותו הדבר.</p>
+</div>
+
+<div class="bb-ascii">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+
+     a  ● ● ● ● ● ● ● ● ● ● ●
+     b  ● ● ● ● ● ● ● ● ● ● ●
+     c  ● ● ● ● ● ● ● ● ● ● ●       top half
+     d  ● ● ● ● ● ● ● ● ● ● ●
+     e  ● ● ● ● ● ● ● ● ● ● ●
+                                    ← centre gap
+     f  ● ● ● ● ● ● ● ● ● ● ●
+     g  ● ● ● ● ● ● ● ● ● ● ●
+     h  ● ● ● ● ● ● ● ● ● ● ●       bottom half
+     i  ● ● ● ● ● ● ● ● ● ● ●
+     j  ● ● ● ● ● ● ● ● ● ● ●
+
+     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+        1 2 3 4 5 6 7 8 9 10 …</div>
+
+<div class="key">
+<strong>שני הכללים שחשוב להכיר</strong>
+<ul>
+  <li><strong>בתוך טור ממוספר אחד, השורות a–e מחוברות ביניהן.</strong> החורים a5, b5, c5, d5, e5 כולם חולקים חיבור חשמלי אחד. כל מה שמכניסים לחמשת החורים האלה — מחובר ביחד.</li>
+  <li><strong>השורות f–j מחוברות באותה צורה, אבל בנפרד מ-a–e.</strong> המרווח המרכזי שובר את החיבור — החורים e5 ו-f5 <strong>לא</strong> מחוברים ביניהם.</li>
+</ul>
+</div>
+
+<div class="key">
+<strong>שתי מסילות המתח</strong>
+<ul>
+  <li>המסילה ה<span style="color:#c00;"><strong>אדומה</strong></span> (מסומנת +) עוברת לאורך כל הלוח. כל החורים לאורך המסילה האדומה מחוברים ביניהם. משמשת ל-<strong>5 V</strong>.</li>
+  <li>המסילה ה<span style="color:#036;"><strong>כחולה</strong></span> (מסומנת −) גם עוברת לאורך כל הלוח. כל החורים לאורך המסילה הכחולה מחוברים. משמשת ל-<strong>GND</strong> (הארקה).</li>
+  <li>מכיוון שכל מסילה עוברת לאורך כל הלוח, אפשר לשאוב מתח מכל מקום לאורכה — אין צורך בחוט נפרד לכל רכיב.</li>
+</ul>
+</div>
+
+<h2><span class="section-icon">🔌</span>בפרויקט 4 הברדבורד הוא מרכז החשמל של המכונית</h2>
+
+<div class="key">
+<strong>מרכז החשמל של המכונית</strong>
+<ul>
+  <li>חוט מרגל <strong>5V</strong> של הארדואינו נכנס ל<strong>מסילה האדומה (+)</strong>, וחוט מ-<strong>GND</strong> נכנס ל<strong>מסילה הכחולה (−)</strong>.</li>
+  <li>שני חיישני הקו מקבלים חשמל מהמסילות: <strong>VCC</strong> מהמסילה האדומה, <strong>GND</strong> מהמסילה הכחולה. לארדואינו יש רק רגל 5V אחת — המסילות מפצלות אותה לשני החיישנים.</li>
+  <li>גם <strong>חוט ההארקה המשותפת</strong> אל בקר המנועים L298N יכול לעבור דרך המסילה הכחולה (−).</li>
+</ul>
+</div>
+
+<h2><span class="section-icon">💡</span>איך מחברים את חיישן הקו למסילות</h2>
+
+<p>לכל חיישן קו יש <strong>שלוש רגליים מסומנות</strong>: VCC, GND ו-OUT. שלושה חוטי ג'אמפר מחברים אותן למקומות קבועים: <strong>VCC</strong> אל ה<strong>מסילה האדומה (+)</strong>, <strong>GND</strong> אל ה<strong>מסילה הכחולה (−)</strong>, ו-<strong>OUT</strong> אל רגל <strong>11</strong> או <strong>12</strong> של הארדואינו.</p>
+
+<div class="tip">
+<strong>כלל אצבע:</strong> קודם המתח, אחר-כך האות — מחברים VCC ו-GND, ורק אז את OUT. לפני שמדליקים בודקים פעמיים: VCC במסילה האדומה, GND במסילה הכחולה — אף פעם לא הפוך.
+</div>
+
+<h2><span class="section-icon">🔗</span>מה משמעות "רגל A של הכפתור ← (+) ; רגל B ← רגל 2" על הברדבורד</h2>
+
+<p>כאשר כרטיסיית החיווט <span class="r-ref">R1</span> של הפרויקט הזה כותבת על כפתור גרסה 3: <em>"רגל A של הכפתור ← (+) ; רגל B ← רגל 2 ; ודרך נגד 10 קילו-אוהם ← (−)"</em>, אלו שרשראות החיבורים שבונים:</p>
+
+<div class="chain">[Button leg A] ── wire ── [(+) rail]<br>[Button leg B] ── wire ── [Arduino pin 2]<br>[Button leg B] ── [10 kΩ] ── wire ── [(−) rail]</div>
+
+<p>על הברדבורד, כל חיבור בשרשרת למעלה הוא טור משותף אחד. כך קוראים אותה טור-אחר-טור:</p>
+
+<ul>
+  <li>הכפתור יושב לרוחב החריץ המרכזי — רגל A בטור ממוספר אחד, רגל B בטור אחר.</li>
+  <li>מהטור של <strong>רגל A</strong> יוצא חוט ג'אמפר אל ה<strong>מסילה האדומה (+)</strong> — זו השרשרת הראשונה, וזהו.</li>
+  <li>מהטור של <strong>רגל B</strong> יוצא חוט ג'אמפר אל <strong>רגל 2</strong> של הארדואינו — הם חולקים טור אחד, ולכן מחוברים.</li>
+  <li>רגל אחת של <strong>נגד 10 קילו-אוהם</strong> נכנסת ל<strong>אותו טור</strong> של רגל B — עכשיו רגל B, הג'אמפר לרגל 2 והנגד מחוברים יחד.</li>
+  <li>הרגל השנייה של הנגד נכנסת ל<strong>טור חדש</strong>, ומשם חוט ג'אמפר אל ה<strong>מסילה הכחולה (−)</strong>.</li>
+</ul>
+
+<div class="key">
+<strong>חיישני הקו — הרכיבים החדשים בפרויקט 4</strong>
+<ul>
+  <li>לכל חיישן קו יש <strong>שלוש רגליים</strong> מסומנות: VCC, GND, OUT.</li>
+  <li>החיישנים לא יושבים על הברדבורד — הם מורכבים בקדמת השלדה, עם הפנים לרצפה. אליהם מגיעים <strong>חוטי ג'אמפר</strong>.</li>
+  <li>VCC מתחבר ל<strong>מסילה האדומה (+)</strong> ו-GND ל<strong>מסילה הכחולה (−)</strong> — בדיוק כמו כל רכיב שצורך מתח.</li>
+  <li>OUT היא רגל האות: החיישן השמאלי לרגל דיגיטלית <strong>11</strong>, החיישן הימני לרגל דיגיטלית <strong>12</strong>. דרכה הארדואינו יודע אם החיישן רואה קו שחור או רצפה.</li>
+  <li><span class="dont">VCC ו-GND הפוכים זה לזה — לא מתחלפים.</span> VCC תמיד למסילה האדומה, GND תמיד לכחולה. בודקים פעמיים לפני שמדליקים את הארדואינו.</li>
+</ul>
+</div>
+
+<p>הברדבורד עושה את החיווט בשבילנו — רק בוחרים לאיזה טור או מסילה כל רגל וכל חוט נכנסים.</p>
+
+<h2><span class="section-icon">🔍</span>שני דברים לבדוק אם משהו עדיין לא עובד</h2>
+
+<div class="tip">
+<strong>בדיקה 1 — האם כל חוט נכנס למסילה הנכונה?</strong> בפרויקט 4 רוב החיבורים על הברדבורד הולכים אל המסילות. בודקים אחד-אחד: כל חוט של 5V או VCC — במסילה ה<strong>אדומה (+)</strong>; כל חוט של GND — במסילה ה<strong>כחולה (−)</strong>. חוט שנכנס בטעות למסילה הלא-נכונה (או לטור ממוספר במקום למסילה) שובר את החיבור. ואם רכיב יושב על הלוח — כל רגל שלו בטור משלה, אף פעם לא שתי רגליים באותו טור.
+</div>
+
+<div class="tip">
+<strong>בדיקה 2 — האם כל רגל חולקת את הטור שלה עם בדיוק השכן הנכון?</strong> עוברים על השרשרת בקול רם. לחיישן הקו: "ה-VCC נכנס למסילה ה<em>אדומה</em>; ה-GND נכנס למסילה ה<em>כחולה</em>; ה-OUT מגיע לרגל 11 או 12". לכפתור של גרסה 3: "רגל A והג'אמפר למסילה האדומה נכנסים ל<em>אותו</em> טור; רגל B, הג'אמפר לרגל 2 ורגל אחת של הנגד נכנסים ל<em>אותו</em> טור; הרגל השנייה של הנגד והג'אמפר למסילה הכחולה נכנסים ל<em>אותו</em> טור". אם זוג כלשהו נמצא ב<em>טורים שונים</em> — השרשרת שבורה שם. מעבירים את הרגל לטור המתאים.
+</div>
+
+<h2><span class="section-icon">✅</span>יש לכם את מה שצריך</h2>
+
+<p>הכרטיסייה הבאה היא <span class="r-ref">R1</span> — חיווט פרויקט 4. משאירים את <span class="r-ref">R0</span> על שולחן העבודה — אם משהו לא עובד בהמשך, שתי הבדיקות למעלה לרוב ימצאו את הבעיה.</p>
+
+<footer>
+  R0 — איך עובד ברדבורד · פרויקט #4 מכונית עוקבת קו
+</footer>
+
+</div>
+</body>
+</html>

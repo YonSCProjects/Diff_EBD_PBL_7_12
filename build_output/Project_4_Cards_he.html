@@ -1,0 +1,4223 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>פרויקט 4 — מכונית עוקבת קו: חוברת כרטיסיות (עזר ומשימה)</title>
+<style>/* Project 1 — Light Signals: shared task card stylesheet
+ * Used by all Tier 1, Tier 2, and Tier 3 task cards, and by the HTML tutorial.
+ * Matches the R1-R5 reference card visual style so students can switch
+ * between printed cards and HTML tutorial without cognitive friction.
+ * A4 portrait, 14pt body text, high contrast, laminate-ready.
+ */
+
+@page { size: A4 portrait; margin: 15mm; }
+
+* { box-sizing: border-box; }
+
+body {
+  /* Arial first for reliable Hebrew rendering (Windows Arial has
+   * consistent regular and bold Hebrew glyphs across Windows versions;
+   * Segoe UI's Hebrew bold can fall back to synthesized bold which
+   * looks visually different). Segoe UI and -apple-system kept as
+   * fallbacks for LTR English on non-Windows systems. */
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+  font-size: 14pt;
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  max-width: 210mm;
+  padding: 12mm;
+  margin: 0 auto;
+}
+
+/* Header with milestone badge, title, subtitle */
+
+.header {
+  border-bottom: 3pt solid #000;
+  padding-bottom: 10pt;
+  margin-bottom: 14pt;
+}
+
+/* Card-locator line — the very-top descriptive string that lets a teacher /
+ * student find the right card at a glance. Format:
+ *   "פרויקט #1 — אותות אור: שלב 1 מתוך 8"
+ *   "Project #1 — Light Signals: Milestone 1 of 8"
+ * Quiet by design (small, dimmed). The card's identity comes from the h1
+ * below; this line just answers "which card is this?". */
+.milestone-badge {
+  display: block;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 0.3pt;
+  margin-bottom: 8pt;
+}
+
+.milestone-badge.celebration {
+  color: #8b6000;
+}
+
+/* Section icons (the emoji before headings and callout labels). A small,
+ * consistent trailing gap so the icon doesn't butt against the text.
+ * margin-inline-end resolves to the correct side in both LTR and RTL. */
+.section-icon {
+  margin-inline-end: 4pt;
+}
+
+/* Subtitle now lives inside the .milestone-badge locator string, so the
+ * separate subtitle line is redundant — hide it. */
+.subtitle {
+  display: none;
+}
+
+h1 {
+  font-size: 22pt;
+  margin: 4pt 0 6pt 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 12pt;
+  color: #555;
+  margin-top: 3pt;
+}
+
+/* Why-this-milestone callout (pale blue italic).
+ * Uses border-inline-start so it renders correctly under both LTR
+ * (border on the left) and RTL Hebrew (border on the right). */
+
+.why {
+  background: #f0f4fa;
+  border-inline-start: 5pt solid #0050a0;
+  padding: 10pt 14pt;
+  margin: 14pt 0;
+  font-style: italic;
+  font-size: 13pt;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: flow-root;
+}
+
+/* Safety net: when a blue .why callout immediately follows an ASCII
+ * wiring diagram or a code block, force the .why onto a new page.
+ * Chromium occasionally violates break-inside: avoid in tight layouts
+ * where the only alternative would push content to the next page —
+ * this explicit page-break-before guarantees the atomic box never
+ * splits in the wiring-block -> why sequence common to T1-M3/M5/M7. */
+.wiring-block + .why,
+.code-block + .why,
+pre + .why {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* Keep "מה עושים" / "What to do" together with all its checklist items.
+ * When a second h2 follows a .checklist (e.g. "הקוד שמעלים" / "תרשים
+ * החיווט" after the action list), force the page break to happen there
+ * rather than mid-checklist. This guarantees the action list is read as
+ * one coherent unit on the page where its h2 lives. */
+@media print {
+  .checklist + h2 {
+    page-break-before: always;
+    break-before: page;
+  }
+}
+
+.why ul {
+  margin: 6pt 0 2pt 0;
+  padding-inline-start: 22pt;
+}
+
+.why li {
+  margin: 3pt 0;
+  line-height: 1.45;
+}
+
+/* Together-milestone notice (first-milestone distinctive) */
+
+.together-notice {
+  background: #fff3d6;
+  border: 2pt solid #d4a017;
+  border-radius: 4pt;
+  padding: 14pt 18pt;
+  margin: 14pt 0;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.together-notice strong {
+  display: block;
+  font-size: 16pt;
+  margin-bottom: 4pt;
+}
+
+/* Section headers — soft cream panel with a warm gold accent strip on the
+ * inline-start edge. Replaces the previous solid-black bar (which read as
+ * harsh / heavy under print and screen). The cream + gold pairing matches
+ * the .together-notice and .recognition-line callouts so the card has one
+ * consistent warm-accent palette. Tutorial overrides (e.g. .tutorial-intro
+ * h2) keep their own colors via higher specificity. */
+
+h2 {
+  font-size: 17pt;
+  margin: 18pt 0 8pt 0;
+  padding: 7pt 14pt;
+  background: #f1e5c8;
+  color: #1a2a3a;
+  border-inline-start: 5pt solid #a87833;
+  border-radius: 3pt;
+}
+
+/* In-card sub-divider heading (e.g. "חלק א׳ / חלק ב׳" on two-part milestones
+ * like T1_M3 / T1_M4). Lighter than the h2 cream panel — no background, just a
+ * thin warm accent on the inline-start edge — so the h1 > h2 > h3 hierarchy
+ * stays clear. .tutorial-nav h3 keeps its own look via higher specificity. */
+h3 {
+  font-size: 15pt;
+  margin: 16pt 0 6pt 0;
+  padding: 3pt 12pt;
+  color: #1a2a3a;
+  border-inline-start: 4pt solid #c9a86a;
+}
+
+/* Base table styling — pin-map / sketch-index tables (R1, R5). Without this the
+ * shared stylesheet left tables unstyled (no grid, no padding). The @media
+ * print block already handles row-level breaks + repeating <thead>. Header
+ * shading reuses the h2 cream so tables match the card family palette. */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10pt 0;
+  font-size: 13pt;
+}
+
+th, td {
+  border: 1pt solid #999;
+  padding: 6pt 10pt;
+  text-align: inherit;
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+thead th {
+  background: #f1e5c8;
+}
+
+/* "Key point" callout — a calm, noticeable highlight for an important note or
+ * reassurance (e.g. "a big number is normal, not a bug"). Defined globally so
+ * task cards get a styled, print-safe box. Reference cards that define .key in
+ * their own <style> block keep their local look (inline rule wins by order). */
+.key {
+  background: #fff8e1;
+  border: 2pt solid #f0c040;
+  border-radius: 4pt;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+  font-size: 13pt;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Optional planner field (Tier 3) — dashed border + muted fill so it reads as
+ * skippable at a glance, distinct from the required solid-border fields. */
+.field-optional {
+  border-style: dashed;
+  border-color: #888;
+  background: #f4f4f4;
+}
+
+p { margin: 6pt 0; }
+
+/* Checklist — big checkboxes for scannability */
+
+.checklist {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 10pt 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-block: 6pt;
+  padding-inline-start: 34pt;
+  padding-inline-end: 0;
+  margin: 4pt 0;
+  line-height: 1.5;
+  border-bottom: 1pt dashed #ddd;
+}
+
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  inset-inline-start: 4pt;
+  top: 3pt;
+  font-size: 22pt;
+  line-height: 1;
+}
+
+.checklist li:last-child {
+  border-bottom: none;
+}
+
+/* Screen-interactive: clicking toggles a ✓ and persists in localStorage
+ * per nickname (see card.js). Print view strips interactivity and keeps
+ * the plain empty boxes so the laminated card still works with a marker. */
+.checklist li {
+  cursor: pointer;
+  user-select: none;
+}
+
+.checklist li.checked::before {
+  content: "☑";
+}
+
+.checklist li.checked {
+  color: #666;
+  text-decoration: line-through;
+  text-decoration-color: #aaa;
+}
+
+/* Nickname indicator strip (screen only) */
+.nickname-indicator {
+  background: #f5f5f5;
+  border: 1pt solid #ccc;
+  padding: 6pt 12pt;
+  margin: 0 0 10pt 0;
+  font-size: 11pt;
+  display: flex;
+  gap: 10pt;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nickname-indicator strong {
+  font-weight: bold;
+}
+
+.nickname-indicator button {
+  font-size: 10pt;
+  padding: 3pt 10pt;
+  border: 1pt solid #888;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nickname-indicator button:hover {
+  background: #e8e8e8;
+}
+
+/* Code snippet block — the full .ino printed for reading on paper */
+
+.code-block {
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  line-height: 1.4;
+  white-space: pre;
+  overflow-x: auto;
+  page-break-inside: avoid;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+.code-block .filename {
+  display: block;
+  font-size: 10pt;
+  color: #666;
+  margin-bottom: 8pt;
+  font-style: italic;
+}
+
+/* ASCII wiring diagram block */
+
+.wiring-block {
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 12pt;
+  line-height: 1.3;
+  white-space: pre;
+  page-break-inside: avoid;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* Image slot — living placeholder for Fritzing or photo */
+
+.image-slot {
+  border: 2pt dashed #667;
+  background: #f0f4fa;
+  padding: 14pt 18pt;
+  margin: 12pt 0;
+  font-size: 11pt;
+  page-break-inside: avoid;
+}
+
+.image-slot-header {
+  font-weight: bold;
+  color: #334;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 11pt;
+  margin-bottom: 6pt;
+}
+
+.image-slot p {
+  margin: 4pt 0;
+  font-size: 11pt;
+}
+
+/* Wiring figure — Fritzing breadboard diagram + caption */
+
+.wiring-figure {
+  border: 1pt solid #b8c4d8;
+  background: #fafcff;
+  padding: 10pt 12pt 8pt;
+  margin: 12pt 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  text-align: center;
+}
+
+.wiring-figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 260pt;
+  height: auto;
+  margin: 0 auto;
+}
+
+.wiring-figure figcaption {
+  margin-top: 6pt;
+  font-size: 10pt;
+  color: #455;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.wiring-figure figcaption strong {
+  color: #223;
+}
+
+/* Expected-result block (green) */
+
+.expected {
+  background: #e8f5e9;
+  border-inline-start: 5pt solid #2e7d32;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+}
+
+.expected strong {
+  display: block;
+  margin-bottom: 4pt;
+  color: #1b5e20;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 12pt;
+}
+
+/* Done-when block (double border) */
+
+.done-when {
+  background: #fff;
+  border: 3pt double #000;
+  border-radius: 4pt;
+  padding: 14pt 18pt;
+  margin: 16pt 0;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.done-when strong {
+  display: block;
+  font-size: 12pt;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  margin-bottom: 6pt;
+}
+
+.done-when ul {
+  margin: 6pt 0 0 0;
+  padding-inline-start: 20pt;
+  font-weight: normal;
+  font-size: 13pt;
+}
+
+.done-when ul li {
+  margin: 3pt 0;
+  padding-block: 5pt;
+  line-height: 1.6;
+  border-bottom: 1pt solid #e0e0e0;
+}
+
+.done-when ul li:last-child {
+  border-bottom: none;
+}
+
+/* Stuck protocol short version (pale yellow) */
+
+.stuck {
+  background: #fffbe0;
+  border-inline-start: 5pt solid #d4a017;
+  padding: 10pt 14pt;
+  margin: 12pt 0;
+  font-size: 13pt;
+}
+
+.stuck strong {
+  display: block;
+  margin-bottom: 3pt;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+/* Each scenario in the stuck list gets its own airy white card with a
+ * soft gold border. The cards stack with breathing room between them so
+ * an ADHD/EBD student can scan one scenario at a time without a wall-of-
+ * text feel. The list-marker is dropped because the card itself carries
+ * the visual separation. */
+.stuck ul {
+  list-style: none;
+  margin: 10pt 0 2pt 0;
+  padding-inline-start: 0;
+}
+
+.stuck ul li {
+  background: #fff;
+  border: 1pt solid #e8d088;
+  border-radius: 4pt;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+  line-height: 1.5;
+}
+
+.stuck ul li strong {
+  display: inline;
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: inherit;
+  letter-spacing: 0;
+}
+
+/* Warning block (pale red, for the button pull-down pitfall especially) */
+
+.warning {
+  background: #fef0f0;
+  border-inline-start: 5pt solid #b00;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+  font-size: 13pt;
+}
+
+.warning > strong {
+  color: #b00;
+  display: block;
+  margin-bottom: 3pt;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+/* A rules-list inside a warning box (e.g. the four soldering safety rules).
+ * Each rule gets its own airy white card — same one-scenario-at-a-time
+ * treatment as .stuck ul — and per-item <strong> emphasis stays INLINE
+ * (the box-heading styling above is scoped to direct children only). */
+.warning ul {
+  list-style: none;
+  margin: 8pt 0 2pt 0;
+  padding-inline-start: 0;
+}
+
+.warning ul li {
+  background: #fff;
+  border: 1pt solid #e8b4b4;
+  border-radius: 4pt;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+  line-height: 1.5;
+}
+
+.warning ul li strong {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+
+/* Choice-preview block (pale blue, "look ahead") — used on start-up cards
+ * to introduce upcoming choice points without making them actionable yet.
+ * Distinct hue from the green .expected and red .warning so a student reads
+ * it as "coming up", not "do now". */
+.choice-preview {
+  background: #e8f1fb;
+  border-inline-start: 5pt solid #1565c0;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+  font-size: 13pt;
+}
+
+.choice-preview strong {
+  display: block;
+  margin-bottom: 4pt;
+  color: #0d47a1;
+  text-transform: uppercase;
+  font-size: 11pt;
+  letter-spacing: 0.5pt;
+}
+
+.choice-preview ul {
+  margin: 6pt 0 4pt 0;
+  padding-inline-start: 20pt;
+}
+
+.choice-preview ul li {
+  margin: 5pt 0;
+  line-height: 1.6;
+}
+
+/* Recognition line block — Milestone 1 together-ritual */
+
+.recognition-line {
+  background: #fff3d6;
+  border: 3pt solid #d4a017;
+  border-radius: 4pt;
+  padding: 14pt 18pt;
+  margin: 14pt 0;
+  text-align: center;
+  font-size: 16pt;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.recognition-line::before {
+  content: "\201C";
+  font-size: 24pt;
+  vertical-align: -4pt;
+  color: #d4a017;
+}
+
+.recognition-line::after {
+  content: "\201D";
+  font-size: 24pt;
+  vertical-align: -4pt;
+  color: #d4a017;
+}
+
+/* RTL: swap opening/closing quotes so the opening quote sits at the
+ * visual start (right side) of the recognition line in Hebrew. */
+[dir="rtl"] .recognition-line::before { content: "\201D"; }
+[dir="rtl"] .recognition-line::after { content: "\201C"; }
+
+/* Celebration block — final-milestone project complete.
+ * Scoped with :not(.milestone-badge) so the box styling never bleeds onto
+ * the top locator line, which combines "milestone-badge celebration" to get
+ * only the gold text color — the locator must stay quiet, not a gold box. */
+
+.celebration:not(.milestone-badge) {
+  background: #fff3d6;
+  border: 3pt solid #d4a017;
+  border-radius: 4pt;
+  padding: 16pt 20pt;
+  margin: 16pt 0;
+  text-align: center;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.celebration .title {
+  font-size: 22pt;
+  color: #8b6000;
+  display: block;
+  margin-bottom: 8pt;
+}
+
+/* Prompt template (Tier 2+ Claude Code Level 2 interactions) */
+
+.prompt-template {
+  background: #f4f7fb;
+  border: 1pt solid #99b;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 12pt;
+  white-space: pre-wrap;
+  line-height: 1.45;
+  page-break-inside: avoid;
+}
+
+/* Choice-point block (Tier 2 pattern choice, button behaviour choice) */
+
+.choice-point {
+  background: #f0f4fa;
+  border: 2pt solid #0050a0;
+  border-radius: 4pt;
+  padding: 12pt 14pt;
+  margin: 14pt 0;
+}
+
+.choice-point strong {
+  display: block;
+  color: #0050a0;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  font-size: 12pt;
+  margin-bottom: 6pt;
+}
+
+.choice-point .option {
+  background: #fff;
+  border: 1pt solid #99b;
+  border-radius: 3pt;
+  padding: 8pt 12pt;
+  margin: 6pt 0;
+}
+
+.choice-point .option strong {
+  color: #000;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14pt;
+  margin-bottom: 2pt;
+}
+
+/* Tier 3 planner fill-in-the-blank fields */
+
+.field {
+  border: 1pt solid #000;
+  padding: 12pt 14pt;
+  margin: 10pt 0;
+  min-height: 60pt;
+  background: #fafafa;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-bottom: 4pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+}
+
+.field .hint {
+  color: #666;
+  font-size: 11pt;
+  font-style: italic;
+  margin-bottom: 6pt;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 20pt;
+  padding-top: 10pt;
+  border-top: 1pt dashed #999;
+  font-size: 10pt;
+  color: #666;
+  text-align: center;
+}
+
+/* Print-specific tweaks */
+
+@media print {
+  body { font-size: 13pt; }
+  .card { padding: 10mm; }
+  a { color: #000; text-decoration: underline; }
+
+  /* Screen-only blocks: hidden on the laminated card but visible in
+   * the browser/HTML view. Used for the "code listing" sections
+   * ("הקוד שמעלים" / "The sketch you are uploading" + intro paragraph
+   * + code-block). The student sees the same code when they open the
+   * .ino file in Arduino IDE per the action steps, so duplicating it
+   * on the printed card adds bulk without action value. */
+  .screen-only { display: none; }
+
+  /* Print = laminated artifact: always show empty boxes, no interactivity,
+   * no nickname strip, no strikethrough on checked items. */
+  .nickname-indicator { display: none; }
+  .checklist li { cursor: default; }
+  .checklist li.checked { color: #000; text-decoration: none; }
+  .checklist li.checked::before { content: "☐"; }
+
+  /* Keep callout boxes from splitting across a page break — a callout
+   * broken mid-box is disorienting and defeats the box's visual framing.
+   * .choice-point is intentionally excluded: it can be tall (3 options)
+   * and forcing it whole often leaves a near-empty first page. Instead
+   * we keep each individual .option inside it together.
+   * Tables are also excluded here — they use a separate rule below
+   * that allows row-level splits with repeating headers. */
+  .why, .together-notice, .expected, .done-when, .stuck,
+  .warning, .choice-preview, .important, .recognition-line, .celebration,
+  .prompt-template, .image-slot, .field, .living-placeholder,
+  .step {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Paragraphs and list items are atomic — never split mid-sentence or
+   * mid-item. Card paragraphs are short, so whitespace cost is minimal
+   * while the readability win is non-negotiable. */
+  p {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Extend heading-to-body bonding to the second following sibling so a
+   * heading + short lead-in + list/table move together (prevents
+   * heading + one line stranded at page bottom with body starting on
+   * the next page). */
+  h2 + * + *, h3 + * + *, h4 + * + * {
+    page-break-before: avoid;
+    break-before: avoid-page;
+  }
+
+  /* Tables: allow row-level splits with repeating <thead> on the
+   * continuation page. A whole-table keep-together is opt-in via
+   * .table-keep-together. */
+  table {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tbody tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .table-keep-together {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .choice-point .option {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Keep each option's title (<strong>) bonded to its following .option
+   * body so the title never strands at the bottom of a page. */
+  .choice-point strong {
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+  .choice-point strong + .option {
+    page-break-before: avoid;
+    break-before: avoid-page;
+  }
+
+  /* Living placeholders are authoring scaffolding for image slots —
+   * they must never reach a laminated student card. */
+  .living-placeholder { display: none; }
+
+  /* Two-page cards: when the recognition line appears mid-card, force
+   * the "what you should see" + "done when" + "stuck" cluster onto
+   * page 2 so the ceremonial line closes page 1 cleanly. */
+  .recognition-line + .expected {
+    page-break-before: always;
+  }
+}
+
+/* =====================================================================
+ * Tutorial-specific styles
+ * Used by project_1_tutorial.html, which links to this same stylesheet
+ * so the tutorial visually matches the printed task cards.
+ * ===================================================================*/
+
+/* Tutorial intro block (blue, introduces how to use the tutorial) */
+
+.tutorial-intro {
+  background: #e3f2fd;
+  border: 3pt solid #1565c0;
+  padding: 18pt 22pt;
+  margin: 20pt 0;
+  font-size: 14pt;
+}
+
+.tutorial-intro h2 {
+  margin-top: 0;
+  background: #1565c0;
+}
+
+.tutorial-intro p {
+  margin: 8pt 0;
+  line-height: 1.55;
+}
+
+/* Tutorial navigation (table of contents with anchor links) */
+
+.tutorial-nav {
+  background: #f5f5f5;
+  border: 1pt solid #aaa;
+  padding: 16pt 22pt;
+  margin: 20pt 0;
+}
+
+.tutorial-nav h2 {
+  margin-top: 0;
+}
+
+.tutorial-nav h3 {
+  font-size: 15pt;
+  margin: 12pt 0 4pt 0;
+  color: #000;
+  border-bottom: 1pt solid #999;
+  padding-bottom: 3pt;
+}
+
+.tutorial-nav ol {
+  margin: 6pt 0;
+  padding-inline-start: 24pt;
+  list-style: decimal;
+}
+
+.tutorial-nav li {
+  margin: 5pt 0;
+  line-height: 1.4;
+}
+
+.tutorial-nav a {
+  color: #0050a0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tutorial-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Tier divider (big black bar between Tier 1 / Tier 2 / Tier 3 sections) */
+
+.tier-divider {
+  background: #000;
+  color: #fff;
+  padding: 20pt 24pt;
+  margin: 34pt 0 22pt 0;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+}
+
+.tier-divider .tier-subtitle {
+  display: block;
+  font-size: 13pt;
+  font-weight: normal;
+  letter-spacing: 0.5pt;
+  text-transform: none;
+  margin-top: 6pt;
+  opacity: 0.85;
+}
+
+/* "Open this sketch" action link — a prominent clickable button */
+
+.open-link {
+  display: block;
+  background: #0050a0;
+  color: #fff !important;
+  padding: 12pt 18pt;
+  margin: 12pt 0;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: center;
+  border-radius: 4pt;
+  border: 2pt solid #003875;
+}
+
+.open-link:hover {
+  background: #003875;
+}
+
+.open-link::before {
+  content: "📎 ";
+  font-size: 16pt;
+}
+
+/* Inline action link (for "see R1 Wiring" and similar) */
+
+.inline-link {
+  color: #0050a0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.inline-link:hover {
+  color: #003875;
+}
+
+/* File-path box (fallback — shown next to .open-link for students whose
+ * browser does not open .ino files directly) */
+
+.file-path {
+  display: block;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11pt;
+  background: #f4f4f4;
+  border: 1pt solid #ccc;
+  padding: 6pt 10pt;
+  margin: -6pt 0 12pt 0;
+  color: #555;
+  text-align: center;
+}
+
+.file-path::before {
+  content: "File path (open in Arduino IDE via File \2192  Sketchbook): ";
+  font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: 10pt;
+  font-style: italic;
+}
+
+/* Orphan-heading prevention: keep a heading bonded to the block that follows.
+ * Chicago §2.113, APA-7 §2.27 — heading must be followed by body content
+ * on the same page, never stranded at page bottom. */
+h1, h2, h3, h4, h5, h6,
+.section-title {
+  page-break-after: avoid;
+  break-after: avoid-page;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+p, li {
+  orphans: 3;
+  widows: 3;
+}
+
+/* A lead-in paragraph ("here is what you'll see:") stays bonded to the
+ * code/wiring sample it introduces — never stranded at a page bottom. */
+p + .wiring-block, p + .code-block, p + pre,
+
+h2 + p, h2 + ul, h2 + ol, h2 + .code-block, h2 + .wiring-block, h2 + pre, h2 + table, h2 + blockquote,
+h3 + p, h3 + ul, h3 + ol, h3 + .code-block, h3 + .wiring-block, h3 + pre, h3 + table, h3 + blockquote,
+h4 + p, h4 + ul, h4 + ol, h4 + .code-block, h4 + .wiring-block, h4 + pre, h4 + table, h4 + blockquote,
+.section-title + * {
+  page-break-before: avoid;
+  break-before: avoid-page;
+}
+
+/* Milestone section (each task card's screen equivalent) */
+
+.milestone-section {
+  scroll-margin-top: 20pt;
+  page-break-after: always;
+  border-bottom: 2pt dashed #ccc;
+  margin-bottom: 20pt;
+  padding-bottom: 20pt;
+}
+
+.milestone-section:last-of-type {
+  border-bottom: none;
+}
+
+/* Back-to-top link at the end of each milestone.
+ * text-align: end renders as "right" under LTR and "left" under RTL,
+ * so the link always sits at the visual end of its container. */
+
+.back-to-top {
+  text-align: end;
+  margin-top: 16pt;
+  font-size: 11pt;
+}
+
+.back-to-top a {
+  color: #0050a0;
+  text-decoration: none;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
+
+/* Tutorial content wrapper (centers content in browser view) */
+
+.tutorial-content {
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 12mm;
+}
+
+/* Screen-only hint: tells the student what they are looking at */
+
+@media screen {
+  .screen-hint {
+    display: block;
+    background: #fff8e1;
+    border: 1pt solid #f9a825;
+    padding: 8pt 12pt;
+    margin: 12pt 0;
+    font-size: 11pt;
+    font-style: italic;
+    color: #555;
+  }
+}
+
+@media print {
+  .screen-hint { display: none; }
+  .tier-divider { page-break-before: always; }
+  .tutorial-nav { page-break-after: always; }
+  .back-to-top { display: none; }
+  .open-link {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2pt solid #000 !important;
+  }
+  .file-path { display: block; }
+}
+
+/* =====================================================================
+ * Hebrew RTL overrides — Pattern E6 (no box-level bold on Hebrew callouts)
+ * Windows Arial synthesises Hebrew bold inconsistently (thickens regular
+ * glyphs rather than using a true bold face), so box-level bold on a
+ * Hebrew-language callout looks visibly different from the surrounding
+ * regular text. Individual <strong> tags inside these boxes still provide
+ * emphasis via the semantic tag, so the important labels stay bold.
+ * English LTR cards are unaffected — this override only fires under [dir="rtl"].
+ * ===================================================================*/
+
+[dir="rtl"] .together-notice,
+[dir="rtl"] .done-when,
+[dir="rtl"] .celebration,
+[dir="rtl"] .recognition-line,
+[dir="rtl"] .milestone-badge,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .expected strong,
+[dir="rtl"] .warning > strong,
+[dir="rtl"] .done-when strong {
+  font-weight: normal;
+}
+
+/* Hebrew RTL: uppercase + letter-spacing are Latin-type conventions
+ * and render poorly on Hebrew glyphs (no case, and letter-spacing
+ * pushes Hebrew letters apart awkwardly). Override on all callout
+ * headings and bump size for a clearer visual hierarchy. */
+[dir="rtl"] .expected strong,
+[dir="rtl"] .done-when strong,
+[dir="rtl"] .stuck strong,
+[dir="rtl"] .warning > strong,
+[dir="rtl"] .choice-preview strong,
+[dir="rtl"] .key > strong {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14pt;
+  margin-bottom: 6pt;
+}
+
+/* .key callout header — same block-label treatment as its sibling boxes
+ * (.expected/.stuck/.warning), so a <strong> lead-in reads as the box title
+ * on its own line instead of running into the body text. */
+.key > strong {
+  display: block;
+  margin-bottom: 4pt;
+}
+
+/* Nested per-item emphasis inside .warning lists stays inline under RTL too. */
+[dir="rtl"] .warning ul li strong {
+  font-size: inherit;
+  margin-bottom: 0;
+}
+
+/* Expected block: paragraph spacing so the primary observable fact
+ * reads as a clean lead line and the explanation sits below it. */
+.expected p {
+  margin: 4pt 0 0 0;
+  line-height: 1.55;
+}
+
+.expected p.expected-note {
+  font-size: 12pt;
+  color: #444;
+  margin-top: 6pt;
+}
+
+/* Prompt templates hold Hebrew prose fill-in labels under RTL — per
+ * Pattern E5, Hebrew text never uses monospace. Keep monospace for
+ * LTR prompt templates (English code examples). */
+[dir="rtl"] .prompt-template {
+  font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+}
+
+/* Field labels (Tier 3 planner) — strip Latin uppercase and letter-
+ * spacing when rendered under RTL; Hebrew has no case and glyphs
+ * render poorly with Latin letter-spacing. */
+[dir="rtl"] .field label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Fill-in-blank utility (Tier 2 choice-commitment, planner fields).
+ * Replaces inline style="border-bottom: 1pt solid; ..." across cards. */
+.fill-blank {
+  border-bottom: 1pt solid #000;
+  display: inline-block;
+  min-width: 60pt;
+}
+
+/* Secondary detail line within a checklist item — keeps the primary action
+ * on its own line and tucks supplementary detail (file path, location)
+ * underneath in smaller, dimmer text. Reduces visual noise in bullets that
+ * mix RTL Hebrew prose with multiple LTR <code> islands. */
+.li-detail {
+  display: block;
+  margin-top: 4pt;
+  font-size: 12pt;
+  color: #555;
+  line-height: 1.45;
+}
+
+/* Inline <code> in RTL context: isolate the LTR run so neutral characters
+ * (backslash, colon, parentheses) resolve inside the LTR island rather than
+ * being absorbed into the surrounding RTL paragraph and reordering visually.
+ * Also allow long paths to break if they would overflow the column. */
+[dir="rtl"] code {
+  unicode-bidi: isolate;
+  direction: ltr;
+}
+
+code {
+  overflow-wrap: anywhere;
+}
+
+/* Hebrew RTL: the .r-ref inline circle used in task cards to reference
+ * R1-R5 reference cards. Matches the circled style of the top-corner
+ * card-ID badge so "R2" in body text looks identical to "R2" in the corner. */
+
+[dir="rtl"] .r-ref,
+.r-ref {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18pt;
+  height: 18pt;
+  border: 1.5pt solid #000;
+  border-radius: 50%;
+  font-size: 10pt;
+  font-weight: bold;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  top: -1pt;
+}
+
+/* Card-ID badge in the top corner: empty corner opposite the heading.
+ * NOTE: the badge sets its own direction:ltr (to keep the Latin "V1"
+ * un-mirrored), and CSS logical properties resolve against the ELEMENT's
+ * direction — so inset-inline-end alone would land on the physical right
+ * for BOTH languages. The explicit [dir="rtl"] override below pins the
+ * badge to the physical LEFT on Hebrew cards (Pattern E3). */
+
+.card-id {
+  position: absolute;
+  top: 5mm;
+  inset-inline-end: 5mm;
+  width: 30pt;
+  height: 30pt;
+  border: 2pt solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11pt;
+  font-weight: bold;
+  background: #fff;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.3pt;
+  z-index: 10;
+}
+
+/* Hebrew RTL: badge in the physical top-LEFT corner (opposite the
+ * right-flowing heading), per Pattern E3. See note above — the element's
+ * own direction:ltr defeats inset-inline-end, so pin it explicitly. */
+[dir="rtl"] .card-id {
+  inset-inline-end: auto;
+  right: auto;
+  left: 5mm;
+}
+
+.card {
+  position: relative;
+}
+
+/* Together-milestone image icon (Hebrew + English). Used inside the
+ * .together-notice block to visually mark the together-milestone pattern.
+ * Source: images/together_milestone_icon.png (Yon-provided). */
+
+.together-icon {
+  display: block;
+  width: 60pt;
+  height: 60pt;
+  margin: 0 auto 10pt auto;
+  object-fit: contain;
+}
+</style>
+<style>
+  /* Bundle-level: the first card shouldn't force a blank leading page. */
+  .appendix-card:first-of-type { page-break-before: auto !important; }
+  body { margin: 0; padding: 0; }
+</style>
+</head>
+<body>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .orient {
+    background: #eef3f8;
+    border-inline-start: 5pt solid #5a7391;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 12.5pt;
+    color: #234;
+  }
+  .big-msg {
+    background: #fff8e1;
+    border: 2pt solid #f57c00;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 15pt;
+    text-align: right;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border-inline-start: 5pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key strong { color: #000; }
+  .tip {
+    background: #f1f8e9;
+    border-inline-start: 5pt solid #558b2f;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont { color: #b00; font-weight: bold; }
+  .bb-ascii {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    border: 1pt solid #ccc;
+    padding: 8pt 8pt;
+    margin: 10pt 0;
+    line-height: 1.35;
+    white-space: pre;
+    overflow-x: auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: left;
+  }
+  .chain {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    background: #fafcff;
+    border: 1pt solid #b8c4d8;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    text-align: center;
+    direction: ltr;
+    unicode-bidi: isolate;
+    page-break-inside: avoid;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R0</div>
+
+<div class="header">
+  <h1><span class="section-icon">🧩</span>איך עובד ברדבורד</h1>
+  <div class="subtitle">פרויקט #4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="orient">
+קוראים את הכרטיסייה הזאת לפני הפגישה הראשונה. לא צריך לשנן אותה — משאירים אותה על שולחן העבודה וחוזרים לכל חלק כשנתקעים.
+</div>
+
+<div class="big-msg">
+ברדבורד מאפשר לבנות מעגלים חשמליים בלי להלחים. מכניסים את הרגליים של הרכיבים ואת חוטי הג'אמפר לתוך החורים, והלוח מחבר ביניהם בפנים — בלי כלים. בסוף אפשר להוציא הכל ולהשתמש בחלקים שוב.
+</div>
+
+<h2><span class="section-icon">🗺️</span>בלוח יש ארבעה אזורים</h2>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_00_empty_breadboard</div>
+  <p>כאן ייכנס תרשים של ברדבורד ריק: מסילות המתח (+ ו-−) למעלה ולמטה, וביניהן טורים ממוספרים המופרדים במרווח המרכזי. השורות מסומנות a–e בחצי אחד ו-f–j בחצי השני. בינתיים — התרשים המצויר למטה מראה את אותו הדבר.</p>
+</div>
+
+<div class="bb-ascii">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+
+     a  ● ● ● ● ● ● ● ● ● ● ●
+     b  ● ● ● ● ● ● ● ● ● ● ●
+     c  ● ● ● ● ● ● ● ● ● ● ●       top half
+     d  ● ● ● ● ● ● ● ● ● ● ●
+     e  ● ● ● ● ● ● ● ● ● ● ●
+                                    ← centre gap
+     f  ● ● ● ● ● ● ● ● ● ● ●
+     g  ● ● ● ● ● ● ● ● ● ● ●
+     h  ● ● ● ● ● ● ● ● ● ● ●       bottom half
+     i  ● ● ● ● ● ● ● ● ● ● ●
+     j  ● ● ● ● ● ● ● ● ● ● ●
+
+     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+        1 2 3 4 5 6 7 8 9 10 …</div>
+
+<div class="key">
+<strong>שני הכללים שחשוב להכיר</strong>
+<ul>
+  <li><strong>בתוך טור ממוספר אחד, השורות a–e מחוברות ביניהן.</strong> החורים a5, b5, c5, d5, e5 כולם חולקים חיבור חשמלי אחד. כל מה שמכניסים לחמשת החורים האלה — מחובר ביחד.</li>
+  <li><strong>השורות f–j מחוברות באותה צורה, אבל בנפרד מ-a–e.</strong> המרווח המרכזי שובר את החיבור — החורים e5 ו-f5 <strong>לא</strong> מחוברים ביניהם.</li>
+</ul>
+</div>
+
+<div class="key">
+<strong>שתי מסילות המתח</strong>
+<ul>
+  <li>המסילה ה<span style="color:#c00;"><strong>אדומה</strong></span> (מסומנת +) עוברת לאורך כל הלוח. כל החורים לאורך המסילה האדומה מחוברים ביניהם. משמשת ל-<strong>5 V</strong>.</li>
+  <li>המסילה ה<span style="color:#036;"><strong>כחולה</strong></span> (מסומנת −) גם עוברת לאורך כל הלוח. כל החורים לאורך המסילה הכחולה מחוברים. משמשת ל-<strong>GND</strong> (הארקה).</li>
+  <li>מכיוון שכל מסילה עוברת לאורך כל הלוח, אפשר לשאוב מתח מכל מקום לאורכה — אין צורך בחוט נפרד לכל רכיב.</li>
+</ul>
+</div>
+
+<h2><span class="section-icon">🔌</span>בפרויקט 4 הברדבורד הוא מרכז החשמל של המכונית</h2>
+
+<div class="key">
+<strong>מרכז החשמל של המכונית</strong>
+<ul>
+  <li>חוט מרגל <strong>5V</strong> של הארדואינו נכנס ל<strong>מסילה האדומה (+)</strong>, וחוט מ-<strong>GND</strong> נכנס ל<strong>מסילה הכחולה (−)</strong>.</li>
+  <li>שני חיישני הקו מקבלים חשמל מהמסילות: <strong>VCC</strong> מהמסילה האדומה, <strong>GND</strong> מהמסילה הכחולה. לארדואינו יש רק רגל 5V אחת — המסילות מפצלות אותה לשני החיישנים.</li>
+  <li>גם <strong>חוט ההארקה המשותפת</strong> אל בקר המנועים L298N יכול לעבור דרך המסילה הכחולה (−).</li>
+</ul>
+</div>
+
+<h2><span class="section-icon">💡</span>איך מחברים את חיישן הקו למסילות</h2>
+
+<p>לכל חיישן קו יש <strong>שלוש רגליים מסומנות</strong>: VCC, GND ו-OUT. שלושה חוטי ג'אמפר מחברים אותן למקומות קבועים: <strong>VCC</strong> אל ה<strong>מסילה האדומה (+)</strong>, <strong>GND</strong> אל ה<strong>מסילה הכחולה (−)</strong>, ו-<strong>OUT</strong> אל רגל <strong>11</strong> או <strong>12</strong> של הארדואינו.</p>
+
+<div class="tip">
+<strong>כלל אצבע:</strong> קודם המתח, אחר-כך האות — מחברים VCC ו-GND, ורק אז את OUT. לפני שמדליקים בודקים פעמיים: VCC במסילה האדומה, GND במסילה הכחולה — אף פעם לא הפוך.
+</div>
+
+<h2><span class="section-icon">🔗</span>מה משמעות "רגל A של הכפתור ← (+) ; רגל B ← רגל 2" על הברדבורד</h2>
+
+<p>כאשר כרטיסיית החיווט <span class="r-ref">R1</span> של הפרויקט הזה כותבת על כפתור גרסה 3: <em>"רגל A של הכפתור ← (+) ; רגל B ← רגל 2 ; ודרך נגד 10 קילו-אוהם ← (−)"</em>, אלו שרשראות החיבורים שבונים:</p>
+
+<div class="chain">[Button leg A] ── wire ── [(+) rail]<br>[Button leg B] ── wire ── [Arduino pin 2]<br>[Button leg B] ── [10 kΩ] ── wire ── [(−) rail]</div>
+
+<p>על הברדבורד, כל חיבור בשרשרת למעלה הוא טור משותף אחד. כך קוראים אותה טור-אחר-טור:</p>
+
+<ul>
+  <li>הכפתור יושב לרוחב החריץ המרכזי — רגל A בטור ממוספר אחד, רגל B בטור אחר.</li>
+  <li>מהטור של <strong>רגל A</strong> יוצא חוט ג'אמפר אל ה<strong>מסילה האדומה (+)</strong> — זו השרשרת הראשונה, וזהו.</li>
+  <li>מהטור של <strong>רגל B</strong> יוצא חוט ג'אמפר אל <strong>רגל 2</strong> של הארדואינו — הם חולקים טור אחד, ולכן מחוברים.</li>
+  <li>רגל אחת של <strong>נגד 10 קילו-אוהם</strong> נכנסת ל<strong>אותו טור</strong> של רגל B — עכשיו רגל B, הג'אמפר לרגל 2 והנגד מחוברים יחד.</li>
+  <li>הרגל השנייה של הנגד נכנסת ל<strong>טור חדש</strong>, ומשם חוט ג'אמפר אל ה<strong>מסילה הכחולה (−)</strong>.</li>
+</ul>
+
+<div class="key">
+<strong>חיישני הקו — הרכיבים החדשים בפרויקט 4</strong>
+<ul>
+  <li>לכל חיישן קו יש <strong>שלוש רגליים</strong> מסומנות: VCC, GND, OUT.</li>
+  <li>החיישנים לא יושבים על הברדבורד — הם מורכבים בקדמת השלדה, עם הפנים לרצפה. אליהם מגיעים <strong>חוטי ג'אמפר</strong>.</li>
+  <li>VCC מתחבר ל<strong>מסילה האדומה (+)</strong> ו-GND ל<strong>מסילה הכחולה (−)</strong> — בדיוק כמו כל רכיב שצורך מתח.</li>
+  <li>OUT היא רגל האות: החיישן השמאלי לרגל דיגיטלית <strong>11</strong>, החיישן הימני לרגל דיגיטלית <strong>12</strong>. דרכה הארדואינו יודע אם החיישן רואה קו שחור או רצפה.</li>
+  <li><span class="dont">VCC ו-GND הפוכים זה לזה — לא מתחלפים.</span> VCC תמיד למסילה האדומה, GND תמיד לכחולה. בודקים פעמיים לפני שמדליקים את הארדואינו.</li>
+</ul>
+</div>
+
+<p>הברדבורד עושה את החיווט בשבילנו — רק בוחרים לאיזה טור או מסילה כל רגל וכל חוט נכנסים.</p>
+
+<h2><span class="section-icon">🔍</span>שני דברים לבדוק אם משהו עדיין לא עובד</h2>
+
+<div class="tip">
+<strong>בדיקה 1 — האם כל חוט נכנס למסילה הנכונה?</strong> בפרויקט 4 רוב החיבורים על הברדבורד הולכים אל המסילות. בודקים אחד-אחד: כל חוט של 5V או VCC — במסילה ה<strong>אדומה (+)</strong>; כל חוט של GND — במסילה ה<strong>כחולה (−)</strong>. חוט שנכנס בטעות למסילה הלא-נכונה (או לטור ממוספר במקום למסילה) שובר את החיבור. ואם רכיב יושב על הלוח — כל רגל שלו בטור משלה, אף פעם לא שתי רגליים באותו טור.
+</div>
+
+<div class="tip">
+<strong>בדיקה 2 — האם כל רגל חולקת את הטור שלה עם בדיוק השכן הנכון?</strong> עוברים על השרשרת בקול רם. לחיישן הקו: "ה-VCC נכנס למסילה ה<em>אדומה</em>; ה-GND נכנס למסילה ה<em>כחולה</em>; ה-OUT מגיע לרגל 11 או 12". לכפתור של גרסה 3: "רגל A והג'אמפר למסילה האדומה נכנסים ל<em>אותו</em> טור; רגל B, הג'אמפר לרגל 2 ורגל אחת של הנגד נכנסים ל<em>אותו</em> טור; הרגל השנייה של הנגד והג'אמפר למסילה הכחולה נכנסים ל<em>אותו</em> טור". אם זוג כלשהו נמצא ב<em>טורים שונים</em> — השרשרת שבורה שם. מעבירים את הרגל לטור המתאים.
+</div>
+
+<h2><span class="section-icon">✅</span>יש לכם את מה שצריך</h2>
+
+<p>הכרטיסייה הבאה היא <span class="r-ref">R1</span> — חיווט פרויקט 4. משאירים את <span class="r-ref">R0</span> על שולחן העבודה — אם משהו לא עובד בהמשך, שתי הבדיקות למעלה לרוב ימצאו את הבעיה.</p>
+
+<footer>
+  R0 — איך עובד ברדבורד · פרויקט #4 מכונית עוקבת קו
+</footer>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">R1</div>
+
+<div class="header">
+  <h1><span class="section-icon">🔌</span>תרשימי החיווט</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו • כרטיסיית עזר לעמדת התלמיד</div>
+</div>
+
+<p>הכרטיסייה הזאת מראה איך מחברים את <strong>המנועים</strong>, את <strong>בקר המנועים L298N</strong>, את <strong>הסוללות</strong> ואת <strong>חיישני הקו</strong> בפרויקט 4. שומרים אותה ליד המכונית. אם מתבלבלים בחיווט, קודם מסתכלים על הכרטיסייה הזאת לפני שקוראים למורה.</p>
+
+<p>יש כאן <strong>חמישה חיווטים</strong>. יחד הם כל החיווט של המכונית: המנועים אל הבקר, החשמל, שישה חוטי האות, חיישני הקו — והאחרון, כפתור לגרסה 3 בלבד. כל חמשת החיווטים מתקיימים יחד על אותה מכונית — כל תרשים מראה רק את החוטים החדשים שלו, והקודמים נשארים במקום.</p>
+
+<h2><span class="section-icon">⚠️</span>הכללים החשובים ביותר</h2>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>לפני שמחווטים — קוראים את אלה</strong>
+  <ul>
+    <li><strong>ההארקה המשותפת היא החוט שהכי קל לשכוח:</strong> חוט בין <strong>GND</strong> של הבקר ל-<strong>GND</strong> של הארדואינו. בלעדיו שום דבר לא זז אחרי ההעלאה — בלי שום הודעת שגיאה. זה הפספוס מספר 1 בפרויקט הזה, ולכן בודקים אותו פעמיים.</li>
+    <li><strong>אף פעם לא שני מקורות חשמל פעילים בבת אחת:</strong> כל עוד מתג הסוללות כבוי, מותר שהסוללות יהיו מחוברות גם כש-USB בפנים. לפני שמדליקים את המתג לנסיעה על סוללות — <strong>מנתקים קודם את כבל ה-USB</strong>. מתג דלוק + USB מחובר ביחד — <strong>אסור</strong>.</li>
+    <li>המנועים מתחברים <strong>רק דרך הבקר</strong> (הדקי <code>OUT1</code>–<code>OUT4</code>) — אף פעם לא ישירות לרגליים של הארדואינו. הרגליים של הארדואינו הן לאותות בלבד; מנוע שמחובר אליהן ישירות עלול להזיק לארדואינו.</li>
+  </ul>
+</div>
+
+<h2><span class="section-icon">📋</span>מפת הרגליים</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>רכיב / אות</th>
+      <th>אל</th>
+      <th>מופיע ב-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>בקר — <code>ENB</code> · מהירות המנוע הימני</td><td>רגל <code>5</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>IN4</code> · כיוון המנוע הימני</td><td>רגל <code>6</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>IN3</code> · כיוון המנוע הימני</td><td>רגל <code>7</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>IN2</code> · כיוון המנוע השמאלי</td><td>רגל <code>8</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>IN1</code> · כיוון המנוע השמאלי</td><td>רגל <code>9</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>ENA</code> · מהירות המנוע השמאלי</td><td>רגל <code>10</code></td><td>חיווט 3</td></tr>
+    <tr><td>חיישן קו שמאלי — <code>OUT</code></td><td>רגל <code>11</code></td><td>חיווט 4</td></tr>
+    <tr><td>חיישן קו ימני — <code>OUT</code></td><td>רגל <code>12</code></td><td>חיווט 4</td></tr>
+    <tr><td>כפתור התחלה/עצירה — גרסה 3 בלבד</td><td>רגל <code>2</code></td><td>חיווט 5</td></tr>
+  </tbody>
+</table>
+
+<h2><span class="section-icon">🔌</span>חיווט 1 — המנועים אל הבקר</h2>
+
+<p>שני החוטים המולחמים של <strong>המנוע השמאלי</strong> נכנסים להדקי <strong>OUT1</strong> ו-<strong>OUT2</strong>, ושני החוטים של <strong>המנוע הימני</strong> להדקי <strong>OUT3</strong> ו-<strong>OUT4</strong>. בכל הדק: משחררים מעט את הבורג, מכניסים את קצה החוט, מהדקים בחזרה — ובודקים ב<strong>משיכה עדינה</strong> שהחוט מחזיק.</p>
+
+<p>איזה חוט לאיזה חור בתוך הזוג? לא משנה בשלב החיווט. אם מנוע מסתובב הפוך בבדיקה הראשונה — מחליפים בין שני החוטים שלו בהדקים. תיקון של 30 שניות, לא תקלה.</p>
+
+<pre class="wiring-block" dir="ltr">Motors                 L298N
+  left  motor ───────  OUT1 / OUT2
+  right motor ───────  OUT3 / OUT4</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_01_motors_to_driver</div>
+  <p>כאן ייכנס תרשים: בקר המנועים L298N משני צדדיו — חוטי המנוע השמאלי אל OUT1/OUT2, וחוטי המנוע הימני אל OUT3/OUT4.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 2 — חשמל והארקה משותפת</h2>
+
+<p>המתג של מחזיק הסוללות נשאר <strong>כבוי</strong> כל זמן שמחווטים. החוט <strong>האדום (+)</strong> של מחזיק הסוללות נכנס להדק <strong>VIN</strong> של הבקר (מסומן לפעמים 12V), והחוט <strong>השחור (−)</strong> להדק <strong>GND</strong>.</p>
+
+<p>★ <strong>חוט ההארקה המשותפת:</strong> חוט בין <strong>GND</strong> של הבקר ל-<strong>GND</strong> של הארדואינו. זה החוט שהכי קל לשכוח — בלעדיו שום דבר לא זז. אפשר להעביר אותו דרך המסילה הכחולה (−) של הברדבורד.</p>
+
+<p>הברדבורד הוא <strong>תחנת החשמל</strong> של המכונית: חוט מרגל <strong>5V</strong> של הארדואינו אל <strong>המסילה האדומה (+)</strong>, וחוט מ-<strong>GND</strong> של הארדואינו אל <strong>המסילה הכחולה (−)</strong>. לארדואינו יש רק רגל 5V אחת — המסילות מפצלות אותה לשני החיישנים.</p>
+
+<p>לנסיעה בלי כבל: חוט מהדק <strong>5V</strong> של הבקר אל רגל <strong>5V</strong> של הארדואינו (הג׳אמפר שעל הבקר במקומו) — וכשנוסעים על סוללות, <strong>מנתקים קודם את כבל ה-USB</strong>.</p>
+
+<pre class="wiring-block" dir="ltr">Battery (+) red ─────  L298N VIN (12V)
+Battery (−) black ───  L298N GND
+
+L298N GND ───────────  Arduino GND    ★ common ground!
+
+Arduino                Breadboard
+  5V  ───────────────  (+) rail
+  GND ───────────────  (−) rail
+
+Battery driving (no USB):
+  L298N 5V ──────────  Arduino 5V    (jumper in place, USB unplugged)</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_02_power_and_common_ground</div>
+  <p>כאן ייכנס תרשים: מחזיק הסוללות אל VIN ו-GND של הבקר, מסילות הברדבורד כתחנת החשמל — וחוט ההארקה המשותפת GND ↔ GND מודגש בבירור.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 3 — שישה חוטי האות (רגליים 5–10)</h2>
+
+<p>שישה חוטים משורת החיבורים שעל הבקר אל הרגליים של הארדואינו, אחד-אחד לפי הסדר. נוח לבדוק: שש הרגליים בארדואינו הן רצף אחד — <strong>5 עד 10</strong>.</p>
+
+<pre class="wiring-block" dir="ltr">L298N                  Arduino
+  ENB ───────────────  pin 5     right motor speed
+  IN4 ───────────────  pin 6     right motor direction
+  IN3 ───────────────  pin 7     right motor direction
+  IN2 ───────────────  pin 8     left motor direction
+  IN1 ───────────────  pin 9     left motor direction
+  ENA ───────────────  pin 10    left motor speed</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_03_signal_pins</div>
+  <p>כאן ייכנס תרשים: שורת החיבורים של הבקר — ENB, IN4, IN3, IN2, IN1, ENA — מחוברת בשישה חוטים אל רגליים 5 עד 10 של הארדואינו, חוט לכל רגל.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 4 — חיישני הקו</h2>
+
+<p>שני חיישני הקו מותקנים בקדמת המכונית, פונים אל הרצפה, בגובה של בערך <strong>1 ס״מ</strong> מעליה. שמאל וימין — לפי כיוון הנסיעה של המכונית.</p>
+
+<p>כל חיישן מקבל חשמל מהמסילות: <strong>VCC</strong> אל המסילה האדומה (+), <strong>GND</strong> אל המסילה הכחולה (−). ה-<strong>OUT</strong> של החיישן <strong>השמאלי</strong> הולך אל <strong>רגל 11</strong>, וה-<strong>OUT</strong> של החיישן <strong>הימני</strong> אל <strong>רגל 12</strong>.</p>
+
+<pre class="wiring-block" dir="ltr">IR sensor LEFT         IR sensor RIGHT
+  VCC ── (+) rail        VCC ── (+) rail
+  GND ── (−) rail        GND ── (−) rail
+  OUT ── pin 11          OUT ── pin 12</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_04_line_sensors</div>
+  <p>כאן ייכנס תרשים: שני חיישני הקו בקדמת המכונית — VCC ו-GND מהמסילות של הברדבורד, OUT של החיישן השמאלי לרגל 11 ושל הימני לרגל 12.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 5 — כפתור התחלה/עצירה (גרסה 3 בלבד)</h2>
+
+<p>נחוץ רק למי שבוחרים ב<strong>גרסה 3</strong> להוסיף כפתור התחלה/עצירה. זה בדיוק חיווט הכפתור מהפרויקטים הקודמים: הכפתור לרוחב החריץ המרכזי של הברדבורד, רגל A אל המסילה האדומה (+), רגל B אל <strong>רגל 2</strong> של הארדואינו — ומאותו טור גם <strong>נגד הורדה של 10 קילו-אוהם</strong> (פסי צבע: חום · שחור · כתום) אל המסילה הכחולה (−).</p>
+
+<pre class="wiring-block" dir="ltr">Button leg A ────────  (+) rail (5V)
+Button leg B ──┬─────  Arduino pin 2
+               └──[10 kΩ]── (−) rail (GND)</pre>
+
+<p><span class="section-icon">⚠️</span>נגד ההורדה הולך בין <strong>רגל 2 לבין GND</strong> — לא בין 5 V לבין GND. אם מחווטים אותו בין 5 V לבין GND, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_05_button_tier3</div>
+  <p>כאן ייכנס תרשים: כפתור לרוחב החריץ המרכזי של הברדבורד — רגל A אל המסילה האדומה (+), רגל B אל רגל 2 של הארדואינו, ונגד הורדה של 10 קילו-אוהם מאותו טור אל המסילה הכחולה (−).</p>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .solder-exception {
+    background: #fdecea;
+    border: 2.5pt solid #c0392b;
+    padding: 12pt 14pt;
+    margin: 16pt 0;
+    font-size: 14pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    margin: 14pt 0;
+    padding: 12pt 14pt;
+    background: #f6f6f6;
+    border-inline-start: 5pt solid #000;
+  }
+  .step-number {
+    font-size: 28pt;
+    font-weight: bold;
+    margin-inline-end: 14pt;
+    min-width: 38pt;
+    color: #000;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+  }
+  .step-text {
+    flex: 1;
+  }
+  .step-text strong {
+    display: block;
+    font-size: 16pt;
+    margin-bottom: 3pt;
+  }
+  .important {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 16pt 0;
+    font-size: 13pt;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R2</div>
+
+<div class="header">
+  <h1><span class="section-icon">🪄</span>תקועים? קודם מנסים את זה</h1>
+  <div class="subtitle">פרויקט 4 • כרטיסייה לעמדת התלמיד</div>
+</div>
+
+<p>אם נתקעים בשלב כלשהו של כרטיסיית ניווט, שווה לנסות את ארבעת הצעדים האלה — צעדים 1 או 2 פותרים את רוב המקרים. אפשר לקרוא למורה בכל שלב, כולל עכשיו.</p>
+
+<div class="solder-exception">
+<strong><span class="section-icon">⚠️</span>חריג הלחמה:</strong> כל דבר שקשור למלחם או לחיבורי הלחמה — מדלגים על כל השלבים וקוראים למורה מיד. ליד מלחם חם לא פותרים לבד.
+</div>
+
+<div class="step">
+  <div class="step-number">1</div>
+  <div class="step-text">
+    <strong>קוראים שוב את השלב</strong>
+    קוראים שוב את השלב הנוכחי בכרטיסיית הניווט, לאט. לפעמים הקריאה השנייה עונה על השאלה.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">2</div>
+  <div class="step-text">
+    <strong>בודקים את כרטיסיית החיווט <span class="r-ref">R1</span></strong>
+    כ-60% מהמקרים של "המכונית שלי לא נוסעת" הם טעויות חיווט. <span class="r-ref">R1</span> מראה בדיוק איך מעגל החיווט של פרויקט 4 אמור להיראות.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">3</div>
+  <div class="step-text">
+    <strong>בודקים את שאר כרטיסיות העזר</strong>
+    <span class="r-ref">R3</span> (פניות לקלוד קוד), <span class="r-ref">R4</span> (בטיחות), <span class="r-ref">R5</span> (איזה קובץ קוד לפתוח). אולי אחת מהן עונה על השאלה.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-number">4</div>
+  <div class="step-text">
+    <strong>קוראים למורה</strong>
+  </div>
+</div>
+
+<div class="important">
+<strong>אתם לא מפריעים.</strong> לקרוא למורה כשתקועים זה בדיוק מה שהמורה מצפה שתעשו. להיתקע זה לא להיכשל — זהו חלק בלתי נפרד מלמידה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .prompt-template {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 12pt 14pt;
+    margin: 10pt 0;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    direction: rtl;
+  }
+  .prompt-template.ltr {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    text-align: left;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .rule {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+    background: #f4f4f4;
+    padding: 1pt 4pt;
+    border-radius: 2pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R3</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>איך מדברים עם קלוד קוד</h1>
+  <div class="subtitle">פרויקט 4 • תבניות פניות לקלוד קוד</div>
+</div>
+
+<p>קלוד קוד הוא שותף התכנות שלכם. הוא רץ בחלון שמכוון לתיקיית פרויקט 4 שלכם, אז הוא רואה את הקוד שאתם עובדים עליו. יש שתי דרכים להשתמש בו.</p>
+
+<h2>ערוץ A — עזרה עם הקוד</h2>
+
+<div class="rule">
+<strong>גרסה 1:</strong> פותחים את הקובץ מ-<span class="r-ref">R5</span> ומעלים. אין צורך בפנייה לקלוד קוד לפני שהקוד עובד — הקוד כבר נכתב בשבילכם. אם ההעלאה נכשלת, כרטיסיית העזר <span class="r-ref">R2</span> מוליכה אתכם.
+</div>
+
+<p><strong>גרסה 2:</strong> לפני ששואלים את קלוד קוד משהו על הקוד שלכם, <strong>ממלאים את שלושת הסעיפים האלה בכרטיסיית הניווט</strong>:</p>
+
+<div class="rule">
+<strong>(א)</strong> מה אני רוצה שיקרה: <em>[מתארים את ההתנהגות הרצויה]</em><br>
+<strong>(ב)</strong> מה קורה עכשיו: <em>[מתארים מה הקוד עושה עכשיו]</em><br>
+<strong>(ג)</strong> מה כבר ניסיתי: <em>[מה כבר הסתכלנו עליו או חשבנו עליו]</em>
+</div>
+
+<p>ואז משתמשים בתבנית הפנייה הזאת:</p>
+
+<pre class="prompt-template">אני עובד על [שם קובץ הקוד].
+
+(א) מה אני רוצה שיקרה:
+[התשובה שלכם]
+
+(ב) מה קורה עכשיו:
+[התשובה שלכם]
+
+(ג) מה כבר ניסיתי:
+[התשובה שלכם]
+
+תוכל לעזור לי להבין מה לשנות?</pre>
+
+<div class="key">
+<span class="section-icon">⚠️</span>(א), (ב) ו-(ג) אינם סתם אופציות. הם עוזרים לנו לחשוב על הבעיה לפני שקלוד קוד עונה, ועוזרים לקלוד קוד להגיע לתשובה שתהיה שימושית עבורנו.
+</div>
+
+<p>אחרי שקלוד קוד עונה, מבצעים את השינוי בארדואינו IDE, מעלים, ובודקים. אז עונים על השאלה הזאת בכרטיסיית הניווט:</p>
+
+<div class="rule">
+<strong>בדיקת הבנה:</strong> במשפט אחד, מה קלוד קוד שינה בקוד?
+</div>
+
+<h2>דוגמה אמיתית מפרויקט 4 — לשנות את מהירות הבסיס</h2>
+
+<p>בפרויקט 4 שינוי אמיתי בקוד הוא לקבוע כמה מהר המכונית נוסעת. בקוד ההתחלתי <code>T2_line_follow_starter.ino</code>, לפני שבחרתם מהירות, <code>BASE_SPEED</code> היא <strong>140</strong> — הקצב הבינוני. אם רוצים מכונית מהירה, משנים את מהירות הבסיס ל-<strong>180</strong>. ככה ממלאים את שלושת הסעיפים לפני הפנייה:</p>
+
+<div class="rule">
+<strong>(א)</strong> מה אני רוצה שיקרה: <em>שהמכונית תיסע מהר — מהירות בסיס 180 במקום 140.</em><br>
+<strong>(ב)</strong> מה קורה עכשיו: <em>המכונית נוסעת בקצב הבינוני של הקוד ההתחלתי — 140.</em><br>
+<strong>(ג)</strong> מה כבר ניסיתי: <em>חיפשתי את השורה עם המספר של המהירות אבל לא בטוח איזו שורה זו.</em>
+</div>
+
+<p>ואז משתמשים בתבנית הקצרה הזאת, ומדביקים את הקוד הנוכחי במקום [מדביקים כאן]:</p>
+
+<pre class="prompt-template">הנה הקוד של המכונית שלי. איך אשנה אותו כך שהמכונית תיסע במהירות בסיס 180 במקום 140? הנה הקוד שלי:
+[מדביקים כאן]</pre>
+
+<div class="key">
+זה <strong>מספר אחד</strong> בקוד — מהירות הבסיס <code>BASE_SPEED</code>. אחרי שקלוד קוד עונה, משנים <strong>רק את המספר הזה</strong> בארדואינו IDE, מעלים, ובודקים שהמכונית נוסעת מהר יותר.
+</div>
+
+<h2>דוגמה שנייה — תיקון חזק יותר לעיקול חד</h2>
+
+<p>שינוי אפשרי נוסף הוא <strong>כמה חזק</strong> המכונית מתקנת את עצמה כשהיא סוטה מהקו. אם המכונית יוצאת מהקו בעיקול חד וממשיכה ישר, מגבירים את התיקון. גם זה <strong>שינוי של מספר אחד</strong> בלבד: בקוד ההתחלתי יש הגדרה בשם <code>CORRECTION</code> שערכה <strong>90</strong>, ואפשר להעלות אותה ל-<strong>110</strong> — התיקון החזק. ככה ממלאים את שלושת הסעיפים:</p>
+
+<div class="rule">
+<strong>(א)</strong> מה אני רוצה שיקרה: <em>שהמכונית תישאר על הקו גם בעיקול החד.</em><br>
+<strong>(ב)</strong> מה קורה עכשיו: <em>המכונית יוצאת מהקו בעיקול החד וממשיכה ישר.</em><br>
+<strong>(ג)</strong> מה כבר ניסיתי: <em>חיפשתי את ההגדרה <code>CORRECTION</code> בקובץ אבל לא בטוח לכמה להעלות אותה.</em>
+</div>
+
+<p>ואז משתמשים בתבנית הקצרה הזאת:</p>
+
+<pre class="prompt-template">הנה הקוד של המכונית שלי. המכונית יוצאת מהקו בעיקול חד, ואני רוצה שהיא תיצמד אליו. אני חושב שזה קשור להגדרה CORRECTION. איזה מספר אני משנה, ולכמה? הנה הקוד שלי:
+[מדביקים כאן]</pre>
+
+<div class="key">
+גם זה <strong>מספר אחד</strong> בקוד — בדיוק כמו שינוי המהירות. צריך למצוא את ההגדרה <code>CORRECTION</code> ולהעלות אותה מ-90 ל-110. כלל קטן: מספר התיקון תמיד נשאר <strong>קטן</strong> ממהירות הבסיס. אחרי שקלוד קוד עונה, משנים <strong>רק את המספר הזה</strong> בארדואינו IDE, מעלים, ובודקים שהמכונית מחזיקה את העיקול.
+</div>
+
+<h2>ערוץ B — כשרוצים שיקריאו לכם את המשימה</h2>
+
+<p>ערוץ B מוביל אתכם דרך כרטיסיית הניווט הנוכחית בצורת שיחה. אפשר להשתמש בו כשקשה להתקדם עם הכרטיסייה המודפסת, או כשמעדיפים לשמוע את ההוראות שלב אחר שלב. משתמשים בתבנית הזאת:</p>
+
+<pre class="prompt-template">אני בפרויקט 4, גרסה [1 או 2], שלב [מספר].
+תעבור איתי על זה.</pre>
+
+<p>קלוד קוד יקריא את תוכן הכרטיסייה בקטעים קצרים וישאל אתכם לאשר כל שלב לפני שממשיכים הלאה. אתם עדיין מסמנים ✓ בכרטיסייה המודפסת תוך כדי — ערוץ B לא מחליף את הכרטיסייה, הוא רק עוזר לכם לעבור אותה.</p>
+
+<div class="key">
+ערוץ B <strong>לא מומלץ לשלב 1</strong> של אף פרויקט, כי שלב 1 הוא שלב משותף שבו המורה לידכם. לשמוע את קלוד קוד מדבר בזמן שהמורה גם מדבר אליכם — זה מבלבל.
+</div>
+
+<div class="rule">
+<strong>גרסה 3 — דיאלוג חופשי:</strong> אם אתם עובדים בגרסה 3 על פרויקט בעיצוב פתוח, אפשר לדבר עם קלוד קוד בחופשיות על מה שאתם מנסים לבנות. אותו כלל של (א)(ב)(ג) עדיין חל — מתארים מה אתם רוצים לפני ששואלים.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .big-msg {
+    background: #e8f5e9;
+    border: 2pt solid #2e7d32;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 16pt;
+    text-align: center;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  .rule {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .safe {
+    background: #e8f5e9;
+    border-inline-start: 5pt solid #2e7d32;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont {
+    color: #b00;
+    font-weight: bold;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R4</div>
+
+<div class="header">
+  <h1><span class="section-icon">⚠️</span>תזכורת בטיחות</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="big-msg">
+החשמל בפרויקט 4 בטוח בדיוק כמו בשלושת הפרויקטים הקודמים — 5 וולט. שלושה דברים חדשים דורשים זהירות: <strong>המלחם החם</strong>, <strong>הגלגלים המסתובבים</strong> ו<strong>הסוללות</strong>.
+</div>
+
+<div class="why">
+זה הפרויקט הראשון בתוכנית עם כלי חם ועם חלקים שזזים. בכרטיסייה הזאת ארבעה כללים — כלל ההלחמה ראשון, כי הוא החשוב מכולם.
+</div>
+
+<h2>כלל 1 — עמדת ההלחמה</h2>
+
+<div class="rule">
+<strong>ארבעת כללי הבטיחות של ההלחמה:</strong>
+<ul>
+  <li><strong>משקפי מגן על העיניים</strong> — כל זמן שהמלחם דולק בעמדה.</li>
+  <li><strong>המלחם גר על המעמד שלו</strong> — כשהוא לא ביד, הוא על המעמד. אף פעם לא על השולחן.</li>
+  <li><strong>מנקים את הקצה על הספוג הלח</strong> — אף פעם לא באצבעות.</li>
+  <li><strong>לא נוגעים בקצה המתכת</strong> — הוא חם מאוד גם כמה דקות אחרי הכיבוי.</li>
+</ul>
+</div>
+
+<div class="rule">
+<strong>מלחימים רק כשהמורה בעמדה.</strong> כל שאלה או תקלה בהלחמה — <strong>קוראים למורה, תמיד</strong>. לא מנסים לתקן לבד ליד מלחם חם.
+</div>
+
+<div class="rule">
+נגעתם בטעות במשהו חם? <strong>מיד מים קרים מהברז</strong>, וקוראים למורה.
+</div>
+
+<p>איך מלחימים חיבור טוב, צעד אחר צעד — במדריך ההלחמה המלא, כרטיסייה <span class="r-ref">R6</span>.</p>
+
+<h2 style="page-break-before: always; break-before: page;">כלל 2 — מנועים וגלגלים מסתובבים</h2>
+
+<div class="rule">
+<span class="dont">לא</span> מקרבים אצבעות לגלגלים מסתובבים. בבדיקות על השולחן מגביהים את המכונית — למשל על קופסה קטנה — כך שהגלגלים מסתובבים באוויר. מעבירים את המכונית ממקום למקום רק כשהמתג כבוי. הכלל הזה תקף לבדיקות המנועים על השולחן. כשהמכונית נוסעת על הקו — משאירים אותה הרחק מקצה השולחן, ולא תופסים אותה תוך כדי נסיעה.
+</div>
+
+<h2><span class="section-icon">⚠️</span>כלל 3 — הסוללות</h2>
+
+<div class="rule">
+<span class="dont">לא</span> מחברים את שני החוטים של בית הסוללות ישירות זה לזה — זה קצר חשמלי, והסוללות מתחממות. כשהמכונית לא נוסעת — מכבים את המתג.
+</div>
+
+<h2><span class="section-icon">🔌</span>כלל 4 — החשמל עדיין בטוח</h2>
+
+<div class="safe">
+הארדואינו, חיישני הקו ובקר המנועים L298N עובדים כולם על 5 וולט — מתח נמוך מכדי לפגוע בכם, בדיוק כמו בפרויקטים 1, 2 ו-3. מה שחדש בפרויקט הזה הוא חום ותנועה — לא חשמל.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 24pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+  }
+  p { margin: 6pt 0; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0;
+    font-size: 13pt;
+  }
+  th, td {
+    border: 1pt solid #000;
+    padding: 8pt 10pt;
+    text-align: right;
+    vertical-align: top;
+  }
+  th {
+    background: #eee;
+    font-weight: bold;
+  }
+  .file-name {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 11pt;
+    background: #f4f4f4;
+    padding: 2pt 5pt;
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+  }
+  .path-box {
+    background: #f4f7fb;
+    border: 1pt solid #99b;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12pt;
+    word-break: break-all;
+    direction: ltr;
+    text-align: left;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border: 1pt solid #d4a017;
+    padding: 10pt 12pt;
+    margin: 10pt 0;
+    font-size: 14pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R5</div>
+
+<div class="header">
+  <h1><span class="section-icon">💻</span>איזה קוד פותחים ומתי</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו • מפת הקבצים</div>
+</div>
+
+<h2>איפה נמצאים הקבצים של פרויקט 4</h2>
+
+<p>כל קובצי הקוד של פרויקט 4 נמצאים בתיקיית פרויקט 4 שלכם ב-Google Drive. כדי להגיע אליהם: בסרגל הצד של סייר הקבצים לוחצים על <strong>Google Drive</strong>, הולכים ל-<strong>My Drive ← Arduino_Projects</strong>, נכנסים לתיקייה עם הכינוי שלכם, ואז לתיקייה <code>Project_4_Line_Following_Car</code> ובתוכה לתיקייה <code>ino_files</code>.</p>
+
+<div class="path-box">G:\My Drive\Arduino_Projects\&lt;your_nickname&gt;\Project_4_Line_Following_Car\ino_files\</div>
+
+<p class="expected-note">אם אתם לא מוצאים את התיקייה, שואלים את המורה פעם אחת ורושמים כאן איך מגיעים אליה: <span class="fill-blank">&nbsp;</span></p>
+
+<p>בתוך <code>ino_files</code> כל קובץ קוד יושב בתיקייה משלו. לכל תיקייה יש קובץ <code>.ino</code> אחד בתוכה עם אותו שם של התיקייה.</p>
+
+<div class="key">
+פותחים קוד בלחיצה כפולה על קובץ ה-<code>.ino</code>, או דרך <strong>File → Open</strong> בארדואינו IDE ובחירה בקובץ.
+</div>
+
+<h2>קובצי הקוד של גרסה 1 — איזה קוד לאיזה שלב</h2>
+
+<table>
+  <thead>
+    <tr><th>שלב</th><th>פותחים את הקובץ הזה</th><th>מה קורה</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>שלב 5</td>
+      <td><span class="file-name">01_drive_forward/<br>01_drive_forward.ino</span></td>
+      <td>שני הגלגלים מסתובבים <strong>קדימה</strong>: 3 שניות נסיעה, שנייה אחת עצירה, ושוב מההתחלה. הנסיעה הראשונה של המכונית שלכם</td>
+    </tr>
+    <tr>
+      <td>שלב 6</td>
+      <td><span class="file-name">02_sensor_test/<br>02_sensor_test.ino</span></td>
+      <td>מדפיס במסך המעקב (Serial Monitor) מה כל חיישן קו רואה: <strong>LINE</strong> מעל הקו השחור, <strong>FLOOR</strong> מעל הרצפה. עיניים בלבד — המנועים לא זזים</td>
+    </tr>
+    <tr>
+      <td>שלבים 7–8</td>
+      <td><span class="file-name">03_line_follow/<br>03_line_follow.ino</span></td>
+      <td>עוקב הקו המלא: שני החיישנים מעל הרצפה — המכונית נוסעת ישר;<br>חיישן אחד רואה את הקו — הגלגל שבאותו צד מאט והמכונית מתיישרת חזרה;<br>שני החיישנים רואים את הקו — המכונית עוצרת.<br>בשלב 7 נוסעים על הקו הישר, בשלב 8 על מסלול עם עיקול — אותו קוד, בלי העלאה חדשה</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>שלבים 1–4 — אין העלאת קוד.</strong> אלה שלבי ההלחמה, הרכבת השלדה והחיווט: קודם בונים את המכונית, והקוד מגיע בשלב 5.</p>
+
+<div class="key">
+גלגל אחד מסתובב <strong>אחורה</strong> בנסיעה הראשונה? זה <strong>תקין — לא תקלה</strong>. מחליפים בין שני החוטים של אותו מנוע בבקר המנועים L298N — תיקון של 30 שניות, וזו התוצאה הנפוצה ביותר בהרכבה ראשונה.
+</div>
+
+<h2>קובץ קוד התחלתי של גרסה 2</h2>
+
+<table>
+  <thead>
+    <tr><th>פותחים את הקובץ הזה</th><th>מה יש בו</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="file-name">T2_line_follow_starter/<br>T2_line_follow_starter.ino</span></td>
+      <td>עוקב הקו המלא, עם שלושה קבועים מסומנים בראש הקובץ שאותם משנים בגרסה 2:
+        <ul>
+          <li><code>BASE_SPEED</code> — מהירות הבסיס: איטי כ-110 / בינוני כ-140 / מהיר כ-180</li>
+          <li><code>CORRECTION</code> — עוצמת התיקון: עדין כ-60 / חזק כ-110 (תמיד קטן ממהירות הבסיס)</li>
+          <li><code>LINE_IS_HIGH</code> — הופכים אותו רק אם המכונית מתרחקת מהקו במקום לעקוב אחריו</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>בגרסה 2, מעלים את הקוד ההתחלתי קודם כדי לראות את המכונית עוקבת אחרי הקו הישר, ואז משתמשים בקלוד קוד (ראו <span class="r-ref">R3</span>) כדי לשנות את הקבועים לפי המהירות והתיקון שבחרתם. כיוונון לוקח שניים-שלושה ניסיונות — ככה עובדים מהנדסים אמיתיים.</p>
+
+<h2>גרסה 3 — אין קוד התחלתי</h2>
+
+<p>בגרסה 3 אתם מעצבים את המכונית שלכם עם קלוד קוד לפי מטרה שאתם בוחרים (למשל מסלול מורכב, מרוץ מהירות, עשר נסיעות נקיות ברצף, או כפתור התחלה/עצירה ברגל 2). הקוד המוגמר שלכם נמצא באותה התיקייה — בוחרים שם שאתם אוהבים (משהו כמו <code>my_line_follower.ino</code>).</p>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;"><style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .orient {
+    background: #eef3f8;
+    border-inline-start: 5pt solid #5a7391;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 12.5pt;
+    color: #234;
+  }
+  .big-msg {
+    background: #fff8e1;
+    border: 2pt solid #f57c00;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 15pt;
+    text-align: right;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .safety {
+    background: #fef0f0;
+    border: 2pt solid #b00;
+    padding: 12pt 16pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .safety ul {
+    margin: 8pt 0;
+    padding-inline-start: 20pt;
+  }
+  .safety li { margin-bottom: 8pt; }
+  .rule-above {
+    background: #fff;
+    border: 3pt double #b00;
+    padding: 10pt 16pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border-inline-start: 5pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key strong { color: #000; }
+  .tip {
+    background: #f1f8e9;
+    border-inline-start: 5pt solid #558b2f;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .weak {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  ol.steps {
+    margin: 10pt 0;
+    padding-inline-start: 24pt;
+  }
+  ol.steps li { margin-bottom: 8pt; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont { color: #b00; font-weight: bold; }
+  pre.wiring-block {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    border: 1pt solid #ccc;
+    padding: 8pt;
+    margin: 10pt 0;
+    line-height: 1.35;
+    white-space: pre;
+    overflow-x: auto;
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: left;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .image-slot.living-placeholder {
+    border: 2pt dashed #667;
+    background: #f0f4fa;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-size: 11pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .image-slot-header {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #556;
+    margin-bottom: 4pt;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+<div class="card">
+
+<div class="card-id">R6</div>
+
+<div class="header">
+  <h1><span class="section-icon">🔥</span>יסודות ההלחמה</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="orient">
+קוראים את הכרטיסייה הזאת לפני ההלחמה הראשונה על לוח האימון. לא צריך לשנן אותה — משאירים אותה ליד עמדת ההלחמה וחוזרים אליה לפני כל הלחמה בפרויקט.
+</div>
+
+<div class="big-msg">
+<strong>הלחמה</strong> היא חיבור קבוע בין שני חלקי מתכת: מחממים את נקודת החיבור ומצמידים אליה <strong>בדיל</strong> — מתכת רכה שנמסה בחום. טיפת הבדיל הנמסה זורמת סביב שני החלקים, וכשהיא מתקררת ומתקשה — הם מחוברים לתמיד. במכונית שנוסעת ורועדת, רק חיבור כזה מחזיק לאורך זמן.
+</div>
+
+<p>קצה המלחם חם מאוד — בערך <strong>350 מעלות</strong>. בגלל זה לעמדת ההלחמה יש כללים משלה.</p>
+
+<h2><span class="section-icon">⚠️</span>ארבעת כללי הבטיחות של ההלחמה</h2>
+
+<div class="safety">
+  <ul>
+    <li><strong>משקפי מגן על העיניים</strong> — כל זמן שמלחם דולק בעמדה.</li>
+    <li><strong>המלחם גר על המעמד שלו</strong> — כשהוא לא ביד, הוא על המעמד. אף פעם לא על השולחן.</li>
+    <li><strong>מנקים את הקצה על הספוג הלח</strong> — אף פעם לא באצבעות.</li>
+    <li><strong>לא נוגעים בקצה המתכת</strong> — הוא חם מאוד גם כמה דקות אחרי הכיבוי.</li>
+  </ul>
+</div>
+
+<div class="rule-above">
+  ועוד כלל אחד שמעל כולם: <strong>מלחימים רק כשהמורה בעמדה</strong> — תמיד, גם אחרי שכבר יש ניסיון.
+  <br>נגעתם בטעות במשהו חם? מיד מים קרים מהברז, וקוראים למורה.
+</div>
+
+<p>הכללים האלה מופיעים גם בכרטיסיית הבטיחות <span class="r-ref">R4</span>.</p>
+
+<h2><span class="section-icon">🔥</span>איך מלחימים חיבור טוב — חמישה צעדים</h2>
+
+<ol class="steps">
+  <li><strong>מחממים את הנקודה:</strong> מניחים את קצה המלחם על נקודת החיבור ומחכים 2–3 שניות.</li>
+  <li><strong>מצמידים את הבדיל לנקודה</strong> — לא לקצה המלחם. הנקודה החמה היא שממיסה את הבדיל.</li>
+  <li><strong>הבדיל נמס וזורם</strong> סביב החיבור ועוטף אותו מכל הצדדים.</li>
+  <li><strong>מרחיקים קודם את הבדיל</strong>, ואחר כך את המלחם. המלחם חוזר למעמד.</li>
+  <li><strong>לא מזיזים כלום 3 שניות</strong> — עד שהחיבור מתקשה. חיבור שזז בזמן ההתקשות יוצא חלש.</li>
+</ol>
+
+<div class="tip">
+<strong>הבדיל לא נמס?</strong> לא מנסים לתקן לבד — בעמדת ההלחמה <strong>קוראים למורה, תמיד</strong>. לרוב הסיבה פשוטה: הקצה נוגע בבדיל במקום בנקודת החיבור.
+</div>
+
+<h2><span class="section-icon">👀</span>חיבור טוב מול חיבור חלש</h2>
+
+<pre class="wiring-block" dir="ltr">          |                                  |
+          |                                  |
+         /|\                                .-.
+        / | \                              ( | )
+       /  |  \                              `-'
+   ===============                    ===============
+
+        <bdi>מבריק</bdi>                              <bdi>עמום</bdi>
+        <bdi>מחזיק</bdi>                               <bdi>זז</bdi></pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">איור בהכנה</div>
+  <p>כאן תיכנס תמונת תקריב של חיבור הלחמה טוב מלוח האימון — מבריק, חלק ובצורת אוהל קטן — לצד חיבור חלש בצורת כדור עמום, להשוואה.</p>
+</div>
+
+<div class="tip">
+<strong>חיבור טוב:</strong> מבריק, חלק, יושב כמו אוהל קטן סביב נקודת החיבור. במשיכה עדינה — נשאר במקומו.
+</div>
+
+<div class="weak">
+<strong>חיבור חלש ("הלחמה קרה"):</strong> עמום, בצורת כדור, זז או משתחרר במשיכה עדינה. זה קורה כשהנקודה לא התחממה מספיק, או כשמשהו זז בזמן ההתקשות. מה עושים: חוזרים לעמדה <strong>יחד עם המורה</strong>, מחממים את הנקודה מחדש — והבדיל נמס וזורם שוב.
+</div>
+
+<h2><span class="section-icon">🔍</span>בדיקת המשיכה העדינה</h2>
+
+<p>כך בודקים כל חיבור הלחמה בפרויקט: אוחזים בחוט קרוב לנקודת החיבור ומושכים <strong>בעדינות</strong> — לא בכוח. חיבור טוב נשאר במקומו. חיבור שזז או משתחרר — חוזרים לעמדה יחד עם המורה.</p>
+
+<div class="key">
+<strong>משיכה עדינה — לא מבחן כוח.</strong> המטרה היא לגלות חיבור רופף לפני שהמכונית מגלה אותו על המסלול.
+</div>
+
+<h2><span class="section-icon">🔧</span>חיבור שנשבר אחר כך — תחזוקה, לא כישלון</h2>
+
+<p>גם חיבור טוב יכול להישבר אחרי הרבה נסיעות ורעידות. ככה זה אצל רובוטים אמיתיים: מכוניות נכנסות למוסך, ורובוטים מקבלים תחזוקה. קוראים למורה, חוזרים יחד לעמדה, מלחימים מחדש — והמכונית חוזרת למסלול.</p>
+
+<div class="key">
+<strong>חיבור שנשבר הוא עבודת תחזוקה — לא כישלון.</strong>
+</div>
+
+<footer>
+  R6 — יסודות ההלחמה · פרויקט #4 מכונית עוקבת קו
+</footer>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 1 מתוך 8</div>
+  <h1><span class="section-icon">🔥</span>פוגשים את עמדת ההלחמה</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="together-notice">
+  <strong>שלב ביחד — המורה לידכם לאורך כל השלב</strong>
+  בשלב הזה לומדים כלי אמיתי חדש: מלחם. עובדים עליו תמיד יחד עם המורה — היום ובכל פעם שמלחימים בפרויקט הזה.
+</div>
+
+<div class="why">
+בפרויקט הזה בונים מכונית שנוסעת בעצמה לאורך קו. חיבורי החוטים של המנועים צריכים להחזיק מעמד ברעידות של נסיעה — ולכן מחברים אותם ב<strong>הלחמה</strong>: טיפת מתכת חמה שמתקשה לחיבור קבוע וחזק. לפני שנוגעים במכונית, מתאמנים על לוח אימון שאין בו מה לקלקל.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<h3>חלק א׳ — פותחים את הפרויקט</h3>
+
+<ul class="checklist">
+  <li>בסרגל הצד של סייר הקבצים לוחצים על <strong>Google Drive</strong>, ואז הולכים ל-<strong>My Drive ← Arduino_Projects</strong>.</li>
+  <li>נכנסים לתיקייה עם הכינוי שלכם.</li>
+  <li>בתוכה יוצרים תיקייה חדשה בשם <strong>Project_4_Line_Following_Car</strong>.</li>
+  <li>פותחים יחד עם המורה את קלוד קוד ומגדירים אותו לעבוד בתיקייה החדשה.</li>
+</ul>
+
+<h3>חלק ב׳ — לומדים את כללי הבטיחות ומתאמנים</h3>
+
+<ul class="checklist">
+  <li>מרכיבים <strong>משקפי מגן</strong> — וגם המורה מרכיב.</li>
+  <li>אומרים יחד עם המורה את <strong>ארבעת כללי הבטיחות</strong> שבמסגרת האדומה למטה.</li>
+  <li>המורה מדגים חיבור הלחמה אחד על <strong>לוח האימון</strong>: מחממים את נקודת החיבור, מצמידים את הבדיל לנקודה, מרחיקים קודם את הבדיל ואז את המלחם, ולא מזיזים כלום 3 שניות עד שהחיבור מתקשה.</li>
+  <li>עכשיו אתם: מלחימים <strong>3–4 חיבורים</strong> על לוח האימון, בקצב שלכם, עם המורה ליד.</li>
+  <li>בודקים חיבור אחד ב<strong>משיכה עדינה</strong> — חיבור טוב מחזיק ולא זז.</li>
+  <li>בסיום: המלחם חוזר <strong>למעמד שלו</strong>, ומכבים אותו יחד עם המורה.</li>
+</ul>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>ארבעת כללי הבטיחות של ההלחמה</strong>
+  <ul>
+    <li><strong>משקפי מגן על העיניים</strong> — כל זמן שמלחם דולק בעמדה.</li>
+    <li><strong>המלחם גר על המעמד שלו</strong> — כשהוא לא ביד, הוא על המעמד. אף פעם לא על השולחן.</li>
+    <li><strong>מנקים את הקצה על הספוג הלח</strong> — אף פעם לא באצבעות.</li>
+    <li><strong>לא נוגעים בקצה המתכת</strong> — הוא חם מאוד גם כמה דקות אחרי הכיבוי.</li>
+  </ul>
+  נגעתם בטעות במשהו חם? מיד מים קרים מהברז, וקוראים למורה.
+  כללי הבטיחות המלאים ומדריך ההלחמה צעד-אחר-צעד נמצאים בכרטיסים <span class="r-ref">R4</span> ו-<span class="r-ref">R6</span>.
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>על לוח האימון יש כמה חיבורי הלחמה שלכם — מבריקים, חלקים, יושבים כמו אוהל קטן סביב נקודת החיבור. חיבור שנבדק במשיכה עדינה נשאר במקומו.</p>
+  <p class="expected-note"><strong>החיבורים הראשונים לא חייבים להיות יפים</strong> — הם חייבים להחזיק. יופי מגיע עם אימון, וזו בדיוק המטרה של לוח האימון.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>תיקיית Project_4_Line_Following_Car קיימת בתיקייה שלכם, וקלוד קוד עובד בתוכה</li>
+    <li>אתם יודעים לומר את ארבעת כללי הבטיחות</li>
+    <li>לפחות חיבור הלחמה אחד שלכם מחזיק במשיכה עדינה</li>
+    <li>המלחם חזר למעמד וכובה יחד עם המורה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  בהלחמה יש כלל מיוחד: <strong>כל שאלה או תקלה בעמדת ההלחמה — קוראים למורה, תמיד.</strong> לא מנסים לתקן לבד ליד מלחם חם. אם הבדיל לא נמס — כנראה מחממים את הבדיל במקום את נקודת החיבור; המורה יראה לכם שוב.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 2 מתוך 8</div>
+  <h1><span class="section-icon">🔥</span>מלחימים את חוטי המנועים</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+בשלב הקודם התאמנתם על לוח האימון — עכשיו מלחימים על המכונית האמיתית. לכל מנוע מחברים שני חוטים, אדום ושחור — בסך הכול <strong>ארבעה חיבורי הלחמה</strong>. החיבורים האלה מעבירים את הזרם שמסובב את הגלגלים, והם צריכים להחזיק ברעידות של נסיעה. לא משנה איזה צבע מגיע לאיזו לשונית — אם מנוע יסתובב הפוך בהמשך, מתקנים את זה בקלות בבקר המנועים, בלי הלחמה מחדש.
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>תזכורת בטיחות</strong>
+  ארבעת כללי הבטיחות של ההלחמה תקפים כאן במלואם — הם מופיעים בכרטיסים <span class="r-ref">R4</span> ו-<span class="r-ref">R6</span>. מלחימים רק כשהמורה ליד.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<h3>חלק א׳ — מתכוננים</h3>
+
+<ul class="checklist">
+  <li>מרכיבים <strong>משקפי מגן</strong> — הם נשארים על העיניים כל זמן שהמלחם דולק.</li>
+  <li>אם הלשוניות של המנוע קשות להלחמה, המורה יכין אותן מראש (טיפת בדיל קטנה) — זה לא משנה את הצעדים הבאים.</li>
+  <li>מסדרים על השולחן את שני המנועים ואת ארבעת החוטים — שני אדומים ושני שחורים.</li>
+</ul>
+
+<h3>חלק ב׳ — מלחימים ובודקים</h3>
+
+<ul class="checklist">
+  <li>מתחילים במנוע הראשון: מלחימים חוט <strong>אדום</strong> ללשונית אחת וחוט <strong>שחור</strong> ללשונית השנייה — בדיוק כמו על לוח האימון: מחממים את נקודת החיבור, מצמידים את הבדיל, מרחיקים, נותנים לחיבור להתקשות.</li>
+  <li>בודקים כל חיבור ב<strong>משיכה עדינה</strong> — חיבור טוב מחזיק ולא זז.</li>
+  <li>עוברים למנוע השני ומלחימים באותה דרך: אדום ללשונית אחת, שחור לשנייה.</li>
+  <li>בודקים גם את שני החיבורים האלה במשיכה עדינה.</li>
+  <li>קוראים למורה לבדוק את ארבעת החיבורים.</li>
+  <li>בסיום: המלחם חוזר <strong>למעמד שלו</strong>, ומכבים אותו יחד עם המורה.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>מכל מנוע יוצאים עכשיו שני חוטים — אדום ושחור — מחוברים בחיבורי הלחמה מבריקים וחלקים, שיושבים כמו אוהל קטן סביב הלשונית. כשמושכים בעדינות — שום חוט לא זז.</p>
+  <p class="expected-note"><strong>גם כאן — החיבור לא חייב להיות יפה</strong>, הוא חייב להחזיק. אלה החיבורים הראשונים שלכם על מכונית אמיתית.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>לכל אחד משני המנועים מחוברים שני חוטים מולחמים — אדום ושחור</li>
+    <li>כל אחד מארבעת החיבורים מחזיק במשיכה עדינה</li>
+    <li>המורה בדק את החיבורים ואישר</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  בהלחמה יש כלל מיוחד: <strong>כל שאלה או תקלה בעמדת ההלחמה — קוראים למורה, תמיד.</strong> לא מנסים לתקן לבד ליד מלחם חם. חיבור שזז במשיכה עדינה? קוראים למורה ומלחימים אותו שוב יחד — חיבור שמתקנים הוא תחזוקה רגילה, לא כישלון.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 3 מתוך 8</div>
+  <h1><span class="section-icon">🚗</span>מרכיבים את השלדה ומחברים את חיישני הקו</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+עד עכשיו היו על השולחן חלקים נפרדים. בשלב הזה הם הופכים למכונית: המנועים, הגלגלים וגלגל העזר נכנסים ל<strong>שלדה</strong>, ושני <strong>חיישני הקו</strong> — העיניים שאיתן המכונית תראה את הקו השחור — מקבלים חוטים ומקום בקדמת השלדה: שישה חיבורים בסך הכול — שלושה לכל חיישן. חיישן שלא פונה לרצפה לא רואה את הקו.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<h3>חלק א׳ — מכינים את חיישני הקו</h3>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>מלחימים היום — תזכורת קצרה</strong>
+  ארבעת כללי הבטיחות של ההלחמה מלווים כל הלחמה בפרויקט — הם מחכים בכרטיסיות <span class="r-ref">R4</span> ו-<span class="r-ref">R6</span>. מרכיבים משקפי מגן כל זמן שהמלחם דולק בעמדה.
+</div>
+
+<ul class="checklist">
+  <li>בודקים את החיישן: כבר יש עליו שלושה חוטים צבעוניים? אלה חיישני מגשר — עוברים לסעיף הבא. יש עליו שלוש נקודות מתכת חשופות עם הכיתוב VCC / GND / OUT ובלי חוטים? אלה חיישנים למלחם. לא בטוחים? קוראים למורה.</li>
+  <li>מלחימים? מרכיבים משקפי מגן, ויחד עם המורה מלחימים חוט לכל אחת משלוש הרגליים המסומנות של כל חיישן: <strong>VCC</strong>, <strong>GND</strong>, <strong>OUT</strong>.</li>
+  <li><strong>מחברים מגשרים?</strong> מחברים חוט מגשר נקבה-זכר לכל אחת משלוש הרגליים — דוחפים עד שהחוט יושב הדוק.</li>
+  <li>בודקים כל חוט ב<strong>משיכה עדינה</strong> — חיבור טוב מחזיק ולא זז.</li>
+  <li>אם הלחמתם: קוראים למורה לבדוק את חיבורי ההלחמה בחיישנים.</li>
+  <li>בסיום ההלחמה: המלחם חוזר ל<strong>מעמד</strong>, ומכבים אותו יחד עם המורה.</li>
+</ul>
+
+<h3>חלק ב׳ — מרכיבים את השלדה</h3>
+
+<ul class="checklist">
+  <li>מכניסים את שני המנועים לתושבות שלהם בשלדה ומהדקים אותם.</li>
+  <li>מרכיבים גלגל על הציר של כל מנוע — דוחפים בעדינות עד הסוף.</li>
+  <li>מרכיבים את <strong>גלגל העזר</strong> במקומו בשלדה.</li>
+  <li>מחברים את בית הסוללות למקומו על השלדה.</li>
+  <li>מרכיבים את שני חיישני הקו <strong>בקדמת השלדה, פונים לרצפה</strong>: בגובה של כסנטימטר מעל הרצפה, ובמרחק כמה סנטימטרים זה מזה.</li>
+  <li>דוחפים את המכונית ביד על השולחן — היא מתגלגלת, ושום דבר לא רופף.</li>
+</ul>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">מקום לצילום — השלדה המורכבת</div>
+  <p>צילום של השלדה המורכבת (צילום אמיתי של הערכה, לא תרשים Fritzing — לפי מוסכמת הצילומים למבנים מכניים): שני המנועים בתושבות, גלגל על כל ציר, גלגל העזר, בית הסוללות, ושני חיישני הקו בקדמת השלדה — פונים לרצפה, בגובה של כסנטימטר מעליה.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>על השולחן עומדת מכונית: שני מנועים עם גלגלים, גלגל עזר, בית סוללות, ושני חיישני קו בקדמה שפונים לרצפה. כשדוחפים אותה ביד — היא מתגלגלת בקלות.</p>
+  <p class="expected-note"><strong>המכונית עוד לא נוסעת לבד</strong> — אין עדיין חיווט ואין קוד. זה מגיע בשלבים הבאים. היום בונים את הגוף.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>לכל חיישן מחוברים שלושה חוטים, וכל חיבור מחזיק במשיכה עדינה</li>
+    <li>המכונית מתגלגלת כשדוחפים אותה ביד</li>
+    <li>שני חיישני הקו בקדמת השלדה, פונים לרצפה</li>
+    <li>שום דבר לא רופף</li>
+    <li>אם הלחמתם — המורה בדק את החיבורים ואישר</li>
+    <li>אם הלחמתם: המלחם חזר למעמד וכובה יחד עם המורה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li>בעמדת ההלחמה הכלל קבוע: כל שאלה או תקלה — <strong>קוראים למורה, תמיד.</strong></li>
+    <li>בהרכבה: חלק שלא נכנס למקומו — לא מפעילים עליו כוח. בודקים את הכיוון, מנסים שוב בעדינות, ואם עדיין לא מסתדר — קוראים למורה. גלגל שמתנדנד כנראה לא נדחף עד סוף הציר.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 4 מתוך 8</div>
+  <h1><span class="section-icon">🔌</span>מחווטים את בקר המנועים ואת החיישנים</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+אחרי ההלחמה וההרכבה — מחברים הכול יחד. זהו שלב החיווט הגדול של המכונית: המנועים, הסוללות, בקר המנועים <strong>L298N</strong> ושני חיישני הקו. הרבה חוטים, אבל כל אחד מהם פשוט — עובדים לאט, חוט-חוט, מול כרטיס העזר <span class="r-ref">R1</span>. בשלב הזה אין מלחם ואין קוד: בסוף השלב שום דבר עדיין לא זז, וזה בכוונה — הקוד שמניע את הגלגלים מגיע בשלב הבא.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<h3>חלק א׳ — המנועים אל בקר המנועים</h3>
+
+<ul class="checklist">
+  <li>מזהים על בקר המנועים L298N את זוגות ההדקים למנועים: <strong>OUT1/OUT2</strong> בצד אחד, <strong>OUT3/OUT4</strong> בצד השני.</li>
+  <li>מחברים את שני החוטים המולחמים של <strong>המנוע השמאלי</strong> ל-<strong>OUT1</strong> ו-<strong>OUT2</strong>.</li>
+  <li>מחברים את שני החוטים של <strong>המנוע הימני</strong> ל-<strong>OUT3</strong> ו-<strong>OUT4</strong>.</li>
+  <li>בכל הדק: משחררים מעט את הבורג, מכניסים את קצה החוט, מהדקים בחזרה — ובודקים ב<strong>משיכה עדינה</strong> שהחוט מחזיק.</li>
+  <li>איזה חוט לאיזה חור בתוך הזוג? עדיין לא משנה — אם מנוע יסתובב הפוך בשלב הבא, מחליפים בין שני החוטים שלו. תיקון של 30 שניות, לא תקלה.</li>
+</ul>
+
+<h3>חלק ב׳ — חשמל מהסוללות + הארקה משותפת</h3>
+
+<ul class="checklist">
+  <li>מוודאים שהמתג של מחזיק הסוללות <strong>כבוי</strong> לפני שמחברים.</li>
+  <li>מחברים את החוט <strong>האדום (+)</strong> של מחזיק הסוללות להדק <strong>VIN</strong> של הבקר (מסומן לפעמים 12V).</li>
+  <li>מחברים את החוט <strong>השחור (−)</strong> להדק <strong>GND</strong> של הבקר.</li>
+  <li>מחברים חוט בין <strong>GND</strong> של הבקר ל-<strong>GND</strong> של הארדואינו — זהו <strong>חוט ההארקה המשותפת</strong>. אפשר להעביר אותו דרך המסילה הכחולה (−) של הברדבורד.</li>
+  <li><strong>שני חוטי הסוללות אף פעם לא נוגעים זה בזה ישירות</strong> — זה קצר חשמלי (הכלל המלא בכרטיס <span class="r-ref">R4</span>).</li>
+</ul>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>החוט שהכי קל לשכוח — ההארקה המשותפת</strong>
+  לבקר המנועים יש חשמל מהסוללות, ולארדואינו יש חשמל משלו. בלי חוט משותף בין <strong>GND</strong> ל-<strong>GND</strong> הם לא מדברים באותה "שפה חשמלית" — ואז שום דבר לא יזוז אחרי ההעלאה, בלי שום הודעת שגיאה. זה הפספוס הנפוץ ביותר בפרויקט הזה, ולכן בודקים אותו פעמיים.
+</div>
+
+<p>אם זו שעת ההפסקה — אפשר לעצור כאן ולהמשיך אחריה.</p>
+
+<h3>חלק ג׳ — שישה חוטי האות</h3>
+
+<ul class="checklist">
+  <li>מחברים <strong>שישה חוטים</strong> משורת החיבורים שעל הבקר אל הרגליים של הארדואינו, לפי הטבלה למטה.</li>
+  <li>מחברים אחד-אחד, לפי הסדר, ומשווים כל חוט לטבלה למטה.</li>
+  <li>נוח לבדוק: שש הרגליים בארדואינו הן רצף אחד — <strong>5 עד 10</strong>.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr><th>החיבור בבקר</th><th>הרגל בארדואינו</th><th>מה הוא עושה</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>ENB</strong></td><td>רגל 5</td><td>מהירות המנוע הימני</td></tr>
+    <tr><td><strong>IN4</strong></td><td>רגל 6</td><td>כיוון המנוע הימני</td></tr>
+    <tr><td><strong>IN3</strong></td><td>רגל 7</td><td>כיוון המנוע הימני</td></tr>
+    <tr><td><strong>IN2</strong></td><td>רגל 8</td><td>כיוון המנוע השמאלי</td></tr>
+    <tr><td><strong>IN1</strong></td><td>רגל 9</td><td>כיוון המנוע השמאלי</td></tr>
+    <tr><td><strong>ENA</strong></td><td>רגל 10</td><td>מהירות המנוע השמאלי</td></tr>
+  </tbody>
+</table>
+
+<h3>חלק ד׳ — הברדבורד הופך לתחנת החשמל</h3>
+
+<p>למה דרך הברדבורד? לארדואינו יש רק רגל 5V אחת — המסילות מפצלות אותה לשני החיישנים. הברדבורד הוא תחנת החשמל של המכונית.</p>
+
+<ul class="checklist">
+  <li>מחברים חוט מרגל <strong>5V</strong> של הארדואינו אל <strong>המסילה האדומה (+)</strong> של הברדבורד.</li>
+  <li>מחברים חוט מ-<strong>GND</strong> של הארדואינו אל <strong>המסילה הכחולה (−)</strong>.</li>
+  <li>לכל אחד משני חיישני הקו: <strong>VCC</strong> אל המסילה האדומה (+), <strong>GND</strong> אל המסילה הכחולה (−).</li>
+  <li><strong>OUT</strong> של החיישן <strong>השמאלי</strong> אל <strong>רגל 11</strong>, ו-<strong>OUT</strong> של החיישן <strong>הימני</strong> אל <strong>רגל 12</strong>.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">Motors                 L298N
+  left  motor ───────  OUT1 / OUT2
+  right motor ───────  OUT3 / OUT4
+
+Battery (+) red ─────  VIN (12V)
+Battery (−) black ───  GND
+
+L298N                  Arduino
+  GND ───────────────  GND      ★ common ground!
+  ENB ───────────────  pin 5
+  IN4 ───────────────  pin 6
+  IN3 ───────────────  pin 7
+  IN2 ───────────────  pin 8
+  IN1 ───────────────  pin 9
+  ENA ───────────────  pin 10
+
+Arduino                Breadboard
+  5V  ───────────────  (+) rail
+  GND ───────────────  (−) rail
+
+IR sensor LEFT         IR sensor RIGHT
+  VCC ── (+) rail        VCC ── (+) rail
+  GND ── (−) rail        GND ── (−) rail
+  OUT ── pin 11          OUT ── pin 12</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_01_driver_wiring</div>
+  <p>כאן ייכנס תרשים ברדבורד (Fritzing) של החיווט המלא: הארדואינו, בקר המנועים L298N עם שני המנועים ומחזיק הסוללות, הברדבורד כתחנת החשמל, שני חיישני הקו — וחוט ההארקה המשותפת מודגש בבירור.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>שום דבר לא זז, לא מאיר ולא מצפצף — <strong>וזה בדיוק מה שאמור לקרות</strong>. עדיין אין קוד במכונית. הבדיקה בשלב הזה היא בעיניים: עוברים חוט-חוט מול הטבלה בכרטיס העזר <span class="r-ref">R1</span>, וכל חוט נמצא בדיוק במקום שכתוב.</p>
+  <p class="expected-note">המכונית שלמה ומחווטת — כל מה שחסר לה עכשיו הוא קוד. בשלב הבא מעלים את "סע קדימה" ורואים אותה זזה בפעם הראשונה.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>כל חוט תואם את טבלת החיווט בכרטיס העזר <span class="r-ref">R1</span> — עברתם עליהם אחד-אחד</li>
+    <li>חוט ההארקה המשותפת (GND של הבקר ↔ GND של הארדואינו) במקומו</li>
+    <li>שני החיישנים מקבלים חשמל מהמסילות, ו-OUT שלהם מחובר לרגליים 11 ו-12</li>
+    <li>המורה עבר על החיווט ואישר</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li>הרבה חוטים בשלב אחד — מאטים ועובדים חוט-חוט: מחברים חוט, מסמנים אותו מול <span class="r-ref">R1</span>, וממשיכים לחוט הבא.</li>
+    <li>לא בטוחים לאן חוט הולך? מחפשים אותו בטבלה של <span class="r-ref">R1</span> — כל חוט של המכונית מופיע שם.</li>
+    <li>חוט לא מחזיק בהדק הבורג — משחררים את הבורג, מכניסים את החוט עמוק יותר, ומהדקים שוב.</li>
+    <li>אם חוט מולחם השתחרר או נשבר — <strong>קוראים למורה, תמיד</strong>. כל תיקון הלחמה נעשה יחד עם המורה בעמדת ההלחמה.</li>
+    <li>סיימתם והכול נראה נכון? קוראים למורה לבדיקה המשותפת — זה חלק מהשלב.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 5 מתוך 8</div>
+  <h1><span class="section-icon">🚗</span>מעלים "נסיעה קדימה" ורואים את המכונית זזה</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+החיווט משלב 4 מוכן — עכשיו מעלים את הקוד הראשון, והמכונית שבניתם והלחמתם בעצמכם זזה בפעם הראשונה. עושים את זה בשני חלקים: קודם בודקים באוויר ששני הגלגלים מסתובבים לכיוון הנכון, ורק אחר כך יוצאים לנסיעה אמיתית על הרצפה.
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>לפני שמעלים — הגלגלים באוויר</strong>
+  <ul>
+    <li><strong>מרימים את המכונית לפני ההעלאה</strong> — מניחים אותה על קופסה או מעמד כך שהגלגלים באוויר ולא נוגעים בשולחן.</li>
+    <li><strong>אצבעות רחוק מגלגלים מסתובבים.</strong></li>
+    <li><strong>כבל ה-USB והסוללות — אף פעם לא ביחד.</strong> לפני שמדליקים את מתג הסוללות מנתקים את ה-USB; לפני שמחברים את ה-USB מכבים את מתג הסוללות.</li>
+    <li><strong>נושאים את המכונית רק כשמתג הסוללות כבוי.</strong></li>
+  </ul>
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<h3>חלק א׳ — הגלגלים באוויר: מעלים ורואים אותם מסתובבים</h3>
+
+<ul class="checklist">
+  <li>מוודאים ש<strong>מתג הסוללות כבוי</strong>.</li>
+  <li>מניחים את המכונית על קופסה או מעמד, כך ששני הגלגלים <strong>באוויר</strong> ומסתובבים חופשי.</li>
+  <li>מחברים את כבל ה-USB בין הארדואינו למחשב.</li>
+  <li>פותחים את הקובץ <code dir="ltr">01_drive_forward.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 4 שלכם, בתוך <code dir="ltr">ino_files/01_drive_forward/</code>. אם אינכם בטוחים איזה קובץ לפתוח — בודקים בכרטיס העזר <span class="r-ref">R5</span>.</span></li>
+  <li><strong>לא משנים שום שורה בקוד.</strong> רק פותחים ומעלים.</li>
+  <li>לוחצים על כפתור ה-Upload ומחכים להודעה הירוקה <strong>Done uploading</strong> בתחתית.</li>
+  <li>מנתקים את כבל ה-USB מהמחשב, ורק אז מדליקים את <strong>מתג הסוללות</strong> — הקוד מחכה 2 שניות של שקט, ואז שני הגלגלים מתחילים להסתובב.</li>
+  <li>מסתכלים על הגלגלים: 3 שניות סיבוב, שנייה אחת עצירה, ושוב. בודקים ש<strong>שני הגלגלים מסתובבים קדימה</strong>.<span class="li-detail">קדימה = החלק העליון של הגלגל נע לכיוון החזית של המכונית (הצד של חיישני הקו).</span></li>
+</ul>
+
+<div class="key">
+  <strong><span class="section-icon">⚠️</span>גלגל אחד מסתובב אחורה? רגיל לגמרי — תיקון של 30 שניות</strong>
+  <p>זה קורה כמעט בכל הרכבה, וזו לא טעות שלכם — אי אפשר לדעת מראש לאיזה כיוון מנוע יסתובב. ככה מתקנים:</p>
+  <ul>
+    <li>מכבים את מתג הסוללות.</li>
+    <li>מזהים איזה גלגל הסתובב אחורה — שמאל או ימין.</li>
+    <li>בבקר המנועים L298N מחליפים בין <strong>שני החוטים של אותו מנוע בלבד</strong>: גלגל שמאל — מחליפים בין <strong>OUT1</strong> ל-<strong>OUT2</strong>; גלגל ימין — מחליפים בין <strong>OUT3</strong> ל-<strong>OUT4</strong>.<span class="li-detail">משחררים את שני הברגים במברג קטן, מחליפים בין החוטים, ומהדקים חזרה.</span></li>
+    <li>מדליקים שוב את מתג הסוללות ובודקים — עכשיו שני הגלגלים מסתובבים קדימה.</li>
+  </ul>
+</div>
+
+<pre class="wiring-block" dir="ltr">L298N outputs          motor
+  OUT1 ── wire 1 ┐   LEFT wheel backward?
+  OUT2 ── wire 2 ┘   swap OUT1 &lt;-&gt; OUT2
+
+  OUT3 ── wire 1 ┐   RIGHT wheel backward?
+  OUT4 ── wire 2 ┘   swap OUT3 &lt;-&gt; OUT4</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — החלפת חוטי מנוע בבקר L298N</div>
+  <p>צילום או תרשים מקרוב של צד המהדקים בבקר המנועים: OUT1/OUT2 בצד אחד ו-OUT3/OUT4 בצד השני, עם חץ דו-כיווני שמראה החלפה בין שני החוטים של מנוע אחד בלבד.</p>
+</div>
+
+<h3>חלק ב׳ — הנסיעה הראשונה על הרצפה</h3>
+
+<ul class="checklist">
+  <li>מכבים את מתג הסוללות ומרימים את המכונית מהמעמד.</li>
+  <li>מפנים על הרצפה קטע פנוי וישר — בלי תיקים, בלי כיסאות ובלי רגליים.</li>
+  <li>מניחים את המכונית על הרצפה, מדליקים את מתג הסוללות — ומתרחקים צעד.<span class="li-detail">יש 2 שניות של שקט לפני שהמכונית מתחילה לנסוע.</span></li>
+  <li>צופים: המכונית נוסעת קדימה 3 שניות, עוצרת לשנייה, ונוסעת שוב — עד שמכבים אותה.</li>
+  <li>אחרי נסיעה טובה אחת: מכבים את מתג הסוללות ומחזירים את המכונית לשולחן.</li>
+</ul>
+
+<div class="screen-only">
+<h2><span class="section-icon">💻</span>מה הקוד עושה</h2>
+
+<p>הקוד מגדיר את שש הרגליים של בקר המנועים, ואז חוזר על אותו מחזור שוב ושוב: שני המנועים קדימה במהירות בינונית (150 מתוך 255) למשך 3 שניות, עצירה של שנייה אחת, ושוב. בתחילת הקוד יש המתנה של 2 שניות — הזמן להניח את המכונית ולהתרחק. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>על המעמד: שני הגלגלים מסתובבים קדימה יחד — 3 שניות סיבוב, שנייה עצירה, ושוב. על הרצפה: המכונית נוסעת קדימה, עוצרת רגע, וממשיכה.</p>
+  <p class="expected-note">המכונית עדיין לא עוקבת אחרי קו — זה מגיע בשלב 7. אם היא סוטה מעט הצידה תוך כדי נסיעה, זה תקין בשלב הזה: אין עדיין קוד שמיישר אותה.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>שני הגלגלים מסתובבים קדימה כשהמכונית באוויר</li>
+    <li>המכונית נסעה קדימה על הרצפה לפחות פעם אחת</li>
+    <li>מתג הסוללות כבוי והמכונית חזרה לשולחן</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li><strong>אם שום דבר לא זז אחרי ההעלאה:</strong> בודקים שמתג הסוללות דלוק, שהסוללות טעונות ושחוט <strong>ההארקה המשותפת</strong> מחובר — משווים לטבלה בכרטיס העזר <span class="r-ref">R1</span>.</li>
+    <li><strong>אם המנועים מזמזמים אבל הגלגלים לא מסתובבים:</strong> כנראה סוללות חלשות — קוראים למורה להחלפת סוללות.</li>
+    <li><strong>אם ה-Upload נכשל:</strong> בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM. מוודאים גם שמתג הסוללות כבוי כל זמן שה-USB מחובר.</li>
+    <li><strong>אם עדיין תקועים אחרי זה,</strong> קוראים למורה לעזרה.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 6 מתוך 8</div>
+  <h1><span class="section-icon">💻</span>בודקים את עיני המכונית מעל הקו</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+בשלב זה מעלים לארדואינו קוד מוכן שקורא את שני <strong>חיישני הקו</strong> — ה"עיניים" של המכונית. אין חיווט חדש — הכול מחובר עוד משלב 4. הקוד מדפיס למסך המעקב מה כל עין רואה: <strong>LINE</strong> (קו שחור) או <strong>FLOOR</strong> (רצפה). אם עשיתם את פרויקט 3 — זה אותו קסם שבו המספר השתנה כשהזזתם יד, רק שהפעם יש שתי עיניים.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code dir="ltr">02_sensor_test.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 4 שלכם, בתוך <code dir="ltr">ino_files/02_sensor_test/</code>. אם אינכם בטוחים איזה קובץ לפתוח — בודקים בכרטיס העזר <span class="r-ref">R5</span>.</span></li>
+  <li><strong>לא משנים שום שורה בקוד.</strong> רק פותחים ומעלים.</li>
+  <li>לוחצים על כפתור ה-Upload — הכפתור עם החץ שפונה ימינה. עוקבים אחר סרגל ההתקדמות בתחתית ה-IDE.</li>
+  <li>כשההעלאה מסתיימת, אמורה להופיע ההודעה הירוקה <strong>Done uploading</strong> בתחתית.</li>
+  <li>פותחים את ה-<strong>Serial Monitor (מסך המעקב)</strong>: לוחצים על סמל <strong>זכוכית המגדלת</strong> בפינה הימנית-עליונה של ה-IDE. מוודאים שמהירות התקשורת (baud) מוגדרת ל-<strong>9600</strong>.</li>
+  <li>מניחים את המכונית על הרצפה מעל <strong>הקו השחור</strong> — הכבל נשאר מחובר למחשב.</li>
+  <li>שמים לב שכבל ה-USB לא נמתח — לא מרחיקים את המכונית מעבר לאורך הכבל; אם צריך, מקרבים את המחשב.</li>
+  <li>מזיזים את המכונית <strong>לאט</strong> ימינה ושמאלה על פני הקו.</li>
+  <li>מסתכלים במסך המעקב: כל פעם שחיישן חוצה את הסרט השחור, הצד שלו מתחלף בין <strong>FLOOR</strong> ל-<strong>LINE</strong>.</li>
+</ul>
+
+<p>כך נראות השורות במסך המעקב כשמזיזים את המכונית על פני הקו:</p>
+
+<pre class="wiring-block" dir="ltr">LEFT: FLOOR   RIGHT: FLOOR
+LEFT: FLOOR   RIGHT: LINE
+LEFT: LINE    RIGHT: FLOOR</pre>
+
+<p><strong>LINE</strong> = העין הזאת רואה את הקו השחור. <strong>FLOOR</strong> = העין הזאת רואה רצפה. LEFT הוא החיישן השמאלי ו-RIGHT הוא החיישן הימני — שמאל וימין לפי כיוון הנסיעה של המכונית.</p>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">איור בהכנה</div>
+  <p>כאן ייכנס תרשים: מבט מלמעלה על המכונית מעל קו שחור — שני חיישני הקו בקדמת המכונית משני צידי הקו, וחצים שמראים הזזה איטית ימינה ושמאלה.</p>
+</div>
+
+<div class="key">
+  <strong><span class="section-icon">⚠️</span>המנועים לא זזים בשלב הזה — וזה בכוונה</strong>
+  <p>הקוד הזה הוא <strong>עיניים בלבד</strong>: הוא רק קורא את שני חיישני הקו ומדפיס מה הם רואים. המכונית לא אמורה לנסוע עכשיו. הנסיעה על הקו מגיעה בשלב הבא — קודם מוודאים שהעיניים רואות נכון.</p>
+</div>
+
+<div class="screen-only">
+<h2><span class="section-icon">💡</span>מה הקוד עושה</h2>
+
+<p>כל חיישן קו שולח אור אינפרא-אדום אל הרצפה ובודק כמה אור חוזר אליו: רצפה בהירה מחזירה הרבה אור — FLOOR; סרט שחור בולע את האור וכמעט לא מחזיר — LINE. הקוד קורא את שני החיישנים חמש פעמים בשנייה ומדפיס את התשובות למסך המעקב. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>במסך המעקב מופיעות שורות כמו <code dir="ltr">LEFT: FLOOR   RIGHT: LINE</code> שמתעדכנות כמה פעמים בשנייה. כשמזיזים את המכונית לאט על פני הקו, כל צד מתחלף בין FLOOR ל-LINE בדיוק כשהחיישן שלו חוצה את הסרט השחור.</p>
+  <p class="expected-note">הגלגלים לא זזים בזמן הבדיקה — זה בדיוק מה שאמור לקרות. הקוד הזה הוא עיניים בלבד.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>ב-Arduino IDE מופיע Done uploading בירוק</li>
+    <li>מסך המעקב פתוח ומראה LEFT ו-RIGHT מתעדכנים שוב ושוב</li>
+    <li>שני החיישנים מתחלפים בין LINE ל-FLOOR בהתאם למציאות — חיישן שמעל הקו מראה LINE, וחיישן שמעל הרצפה מראה FLOOR</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li><strong>אם מסך המעקב ריק או שלא מופיעות שורות:</strong> כנראה שמסך המעקב לא פתוח, או שה-baud לא מוגדר ל-9600. לוחצים על סמל זכוכית המגדלת ובודקים שה-baud מוגדר ל-9600.</li>
+    <li><strong>אם חיישן מראה תמיד את אותה קריאה — תמיד LINE או תמיד FLOOR, גם כשמזיזים את המכונית:</strong> בודקים שהחיישן נמצא בערך <strong>1 ס"מ</strong> מעל הרצפה — לא צמוד לרצפה ולא גבוה מדי. מוודאים שאין שמש ישירה על הקו — אור שמש חזק מבלבל את החיישן. אם זה עדיין קורה — קוראים למורה: לפעמים צריך לסובב בעדינות בורג כיוון קטן (פוטנציומטר) על החיישן, ואת זה עושים יחד עם המורה.</li>
+    <li><strong>אם ה-Upload נכשל:</strong> בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM. אם מסך המעקב פתוח, סוגרים אותו, מעלים שוב, ואז פותחים אותו בחזרה.</li>
+    <li><strong>אם עדיין תקועים אחרי זה,</strong> קוראים למורה לעזרה.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 7 מתוך 8</div>
+  <h1><span class="section-icon">🚗</span>מעלים את קוד עוקב הקו — והמכונית נוסעת לבד</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+זה הרגע שכל הפרויקט נבנה בשבילו. בשלב הקודם ראיתם ששני חיישני הקו — ה"עיניים" של המכונית — מבחינים בין רצפה לקו שחור. עכשיו מעלים את הקוד שמחבר בין העיניים לגלגלים, והמכונית נוסעת בעצמה לפי ארבעה כללים פשוטים: שתי העיניים על הרצפה — נוסעים ישר. העין השמאלית על הקו — הגלגל השמאלי מאט. העין הימנית על הקו — הגלגל הימני מאט. שתי העיניים על הקו — עוצרים.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<p>השלב הזה בנוי משני חלקים: קודם מעלים את הקוד דרך המחשב, ואז לוקחים את המכונית אל הקו ומשחררים.</p>
+
+<h3>חלק א׳ — מעלים את קוד עוקב הקו</h3>
+
+<ul class="checklist">
+  <li>מוודאים שכבל ה-USB מחובר בין המחשב לארדואינו, ושמתג בית הסוללות <strong>כבוי</strong>.<span class="li-detail">כשהמתג כבוי, הגלגלים לא מסתובבים על השולחן באמצע ההעלאה.</span></li>
+  <li>פותחים את הקובץ <code dir="ltr">03_line_follow.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתוך תיקיית פרויקט 4 שלכם, ליד הקבצים הקודמים שהעליתם.</span></li>
+  <li>לא משנים שום דבר בקוד — רק מעלים אותו.</li>
+  <li>לוחצים על כפתור ה-Upload ומחכים להודעה <strong>Done uploading</strong> בירוק.</li>
+  <li>מנתקים את כבל ה-USB מהארדואינו.<span class="li-detail">מעכשיו המכונית לא צריכה את המחשב — היא מקבלת חשמל מהסוללות דרך בקר המנועים L298N.</span></li>
+</ul>
+
+<h3>חלק ב׳ — מציבים את המכונית על הקו ומשחררים</h3>
+
+<ul class="checklist">
+  <li>לוקחים את המכונית אל הקו הישר שעל הרצפה.</li>
+  <li>מציבים אותה בתחילת הקו, כך שהקו השחור עובר <strong>בין שני חיישני הקו</strong> — עין אחת מכל צד של הקו.</li>
+  <li>מדליקים את מתג הסוללות. יש שתי שניות שקט לפני שהגלגלים זזים — אלה שתי השניות לוודא שהמכונית מיושרת היטב על הקו; משחררים ולא נוגעים.</li>
+  <li>עוקבים אחריה עד סוף הקו. בסוף הריצה מרימים את המכונית ומכבים את מתג בית הסוללות.</li>
+</ul>
+
+<h2><span class="section-icon">🚗</span>איך מציבים את המכונית על הקו</h2>
+
+<pre class="wiring-block" dir="ltr">              ^
+              |
+            #####
+            #####  line
+     +------#####------+
+     |      #####      |
+     |  [L] ##### [R]  |
+     |      #####      |
+     +------#####------+
+            #####
+            #####</pre>
+
+<p>הקו עובר בין שני החיישנים — לא נוגע באף אחד מהם.</p>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — הצבת המכונית על הקו</div>
+  <p>תצלום או איור מלמעלה של המכונית מוצבת בתחילת הקו הישר: הקו השחור עובר בין שני חיישני הקו בלי לגעת באף אחד מהם, וחץ מסמן את כיוון הנסיעה לאורך הקו.</p>
+</div>
+
+<div class="screen-only">
+<h2><span class="section-icon">💻</span>מה הקוד עושה</h2>
+
+<p>אפשר להציץ בקוד ב-IDE. כל סיבוב של <code>loop()</code> הוא החלטה אחת: בודקים מה שתי העיניים רואות, ובוחרים —</p>
+
+<pre class="code-block"><span class="filename">03_line_follow.ino</span>if (!leftOnLine &amp;&amp; !rightOnLine) {
+  drive(BASE_SPEED, BASE_SPEED);              // שתי העיניים על הרצפה ← נוסעים ישר
+}
+else if (leftOnLine &amp;&amp; !rightOnLine) {
+  drive(BASE_SPEED - CORRECTION, BASE_SPEED); // העין השמאלית על הקו ← הגלגל השמאלי מאט
+}
+else if (!leftOnLine &amp;&amp; rightOnLine) {
+  drive(BASE_SPEED, BASE_SPEED - CORRECTION); // העין הימנית על הקו ← הגלגל הימני מאט
+}
+else {
+  stopMotors();                               // שתי העיניים על הקו ← עוצרים
+}</pre>
+
+<p>לא צריך לכתוב או לשנות — רק מעלים, מציבים ומשחררים.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>מפעילים את המתג — ולשתי שניות שום דבר לא קורה. זה מכוון: הקוד נותן זמן ליישר את המכונית ולשחרר. אחר כך המכונית נוסעת קדימה לאורך הקו, ובכל פעם שהיא סוטה הצידה — אחד הגלגלים מאט לרגע והיא מתיישרת חזרה אל הקו. בסוף הקו, או כשמרימים אותה מהרצפה, היא עוצרת לבד.</p>
+  <p class="expected-note"><strong>המכונית לא נוסעת בקו מושלם — היא מתנדנדת קלות ימינה ושמאלה.</strong> זו לא תקלה: זו בדיוק צורת הנסיעה של עוקב קו — סטייה קטנה, תיקון, סטייה קטנה, תיקון.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>ההודעה Done uploading הופיעה בירוק, וכבל ה-USB מנותק</li>
+    <li>המכונית מוצבת כך שהקו השחור עובר בין שני חיישני הקו</li>
+    <li>המכונית עברה את כל הקו הישר מההתחלה ועד הסוף בלי לצאת ממנו — לפחות פעם אחת</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li><strong>המכונית פונה הצידה ומתרחקת מהקו במקום לחזור אליו:</strong> קוראים למורה. ייתכן שלוחות החיישנים שלכם עובדים הפוך, והמורה הופך הגדרה אחת בקוד (<code dir="ltr">LINE_IS_HIGH</code>) — תיקון של דקה.</li>
+    <li><strong>שום דבר לא זז:</strong> בודקים שמתג בית הסוללות דלוק ושהסוללות בפנים. אחר כך בודקים את חוט ה<strong>הארקה המשותפת</strong> — GND של בקר המנועים אל GND של הארדואינו; בלעדיו הארדואינו ובקר המנועים לא מדברים זה עם זה. משווים מול כרטיס העזר <span class="r-ref">R1</span>.</li>
+    <li><strong>ההעלאה נכשלה:</strong> מחפשים טקסט שגיאה אדום ב-IDE. אם ה-Serial Monitor פתוח, סוגרים אותו ומעלים שוב.</li>
+    <li><strong>אם עדיין תקועים אחרי זה,</strong> קוראים למורה לעזרה.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge celebration">פרויקט #4 — מכונית עוקבת קו: שלב 8 מתוך 8 • השלב האחרון</div>
+  <h1><span class="section-icon">🏆</span>מריצים מסלול וחוגגים</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+המכונית שלכם כבר יודעת לעקוב אחרי קו ישר. בשלב האחרון היא מקבלת אתגר אמיתי — <strong>עיקול</strong> — וגם <strong>שם משלה</strong>. מריצים נסיעה מלאה, רושמים את השם על הפוסטר של פרויקט 4, ומראים למורה. מכונית שהלחמתם, הרכבתם וחיברתם בעצמכם — מגיע לה שם.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<h3>חלק א׳ — מריצים את המסלול עם העיקול</h3>
+
+<ul class="checklist">
+  <li>מבקשים מהמורה להוסיף למסלול <strong>עיקול עדין</strong>, או מדביקים אותו בעצמכם מסרט בידוד שחור. עיקול רחב ומעוגל — לא פינה חדה.</li>
+  <li>מוודאים שכבל ה-USB מנותק — בנסיעה הזאת המכונית עובדת על הסוללות בלבד.</li>
+  <li>מציבים את המכונית בתחילת הקו, כך שהקו עובר בדיוק בין שני חיישני הקו.</li>
+  <li>מפעילים את מתג הסוללות — יש שתי שניות של שקט, זה מכוון, לא נוגעים — ואז המכונית זזה לבד.</li>
+  <li>עוקבים אחרי המכונית: היא נוסעת לאורך הקו, מתקנת את עצמה קצת ימינה וקצת שמאלה, ועוברת גם את העיקול.</li>
+  <li>יצאה מהקו בעיקול? מחזירים אותה לנקודת ההתחלה ומנסים שוב. שתיים-שלוש נסיעות עד להצלחה — ככה עובדים מהנדסים אמיתיים.</li>
+</ul>
+
+<h3>חלק ב׳ — נותנים שם וחוגגים</h3>
+
+<ul class="checklist">
+  <li>חושבים על <strong>שם למכונית</strong>. שם מצחיק, שם מהיר, שם של חיה — כל שם שאתם אוהבים.</li>
+  <li>ניגשים לפוסטר של פרויקט 4 שתלוי בעמדה שלכם, ומוצאים את השורה עם הכינוי שלכם.</li>
+  <li>רושמים בעמודות המתאימות את שם המכונית ואת המסלול שהשלמתם.</li>
+  <li>קוראים למורה ומראים לו <strong>נסיעה מלאה</strong> — מנקודת ההתחלה ועד סוף הקו.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>המכונית יוצאת לדרך, צמודה לקו, נכנסת לעיקול ומסתובבת איתו — ומגיעה עד סוף המסלול. על הפוסטר מופיעים הכינוי שלכם, שם המכונית והמסלול שהשלמתם. עכשיו זו לא רק מכונית שעוקבת אחרי קו — זו <strong>המכונית שלכם</strong>, ויש לה שם.</p>
+  <p class="expected-note">המכונית מפספסת את העיקול בנסיעה הראשונה? תקין לגמרי. הצלחה מלאה מגיעה בדרך כלל בנסיעה השנייה או השלישית — גם אצל מהנדסים אמיתיים.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>המכונית השלימה נסיעה מלאה — כולל העיקול — ומישהו ראה אותה: המורה או חבר</li>
+    <li>שם המכונית והמסלול שהשלמתם רשומים על הפוסטר, ליד הכינוי שלכם</li>
+    <li>המורה חגג איתכם</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  המכונית יוצאת מהקו באותו מקום בכל פעם? כנראה העיקול חד מדי — מבקשים מהמורה להרחיב אותו קצת. המכונית לא זזה בכלל? בודקים שמתג הסוללות פעיל ושכבל ה-USB מנותק. לא מוצאים שם? אפשר לחשוב על הצבע שלה, על המהירות שלה, או על מילה שאתם אוהבים — אין תשובה נכונה אחת. ואפשר תמיד לקרוא למורה.
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את פרויקט 4!</span>
+  הלחמתם חיבורים אמיתיים במו ידיכם — בפעם הראשונה בתוכנית — הרכבתם שלדה עם שני מנועים, חיברתם בקר מנועים ושני חיישני קו, ובניתם מכונית שנוסעת לבד ועוקבת אחרי קו, כולל עיקול. המורה יחגוג איתכם ועם המכונית בשמה החדש, וישאל אתכם: מה תרצו לבנות עכשיו? אפשר לבקש ממנו תמונה של המכונית לתיק העבודות (אם רוצים).
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 1 מתוך 6</div>
+  <h1><span class="section-icon">🚗</span>התחלה — מקימים את המכונית ונוסעים על הקו הישר</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+בשלב זה — הפעלה מרוכזת: פותחים את התיקייה, מוודאים שהמכונית מורכבת ומחווטת, מעלים את קוד הבסיס ועושים נסיעה נקייה אחת על הקו הישר. ואז מציצים בשלוש הבחירות שיהפכו את המכונית הזאת לשלכם: מהירות, תיקון וצורת המסלול. אם המכונית מגרסה 1 כבר בנויה — השלב הזה קצר. אם בונים מהתחלה — זו הבנייה הגדולה ביותר בתוכנית עד כה, והיא יכולה להימשך גם על פני כמה מפגשים. זה בסדר גמור — לוקחים את הזמן, צעד-צעד.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<h3>חלק א׳ — פותחים את הפרויקט</h3>
+
+<ul class="checklist">
+  <li>בסרגל הצד של סייר הקבצים לוחצים על <strong>Google Drive</strong>, הולכים ל-<strong>My Drive ← Arduino_Projects</strong>, ונכנסים לתיקייה עם הכינוי שלכם.</li>
+  <li>אם תיקיית <strong>Project_4_Line_Following_Car</strong> כבר קיימת מגרסה 1 — פותחים אותה. אם לא — יוצרים אותה עכשיו.</li>
+  <li>פותחים את קלוד קוד ומגדירים אותו לעבוד בתיקייה הזו.</li>
+</ul>
+
+<h3>חלק ב׳ — מכינים את המכונית</h3>
+
+<div class="choice-point">
+  <strong>המכונית מגרסה 1 כבר בנויה?</strong>
+  <div class="option">
+    עושים בדיקה מהירה:
+    <ul class="checklist">
+      <li>בודקים ב<strong>משיכה עדינה</strong> את חיבורי ההלחמה של המנועים (חיבור טוב לא זז).</li>
+      <li>מוודאים ששני חיישני הקו פונים לרצפה בקדמת המכונית ומקבלים VCC ו-GND מפסי החשמל של הברדבורד.</li>
+      <li>משווים כל חוט לתרשים שלמטה.</li>
+      <li>בודקים שהסוללות מלאות.</li>
+    </ul>
+  </div>
+
+  <strong>בונים מהתחלה?</strong>
+  <div class="option">
+    עוברים יחד עם המורה על כרטיסי הבנייה של גרסה 1 — שלבים 1 עד 4 (עמדת ההלחמה, הלחמת המנועים, הרכבת השלדה, החיווט) — וחוזרים לכאן. מרכיבים <strong>משקפי מגן</strong> כל זמן שמלחם דולק בעמדה, ומלחימים רק יחד עם המורה; כללי הבטיחות המלאים בכרטיסים <span class="r-ref">R4</span> ו-<span class="r-ref">R6</span>.
+  </div>
+</div>
+
+<h3>חלק ג׳ — מעלים את קוד הבסיס ונוסעים</h3>
+
+<ul class="checklist">
+  <li>מרימים את המכונית כך <strong>שהגלגלים באוויר</strong> — מכונית שמנסה לנסוע על השולחן היא ההפתעה הקלאסית של ההעלאה הראשונה.</li>
+  <li>מחברים את כבל ה-USB, פותחים ב-Arduino IDE את <code dir="ltr">ino_files/T2_line_follow_starter/T2_line_follow_starter.ino</code> ולוחצים Upload.</li>
+  <li>אחרי "Done uploading" מנתקים את ה-USB, ובודקים שהחוט מ-<strong>5V של בקר המנועים</strong> אל <strong>5V של הארדואינו</strong> מחובר — כך הסוללות מזינות גם את הארדואינו בנסיעה בלי כבל.</li>
+  <li>מניחים את המכונית בתחילת הקו הישר, כך שהקו השחור עובר <strong>בין שני חיישני הקו</strong>.</li>
+  <li>מפעילים את מתג הסוללות ועוזבים — למכונית יש שתי שניות של המתנה, ואז היא מתחילה לנסוע לבד לאורך הקו.</li>
+  <li><strong>הצצה קדימה:</strong> קוראים את שלוש הבחירות שמחכות לכם (למטה).</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט — לבדיקה מהירה</h2>
+
+<pre class="wiring-block" dir="ltr">L298N               Arduino
+  ENB ────────────  D5    (right speed)
+  IN4 ────────────  D6
+  IN3 ────────────  D7    (right direction)
+  IN2 ────────────  D8
+  IN1 ────────────  D9    (left direction)
+  ENA ────────────  D10   (left speed)
+
+Motors
+  Left motor  ────  OUT1 / OUT2
+  Right motor ────  OUT3 / OUT4
+
+Line sensors
+  LEFT  OUT ──────  D11
+  RIGHT OUT ──────  D12
+  VCC / GND ──────  breadboard (+) / (−) rails
+
+Power
+  Battery (+) ────  L298N VIN
+  Battery (−) ────  L298N GND
+  L298N GND ──────  Arduino GND   &lt;-- COMMON GROUND!
+  L298N 5V  ──────  Arduino 5V
+  Arduino 5V  ────  (+) rail
+  Arduino GND ────  (−) rail</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים בהכנה</div>
+  <p>כאן ייכנס תרשים מלא של המכונית: בקר המנועים L298N במרכז, שני המנועים משני הצדדים, שני חיישני הקו מלפנים, הברדבורד כרכזת החשמל, מחזיק הסוללות — וחוט ההארקה המשותפת מודגש בצבע.</p>
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>החוט החשוב ביותר במכונית — הארקה משותפת</strong>
+  בקר המנועים והארדואינו חייבים לחלוק חוט GND משותף (L298N GND ↔ Arduino GND). בלעדיו המכונית לא נוסעת, או מתנהגת מוזר בלי הסבר — וזו הטעות הנפוצה ביותר בפרויקט הזה. אם משהו לא עובד, בודקים קודם כול את החוט הזה.
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>אחרי ההעלאה מופיעה הודעה ירוקה "Done uploading". על הרצפה: המכונית נוסעת לאורך הקו הישר ומתקנת את עצמה בעדינות ימינה ושמאלה כשהיא סוטה. נדנוד קטן הוא תקין — ככה עוקב קו עובד. כשמרימים את המכונית מהרצפה, או כששני החיישנים רואים שחור יחד — המנועים נעצרים.</p>
+  <p class="expected-note">גלגל אחד מסתובב אחורה? <strong>נורמלי לגמרי</strong> — ככה יוצאת כמעט כל הרכבה ראשונה. מחליפים בין שני החוטים של אותו מנוע בהדקי ה-OUT של בקר המנועים — תיקון של 30 שניות, לא כישלון. בשלבים הבאים תהפכו את המכונית הזאת לשלכם — תבחרו מהירות, תיקון ומסלול.</p>
+</div>
+
+<div class="choice-preview">
+  <strong><span class="section-icon">🔀</span>שלוש הבחירות שמחכות לכם</strong>
+  <ul>
+    <li><strong>שלב 2 — מהירות (<code dir="ltr">BASE_SPEED</code>):</strong> איטי (יציב ובטוח בכל עיקול), בינוני (ברירת המחדל), או מהיר (מלהיב — ומסוכן בעיקולים). בוחרים אחד.</li>
+    <li><strong>שלב 3 — תיקון (<code dir="ltr">CORRECTION</code>):</strong> עדין (נסיעה חלקה בקו ישר, עלול לפספס עיקול חד) או חזק (נצמד לעיקולים, מתנדנד בקו ישר). כאן <strong>משנים את הקוד בעצמכם</strong> בעזרת קלוד קוד.</li>
+    <li><strong>שלב 4 — צורת המסלול:</strong> ישר, עיקול עדין או עיקול חד — ומניחים מסלול משלכם על הרצפה עם סרט בידוד שחור.</li>
+  </ul>
+  <p class="expected-note">אין צורך להחליט עכשיו — רק לקרוא, כדי לדעת מה מגיע. הבחירות משפיעות זו על זו (מהיר + עיקול חד = אתגר אמיתי), ופרטים על כל אופציה בכרטיסי העזר.</p>
+</div>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>שימו לב — שינוי קוד בכוחות עצמכם</strong>
+  בשלב 3 תשנו את הקוד בעצמכם (ערוץ A, גרסה 2): מתארים מה רוצים, שואלים את קלוד קוד, קוראים את התשובה, עורכים ומעלים מחדש. את זה מתרגלים בשלב 3.
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>תיקיית Project_4_Line_Following_Car פתוחה וקלוד קוד עובד בתוכה</li>
+    <li>המכונית מורכבת ומחווטת לפי התרשים — כולל חוט ההארקה המשותפת — והמורה אישר</li>
+    <li>קוד הבסיס <code dir="ltr">T2_line_follow_starter</code> הועלה בהצלחה</li>
+    <li>המכונית עקבה אחרי הקו הישר מההתחלה ועד הסוף, לפחות פעם אחת</li>
+    <li>קראתם את שלוש הבחירות שמחכות בשלבים 2, 3 ו-4</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li>השלב הזה מרכז הרבה צעדים לאחד. אם משהו לא ברור — מאטים, ואפשר לקבל את הכרטיסים המפורטים של גרסה 1 לכל חלק.</li>
+    <li>המכונית לא זזה בכלל? בודקים את מתג הסוללות, את הסוללות עצמן — ואת חוט ההארקה המשותפת (הטעות הנפוצה ביותר).</li>
+    <li>גלגל אחד מסתובב אחורה? מחליפים בין שני החוטים של אותו מנוע בהדקי ה-OUT של בקר המנועים — 30 שניות וזה מסודר.</li>
+    <li>המכונית בורחת מהקו במקום לעקוב אחריו? כנראה ההגדרה <code dir="ltr">LINE_IS_HIGH</code> הפוכה. מבקשים מקלוד קוד לעזור להפוך אותה ומעלים מחדש — ואם רוצים, קוראים גם למורה.</li>
+    <li>חיבור הלחמה התרופף מאז גרסה 1? זו תחזוקה, לא כישלון. כל דבר שקשור להלחמה — <strong>קוראים למורה, תמיד.</strong></li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 2 מתוך 6</div>
+  <h1><span class="section-icon">🚗</span>בחירה א': בוחרים את המהירות</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+זוהי נקודת הבחירה הראשונה בפרויקט. בשלב הקודם המכונית כבר נסעה לאורך הקו הישר — עכשיו אתם בוחרים <strong>באיזו מהירות היא תיסע</strong>. זוהי <strong>מהירות הבסיס</strong> של המכונית: המהירות שבה היא נוסעת כשהיא על הקו. כלל אחד כדאי לדעת מראש: ככל שהמכונית מהירה יותר, קשה לה יותר להישאר על הקו בעיקולים. הבחירה שלכם, אין תשובה "נכונה".
+</div>
+
+<h2><span class="section-icon">📋</span>בוחרים אחת משלוש המהירויות האלה</h2>
+
+<div class="choice-point">
+  <strong>אפשרות א — איטי (110): יציב בכל עיקול</strong>
+  <div class="option">
+    <strong>איך המכונית נוסעת:</strong> בקצב רגוע ויציב. נשארת על הקו בכל עיקול — גם עיקול חד.<br>
+    <strong>למה זה מתאים:</strong> למי שרוצה מכונית שמסיימת את המסלול נקי, פעם אחר פעם. הבחירה הבטוחה לכל מסלול שתבנו בהמשך.
+  </div>
+
+  <strong>אפשרות ב — בינוני (140): האיזון</strong>
+  <div class="option">
+    <strong>איך המכונית נוסעת:</strong> בדיוק כמו בשלב הקודם — זוהי ברירת המחדל, המהירות שהמכונית כבר נסעה בה על הקו הישר. איזון בין מהירות ליציבות.<br>
+    <strong>למה זה מתאים:</strong> למי שרוצה גם וגם — קצב טוב שמחזיק ברוב העיקולים.
+  </div>
+
+  <strong>אפשרות ג — מהיר (180): מרגש — ואתגר בעיקולים</strong>
+  <div class="option">
+    <strong>איך המכונית נוסעת:</strong> מהר. בקטע הישר זה מרגש באמת — אבל בעיקול חד המכונית בדרך כלל עוברת את הקו לפני שהיא מספיקה לפנות, ויוצאת מהמסלול.<br>
+    <strong>למה זה מתאים:</strong> למי שאוהב מהירות ומוכן לגלות על המסלול מה מהירות עושה לעיקולים. הגילוי הזה הוא חלק אמיתי מגרסה 2 — ותמיד אפשר להוריד את המהירות בשלב הכוונון.
+  </div>
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>חושבים: מה חשוב לכם יותר — מכונית יציבה בכל עיקול, מכונית מאוזנת, או מכונית שטסה?</li>
+  <li>קוראים את שלוש המהירויות ובוחרים את זו שמתאימה למה שדמיינתם.</li>
+  <li>בוחרים א, ב, או ג. כותבים את המהירות שבחרתם (110, 140, או 180) כאן: <span class="fill-blank">&nbsp;</span></li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>בחרתם מהירות — 110, 140, או 180 — וכתבתם אותה על הכרטיסייה. אתם יודעים איך המכונית שלכם אמורה לנסוע: יציב, מאוזן, או מהר.</p>
+  <p class="expected-note">עדיין לא משנים קוד ולא מעלים כלום — את המספר בקוד נשנה בשלב הבא, יחד עם הבחירה הבאה (התיקון). בשלב הזה רק מחליטים.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>בחרתם מהירות: איטי (110), בינוני (140), או מהיר (180)</li>
+    <li>כתבתם את המהירות שבחרתם על הכרטיסייה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  לא בטוחים מה לבחור? אין בחירה "לא נכונה" — כולן עובדות. אם אתם רוצים מכונית שמסיימת כל מסלול בביטחון, בוחרים איטי. אם אתם רוצים איזון, בוחרים בינוני — המהירות שכבר עבדה אצלכם. אם המהירות היא הכיף בשבילכם, בוחרים מהיר — ומגלים על המסלול מה קורה בעיקולים. ובכל מקרה: בשלב הכוונון (שלב 5) מכווננים את המהירות שוב, אז לא צריך להחליט מושלם עכשיו. אם עדיין מתלבטים, קוראים למורה ובוחרים יחד.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 3 מתוך 6</div>
+  <h1><span class="section-icon">💻</span>בחירה ב': בוחרים את חוזק התיקון ומשנים את הקוד עם קלוד קוד</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+זו נקודת הבחירה השנייה, וגם הצעד הגדול של הפרויקט: בפעם הזאת משנים את הקוד בעצמכם, בעזרת קלוד קוד. בוחרים <strong>כמה חזק המכונית מתקנת את עצמה</strong> כשהיא סוטה מהקו, ומכניסים לקוד גם את <strong>המהירות</strong> שבחרתם בשלב הקודם. זה צעד גדול יותר מהרגיל — לוקחים את הזמן. אפשר לעשות אותו בשני חלקים: קודם המהירות, ואחר כך התיקון.
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 1 — בוחרים את חוזק התיקון</h2>
+
+<p>בחירה אחת, שתי אפשרויות. שתיהן בסדר גמור — זו הבחירה שלכם:</p>
+
+<div class="choice-point">
+  <strong>אפשרות א — תיקון עדין (60)</strong>
+  <div class="option">נסיעה חלקה בקטעים הישרים, אבל עלול לפספס עיקול חד.</div>
+  <strong>אפשרות ב — תיקון חזק (110)</strong>
+  <div class="option">נצמד לעיקולים, אבל מתנדנד קצת בקטעים הישרים.</div>
+</div>
+
+<p>בקוד ההתחלתי יש עכשיו 90 — בדיוק באמצע. עכשיו בוחרים צד.</p>
+
+<p>מידע קטן: ככל שהתיקון קרוב יותר למהירות הבסיס, הפנייה חדה יותר. מהירות איטית עם תיקון חזק יכולה להתנדנד קצת על הקו הישר — וזה בסדר; מכווננים בשלב 5.</p>
+
+<h2><span class="section-icon">📋</span>שלב 2 — ממלאים את (א), (ב) ו-(ג) על הכרטיסייה לפני שמדברים עם קלוד קוד</h2>
+
+<p>ממלאים קודם, בעיפרון. ככה אתם יודעים מה אתם מבקשים לפני שאתם פותחים את קלוד קוד. ההסבר על המשמעת הזאת נמצא בכרטיסייה <span class="r-ref">R3</span>.</p>
+
+<div class="prompt-template">(א) מה אני רוצה שיקרה:
+_________________________________________________
+_________________________________________________
+
+(ב) מה קורה עכשיו:
+_________________________________________________
+_________________________________________________
+
+(ג) מה כבר ניסיתי (או הסתכלתי עליו):
+_________________________________________________
+_________________________________________________</div>
+
+<h2><span class="section-icon">💻</span>שלב 3 — שולחים את הפניות לקלוד קוד</h2>
+
+<p>בקוד ההתחלתי <code>T2_line_follow_starter.ino</code> יש למעלה, בתוך מסגרת מסומנת, את המספרים שאתם משנים — ולא נוגעים בשאר. בשלב הזה משנים שניים:</p>
+
+<ul class="checklist">
+  <li><code>BASE_SPEED</code> — מהירות הבסיס: המספר של הבחירה משלב 2. איטי 110 / בינוני 140 / מהיר 180.</li>
+  <li><code>CORRECTION</code> — חוזק התיקון: המספר של הבחירה מהשלב הזה. עדין 60 / חזק 110.</li>
+</ul>
+
+<p>בחלון של קלוד קוד מדביקים את הפנייה, וגם מדביקים את הקוד הנוכחי של הקובץ במקום [מדביקים כאן]. הנה שתי דוגמאות — אחת למהירות, אחת לתיקון:</p>
+
+<p><strong>פנייה 1 — משנים את מהירות הבסיס למספר שבחרתם בשלב הקודם:</strong></p>
+
+<div class="prompt-template">אני רוצה שהמכונית שלי תיסע לאט — מהירות בסיס 110 במקום 140. איזה מספר אני משנה בקוד? הנה הקוד שלי:
+[מדביקים כאן]</div>
+
+<p><strong>פנייה 2 — משנים את חוזק התיקון למספר שבחרתם עכשיו:</strong></p>
+
+<div class="prompt-template">אני רוצה שהמכונית תיצמד לעיקולים חזק יותר — תיקון 110 במקום 90. איזה מספר אני משנה בקוד? הנה הקוד שלי:
+[מדביקים כאן]</div>
+
+<h2><span class="section-icon">🚗</span>שלב 4 — משנים, מעלים ובודקים על הקו הישר</h2>
+
+<ul class="checklist">
+  <li>קוראים את התשובה של קלוד קוד בעיון. מחפשים את שתי ההגדרות שלמעלה בקוד — <code>BASE_SPEED</code> ו-<code>CORRECTION</code>.</li>
+  <li>פותחים את הקוד ב-Arduino IDE ומשנים <strong>רק את שני המספרים האלה</strong> — לא נוגעים בשאר.</li>
+  <li>מחברים את כבל ה-USB ולוחצים על Upload.</li>
+  <li>מנתקים את הכבל, מניחים את המכונית בתחילת הקו הישר ומשחררים — יש שתי שניות להניח לפני שהיא מתחילה לנסוע.</li>
+  <li>בודקים: המכונית נוסעת במהירות שבחרתם? כשהיא סוטה מהקו — היא חוזרת אליו בעדינות או בחוזקה, כמו שבחרתם?</li>
+  <li>אם שום דבר לא השתנה, חוזרים לשלב 2 ומתארים מה קרה בצורה יותר ספציפית.</li>
+</ul>
+
+<h2><span class="section-icon">📋</span>בדיקת הבנה</h2>
+
+<p>אחרי שקלוד עזר לכם — תוכלו לומר במשפט אחד אילו מספרים שיניתם? עונים בקול רם, או כותבים למטה:</p>
+
+<div class="prompt-template">אחרי שקלוד קוד עזר לי, המספרים ששיניתי בקוד הם:
+_________________________________________________
+_________________________________________________</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>המכונית נוסעת על הקו הישר במהירות שבחרתם. כשהיא סוטה קצת הצידה, רואים אותה מתקנת את עצמה וחוזרת לקו — בעדינות אם בחרתם תיקון עדין, בתנועה חדה יותר אם בחרתם תיקון חזק.</p>
+  <p class="expected-note">תיקון חזק שמתנדנד קצת על הקו הישר — זה <strong>תקין, לא תקלה</strong>. זה בדיוק מה שכתוב בבחירה. כיוונון מדויק מגיע בשלב 5, ולוקח שניים-שלושה ניסיונות — ככה עובדים מהנדסים אמיתיים.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>בחרתם את חוזק התיקון — עדין או חזק</li>
+    <li>מילאתם את (א), (ב) ו-(ג) על הכרטיסייה לפני שדיברתם עם קלוד קוד</li>
+    <li>שיניתם את שני המספרים — מהירות הבסיס והתיקון — והמכונית נוסעת איתם על הקו הישר</li>
+    <li>אתם יכולים לומר במשפט אחד אילו מספרים שיניתם</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  אם התשובה של קלוד קוד לא עבדה: בלי פאניקה. חוזרים ל-(א), (ב) ו-(ג) ומתארים מה קרה בצורה יותר ספציפית. "המכונית לא השתנתה" פחות שימושי מ"המכונית עדיין נוסעת באותה מהירות כמו קודם, גם אחרי ההעלאה". אם עדיין תקועים — קוראים למורה לעזרה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 4 מתוך 6</div>
+  <h1><span class="section-icon">🚗</span>בחירה ג': מעצבים ובונים את המסלול שלכם</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+זוהי נקודת הבחירה השלישית והאחרונה — והפעם לא רק בוחרים, גם בונים. קמים מהשולחן, יורדים לרצפה, ומניחים עם סרט בידוד שחור את המסלול שהמכונית שלכם תיסע עליו. צורת המסלול נפגשת עם המהירות והתיקון שכבר בחרתם: מסלול ישר מתאים לכל מהירות, ועיקול חד מאתגר מכונית מהירה. הבחירה שלכם, אין תשובה "נכונה".
+</div>
+
+<h2><span class="section-icon">📋</span>בוחרים אחת משלוש הצורות האלה</h2>
+
+<div class="choice-point">
+  <strong>אפשרות א — ישר: הקו הנקי</strong>
+  <div class="option">
+    <strong>איך המסלול נראה:</strong> קו אחד ישר, באורך 2–3 מטרים.<br>
+    <strong>למה זה מתאים:</strong> לכל מהירות — גם למהיר (180). למי שרוצה לראות את המכונית טסה בקו נקי מההתחלה עד הסוף, או למי שרוצה מסלול שפשוט עובד.
+  </div>
+
+  <strong>אפשרות ב — עיקול עדין: הקשת</strong>
+  <div class="option">
+    <strong>איך המסלול נראה:</strong> קו שמתעקל לאט, כמו קשת רחבה או בננה.<br>
+    <strong>למה זה מתאים:</strong> למי שרוצה לראות את המכונית מתקנת את עצמה בנסיעה — בעיקול עדין רואים את זה יפה. רוב המהירויות מחזיקות בעיקול כזה.
+  </div>
+
+  <strong>אפשרות ג — עיקול חד: האתגר</strong>
+  <div class="option">
+    <strong>איך המסלול נראה:</strong> קו עם פנייה חזקה — עדיין מעוגלת, לא זווית ישרה.<br>
+    <strong>למה זה מתאים:</strong> למי שרוצה אתגר אמיתי. מכונית איטית עם תיקון חזק נצמדת לעיקול; מכונית מהירה בדרך כלל עפה ממנו — אם בחרתם מהיר, כאן תגלו את זה בעצמכם. הגילוי הזה הוא חלק אמיתי מגרסה 2, ובשלב הכוונון אפשר לשנות הכול.
+  </div>
+</div>
+
+<div class="key">
+  <strong><span class="section-icon">⚠️</span>פינות תמיד בונים כעיקול מעוגל — לא כזווית ישרה</strong>
+  בפינה חדה החיישנים עוברים את הקו לפני שהמכונית מספיקה לפנות — והמכונית ממשיכה ישר, בלי קו מתחתיה. בעיקול מעוגל הקו נשאר מתחת לחיישנים לאורך כל הפנייה, ולמכונית יש זמן לפנות. הכלל תקף לכל צורה שתבחרו — גם עיקול חד הוא עיקול, לא פינה.
+</div>
+
+<pre class="wiring-block" dir="ltr">      ✓                        ✗
+──────╮                 ───────┐
+       ╲                       │
+        ╲                      │
+         │                     │
+         │                     │</pre>
+
+<p><strong>✓</strong> = עיקול מעוגל — ככה בונים כל פנייה. <strong>✗</strong> = זווית ישרה — ככה לא.</p>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">איור בהכנה</div>
+  <p>כאן ייכנס תרשים: שלוש צורות המסלול במבט מלמעלה — קו ישר, עיקול עדין ועיקול חד — ולידן השוואה בין פינה מעוגלת נכונה לזווית ישרה שהחיישנים מפספסים.</p>
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<h3>חלק א׳ — בוחרים את צורת המסלול</h3>
+
+<ul class="checklist">
+  <li>נזכרים מה כבר בחרתם: המהירות (שלב 2) והתיקון (שלב 3). המסלול נפגש עם שתי הבחירות האלה.</li>
+  <li>קוראים את שלוש הצורות ובוחרים את זו שמתאימה למכונית שלכם — או את זו שתאתגר אותה.</li>
+  <li>בוחרים א, ב, או ג. כותבים את צורת המסלול שלכם (ישר / עיקול עדין / עיקול חד) כאן: <span class="fill-blank">&nbsp;</span></li>
+</ul>
+
+<h3>חלק ב׳ — בונים את המסלול על הרצפה</h3>
+
+<ul class="checklist">
+  <li>מפנים שטח רצפה של 2–3 מטרים — בלי כיסאות, תיקים או חוטים על הדרך. רצפה חלקה ובהירה עובדת הכי טוב: הקו השחור בולט עליה.</li>
+  <li>לפני שמדביקים, מסמנים לעצמכם בעיניים איפה המסלול יעבור — מההתחלה עד הסוף.</li>
+  <li>מדביקים את סרט הבידוד קטע אחר קטע, ומחליקים כל קטע ביד — סרט חלק, בלי קמטים ובלי גלים. קמט יכול לבלבל את חיישני הקו.</li>
+  <li>אם בחרתם עיקול (אפשרות ב או ג): עיקול בונים מקטעים קצרים: חותכים קטעים של 10–15 ס"מ ומדביקים כל קטע בזווית קטנה מהקודם, עד שנוצרת קשת מעוגלת.</li>
+  <li>עוברים על המסלול עם העיניים מההתחלה עד הסוף ובודקים שאין פינה חדה בשום מקום.</li>
+  <li>נותנים למסלול סוף ברור: הקו נגמר במקום פנוי על הרצפה — או נסגר ללולאה שחוזרת לנקודת ההתחלה.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>על הרצפה יש מסלול שחור בצורה שבחרתם — הסרט חלק וצמוד לרצפה, כל פנייה שיש במסלול — מעוגלת (בקו ישר אין פניות, וזה בסדר), ולמסלול יש סוף ברור או לולאה. צורת המסלול כתובה על הכרטיסייה.</p>
+  <p class="expected-note">עדיין לא מריצים את המכונית — הנסיעה הראשונה על המסלול שלכם היא בשלב הבא, שלב הכוונון. ואם קטע סרט יצא עקום — מרימים אותו בעדינות ומדביקים שוב. סרט בידוד סלחני.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>בחרתם צורה: ישר, עיקול עדין, או עיקול חד</li>
+    <li>המסלול מודבק על הרצפה — סרט חלק, פניות מעוגלות (אם יש פניות), סוף ברור</li>
+    <li>כתבתם את צורת המסלול על הכרטיסייה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  לא בטוחים איזו צורה לבחור? אין בחירה "לא נכונה" — כולן עובדות. רוצים ביטחון — בוחרים ישר. רוצים לראות את המכונית מתקנת את עצמה — עיקול עדין. רוצים אתגר — עיקול חד. אם הסרט לא נדבק טוב לרצפה או משאיר סימנים — קוראים למורה ומוצאים יחד שטח אחר. יצא עיקול חד מדי? מרימים כמה קטעים ומרחיבים את הקשת. ואפשר תמיד לשנות את המסלול גם בשלב הכוונון — סרט מדביקים מחדש בדקה.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 5 מתוך 6</div>
+  <h1><span class="section-icon">🚗</span>מריצים, בודקים ומכווננים</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+המסלול שלכם על הרצפה, והמהירות והתיקון שבחרתם כבר בתוך הקוד — עכשיו הכול נפגש. מריצים את המכונית על המסלול שלכם, מסתכלים מה קורה באמת, <strong>ומכווננים מספר אחד בכל פעם</strong> עד שהנסיעה מרגישה נכון. מכונית עוקבת קו טובה לא מחושבת מראש — היא נמצאת על ידי ניסיון.
+</div>
+
+<h2><span class="section-icon">🚗</span>שלב 1 — מריצים את המכונית על המסלול שלכם</h2>
+
+<ul class="checklist">
+  <li>מוודאים שהקוד עם המספרים שבחרתם כבר הועלה. אם שיניתם משהו מאז — מחברים את כבל ה-USB, לוחצים על Upload ומחכים ל-"Done uploading".</li>
+  <li>מנתקים את כבל ה-USB ומניחים את המכונית בתחילת המסלול שלכם — הקו השחור עובר בין שני חיישני הקו.</li>
+  <li>משחררים — יש שתי שניות להניח לפני שהיא מתחילה לנסוע.</li>
+  <li>מסתכלים על נסיעה שלמה אחת, מההתחלה עד הסוף. לא נוגעים — רק מסתכלים.</li>
+  <li>שמים לב: איפה בדיוק המכונית מתקשה? בעיקול? בקטע הישר? זה המידע שצריך לכיוונון.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>המכונית נוסעת לאורך הקו של המסלול שלכם. ייתכן שהיא עוברת את כולו כבר בניסיון הראשון — וייתכן שהיא עפה בעיקול או מתנדנדת בקטע הישר. שני המקרים תקינים: הנסיעה הראשונה היא איסוף מידע, לא מבחן.</p>
+  <p class="expected-note">כמעט אף מכונית לא עוברת מסלול חדש בניסיון הראשון. <strong>שניים-שלושה סבבי כיוונון — ככה עובדים מהנדסים אמיתיים.</strong></p>
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 2 — מכווננים מספר אחד בכל פעם</h2>
+
+<p>הכלל החשוב של הכיוונון: משנים <strong>מספר אחד בכל פעם</strong>, מעלים, ובודקים שוב. ככה יודעים בדיוק מה עזר. לפי מה שראיתם בנסיעה:</p>
+
+<ul class="checklist">
+  <li>המכונית <strong>איטית מדי</strong>? מעלים את <code>BASE_SPEED</code> — למשל מ-110 ל-140, או מ-140 ל-180.</li>
+  <li>המכונית <strong>עפה מהעיקול</strong>? מגדילים את <code>CORRECTION</code> — למשל מ-60 ל-90 או מ-90 ל-110 — או מורידים את מהירות הבסיס.</li>
+  <li>המכונית <strong>מתנדנדת בקטעים הישרים</strong>? מקטינים את <code>CORRECTION</code> — למשל מ-110 ל-90 או מ-90 ל-60.</li>
+</ul>
+
+<p>וכלל קטן שכבר מכירים: <code>CORRECTION</code> תמיד נשאר <strong>קטן</strong> מ-<code>BASE_SPEED</code>.</p>
+
+<p>לפני שמשנים — ממלאים בעיפרון, כדי לדעת בדיוק מה מנסים:</p>
+
+<div class="prompt-template">מה קורה עכשיו: _______________ (איטית מדי / עפה בעיקול / מתנדנדת בישר)
+המספר שאני משנה: _______________ (<code>BASE_SPEED</code> / <code>CORRECTION</code>)
+מ-_______ ל-_______</div>
+
+<p>כל שינוי הוא שינוי של מספר אחד בקוד. אם נוח לכם — משנים אותו ישירות ב-Arduino IDE ומעלים שוב. אם רוצים עזרה, זאת פנייה קטנה נוספת לקלוד קוד (גרסה 2). ממלאים את (א), (ב) ו-(ג) קודם, ואז מבקשים:</p>
+
+<div class="prompt-template">אני עובד על המכונית עוקבת הקו שלי בפרויקט 4.
+
+(א) מה אני רוצה: שהמכונית תישאר על הקו גם בעיקול של המסלול שלי.
+(ב) מה קורה עכשיו: היא עפה מהקו בעיקול, כמעט בכל נסיעה.
+(ג) מה כבר ניסיתי: הגדלתי את CORRECTION מ-60 ל-90 והיא עדיין עפה.
+
+הנה הקוד הנוכחי שלי:
+[מדביקים כאן את כל קובץ הקוד]
+
+תוכל לעזור לי להחליט איזה מספר לשנות?</div>
+
+<p>קוראים את התשובה של קלוד קוד, משנים את המספר ב-IDE, מעלים שוב, מנתקים את הכבל ומריצים שוב על המסלול. חוזרים על זה כמה פעמים שצריך — בדרך כלל מספיקים שניים-שלושה סבבים. אם עברו 15 דקות ועדיין מכווננים — זה בסדר, ממשיכים בפעם הבאה.</p>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>המכונית עברה את המסלול שלכם <strong>פעם אחת מלאה</strong>, מההתחלה ועד הסוף</li>
+    <li>שיניתם מספר אחד בכל פעם, ובדקתם על המסלול אחרי כל שינוי</li>
+    <li>אתם יכולים לומר איזה מספר שיניתם ולמה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li>אם שום דבר לא השתנה אחרי הכיוונון, ייתכן שהקוד המעודכן עוד לא עלה — מחברים את הכבל, מעלים שוב, מחכים ל-"Done uploading" ומנתקים לפני הנסיעה.</li>
+    <li>אם המכונית מפספסת עיקול חד גם אחרי כיוונון — זו פיזיקה, לא תקלה: במהירות גבוהה החיישנים עוברים את הקו לפני שהמכונית מספיקה לפנות. מורידים את המהירות, או פותחים את העיקול לקשת רחבה יותר.</li>
+    <li>כמו בפעמים הקודמות, אבל הפעם מנסים לבד קודם: אם המכונית מתרחקת מהקו במקום להיצמד אליו — זה בדיוק המקרה של <code>LINE_IS_HIGH</code>: מבקשים מקלוד קוד להפוך <code>true</code> ל-<code>false</code> (או להפך) בשורה הזאת, מעלים ובודקים שוב.</li>
+    <li>אם גלגל הפסיק להסתובב באמצע נסיעה, או חוט השתחרר מחיבור הלחמה — <strong>קוראים למורה, תמיד</strong>. חיבור שנשבר אחרי זמן זה תחזוקה, לא כישלון — מלחימים אותו מחדש יחד.</li>
+    <li>אם אחרי כמה סבבים זה עדיין לא עובד — קוראים למורה.</li>
+  </ul>
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V2</div>
+
+<div class="header">
+  <div class="milestone-badge celebration">פרויקט #4 — מכונית עוקבת קו: שלב 6 מתוך 6 • השלב האחרון</div>
+  <h1><span class="section-icon">🏆</span>הריצה החתומה — נותנים שם ומציגים</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+המכונית שלכם כבר משלימה את המסלול שבניתם — במהירות שבחרתם ועם התיקון שבחרתם. עכשיו נותנים לה שם, רושמים את השם ואת צורת המסלול על הפוסטר, ומציגים נסיעה מלאה לחבר או למורה. מכונית שכיוונתם ובניתם לה מסלול — מגיע לה שם.
+</div>
+
+<h2><span class="section-icon">🏷️</span>שלב 1 — נותנים למכונית שלכם שם</h2>
+
+<p>המכונית שלכם — עם המהירות שבחרתם, התיקון שבחרתם והמסלול שבניתם — היא <strong>הריצה החתומה</strong> שלכם. נותנים לה שם שמתאים לאיך שהיא נוסעת (למשל "ברק", "צב טורבו", "עוקב-על").</p>
+
+<div class="prompt-template">השם של המכונית שלי הוא:
+_________________________________________________
+
+צורת המסלול שלי (ישר / עיקול עדין / עיקול חד):
+_________________________________________________</div>
+
+<h2><span class="section-icon">📋</span>שלב 2 — רושמים על הפוסטר</h2>
+
+<ul class="checklist">
+  <li>מוצאים את <strong>פוסטר פרויקט 4</strong> שתלוי בעמדה שלכם.</li>
+  <li>על <strong>שורת גרסה 2</strong> של הפוסטר רושמים את <strong>שם המכונית</strong> שלכם ואת <strong>צורת המסלול</strong> שבניתם.</li>
+  <li>אם בא לכם, אפשר להוסיף גם את המהירות שבחרתם (איטי, בינוני או מהיר) ואת התיקון (עדין או חזק).</li>
+</ul>
+
+<h2><span class="section-icon">🚗</span>שלב 3 — מציגים נסיעה מלאה למישהו</h2>
+
+<ul class="checklist">
+  <li>מזמינים חבר מהקבוצה או את המורה לראות את המכונית שלכם נוסעת.</li>
+  <li>מסבירים במשפט או שניים איזו מהירות ואיזה תיקון בחרתם, ואיזה מסלול בניתם.</li>
+  <li>מוודאים שכבל ה-USB מנותק — בנסיעה הזאת המכונית עובדת על הסוללות בלבד.</li>
+  <li>מציבים את המכונית בתחילת הקו, כך שהקו עובר בדיוק בין שני חיישני הקו, מפעילים את מתג הסוללות ומשחררים — יש שתי שניות להניח לפני שהיא מתחילה לנסוע; לא נוגעים, רק מסתכלים.</li>
+  <li>עוקבים אחרי המכונית: היא משלימה נסיעה מלאה על המסלול שלכם — מנקודת ההתחלה ועד הסוף.</li>
+  <li>אם בא לכם, מבקשים מהמורה לצלם תמונה של המכונית (רק אם אתם מסכימים). אפשר לשמור אותה לתיק העבודות או להראות למשפחה.</li>
+</ul>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>המכונית שלכם — עם השם שבחרתם — משלימה את המסלול שבניתם, שם המכונית וצורת המסלול רשומים על שורת גרסה 2 בפוסטר, ומישהו אחר ראה אותה נוסעת מההתחלה ועד הסוף.</p>
+  <p class="expected-note">המורה ראה את הנסיעה וחגג איתכם, ויש לכם תמונה (אם רציתם).</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>נתתם למכונית שלכם שם</li>
+    <li>רשמתם את השם ואת צורת המסלול על שורת גרסה 2 בפוסטר</li>
+    <li>הצגתם נסיעה מלאה לחבר או למורה — מישהו אחר ראה אותה</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  אם קשה לכם להחליט על שם, חושבים על איך המכונית נוסעת: מהירה כמו ברק? יציבה שלא מוותרת על אף עיקול? אפילו שם פשוט כמו "המכונית של [השם שלכם]" נחשב לגמרי. המכונית יצאה מהקו באמצע ההצגה? תקין לגמרי — מחזירים אותה לנקודת ההתחלה ומנסים שוב; שתיים-שלוש נסיעות עד להצלחה, ככה עובדים מהנדסים אמיתיים. אם אין כרגע חבר פנוי לראות — המורה תמיד שמח להיות הצופה. אפשר לקרוא למורה לעזרה.
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את פרויקט 4!</span>
+  בחרתם את המהירות, בחרתם את התיקון, שיניתם את המספרים בקוד יחד עם קלוד קוד, בניתם מסלול משלכם וכיוונתם את המכונית עד שהיא השלימה אותו — כמו מהנדסים אמיתיים. עכשיו יש לה שם, יש לה מסלול משלה, ומישהו ראה אותה נוסעת מההתחלה ועד הסוף.
+</div>
+
+</div>
+</section>
+<section class="appendix-card" dir="rtl" lang="he" style="page-break-before: always;">
+<div class="card">
+
+<div class="card-id">V3</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: מתכנן הפרויקט</div>
+  <h1><span class="section-icon">🚗</span>מעצבים אתגר משלכם למכונית</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+המכונית כבר יודעת לעקוב אחרי קו. עכשיו מעצבים לה <strong>אתגר משלכם</strong> — קובעים את המטרה, מציירים את המסלול ומחליטים מה נחשב הצלחה. ממלאים את המתכנן, מדביקים את המסלול, מתכנתים עם קלוד קוד, בודקים על הרצפה, ומראים.
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 1 — מתכננים (PLAN)</h2>
+
+<div class="field">
+  <label>איזה אתגר בוחרים? מקיפים אחד:</label>
+  <div class="hint">
+    <strong>מסלול מורכב</strong> — מסלול עם עיקולי S, לולאה או צומת. בחרתם צומת? מחליטים כבר עכשיו מה המכונית עושה בו: עוצרת, ממשיכה ישר, או משהו אחר.<br>
+    <strong>בניית מהירות</strong> — ההקפה המהירה ביותר על מסלול קבוע. המסלול נשאר אותו מסלול; המספרים בקוד משתנים.<br>
+    <strong>בניית אמינות</strong> — 10 נסיעות נקיות ברצף, בלי יציאה אחת מהקו.<br>
+    <strong>רעיון משלכם</strong> — אתגר אחר שקשור למכונית עוקבת הקו. אם זה משהו לא רגיל, שואלים את המורה לפני שמתחילים.
+  </div>
+</div>
+
+<div class="field">
+  <label>מה נחשב הצלחה? כותבים אותה במילים שלכם.</label>
+  <div class="hint">כמה שיותר ספציפי. לדוגמה: "המכונית עוצרת שתי שניות בצומת וממשיכה ישר", "הקפה מלאה בפחות מ-25 שניות", או "10 נסיעות נקיות ברצף על מסלול ה-S שלי".</div>
+</div>
+
+<div class="field">
+  <label>מציירים את המסלול על נייר.</label>
+  <div class="hint">מסמנים נקודת התחלה ונקודת סיום, וכל עיקול, לולאה או צומת שבדרך. פינות מציירים כעיקולים רחבים — בפינה חדה חיישני הקו מאבדים את הקו. הציור הזה הוא התוכנית שלפיה מדביקים את המסלול בשלב הבא.</div>
+</div>
+
+<div class="field field-optional">
+  <label>רעיון נוסף — כפתור התחלה/עצירה (לא חובה)</label>
+  <div class="hint">אפשר להוסיף כפתור על <strong>רגל דיגיטלית 2</strong>, עם נגד הורדה של 10 קילו-אוהם — בדיוק כמו הכפתור מפרויקטים 1 ו-2. לחיצה אחת — המכונית יוצאת לדרך; לחיצה נוספת — היא עוצרת. אם מדלגים על הכפתור, המכונית פשוט יוצאת לדרך לבד, כמו עד עכשיו.</div>
+</div>
+
+<h2><span class="section-icon">🔌</span>שלב 2 — בונים (BUILD)</h2>
+
+<div class="field">
+  <label>מדביקים את המסלול על הרצפה, לפי הציור שלכם.</label>
+  <div class="hint">סרט בידוד שחור על רצפה בהירה וחלקה. מתחילים מנקודת ההתחלה, מתקדמים קטע-קטע, ומהדקים את הסרט היטב לרצפה.</div>
+</div>
+
+<div class="field">
+  <label>רק אם בחרתם כפתור: מחווטים אותו על הברדבורד.</label>
+  <div class="hint">רגל A של הכפתור מתחברת ל-5V מפס ה-(+) של הברדבורד; רגל B מתחברת ל<strong>רגל דיגיטלית 2</strong> בארדואינו, וגם דרך <strong>נגד הורדה של 10 קילו-אוהם</strong> אל פס ה-(−). ההפניה היא כרטיסיית החיווט <span class="r-ref">R1</span>. דילגתם על הכפתור? מדלגים גם על התרשים למטה.</div>
+</div>
+
+<pre class="wiring-block" dir="ltr">Button leg A ── 5V  (breadboard + rail)
+Button leg B ── Arduino pin 2
+             └─[10 kΩ]── GND  (breadboard − rail)</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים חיווט — בהכנה</div>
+  <p>כאן ייכנס תרשים ברדבורד: כפתור לרוחב החריץ המרכזי — רגל A לפס ה-(+), רגל B לרגל דיגיטלית 2 ודרך נגד הורדה של 10 קילו-אוהם לפס ה-(−).</p>
+</div>
+
+<div class="field">
+  <label>מצלמים תמונה של המסלול הגמור. מסמנים כאן: <em>תמונה צולמה / עדיין לא / לא רוצה תמונה</em></label>
+</div>
+
+<h2><span class="section-icon">💻</span>שלב 3 — קוד (CODE)</h2>
+
+<p>כאן משתמשים בקלוד קוד בגרסה 3 — דיאלוג חופשי. מתארים מה רוצים שהמכונית תעשה, מדביקים את הקוד שכבר עובד אצלכם, וקלוד קוד עוזר לנו להרחיב אותו — משפרים יחד עד שזה עובד. אותה משמעת של (א), (ב) ו-(ג) עדיין חלה — מתארים את הבעיה לפני שמבקשים פתרון. אין קובץ מוכן מראש לגרסה 3 — מתחילים מהקוד שלכם ובונים ממנו.</p>
+
+<div class="field">
+  <label>הפנייה הראשונה לקלוד קוד (מנסחים אותה כאן לפני ששולחים)</label>
+  <div class="hint">מתארים מה המכונית צריכה לעשות, ומדביקים את הקוד הנוכחי. לדוגמה: "אני רוצה שהמכונית תעצור שתי שניות בצומת ואז תמשיך ישר. הנה הקוד שלי: [מדביקים כאן]". בבניית מהירות מעלים את מהירות הבסיס (<code>BASE_SPEED</code>) בהדרגה — איטי בערך 110, בינוני 140, מהיר 180 — ומספר התיקון (<code>CORRECTION</code>) תמיד נשאר קטן ממנה. בבניית אמינות לפעמים לא צריך קוד חדש בכלל — מתארים לקלוד קוד את הכשל שקורה מדי פעם ("המכונית יוצאת מהקו בערך פעם ב-10 נסיעות, בעיקול הזה — הנה הקוד שלי"), או עוברים ישר לכיוונון של שלב 4 אם הקוד כבר עובר את המסלול נקי. בחרתם כפתור? מספרים לקלוד קוד שהוא על רגל דיגיטלית 2.</div>
+</div>
+
+<div class="field">
+  <label>אחרי שקלוד קוד עזר — אפשר לומר במשפט אחד מה הקוד עושה?</label>
+  <div class="hint">מעלים את הקוד עם כבל ה-USB, מנתקים את הכבל, ובודקים על המסלול עם הסוללות. אם זה לא עובד כמו שרצינו, חוזרים לקלוד קוד עם (א), (ב) ו-(ג) חדשים.</div>
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 4 — בודקים (TEST)</h2>
+
+<div class="field">
+  <label>המכונית עומדת במטרה שקבעתם? בודקים על המסלול האמיתי.</label>
+  <div class="hint">מסלול מורכב — המכונית עושה בצומת בדיוק את מה שתכננתם? בניית מהירות — מודדים זמן הקפה עם סטופר ורושמים אותו. בניית אמינות — סופרים נסיעות נקיות ברצף, עד 10. אם משהו שונה ממה שתכננתם, כותבים מה, חוזרים לקלוד קוד, ומשפרים. התוכנית יכולה להשתנות תוך כדי — זה בסדר גמור.</div>
+</div>
+
+<div class="field">
+  <label>מכווננים את המספרים — אחד בכל פעם.</label>
+  <div class="hint">
+    המכונית <strong>עפה מהעיקול</strong> — מורידים את מהירות הבסיס או בוחרים תיקון חזק יותר.<br>
+    המכונית <strong>מתנדנדת על הקטע הישר</strong> — מקטינים את התיקון.<br>
+    המכונית <strong>בורחת מהקו</strong> במקום להיצמד אליו — רק במקרה הזה הופכים את <code>LINE_IS_HIGH</code> בקוד.<br>
+    כיוונון לוקח שניים-שלושה ניסיונות — ככה עובדים מהנדסים אמיתיים.
+  </div>
+</div>
+
+<h2><span class="section-icon">📋</span>שלב 5 — מראים (SHOW)</h2>
+
+<ul class="checklist">
+  <li>כשמרוצים (או כשמחליטים שזה טוב כמו שזה הולך להיות היום), קוראים למורה.</li>
+  <li>מראים <strong>נסיעה מלאה</strong> מול המורה או מול חבר — עמידה במטרה שקבעתם. מסבירים במשפט או שניים מה הייתה המטרה ואיך הגעתם אליה.</li>
+  <li>אם רוצים, מצלמים תמונה של המכונית על המסלול ושומרים אותה בתיקיית פרויקט 4 שלכם ב-Google Drive, לתיק העבודות.</li>
+</ul>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים בשלב כלשהו?</strong>
+  <ul>
+    <li>המתכנן פתוח — וזו המטרה שלו. להיתקע זה חלק מלעצב אתגר משלכם. משתמשים בקלוד קוד כדי לחשוב על הבעיה, וקוראים למורה כשמרגישים שהולכים במעגלים סביב אותה בעיה. שיחה כאן היא שיחת עיצוב, לא שיחת תקלות — מספרים מה מנסים לבנות ומה לא עובד.</li>
+    <li>ודבר אחד נשאר קבוע: חיבור הלחמה שנשבר באמצע הנסיעות הוא תחזוקה, לא כישלון — וכל דבר שקשור להלחמה, קוראים למורה, תמיד (הכללים בכרטיסיות <span class="r-ref">R4</span> ו-<span class="r-ref">R6</span>).</li>
+  </ul>
+</div>
+
+<div class="celebration">
+  <span class="title">🎉 השלמתם את פרויקט 4!</span>
+  עיצבתם אתגר משלכם למכונית — מטרה שקבעתם, מסלול שציירתם והדבקתם, וקוד שבניתם עם קלוד קוד — עד שהמכונית עמדה במטרה שלכם.
+</div>
+
+</div>
+</section>
+</body>
+</html>

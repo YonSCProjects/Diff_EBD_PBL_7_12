@@ -21,9 +21,9 @@ const { PDFDocument } = require('pdf-lib');
 // `node build_cards_only.js he` invocation still builds Project 1.
 const args = process.argv.slice(2);
 const lang = args.find((a) => ['en', 'he'].includes(a));
-const projectKey = args.find((a) => ['1', '2', '3'].includes(a)) || '1';
+const projectKey = args.find((a) => ['1', '2', '3', '4'].includes(a)) || '1';
 if (!lang) {
-  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3]');
+  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3|4]');
   process.exit(1);
 }
 
@@ -52,6 +52,12 @@ const PROJECTS = {
     outBase: 'Project_3_Cards',
     titleHe: 'פרויקט 3 — לא להתקרב יותר מדי: חוברת כרטיסיות (עזר ומשימה)',
     titleEn: 'Project 3 — Don\'t Get Too Close: Cards Bundle (Reference + Task)',
+  },
+  '4': {
+    dir: 'Project_4_Line_Following_Car',
+    outBase: 'Project_4_Cards',
+    titleHe: 'פרויקט 4 — מכונית עוקבת קו: חוברת כרטיסיות (עזר ומשימה)',
+    titleEn: 'Project 4 — Line-Following Car: Cards Bundle (Reference + Task)',
   },
 };
 
@@ -120,6 +126,30 @@ const CARD_STEMS = {
     'T:T2_M3_pick_response_and_modify',
     'T:T2_M4_test_and_tune',
     'T:T2_M5_signature_alarm',
+    'T:T3_project_planner',
+  ],
+  '4': [
+    'R:R0_breadboard_basics',
+    'R:R1_wiring_reference',
+    'R:R2_stuck_protocol',
+    'R:R3_claude_code_prompts',
+    'R:R4_safety_reminder',
+    'R:R5_sketch_index',
+    'R:R6_soldering_basics',
+    'T:T1_M1_meet_soldering',
+    'T:T1_M2_solder_motor_leads',
+    'T:T1_M3_assemble_chassis',
+    'T:T1_M4_wire_driver_and_sensors',
+    'T:T1_M5_drive_forward',
+    'T:T1_M6_sensor_test',
+    'T:T1_M7_line_follow_first_run',
+    'T:T1_M8_run_track_celebrate',
+    'T:T2_M1_startup',
+    'T:T2_M2_pick_speed',
+    'T:T2_M3_pick_correction_and_modify',
+    'T:T2_M4_design_build_track',
+    'T:T2_M5_test_and_tune',
+    'T:T2_M6_signature_run',
     'T:T3_project_planner',
   ],
 };

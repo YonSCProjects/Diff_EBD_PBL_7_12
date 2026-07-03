@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית עזר R1 — תרשימי החיווט (פרויקט 4)</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<script src="../task_cards/card.js" defer></script>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">R1</div>
+
+<div class="header">
+  <h1><span class="section-icon">🔌</span>תרשימי החיווט</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו • כרטיסיית עזר לעמדת התלמיד</div>
+</div>
+
+<p>הכרטיסייה הזאת מראה איך מחברים את <strong>המנועים</strong>, את <strong>בקר המנועים L298N</strong>, את <strong>הסוללות</strong> ואת <strong>חיישני הקו</strong> בפרויקט 4. שומרים אותה ליד המכונית. אם מתבלבלים בחיווט, קודם מסתכלים על הכרטיסייה הזאת לפני שקוראים למורה.</p>
+
+<p>יש כאן <strong>חמישה חיווטים</strong>. יחד הם כל החיווט של המכונית: המנועים אל הבקר, החשמל, שישה חוטי האות, חיישני הקו — והאחרון, כפתור לגרסה 3 בלבד. כל חמשת החיווטים מתקיימים יחד על אותה מכונית — כל תרשים מראה רק את החוטים החדשים שלו, והקודמים נשארים במקום.</p>
+
+<h2><span class="section-icon">⚠️</span>הכללים החשובים ביותר</h2>
+
+<div class="warning">
+  <strong><span class="section-icon">⚠️</span>לפני שמחווטים — קוראים את אלה</strong>
+  <ul>
+    <li><strong>ההארקה המשותפת היא החוט שהכי קל לשכוח:</strong> חוט בין <strong>GND</strong> של הבקר ל-<strong>GND</strong> של הארדואינו. בלעדיו שום דבר לא זז אחרי ההעלאה — בלי שום הודעת שגיאה. זה הפספוס מספר 1 בפרויקט הזה, ולכן בודקים אותו פעמיים.</li>
+    <li><strong>אף פעם לא שני מקורות חשמל פעילים בבת אחת:</strong> כל עוד מתג הסוללות כבוי, מותר שהסוללות יהיו מחוברות גם כש-USB בפנים. לפני שמדליקים את המתג לנסיעה על סוללות — <strong>מנתקים קודם את כבל ה-USB</strong>. מתג דלוק + USB מחובר ביחד — <strong>אסור</strong>.</li>
+    <li>המנועים מתחברים <strong>רק דרך הבקר</strong> (הדקי <code>OUT1</code>–<code>OUT4</code>) — אף פעם לא ישירות לרגליים של הארדואינו. הרגליים של הארדואינו הן לאותות בלבד; מנוע שמחובר אליהן ישירות עלול להזיק לארדואינו.</li>
+  </ul>
+</div>
+
+<h2><span class="section-icon">📋</span>מפת הרגליים</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>רכיב / אות</th>
+      <th>אל</th>
+      <th>מופיע ב-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>בקר — <code>ENB</code> · מהירות המנוע הימני</td><td>רגל <code>5</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>IN4</code> · כיוון המנוע הימני</td><td>רגל <code>6</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>IN3</code> · כיוון המנוע הימני</td><td>רגל <code>7</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>IN2</code> · כיוון המנוע השמאלי</td><td>רגל <code>8</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>IN1</code> · כיוון המנוע השמאלי</td><td>רגל <code>9</code></td><td>חיווט 3</td></tr>
+    <tr><td>בקר — <code>ENA</code> · מהירות המנוע השמאלי</td><td>רגל <code>10</code></td><td>חיווט 3</td></tr>
+    <tr><td>חיישן קו שמאלי — <code>OUT</code></td><td>רגל <code>11</code></td><td>חיווט 4</td></tr>
+    <tr><td>חיישן קו ימני — <code>OUT</code></td><td>רגל <code>12</code></td><td>חיווט 4</td></tr>
+    <tr><td>כפתור התחלה/עצירה — גרסה 3 בלבד</td><td>רגל <code>2</code></td><td>חיווט 5</td></tr>
+  </tbody>
+</table>
+
+<h2><span class="section-icon">🔌</span>חיווט 1 — המנועים אל הבקר</h2>
+
+<p>שני החוטים המולחמים של <strong>המנוע השמאלי</strong> נכנסים להדקי <strong>OUT1</strong> ו-<strong>OUT2</strong>, ושני החוטים של <strong>המנוע הימני</strong> להדקי <strong>OUT3</strong> ו-<strong>OUT4</strong>. בכל הדק: משחררים מעט את הבורג, מכניסים את קצה החוט, מהדקים בחזרה — ובודקים ב<strong>משיכה עדינה</strong> שהחוט מחזיק.</p>
+
+<p>איזה חוט לאיזה חור בתוך הזוג? לא משנה בשלב החיווט. אם מנוע מסתובב הפוך בבדיקה הראשונה — מחליפים בין שני החוטים שלו בהדקים. תיקון של 30 שניות, לא תקלה.</p>
+
+<pre class="wiring-block" dir="ltr">Motors                 L298N
+  left  motor ───────  OUT1 / OUT2
+  right motor ───────  OUT3 / OUT4</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_01_motors_to_driver</div>
+  <p>כאן ייכנס תרשים: בקר המנועים L298N משני צדדיו — חוטי המנוע השמאלי אל OUT1/OUT2, וחוטי המנוע הימני אל OUT3/OUT4.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 2 — חשמל והארקה משותפת</h2>
+
+<p>המתג של מחזיק הסוללות נשאר <strong>כבוי</strong> כל זמן שמחווטים. החוט <strong>האדום (+)</strong> של מחזיק הסוללות נכנס להדק <strong>VIN</strong> של הבקר (מסומן לפעמים 12V), והחוט <strong>השחור (−)</strong> להדק <strong>GND</strong>.</p>
+
+<p>★ <strong>חוט ההארקה המשותפת:</strong> חוט בין <strong>GND</strong> של הבקר ל-<strong>GND</strong> של הארדואינו. זה החוט שהכי קל לשכוח — בלעדיו שום דבר לא זז. אפשר להעביר אותו דרך המסילה הכחולה (−) של הברדבורד.</p>
+
+<p>הברדבורד הוא <strong>תחנת החשמל</strong> של המכונית: חוט מרגל <strong>5V</strong> של הארדואינו אל <strong>המסילה האדומה (+)</strong>, וחוט מ-<strong>GND</strong> של הארדואינו אל <strong>המסילה הכחולה (−)</strong>. לארדואינו יש רק רגל 5V אחת — המסילות מפצלות אותה לשני החיישנים.</p>
+
+<p>לנסיעה בלי כבל: חוט מהדק <strong>5V</strong> של הבקר אל רגל <strong>5V</strong> של הארדואינו (הג׳אמפר שעל הבקר במקומו) — וכשנוסעים על סוללות, <strong>מנתקים קודם את כבל ה-USB</strong>.</p>
+
+<pre class="wiring-block" dir="ltr">Battery (+) red ─────  L298N VIN (12V)
+Battery (−) black ───  L298N GND
+
+L298N GND ───────────  Arduino GND    ★ common ground!
+
+Arduino                Breadboard
+  5V  ───────────────  (+) rail
+  GND ───────────────  (−) rail
+
+Battery driving (no USB):
+  L298N 5V ──────────  Arduino 5V    (jumper in place, USB unplugged)</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_02_power_and_common_ground</div>
+  <p>כאן ייכנס תרשים: מחזיק הסוללות אל VIN ו-GND של הבקר, מסילות הברדבורד כתחנת החשמל — וחוט ההארקה המשותפת GND ↔ GND מודגש בבירור.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 3 — שישה חוטי האות (רגליים 5–10)</h2>
+
+<p>שישה חוטים משורת החיבורים שעל הבקר אל הרגליים של הארדואינו, אחד-אחד לפי הסדר. נוח לבדוק: שש הרגליים בארדואינו הן רצף אחד — <strong>5 עד 10</strong>.</p>
+
+<pre class="wiring-block" dir="ltr">L298N                  Arduino
+  ENB ───────────────  pin 5     right motor speed
+  IN4 ───────────────  pin 6     right motor direction
+  IN3 ───────────────  pin 7     right motor direction
+  IN2 ───────────────  pin 8     left motor direction
+  IN1 ───────────────  pin 9     left motor direction
+  ENA ───────────────  pin 10    left motor speed</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_03_signal_pins</div>
+  <p>כאן ייכנס תרשים: שורת החיבורים של הבקר — ENB, IN4, IN3, IN2, IN1, ENA — מחוברת בשישה חוטים אל רגליים 5 עד 10 של הארדואינו, חוט לכל רגל.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 4 — חיישני הקו</h2>
+
+<p>שני חיישני הקו מותקנים בקדמת המכונית, פונים אל הרצפה, בגובה של בערך <strong>1 ס״מ</strong> מעליה. שמאל וימין — לפי כיוון הנסיעה של המכונית.</p>
+
+<p>כל חיישן מקבל חשמל מהמסילות: <strong>VCC</strong> אל המסילה האדומה (+), <strong>GND</strong> אל המסילה הכחולה (−). ה-<strong>OUT</strong> של החיישן <strong>השמאלי</strong> הולך אל <strong>רגל 11</strong>, וה-<strong>OUT</strong> של החיישן <strong>הימני</strong> אל <strong>רגל 12</strong>.</p>
+
+<pre class="wiring-block" dir="ltr">IR sensor LEFT         IR sensor RIGHT
+  VCC ── (+) rail        VCC ── (+) rail
+  GND ── (−) rail        GND ── (−) rail
+  OUT ── pin 11          OUT ── pin 12</pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_04_line_sensors</div>
+  <p>כאן ייכנס תרשים: שני חיישני הקו בקדמת המכונית — VCC ו-GND מהמסילות של הברדבורד, OUT של החיישן השמאלי לרגל 11 ושל הימני לרגל 12.</p>
+</div>
+
+<h2><span class="section-icon">🔌</span>חיווט 5 — כפתור התחלה/עצירה (גרסה 3 בלבד)</h2>
+
+<p>נחוץ רק למי שבוחרים ב<strong>גרסה 3</strong> להוסיף כפתור התחלה/עצירה. זה בדיוק חיווט הכפתור מהפרויקטים הקודמים: הכפתור לרוחב החריץ המרכזי של הברדבורד, רגל A אל המסילה האדומה (+), רגל B אל <strong>רגל 2</strong> של הארדואינו — ומאותו טור גם <strong>נגד הורדה של 10 קילו-אוהם</strong> (פסי צבע: חום · שחור · כתום) אל המסילה הכחולה (−).</p>
+
+<pre class="wiring-block" dir="ltr">Button leg A ────────  (+) rail (5V)
+Button leg B ──┬─────  Arduino pin 2
+               └──[10 kΩ]── (−) rail (GND)</pre>
+
+<p><span class="section-icon">⚠️</span>נגד ההורדה הולך בין <strong>רגל 2 לבין GND</strong> — לא בין 5 V לבין GND. אם מחווטים אותו בין 5 V לבין GND, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">תרשים עתידי — w_p4_05_button_tier3</div>
+  <p>כאן ייכנס תרשים: כפתור לרוחב החריץ המרכזי של הברדבורד — רגל A אל המסילה האדומה (+), רגל B אל רגל 2 של הארדואינו, ונגד הורדה של 10 קילו-אוהם מאותו טור אל המסילה הכחולה (−).</p>
+</div>
+
+</div>
+</body>
+</html>

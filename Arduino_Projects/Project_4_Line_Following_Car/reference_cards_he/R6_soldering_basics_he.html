@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית עזר R6 — יסודות ההלחמה</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<style>
+  @page { size: A4 portrait; margin: 15mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, 'Segoe UI', -apple-system, 'Noto Sans Hebrew', sans-serif;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    max-width: 210mm;
+    padding: 12mm;
+    position: relative;
+  }
+  .card-id {
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    width: 44pt;
+    height: 44pt;
+    border: 2.5pt solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    font-weight: bold;
+    background: #fff;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5pt;
+  }
+  .header {
+    border-bottom: 3pt solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  h1 {
+    font-size: 26pt;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #555;
+    margin-top: 3pt;
+  }
+  .orient {
+    background: #eef3f8;
+    border-inline-start: 5pt solid #5a7391;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 12.5pt;
+    color: #234;
+  }
+  .big-msg {
+    background: #fff8e1;
+    border: 2pt solid #f57c00;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    font-size: 15pt;
+    text-align: right;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  h2 {
+    font-size: 17pt;
+    margin: 18pt 0 6pt 0;
+    padding: 4pt 10pt;
+    background: #000;
+    color: #fff;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  .safety {
+    background: #fef0f0;
+    border: 2pt solid #b00;
+    padding: 12pt 16pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .safety ul {
+    margin: 8pt 0;
+    padding-inline-start: 20pt;
+  }
+  .safety li { margin-bottom: 8pt; }
+  .rule-above {
+    background: #fff;
+    border: 3pt double #b00;
+    padding: 10pt 16pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key {
+    background: #fffbe0;
+    border-inline-start: 5pt solid #d4a017;
+    padding: 12pt 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .key strong { color: #000; }
+  .tip {
+    background: #f1f8e9;
+    border-inline-start: 5pt solid #558b2f;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .weak {
+    background: #fef0f0;
+    border-inline-start: 5pt solid #b00;
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-size: 13pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  ol.steps {
+    margin: 10pt 0;
+    padding-inline-start: 24pt;
+  }
+  ol.steps li { margin-bottom: 8pt; }
+  .section-icon {
+    display: inline-block;
+    margin-inline-end: 6pt;
+    font-size: 1.05em;
+    vertical-align: baseline;
+  }
+  .dont { color: #b00; font-weight: bold; }
+  pre.wiring-block {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    background: #f5f5f5;
+    border: 1pt solid #ccc;
+    padding: 8pt;
+    margin: 10pt 0;
+    line-height: 1.35;
+    white-space: pre;
+    overflow-x: auto;
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: left;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .image-slot.living-placeholder {
+    border: 2pt dashed #667;
+    background: #f0f4fa;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    font-size: 11pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .image-slot-header {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #556;
+    margin-bottom: 4pt;
+  }
+  .r-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18pt;
+    height: 18pt;
+    border: 1.5pt solid #000;
+    border-radius: 50%;
+    font-size: 10pt;
+    font-weight: bold;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    top: -1pt;
+  }
+  footer {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 1pt dashed #999;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">R6</div>
+
+<div class="header">
+  <h1><span class="section-icon">🔥</span>יסודות ההלחמה</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="orient">
+קוראים את הכרטיסייה הזאת לפני ההלחמה הראשונה על לוח האימון. לא צריך לשנן אותה — משאירים אותה ליד עמדת ההלחמה וחוזרים אליה לפני כל הלחמה בפרויקט.
+</div>
+
+<div class="big-msg">
+<strong>הלחמה</strong> היא חיבור קבוע בין שני חלקי מתכת: מחממים את נקודת החיבור ומצמידים אליה <strong>בדיל</strong> — מתכת רכה שנמסה בחום. טיפת הבדיל הנמסה זורמת סביב שני החלקים, וכשהיא מתקררת ומתקשה — הם מחוברים לתמיד. במכונית שנוסעת ורועדת, רק חיבור כזה מחזיק לאורך זמן.
+</div>
+
+<p>קצה המלחם חם מאוד — בערך <strong>350 מעלות</strong>. בגלל זה לעמדת ההלחמה יש כללים משלה.</p>
+
+<h2><span class="section-icon">⚠️</span>ארבעת כללי הבטיחות של ההלחמה</h2>
+
+<div class="safety">
+  <ul>
+    <li><strong>משקפי מגן על העיניים</strong> — כל זמן שמלחם דולק בעמדה.</li>
+    <li><strong>המלחם גר על המעמד שלו</strong> — כשהוא לא ביד, הוא על המעמד. אף פעם לא על השולחן.</li>
+    <li><strong>מנקים את הקצה על הספוג הלח</strong> — אף פעם לא באצבעות.</li>
+    <li><strong>לא נוגעים בקצה המתכת</strong> — הוא חם מאוד גם כמה דקות אחרי הכיבוי.</li>
+  </ul>
+</div>
+
+<div class="rule-above">
+  ועוד כלל אחד שמעל כולם: <strong>מלחימים רק כשהמורה בעמדה</strong> — תמיד, גם אחרי שכבר יש ניסיון.
+  <br>נגעתם בטעות במשהו חם? מיד מים קרים מהברז, וקוראים למורה.
+</div>
+
+<p>הכללים האלה מופיעים גם בכרטיסיית הבטיחות <span class="r-ref">R4</span>.</p>
+
+<h2><span class="section-icon">🔥</span>איך מלחימים חיבור טוב — חמישה צעדים</h2>
+
+<ol class="steps">
+  <li><strong>מחממים את הנקודה:</strong> מניחים את קצה המלחם על נקודת החיבור ומחכים 2–3 שניות.</li>
+  <li><strong>מצמידים את הבדיל לנקודה</strong> — לא לקצה המלחם. הנקודה החמה היא שממיסה את הבדיל.</li>
+  <li><strong>הבדיל נמס וזורם</strong> סביב החיבור ועוטף אותו מכל הצדדים.</li>
+  <li><strong>מרחיקים קודם את הבדיל</strong>, ואחר כך את המלחם. המלחם חוזר למעמד.</li>
+  <li><strong>לא מזיזים כלום 3 שניות</strong> — עד שהחיבור מתקשה. חיבור שזז בזמן ההתקשות יוצא חלש.</li>
+</ol>
+
+<div class="tip">
+<strong>הבדיל לא נמס?</strong> לא מנסים לתקן לבד — בעמדת ההלחמה <strong>קוראים למורה, תמיד</strong>. לרוב הסיבה פשוטה: הקצה נוגע בבדיל במקום בנקודת החיבור.
+</div>
+
+<h2><span class="section-icon">👀</span>חיבור טוב מול חיבור חלש</h2>
+
+<pre class="wiring-block" dir="ltr">          |                                  |
+          |                                  |
+         /|\                                .-.
+        / | \                              ( | )
+       /  |  \                              `-'
+   ===============                    ===============
+
+        <bdi>מבריק</bdi>                              <bdi>עמום</bdi>
+        <bdi>מחזיק</bdi>                               <bdi>זז</bdi></pre>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">איור בהכנה</div>
+  <p>כאן תיכנס תמונת תקריב של חיבור הלחמה טוב מלוח האימון — מבריק, חלק ובצורת אוהל קטן — לצד חיבור חלש בצורת כדור עמום, להשוואה.</p>
+</div>
+
+<div class="tip">
+<strong>חיבור טוב:</strong> מבריק, חלק, יושב כמו אוהל קטן סביב נקודת החיבור. במשיכה עדינה — נשאר במקומו.
+</div>
+
+<div class="weak">
+<strong>חיבור חלש ("הלחמה קרה"):</strong> עמום, בצורת כדור, זז או משתחרר במשיכה עדינה. זה קורה כשהנקודה לא התחממה מספיק, או כשמשהו זז בזמן ההתקשות. מה עושים: חוזרים לעמדה <strong>יחד עם המורה</strong>, מחממים את הנקודה מחדש — והבדיל נמס וזורם שוב.
+</div>
+
+<h2><span class="section-icon">🔍</span>בדיקת המשיכה העדינה</h2>
+
+<p>כך בודקים כל חיבור הלחמה בפרויקט: אוחזים בחוט קרוב לנקודת החיבור ומושכים <strong>בעדינות</strong> — לא בכוח. חיבור טוב נשאר במקומו. חיבור שזז או משתחרר — חוזרים לעמדה יחד עם המורה.</p>
+
+<div class="key">
+<strong>משיכה עדינה — לא מבחן כוח.</strong> המטרה היא לגלות חיבור רופף לפני שהמכונית מגלה אותו על המסלול.
+</div>
+
+<h2><span class="section-icon">🔧</span>חיבור שנשבר אחר כך — תחזוקה, לא כישלון</h2>
+
+<p>גם חיבור טוב יכול להישבר אחרי הרבה נסיעות ורעידות. ככה זה אצל רובוטים אמיתיים: מכוניות נכנסות למוסך, ורובוטים מקבלים תחזוקה. קוראים למורה, חוזרים יחד לעמדה, מלחימים מחדש — והמכונית חוזרת למסלול.</p>
+
+<div class="key">
+<strong>חיבור שנשבר הוא עבודת תחזוקה — לא כישלון.</strong>
+</div>
+
+<footer>
+  R6 — יסודות ההלחמה · פרויקט #4 מכונית עוקבת קו
+</footer>
+
+</div>
+</body>
+</html>

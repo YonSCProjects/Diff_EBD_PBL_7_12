@@ -1429,10 +1429,10 @@ code {
 
 <h2><span class="section-icon">🗺️</span>בלוח יש ארבעה אזורים</h2>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד ריק (יתווסף בהמשך)</div>
-  <p>תרשים של ברדבורד ריק: למעלה ולמטה — שתי <strong>מסילות מתח</strong> אופקיות בצבע אדום וכחול (מסומנות + ו-−), העוברות לאורך כל הלוח. בין לבין — רשת של טורים ממוספרים (1–30) המופרדים על ידי <strong>מרווח מרכזי</strong>. השורות מסומנות a–e בחצי העליון ו-f–j בחצי התחתון. עד שהתרשים מוכן, תרשים הטקסט שלמטה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w0_empty_breadboard_breadboard.svg" alt="תרשים של ברדבורד ריק: מסילות מתח אופקיות למעלה ולמטה (מסומנות + ו-−), וביניהן רשת של טורים ממוספרים המופרדים במרווח מרכזי.">
+  <figcaption><strong>ברדבורד ריק:</strong> למעלה ולמטה — <strong>מסילות המתח</strong> (+ ו-−); בין לבין — <strong>טורים ממוספרים</strong> המופרדים ב<strong>מרווח המרכזי</strong>. השורות מסומנות a–e בחצי אחד ו-f–j בחצי השני.</figcaption>
+</figure>
 
 <div class="bb-ascii">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
      −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
@@ -1597,10 +1597,10 @@ code {
   Echo ───────────  pin 11
   GND  ───────────  GND</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_01_hcsr04</code>: חיישן HC-SR04 על הברדבורד עם ארבע רגליו — VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11. שתי ה"עיניים" העגולות פונות אל מחוץ לקצה הברדבורד. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_01_hcsr04_breadboard.svg" alt="תרשים ברדבורד: חיישן HC-SR04 עם ארבע רגליו — VCC ל-5V (אדום), GND ל-GND (שחור), Trig לרגל 12 (כתום), Echo לרגל 11 (ירוק).">
+  <figcaption><strong>חיווט 1:</strong> VCC ל-<strong>5 V</strong> (אדום), GND ל-<strong>GND</strong> (שחור), <strong>Trig לרגל 12</strong> (כתום), <strong>Echo לרגל 11</strong> (ירוק).</figcaption>
+</figure>
 
 <h2><span class="section-icon">🔌</span>חיווט 2 — חיישן + לד אזעקה (שלב 3)</h2>
 
@@ -1616,10 +1616,10 @@ Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
                          ▼
                     LED short leg (−) ── Arduino GND</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_02_hcsr04_led</code>: חיווט 1 (חיישן HC-SR04 — VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11) ובנוסף לד על רגל 9 דרך נגד 220 אוהם — הרגל הארוכה דרך הנגד לרגל 9, הרגל הקצרה ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_02_hcsr04_led_breadboard.svg" alt="תרשים ברדבורד: חיווט 1 ובנוסף לד על רגל 9 — הרגל הארוכה דרך נגד 220 אוהם לרגל 9, הרגל הקצרה ל-GND.">
+  <figcaption><strong>חיווט 2:</strong> חיווט 1, ובנוסף <strong>לד</strong> — הרגל הארוכה (+) דרך נגד <strong>220 אוהם</strong> לרגל <strong>9</strong>, הרגל הקצרה (−) ל-<strong>GND</strong>.</figcaption>
+</figure>
 
 <h2><span class="section-icon">🔌</span>חיווט 3 — חיישן + לד + זמזם = אזעקה מלאה (שלב 4)</h2>
 
@@ -1638,10 +1638,10 @@ Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
 Arduino pin 8 ───────────── Buzzer leg 1
 Arduino GND  ───────────── Buzzer leg 2</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_03_hcsr04_led_buzzer</code>: חיווט 2 (חיישן HC-SR04 + לד על רגל 9 דרך נגד 220 אוהם) ובנוסף זמזם — רגל אחת לרגל 8, הרגל השנייה ל-GND. שתי רגלי הזמזם בטורים שונים. אין לזמזם כיוון ואין לו נגד; אף פעם לא מחברים אותו ל-5V. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_03_hcsr04_led_buzzer_breadboard.svg" alt="תרשים ברדבורד: חיווט 2 ובנוסף זמזם — רגל אחת לרגל 8, הרגל השנייה ל-GND, שתי הרגליים בטורים שונים.">
+  <figcaption><strong>חיווט 3:</strong> חיווט 2, ובנוסף <strong>זמזם</strong> — רגל אחת לרגל <strong>8</strong> (כתום), הרגל השנייה ל-<strong>GND</strong> (שחור). אין לזמזם כיוון ואין לו נגד; אף פעם לא מחברים אותו ל-5 V.</figcaption>
+</figure>
 
 <h2><span class="section-icon">🔌</span>חיווט 4 — אזעקה בשני שלבים (גרסה 3 בלבד)</h2>
 
@@ -1664,10 +1664,10 @@ Arduino pin 10 ──[220 Ω]──┬── warning LED long leg (+)
 Arduino pin 8 ───────────── Buzzer leg 1
 Arduino GND  ───────────── Buzzer leg 2</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_04_two_stage</code>: חיווט 3 (חיישן + לד אזעקה על רגל 9 + זמזם על רגל 8) ובנוסף לד אזהרה שני על רגל 10 דרך נגד 220 אוהם משלו — הרגל הארוכה דרך הנגד לרגל 10, הרגל הקצרה ל-GND. כל לד עם הנגד שלו. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_04_two_stage_breadboard.svg" alt="תרשים ברדבורד: חיווט 3 ובנוסף לד אזהרה שני על רגל 10 דרך נגד 220 אוהם משלו — הרגל הארוכה דרך הנגד לרגל 10, הרגל הקצרה ל-GND.">
+  <figcaption><strong>חיווט 4:</strong> חיווט 3, ובנוסף <strong>לד אזהרה שני</strong> על רגל <strong>10</strong> דרך נגד <strong>220 אוהם</strong> משלו. כל לד עם הנגד שלו.</figcaption>
+</figure>
 
 </div>
 </section>
@@ -2488,10 +2488,10 @@ Arduino GND  ───────────── Buzzer leg 2</pre>
   Echo ───────────  pin 11
   GND  ───────────  GND</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_01_hcsr04</code>: חיישן HC-SR04 על הברדבורד עם ארבע רגליו — VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11. שתי ה"עיניים" פונות אל מחוץ לקצה הברדבורד. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_01_hcsr04_breadboard.svg" alt="תרשים ברדבורד: חיישן HC-SR04 על הברדבורד — VCC ל-5V (חוט אדום), GND ל-GND (חוט שחור), Trig לרגל 12 (חוט כתום), Echo לרגל 11 (חוט ירוק). שתי העיניים פונות החוצה.">
+  <figcaption><strong>חיישן המרחק:</strong> VCC ל-<strong>5 V</strong> (אדום), GND ל-<strong>GND</strong> (שחור), <strong>Trig לרגל 12</strong> (כתום), <strong>Echo לרגל 11</strong> (ירוק).</figcaption>
+</figure>
 
 <div class="expected">
   <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
@@ -2626,10 +2626,10 @@ Arduino GND  ───────────── Buzzer leg 2</pre>
                            ▼
                       LED short leg (−) ─── Arduino GND</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_02_hcsr04_led</code>: אותו חיווט של החיישן משלב 1 (VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11), ובנוסף לד על הברדבורד — הרגל הארוכה (+) דרך נגד 220 אוהם לרגל 9, והרגל הקצרה (−) ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה לחיווט הלד.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_02_hcsr04_led_breadboard.svg" alt="תרשים ברדבורד: חיישן HC-SR04 מחווט כמו בשלב 1, ובנוסף לד — הרגל הארוכה דרך נגד 220 אוהם לרגל 9, הרגל הקצרה ל-GND.">
+  <figcaption><strong>החיישן</strong> כמו בשלב 1, ובנוסף <strong>הלד:</strong> הרגל הארוכה (+) דרך נגד <strong>220 אוהם</strong> לרגל <strong>9</strong>, הרגל הקצרה (−) ל-<strong>GND</strong>.</figcaption>
+</figure>
 
 <div class="screen-only">
 <h2><span class="section-icon">💡</span>מה הקוד עושה</h2>
@@ -2719,10 +2719,10 @@ LED  (- leg) ──────────  GND
 Buzzer leg 1 ──────────  pin 8      (NEW in this step)
 Buzzer leg 2 ──────────  GND</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_03_hcsr04_led_buzzer</code>: חיישן HC-SR04 על הברדבורד (VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11), לד על רגל 9 דרך נגד 220 אוהם ל-GND, ובנוסף זמזם פּיֵזו ששתי רגליו בטורים שונים — רגל אחת לרגל 8, הרגל השנייה ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_03_hcsr04_led_buzzer_breadboard.svg" alt="תרשים ברדבורד: החיישן והלד מחווטים כמו קודם, ובנוסף זמזם — רגל אחת לרגל 8, הרגל השנייה ל-GND, שתי הרגליים בטורים שונים.">
+  <figcaption><strong>החיישן והלד</strong> כמו קודם, ובנוסף <strong>הזמזם:</strong> רגל אחת לרגל <strong>8</strong> (כתום), הרגל השנייה ל-<strong>GND</strong> (שחור). שתי רגלי הזמזם בטורים שונים.</figcaption>
+</figure>
 
 <div class="warning">
   <strong><span class="section-icon">⚠️</span>חשוב — לא לחבר ישר ל-5 V</strong>
@@ -2928,10 +2928,10 @@ LED (−) ──────────  GND
 Buzzer  ──────────  pin 8
 Buzzer  ──────────  GND</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_03_hcsr04_led_buzzer</code>: האזעקה המלאה על הברדבורד — חיישן HC-SR04 (VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11) ושתי ה"עיניים" פונות אל מחוץ לקצה הברדבורד, לד על רגל 9 דרך נגד 220 אוהם (הרגל הארוכה דרך הנגד לרגל 9, הקצרה ל-GND), וזמזם עם רגל אחת לרגל 8 והשנייה ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_03_hcsr04_led_buzzer_breadboard.svg" alt="תרשים ברדבורד: האזעקה המלאה — חיישן HC-SR04 (VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11), לד על רגל 9 דרך נגד 220 אוהם, וזמזם על רגל 8 ל-GND.">
+  <figcaption><strong>האזעקה המלאה:</strong> חיישן — VCC ל-<strong>5 V</strong>, GND ל-<strong>GND</strong>, <strong>Trig לרגל 12</strong>, <strong>Echo לרגל 11</strong>; <strong>לד</strong> על רגל <strong>9</strong> דרך נגד 220 אוהם; <strong>זמזם</strong> על רגל <strong>8</strong> ל-GND.</figcaption>
+</figure>
 
 <div class="expected">
   <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
@@ -3365,10 +3365,10 @@ LED (red, alarm)   pin 9  (via 220Ω) , GND
 LED (yellow, warn) pin 10 (via 220Ω) , GND   ← two-stage only
 Buzzer             pin 8 , GND</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_04_two_stage</code>: חיישן HC-SR04 (VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11), לד אדום על רגל 9 דרך נגד 220 אוהם ל-GND, זמזם על רגל 8 ל-GND, ולד צהוב נוסף לאזעקה בשני שלבים על רגל 10 דרך נגד 220 אוהם משלו ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_04_two_stage_breadboard.svg" alt="תרשים ברדבורד: אזעקה בשני שלבים — חיישן HC-SR04, לד אזעקה על רגל 9, לד אזהרה שני על רגל 10 (כל אחד דרך נגד 220 אוהם משלו), וזמזם על רגל 8 ל-GND.">
+  <figcaption><strong>אזעקה בשני שלבים:</strong> החיישן כרגיל; <strong>לד אזעקה</strong> על רגל <strong>9</strong> ו<strong>לד אזהרה</strong> על רגל <strong>10</strong> — כל אחד דרך נגד 220 אוהם משלו; <strong>זמזם</strong> על רגל <strong>8</strong>.</figcaption>
+</figure>
 
 <div class="field">
   <label>מצלמים תמונה של החיווט הגמור. מסמנים כאן: <em>תמונה צולמה / עדיין לא / לא רוצה תמונה</em></label>

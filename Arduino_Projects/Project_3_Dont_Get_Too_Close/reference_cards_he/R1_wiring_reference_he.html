@@ -65,10 +65,10 @@
   Echo ───────────  pin 11
   GND  ───────────  GND</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_01_hcsr04</code>: חיישן HC-SR04 על הברדבורד עם ארבע רגליו — VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11. שתי ה"עיניים" העגולות פונות אל מחוץ לקצה הברדבורד. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_01_hcsr04_breadboard.svg" alt="תרשים ברדבורד: חיישן HC-SR04 עם ארבע רגליו — VCC ל-5V (אדום), GND ל-GND (שחור), Trig לרגל 12 (כתום), Echo לרגל 11 (ירוק).">
+  <figcaption><strong>חיווט 1:</strong> VCC ל-<strong>5 V</strong> (אדום), GND ל-<strong>GND</strong> (שחור), <strong>Trig לרגל 12</strong> (כתום), <strong>Echo לרגל 11</strong> (ירוק).</figcaption>
+</figure>
 
 <h2><span class="section-icon">🔌</span>חיווט 2 — חיישן + לד אזעקה (שלב 3)</h2>
 
@@ -84,10 +84,10 @@ Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
                          ▼
                     LED short leg (−) ── Arduino GND</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_02_hcsr04_led</code>: חיווט 1 (חיישן HC-SR04 — VCC ל-5V, GND ל-GND, Trig לרגל 12, Echo לרגל 11) ובנוסף לד על רגל 9 דרך נגד 220 אוהם — הרגל הארוכה דרך הנגד לרגל 9, הרגל הקצרה ל-GND. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_02_hcsr04_led_breadboard.svg" alt="תרשים ברדבורד: חיווט 1 ובנוסף לד על רגל 9 — הרגל הארוכה דרך נגד 220 אוהם לרגל 9, הרגל הקצרה ל-GND.">
+  <figcaption><strong>חיווט 2:</strong> חיווט 1, ובנוסף <strong>לד</strong> — הרגל הארוכה (+) דרך נגד <strong>220 אוהם</strong> לרגל <strong>9</strong>, הרגל הקצרה (−) ל-<strong>GND</strong>.</figcaption>
+</figure>
 
 <h2><span class="section-icon">🔌</span>חיווט 3 — חיישן + לד + זמזם = אזעקה מלאה (שלב 4)</h2>
 
@@ -106,10 +106,10 @@ Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
 Arduino pin 8 ───────────── Buzzer leg 1
 Arduino GND  ───────────── Buzzer leg 2</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_03_hcsr04_led_buzzer</code>: חיווט 2 (חיישן HC-SR04 + לד על רגל 9 דרך נגד 220 אוהם) ובנוסף זמזם — רגל אחת לרגל 8, הרגל השנייה ל-GND. שתי רגלי הזמזם בטורים שונים. אין לזמזם כיוון ואין לו נגד; אף פעם לא מחברים אותו ל-5V. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_03_hcsr04_led_buzzer_breadboard.svg" alt="תרשים ברדבורד: חיווט 2 ובנוסף זמזם — רגל אחת לרגל 8, הרגל השנייה ל-GND, שתי הרגליים בטורים שונים.">
+  <figcaption><strong>חיווט 3:</strong> חיווט 2, ובנוסף <strong>זמזם</strong> — רגל אחת לרגל <strong>8</strong> (כתום), הרגל השנייה ל-<strong>GND</strong> (שחור). אין לזמזם כיוון ואין לו נגד; אף פעם לא מחברים אותו ל-5 V.</figcaption>
+</figure>
 
 <h2><span class="section-icon">🔌</span>חיווט 4 — אזעקה בשני שלבים (גרסה 3 בלבד)</h2>
 
@@ -132,10 +132,10 @@ Arduino pin 10 ──[220 Ω]──┬── warning LED long leg (+)
 Arduino pin 8 ───────────── Buzzer leg 1
 Arduino GND  ───────────── Buzzer leg 2</pre>
 
-<div class="image-slot living-placeholder">
-  <div class="image-slot-header">תרשים ברדבורד (יתווסף בהמשך)</div>
-  <p>תרשים Fritzing <code>w_p3_04_two_stage</code>: חיווט 3 (חיישן + לד אזעקה על רגל 9 + זמזם על רגל 8) ובנוסף לד אזהרה שני על רגל 10 דרך נגד 220 אוהם משלו — הרגל הארוכה דרך הנגד לרגל 10, הרגל הקצרה ל-GND. כל לד עם הנגד שלו. עד שהתרשים מוכן, תרשים הטקסט שלמעלה הוא ההפניה.</p>
-</div>
+<figure class="wiring-figure">
+  <img src="../images/w_p3_04_two_stage_breadboard.svg" alt="תרשים ברדבורד: חיווט 3 ובנוסף לד אזהרה שני על רגל 10 דרך נגד 220 אוהם משלו — הרגל הארוכה דרך הנגד לרגל 10, הרגל הקצרה ל-GND.">
+  <figcaption><strong>חיווט 4:</strong> חיווט 3, ובנוסף <strong>לד אזהרה שני</strong> על רגל <strong>10</strong> דרך נגד <strong>220 אוהם</strong> משלו. כל לד עם הנגד שלו.</figcaption>
+</figure>
 
 </div>
 </body>

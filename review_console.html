@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>סקירת כרטיסיות — פרויקטים 1–4</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: Arial, 'Segoe UI', 'Noto Sans Hebrew', sans-serif;
+    font-size: 14px; color: #1c2733; background: #eef1f5;
+    display: grid; grid-template-columns: 300px 1fr;
+    grid-template-rows: 52px 1fr 46px;
+    grid-template-areas: "side top" "side main" "side bottom";
+  }
+
+  /* ---------- sidebar (right in RTL) ---------- */
+  #side {
+    grid-area: side; background: #1f2d3d; color: #dfe7ef;
+    overflow-y: auto; padding: 10px 8px 24px;
+  }
+  #side h1 { font-size: 15px; margin: 4px 6px 2px; color: #fff; }
+  #progress { font-size: 12.5px; color: #9fd6a8; margin: 0 6px 10px; }
+  details { margin-bottom: 6px; }
+  summary {
+    cursor: pointer; font-weight: bold; font-size: 13px; padding: 5px 6px;
+    background: #2a3b50; border-radius: 6px; user-select: none;
+  }
+  .cardrow {
+    display: flex; align-items: center; gap: 5px;
+    padding: 3px 6px 3px 4px; margin: 2px 0 2px 8px; border-radius: 5px;
+    cursor: pointer; font-size: 12px; line-height: 1.3; color: #c9d4e0;
+  }
+  .cardrow:hover { background: #31465f; }
+  .cardrow.current { background: #3d5a7d; color: #fff; }
+  .cardrow .nm { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; direction: ltr; text-align: right; }
+  .chip {
+    font-size: 10px; border-radius: 8px; padding: 0 5px; line-height: 15px;
+    background: #46586d; color: #fff; flex: none;
+  }
+  .chip.done { background: #2e7d32; }
+  .chip.edits { background: #b26a00; }
+  .chip.comments { background: #6a4fa3; }
+  .chip.fail { background: #b23434; }
+  .chip.stale { background: #9c8412; }
+
+  /* ---------- toolbar ---------- */
+  #top {
+    grid-area: top; display: flex; align-items: center; gap: 8px;
+    background: #fff; border-bottom: 1px solid #d4dae2; padding: 0 12px;
+  }
+  #cardtitle { font-weight: bold; font-size: 13px; direction: ltr; text-align: left;
+    flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #33475e; }
+  .modes { display: flex; border: 1px solid #b9c4d0; border-radius: 8px; overflow: hidden; flex: none; }
+  .modes button {
+    border: none; background: #f2f5f8; padding: 7px 14px; cursor: pointer;
+    font-family: inherit; font-size: 13px; border-inline-start: 1px solid #d4dae2;
+  }
+  .modes button:first-child { border-inline-start: none; }
+  .modes button.active { background: #2a5d9c; color: #fff; }
+  button.act {
+    border: 1px solid #b9c4d0; background: #fff; border-radius: 8px;
+    padding: 7px 12px; cursor: pointer; font-family: inherit; font-size: 13px; flex: none;
+  }
+  button.act:hover { background: #f0f4f8; }
+  button.act.good { border-color: #2e7d32; color: #2e7d32; font-weight: bold; }
+  button.act.good.on { background: #2e7d32; color: #fff; }
+  #modehint { font-size: 11.5px; color: #7c8a99; flex: none; max-width: 240px; }
+
+  /* ---------- main ---------- */
+  #main { grid-area: main; position: relative; background: #eef1f5; }
+  #frame { width: 100%; height: 100%; border: none; background: #fff; }
+  #banner {
+    position: absolute; top: 10px; inset-inline-start: 50%; transform: translateX(50%);
+    background: #b23434; color: #fff; padding: 8px 16px; border-radius: 8px;
+    font-size: 13px; display: none; z-index: 30; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  }
+  #banner.warn { background: #9c8412; }
+  #toast {
+    position: absolute; bottom: 14px; inset-inline-start: 50%; transform: translateX(50%);
+    background: #1f2d3d; color: #fff; padding: 8px 18px; border-radius: 8px;
+    font-size: 13px; display: none; z-index: 30;
+  }
+
+  /* ---------- comment popover ---------- */
+  #cpop {
+    position: absolute; z-index: 40; display: none; width: 300px;
+    background: #fff; border: 2px solid #6a4fa3; border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.25); padding: 10px;
+  }
+  #cpop .snippet { font-size: 11px; color: #667; margin-bottom: 6px; max-height: 46px; overflow: hidden; }
+  #cpop textarea {
+    width: 100%; height: 70px; font-family: inherit; font-size: 13px;
+    border: 1px solid #b9c4d0; border-radius: 6px; padding: 6px; resize: vertical;
+  }
+  #cpop .row { display: flex; gap: 6px; margin-top: 6px; justify-content: flex-end; }
+
+  /* ---------- bottom bar ---------- */
+  #bottom {
+    grid-area: bottom; display: flex; align-items: center; gap: 8px;
+    background: #fff; border-top: 1px solid #d4dae2; padding: 0 12px;
+  }
+  #cardnote { flex: 1; border: 1px solid #b9c4d0; border-radius: 8px; padding: 6px 10px;
+    font-family: inherit; font-size: 13px; }
+  #bottom .save { background: #2a5d9c; color: #fff; border-color: #2a5d9c; font-weight: bold; }
+  #bottom .save:hover { background: #234e84; }
+
+  /* ---------- modal ---------- */
+  #modal {
+    position: fixed; inset: 0; background: rgba(15,25,38,.55); display: none;
+    align-items: center; justify-content: center; z-index: 50;
+  }
+  #modal .box { background: #fff; border-radius: 12px; padding: 16px; width: min(560px, 92vw); }
+  #modal textarea { width: 100%; height: 180px; font-family: inherit; font-size: 13.5px;
+    border: 1px solid #b9c4d0; border-radius: 8px; padding: 8px; }
+  #modal .row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 10px; }
+
+  #filewarn {
+    display: none; grid-column: 1 / -1; grid-row: 1 / -1; background: #fff;
+    padding: 40px; font-size: 16px; line-height: 1.8;
+  }
+  kbd { background: #eef1f5; border: 1px solid #c6cdd6; border-radius: 4px; padding: 0 5px; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<div id="filewarn">
+  <h2>הקונסולה צריכה לרוץ דרך השרת המקומי</h2>
+  <p>1. לוחצים לחיצה כפולה על <b>start_review.bat</b> בתיקיית הפרויקט (או מריצים <code>node review_server.js</code>).</p>
+  <p>2. נפתח חלון שרת — משאירים אותו פתוח.</p>
+  <p>3. נכנסים בדפדפן אל <b>http://127.0.0.1:8765/review_console.html</b></p>
+</div>
+
+<aside id="side">
+  <h1>סקירת כרטיסיות 1–4</h1>
+  <div id="progress"></div>
+  <div id="cardlist"></div>
+</aside>
+
+<header id="top">
+  <div class="modes" role="tablist">
+    <button id="m_browse" class="active" title="Alt+1">👁️ עיון</button>
+    <button id="m_edit" title="Alt+2">✏️ עריכה</button>
+    <button id="m_comment" title="Alt+3">💬 הערה</button>
+  </div>
+  <span id="modehint">מצב עיון — הכרטיסייה מתנהגת כרגיל</span>
+  <div id="cardtitle"></div>
+  <button class="act" id="prevbtn" title="Alt+→">→ הקודמת</button>
+  <button class="act" id="nextbtn" title="Alt+←">הבאה ←</button>
+  <button class="act good" id="donebtn" title="Alt+D">נראה טוב ✓</button>
+  <button class="act" id="resetbtn">איפוס כרטיסייה</button>
+</header>
+
+<main id="main">
+  <iframe id="frame" title="card"></iframe>
+  <div id="banner"></div>
+  <div id="toast"></div>
+  <div id="cpop">
+    <div class="snippet"></div>
+    <textarea placeholder="מה לשנות כאן? כותבים חופשי..."></textarea>
+    <div class="row">
+      <button class="act" id="cpop_cancel">ביטול</button>
+      <button class="act save" id="cpop_save">שמירת הערה</button>
+    </div>
+  </div>
+</main>
+
+<footer id="bottom">
+  <input id="cardnote" placeholder="הערה כללית לכרטיסייה הזאת (לא חובה)">
+  <button class="act" id="globalbtn">הערות כלליות</button>
+  <button class="act" id="copybtn">העתקה</button>
+  <button class="act" id="dlbtn">הורדה</button>
+  <button class="act save" id="savebtn">💾 שמירה למאגר</button>
+</footer>
+
+<div id="modal">
+  <div class="box">
+    <h3 style="margin:0 0 8px">הערות כלליות (על כל הכרטיסיות / עיצוב כללי)</h3>
+    <textarea id="globaltext" placeholder="לדוגמה: בכל הכרטיסיות — הכותרות הצהובות בולטות מדי..."></textarea>
+    <div class="row">
+      <button class="act" id="modal_close">סגירה ושמירה</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+'use strict';
+
+// ============================== constants ==============================
+
+const PRIMARY = ['P','H1','H2','H3','H4','H5','H6','LI','FIGCAPTION','TD','TH','DT','DD','PRE','BLOCKQUOTE','SUMMARY'];
+const PRIMARY_SEL = PRIMARY.join(',').toLowerCase();
+const SKIP_TAGS = new Set(['SCRIPT','STYLE','LINK','META','NOSCRIPT','SVG','TEMPLATE','IFRAME','HEAD','TITLE']);
+const NICK_KEY = 'agourim_card_nickname';
+const HOW_TO_APPLY =
+  'For each edit: (1) if applyBy=="html", find beforeHTML as an exact substring of the source file; ' +
+  'if it occurs more than once, disambiguate using contextBefore/contextAfter (adjacent block texts). ' +
+  'Replace it with afterHTML. (2) If not found exactly once, retry after collapsing whitespace runs ' +
+  '(NEVER when preserveWhitespace is true). (3) For applyBy=="text" (all dc-flavor cards, synthetic blocks, ' +
+  'and structureChanged edits): locate beforeText near cssPath in the source and hand-apply the wording ' +
+  'change in place, preserving every existing tag and attribute. Never touch anything outside the matched span. ' +
+  'Verify sourceHash first; on mismatch flag the card for manual review instead of applying. ' +
+  'Comments are free-form requests: implement them with judgment; batch everything into one commit.';
+
+// ============================== state ==============================
+
+let manifest = [];           // [{file, project, projectDir, name, flavor}]
+let cur = -1;                // index into manifest
+let mode = 'browse';
+let registry = new Map();    // blockIndex -> element   (current card)
+let pristine = new Map();    // blockIndex -> {html, text, pre, editable, syn}
+let curHash = '';
+let staleCard = false;
+let settleToken = 0;
+let commitTimer = null;
+let pinLayer = null;
+let pendingComment = null;   // {blockIndex, cssPath, snippet, element}
+
+// ============================== storage ==============================
+
+const store = {
+  get(k, dflt) { try { const v = localStorage.getItem(k); return v == null ? dflt : JSON.parse(v); } catch { return dflt; } },
+  set(k, v) {
+    try { localStorage.setItem(k, JSON.stringify(v)); }
+    catch { banner('האחסון המקומי מלא או חסום — מומלץ ללחוץ "שמירה למאגר" עכשיו', true); }
+  },
+  del(k) { try { localStorage.removeItem(k); } catch {} },
+};
+const cardKey = (file) => 'rvw:card:' + file;
+const getCard = (file) => store.get(cardKey(file), { done: false, sourceHash: '', cardNote: '', edits: {}, comments: [] });
+const putCard = (file, rec) => store.set(cardKey(file), rec);
+
+// ============================== helpers ==============================
+
+const $ = (id) => document.getElementById(id);
+
+function fnv1a(str) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = (h * 0x01000193) >>> 0; }
+  return h.toString(16).padStart(8, '0');
+}
+
+function toast(msg, ms = 2200) {
+  const t = $('toast'); t.textContent = msg; t.style.display = 'block';
+  clearTimeout(t._t); t._t = setTimeout(() => t.style.display = 'none', ms);
+}
+function banner(msg, warn = false) {
+  const b = $('banner');
+  if (!msg) { b.style.display = 'none'; return; }
+  b.textContent = msg; b.className = warn ? 'warn' : ''; b.style.display = 'block';
+  b.id = 'banner';
+}
+
+function cssPath(el, doc) {
+  const parts = [];
+  let n = el;
+  while (n && n.nodeType === 1 && n !== doc.body && parts.length < 4) {
+    let s = n.tagName.toLowerCase();
+    if (n.classList && n.classList.length) s += '.' + [...n.classList].slice(0, 2).join('.');
+    const parent = n.parentElement;
+    if (parent) {
+      const same = [...parent.children].filter((c) => c.tagName === n.tagName);
+      if (same.length > 1) s += `:nth-of-type(${same.indexOf(n) + 1})`;
+    }
+    parts.unshift(s);
+    if (n.classList && n.classList.contains('card')) break;
+    n = n.parentElement;
+  }
+  return parts.join(' > ');
+}
+
+function tagSeq(html) {
+  return (html.match(/<\/?([a-z][a-z0-9-]*)/gi) || []).join(',').toLowerCase();
+}
+
+const hasLetters = (s) => /[\p{L}]/u.test(s);
+
+// ============================== boot ==============================
+
+async function boot() {
+  if (location.protocol === 'file:') {
+    $('filewarn').style.display = 'block';
+    return;
+  }
+  try { if (!localStorage.getItem(NICK_KEY)) localStorage.setItem(NICK_KEY, JSON.stringify ? 'סוקר' : 'סוקר'); }
+  catch {}
+  // card.js stores the nickname raw (not JSON) — set raw:
+  try { localStorage.setItem(NICK_KEY, 'סוקר'); } catch {}
+
+  const res = await fetch('/api/cards', { cache: 'no-store' });
+  manifest = (await res.json()).cards;
+  buildSidebar();
+  wireUi();
+  const meta = store.get('rvw:meta', {});
+  let startIdx = 0;
+  if (meta.lastFile) {
+    const i = manifest.findIndex((c) => c.file === meta.lastFile);
+    if (i >= 0) startIdx = i;
+  }
+  loadCard(startIdx);
+}
+
+// ============================== sidebar ==============================
+
+function buildSidebar() {
+  const wrap = $('cardlist');
+  wrap.innerHTML = '';
+  const byProject = new Map();
+  manifest.forEach((c, i) => {
+    if (!byProject.has(c.project)) byProject.set(c.project, []);
+    byProject.get(c.project).push({ ...c, idx: i });
+  });
+  for (const [proj, cards] of byProject) {
+    const det = document.createElement('details');
+    det.open = true;
+    const sum = document.createElement('summary');
+    sum.textContent = `פרויקט ${proj} (${cards.length})`;
+    det.appendChild(sum);
+    for (const c of cards) {
+      const row = document.createElement('div');
+      row.className = 'cardrow';
+      row.dataset.idx = c.idx;
+      row.dataset.file = c.file;
+      row.innerHTML = `<span class="nm"></span>`;
+      row.querySelector('.nm').textContent = c.name;
+      row.addEventListener('click', () => { flushCommit(); loadCard(c.idx); });
+      det.appendChild(row);
+    }
+    wrap.appendChild(det);
+  }
+  refreshSidebar();
+}
+
+function refreshSidebar() {
+  let done = 0;
+  document.querySelectorAll('.cardrow').forEach((row) => {
+    const file = row.dataset.file;
+    const rec = getCard(file);
+    row.querySelectorAll('.chip').forEach((c) => c.remove());
+    const addChip = (cls, txt) => {
+      const s = document.createElement('span');
+      s.className = 'chip ' + cls; s.textContent = txt; row.appendChild(s);
+    };
+    const editCount = Object.keys(rec.edits || {}).length;
+    const comCount = (rec.comments || []).length;
+    if (editCount) addChip('edits', '✏️' + editCount);
+    if (comCount) addChip('comments', '💬' + comCount);
+    if (rec.cardNote) addChip('comments', '📝');
+    if (rec.done) { addChip('done', '✓'); done++; }
+    if (row.dataset.fail === '1') addChip('fail', '!');
+    if (row.dataset.stale === '1') addChip('stale', 'שונה');
+    row.classList.toggle('current', Number(row.dataset.idx) === cur);
+  });
+  $('progress').textContent = `${done} / ${manifest.length} אושרו ✓`;
+}
+
+// ============================== card loading ==============================
+
+function loadCard(idx) {
+  if (idx < 0 || idx >= manifest.length) return;
+  clearPins();
+  banner('');
+  cur = idx;
+  const card = manifest[cur];
+  store.set('rvw:meta', { v: 1, lastFile: card.file });
+  $('cardtitle').textContent = `[P${card.project}] ${card.name}` + (card.flavor === 'dc' ? '  (עיצוב חדש)' : '');
+  $('cardnote').value = getCard(card.file).cardNote || '';
+  updateDoneBtn();
+  refreshSidebar();
+
+  registry = new Map(); pristine = new Map(); curHash = ''; staleCard = false;
+  const token = ++settleToken;
+  const frame = $('frame');
+  frame.src = '/' + card.file;
+
+  const failTimer = setTimeout(() => {
+    if (token !== settleToken) return;
+    markFail(card, 'הכרטיסייה לא נטענה — אפשר לדלג לכרטיסייה הבאה');
+  }, 8000);
+
+  frame.onload = async () => {
+    if (token !== settleToken) return;
+    try {
+      const doc = frame.contentDocument;
+      await settle(doc, card.flavor, token);
+      if (token !== settleToken) return;
+      clearTimeout(failTimer);
+      neutralize(doc);
+      // source hash
+      const src = await (await fetch('/' + card.file, { cache: 'no-store' })).text();
+      curHash = fnv1a(src);
+      const rec = getCard(card.file);
+      if (rec.sourceHash && rec.sourceHash !== curHash &&
+          (Object.keys(rec.edits).length || rec.comments.length)) {
+        staleCard = true;
+        const row = rowFor(card.file); if (row) row.dataset.stale = '1';
+        banner('קובץ הכרטיסייה השתנה מאז הסקירה הקודמת — מומלץ לאפס כרטיסייה זו ולסקור שוב', true);
+      }
+      scanBlocks(doc);
+      reapplySavedEdits(card, doc);
+      applyMode();
+      wireFrame(doc);
+      drawPins(card, doc);
+      refreshSidebar();
+    } catch (e) {
+      console.error(e);
+      markFail(card, 'שגיאה בטעינת הכרטיסייה: ' + e.message);
+    }
+  };
+}
+
+function rowFor(file) { return document.querySelector(`.cardrow[data-file="${CSS.escape(file)}"]`); }
+
+function markFail(card, msg) {
+  const row = rowFor(card.file);
+  if (row) row.dataset.fail = '1';
+  banner(msg);
+  refreshSidebar();
+}
+
+function settle(doc, flavor, token) {
+  return new Promise((resolve) => {
+    if (flavor !== 'dc') { requestAnimationFrame(() => requestAnimationFrame(resolve)); return; }
+    const t0 = performance.now();
+    let lastLen = -1, stable = 0;
+    (function poll() {
+      if (token !== settleToken) return resolve();
+      const body = doc.body;
+      const len = body ? body.innerHTML.length : 0;
+      const hasMoustache = body && body.innerText && body.innerText.includes('{{');
+      if (body && len === lastLen && !hasMoustache) stable++; else stable = 0;
+      lastLen = len;
+      if (stable >= 2 || performance.now() - t0 > 3000) return resolve();
+      requestAnimationFrame(poll);
+    })();
+  });
+}
+
+function neutralize(doc) {
+  doc.querySelectorAll('.nickname-indicator').forEach((n) => n.remove());
+  doc.querySelectorAll('.checklist li.checked').forEach((li) => li.classList.remove('checked'));
+}
+
+// ============================== block scanner ==============================
+
+function scanBlocks(doc) {
+  let idx = 0;
+  const isDc = manifest[cur].flavor === 'dc';
+
+  const visible = (el) => el.getClientRects().length > 0;
+  const directText = (el) => {
+    for (const n of el.childNodes) {
+      if (n.nodeType === 3 && n.textContent.trim()) return true;
+    }
+    return false;
+  };
+
+  function register(el, opts = {}) {
+    const text = el.textContent.replace(/\s+/g, ' ').trim();
+    if (!text) return;
+    const decorative = text.length <= 2 && !hasLetters(text);
+    const pre = /^pre/.test(doc.defaultView.getComputedStyle(el).whiteSpace || '');
+    const i = idx++;
+    el.setAttribute('data-rvw-b', i);
+    registry.set(i, el);
+    pristine.set(i, {
+      html: el.innerHTML,
+      text: pre ? el.textContent : text,
+      pre,
+      editable: !decorative,
+      syn: !!opts.syn,
+      applyBy: (isDc || opts.syn) ? 'text' : 'html',
+      tag: el.tagName.toLowerCase(),
+      path: cssPath(el, doc),
+    });
+  }
+
+  function wrapTextRuns(el) {
+    // mixed container: wrap each direct non-ws text node in a synthetic span
+    for (const n of [...el.childNodes]) {
+      if (n.nodeType === 3 && n.textContent.trim()) {
+        const span = doc.createElement('span');
+        span.setAttribute('data-rvw-syn', '1');
+        el.insertBefore(span, n);
+        span.appendChild(n);
+        register(span, { syn: true });
+      }
+    }
+  }
+
+  function walk(el) {
+    if (!el || el.nodeType !== 1) return;
+    if (SKIP_TAGS.has(el.tagName)) return;
+    if (el.classList && el.classList.contains('nickname-indicator')) return;
+    if (!visible(el)) return;
+
+    if (PRIMARY.includes(el.tagName)) {
+      if (el.querySelector(PRIMARY_SEL)) {
+        // primary containing primary (li > ul > li): mixed treatment
+        wrapTextRuns(el);
+        for (const c of [...el.children]) walk(c);
+      } else {
+        register(el);
+      }
+      return;
+    }
+    // non-primary
+    const hasPrimaryDesc = !!el.querySelector(PRIMARY_SEL);
+    if (directText(el) && !hasPrimaryDesc) {
+      register(el);
+      return;
+    }
+    if (directText(el) && hasPrimaryDesc) wrapTextRuns(el);
+    for (const c of [...el.children]) walk(c);
+  }
+
+  walk(doc.body);
+}
+
+// ============================== edits: persistence + reapply ==============================
+
+function reapplySavedEdits(card, doc) {
+  if (staleCard) return; // don't apply onto a changed file
+  const rec = getCard(card.file);
+  for (const [k, e] of Object.entries(rec.edits || {})) {
+    const el = registry.get(Number(k));
+    const p = pristine.get(Number(k));
+    if (!el || !p) continue;
+    try {
+      if (e.applyBy === 'html' && !e.structureChanged) el.innerHTML = e.ah;
+      else el.textContent = e.at;
+      el.style.outline = '2px solid #b26a00';
+      el.style.outlineOffset = '1px';
+    } catch {}
+  }
+}
+
+function commitBlock(i) {
+  const card = manifest[cur];
+  const el = registry.get(i);
+  const p = pristine.get(i);
+  if (!el || !p) return;
+  const curHtml = el.innerHTML;
+  const curText = p.pre ? el.textContent : el.textContent.replace(/\s+/g, ' ').trim();
+  const rec = getCard(card.file);
+
+  const same = p.pre ? (el.textContent === p.text && curHtml === p.html)
+                     : (curHtml === p.html);
+  if (same) {
+    delete rec.edits[i];
+    el.style.outline = '';
+  } else {
+    const structureChanged = tagSeq(p.html) !== tagSeq(curHtml);
+    const prevT = pristine.get(i - 1), nextT = pristine.get(i + 1);
+    rec.edits[i] = {
+      bh: p.html, ah: curHtml,
+      bt: p.text, at: curText,
+      tag: p.tag, cssPath: p.path,
+      applyBy: (p.applyBy === 'text' || structureChanged) ? 'text' : 'html',
+      structureChanged, pre: p.pre, syn: p.syn,
+      cb: prevT ? String(prevT.text).slice(0, 60) : '',
+      ca: nextT ? String(nextT.text).slice(0, 60) : '',
+      ts: Date.now(),
+    };
+    el.style.outline = structureChanged ? '2px dashed #b26a00' : '2px solid #b26a00';
+    el.style.outlineOffset = '1px';
+    if (structureChanged) toast('עריכה מורכבת — תיושם לפי טקסט', 1600);
+  }
+  rec.sourceHash = curHash;
+  putCard(card.file, rec);
+  refreshSidebar();
+}
+
+function flushCommit() {
+  if (commitTimer) { clearTimeout(commitTimer); commitTimer = null; }
+  if (cur < 0) return;
+  const doc = $('frame').contentDocument;
+  if (!doc) return;
+  doc.querySelectorAll('[data-rvw-dirty]').forEach((el) => {
+    const i = Number(el.getAttribute('data-rvw-b'));
+    el.removeAttribute('data-rvw-dirty');
+    commitBlock(i);
+  });
+}
+
+// ============================== frame wiring (modes) ==============================
+
+function wireFrame(doc) {
+  // keyboard forwarding
+  doc.addEventListener('keydown', (e) => {
+    if (e.altKey) hotkeys(e);
+    if (mode === 'edit') {
+      if (e.key === 'Enter') {
+        const el = e.target.closest && e.target.closest('[data-rvw-b]');
+        const i = el ? Number(el.getAttribute('data-rvw-b')) : -1;
+        const p = pristine.get(i);
+        if (!p || !p.pre) {
+          e.preventDefault();
+          toast('כדי לפצל שורות או לשנות מבנה — משתמשים במצב הערה 💬');
+        }
+      }
+      if (e.key === 'Escape') {
+        const el = e.target.closest && e.target.closest('[data-rvw-b]');
+        if (el) {
+          const i = Number(el.getAttribute('data-rvw-b'));
+          const p = pristine.get(i);
+          if (p) { el.innerHTML = p.html; el.removeAttribute('data-rvw-dirty'); commitBlock(i); }
+        }
+      }
+    }
+  }, true);
+
+  // input capture (edit mode)
+  doc.addEventListener('input', (e) => {
+    if (mode !== 'edit') return;
+    const el = e.target.closest && e.target.closest('[data-rvw-b]');
+    if (!el) return;
+    el.setAttribute('data-rvw-dirty', '1');
+    if (commitTimer) clearTimeout(commitTimer);
+    commitTimer = setTimeout(flushCommit, 400);
+  }, true);
+
+  // paste as plain text (fallback when plaintext-only unsupported)
+  doc.addEventListener('paste', (e) => {
+    if (mode !== 'edit') return;
+    const el = e.target.closest && e.target.closest('[data-rvw-b]');
+    if (!el) return;
+    if (el.contentEditable === 'plaintext-only') return;
+    e.preventDefault();
+    const text = (e.clipboardData || window.clipboardData).getData('text/plain');
+    doc.execCommand('insertText', false, text);
+  }, true);
+  doc.addEventListener('drop', (e) => { if (mode === 'edit') e.preventDefault(); }, true);
+
+  // click interception
+  doc.addEventListener('click', (e) => {
+    if (mode === 'browse') return;
+    e.stopPropagation();
+    if (e.target.closest && e.target.closest('a')) e.preventDefault();
+    if (mode === 'comment') {
+      e.preventDefault();
+      openCommentPopover(e);
+    }
+  }, true);
+}
+
+function applyMode() {
+  const doc = $('frame').contentDocument;
+  if (!doc) return;
+  const editing = mode === 'edit';
+  for (const [i, el] of registry) {
+    const p = pristine.get(i);
+    if (!p) continue;
+    if (editing && p.editable) {
+      el.contentEditable = 'plaintext-only';
+      if (el.contentEditable !== 'plaintext-only') el.contentEditable = 'true';
+      el.style.cursor = 'text';
+    } else {
+      el.contentEditable = 'false';
+      el.removeAttribute('contenteditable');
+      el.style.cursor = mode === 'comment' ? 'crosshair' : '';
+    }
+  }
+  doc.documentElement.style.outline = editing ? '4px solid #b26a0055' : (mode === 'comment' ? '4px solid #6a4fa355' : '');
+  $('modehint').textContent =
+    mode === 'browse' ? 'מצב עיון — הכרטיסייה מתנהגת כרגיל' :
+    mode === 'edit' ? 'מצב עריכה — לוחצים על טקסט ומתקנים ישירות. Esc מבטל תיקון בבלוק' :
+    'מצב הערה — לוחצים על כל דבר וכותבים מה לשנות';
+}
+
+// ============================== comments ==============================
+
+function openCommentPopover(e) {
+  const doc = $('frame').contentDocument;
+  let el = e.target.closest && e.target.closest('[data-rvw-b]');
+  if (!el && e.target.nodeType === 1) el = e.target;
+  if (!el) return;
+  const i = el.hasAttribute && el.hasAttribute('data-rvw-b') ? Number(el.getAttribute('data-rvw-b')) : null;
+  const snippet = (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 120);
+  pendingComment = {
+    blockIndex: i,
+    cssPath: i != null && pristine.get(i) ? pristine.get(i).path : cssPath(el, doc),
+    snippet,
+    element: el,
+  };
+  const pop = $('cpop');
+  pop.querySelector('.snippet').textContent = snippet ? '«' + snippet + '»' : '(אלמנט ללא טקסט)';
+  pop.querySelector('textarea').value = '';
+  // position near click, inside #main
+  const mainRect = $('main').getBoundingClientRect();
+  const frameRect = $('frame').getBoundingClientRect();
+  let x = frameRect.left - mainRect.left + e.clientX;
+  let y = frameRect.top - mainRect.top + e.clientY;
+  x = Math.min(x, mainRect.width - 320); y = Math.min(y, mainRect.height - 180);
+  pop.style.left = Math.max(8, x) + 'px';
+  pop.style.top = Math.max(8, y) + 'px';
+  pop.style.display = 'block';
+  pop.querySelector('textarea').focus();
+}
+
+function saveComment() {
+  const note = $('cpop').querySelector('textarea').value.trim();
+  $('cpop').style.display = 'none';
+  if (!note || !pendingComment) { pendingComment = null; return; }
+  const card = manifest[cur];
+  const rec = getCard(card.file);
+  const n = (rec.comments || []).length + 1;
+  rec.comments.push({
+    n, blockIndex: pendingComment.blockIndex, cssPath: pendingComment.cssPath,
+    snippet: pendingComment.snippet, note, ts: Date.now(),
+  });
+  rec.sourceHash = curHash;
+  putCard(card.file, rec);
+  drawPins(card, $('frame').contentDocument);
+  refreshSidebar();
+  toast('הערה נשמרה 💬');
+  pendingComment = null;
+}
+
+function clearPins() {
+  if (pinLayer && pinLayer.parentNode) pinLayer.parentNode.removeChild(pinLayer);
+  pinLayer = null;
+}
+
+function drawPins(card, doc) {
+  clearPins();
+  if (!doc || !doc.body) return;
+  const rec = getCard(card.file);
+  if (!rec.comments.length) return;
+  pinLayer = doc.createElement('div');
+  pinLayer.setAttribute('data-rvw-pins', '1');
+  Object.assign(pinLayer.style, { position: 'absolute', top: '0', left: '0', width: '0', height: '0', zIndex: 9999 });
+  doc.body.appendChild(pinLayer);
+  const win = doc.defaultView;
+  const place = () => {
+    pinLayer.innerHTML = '';
+    for (const c of rec.comments) {
+      let el = null;
+      if (c.blockIndex != null) el = registry.get(c.blockIndex) || null;
+      if (!el && c.cssPath) { try { el = doc.querySelector(c.cssPath.split(' > ').pop()); } catch {} }
+      if (!el) continue;
+      const r = el.getBoundingClientRect();
+      const pin = doc.createElement('div');
+      pin.textContent = c.n;
+      Object.assign(pin.style, {
+        position: 'absolute',
+        top: (r.top + win.scrollY - 8) + 'px',
+        left: (r.left + win.scrollX - 8) + 'px',
+        width: '20px', height: '20px', borderRadius: '50%',
+        background: '#6a4fa3', color: '#fff', fontSize: '12px', fontWeight: 'bold',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        boxShadow: '0 1px 4px rgba(0,0,0,.4)', fontFamily: 'Arial, sans-serif',
+        pointerEvents: 'none',
+      });
+      pinLayer.appendChild(pin);
+      el.style.outline = el.style.outline || '2px dashed #6a4fa3';
+    }
+  };
+  place();
+  win.addEventListener('scroll', place, { passive: true });
+  win.addEventListener('resize', place, { passive: true });
+}
+
+// ============================== export ==============================
+
+function buildExport() {
+  flushCommit();
+  const now = new Date();
+  const pad = (n) => String(n).padStart(2, '0');
+  const stamp = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}`;
+  let editCount = 0, commentCount = 0, cardsDone = 0;
+  const cards = [];
+  const untouchedDone = [], notReviewed = [];
+
+  for (const m of manifest) {
+    const rec = getCard(m.file);
+    const edits = Object.entries(rec.edits || {}).map(([k, e]) => ({
+      blockIndex: Number(k), tag: e.tag, cssPath: e.cssPath,
+      applyBy: e.applyBy, structureChanged: !!e.structureChanged,
+      preserveWhitespace: !!e.pre, synthetic: !!e.syn,
+      beforeHTML: e.bh, afterHTML: e.ah, beforeText: e.bt, afterText: e.at,
+      contextBefore: e.cb || '', contextAfter: e.ca || '',
+    })).sort((a, b) => a.blockIndex - b.blockIndex);
+    const comments = rec.comments || [];
+    editCount += edits.length; commentCount += comments.length;
+    if (rec.done) cardsDone++;
+    const touched = edits.length || comments.length || rec.cardNote;
+    if (touched) {
+      cards.push({
+        file: m.file, flavor: m.flavor, project: m.project, done: !!rec.done,
+        sourceHash: rec.sourceHash || '', cardNote: rec.cardNote || '',
+        edits, comments,
+      });
+    } else if (rec.done) untouchedDone.push(m.file);
+    else notReviewed.push(m.file);
+  }
+
+  const json = {
+    version: 1,
+    generatedAt: now.toISOString(),
+    stats: { cardsTotal: manifest.length, cardsDone, editCount, commentCount },
+    globalNotes: store.get('rvw:global', ''),
+    howToApply: HOW_TO_APPLY,
+    cards,
+    approvedUnchanged: untouchedDone,
+    notReviewed,
+  };
+
+  // ---------- markdown ----------
+  const L = [];
+  L.push(`# משוב סקירת כרטיסיות — ${stamp.replace('_', ' ')}`);
+  L.push('');
+  L.push(`**סיכום:** ${editCount} עריכות · ${commentCount} הערות · ${cardsDone}/${manifest.length} כרטיסיות אושרו`);
+  L.push('');
+  L.push('## הוראות יישום (for the AI)');
+  L.push(HOW_TO_APPLY);
+  L.push('');
+  for (const c of cards) {
+    L.push(`## ${c.file}`);
+    L.push(`סטטוס: ${c.done ? 'אושרה ✓' : 'בעבודה'} | flavor: ${c.flavor} | hash: ${c.sourceHash}`);
+    L.push('');
+    if (c.edits.length) {
+      L.push('### עריכות');
+      c.edits.forEach((e, i) => {
+        L.push(`#### עריכה ${i + 1} — בלוק ${e.blockIndex} (${e.tag}) — יישום לפי ${e.applyBy === 'html' ? 'HTML' : 'טקסט'}${e.structureChanged ? ' · המבנה השתנה' : ''}`);
+        L.push('**לפני:**'); L.push('```html'); L.push(e.applyBy === 'html' ? e.beforeHTML : e.beforeText); L.push('```');
+        L.push('**אחרי:**'); L.push('```html'); L.push(e.applyBy === 'html' ? e.afterHTML : e.afterText); L.push('```');
+        L.push('');
+      });
+    }
+    if (c.comments.length) {
+      L.push('### הערות');
+      for (const cm of c.comments) L.push(`${cm.n}. [בלוק ${cm.blockIndex ?? '-'}] «${cm.snippet}» — ${cm.note}`);
+      L.push('');
+    }
+    if (c.cardNote) { L.push('### הערת כרטיסייה'); L.push(c.cardNote); L.push(''); }
+  }
+  if (untouchedDone.length) {
+    L.push('## אושרו ללא שינוי');
+    L.push(untouchedDone.join(' · '));
+    L.push('');
+  }
+  if (notReviewed.length) {
+    L.push('## לא נסקרו');
+    L.push(notReviewed.join(' · '));
+    L.push('');
+  }
+  const globalNotes = store.get('rvw:global', '');
+  if (globalNotes) { L.push('## הערות כלליות'); L.push(globalNotes); L.push(''); }
+
+  return { baseName: 'feedback_' + stamp, json, markdown: L.join('\n') };
+}
+
+async function saveToRepo() {
+  const payload = buildExport();
+  if (!payload.json.stats.editCount && !payload.json.stats.commentCount && !payload.json.globalNotes) {
+    if (!confirm('אין שינויים או הערות לשמירה — לייצא בכל זאת?')) return;
+  }
+  try {
+    const res = await fetch('/api/save-feedback', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const out = await res.json();
+    if (!out.ok) throw new Error(out.error || 'save failed');
+    toast('נשמר: ' + out.written.json + ' ✓', 4000);
+  } catch (e) {
+    toast('השמירה לשרת נכשלה — מוריד קבצים במקום', 3500);
+    download(payload);
+  }
+}
+
+function download(payload) {
+  payload = payload || buildExport();
+  const mk = (name, text, type) => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], { type }));
+    a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  };
+  mk(payload.baseName + '.json', JSON.stringify(payload.json, null, 2), 'application/json');
+  mk(payload.baseName + '.md', payload.markdown, 'text/markdown');
+}
+
+async function copyMd() {
+  const payload = buildExport();
+  try { await navigator.clipboard.writeText(payload.markdown); toast('המשוב הועתק ללוח ✓'); }
+  catch { toast('ההעתקה נכשלה — נסו הורדה'); }
+}
+
+// ============================== ui wiring ==============================
+
+function setMode(m) {
+  flushCommit();
+  mode = m;
+  $('m_browse').classList.toggle('active', m === 'browse');
+  $('m_edit').classList.toggle('active', m === 'edit');
+  $('m_comment').classList.toggle('active', m === 'comment');
+  $('cpop').style.display = 'none';
+  applyMode();
+}
+
+function updateDoneBtn() {
+  if (cur < 0) return;
+  const rec = getCard(manifest[cur].file);
+  $('donebtn').classList.toggle('on', !!rec.done);
+}
+
+function toggleDone() {
+  flushCommit();
+  const card = manifest[cur];
+  const rec = getCard(card.file);
+  rec.done = !rec.done;
+  if (rec.done) { rec.doneAt = Date.now(); rec.sourceHash = rec.sourceHash || curHash; }
+  putCard(card.file, rec);
+  updateDoneBtn();
+  refreshSidebar();
+  if (rec.done) {
+    // auto-advance to the next not-done card
+    for (let i = cur + 1; i < manifest.length; i++) {
+      if (!getCard(manifest[i].file).done) { loadCard(i); return; }
+    }
+    toast('כל הכבוד — אין עוד כרטיסיות שמחכות ✓');
+  }
+}
+
+function resetCard() {
+  const card = manifest[cur];
+  if (!confirm('לאפס את כל העריכות וההערות של הכרטיסייה הזאת?')) return;
+  store.del(cardKey(card.file));
+  const row = rowFor(card.file);
+  if (row) { delete row.dataset.stale; delete row.dataset.fail; }
+  loadCard(cur);
+}
+
+function hotkeys(e) {
+  if (!e.altKey) return;
+  if (e.key === 'ArrowLeft') { e.preventDefault(); flushCommit(); loadCard(cur + 1); }        // RTL: left = next
+  else if (e.key === 'ArrowRight') { e.preventDefault(); flushCommit(); loadCard(cur - 1); } // RTL: right = prev
+  else if (e.key.toLowerCase() === 'd') { e.preventDefault(); toggleDone(); }
+  else if (e.key === '1') setMode('browse');
+  else if (e.key === '2') setMode('edit');
+  else if (e.key === '3') setMode('comment');
+}
+
+function wireUi() {
+  $('m_browse').onclick = () => setMode('browse');
+  $('m_edit').onclick = () => setMode('edit');
+  $('m_comment').onclick = () => setMode('comment');
+  $('prevbtn').onclick = () => { flushCommit(); loadCard(cur - 1); };
+  $('nextbtn').onclick = () => { flushCommit(); loadCard(cur + 1); };
+  $('donebtn').onclick = toggleDone;
+  $('resetbtn').onclick = resetCard;
+  $('savebtn').onclick = saveToRepo;
+  $('dlbtn').onclick = () => download();
+  $('copybtn').onclick = copyMd;
+  $('cpop_save').onclick = saveComment;
+  $('cpop_cancel').onclick = () => { $('cpop').style.display = 'none'; pendingComment = null; };
+  $('cardnote').addEventListener('change', () => {
+    if (cur < 0) return;
+    const rec = getCard(manifest[cur].file);
+    rec.cardNote = $('cardnote').value.trim();
+    putCard(manifest[cur].file, rec);
+    refreshSidebar();
+  });
+  $('globalbtn').onclick = () => {
+    $('globaltext').value = store.get('rvw:global', '');
+    $('modal').style.display = 'flex';
+  };
+  $('modal_close').onclick = () => {
+    store.set('rvw:global', $('globaltext').value.trim());
+    $('modal').style.display = 'none';
+  };
+  document.addEventListener('keydown', hotkeys);
+  window.addEventListener('beforeunload', flushCommit);
+}
+
+boot();
+})();
+</script>
+</body>
+</html>

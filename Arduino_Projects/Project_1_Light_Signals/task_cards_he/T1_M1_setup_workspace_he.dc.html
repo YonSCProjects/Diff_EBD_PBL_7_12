@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <!-- HEADER -->
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600; letter-spacing:0.01em;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 1 · אותות אור
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">כרטיסייה V1</div>
+      </div>
+
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מכינים את עמדת העבודה ומחברים את הארדואינו</h1>
+
+      <!-- progress -->
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>שלב 1 מתוך 8</span>
+          <span>12%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:12.5%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div style="padding:30px 34px 34px;">
+
+      <!-- intro line -->
+      <p style="margin:0 0 26px; font-size:16.5px; line-height:1.6; color:oklch(0.46 0.012 260);">עוברים על השלבים לפי הסדר. אפשר לסמן ✓ לכל שלב שמסיימים.</p>
+
+      <!-- ===== PART A ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📁</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חלק א · מכינים את התיקיות</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 13px; font-size:16px; line-height:1.55;">פותחים את <strong>סייר הקבצים</strong> של Windows עם הצירוף <kbd style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.93 0.006 260); border:1px solid oklch(0.86 0.008 260); border-bottom-width:2px; border-radius:6px; padding:2px 7px; direction:ltr; display:inline-block;">Windows + E</kbd></p>
+            <div dir="ltr" style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; background:oklch(0.985 0.004 85); border:1px solid oklch(0.93 0.006 85); border-radius:10px; padding:14px;">
+              <!-- keyboard illustration -->
+              <div style="flex:none; background:oklch(0.31 0.012 260); border-radius:11px; padding:9px 9px 11px; box-shadow:0 8px 20px -12px rgba(40,35,20,0.5), inset 0 1px 0 rgba(255,255,255,0.08);">
+                <div style="display:flex; flex-direction:column; gap:5px;">
+                  <!-- row 1: QWERTY with E highlighted -->
+                  <div style="display:flex; gap:5px;">
+                    <span style="width:22px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; color:oklch(0.78 0.008 260);">Q</span>
+                    <span style="width:22px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; color:oklch(0.78 0.008 260);">W</span>
+                    <span style="width:26px; height:26px; margin-top:-2px; border-radius:6px; background:oklch(0.72 0.16 90); box-shadow:0 3px 0 oklch(0.55 0.14 80), 0 0 0 2px oklch(0.85 0.12 90); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:oklch(0.28 0.05 70);">E</span>
+                    <span style="width:22px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; color:oklch(0.78 0.008 260);">R</span>
+                    <span style="width:22px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; color:oklch(0.78 0.008 260);">T</span>
+                  </div>
+                  <!-- row 2: ASDF -->
+                  <div style="display:flex; gap:5px; padding-left:7px;">
+                    <span style="width:22px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; color:oklch(0.78 0.008 260);">A</span>
+                    <span style="width:22px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; color:oklch(0.78 0.008 260);">S</span>
+                    <span style="width:22px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; color:oklch(0.78 0.008 260);">D</span>
+                    <span style="width:22px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; color:oklch(0.78 0.008 260);">F</span>
+                  </div>
+                  <!-- row 3: bottom with Win highlighted -->
+                  <div style="display:flex; gap:5px; align-items:center;">
+                    <span style="width:34px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:8.5px; font-weight:600; color:oklch(0.7 0.008 260);">Ctrl</span>
+                    <span style="width:26px; height:26px; border-radius:6px; background:oklch(0.55 0.13 248); box-shadow:0 3px 0 oklch(0.42 0.11 248), 0 0 0 2px oklch(0.75 0.1 248); display:flex; align-items:center; justify-content:center; font-size:13px; color:#fff;">⊞</span>
+                    <span style="width:30px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:8.5px; font-weight:600; color:oklch(0.7 0.008 260);">Alt</span>
+                    <span style="width:60px; height:22px; border-radius:5px; background:oklch(0.42 0.008 260); box-shadow:0 2px 0 rgba(0,0,0,0.35);"></span>
+                  </div>
+                </div>
+                <div style="text-align:center; margin-top:8px; font-family:'JetBrains Mono',monospace; font-size:9.5px; font-weight:600; color:oklch(0.8 0.008 260);"><span style="color:oklch(0.78 0.12 248);">⊞ Win</span> + <span style="color:oklch(0.82 0.14 90);">E</span></div>
+              </div>
+              <span style="font-size:20px; color:oklch(0.55 0.11 248);">→</span>
+              <div style="flex:1; min-width:150px; max-width:240px; border:1px solid oklch(0.88 0.006 85); border-radius:9px; overflow:hidden; background:#fff; box-shadow:0 6px 18px -14px rgba(40,35,20,0.4);">
+                <div style="display:flex; align-items:center; justify-content:space-between; padding:6px 9px; background:oklch(0.96 0.005 85); border-bottom:1px solid oklch(0.9 0.006 85);">
+                  <span style="font-size:11px; font-weight:600; color:oklch(0.5 0.012 260);">📂 File Explorer</span>
+                  <span style="font-size:10px; color:oklch(0.62 0.04 25);">✕</span>
+                </div>
+                <div style="display:flex; height:70px;">
+                  <div style="flex:none; width:72px; border-right:1px solid oklch(0.93 0.006 85); background:oklch(0.985 0.004 85); padding:8px 7px; display:flex; flex-direction:column; gap:6px;">
+                    <span style="font-size:10px; color:oklch(0.55 0.012 260);">⭐ Quick</span>
+                    <span style="font-size:10px; color:oklch(0.55 0.012 260);">☁️ Drive</span>
+                    <span style="font-size:10px; color:oklch(0.55 0.012 260);">💻 PC</span>
+                  </div>
+                  <div style="flex:1; display:flex; align-items:center; justify-content:center; font-size:10.5px; color:oklch(0.68 0.01 260);">החלון נפתח ✨</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 13px; font-size:16px; line-height:1.55;">בסרגל הצד לוחצים על <strong>Google Drive</strong>, ואז נכנסים אל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">My Drive\Arduino_Projects</code></p>
+            <div dir="ltr" style="border:1px solid oklch(0.88 0.006 85); border-radius:10px; overflow:hidden; background:#fff; box-shadow:0 8px 22px -18px rgba(40,35,20,0.4);">
+              <div style="display:flex; align-items:center; justify-content:space-between; padding:7px 10px; background:oklch(0.96 0.005 85); border-bottom:1px solid oklch(0.9 0.006 85);">
+                <span style="font-size:11.5px; font-weight:600; color:oklch(0.5 0.012 260);">📂 File Explorer</span>
+                <span style="font-size:11px; color:oklch(0.62 0.04 25);">✕</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap; padding:8px 10px; background:oklch(0.985 0.004 85); border-bottom:1px solid oklch(0.93 0.006 85); font-size:11.5px; color:oklch(0.5 0.012 260);">
+                <span>☁️ Google Drive (G:)</span><span style="color:oklch(0.78 0.006 85);">›</span>
+                <span>My Drive</span><span style="color:oklch(0.78 0.006 85);">›</span>
+                <span style="font-weight:700; color:oklch(0.4 0.1 248);">Arduino_Projects</span>
+              </div>
+              <div style="display:flex; min-height:118px;">
+                <div style="flex:none; width:166px; border-right:1px solid oklch(0.93 0.006 85); background:oklch(0.985 0.004 85); padding:10px 9px; font-size:11.5px; color:oklch(0.5 0.012 260); display:flex; flex-direction:column; gap:4px;">
+                  <div style="padding:5px 7px;">⭐ Quick access</div>
+                  <div style="display:flex; align-items:center; gap:6px; padding:6px 7px; border-radius:7px; background:oklch(0.93 0.03 248); color:oklch(0.4 0.1 248); font-weight:700;">☁️ Google Drive (G:) <span style="font-size:14px;">👆</span></div>
+                  <div style="padding:5px 7px;">💻 This PC</div>
+                </div>
+                <div style="flex:1; padding:12px; display:flex; flex-direction:column; gap:9px; opacity:0.5;">
+                  <div style="display:flex; align-items:center; gap:8px; font-size:11.5px; color:oklch(0.5 0.012 260);">📁 Noa</div>
+                  <div style="display:flex; align-items:center; gap:8px; font-size:11.5px; color:oklch(0.5 0.012 260);">📁 Adam</div>
+                  <div style="display:flex; align-items:center; gap:8px; font-size:11.5px; color:oklch(0.5 0.012 260);">📁 השם שלכם</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 13px; font-size:16px; line-height:1.55;">מוצאים את <strong>התיקייה האישית שלכם</strong>. אם אין — יוצרים אותה.</p>
+            <div dir="ltr" style="border:1px solid oklch(0.88 0.006 85); border-radius:10px; overflow:hidden; background:#fff; box-shadow:0 8px 22px -18px rgba(40,35,20,0.4);">
+              <div style="display:flex; align-items:center; justify-content:space-between; padding:7px 10px; background:oklch(0.96 0.005 85); border-bottom:1px solid oklch(0.9 0.006 85);">
+                <span style="font-size:11.5px; font-weight:600; color:oklch(0.5 0.012 260);">📂 File Explorer</span>
+                <span style="font-size:11px; color:oklch(0.62 0.04 25);">✕</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap; padding:8px 10px; background:oklch(0.985 0.004 85); border-bottom:1px solid oklch(0.93 0.006 85); font-size:11.5px; color:oklch(0.5 0.012 260);">
+                <span>☁️ Google Drive (G:)</span><span style="color:oklch(0.78 0.006 85);">›</span>
+                <span>My Drive</span><span style="color:oklch(0.78 0.006 85);">›</span>
+                <span style="font-weight:700; color:oklch(0.4 0.1 248);">Arduino_Projects</span>
+              </div>
+              <div style="padding:14px; display:flex; flex-wrap:wrap; gap:8px;">
+                <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:80px; padding:9px 4px; border-radius:9px;">
+                  <span style="font-size:26px; line-height:1;">📁</span>
+                  <span style="font-size:10.5px; color:oklch(0.5 0.012 260);">Noa</span>
+                </div>
+                <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:80px; padding:9px 4px; border-radius:9px;">
+                  <span style="font-size:26px; line-height:1;">📁</span>
+                  <span style="font-size:10.5px; color:oklch(0.5 0.012 260);">Adam</span>
+                </div>
+                <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:80px; padding:9px 4px; border-radius:9px; background:oklch(0.94 0.04 248); border:1.5px solid oklch(0.62 0.12 248);">
+                  <span style="font-size:26px; line-height:1;">📁</span>
+                  <span style="font-size:10.5px; color:oklch(0.4 0.1 248); font-weight:700; display:inline-flex; align-items:center; gap:4px;">השם שלכם <span style="font-size:13px;">👆</span></span>
+                </div>
+                <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:80px; padding:9px 4px; border-radius:9px;">
+                  <span style="font-size:26px; line-height:1;">📁</span>
+                  <span style="font-size:10.5px; color:oklch(0.5 0.012 260);">Maya</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 13px; font-size:16px; line-height:1.55;">בתוך התיקייה האישית יוצרים תיקייה חדשה בשם <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">Project_1_Light_Signals</code></p>
+            <div dir="ltr" style="border:1px solid oklch(0.88 0.006 85); border-radius:10px; overflow:hidden; background:#fff; box-shadow:0 8px 22px -18px rgba(40,35,20,0.4);">
+              <div style="display:flex; align-items:center; justify-content:space-between; padding:7px 10px; background:oklch(0.96 0.005 85); border-bottom:1px solid oklch(0.9 0.006 85);">
+                <span style="font-size:11.5px; font-weight:600; color:oklch(0.5 0.012 260);">📂 File Explorer</span>
+                <span style="font-size:11px; color:oklch(0.62 0.04 25);">✕</span>
+              </div>
+              <div style="position:relative; padding:16px;">
+                <div style="position:absolute; top:10px; left:14px; font-size:17px;">🖱️</div>
+                <div style="display:flex; align-items:flex-start; padding-top:4px; padding-left:26px;">
+                  <!-- main context menu -->
+                  <div style="width:176px; background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:8px; box-shadow:0 12px 30px -10px rgba(40,35,20,0.45); padding:5px; font-size:11.5px; color:oklch(0.4 0.012 260);">
+                    <div style="display:flex; justify-content:space-between; padding:6px 9px; border-radius:5px;">View <span style="color:oklch(0.72 0.01 260);">▸</span></div>
+                    <div style="display:flex; justify-content:space-between; padding:6px 9px; border-radius:5px;">Sort by <span style="color:oklch(0.72 0.01 260);">▸</span></div>
+                    <div style="padding:6px 9px; border-radius:5px;">Refresh</div>
+                    <div style="height:1px; background:oklch(0.93 0.006 85); margin:4px 6px;"></div>
+                    <div style="padding:6px 9px; border-radius:5px; color:oklch(0.72 0.01 260);">Paste</div>
+                    <div style="height:1px; background:oklch(0.93 0.006 85); margin:4px 6px;"></div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:6px 9px; border-radius:5px; background:oklch(0.5 0.13 248); color:#fff; font-weight:700;">New <span>▸</span></div>
+                    <div style="height:1px; background:oklch(0.93 0.006 85); margin:4px 6px;"></div>
+                    <div style="padding:6px 9px; border-radius:5px;">Properties</div>
+                  </div>
+                  <!-- submenu -->
+                  <div style="margin-top:130px; margin-left:-3px; width:156px; background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:8px; box-shadow:0 12px 30px -10px rgba(40,35,20,0.45); padding:5px; font-size:11.5px; color:oklch(0.4 0.012 260);">
+                    <div style="display:flex; align-items:center; gap:8px; padding:6px 9px; border-radius:5px; background:oklch(0.5 0.13 248); color:#fff; font-weight:700;">📁 Folder</div>
+                    <div style="display:flex; align-items:center; gap:8px; padding:6px 9px; border-radius:5px;">🔗 Shortcut</div>
+                    <div style="height:1px; background:oklch(0.93 0.006 85); margin:4px 6px;"></div>
+                    <div style="display:flex; align-items:center; gap:8px; padding:6px 9px; border-radius:5px;">📄 Text Document</div>
+                  </div>
+                </div>
+                <div dir="rtl" style="margin-top:12px; font-size:11.5px; color:oklch(0.55 0.012 260);">קליק ימני בתוך התיקייה ובוחרים <strong style="color:oklch(0.4 0.1 248);">New ▸ Folder</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.97 0.03 300); border:1px solid oklch(0.9 0.04 300); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.05 300); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.52 0.12 300); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;"><strong>קוראים למורה.</strong> יחד פותחים את Claude Code ומגדירים אותו לעבוד בתיקייה <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.7); color:oklch(0.45 0.12 300); border-radius:6px; padding:2px 7px; display:inline-block;">Project_1_Light_Signals</code></p>
+        </div>
+
+      </div>
+
+      <!-- ===== PART B ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חלק ב · מחברים את הארדואינו</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 13px; font-size:16px; line-height:1.55;">מחברים את <strong>הארדואינו Uno</strong> למחשב עם כבל USB — הקצה הקטן (<strong dir="ltr">USB-C</strong>) נכנס לארדואינו, והקצה השטוח הרחב (<strong dir="ltr">USB-A</strong>) נכנס למחשב.</p>
+            <div style="border:1px solid oklch(0.93 0.006 85); border-radius:12px; overflow:hidden; background:oklch(0.94 0.004 260); box-shadow:0 6px 18px -12px rgba(40,35,20,0.35);">
+              <img src="assets/arduino-usb-connection.png" alt="חיבור הארדואינו למחשב בכבל USB" style="display:block; width:100%; height:auto;" />
+              <div dir="ltr" style="display:flex; gap:16px; justify-content:center; padding:11px 12px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:12px; font-weight:600;">
+                <span style="display:inline-flex; align-items:center; gap:6px; color:oklch(0.45 0.11 248);"><span style="width:8px; height:8px; border-radius:2px; background:oklch(0.45 0.11 248);"></span>USB-C → לוח</span>
+                <span style="display:inline-flex; align-items:center; gap:6px; color:oklch(0.5 0.012 260);"><span style="width:8px; height:8px; border-radius:2px; background:oklch(0.6 0.012 260);"></span>USB-A → מחשב</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle7 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check7 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">7</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 13px; font-size:16px; line-height:1.55;">מאתרים על הלוח את <strong>הלד הירוק הקטן</strong> המסומן באות <strong>L</strong>, ליד רגל 13.</p>
+            <div dir="ltr" style="display:flex; justify-content:center; background:oklch(0.985 0.004 85); border:1px solid oklch(0.93 0.006 85); border-radius:10px; padding:30px 18px 18px;">
+              <!-- realistic Arduino Uno R4 — inline SVG top view -->
+              <svg viewBox="0 0 380 268" width="320" style="max-width:100%; height:auto; overflow:visible; font-family:'Rubik',sans-serif;">
+                <defs>
+                  <linearGradient id="pcb" x1="0" y1="0" x2="0.4" y2="1">
+                    <stop offset="0" stop-color="#11a0a6"/><stop offset="0.55" stop-color="#0a8389"/><stop offset="1" stop-color="#076c71"/>
+                  </linearGradient>
+                  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#9fa3a8"/><stop offset="0.35" stop-color="#eef0f2"/><stop offset="0.6" stop-color="#c4c8cc"/><stop offset="1" stop-color="#8c9094"/>
+                  </linearGradient>
+                  <linearGradient id="metalV" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#eef0f2"/><stop offset="0.5" stop-color="#c4c8cc"/><stop offset="1" stop-color="#909498"/>
+                  </linearGradient>
+                  <linearGradient id="blk" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#34343a"/><stop offset="1" stop-color="#121214"/>
+                  </linearGradient>
+                  <pattern id="pins" width="9" height="14" patternUnits="userSpaceOnUse">
+                    <rect width="9" height="14" fill="#0c0c0e"/>
+                    <rect x="2.5" y="3.5" width="4.5" height="7" rx="1" fill="#d8b04a"/>
+                    <rect x="3.5" y="4.5" width="2.5" height="5" rx="0.6" fill="#1a1a1a" opacity="0.55"/>
+                  </pattern>
+                  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+                    <stop offset="0" stop-color="#7cff9b" stop-opacity="0.9"/><stop offset="1" stop-color="#7cff9b" stop-opacity="0"/>
+                  </radialGradient>
+                  <filter id="ds" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.4"/></filter>
+                </defs>
+
+                <!-- PCB body -->
+                <rect x="22" y="14" width="344" height="240" rx="11" fill="url(#pcb)" filter="url(#ds)"/>
+                <rect x="22" y="14" width="344" height="240" rx="11" fill="none" stroke="#0a575b" stroke-width="1.2"/>
+                <!-- subtle silkscreen border -->
+                <rect x="29" y="21" width="330" height="226" rx="7" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+
+                <!-- mounting holes -->
+                <g fill="#0c4548" stroke="#d6d9db" stroke-width="2">
+                  <circle cx="44" cy="120" r="6"/><circle cx="350" cy="34" r="6"/><circle cx="350" cy="210" r="6"/><circle cx="150" cy="240" r="6"/>
+                </g>
+
+                <!-- USB-C connector (silver, protruding left) -->
+                <rect x="2" y="46" width="50" height="42" rx="5" fill="url(#metal)" stroke="#7c8084" stroke-width="1"/>
+                <rect x="8" y="58" width="38" height="18" rx="9" fill="#5b5f63"/>
+                <rect x="11" y="62" width="32" height="10" rx="5" fill="#2c2f32"/>
+
+                <!-- barrel power jack (black) -->
+                <rect x="4" y="176" width="46" height="44" rx="7" fill="url(#blk)" stroke="#000" stroke-width="0.5"/>
+                <circle cx="30" cy="198" r="11" fill="#050505"/><circle cx="30" cy="198" r="5" fill="#2a2a2a"/>
+
+                <!-- reset button -->
+                <rect x="78" y="22" width="22" height="22" rx="3" fill="#c9ccd0"/>
+                <rect x="83" y="27" width="12" height="12" rx="2" fill="#9c2b39"/>
+
+                <!-- digital pin header (top, black w/ gold pins) -->
+                <rect x="150" y="20" width="190" height="16" rx="2" fill="#0c0c0e"/>
+                <rect x="153" y="22" width="184" height="12" fill="url(#pins)"/>
+                <!-- bottom power + analog headers -->
+                <rect x="104" y="232" width="80" height="16" rx="2" fill="#0c0c0e"/>
+                <rect x="107" y="234" width="74" height="12" fill="url(#pins)"/>
+                <rect x="208" y="232" width="120" height="16" rx="2" fill="#0c0c0e"/>
+                <rect x="211" y="234" width="114" height="12" fill="url(#pins)"/>
+
+                <!-- silkscreen header labels -->
+                <text x="245" y="49" fill="#ffffff" fill-opacity="0.85" font-size="9" font-weight="700" letter-spacing="0.5" text-anchor="middle">DIGITAL (PWM ~)</text>
+                <text x="148" y="228" fill="#ffffff" fill-opacity="0.8" font-size="8" font-weight="700" text-anchor="middle">POWER</text>
+                <text x="268" y="228" fill="#ffffff" fill-opacity="0.8" font-size="8" font-weight="700" text-anchor="middle">ANALOG IN</text>
+
+                <!-- main microcontroller (QFN, black with shield look) -->
+                <rect x="186" y="120" width="74" height="74" rx="5" fill="url(#blk)" filter="url(#ds)"/>
+                <rect x="194" y="128" width="58" height="58" rx="3" fill="#0d0d10" stroke="#3a3a40" stroke-width="1"/>
+                <circle cx="202" cy="178" r="3.5" fill="#4a4a52"/>
+                <text x="223" y="162" fill="#6b6b73" font-size="7" font-weight="700" text-anchor="middle" font-family="monospace">RA4M1</text>
+
+                <!-- secondary IC -->
+                <rect x="120" y="150" width="50" height="40" rx="3" fill="url(#blk)"/>
+                <text x="145" y="174" fill="#5d5d65" font-size="6.5" text-anchor="middle" font-family="monospace">USB</text>
+
+                <!-- crystal oscillators (silver) -->
+                <rect x="124" y="120" width="40" height="16" rx="8" fill="url(#metalV)" stroke="#7c8084" stroke-width="0.8"/>
+                <rect x="276" y="120" width="30" height="14" rx="7" fill="url(#metalV)" stroke="#7c8084" stroke-width="0.8"/>
+
+                <!-- electrolytic capacitors (cylinders, top view) -->
+                <g filter="url(#ds)">
+                  <circle cx="86" cy="150" r="15" fill="#1d1f24" stroke="#000" stroke-width="0.5"/><path d="M86 138 A15 15 0 0 1 86 162" fill="#33363d"/><line x1="86" y1="137" x2="86" y2="163" stroke="#0a0a0a" stroke-width="1.5"/>
+                  <circle cx="86" cy="190" r="13" fill="#1d1f24" stroke="#000" stroke-width="0.5"/><path d="M86 179 A13 13 0 0 1 86 201" fill="#33363d"/><line x1="86" y1="178" x2="86" y2="202" stroke="#0a0a0a" stroke-width="1.5"/>
+                </g>
+
+                <!-- voltage regulator -->
+                <rect x="120" y="200" width="34" height="22" rx="2" fill="#16161a"/>
+                <rect x="126" y="196" width="22" height="5" fill="#9a9da1"/>
+
+                <!-- ICSP header (2x3 gold grid) -->
+                <g>
+                  <rect x="318" y="150" width="26" height="34" rx="2" fill="#0c0c0e"/>
+                  <g fill="#d8b04a"><circle cx="325" cy="158" r="2.4"/><circle cx="337" cy="158" r="2.4"/><circle cx="325" cy="167" r="2.4"/><circle cx="337" cy="167" r="2.4"/><circle cx="325" cy="176" r="2.4"/><circle cx="337" cy="176" r="2.4"/></g>
+                </g>
+
+                <!-- small SMD resistors near LEDs -->
+                <g fill="#0e0e10"><rect x="116" y="70" width="8" height="5" rx="1"/><rect x="116" y="80" width="8" height="5" rx="1"/></g>
+
+                <!-- LEDs: ON / TX / RX / L -->
+                <rect x="100" y="92" width="11" height="7" rx="1.5" fill="#2fd06a"/>          <!-- ON -->
+                <rect x="132" y="70" width="11" height="7" rx="1.5" fill="#ffd24a"/>          <!-- TX -->
+                <rect x="132" y="82" width="11" height="7" rx="1.5" fill="#ffd24a"/>          <!-- RX -->
+                <!-- L LED highlighted -->
+                <circle cx="138" cy="100" r="22" fill="url(#glow)"/>
+                <rect x="131" y="95" width="14" height="9" rx="2" fill="#3dff77" stroke="#0c8f3d" stroke-width="1"/>
+
+                <!-- LED silkscreen labels -->
+                <g fill="#ffffff" fill-opacity="0.85" font-size="7" font-weight="700" font-family="monospace">
+                  <text x="98" y="90" text-anchor="end">ON</text>
+                  <text x="148" y="75">TX</text>
+                  <text x="148" y="87">RX</text>
+                  <text x="148" y="104" font-size="9" fill="#eaffef">L</text>
+                </g>
+
+                <!-- Arduino wordmark + infinity logo -->
+                <g transform="translate(250 92)" fill="#ffffff" fill-opacity="0.92">
+                  <path d="M0 8 a8 8 0 1 1 8 -8 a8 8 0 1 1 -8 8 a8 8 0 0 1 0 -0 z" fill="none" stroke="#ffffff" stroke-opacity="0.9" stroke-width="3" transform="translate(0 -4) scale(0.9)"/>
+                  <text x="22" y="2" font-size="12" font-weight="800" letter-spacing="1">ARDUINO</text>
+                  <text x="22" y="14" font-size="8" font-weight="700" fill-opacity="0.75">UNO R4</text>
+                </g>
+
+                <!-- pin 13 marker on digital header -->
+                <text x="170" y="49" fill="#ffffff" fill-opacity="0.9" font-size="8" font-weight="700" text-anchor="middle" font-family="monospace">13</text>
+
+                <!-- callout to L LED -->
+                <g transform="translate(138 100)">
+                  <line x1="0" y1="-22" x2="0" y2="-52" stroke="#1f9d4d" stroke-width="2"/>
+                  <rect x="-44" y="-74" width="88" height="22" rx="6" fill="#ffffff" stroke="#7bd39a" stroke-width="1.5" filter="url(#ds)"/>
+                  <text x="0" y="-59" fill="#1f7a42" font-size="11" font-weight="800" text-anchor="middle" font-family="'Rubik',sans-serif" direction="rtl">לד ירוק · L</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===== PART C ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">⚙️</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חלק ג · מגדירים את Arduino IDE</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:34px;">
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle8 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check8 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">8</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 13px; font-size:16px; line-height:1.55;">פותחים את <strong>Arduino IDE</strong> דרך הקיצור שעל שולחן העבודה.</p>
+            <div dir="ltr" style="display:flex; align-items:center; gap:14px; background:oklch(0.985 0.004 85); border:1px solid oklch(0.93 0.006 85); border-radius:10px; padding:16px;">
+              <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:7px; padding:10px 14px; border-radius:9px; border:1.5px solid oklch(0.6 0.12 248); background:oklch(0.96 0.03 248);">
+                <div style="width:46px; height:46px; border-radius:11px; background:oklch(0.55 0.085 195); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 10px -5px rgba(0,0,0,0.4);">
+                  <span style="font-size:24px; color:#fff; font-weight:700; line-height:1;">∞</span>
+                </div>
+                <span style="font-size:11px; font-weight:600; color:oklch(0.4 0.05 248); text-align:center;">Arduino IDE</span>
+              </div>
+              <span style="font-size:18px;">🖱️</span>
+              <span dir="rtl" style="font-size:13px; color:oklch(0.55 0.012 260);">לחיצה כפולה על הסמל כדי לפתוח</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle9 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check9 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">9</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 13px; font-size:16px; line-height:1.55;">בתפריט <strong>Tools</strong> בוחרים <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.95 0.006 260); border-radius:6px; padding:2px 7px; display:inline-block;">Board → Arduino Uno</span></p>
+            <div dir="ltr" style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.93 0.006 85); border-radius:10px; padding:14px;">
+              <div style="display:flex; gap:6px; margin-bottom:0; font-size:11.5px; color:oklch(0.45 0.012 260); padding-left:2px;"><span style="font-weight:700; color:oklch(0.4 0.1 248); background:oklch(0.93 0.03 248); border-radius:5px 5px 0 0; padding:4px 9px;">Tools</span><span style="padding:4px 9px;">Help</span></div>
+              <div style="display:flex; align-items:flex-start;">
+                <!-- Tools menu -->
+                <div style="width:188px; background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:0 8px 8px 8px; box-shadow:0 12px 30px -10px rgba(40,35,20,0.45); padding:5px; font-size:11.5px; color:oklch(0.4 0.012 260);">
+                  <div style="padding:6px 9px; border-radius:5px;">Auto Format</div>
+                  <div style="height:1px; background:oklch(0.93 0.006 85); margin:4px 6px;"></div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; padding:6px 9px; border-radius:5px; background:oklch(0.5 0.13 248); color:#fff; font-weight:700;">Board: "Arduino Uno" <span>▸</span></div>
+                  <div style="display:flex; justify-content:space-between; padding:6px 9px; border-radius:5px;">Port <span style="color:oklch(0.72 0.01 260);">▸</span></div>
+                  <div style="padding:6px 9px; border-radius:5px;">Get Board Info</div>
+                </div>
+                <!-- Board submenu -->
+                <div style="margin-top:34px; margin-left:-3px; width:158px; background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:8px; box-shadow:0 12px 30px -10px rgba(40,35,20,0.45); padding:5px; font-size:11.5px; color:oklch(0.4 0.012 260);">
+                  <div style="display:flex; align-items:center; gap:7px; padding:6px 9px; border-radius:5px; background:oklch(0.5 0.13 248); color:#fff; font-weight:700;">✓ Arduino Uno</div>
+                  <div style="padding:6px 9px 6px 22px; border-radius:5px;">Arduino Nano</div>
+                  <div style="padding:6px 9px 6px 22px; border-radius:5px;">Arduino Mega</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle10 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; user-select:none; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)" title="סמן שסיימת"><sc-if value="{{ check10 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">10</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 13px; font-size:16px; line-height:1.55;">באותו תפריט בודקים שב־<strong>Port</strong> מופיעה יציאת COM — למשל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.95 0.006 260); border-radius:6px; padding:2px 7px; display:inline-block;">COM3</span> או <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.95 0.006 260); border-radius:6px; padding:2px 7px; display:inline-block;">COM4</span></p>
+            <div dir="ltr" style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.93 0.006 85); border-radius:10px; padding:14px;">
+              <div style="display:flex; gap:6px; font-size:11.5px; color:oklch(0.45 0.012 260); padding-left:2px;"><span style="font-weight:700; color:oklch(0.4 0.1 248); background:oklch(0.93 0.03 248); border-radius:5px 5px 0 0; padding:4px 9px;">Tools</span><span style="padding:4px 9px;">Help</span></div>
+              <div style="display:flex; align-items:flex-start;">
+                <!-- Tools menu -->
+                <div style="width:188px; background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:0 8px 8px 8px; box-shadow:0 12px 30px -10px rgba(40,35,20,0.45); padding:5px; font-size:11.5px; color:oklch(0.4 0.012 260);">
+                  <div style="padding:6px 9px; border-radius:5px;">Auto Format</div>
+                  <div style="height:1px; background:oklch(0.93 0.006 85); margin:4px 6px;"></div>
+                  <div style="display:flex; justify-content:space-between; padding:6px 9px; border-radius:5px;">Board: "Arduino Uno" <span style="color:oklch(0.72 0.01 260);">▸</span></div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; padding:6px 9px; border-radius:5px; background:oklch(0.5 0.13 248); color:#fff; font-weight:700;">Port: "COM3" <span>▸</span></div>
+                  <div style="padding:6px 9px; border-radius:5px;">Get Board Info</div>
+                </div>
+                <!-- Port submenu -->
+                <div style="margin-top:62px; margin-left:-3px; width:150px; background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:8px; box-shadow:0 12px 30px -10px rgba(40,35,20,0.45); padding:5px; font-size:11.5px; color:oklch(0.4 0.012 260);">
+                  <div style="display:flex; align-items:center; gap:7px; padding:6px 9px; border-radius:5px; background:oklch(0.5 0.13 248); color:#fff; font-weight:700;">✓ COM3 (Arduino Uno)</div>
+                  <div style="padding:6px 9px 6px 22px; border-radius:5px;">COM4</div>
+                </div>
+              </div>
+              <div dir="rtl" style="margin-top:10px; font-size:11.5px; color:oklch(0.55 0.012 260);">המספר יכול להיות שונה במחשבים שונים — העיקר שמופיעה יציאת COM כלשהי.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- WHAT YOU'LL SEE -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
+          <p style="margin:0; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">הלד הירוק הקטן <strong>L</strong>, ליד רגל 13, <strong>מהבהב פעם בשנייה</strong>.</p>
+        </div>
+      </div>
+
+      <!-- DONE WHEN -->
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימתם כש…
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);">
+            <span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span>
+            <span>יש תיקייה אישית בתוך <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px; display:inline-block;">G:\My Drive\Arduino_Projects\</code></span>
+          </div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);">
+            <span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span>
+            <span>בתוכה תיקייה בשם <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px; display:inline-block;">Project_1_Light_Signals</code></span>
+          </div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);">
+            <span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span>
+            <span>הלד הירוק <strong>L</strong> על הארדואינו מהבהב</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STUCK -->
+      <div style="display:flex; align-items:center; gap:14px; background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <span style="flex:none; font-size:22px;">🪄</span>
+        <div style="font-size:16px; line-height:1.5;"><strong style="color:oklch(0.45 0.12 300);">תקועים?</strong> &nbsp;קוראים למורה לעזרה — זה חלק מהתהליך.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:1180}}">class Component extends DCLogic {
+  state = { checked: {} };
+  componentDidMount() {
+    try {
+      const s = localStorage.getItem('tc_t1m1_checks');
+      if (s) this.setState({ checked: JSON.parse(s) });
+    } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const next = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem('tc_t1m1_checks', JSON.stringify(next)); } catch (e) {}
+      return { checked: next };
+    });
+  }
+  renderVals() {
+    const v = {};
+    for (let i = 1; i <= 10; i++) {
+      v['check' + i] = !!this.state.checked[i];
+      v['toggle' + i] = () => this.toggle(i);
+    }
+    return v;
+  }
+}</script>
+</body>
+</html>

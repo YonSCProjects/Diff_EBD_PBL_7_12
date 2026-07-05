@@ -1,0 +1,14 @@
+{
+  "modules": [
+    { "type": "sensor", "x": 4200, "y": 3150, "label": "LEFT" },
+    { "type": "sensor", "x": 6200, "y": 3150, "label": "RIGHT" }
+  ],
+  "wires": [
+    { "from": "m0.VCC", "to": [4240.56, 2555.56], "color": "#cc1414" },
+    { "from": "m0.GND", "to": [4440.56, 755.556], "color": "#000000" },
+    { "from": "m0.OUT", "to": [1589.6, 100], "color": "#f28a00" },
+    { "from": "m1.VCC", "to": [6240.56, 2555.56], "color": "#cc1414" },
+    { "from": "m1.GND", "to": [6440.56, 755.556], "color": "#000000" },
+    { "from": "m1.OUT", "to": [1489.6, 100], "color": "#25cc35" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "modules": [
+    { "type": "l298n", "x": 6200, "y": 3400 },
+    { "type": "battery", "x": 3000, "y": 4100 }
+  ],
+  "wires": [
+    { "from": [1749.61, 2000], "to": [3240.56, 2555.56], "color": "#cc1414" },
+    { "from": "m1.PLUS", "to": "m0.VIN", "color": "#cc1414" },
+    { "from": "m1.MINUS", "to": "m0.GND", "color": "#000000" },
+    { "from": "m0.GND", "to": [1949.61, 2000], "color": "#000000", "width": 36 }
+  ]
+}

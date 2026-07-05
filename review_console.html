@@ -133,6 +133,14 @@
 
 <aside id="side">
   <h1>סקירת כרטיסיות 1–4</h1>
+  <div id="flavorbar" style="margin:0 0 8px; font-size:13px; display:flex; align-items:center; gap:6px;">
+    <span>גרסה:</span>
+    <select id="flavorfilter" style="flex:1; padding:4px 6px; border:1px solid #c6cdd6; border-radius:6px; font-family:inherit; font-size:13px;">
+      <option value="dc">עיצוב חדש (dc)</option>
+      <option value="classic">קלאסי (להדפסה)</option>
+      <option value="all">הכול</option>
+    </select>
+  </div>
   <div id="progress"></div>
   <div id="cardlist"></div>
 </aside>
@@ -205,7 +213,8 @@ const HOW_TO_APPLY =
 
 // ============================== state ==============================
 
-let manifest = [];           // [{file, project, projectDir, name, flavor}]
+let allCards = [];           // full manifest from the server
+let manifest = [];           // [{file, project, projectDir, name, flavor}] — after flavor filter
 let cur = -1;                // index into manifest
 let mode = 'browse';
 let registry = new Map();    // blockIndex -> element   (current card)
@@ -289,9 +298,17 @@ async function boot() {
   try { localStorage.setItem(NICK_KEY, 'סוקר'); } catch {}
 
   const res = await fetch('/api/cards', { cache: 'no-store' });
-  manifest = (await res.json()).cards;
-  buildSidebar();
+  allCards = (await res.json()).cards;
+  const savedFlavor = store.get('rvw:viewFlavor', 'dc');
+  $('flavorfilter').value = ['dc', 'classic', 'all'].includes(savedFlavor) ? savedFlavor : 'dc';
+  applyFlavorFilter();
   wireUi();
+  $('flavorfilter').addEventListener('change', () => {
+    flushCommit();
+    store.set('rvw:viewFlavor', $('flavorfilter').value);
+    applyFlavorFilter();
+    loadCard(0);
+  });
   const meta = store.get('rvw:meta', {});
   let startIdx = 0;
   if (meta.lastFile) {
@@ -299,6 +316,17 @@ async function boot() {
     if (i >= 0) startIdx = i;
   }
   loadCard(startIdx);
+}
+
+// Filter the full manifest to the chosen flavor. A project with only one
+// flavor of a given card always shows that card, so nothing is ever hidden
+// away completely; "dc" (default) simply drops the duplicate classic P3/P4
+// cards whose wording is identical to their dc twin.
+function applyFlavorFilter() {
+  const mode = $('flavorfilter') ? $('flavorfilter').value : 'dc';
+  manifest = mode === 'all' ? allCards.slice() : allCards.filter((c) => c.flavor === mode);
+  if (!manifest.length) manifest = allCards.slice();  // never leave an empty list
+  buildSidebar();
 }
 
 // ============================== sidebar ==============================

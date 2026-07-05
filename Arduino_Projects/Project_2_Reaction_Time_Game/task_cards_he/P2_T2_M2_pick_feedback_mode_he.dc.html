@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 2 · משחק זמן תגובה
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול 2 · נקודת בחירה</div>
+      </div>
+
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">בוחרים מצב משוב</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:58ch;">נקודת הבחירה הראשונה. ראיתם את המשחק עובד — עכשיו בוחרים <strong style="color:#fff;">איך המשחק מספר לכם את התוצאה</strong>. אין תשובה אחת "נכונה".</p>
+
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>שלב 2 מתוך 5</span><span>40%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:40%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 8px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.95 0.05 285); color:oklch(0.5 0.13 285); font-size:16px;">🔀</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">בוחרים אחד משלושה מצבים</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:14.5px; line-height:1.5; color:oklch(0.55 0.012 260);">לוחצים על המצב שאתם רוצים — הוא ייבחר ויישמר.</p>
+
+      <!-- OPTION A -->
+      <div onClick="{{ pickA }}" style="cursor:pointer; border:2px solid {{ borderA }}; background:{{ bgA }}; border-radius:16px; padding:18px 20px; margin-bottom:14px; transition:border-color .15s;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagA }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">א</span>
+          <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">שלושה לדים (מהיר / בינוני / איטי)</h3>
+          <sc-if value="{{ selA }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
+        </div>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה עובד:</strong> תגובה מהירה מאירה לד <strong style="color:oklch(0.55 0.15 145);">ירוק</strong> (רגל 9), בינונית <strong style="color:oklch(0.6 0.13 90);">צהוב</strong> (רגל 10), איטית <strong style="color:oklch(0.55 0.18 28);">אדום</strong> (רגל 11).</p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה צריך לחווט:</strong> שני לדים נוספים, כל אחד עם נגד 220 אוהם. <strong>לכן יש עוד כרטיסיית חיווט (שלב 2b) אחרי השלב הזה.</strong></p>
+        <code dir="ltr" style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:2px 7px;">T2_three_led_feedback_starter.ino</code>
+      </div>
+
+      <!-- OPTION B -->
+      <div onClick="{{ pickB }}" style="cursor:pointer; border:2px solid {{ borderB }}; background:{{ bgB }}; border-radius:16px; padding:18px 20px; margin-bottom:14px; transition:border-color .15s;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagB }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ב</span>
+          <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">תבנית זמזם</h3>
+          <sc-if value="{{ selB }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
+        </div>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה עובד:</strong> צליל שונה לכל קטגוריה — ביפ גבוה למהיר, שני ביפים לבינוני, זמזום נמוך לאיטי.</p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה צריך לחווט:</strong> <strong style="color:oklch(0.5 0.12 150);">שום דבר חדש.</strong> משתמשים בזמזם שכבר חיווטתם.</p>
+        <code dir="ltr" style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:2px 7px;">T2_buzzer_pattern_starter.ino</code>
+      </div>
+
+      <!-- OPTION C -->
+      <div onClick="{{ pickC }}" style="cursor:pointer; border:2px solid {{ borderC }}; background:{{ bgC }}; border-radius:16px; padding:18px 20px; margin-bottom:20px; transition:border-color .15s;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagC }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ג</span>
+          <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">קריאה עשירה בצג הטורי</h3>
+          <sc-if value="{{ selC }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
+        </div>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה עובד:</strong> הצג הטורי מציג הודעה מפורטת עם מילת קטגוריה — למשל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px;">FAST! 210 ms</code> או <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px;">SLOW… 540 ms</code>.</p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה צריך לחווט:</strong> <strong style="color:oklch(0.5 0.12 150);">שום דבר חדש.</strong> משתמשים רק בצג הטורי.</p>
+        <code dir="ltr" style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:2px 7px;">T2_serial_readout_starter.ino</code>
+      </div>
+
+      <!-- WHERE TO NEXT (dynamic) -->
+      <div style="background:{{ nextBg }}; border:1px solid {{ nextBorder }}; border-radius:16px; padding:18px 20px; margin-bottom:30px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:{{ nextText }}; margin-bottom:8px;">
+          <span style="font-size:19px;">🧭</span>{{ nextTitle }}
+        </div>
+        <p style="margin:0; font-size:15px; line-height:1.6; color:{{ nextBody }};">{{ nextMsg }}</p>
+      </div>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">בחרתם בבירור מצב משוב — א, ב, או ג — והוא מסומן למעלה. אתם יודעים לאיזו כרטיסייה ממשיכים.</p>
+          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">עדיין לא משנים קוד ולא מעלים כלום — בשלב הזה רק מחליטים.</p>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימתם כש…
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בחרתם מצב משוב (א, ב, או ג)</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>אתם יודעים לאן ממשיכים: מצב א ← שלב 2b, מצב ב או ג ← שלב 3</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:14px; background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <span style="flex:none; font-size:22px;">🪄</span>
+        <div style="font-size:15.5px; line-height:1.55;"><strong style="color:oklch(0.45 0.12 300);">תקועים?</strong> &nbsp;אין בחירה "לא נכונה" — כולן עובדות. אוהבים אורות? מצב א. אוהבים צלילים? מצב ב. אוהבים מילים ומספרים? מצב ג. עדיין מתלבטים — קוראים למורה ובוחרים יחד.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:1180}}">
+class Component extends DCLogic {
+  state = { choice: null };
+  KEY = 'tc_p2t2m2_choice';
+  componentDidMount() {
+    try { const c = localStorage.getItem(this.KEY); if (c) this.setState({ choice: c }); } catch (e) {}
+  }
+  pick(c) {
+    try { localStorage.setItem(this.KEY, c); } catch (e) {}
+    this.setState({ choice: c });
+  }
+  renderVals() {
+    const sel = this.state.choice;
+    const on = (c) => sel === c;
+    const SEL_BORDER = 'oklch(0.55 0.13 285)';
+    const OFF_BORDER = 'oklch(0.9 0.006 85)';
+    const SEL_BG = 'oklch(0.975 0.02 285)';
+    const OFF_BG = 'oklch(0.99 0.003 85)';
+    const v = {
+      pickA: () => this.pick('A'), pickB: () => this.pick('B'), pickC: () => this.pick('C'),
+      selA: on('A'), selB: on('B'), selC: on('C'),
+      borderA: on('A') ? SEL_BORDER : OFF_BORDER,
+      borderB: on('B') ? SEL_BORDER : OFF_BORDER,
+      borderC: on('C') ? SEL_BORDER : OFF_BORDER,
+      bgA: on('A') ? SEL_BG : OFF_BG,
+      bgB: on('B') ? SEL_BG : OFF_BG,
+      bgC: on('C') ? SEL_BG : OFF_BG,
+      tagA: on('A') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)',
+      tagB: on('B') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)',
+      tagC: on('C') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)'
+    };
+    if (sel === 'A') {
+      v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
+      v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
+      v.nextTitle = 'הכרטיסייה הבאה: שלב 2b';
+      v.nextMsg = 'בחרתם מצב א (שלושה לדים) — ממשיכים אל שלב 2b, שבו מחווטים שני לדים נוספים (רגל 10 ורגל 11).';
+    } else if (sel === 'B' || sel === 'C') {
+      v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
+      v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
+      v.nextTitle = 'הכרטיסייה הבאה: שלב 3';
+      v.nextMsg = 'בחרתם מצב ' + (sel === 'B' ? 'ב (זמזם)' : 'ג (צג טורי)') + ' — אין צורך בחיווט נוסף. מדלגים על שלב 2b ועוברים ישר אל שלב 3.';
+    } else {
+      v.nextBg = 'oklch(0.985 0.004 85)'; v.nextBorder = 'oklch(0.92 0.006 85)';
+      v.nextText = 'oklch(0.5 0.012 260)'; v.nextBody = 'oklch(0.55 0.012 260)';
+      v.nextTitle = 'לאן ממשיכים?';
+      v.nextMsg = 'בוחרים מצב למעלה כדי לראות לאיזו כרטיסייה להמשיך. מצב א ← שלב 2b (חיווט נוסף) · מצב ב או ג ← ישר לשלב 3.';
+    }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

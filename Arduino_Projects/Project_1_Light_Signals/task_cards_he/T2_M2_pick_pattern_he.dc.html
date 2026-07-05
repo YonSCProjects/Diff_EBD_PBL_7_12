@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 1 · אותות אור
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול יוצרים · נקודת בחירה</div>
+      </div>
+
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">בוחרים תבנית אור</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:58ch;">בוחרים תבנית — <strong style="color:#fff;">לסירוגין, רדיפה, או נשימה</strong> — ומחווטים את הלדים הנדרשים. הבחירה שלכם, אין תשובה "נכונה".</p>
+
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>שלב 2 מתוך 5</span><span>40%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:40%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 8px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.95 0.05 285); color:oklch(0.5 0.13 285); font-size:16px;">🔀</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">בוחרים אחת משלוש תבניות</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:14.5px; line-height:1.5; color:oklch(0.55 0.012 260);">לוחצים על התבנית שאתם רוצים — היא תיבחר ותישמר.</p>
+
+      <!-- A: alternating -->
+      <div onClick="{{ pickA }}" style="cursor:pointer; border:2px solid {{ borderA }}; background:{{ bgA }}; border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagA }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">א</span>
+          <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">לסירוגין <span style="font-weight:500; color:oklch(0.55 0.012 260); font-size:14px;">(2 לדים)</span></h3>
+          <sc-if value="{{ selA }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
+        </div>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה נראה:</strong> שני לדים מהבהבים בניגוד — כשאחד דולק, השני כבוי.</p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> מוסיפים לד שני על רגל 10 עם נגד 220 אוהם משלו.</p>
+        <code dir="ltr" style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:2px 7px;">T2_alternating_starter.ino</code>
+      </div>
+
+      <!-- B: chasing -->
+      <div onClick="{{ pickB }}" style="cursor:pointer; border:2px solid {{ borderB }}; background:{{ bgB }}; border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagB }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ב</span>
+          <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">רדיפה <span style="font-weight:500; color:oklch(0.55 0.012 260); font-size:14px;">(3 לדים)</span></h3>
+          <sc-if value="{{ selB }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
+        </div>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה נראה:</strong> שלושה לדים מאירים בזה אחר זה, כמו אורות מרדף בשלט.</p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> מוסיפים לד שני (רגל 10) ושלישי (רגל 11), כל אחד עם נגד 220 אוהם. <strong>לכן יש עוד כרטיסיית חיווט (2b) אחרי השלב הזה.</strong></p>
+        <code dir="ltr" style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:2px 7px;">T2_chasing_starter.ino</code>
+      </div>
+
+      <!-- C: breathing -->
+      <div onClick="{{ pickC }}" style="cursor:pointer; border:2px solid {{ borderC }}; background:{{ bgC }}; border-radius:16px; padding:18px 20px; margin-bottom:20px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagC }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ג</span>
+          <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">נשימה <span style="font-weight:500; color:oklch(0.55 0.012 260); font-size:14px;">(לד אחד, עמעום PWM)</span></h3>
+          <sc-if value="{{ selC }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
+        </div>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה נראה:</strong> לד אחד מתעמעם ומתבהר בחלקות — בהיר, עמום, שוב בהיר, לנצח.</p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> <strong style="color:oklch(0.5 0.12 150);">שום דבר חדש.</strong> משתמשים בלד הראשון משלב 1, על רגל 9.</p>
+        <code dir="ltr" style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:2px 7px;">T2_breathing_starter.ino</code>
+      </div>
+
+      <!-- WHERE TO NEXT -->
+      <div style="background:{{ nextBg }}; border:1px solid {{ nextBorder }}; border-radius:16px; padding:18px 20px; margin-bottom:30px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:{{ nextText }}; margin-bottom:8px;">
+          <span style="font-size:19px;">🧭</span>{{ nextTitle }}
+        </div>
+        <p style="margin:0; font-size:15px; line-height:1.6; color:{{ nextBody }};">{{ nextMsg }}</p>
+      </div>
+
+      <!-- STEPS -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה עושים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בוחרים תבנית למעלה (א, ב, או ג) — הבחירה נשמרת.</p>
+        </div>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחווטים כל לד נוסף שהתבנית דורשת (א: עוד לד על רגל 10 · ב: עוד שניים על 10 ו-11 · ג: בלי חיווט חדש).</p>
+        </div>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">פותחים את הקוד ההתחלתי של הבחירה, לוחצים <strong>Upload</strong>, ומסתכלים.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה אמורים לראות</div>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">התבנית שבחרתם רצה על הברדבורד. א: שני לדים לסירוגין · ב: שלושה לדים ברדיפה · ג: לד אחד בנשימה.</p>
+          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">מסתכלים כמה שניות — בשלב הבא משנים אותה: מהירה יותר, איטית יותר, או שונה.</p>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימנו כש…
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בחרתם תבנית (א, ב, או ג)</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>החומרה מחווטת לתבנית שבחרתם</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הקוד ההתחלתי הועלה ורץ</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:14px; background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <span style="flex:none; font-size:22px;">🪄</span>
+        <div style="font-size:15.5px; line-height:1.55;"><strong style="color:oklch(0.45 0.12 300);">תקועים?</strong> &nbsp;התבנית לא רצה? רדיפה (ב) צריכה שלושה לדים, לא שניים. נשימה (ג) משתמשת ב-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">analogWrite</code> (שונה מ-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">digitalWrite</code>) — אם הלד נשאר בבהירות מלאה, ייתכן שהקוד לא הועלה. מבקשים עזרה מהמורה.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:1180}}">
+class Component extends DCLogic {
+  state = { checked: {}, choice: null };
+  KEY = 'tc_p1t2m2_checks';
+  CKEY = 'tc_p1t2m2_choice';
+  componentDidMount() {
+    try {
+      const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) });
+      const c = localStorage.getItem(this.CKEY); if (c) this.setState({ choice: c });
+    } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  pick(c) {
+    try { localStorage.setItem(this.CKEY, c); } catch (e) {}
+    this.setState({ choice: c });
+  }
+  renderVals() {
+    const sel = this.state.choice;
+    const on = (c) => sel === c;
+    const SEL = 'oklch(0.55 0.13 285)', OFF = 'oklch(0.9 0.006 85)';
+    const SELBG = 'oklch(0.975 0.02 285)', OFFBG = 'oklch(0.99 0.003 85)';
+    const v = {
+      pickA: () => this.pick('A'), pickB: () => this.pick('B'), pickC: () => this.pick('C'),
+      selA: on('A'), selB: on('B'), selC: on('C'),
+      borderA: on('A') ? SEL : OFF, borderB: on('B') ? SEL : OFF, borderC: on('C') ? SEL : OFF,
+      bgA: on('A') ? SELBG : OFFBG, bgB: on('B') ? SELBG : OFFBG, bgC: on('C') ? SELBG : OFFBG,
+      tagA: on('A') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)',
+      tagB: on('B') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)',
+      tagC: on('C') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)'
+    };
+    if (sel === 'B') {
+      v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
+      v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
+      v.nextTitle = 'הכרטיסייה הבאה: שלב 2b';
+      v.nextMsg = 'בחרתם רדיפה (3 לדים) — ממשיכים אל שלב 2b, שבו מחווטים לד שלישי (רגל 11).';
+    } else if (sel === 'A' || sel === 'C') {
+      v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
+      v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
+      v.nextTitle = 'הכרטיסייה הבאה: שלב 3';
+      v.nextMsg = 'בחרתם ' + (sel === 'A' ? 'לסירוגין (2 לדים)' : 'נשימה (לד אחד)') + ' — אין צורך בכרטיסיית חיווט נוספת. אחרי החיווט עוברים ישר לשלב 3.';
+    } else {
+      v.nextBg = 'oklch(0.985 0.004 85)'; v.nextBorder = 'oklch(0.92 0.006 85)';
+      v.nextText = 'oklch(0.5 0.012 260)'; v.nextBody = 'oklch(0.55 0.012 260)';
+      v.nextTitle = 'לאן ממשיכים?';
+      v.nextMsg = 'בוחרים תבנית למעלה כדי לראות לאן להמשיך. רדיפה (ב) ← שלב 2b · לסירוגין (א) או נשימה (ג) ← ישר לשלב 3.';
+    }
+    for (let i = 1; i <= 14; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

@@ -15,6 +15,7 @@ const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
 const { PDFDocument } = require('pdf-lib');
+const { resolveCardFile, renderCardPdf, snapshotCardHtml, DC_FONTS_LINK, scopeCss } = require('./render_cards_lib');
 
 // Args may be given in any order: a language (en|he) and an optional project
 // key (1|2). Defaults to project 1 for backward compatibility, so the original
@@ -159,10 +160,13 @@ const projectDir = path.join(ROOT, 'Arduino_Projects', P.dir);
 const refDir = path.join(projectDir, isHe ? 'reference_cards_he' : 'reference_cards');
 const taskDir = path.join(projectDir, isHe ? 'task_cards_he' : 'task_cards');
 
+// Resolve each stem to a real file: HE task cards prefer their .dc.html twin;
+// reference cards and EN builds stay classic (resolveCardFile falls back).
 const cardOrder = CARD_STEMS[projectKey].map((stem) => {
   const [kind, name] = stem.split(':');
   const dir = kind === 'R' ? refDir : taskDir;
-  return [dir, `${name}${suffix}.html`];
+  const key = kind === 'T' ? projectKey : null;
+  return [dir, resolveCardFile(dir, name, suffix, key)];
 });
 
 const outName = `${P.outBase}${suffix}`;
@@ -171,52 +175,38 @@ const outPdf = path.join(OUT, `${outName}.pdf`);
 
 const pageTitle = isHe ? P.titleHe : P.titleEn;
 
-function buildMergedHtml() {
+// Merge every card into one self-contained HTML file. Classic cards contribute
+// their linked CSS + <style> + body; dc cards contribute their settled (post-JS)
+// markup — all inline-styled — plus their helmet <style>. Identical <style>
+// blocks are deduped and hoisted into the head.
+async function buildMergedHtml(browser) {
   console.log(`[HTML] Merging ${cardOrder.length} cards into ${outHtml}`);
-
-  // Deduplicate inlined stylesheets so we don't paste the same CSS 21 times.
-  const cssCache = new Map(); // absolute path -> css content
+  const styleSet = new Map(); // scoped <style> block -> true (dedup, ordered)
   const cardSections = [];
+  let anyDc = false;
 
   for (const [dir, file] of cardOrder) {
     const full = path.join(dir, file);
-    if (!fs.existsSync(full)) {
-      console.warn(`  SKIP (missing): ${file}`);
-      continue;
+    if (!fs.existsSync(full)) { console.warn(`  SKIP (missing): ${file}`); continue; }
+    const snap = await snapshotCardHtml(browser, full);
+    if (snap.fonts) anyDc = true;
+    // Scope every card's CSS to its own flavor wrapper so classic element rules
+    // (h2 {}, table {}…) can't bleed onto the inline-styled dc cards and vice versa.
+    const flavorClass = snap.fonts ? 'appendix-card--dc' : 'appendix-card--classic';
+    const scopeSel = '.' + flavorClass;
+    for (const m of (snap.styles || '').matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)) {
+      const scoped = `<style>${scopeCss(m[1], scopeSel)}</style>`;
+      if (!styleSet.has(scoped)) styleSet.set(scoped, true);
     }
-    const html = fs.readFileSync(full, 'utf8');
-
-    // Collect <link rel="stylesheet" href="..."> → add to cache.
-    const linkMatches = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)];
-    for (const m of linkMatches) {
-      const cssPath = path.resolve(dir, m[1]);
-      if (!cssCache.has(cssPath) && fs.existsSync(cssPath)) {
-        cssCache.set(cssPath, fs.readFileSync(cssPath, 'utf8'));
-      }
-    }
-
-    // Keep per-card <style> blocks inline (they may contain card-specific tweaks).
-    const internalStyles = [...html.matchAll(/<style>[\s\S]*?<\/style>/g)]
-      .map((m) => m[0])
-      .join('\n');
-
-    const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/);
-    const body = bodyMatch ? bodyMatch[1] : '';
-
-    const htmlDirMatch = html.match(/<html[^>]*\sdir="([^"]+)"/);
-    const dir_ = htmlDirMatch ? htmlDirMatch[1] : (isHe ? 'rtl' : 'ltr');
-    const htmlLangMatch = html.match(/<html[^>]*\slang="([^"]+)"/);
-    const lang_ = htmlLangMatch ? htmlLangMatch[1] : (isHe ? 'he' : 'en');
-
+    const d = snap.dir || (isHe ? 'rtl' : 'ltr');
+    const l = snap.lang || (isHe ? 'he' : 'en');
     cardSections.push(
-      `<section class="appendix-card" dir="${dir_}" lang="${lang_}" style="page-break-before: always;">${internalStyles}${body}</section>`
+      `<section class="appendix-card ${flavorClass}" dir="${d}" lang="${l}" style="page-break-before: always;">${snap.body}</section>`
     );
+    console.log(`  ok: ${file}`);
   }
 
-  const sharedStyles = [...cssCache.values()]
-    .map((css) => `<style>${css}</style>`)
-    .join('\n');
-
+  const sharedStyles = [...styleSet.keys()].join('\n');
   const wrapperDir = isHe ? 'rtl' : 'ltr';
   const wrapperLang = isHe ? 'he' : 'en';
 
@@ -225,6 +215,7 @@ function buildMergedHtml() {
 <head>
 <meta charset="utf-8">
 <title>${pageTitle}</title>
+${anyDc ? DC_FONTS_LINK : ''}
 ${sharedStyles}
 <style>
   /* Bundle-level: the first card shouldn't force a blank leading page. */
@@ -242,41 +233,17 @@ ${cardSections.join('\n')}
   console.log(`  Done: ${outHtml}`);
 }
 
-async function buildMergedPdf() {
+async function buildMergedPdf(browser) {
   console.log(`[PDF] Rendering ${cardOrder.length} cards to PDF → ${outPdf}`);
-  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   const out = await PDFDocument.create();
-  try {
-    for (const [dir, file] of cardOrder) {
-      const full = path.join(dir, file);
-      if (!fs.existsSync(full)) {
-        console.warn(`  SKIP (missing): ${file}`);
-        continue;
-      }
-      const page = await browser.newPage();
-      // card.js opens a window.prompt() for the student nickname; auto-dismiss
-      // it so page load doesn't block. The interactive indicator is print-hidden
-      // anyway, so dismissing has no effect on the PDF.
-      page.on('dialog', (d) => d.dismiss().catch(() => {}));
-      await page.emulateMediaType('print');
-      const url = 'file:///' + full.replace(/\\/g, '/');
-      await page.goto(url, { waitUntil: 'load', timeout: 60000 });
-      // Wait for fonts to finish loading — otherwise a cold Chromium start
-      // can render with fallback metrics and reflow content onto extra pages.
-      await page.evaluate(() => document.fonts.ready);
-      const buf = await page.pdf({
-        format: 'A4',
-        printBackground: true,
-        margin: { top: '10mm', right: '10mm', bottom: '10mm', left: '10mm' },
-      });
-      await page.close();
-      const doc = await PDFDocument.load(buf);
-      const pages = await out.copyPages(doc, doc.getPageIndices());
-      pages.forEach((pg) => out.addPage(pg));
-      console.log(`  ok: ${file}`);
-    }
-  } finally {
-    await browser.close();
+  for (const [dir, file] of cardOrder) {
+    const full = path.join(dir, file);
+    if (!fs.existsSync(full)) { console.warn(`  SKIP (missing): ${file}`); continue; }
+    const buf = await renderCardPdf(browser, full);
+    const doc = await PDFDocument.load(buf);
+    const pages = await out.copyPages(doc, doc.getPageIndices());
+    pages.forEach((pg) => out.addPage(pg));
+    console.log(`  ok: ${file}`);
   }
   const bytes = await out.save();
   fs.writeFileSync(outPdf, bytes);
@@ -284,8 +251,13 @@ async function buildMergedPdf() {
 }
 
 (async () => {
-  buildMergedHtml();
-  await buildMergedPdf();
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+  try {
+    await buildMergedHtml(browser);
+    await buildMergedPdf(browser);
+  } finally {
+    await browser.close();
+  }
 })().catch((err) => {
   console.error(err);
   process.exit(1);

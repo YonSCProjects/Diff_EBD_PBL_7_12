@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:linear-gradient(135deg, oklch(0.42 0.13 285), oklch(0.45 0.11 248)); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.24); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 2 · משחק זמן תגובה
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מתכנן פרויקט · V3</div>
+      </div>
+
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מעצבים את משחק זמן התגובה שלכם</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.88); max-width:58ch;">מעצבים וריאציה משלכם — <strong style="color:#fff;">שני שחקנים זה מול זה, או משחק ניקוד על פני חמישה סבבים</strong> — ובונים אותה מאפס.</p>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 285); border:1px solid oklch(0.88 0.05 285); border-radius:16px; padding:16px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:22px; line-height:1;">💡</span>
+        <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.42 0.06 285);">ממלאים את המתכנן, בונים, ומציגים. הכול נשמר במחשב הזה — אפשר לחזור ולערוך בכל רגע.</p>
+      </div>
+
+      <!-- STEP 1: PLAN -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 8px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📝</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 1 — מתכננים</h2>
+      </div>
+      <p style="margin:0 0 16px; font-size:14.5px; line-height:1.5; color:oklch(0.55 0.012 260);">קודם בוחרים וריאציה — לוחצים על אחת:</p>
+
+      <!-- variation choice -->
+      <div style="display:flex; gap:12px; margin-bottom:20px; flex-wrap:wrap;">
+        <div onClick="{{ pick1 }}" style="flex:1; min-width:230px; cursor:pointer; border:2px solid {{ border1 }}; background:{{ bg1 }}; border-radius:15px; padding:16px 18px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;">
+            <span style="flex:none; width:32px; height:32px; border-radius:9px; background:{{ tag1 }}; color:#fff; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;">1</span>
+            <h3 style="margin:0; font-size:16.5px; font-weight:700; color:oklch(0.3 0.02 260);">שני שחקנים זה מול זה</h3>
+            <sc-if value="{{ sel1 }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:12.5px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:3px 11px;">✓ נבחר</span></sc-if>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.55; color:oklch(0.42 0.012 260);">מוסיפים <strong>כפתור שני על רגל 3</strong> עם נגד הורדה משלו. הלד נדלק, מתחרים מי לוחץ ראשון, והמשחק מכריז מי ניצח.</p>
+        </div>
+        <div onClick="{{ pick2 }}" style="flex:1; min-width:230px; cursor:pointer; border:2px solid {{ border2 }}; background:{{ bg2 }}; border-radius:15px; padding:16px 18px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;">
+            <span style="flex:none; width:32px; height:32px; border-radius:9px; background:{{ tag2 }}; color:#fff; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;">2</span>
+            <h3 style="margin:0; font-size:16.5px; font-weight:700; color:oklch(0.3 0.02 260);">משחק ניקוד — חמישה סבבים</h3>
+            <sc-if value="{{ sel2 }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:12.5px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:3px 11px;">✓ נבחר</span></sc-if>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.55; color:oklch(0.42 0.012 260);">שחקן אחד, חמישה סבבים. המשחק <strong>שומר ניקוד</strong> (זמן מצטבר או נקודות לפי מהירות) ומציג תוצאה סופית. <strong>בלי חומרה חדשה.</strong></p>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
+        <div style="background:oklch(0.96 0.04 90); border:1px solid oklch(0.88 0.06 90); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.42 0.08 75); margin-bottom:5px;">מתארים את זרימת המשחק במילים שלכם <span style="font-weight:600;">⭐ השדה הכי חשוב</span></label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.5 0.04 75);">מה קורה מההתחלה ועד הסוף? דוגמה (שני שחקנים): "הלד מחכה 2–5 שניות ונדלק. הראשון שלוחץ מנצח את הסבב. מי שלוחץ לפני שהלד נדלק — מפסיד. הזמזם מצפצף צפצוף ניצחון, והצג הטורי כותב מי ניצח."</p>
+          <textarea value="{{ f1 }}" onInput="{{ on1 }}" rows="3" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.55; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.85 0.05 90); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.65 0.12 90)"></textarea>
+        </div>
+
+        <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">איך המשחק מציג את התוצאה? (משוב)</label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">לד לצד המנצח, צפצוף בזמזם, הודעה בצג הטורי — או שילוב. אפשר להשתמש בכל מה שכבר על הברדבורד.</p>
+          <textarea value="{{ f2 }}" onInput="{{ on2 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+
+        <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">איזו חומרה צריך? <span style="font-weight:500; color:oklch(0.58 0.012 260);">(כפתורים, לדים, נגדים, זמזם, חוטים — כמה מכל אחד)</span></label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">וריאציית שני השחקנים: כפתור נוסף + נגד הורדה 10 קΩ נוסף. וריאציית הניקוד: בדרך כלל כלום. רכיב לא רגיל? שואלים את המורה קודם.</p>
+          <textarea value="{{ f3 }}" onInput="{{ on3 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+      </div>
+
+      <!-- STEP 2: BUILD -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 12px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 2 — בונים</h2>
+      </div>
+      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);"><strong>מציירים את החיווט על נייר</strong>, ואז מחווטים. לשני שחקנים: כפתור שני לרוחב החריץ — צד אחד ל-<strong>5 V</strong>, השני ל-<strong>רגל 3</strong> ודרך נגד הורדה <strong>10 קΩ</strong> (חום · שחור · כתום) ל-<strong>GND</strong>. בדיוק כמו הכפתור הראשון, רק על רגל 3.</p>
+
+      <!-- Fritzing image slot -->
+      <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; background:#fff; padding:18px; margin-bottom:10px; text-align:center;"><img src="assets/w_p2_04_two_buttons_variant_breadboard.svg" alt="תרשים ברדבורד — שני כפתורים לשני שחקנים" style="width:600px; max-width:100%; height:auto;" /></div>
+      <p style="margin:0 0 20px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);"><strong>וריאציית שני השחקנים:</strong> כפתור שחקן 2 על רגל 3 עם נגד הורדה משלו ל-GND, לצד הכפתור הקיים על רגל 2. הלד והזמזם נשארים על רגליים 9 ו-8.</p>
+
+      <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px; margin-bottom:30px;">
+        <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+        <p style="margin:0; font-size:15.5px; line-height:1.55; padding-top:3px;">החיווט מוכן, ומצלמים תמונה (או מחליטים שלא רוצים תמונה).</p>
+      </div>
+
+      <!-- STEP 3: CODE -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 12px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.95 0.05 285); color:oklch(0.5 0.13 285); font-size:16px;">💻</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 3 — קוד</h2>
+      </div>
+      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">קלוד קוד במצב דיאלוג חופשי — אין קוד מוכן מראש, בונים מתוך התיאור שלכם. אותה משמעת של (א)(ב)(ג): מתארים את הבעיה לפני שמבקשים פתרון.</p>
+      <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px; margin-bottom:30px;">
+        <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.4 0.06 285); margin-bottom:5px;">הפנייה הראשונה לקלוד קוד <span style="font-weight:500; color:oklch(0.58 0.012 260);">(מנסחים כאן לפני ששולחים)</span></label>
+        <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">דוגמה (שני שחקנים): "אני בונה משחק זמן תגובה לשני שחקנים. לד על רגל 9, זמזם על רגל 8, כפתור שחקן 1 על רגל 2 וכפתור שחקן 2 על רגל 3, לכל אחד נגד הורדה 10 קΩ. אחרי השהייה אקראית הלד נדלק, הראשון שלוחץ מנצח, והצג הטורי כותב מי ניצח. תוכל לעזור לי לכתוב את הקוד?"</p>
+        <textarea value="{{ f4 }}" onInput="{{ on4 }}" rows="3" placeholder="כותבים כאן את הפנייה…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+      </div>
+
+      <!-- STEP 4: TEST -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔍</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 4 — בודקים</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
+        <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">המשחק עושה את מה שתכננתם?</label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">אם לא — מה שונה? כותבים, חוזרים לקלוד קוד עם (א)(ב)(ג) חדשים, ומשפרים. התוכנית יכולה להשתנות תוך כדי — זה בסדר גמור.</p>
+          <textarea value="{{ f5 }}" onInput="{{ on5 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+        <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">עובד לפעמים ולפעמים לא? מה שמתם לב?</label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">באגים לא יציבים הם בדרך כלל חיווט (ג'אמפר שהתנתק, נגד הורדה חסר לכפתור השני) או תזמון (השהייה קצרה/ארוכה מדי, לחיצה מוקדמת מדי).</p>
+          <textarea value="{{ f6 }}" onInput="{{ on6 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+      </div>
+
+      <!-- STEP 5: SHOW -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.96 0.06 90); color:oklch(0.5 0.12 75); font-size:16px;">🎬</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 5 — מראים</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:28px;">
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">כשמרוצים (או כשמחליטים שזה טוב מספיק להיום), קוראים למורה — ועדיף <strong>לשחק סבב אמיתי</strong> מול חבר או המורה.</p>
+        </div>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מסבירים במשפט-שניים מה זה עושה ולמה בניתם ככה. אם רוצים — מצלמים ושומרים בתיקיית פרויקט 2 ב-Google Drive.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:14px; background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px; margin-bottom:22px;">
+        <span style="flex:none; font-size:22px;">🪄</span>
+        <div style="font-size:15.5px; line-height:1.55;"><strong style="color:oklch(0.45 0.12 300);">תקועים בשלב כלשהו?</strong> &nbsp;המתכנן פתוח — וזו המטרה. להיות תקועים זה חלק מעיצוב משחק משלכם. משתמשים בקלוד קוד כדי לחשוב על הבעיה, וקוראים למורה כשהולכים במעגלים. השיחה כאן היא שיחת עיצוב, לא רק תקלות — מספרים מה מנסים לבנות ומה לא עובד.</div>
+      </div>
+
+      <div style="position:relative; overflow:hidden; background:linear-gradient(135deg, oklch(0.55 0.13 285), oklch(0.5 0.13 248)); color:#fff; border-radius:18px; padding:26px;">
+        <div style="font-size:38px; line-height:1; margin-bottom:8px;">🎉</div>
+        <div style="font-size:22px; font-weight:700; margin-bottom:10px;">השלמתם את פרויקט 2!</div>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:rgba(255,255,255,0.92); max-width:58ch;">עיצבתם, בניתם ותכנתתם וריאציה משלכם של משחק זמן תגובה מאפס — מרעיון ועד משחק עובד.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:1180}}">
+class Component extends DCLogic {
+  state = { checked: {}, variant: null, f1: '', f2: '', f3: '', f4: '', f5: '', f6: '' };
+  KEY = 'tc_p2t3_checks';
+  VKEY = 'tc_p2t3_variant';
+  FKEY = 'tc_p2t3_fields';
+  componentDidMount() {
+    try {
+      const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) });
+      const c = localStorage.getItem(this.VKEY); if (c) this.setState({ variant: c });
+      const f = localStorage.getItem(this.FKEY); if (f) { const o = JSON.parse(f); this.setState({ f1: o.f1 || '', f2: o.f2 || '', f3: o.f3 || '', f4: o.f4 || '', f5: o.f5 || '', f6: o.f6 || '' }); }
+    } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  pick(c) {
+    try { localStorage.setItem(this.VKEY, c); } catch (e) {}
+    this.setState({ variant: c });
+  }
+  setField(k, val) {
+    this.setState(s => {
+      const next = { f1: s.f1, f2: s.f2, f3: s.f3, f4: s.f4, f5: s.f5, f6: s.f6, [k]: val };
+      try { localStorage.setItem(this.FKEY, JSON.stringify({ f1: next.f1, f2: next.f2, f3: next.f3, f4: next.f4, f5: next.f5, f6: next.f6 })); } catch (e) {}
+      return { [k]: val };
+    });
+  }
+  renderVals() {
+    const on = (c) => this.state.variant === c;
+    const SEL = 'oklch(0.55 0.13 285)', OFF = 'oklch(0.9 0.006 85)';
+    const SELBG = 'oklch(0.975 0.02 285)', OFFBG = 'oklch(0.99 0.003 85)';
+    const v = {
+      pick1: () => this.pick('1'), pick2: () => this.pick('2'),
+      sel1: on('1'), sel2: on('2'),
+      border1: on('1') ? SEL : OFF, border2: on('2') ? SEL : OFF,
+      bg1: on('1') ? SELBG : OFFBG, bg2: on('2') ? SELBG : OFFBG,
+      tag1: on('1') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)',
+      tag2: on('2') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)'
+    };
+    for (let i = 1; i <= 6; i++) { v['f' + i] = this.state['f' + i]; v['on' + i] = (e) => this.setField('f' + i, e.target.value); }
+    for (let i = 1; i <= 14; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

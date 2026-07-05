@@ -11,6 +11,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 const puppeteer = require('puppeteer');
 const { PDFDocument } = require('pdf-lib');
+const { resolveCardFile, renderCardPdf, snapshotCardHtml, scopeCss, DC_FONTS_LINK } = require('./render_cards_lib');
 
 // Args in any order: a language (en|he) and an optional project key (1|2).
 // Defaults to project 1 for backward compatibility.
@@ -94,10 +95,13 @@ const projectDir = path.join(ROOT, 'Arduino_Projects', PROJECT_DIRS[projectKey])
 const refDir = path.join(projectDir, isHe ? 'reference_cards_he' : 'reference_cards');
 const taskDir = path.join(projectDir, isHe ? 'task_cards_he' : 'task_cards');
 
+// HE task cards prefer their .dc.html twin; reference cards and EN builds stay
+// classic (resolveCardFile falls back automatically).
 const cardOrder = CARD_STEMS[projectKey].map((stem) => {
   const [kind, name] = stem.split(':');
   const dir = kind === 'R' ? refDir : taskDir;
-  return [dir, `${name}${suffix}.html`];
+  const key = kind === 'T' ? projectKey : null;
+  return [dir, resolveCardFile(dir, name, suffix, key)];
 });
 
 const MARKER = '<!-- INSERT_CARDS_HERE -->';
@@ -139,17 +143,9 @@ async function renderCards(browser) {
       console.warn(`  SKIP (missing): ${file}`);
       continue;
     }
-    const page = await browser.newPage();
-    await page.setJavaScriptEnabled(false);
-    await page.emulateMediaType('print');
-    const url = 'file:///' + full.replace(/\\/g, '/');
-    await page.goto(url, { waitUntil: 'load', timeout: 60000 });
-    const buf = await page.pdf({
-      format: 'A4',
-      printBackground: true,
-      margin: { top: '10mm', right: '10mm', bottom: '10mm', left: '10mm' },
-    });
-    await page.close();
+    // renderCardPdf runs the dc runtime (JS on) + waits for it to settle before
+    // capturing; classic cards render as before (JS harmlessly on, dialog dismissed).
+    const buf = await renderCardPdf(browser, full);
     pdfBuffers.push(buf);
     console.log(`  ok: ${file}`);
   }
@@ -188,7 +184,7 @@ async function mergePdfs(overviewInfo, cardBuffers) {
   console.log(`Done: ${finalPdf} (${out.getPageCount()} pages)`);
 }
 
-function buildMergedHtml() {
+async function buildMergedHtml(browser) {
   const overviewHtmlName = overviewMd.replace('.md', '.html');
   console.log(`[4/4] Building merged HTML: ${overviewHtmlName}`);
   execSync(
@@ -196,36 +192,33 @@ function buildMergedHtml() {
     { cwd: ROOT, stdio: 'inherit' }
   );
   const src = path.join(ROOT, overviewHtmlName);
-  const overviewHtml = fs.readFileSync(src, 'utf8');
+  let overviewHtml = fs.readFileSync(src, 'utf8');
   fs.unlinkSync(src);
 
+  const styleSet = new Map(); // scoped <style> block -> true (dedup, ordered)
   const cardSections = [];
+  let anyDc = false;
   for (const [dir, file] of cardOrder) {
     const full = path.join(dir, file);
     if (!fs.existsSync(full)) continue;
-    let html = fs.readFileSync(full, 'utf8');
-    const styleMatch = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)];
-    let inlineStyles = '';
-    for (const m of styleMatch) {
-      const cssPath = path.resolve(dir, m[1]);
-      if (fs.existsSync(cssPath)) {
-        inlineStyles += `<style>${fs.readFileSync(cssPath, 'utf8')}</style>`;
-      }
+    const snap = await snapshotCardHtml(browser, full);
+    if (snap.fonts) anyDc = true;
+    // Scope each card's CSS to its flavor wrapper so classic element rules can't
+    // bleed onto the inline-styled dc cards (and vice versa).
+    const flavorClass = snap.fonts ? 'appendix-card--dc' : 'appendix-card--classic';
+    for (const m of (snap.styles || '').matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)) {
+      const scoped = `<style>${scopeCss(m[1], '.' + flavorClass)}</style>`;
+      if (!styleSet.has(scoped)) styleSet.set(scoped, true);
     }
-    const internalStyles = [...html.matchAll(/<style>[\s\S]*?<\/style>/g)]
-      .map((m) => m[0])
-      .join('\n');
-    const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/);
-    const body = bodyMatch ? bodyMatch[1] : '';
-    const htmlDirMatch = html.match(/<html[^>]*\sdir="([^"]+)"/);
-    const dir_ = htmlDirMatch ? htmlDirMatch[1] : 'ltr';
-    const htmlLangMatch = html.match(/<html[^>]*\slang="([^"]+)"/);
-    const lang_ = htmlLangMatch ? htmlLangMatch[1] : '';
+    const d = snap.dir || 'rtl';
+    const l = snap.lang || 'he';
     cardSections.push(
-      `<div class="appendix-card" dir="${dir_}" lang="${lang_}" style="page-break-before: always;">${inlineStyles}${internalStyles}${body}</div>`
+      `<div class="appendix-card ${flavorClass}" dir="${d}" lang="${l}" style="page-break-before: always;">${snap.body}</div>`
     );
   }
 
+  const headInject = (anyDc ? DC_FONTS_LINK : '') + '\n' + [...styleSet.keys()].join('\n');
+  overviewHtml = overviewHtml.replace(/<\/head>/i, headInject + '\n</head>');
   const merged = overviewHtml.replace(
     /<\/body>/i,
     cardSections.join('\n') + '\n</body>'
@@ -241,10 +234,10 @@ function buildMergedHtml() {
   try {
     const cardBuffers = await renderCards(browser);
     await mergePdfs(overviewPath, cardBuffers);
+    await buildMergedHtml(browser);
   } finally {
     await browser.close();
   }
-  buildMergedHtml();
 })().catch((err) => {
   console.error(err);
   process.exit(1);

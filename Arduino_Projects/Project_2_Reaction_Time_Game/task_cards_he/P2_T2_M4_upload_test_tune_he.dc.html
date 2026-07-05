@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 2 · משחק זמן תגובה
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול 2 · כרטיסייה V2</div>
+      </div>
+
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מעלים, בודקים, ומכוונים את הגרסה שלכם</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:58ch;">בשלב הקודם שיניתם את הקוד. עכשיו מעלים, משחקים חמישה סבבים, ובודקים שהמשחק עובד <strong style="color:#fff;">כמו שאתם רציתם</strong> — ואם צריך, מכוונים.</p>
+
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>שלב 4 מתוך 5</span><span>80%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:80%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <!-- STEP 1 -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">⬆️</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 1 — מעלים ומשחקים חמישה סבבים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <div style="padding-top:3px; flex:1;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">פותחים את הקוד המעודכן ב-Arduino IDE ולוחצים <strong>Upload</strong>. מחכים להודעה הירוקה.</p>
+            <div dir="ltr" style="display:inline-flex; align-items:center; gap:8px; margin-top:9px; background:oklch(0.28 0.06 150); border-radius:7px; padding:6px 12px;">
+              <span style="color:oklch(0.85 0.15 150); font-size:13px;">✓</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:oklch(0.92 0.06 150);">Done uploading.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">פותחים את <strong>הצג הטורי</strong> (זכוכית המגדלת) כדי לראות את זמני התגובה.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">משחקים <strong>חמישה סבבים</strong>: מחכים לאות הזינוק, לוחצים מהר ככל האפשר, וקוראים את הזמן.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בודקים שה<strong>משוב שבחרתם</strong> עובד — שלושת הלדים (מצב א), תבנית הזמזם (מצב ב), או ההודעה בצג (מצב ג).</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בודקים שרמת <strong>הקושי</strong> נכונה — הלד דולק 2 שניות (קל) או 0.5 שנייה (קשה).</p>
+        </div>
+
+      </div>
+
+      <!-- STEP 2: thresholds -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 10px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.96 0.06 90); color:oklch(0.5 0.12 75); font-size:16px;">🎚️</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 2 — מכוונים את הספים</h2>
+        <span style="font-size:13px; color:oklch(0.6 0.012 260); font-weight:500;">— רק למצב א או ב</span>
+      </div>
+      <p style="margin:0 0 16px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">במצבים א (לדים) ו-ב (זמזם) המשחק ממיין כל זמן ל<strong>מהיר / בינוני / איטי</strong>. אולי הספים לא מרגישים הוגנים — למשל הכול יוצא "איטי". <strong>אתם מחליטים מה הוגן.</strong> ממלאים (נשמר במחשב הזה):</p>
+
+      <div style="background:oklch(0.96 0.05 90); border:1px solid oklch(0.86 0.08 90); border-radius:16px; padding:18px 20px; margin-bottom:16px;">
+        <div style="display:flex; flex-direction:column; gap:11px;">
+          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-size:15.5px; color:oklch(0.4 0.05 75);">
+            <span style="flex:none; width:74px; font-weight:700; color:oklch(0.42 0.12 145);">מהיר</span>
+            <span>מתחת ל-</span>
+            <input value="{{ tFast }}" onInput="{{ onTFast }}" inputmode="numeric" placeholder="250" style="width:82px; font-family:'JetBrains Mono',monospace; font-size:16px; font-weight:700; text-align:center; color:oklch(0.38 0.09 75); background:#fff; border:1.5px solid oklch(0.82 0.08 90); border-radius:9px; padding:6px 6px; outline:none; direction:ltr;" style-focus="border-color:oklch(0.65 0.14 90)" />
+            <span>מילי-שניות</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-size:15.5px; color:oklch(0.4 0.05 75);">
+            <span style="flex:none; width:74px; font-weight:700; color:oklch(0.5 0.1 85);">בינוני</span>
+            <span>בין</span>
+            <span style="display:inline-block; min-width:60px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; color:oklch(0.45 0.06 75); background:rgba(255,255,255,0.6); border-radius:8px; padding:6px 10px; direction:ltr;">{{ tFastShow }}</span>
+            <span>ל-</span>
+            <input value="{{ tSlow }}" onInput="{{ onTSlow }}" inputmode="numeric" placeholder="400" style="width:82px; font-family:'JetBrains Mono',monospace; font-size:16px; font-weight:700; text-align:center; color:oklch(0.38 0.09 75); background:#fff; border:1.5px solid oklch(0.82 0.08 90); border-radius:9px; padding:6px 6px; outline:none; direction:ltr;" style-focus="border-color:oklch(0.65 0.14 90)" />
+            <span>מילי-שניות</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-size:15.5px; color:oklch(0.4 0.05 75);">
+            <span style="flex:none; width:74px; font-weight:700; color:oklch(0.5 0.14 30);">איטי</span>
+            <span>מעל</span>
+            <span style="display:inline-block; min-width:60px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; color:oklch(0.45 0.06 75); background:rgba(255,255,255,0.6); border-radius:8px; padding:6px 10px; direction:ltr;">{{ tSlowShow }}</span>
+            <span>מילי-שניות</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin:0 0 12px; font-size:15px; line-height:1.55; color:oklch(0.46 0.012 260);">רוצים עזרה בשינוי הספים בקוד? פנייה קצרה נוספת לקלוד קוד — ממלאים (א)(ב)(ג) קודם:</p>
+      <div dir="rtl" style="background:oklch(0.96 0.03 285); border:1px solid oklch(0.88 0.05 285); border-radius:13px; padding:16px 18px; margin-bottom:30px; font-size:14.5px; line-height:1.7; color:oklch(0.38 0.06 285); white-space:pre-wrap;">אני עובד על משחק זמן התגובה שלי בפרויקט 2.
+
+(א) מה אני רוצה: שזמן מתחת ל-250 מילי-שניות ייחשב "מהיר".
+(ב) מה קורה עכשיו: כמעט כל תוצאה יוצאת "איטי".
+(ג) מה כבר ניסיתי: שיחקתי חמישה סבבים וכתבתי את הזמנים שלי.
+
+הנה הקוד הנוכחי שלי:
+<span style="font-family:'JetBrains Mono',monospace; font-size:13px;">[מדביקים כאן את כל קובץ הקוד]</span>
+
+תוכל לעזור לי לשנות את הספים של מהיר/בינוני/איטי?</div>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">המשחק רץ בדרך שבחרתם: המשוב מופיע אחרי כל לחיצה, והלד דולק לפי הקושי שבחרתם. אם כיוונתם ספים — לחיצה מהירה מסומנת "מהיר" ואיטית "איטי".</p>
+          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">אפשר להראות את הגרסה למורה ולומר "זה המשחק שבניתי".</p>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימתם כש…
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הקוד המעודכן הועלה ושיחקתם חמישה סבבים</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>צורת המשוב שבחרתם עובדת (לדים / זמזם / צג טורי)</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>רמת הקושי נכונה (2 שניות או 0.5 שנייה)</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>(מצב א/ב) הספים מהיר/בינוני/איטי מרגישים הוגנים</span></div>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.45 0.12 300); margin-bottom:11px;">
+          <span style="font-size:20px;">🪄</span>תקועים?
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>הזמזם או הלדים לא מגיבים?</strong> אולי הקוד המעודכן עוד לא עלה — מעלים שוב ומחכים ל-Done uploading.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>הספים לא הוגנים גם אחרי כמה ניסיונות?</strong> חוזרים ל-(א)(ב)(ג) עם תיאור מדויק — "לחיצה של 300 מילי-שניות נחשבת איטית ואני רוצה שתהיה בינונית".</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>עדיין לא עובד?</strong> קוראים למורה.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:1180}}">
+class Component extends DCLogic {
+  state = { checked: {}, tFast: '', tSlow: '' };
+  KEY = 'tc_p2t2m4_checks';
+  TKEY = 'tc_p2t2m4_thresholds';
+  componentDidMount() {
+    try {
+      const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) });
+      const t = localStorage.getItem(this.TKEY); if (t) { const o = JSON.parse(t); this.setState({ tFast: o.tFast || '', tSlow: o.tSlow || '' }); }
+    } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  setT(k, raw) {
+    const val = raw.replace(/[^0-9]/g, '').slice(0, 5);
+    this.setState(s => {
+      const next = { tFast: s.tFast, tSlow: s.tSlow, [k]: val };
+      try { localStorage.setItem(this.TKEY, JSON.stringify(next)); } catch (e) {}
+      return { [k]: val };
+    });
+  }
+  renderVals() {
+    const v = {
+      tFast: this.state.tFast, tSlow: this.state.tSlow,
+      tFastShow: this.state.tFast || '___', tSlowShow: this.state.tSlow || '___',
+      onTFast: (e) => this.setT('tFast', e.target.value),
+      onTSlow: (e) => this.setT('tSlow', e.target.value)
+    };
+    for (let i = 1; i <= 14; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

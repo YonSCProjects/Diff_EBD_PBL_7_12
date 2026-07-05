@@ -113,6 +113,24 @@ async function settleDc(page) {
   } catch (e) { /* settle best-effort */ }
 }
 
+const IMG_MIME = { '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif', '.webp': 'image/webp' };
+
+// Inline <img> sources as data URIs so the merged HTML bundle is self-contained.
+// Card image paths are relative to the card's own folder (./assets/…, ../images/…);
+// in the merged bundle at build_output/ those relatives break, so we resolve them
+// against the card dir and embed the bytes. The per-card PDF path is unaffected
+// (each card renders standalone where the relative path already resolves).
+function inlineImages(html, baseDir) {
+  return html.replace(/(<img\b[^>]*?\ssrc=)"([^"]+)"/gi, (m, pre, src) => {
+    if (/^(data:|https?:)/i.test(src)) return m;
+    const abs = path.resolve(baseDir, src);
+    if (!fs.existsSync(abs)) return m;
+    const mime = IMG_MIME[path.extname(abs).toLowerCase()] || 'application/octet-stream';
+    const data = fs.readFileSync(abs).toString('base64');
+    return `${pre}"data:${mime};base64,${data}"`;
+  });
+}
+
 async function renderCardPdf(browser, fullPath) {
   const page = await preparePage(browser, fullPath);
   try {
@@ -141,7 +159,7 @@ async function snapshotCardHtml(browser, fullPath) {
     const dirMatch = html.match(/<html[^>]*\sdir="([^"]+)"/);
     const langMatch = html.match(/<html[^>]*\slang="([^"]+)"/);
     return {
-      body: bodyMatch ? bodyMatch[1] : '',
+      body: inlineImages(bodyMatch ? bodyMatch[1] : '', path.dirname(fullPath)),
       styles,
       dir: dirMatch ? dirMatch[1] : '',
       lang: langMatch ? langMatch[1] : '',
@@ -156,7 +174,7 @@ async function snapshotCardHtml(browser, fullPath) {
       const styleEls = [...document.querySelectorAll('style')].map((s) => s.outerHTML).join('\n');
       return { html: card ? card.outerHTML : '', styles: styleEls };
     });
-    return { body: snap.html, styles: snap.styles, dir: 'rtl', lang: 'he', fonts: true };
+    return { body: inlineImages(snap.html, path.dirname(fullPath)), styles: snap.styles, dir: 'rtl', lang: 'he', fonts: true };
   } finally {
     await page.close();
   }

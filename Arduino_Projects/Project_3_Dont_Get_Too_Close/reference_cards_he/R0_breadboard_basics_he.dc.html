@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>כרטיסיית עזר R0 — איך עובד ברדבורד</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 28px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 3 · לא להתקרב יותר מדי
+        </div>
+        <div style="display:inline-flex; align-items:center; gap:10px;">
+          <span style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">כרטיסיית עזר</span>
+          <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; border:2px solid rgba(255,255,255,0.5); font-size:15px; font-weight:700; letter-spacing:0.5px;">R0</span>
+        </div>
+      </div>
+
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:26ch;"><span style="margin-inline-end:8px;">🧩</span>איך עובד ברדבורד</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85);">פרויקט #3 • לא להתקרב יותר מדי</p>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <p style="margin:0 0 20px; font-size:16.5px; line-height:1.6; color:oklch(0.46 0.012 260);">קוראים את הכרטיסייה הזאת לפני הפגישה הראשונה. לא צריך לשנן אותה — משאירים אותה על שולחן העבודה וחוזרים לכל חלק כשנתקעים.</p>
+
+      <div style="background:oklch(0.96 0.03 248); border:1px solid oklch(0.86 0.05 248); border-radius:16px; padding:18px 20px; margin-bottom:26px;">
+        <p style="margin:0; font-size:16px; line-height:1.6; color:oklch(0.38 0.05 248);">ברדבורד מאפשר לבנות מעגלים חשמליים בלי להלחים. מכניסים את הרגליים של הרכיבים (חיישן המרחק, לד, נגד, זמזם, חוטים) לתוך החורים, והלוח מחבר ביניהם בפנים — בלי כלים. בסוף אפשר להוציא הכל ולהשתמש בחלקים שוב.</p>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="flex:none; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🗺️</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">בלוח יש ארבעה אזורים</h2>
+      </div>
+
+      <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:14px;">
+        <div dir="ltr" style="display:flex; justify-content:center;">
+          <img src="../images/w0_empty_breadboard_breadboard.svg" alt="תרשים של ברדבורד ריק: מסילות מתח אופקיות למעלה ולמטה (מסומנות + ו-−), וביניהן רשת של טורים ממוספרים המופרדים במרווח מרכזי." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+        </div>
+        <figcaption style="margin:12px 0 0; font-size:13px; line-height:1.6; color:oklch(0.45 0.02 260); text-align:center;"><strong style="color:oklch(0.3 0.02 260);">ברדבורד ריק:</strong> למעלה ולמטה — <strong style="color:oklch(0.3 0.02 260);">מסילות המתח</strong> (+ ו-−); בין לבין — <strong style="color:oklch(0.3 0.02 260);">טורים ממוספרים</strong> המופרדים ב<strong style="color:oklch(0.3 0.02 260);">מרווח המרכזי</strong>. השורות מסומנות a–e בחצי אחד ו-f–j בחצי השני.</figcaption>
+      </div>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:20px;">
+        <pre style="margin:0; padding:16px 18px; font-family:'JetBrains Mono',monospace; font-size:12.5px; line-height:1.5; color:oklch(0.88 0.01 260); overflow-x:auto;">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+
+     a  ● ● ● ● ● ● ● ● ● ● ●
+     b  ● ● ● ● ● ● ● ● ● ● ●
+     c  ● ● ● ● ● ● ● ● ● ● ●       top half
+     d  ● ● ● ● ● ● ● ● ● ● ●
+     e  ● ● ● ● ● ● ● ● ● ● ●
+                                    ← centre gap
+     f  ● ● ● ● ● ● ● ● ● ● ●
+     g  ● ● ● ● ● ● ● ● ● ● ●
+     h  ● ● ● ● ● ● ● ● ● ● ●       bottom half
+     i  ● ● ● ● ● ● ● ● ● ● ●
+     j  ● ● ● ● ● ● ● ● ● ● ●
+
+     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+        1 2 3 4 5 6 7 8 9 10 …</pre>
+      </div>
+
+      <div style="background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="font-weight:700; font-size:15.5px; color:oklch(0.42 0.07 75); margin-bottom:11px;">שני הכללים שחשוב להכיר</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span><strong style="color:oklch(0.34 0.05 75);">בתוך טור ממוספר אחד, השורות a–e מחוברות ביניהן.</strong> החורים a5, b5, c5, d5, e5 כולם חולקים חיבור חשמלי אחד. כל מה שמכניסים לחמשת החורים האלה — מחובר ביחד.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span><strong style="color:oklch(0.34 0.05 75);">השורות f–j מחוברות באותה צורה, אבל בנפרד מ-a–e.</strong> המרווח המרכזי שובר את החיבור — החורים e5 ו-f5 <strong style="color:oklch(0.34 0.05 75);">לא</strong> מחוברים ביניהם.</span></div>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="font-weight:700; font-size:15.5px; color:oklch(0.42 0.07 75); margin-bottom:11px;">שתי מסילות המתח</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>המסילה ה<strong style="color:oklch(0.55 0.2 27);">אדומה</strong> (מסומנת +) עוברת לאורך כל הלוח. כל החורים לאורך המסילה האדומה מחוברים ביניהם. משמשת ל-<strong style="color:oklch(0.34 0.05 75);">5 V</strong>.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>המסילה ה<strong style="color:oklch(0.45 0.13 255);">כחולה</strong> (מסומנת −) גם עוברת לאורך כל הלוח. כל החורים לאורך המסילה הכחולה מחוברים. משמשת ל-<strong style="color:oklch(0.34 0.05 75);">GND</strong> (הארקה).</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>מכיוון שכל מסילה עוברת לאורך כל הלוח, אפשר לשאוב מתח מכל מקום לאורכה — אין צורך בחוט נפרד לכל רכיב.</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:28px 0 14px;">
+        <span style="flex:none; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">💡</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">איך מניחים לד על הברדבורד</h2>
+      </div>
+
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.34 0.012 260);">ללד יש <strong>שתי רגליים באורכים שונים</strong>. הרגל הארוכה היא הצד של הפלוס; הרגל הקצרה היא הצד של המינוס. כל רגל צריכה <strong>טור ממוספר משלה</strong> — אם שתי הרגליים נכנסות לאותו טור, הלד יוצר קצר ולא יאיר.</p>
+
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.36 0.04 150);"><strong style="color:oklch(0.42 0.08 150);">כלל אצבע:</strong> מכניסים את הלד כך ששתי הרגליים נכנסות לשני טורים ממוספרים שונים (לדוגמה, הרגל הארוכה בטור 9 והרגל הקצרה בטור 8). גם לנגדים — שתי רגליים בשני טורים שונים.</p>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:28px 0 14px;">
+        <span style="flex:none; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔗</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; line-height:1.35; color:oklch(0.32 0.02 260);">מה משמעות "רגל 9 ← נגד 220 אוהם ← לד" על הברדבורד</h2>
+      </div>
+
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.34 0.012 260);">כאשר כרטיסיית העזר <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-size:12px; font-weight:700; vertical-align:middle;">R1</span> (חיווט פרויקט 3) כותבת <em dir="ltr" style="unicode-bidi:isolate;">"Arduino pin 9 → 220 Ω → LED long leg"</em>, זו שרשרת החיבורים שבונים:</p>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:14px;">
+        <pre style="margin:0; padding:14px 18px; font-family:'JetBrains Mono',monospace; font-size:12px; line-height:1.6; color:oklch(0.88 0.01 260); overflow-x:auto;">[Arduino pin 9] ── wire ── [resistor] ── [LED long leg] ── [LED short leg] ── wire ── [GND]</pre>
+      </div>
+
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.34 0.012 260);">על הברדבורד, כל חץ בשרשרת למעלה הוא טור משותף אחד. לפי החיווט ב-<span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-size:12px; font-weight:700; vertical-align:middle;">R1</span> חיווט פרויקט 3:</p>
+
+      <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:16px 18px; margin-bottom:14px;">
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>חוט ג'אמפר מרגל 9 של הארדואינו נכנס לחור אחד בברדבורד.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>רגל אחת של נגד 220 אוהם נכנסת ל<strong>אותו טור ממוספר</strong> שאליו הכנסנו את הג'אמפר — עכשיו הם מחוברים.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>הרגל השנייה של הנגד נכנסת ל<strong>טור חדש</strong> — חיבור נפרד לגמרי.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>הרגל הארוכה של הלד נכנסת לאותו טור חדש — עכשיו הזרם יכול לזרום: רגל 9 ← נגד ← לד.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>הרגל הקצרה של הלד נכנסת לטור משלה, ומשם חוט ג'אמפר חוזר למסילת ה-GND הכחולה.</span></div>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="font-weight:700; font-size:15.5px; color:oklch(0.42 0.07 75); margin-bottom:11px;">הזמזם — רכיב מוכר מפרויקט 2</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>הזמזם מתחבר בשרשרת קצרה: <strong style="color:oklch(0.34 0.05 75);">רגל 8 ← זמזם ← GND</strong>. רגל אחת של הזמזם לרגל דיגיטלית 8, הרגל השנייה למסילת ה-GND.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>הזמזם הקטן (פיזו פסיבי) <strong style="color:oklch(0.34 0.05 75);">לא צריך נגד</strong>, ולא משנה לאיזה כיוון מחברים את רגליו.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>כמו בכל רכיב — שתי הרגליים נכנסות ל<strong style="color:oklch(0.34 0.05 75);">שני טורים שונים</strong>, אחרת ייווצר קצר והזמזם לא יצפצף.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span><strong style="color:oklch(0.52 0.2 25); font-weight:700;">לעולם לא מחברים את הזמזם ישירות בין 5 V ל-GND.</strong> תמיד מפעילים אותו מרגל 8, כדי שהארדואינו ישלוט בו.</span></div>
+        </div>
+      </div>
+
+      <div style="background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="font-weight:700; font-size:15.5px; color:oklch(0.42 0.07 75); margin-bottom:11px;">חיישן המרחק — הרכיב החדש בפרויקט 3</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>לחיישן המרחק העל-קולי (HC-SR04) יש <strong style="color:oklch(0.34 0.05 75);">ארבע רגליים</strong> מסומנות: VCC, Trig, Echo, GND. כל אחת נכנסת ל<strong style="color:oklch(0.34 0.05 75);">טור משלה</strong>.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>VCC נכנס לטור שמחובר ל-<strong style="color:oklch(0.34 0.05 75);">5 V</strong>, ו-GND לטור שמחובר ל-<strong style="color:oklch(0.34 0.05 75);">GND</strong> — בדיוק כמו כל רכיב שצורך מתח.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>Trig ו-Echo הן רגלי האות: Trig לרגל דיגיטלית <strong style="color:oklch(0.34 0.05 75);">12</strong>, Echo לרגל דיגיטלית <strong style="color:oklch(0.34 0.05 75);">11</strong>. דרכן הארדואינו שולח את הצליל וקורא את ההד שחוזר.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span>מניחים את החיישן כך ששתי ה"עיניים" העגולות פונות <strong style="color:oklch(0.34 0.05 75);">אל מחוץ לקצה הברדבורד</strong>, במקום שבו יד או עצם יכולים לעבור מולן.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.4 0.03 75);"><span style="flex:none; color:oklch(0.6 0.12 75); font-weight:700;">●</span><span><strong style="color:oklch(0.52 0.2 25); font-weight:700;">VCC ו-GND הפוכים זה לזה — לא מתחלפים.</strong> VCC תמיד ל-5V, GND תמיד ל-GND. בודקים פעמיים לפני שמדליקים את הארדואינו.</span></div>
+        </div>
+      </div>
+
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.34 0.012 260);">הברדבורד עושה את החיווט בשבילנו — רק בוחרים לאיזה טור כל רגל נכנסת.</p>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:28px 0 14px;">
+        <span style="flex:none; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔍</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שני דברים לבדוק אם משהו עדיין לא עובד</h2>
+      </div>
+
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.36 0.04 150);"><strong style="color:oklch(0.42 0.08 150);">בדיקה 1 — האם שתי הרגליים של הלד בשני טורים שונים?</strong> אם שתי הרגליים באותו טור, הארוכה והקצרה מחוברות ישירות — זה קצר, והלד לא יאיר. מוציאים רגל אחת ומעבירים אותה טור אחד הצידה. אותו דבר נכון לזמזם ולחיישן — כל רגל בטור משלה. לחיישן יש <strong style="color:oklch(0.42 0.08 150);">ארבע רגליים</strong> (VCC, Trig, Echo, GND), וכל אחת חייבת טור נפרד משלה — אם שתיים מהן חולקות אותו טור, הן מתחברות בטעות והחיישן לא יקרא את המרחק נכון.</p>
+      </div>
+
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.36 0.04 150);"><strong style="color:oklch(0.42 0.08 150);">בדיקה 2 — האם כל רגל חולקת את הטור שלה עם בדיוק השכן הנכון?</strong> עוברים על השרשרת בקול רם: "הג'אמפר מרגל 9 ורגל אחת של הנגד נכנסים ל<em>אותו</em> טור; הרגל השנייה של הנגד והרגל הארוכה של הלד נכנסות ל<em>אותו</em> טור; הרגל הקצרה של הלד והג'אמפר ל-GND נכנסים ל<em>אותו</em> טור". אם זוג כלשהו נמצא ב<em>טורים שונים</em> — השרשרת שבורה שם. מעבירים את הרגל לטור המתאים.</p>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:28px 0 14px;">
+        <span style="flex:none; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.04 150); color:oklch(0.5 0.13 150); font-size:16px;">✅</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">יש לכם את מה שצריך</h2>
+      </div>
+
+      <p style="margin:0 0 8px; font-size:16px; line-height:1.6; color:oklch(0.34 0.012 260);">הכרטיסייה הבאה היא <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-size:12px; font-weight:700; vertical-align:middle;">R1</span> — חיווט פרויקט 3. משאירים את <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-size:12px; font-weight:700; vertical-align:middle;">R0</span> על שולחן העבודה — אם משהו לא עובד בהמשך, שתי הבדיקות למעלה לרוב ימצאו את הבעיה.</p>
+
+      <p style="margin:28px 0 0; padding-top:14px; border-top:1px dashed oklch(0.85 0.006 85); font-size:12.5px; text-align:center; color:oklch(0.6 0.012 260);">R0 — איך עובד ברדבורד · פרויקט #3 לא להתקרב יותר מדי</p>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

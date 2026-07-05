@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>כרטיסיית עזר R1 — תרשימי החיווט (פרויקט 4)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 28px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 4 · מכונית עוקבת קו
+        </div>
+        <div style="display:inline-flex; align-items:center; gap:10px;">
+          <span style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">כרטיסיית עזר</span>
+          <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; border:2px solid rgba(255,255,255,0.5); font-size:15px; font-weight:700; letter-spacing:0.5px;">R1</span>
+        </div>
+      </div>
+
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:26ch;"><span style="margin-inline-end:8px;">🔌</span>תרשימי החיווט</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;">פרויקט 4 • מכונית עוקבת קו • כרטיסיית עזר לעמדת התלמיד</p>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <p style="margin:0 0 16px; font-size:16.5px; line-height:1.6; color:oklch(0.46 0.012 260);">הכרטיסייה הזאת מראה איך מחברים את <strong>המנועים</strong>, את <strong>בקר המנועים <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">L298N</code></strong>, את <strong>הסוללות</strong> ואת <strong>חיישני הקו</strong> בפרויקט 4. שומרים אותה ליד המכונית. אם מתבלבלים בחיווט, קודם מסתכלים על הכרטיסייה הזאת לפני שקוראים למורה.</p>
+
+      <p style="margin:0 0 26px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">יש כאן <strong>חמישה חיווטים</strong>. יחד הם כל החיווט של המכונית: המנועים אל הבקר, החשמל, שישה חוטי האות, חיישני הקו — והאחרון, כפתור לגרסה 3 בלבד. כל חמשת החיווטים מתקיימים יחד על אותה מכונית — כל תרשים מראה רק את החוטים החדשים שלו, והקודמים נשארים במקום.</p>
+
+      <!-- ===== הכללים החשובים ביותר ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.95 0.05 35); color:oklch(0.48 0.15 32); font-size:16px;">⚠️</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">הכללים החשובים ביותר</h2>
+      </div>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:9px; color:oklch(0.48 0.15 32);">לפני שמחווטים — קוראים את אלה</div>
+          <ul style="margin:0; padding-inline-start:20px; display:flex; flex-direction:column; gap:10px; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">
+            <li><strong>ההארקה המשותפת היא החוט שהכי קל לשכוח:</strong> חוט בין <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">GND</code> של הבקר ל-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">GND</code> של הארדואינו. בלעדיו שום דבר לא זז אחרי ההעלאה — בלי שום הודעת שגיאה. זה הפספוס מספר 1 בפרויקט הזה, ולכן בודקים אותו פעמיים.</li>
+            <li><strong>אף פעם לא שני מקורות חשמל פעילים בבת אחת:</strong> כל עוד מתג הסוללות כבוי, מותר שהסוללות יהיו מחוברות גם כש-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">USB</code> בפנים. לפני שמדליקים את המתג לנסיעה על סוללות — <strong>מנתקים קודם את כבל ה-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">USB</code></strong>. מתג דלוק + <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">USB</code> מחובר ביחד — <strong>אסור</strong>.</li>
+            <li>המנועים מתחברים <strong>רק דרך הבקר</strong> (הדקי <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">OUT1</code>–<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">OUT4</code>) — אף פעם לא ישירות לרגליים של הארדואינו. הרגליים של הארדואינו הן לאותות בלבד; מנוע שמחובר אליהן ישירות עלול להזיק לארדואינו.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ===== מפת הרגליים ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מפת הרגליים</h2>
+      </div>
+
+      <div style="border:1px solid oklch(0.92 0.006 85); border-radius:12px; overflow:hidden; margin-bottom:30px;">
+        <table style="width:100%; border-collapse:collapse; font-size:15px;">
+          <thead>
+            <tr style="background:oklch(0.985 0.004 85);">
+              <th style="text-align:right; font-weight:700; color:oklch(0.34 0.012 260); padding:10px 14px; border-bottom:1px solid oklch(0.93 0.006 85);">רכיב / אות</th>
+              <th style="text-align:right; font-weight:700; color:oklch(0.34 0.012 260); padding:10px 14px; border-bottom:1px solid oklch(0.93 0.006 85);">אל</th>
+              <th style="text-align:right; font-weight:700; color:oklch(0.34 0.012 260); padding:10px 14px; border-bottom:1px solid oklch(0.93 0.006 85);">מופיע ב-</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260); line-height:1.5;">בקר — <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">ENB</code> · מהירות המנוע הימני</td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">5</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">חיווט 3</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260); line-height:1.5;">בקר — <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">IN4</code> · כיוון המנוע הימני</td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">6</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">חיווט 3</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260); line-height:1.5;">בקר — <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">IN3</code> · כיוון המנוע הימני</td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">7</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">חיווט 3</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260); line-height:1.5;">בקר — <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">IN2</code> · כיוון המנוע השמאלי</td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">8</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">חיווט 3</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260); line-height:1.5;">בקר — <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">IN1</code> · כיוון המנוע השמאלי</td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">9</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">חיווט 3</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260); line-height:1.5;">בקר — <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">ENA</code> · מהירות המנוע השמאלי</td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">10</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">חיווט 3</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260); line-height:1.5;">חיישן קו שמאלי — <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">OUT</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">11</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">חיווט 4</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260); line-height:1.5;">חיישן קו ימני — <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">OUT</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">12</code></td>
+              <td style="padding:9px 14px; border-bottom:1px solid oklch(0.93 0.006 85); color:oklch(0.4 0.012 260);">חיווט 4</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px; color:oklch(0.4 0.012 260); line-height:1.5;">כפתור התחלה/עצירה — גרסה 3 בלבד</td>
+              <td style="padding:9px 14px; color:oklch(0.4 0.012 260);">רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">2</code></td>
+              <td style="padding:9px 14px; color:oklch(0.4 0.012 260);">חיווט 5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== חיווט 1 ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חיווט 1 — המנועים אל הבקר</h2>
+      </div>
+
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">שני החוטים המולחמים של <strong>המנוע השמאלי</strong> נכנסים להדקי <strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">OUT1</code></strong> ו-<strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">OUT2</code></strong>, ושני החוטים של <strong>המנוע הימני</strong> להדקי <strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">OUT3</code></strong> ו-<strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">OUT4</code></strong>. בכל הדק: משחררים מעט את הבורג, מכניסים את קצה החוט, מהדקים בחזרה — ובודקים ב<strong>משיכה עדינה</strong> שהחוט מחזיק.</p>
+
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">איזה חוט לאיזה חור בתוך הזוג? לא משנה בשלב החיווט. אם מנוע מסתובב הפוך בבדיקה הראשונה — מחליפים בין שני החוטים שלו בהדקים. תיקון של 30 שניות, לא תקלה.</p>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:18px;">
+        <div style="display:flex; align-items:center; gap:6px; padding:11px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.6 0.16 25); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.78 0.13 90); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.7 0.14 150); display:inline-block;"></span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto; white-space:pre;">Motors                 L298N
+  left  motor ───────  OUT1 / OUT2
+  right motor ───────  OUT3 / OUT4</pre>
+      </div>
+
+      <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
+        <img src="../images/w_p4_01_motors_to_driver_breadboard.svg" alt="תרשים: בקר המנועים L298N במרכז, ומשני צדדיו שני מנועי גיר צהובים — חוטי המנוע השמאלי אל הדקי OUT1 ו-OUT2, וחוטי המנוע הימני אל הדקי OUT3 ו-OUT4." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+      </div>
+      <p style="margin:0 0 32px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>המנועים אל הבקר:</strong> חוטי המנוע השמאלי אל <strong>OUT1/OUT2</strong>, וחוטי המנוע הימני אל <strong>OUT3/OUT4</strong>. איזה חוט לאיזה חור בתוך הזוג — לא משנה בשלב הזה.</p>
+
+      <!-- ===== חיווט 2 ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חיווט 2 — חשמל והארקה משותפת</h2>
+      </div>
+
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">המתג של מחזיק הסוללות נשאר <strong>כבוי</strong> כל זמן שמחווטים. החוט <strong>האדום (+)</strong> של מחזיק הסוללות נכנס להדק <strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">VIN</code></strong> של הבקר (מסומן לפעמים <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">12V</code>), והחוט <strong>השחור (−)</strong> להדק <strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">GND</code></strong>.</p>
+
+      <div style="display:flex; gap:12px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:14px; padding:15px 18px; margin-bottom:14px;">
+        <span style="flex:none; font-size:20px; line-height:1.2;">★</span>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.4 0.03 75);"><strong style="color:oklch(0.42 0.07 75);">חוט ההארקה המשותפת:</strong> חוט בין <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">GND</code> של הבקר ל-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">GND</code> של הארדואינו. זה החוט שהכי קל לשכוח — בלעדיו שום דבר לא זז. אפשר להעביר אותו דרך המסילה הכחולה (−) של הברדבורד.</p>
+      </div>
+
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">הברדבורד הוא <strong>תחנת החשמל</strong> של המכונית: חוט מרגל <strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">5V</code></strong> של הארדואינו אל <strong>המסילה האדומה (+)</strong>, וחוט מ-<strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">GND</code></strong> של הארדואינו אל <strong>המסילה הכחולה (−)</strong>. לארדואינו יש רק רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">5V</code> אחת — המסילות מפצלות אותה לשני החיישנים.</p>
+
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">לנסיעה בלי כבל: חוט מהדק <strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">5V</code></strong> של הבקר אל רגל <strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">5V</code></strong> של הארדואינו (הג׳אמפר שעל הבקר במקומו) — וכשנוסעים על סוללות, <strong>מנתקים קודם את כבל ה-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:1px 5px; display:inline-block;">USB</code></strong>.</p>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:18px;">
+        <div style="display:flex; align-items:center; gap:6px; padding:11px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.6 0.16 25); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.78 0.13 90); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.7 0.14 150); display:inline-block;"></span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto; white-space:pre;">Battery (+) red ─────  L298N VIN (12V)
+Battery (−) black ───  L298N GND
+
+L298N GND ───────────  Arduino GND    ★ common ground!
+
+Arduino                Breadboard
+  5V  ───────────────  (+) rail
+  GND ───────────────  (−) rail
+
+Battery driving (no USB):
+  L298N 5V ──────────  Arduino 5V    (jumper in place, USB unplugged)</pre>
+      </div>
+
+      <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
+        <img src="../images/w_p4_02_power_and_common_ground_breadboard.svg" alt="תרשים: מחזיק סוללות 4×AA מחובר להדקי VIN ו-GND של בקר המנועים; חוט מרגל 5V של הארדואינו אל המסילה האדומה (+) של הברדבורד וחוט מ-GND אל המסילה הכחולה (−); חוט שחור עבה בין GND של הבקר ל-GND של הארדואינו — ההארקה המשותפת." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+      </div>
+      <p style="margin:0 0 32px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>חשמל והארקה משותפת:</strong> מחזיק הסוללות אל <strong>VIN</strong> ו-<strong>GND</strong> של הבקר; רגל <strong>5V</strong> אל המסילה האדומה (+) ו-<strong>GND</strong> אל הכחולה (−). החוט השחור <strong>העבה</strong> הוא ★ <strong>ההארקה המשותפת</strong> — GND של הבקר אל GND של הארדואינו.</p>
+
+      <!-- ===== חיווט 3 ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חיווט 3 — שישה חוטי האות (רגליים 5–10)</h2>
+      </div>
+
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">שישה חוטים משורת החיבורים שעל הבקר אל הרגליים של הארדואינו, אחד-אחד לפי הסדר. נוח לבדוק: שש הרגליים בארדואינו הן רצף אחד — <strong>5 עד 10</strong>.</p>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:18px;">
+        <div style="display:flex; align-items:center; gap:6px; padding:11px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.6 0.16 25); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.78 0.13 90); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.7 0.14 150); display:inline-block;"></span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto; white-space:pre;">L298N                  Arduino
+  ENB ───────────────  pin 5     right motor speed
+  IN4 ───────────────  pin 6     right motor direction
+  IN3 ───────────────  pin 7     right motor direction
+  IN2 ───────────────  pin 8     left motor direction
+  IN1 ───────────────  pin 9     left motor direction
+  ENA ───────────────  pin 10    left motor speed</pre>
+      </div>
+
+      <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
+        <img src="../images/w_p4_03_signal_pins_breadboard.svg" alt="תרשים: בקר המנועים מעל הארדואינו, ושישה חוטים יורדים משורת החיבורים ENA, IN1, IN2, IN3, IN4, ENB אל רגליים 10 עד 5 של הארדואינו — חוט לכל רגל." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+      </div>
+      <p style="margin:0 0 32px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>שישה חוטי האות:</strong> משורת החיבורים של הבקר אל רגליים <strong>5 עד 10</strong> של הארדואינו, חוט לכל רגל, לפי הטבלה למעלה. חוטי המהירות (<strong>ENA</strong>, <strong>ENB</strong>) ירוקים; חוטי הכיוון (<strong>IN1–IN4</strong>) כתומים.</p>
+
+      <!-- ===== חיווט 4 ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חיווט 4 — חיישני הקו</h2>
+      </div>
+
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">שני חיישני הקו מותקנים בקדמת המכונית, פונים אל הרצפה, בגובה של בערך <strong>1 ס״מ</strong> מעליה. שמאל וימין — לפי כיוון הנסיעה של המכונית.</p>
+
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">כל חיישן מקבל חשמל מהמסילות: <strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">VCC</code></strong> אל המסילה האדומה (+), <strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">GND</code></strong> אל המסילה הכחולה (−). ה-<strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">OUT</code></strong> של החיישן <strong>השמאלי</strong> הולך אל <strong>רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">11</code></strong>, וה-<strong><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">OUT</code></strong> של החיישן <strong>הימני</strong> אל <strong>רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">12</code></strong>.</p>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:18px;">
+        <div style="display:flex; align-items:center; gap:6px; padding:11px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.6 0.16 25); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.78 0.13 90); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.7 0.14 150); display:inline-block;"></span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto; white-space:pre;">IR sensor LEFT         IR sensor RIGHT
+  VCC ── (+) rail        VCC ── (+) rail
+  GND ── (−) rail        GND ── (−) rail
+  OUT ── pin 11          OUT ── pin 12</pre>
+      </div>
+
+      <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
+        <img src="../images/w_p4_04_line_sensors_breadboard.svg" alt="תרשים: שני חיישני קו כחולים מתחת לברדבורד, ה'עיניים' שלהם פונות למטה. כל חיישן: VCC אל המסילה האדומה (+), GND אל המסילה הכחולה (−); OUT של השמאלי בחוט כתום אל רגל 11 ושל הימני בחוט ירוק אל רגל 12." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+      </div>
+      <p style="margin:0 0 32px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>חיישני הקו:</strong> כל חיישן — <strong>VCC</strong> אל המסילה האדומה (+) ו-<strong>GND</strong> אל הכחולה (−); <strong>OUT</strong> של החיישן <strong>השמאלי</strong> אל רגל <strong>11</strong> (כתום) ושל <strong>הימני</strong> אל רגל <strong>12</strong> (ירוק).</p>
+
+      <!-- ===== חיווט 5 ===== -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חיווט 5 — כפתור התחלה/עצירה (גרסה 3 בלבד)</h2>
+      </div>
+
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">נחוץ רק למי שבוחרים ב<strong>גרסה 3</strong> להוסיף כפתור התחלה/עצירה. זה בדיוק חיווט הכפתור מהפרויקטים הקודמים: הכפתור לרוחב החריץ המרכזי של הברדבורד, רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">A</code> אל המסילה האדומה (+), רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">B</code> אל <strong>רגל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:1px 6px; display:inline-block;">2</code></strong> של הארדואינו — ומאותו טור גם <strong>נגד הורדה של 10 קילו-אוהם</strong> (פסי צבע: חום · שחור · כתום) אל המסילה הכחולה (−).</p>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:16px;">
+        <div style="display:flex; align-items:center; gap:6px; padding:11px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.6 0.16 25); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.78 0.13 90); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.7 0.14 150); display:inline-block;"></span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto; white-space:pre;">Button leg A ────────  (+) rail (5V)
+Button leg B ──┬─────  Arduino pin 2
+               └──[10 kΩ]── (−) rail (GND)</pre>
+      </div>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:16px 20px; margin-bottom:16px;">
+        <span style="flex:none; font-size:22px; line-height:1;">⚠️</span>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">נגד ההורדה הולך בין <strong>רגל 2 לבין <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">GND</code></strong> — לא בין 5 V לבין <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">GND</code>. אם מחווטים אותו בין 5 V לבין <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:0.9em; background:rgba(255,255,255,0.6); border-radius:5px; padding:1px 5px;">GND</code>, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
+      </div>
+
+      <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
+        <img src="../images/w_p4_05_button_tier3_breadboard.svg" alt="תרשים ברדבורד: כפתור לרוחב החריץ המרכזי — רגל אחת אל המסילה האדומה (+), רגל שנייה בחוט ירוק אל רגל 2 של הארדואינו, ומאותו טור נגד הורדה של 10 קילו-אוהם אל המסילה הכחולה (−)." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+      </div>
+      <p style="margin:0; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>כפתור התחלה/עצירה (גרסה 3 בלבד):</strong> רגל A אל המסילה האדומה (+), רגל B אל רגל <strong>2</strong> — ומאותו טור <strong>נגד הורדה של 10 קילו-אוהם</strong> אל המסילה הכחולה (−).</p>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

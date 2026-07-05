@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>כרטיסיית עזר R0 — איך עובד ברדבורד</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 28px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 4 · מכונית עוקבת קו
+        </div>
+        <div style="display:inline-flex; align-items:center; gap:10px;">
+          <span style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">כרטיסיית עזר</span>
+          <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; border:2px solid rgba(255,255,255,0.5); font-size:15px; font-weight:700; letter-spacing:0.5px;">R0</span>
+        </div>
+      </div>
+
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:26ch;"><span style="margin-inline-end:8px;">🧩</span>איך עובד ברדבורד</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;">פרויקט #4 • מכונית עוקבת קו</p>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <p style="margin:0 0 22px; font-size:16.5px; line-height:1.6; color:oklch(0.46 0.012 260);">קוראים את הכרטיסייה הזאת לפני הפגישה הראשונה. לא צריך לשנן אותה — משאירים אותה על שולחן העבודה וחוזרים לכל חלק כשנתקעים.</p>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:22px; line-height:1;">💡</span>
+        <p style="margin:0; font-size:16px; line-height:1.6; color:oklch(0.4 0.03 75);">ברדבורד מאפשר לבנות מעגלים חשמליים בלי להלחים. מכניסים את הרגליים של הרכיבים ואת חוטי הג'אמפר לתוך החורים, והלוח מחבר ביניהם בפנים — בלי כלים. בסוף אפשר להוציא הכל ולהשתמש בחלקים שוב.</p>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🗺️</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">בלוח יש ארבעה אזורים</h2>
+      </div>
+
+      <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
+        <img src="../images/w_p4_00_empty_breadboard_breadboard.svg" alt="תרשים של ברדבורד ריק: מסילות מתח אופקיות למעלה ולמטה (מסומנות + ו-−), וביניהן רשת של טורים ממוספרים המופרדים במרווח מרכזי." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+      </div>
+      <p style="margin:0 0 20px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);"><strong>ברדבורד ריק:</strong> למעלה ולמטה — <strong>מסילות המתח</strong> (+ ו-−); בין לבין — <strong>טורים ממוספרים</strong> המופרדים ב<strong>מרווח המרכזי</strong>. השורות מסומנות a–e בחצי אחד ו-f–j בחצי השני.</p>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:28px;">
+        <div style="display:flex; align-items:center; gap:7px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.6 0.17 25); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.82 0.14 90); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.72 0.15 145); display:inline-block;"></span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:12px; line-height:1.5; color:oklch(0.88 0.01 260); overflow-x:auto; white-space:pre;">     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+
+     a  ● ● ● ● ● ● ● ● ● ● ●
+     b  ● ● ● ● ● ● ● ● ● ● ●
+     c  ● ● ● ● ● ● ● ● ● ● ●       top half
+     d  ● ● ● ● ● ● ● ● ● ● ●
+     e  ● ● ● ● ● ● ● ● ● ● ●
+                                    ← centre gap
+     f  ● ● ● ● ● ● ● ● ● ● ●
+     g  ● ● ● ● ● ● ● ● ● ● ●
+     h  ● ● ● ● ● ● ● ● ● ● ●       bottom half
+     i  ● ● ● ● ● ● ● ● ● ● ●
+     j  ● ● ● ● ● ● ● ● ● ● ●
+
+     +  ● ● ● ● ● ● ● ● ● ● ●    red rail (+)
+     −  ● ● ● ● ● ● ● ● ● ● ●    blue rail (−)
+        1 2 3 4 5 6 7 8 9 10 …</pre>
+      </div>
+
+      <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:16px 18px; margin-bottom:16px;">
+        <div style="font-weight:700; font-size:16px; margin-bottom:10px; color:oklch(0.32 0.02 260);">שני הכללים שחשוב להכיר</div>
+        <ul style="margin:0; padding-inline-start:22px; display:flex; flex-direction:column; gap:9px; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);">
+          <li><strong>בתוך טור ממוספר אחד, השורות a–e מחוברות ביניהן.</strong> החורים a5, b5, c5, d5, e5 כולם חולקים חיבור חשמלי אחד. כל מה שמכניסים לחמשת החורים האלה — מחובר ביחד.</li>
+          <li><strong>השורות f–j מחוברות באותה צורה, אבל בנפרד מ-a–e.</strong> המרווח המרכזי שובר את החיבור — החורים e5 ו-f5 <strong>לא</strong> מחוברים ביניהם.</li>
+        </ul>
+      </div>
+
+      <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:16px 18px; margin-bottom:28px;">
+        <div style="font-weight:700; font-size:16px; margin-bottom:10px; color:oklch(0.32 0.02 260);">שתי מסילות המתח</div>
+        <ul style="margin:0; padding-inline-start:22px; display:flex; flex-direction:column; gap:9px; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);">
+          <li>המסילה ה<span style="color:oklch(0.55 0.21 27);"><strong>אדומה</strong></span> (מסומנת +) עוברת לאורך כל הלוח. כל החורים לאורך המסילה האדומה מחוברים ביניהם. משמשת ל-<strong>5 V</strong>.</li>
+          <li>המסילה ה<span style="color:oklch(0.42 0.13 250);"><strong>כחולה</strong></span> (מסומנת −) גם עוברת לאורך כל הלוח. כל החורים לאורך המסילה הכחולה מחוברים. משמשת ל-<strong>GND</strong> (הארקה).</li>
+          <li>מכיוון שכל מסילה עוברת לאורך כל הלוח, אפשר לשאוב מתח מכל מקום לאורכה — אין צורך בחוט נפרד לכל רכיב.</li>
+        </ul>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:12px; margin:0 0 14px;">
+        <span style="flex:none; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; padding-top:3px; font-size:18px; font-weight:700; line-height:1.3; color:oklch(0.32 0.02 260);">בפרויקט 4 הברדבורד הוא מרכז החשמל של המכונית</h2>
+      </div>
+
+      <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:16px 18px; margin-bottom:28px;">
+        <div style="font-weight:700; font-size:16px; margin-bottom:10px; color:oklch(0.32 0.02 260);">מרכז החשמל של המכונית</div>
+        <ul style="margin:0; padding-inline-start:22px; display:flex; flex-direction:column; gap:9px; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);">
+          <li>חוט מרגל <strong>5V</strong> של הארדואינו נכנס ל<strong>מסילה האדומה (+)</strong>, וחוט מ-<strong>GND</strong> נכנס ל<strong>מסילה הכחולה (−)</strong>.</li>
+          <li>שני חיישני הקו מקבלים חשמל מהמסילות: <strong>VCC</strong> מהמסילה האדומה, <strong>GND</strong> מהמסילה הכחולה. לארדואינו יש רק רגל 5V אחת — המסילות מפצלות אותה לשני החיישנים.</li>
+          <li>גם <strong>חוט ההארקה המשותפת</strong> אל בקר המנועים L298N יכול לעבור דרך המסילה הכחולה (−).</li>
+        </ul>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 12px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">💡</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">איך מחברים את חיישן הקו למסילות</h2>
+      </div>
+
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.3 0.012 260);">לכל חיישן קו יש <strong>שלוש רגליים מסומנות</strong>: VCC, GND ו-OUT. שלושה חוטי ג'אמפר מחברים אותן למקומות קבועים: <strong>VCC</strong> אל ה<strong>מסילה האדומה (+)</strong>, <strong>GND</strong> אל ה<strong>מסילה הכחולה (−)</strong>, ו-<strong>OUT</strong> אל רגל <strong>11</strong> או <strong>12</strong> של הארדואינו.</p>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:22px; line-height:1;">🧭</span>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.36 0.04 150);"><strong>כלל אצבע:</strong> קודם המתח, אחר-כך האות — מחברים VCC ו-GND, ורק אז את OUT. לפני שמדליקים בודקים פעמיים: VCC במסילה האדומה, GND במסילה הכחולה — אף פעם לא הפוך.</p>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:12px; margin:0 0 12px;">
+        <span style="flex:none; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔗</span>
+        <h2 style="margin:0; padding-top:3px; font-size:18px; font-weight:700; line-height:1.3; color:oklch(0.32 0.02 260);">מה משמעות "רגל A של הכפתור ← (+) ; רגל B ← רגל 2" על הברדבורד</h2>
+      </div>
+
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.3 0.012 260);">כאשר כרטיסיית החיווט <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-size:12px; font-weight:700; vertical-align:middle;">R1</span> של הפרויקט הזה כותבת על כפתור גרסה 3: <em>"רגל A של הכפתור ← (+) ; רגל B ← רגל 2 ; ודרך נגד 10 קילו-אוהם ← (−)"</em>, אלו שרשראות החיבורים שבונים:</p>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:20px;">
+        <div style="display:flex; align-items:center; gap:7px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.6 0.17 25); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.82 0.14 90); display:inline-block;"></span>
+          <span style="width:11px; height:11px; border-radius:50%; background:oklch(0.72 0.15 145); display:inline-block;"></span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto; white-space:pre;">[Button leg A] ── wire ── [(+) rail]
+[Button leg B] ── wire ── [Arduino pin 2]
+[Button leg B] ── [10 kΩ] ── wire ── [(−) rail]</pre>
+      </div>
+
+      <p style="margin:0 0 12px; font-size:16px; line-height:1.6; color:oklch(0.3 0.012 260);">על הברדבורד, כל חיבור בשרשרת למעלה הוא טור משותף אחד. כך קוראים אותה טור-אחר-טור:</p>
+
+      <ul style="margin:0 0 28px; padding-inline-start:22px; display:flex; flex-direction:column; gap:9px; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);">
+        <li>הכפתור יושב לרוחב החריץ המרכזי — רגל A בטור ממוספר אחד, רגל B בטור אחר.</li>
+        <li>מהטור של <strong>רגל A</strong> יוצא חוט ג'אמפר אל ה<strong>מסילה האדומה (+)</strong> — זו השרשרת הראשונה, וזהו.</li>
+        <li>מהטור של <strong>רגל B</strong> יוצא חוט ג'אמפר אל <strong>רגל 2</strong> של הארדואינו — הם חולקים טור אחד, ולכן מחוברים.</li>
+        <li>רגל אחת של <strong>נגד 10 קילו-אוהם</strong> נכנסת ל<strong>אותו טור</strong> של רגל B — עכשיו רגל B, הג'אמפר לרגל 2 והנגד מחוברים יחד.</li>
+        <li>הרגל השנייה של הנגד נכנסת ל<strong>טור חדש</strong>, ומשם חוט ג'אמפר אל ה<strong>מסילה הכחולה (−)</strong>.</li>
+      </ul>
+
+      <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:16px 18px; margin-bottom:16px;">
+        <div style="font-weight:700; font-size:16px; margin-bottom:10px; color:oklch(0.32 0.02 260);">חיישני הקו — הרכיבים החדשים בפרויקט 4</div>
+        <ul style="margin:0; padding-inline-start:22px; display:flex; flex-direction:column; gap:9px; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);">
+          <li>לכל חיישן קו יש <strong>שלוש רגליים</strong> מסומנות: VCC, GND, OUT.</li>
+          <li>החיישנים לא יושבים על הברדבורד — הם מורכבים בקדמת השלדה, עם הפנים לרצפה. אליהם מגיעים <strong>חוטי ג'אמפר</strong>.</li>
+          <li>VCC מתחבר ל<strong>מסילה האדומה (+)</strong> ו-GND ל<strong>מסילה הכחולה (−)</strong> — בדיוק כמו כל רכיב שצורך מתח.</li>
+          <li>OUT היא רגל האות: החיישן השמאלי לרגל דיגיטלית <strong>11</strong>, החיישן הימני לרגל דיגיטלית <strong>12</strong>. דרכה הארדואינו יודע אם החיישן רואה קו שחור או רצפה.</li>
+          <li><span style="color:oklch(0.53 0.2 27); font-weight:700;">VCC ו-GND הפוכים זה לזה — לא מתחלפים.</span> VCC תמיד למסילה האדומה, GND תמיד לכחולה. בודקים פעמיים לפני שמדליקים את הארדואינו.</li>
+        </ul>
+      </div>
+
+      <p style="margin:0 0 28px; font-size:16px; line-height:1.6; color:oklch(0.3 0.012 260);">הברדבורד עושה את החיווט בשבילנו — רק בוחרים לאיזה טור או מסילה כל רגל וכל חוט נכנסים.</p>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔍</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שני דברים לבדוק אם משהו עדיין לא עובד</h2>
+      </div>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">①</span>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.36 0.04 150);"><strong>בדיקה 1 — האם כל חוט נכנס למסילה הנכונה?</strong> בפרויקט 4 רוב החיבורים על הברדבורד הולכים אל המסילות. בודקים אחד-אחד: כל חוט של 5V או VCC — במסילה ה<strong>אדומה (+)</strong>; כל חוט של GND — במסילה ה<strong>כחולה (−)</strong>. חוט שנכנס בטעות למסילה הלא-נכונה (או לטור ממוספר במקום למסילה) שובר את החיבור. ואם רכיב יושב על הלוח — כל רגל שלו בטור משלה, אף פעם לא שתי רגליים באותו טור.</p>
+      </div>
+
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:22px; line-height:1;">②</span>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.36 0.04 150);"><strong>בדיקה 2 — האם כל רגל חולקת את הטור שלה עם בדיוק השכן הנכון?</strong> עוברים על השרשרת בקול רם. לחיישן הקו: "ה-VCC נכנס למסילה ה<em>אדומה</em>; ה-GND נכנס למסילה ה<em>כחולה</em>; ה-OUT מגיע לרגל 11 או 12". לכפתור של גרסה 3: "רגל A והג'אמפר למסילה האדומה נכנסים ל<em>אותו</em> טור; רגל B, הג'אמפר לרגל 2 ורגל אחת של הנגד נכנסים ל<em>אותו</em> טור; הרגל השנייה של הנגד והג'אמפר למסילה הכחולה נכנסים ל<em>אותו</em> טור". אם זוג כלשהו נמצא ב<em>טורים שונים</em> — השרשרת שבורה שם. מעבירים את הרגל לטור המתאים.</p>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.05 150); color:oklch(0.5 0.12 150); font-size:16px;">✅</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">יש לכם את מה שצריך</h2>
+      </div>
+
+      <p style="margin:0 0 26px; font-size:16px; line-height:1.6; color:oklch(0.3 0.012 260);">הכרטיסייה הבאה היא <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-size:12px; font-weight:700; vertical-align:middle;">R1</span> — חיווט פרויקט 4. משאירים את <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-size:12px; font-weight:700; vertical-align:middle;">R0</span> על שולחן העבודה — אם משהו לא עובד בהמשך, שתי הבדיקות למעלה לרוב ימצאו את הבעיה.</p>
+
+      <div style="border-top:1px dashed oklch(0.85 0.008 85); padding-top:14px; text-align:center; font-size:11.5px; color:oklch(0.6 0.012 260);">
+        R0 — איך עובד ברדבורד · פרויקט #4 מכונית עוקבת קו
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

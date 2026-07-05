@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 4 • מכונית עוקבת קו
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול 2 · כרטיסייה V2</div>
+      </div>
+
+      <div style="margin-top:16px; font-size:12.5px; font-weight:600; color:rgba(255,255,255,0.62);">פרויקט #4 — מכונית עוקבת קו: שלב 1 מתוך 6</div>
+
+      <h1 style="margin:10px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">התחלה — מקימים את המכונית ונוסעים על הקו הישר</h1>
+
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>שלב 1 מתוך 6</span><span>17%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:16.6%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <p style="margin:0 0 10px; font-size:16.5px; line-height:1.6; color:oklch(0.46 0.012 260);">בשלב זה עושים הכול ברצף אחד: פותחים את התיקייה, מוודאים שהמכונית מורכבת ומחווטת, מעלים את קוד הבסיס ועושים נסיעה נקייה אחת על הקו הישר. ואז מציצים בשלוש הבחירות שיהפכו את המכונית הזאת לשלכם: מהירות, תיקון וצורת המסלול. אם המכונית מגרסה 1 כבר בנויה — השלב הזה קצר. אם בונים מהתחלה — זו הבנייה הגדולה ביותר בתוכנית עד כה, והיא יכולה להימשך גם על פני כמה מפגשים. זה בסדר גמור — לוקחים את הזמן ומתקדמים צעד אחר צעד.</p>
+      <p style="margin:0 0 26px; font-size:14.5px; line-height:1.5; color:oklch(0.55 0.012 260);">עוברים על השלבים לפי הסדר. אפשר לסמן ✓ לכל שלב שמסיימים.</p>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה עושים</h2>
+      </div>
+
+      <!-- part A -->
+      <div style="display:flex; align-items:center; gap:10px; margin:0 0 12px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:7px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:13px;">📁</span>
+        <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.34 0.012 260);">חלק א׳ — פותחים את הפרויקט</h3>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בסרגל הצד של סייר הקבצים לוחצים על <strong>Google Drive</strong>, הולכים ל-<strong>My Drive ← Arduino_Projects</strong>, ונכנסים לתיקייה עם הכינוי שלכם.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">אם תיקיית <strong>Project_4_Line_Following_Car</strong> כבר קיימת מגרסה 1 — פותחים אותה. אם לא — יוצרים אותה עכשיו.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">פותחים את קלוד קוד ומגדירים אותו לעבוד בתיקייה הזו.</p>
+        </div>
+
+      </div>
+
+      <!-- part B -->
+      <div style="display:flex; align-items:center; gap:10px; margin:0 0 12px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:7px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:13px;">⚙️</span>
+        <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.34 0.012 260);">חלק ב׳ — מכינים את המכונית</h3>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+
+        <div style="background:oklch(0.99 0.003 85); border:1px solid oklch(0.9 0.006 85); border-radius:14px; padding:16px 18px;">
+          <div style="font-weight:700; font-size:15.5px; color:oklch(0.32 0.02 260); margin-bottom:4px;">המכונית מגרסה 1 כבר בנויה?</div>
+          <p style="margin:0 0 12px; font-size:14.5px; line-height:1.5; color:oklch(0.55 0.012 260);">עושים בדיקה מהירה:</p>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; gap:11px; align-items:flex-start; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:11px; padding:11px 13px;">
+              <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+              <p style="margin:0; font-size:15.5px; line-height:1.55; padding-top:3px;">בודקים ב<strong>משיכה עדינה</strong> את חיבורי ההלחמה של המנועים (חיבור טוב לא זז).</p>
+            </div>
+            <div style="display:flex; gap:11px; align-items:flex-start; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:11px; padding:11px 13px;">
+              <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+              <p style="margin:0; font-size:15.5px; line-height:1.55; padding-top:3px;">מוודאים ששני חיישני הקו פונים לרצפה בקדמת המכונית ומקבלים VCC ו-GND מפסי החשמל של הברדבורד.</p>
+            </div>
+            <div style="display:flex; gap:11px; align-items:flex-start; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:11px; padding:11px 13px;">
+              <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+              <p style="margin:0; font-size:15.5px; line-height:1.55; padding-top:3px;">משווים כל חוט לתרשים שלמטה.</p>
+            </div>
+            <div style="display:flex; gap:11px; align-items:flex-start; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:11px; padding:11px 13px;">
+              <span onClick="{{ toggle7 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check7 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+              <p style="margin:0; font-size:15.5px; line-height:1.55; padding-top:3px;">בודקים שהסוללות מלאות.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:oklch(0.99 0.003 85); border:1px solid oklch(0.9 0.006 85); border-radius:14px; padding:16px 18px;">
+          <div style="font-weight:700; font-size:15.5px; color:oklch(0.32 0.02 260); margin-bottom:6px;">בונים מהתחלה?</div>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.4 0.012 260);">עוברים יחד עם המורה על כרטיסי הבנייה של גרסה 1 — שלבים 1 עד 4 (עמדת ההלחמה, הלחמת המנועים, הרכבת השלדה, החיווט) — וחוזרים לכאן. מרכיבים <strong>משקפי מגן</strong> כל זמן שמלחם דולק בעמדה, ומלחימים רק יחד עם המורה; כללי הבטיחות המלאים נמצאים בכרטיסים <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R4</span> ו-<span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R6</span>.</p>
+        </div>
+
+      </div>
+
+      <!-- part C -->
+      <div style="display:flex; align-items:center; gap:10px; margin:0 0 12px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:7px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:13px;">🚗</span>
+        <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.34 0.012 260);">חלק ג׳ — מעלים את קוד הבסיס ונוסעים</h3>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle8 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check8 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מרימים את המכונית כך <strong>שהגלגלים באוויר</strong> — כדי שהיא לא תברח על השולחן באמצע ההעלאה.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle9 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check9 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את כבל ה-USB, פותחים ב-Arduino IDE את <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:1px 6px; display:inline-block;">ino_files/T2_line_follow_starter/T2_line_follow_starter.ino</code> ולוחצים על Upload.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle10 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check10 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">אחרי "Done uploading" מנתקים את ה-USB, ובודקים שהחוט מ-<strong>5V של בקר המנועים</strong> אל <strong>5V של הארדואינו</strong> מחובר — כך הסוללות מזינות גם את הארדואינו בנסיעה בלי כבל.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle11 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check11 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מניחים את המכונית בתחילת הקו הישר, כך שהקו השחור עובר <strong>בין שני חיישני הקו</strong>.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle12 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check12 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מפעילים את מתג הסוללות ומשחררים — למכונית יש שתי שניות של המתנה, ואז היא מתחילה לנסוע לבד לאורך הקו.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.97 0.03 300); border:1px solid oklch(0.9 0.04 300); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle13 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.05 300); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check13 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.52 0.12 300); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;"><strong>הצצה קדימה:</strong> קוראים את שלוש הבחירות שמחכות לכם (למטה).</p>
+        </div>
+
+      </div>
+
+      <!-- wiring section -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">תרשים החיווט — לבדיקה מהירה</h2>
+      </div>
+
+      <!-- pin recap panel -->
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:22px;">
+        <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="font-size:13px;">🔌</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">L298N ↔ Arduino — pin map</span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.7 0.01 260);">L298N               Arduino</span>
+  ENB ────────────  D5    (right speed)
+  IN4 ────────────  D6
+  IN3 ────────────  D7    (right direction)
+  IN2 ────────────  D8
+  IN1 ────────────  D9    (left direction)
+  ENA ────────────  D10   (left speed)
+
+<span style="color:oklch(0.7 0.01 260);">Motors</span>
+  Left motor  ────  OUT1 / OUT2
+  Right motor ────  OUT3 / OUT4
+
+<span style="color:oklch(0.7 0.01 260);">Line sensors</span>
+  LEFT  OUT ──────  D11
+  RIGHT OUT ──────  D12
+  VCC / GND ──────  breadboard (+) / (−) rails
+
+<span style="color:oklch(0.7 0.01 260);">Power</span>
+  Battery (+) ────  L298N VIN
+  Battery (−) ────  L298N GND
+<span style="color:oklch(0.82 0.13 90);">  L298N GND ──────  Arduino GND   &lt;-- COMMON GROUND!</span>
+  L298N 5V  ──────  Arduino 5V
+  Arduino 5V  ────  (+) rail
+  Arduino GND ────  (−) rail</pre>
+      </div>
+
+      <!-- full-car diagram -->
+      <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85); margin-bottom:28px;">
+        <div dir="ltr" style="padding:22px 18px 14px; display:flex; justify-content:center;">
+          <img src="./assets/w_p4_01_driver_wiring_breadboard.svg" alt="תרשים מלא של המכונית: בקר המנועים L298N עם שני המנועים ומחזיק הסוללות, שישה חוטי אות אל רגליים 5 עד 10, הברדבורד כתחנת החשמל ושני חיישני הקו על רגליים 11 ו-12. חוט שחור עבה מחבר את GND של הבקר אל GND של הארדואינו." style="width:600px; max-width:100%; height:auto;" />
+        </div>
+        <div style="padding:12px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13.5px; line-height:1.6; color:oklch(0.45 0.012 260);"><strong>המכונית המלאה:</strong> הבקר עם המנועים ומחזיק הסוללות, חיישני הקו מלפנים והברדבורד כתחנת החשמל. החוט השחור <strong>העבה</strong> הוא ★ <strong>ההארקה המשותפת</strong> — <span dir="ltr">L298N GND ↔ Arduino GND</span>.</div>
+      </div>
+
+      <!-- common-ground warning -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">החוט החשוב ביותר במכונית — הארקה משותפת</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">בקר המנועים והארדואינו חייבים לחלוק חוט GND משותף (<span dir="ltr">L298N GND ↔ Arduino GND</span>). בלעדיו המכונית לא נוסעת, או מתנהגת מוזר בלי הסבר — וזו הטעות הנפוצה ביותר בפרויקט הזה. אם משהו לא עובד, בודקים קודם כול את החוט הזה.</p>
+        </div>
+      </div>
+
+      <!-- expected -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">אחרי ההעלאה מופיעה הודעה ירוקה "Done uploading". על הרצפה: המכונית נוסעת לאורך הקו הישר ומתקנת את עצמה בעדינות ימינה ושמאלה כשהיא סוטה. נדנוד קטן הוא תקין — ככה עוקב קו עובד. כשמרימים את המכונית מהרצפה, או כששני החיישנים רואים שחור יחד — המנועים נעצרים.</p>
+          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">גלגל אחד מסתובב אחורה? <strong>נורמלי לגמרי</strong> — ככה יוצאת כמעט כל הרכבה ראשונה. מחליפים בין שני החוטים של אותו מנוע בהדקי ה-OUT של בקר המנועים — תיקון של 30 שניות, לא כישלון. בשלבים הבאים תהפכו את המכונית הזאת לשלכם — תבחרו מהירות, תיקון ומסלול.</p>
+        </div>
+      </div>
+
+      <!-- choice preview -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.95 0.05 285); color:oklch(0.5 0.13 285); font-size:16px;">🔀</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלוש הבחירות שמחכות לכם</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:14px;">
+        <div style="background:oklch(0.97 0.025 285); border:1px solid oklch(0.9 0.04 285); border-radius:14px; padding:16px 18px;">
+          <div style="font-weight:700; font-size:15.5px; color:oklch(0.42 0.1 285); margin-bottom:4px;">שלב 2 — מהירות (<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:rgba(255,255,255,0.7); border-radius:5px; padding:1px 6px; display:inline-block;">BASE_SPEED</code>):</div>
+          <p style="margin:0; font-size:15px; line-height:1.55; color:oklch(0.42 0.04 285);">איטי (יציב ובטוח בכל עיקול), בינוני (ברירת המחדל), או מהיר (מלהיב — ומאתגר בעיקולים). בוחרים אחד.</p>
+        </div>
+        <div style="background:oklch(0.97 0.025 285); border:1px solid oklch(0.9 0.04 285); border-radius:14px; padding:16px 18px;">
+          <div style="font-weight:700; font-size:15.5px; color:oklch(0.42 0.1 285); margin-bottom:4px;">שלב 3 — תיקון (<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:rgba(255,255,255,0.7); border-radius:5px; padding:1px 6px; display:inline-block;">CORRECTION</code>):</div>
+          <p style="margin:0; font-size:15px; line-height:1.55; color:oklch(0.42 0.04 285);">עדין (נסיעה חלקה בקו ישר, עלול לפספס עיקול חד) או חזק (נצמד לעיקולים, מתנדנד בקו ישר). כאן <strong>משנים את הקוד בעצמכם</strong> בעזרת קלוד קוד.</p>
+        </div>
+        <div style="background:oklch(0.97 0.025 285); border:1px solid oklch(0.9 0.04 285); border-radius:14px; padding:16px 18px;">
+          <div style="font-weight:700; font-size:15.5px; color:oklch(0.42 0.1 285); margin-bottom:4px;">שלב 4 — צורת המסלול:</div>
+          <p style="margin:0; font-size:15px; line-height:1.55; color:oklch(0.42 0.04 285);">ישר, עיקול עדין או עיקול חד — ומניחים מסלול משלכם על הרצפה עם סרט בידוד שחור.</p>
+        </div>
+      </div>
+      <p style="margin:0 0 28px; font-size:14px; line-height:1.55; color:oklch(0.55 0.012 260);">אין צורך להחליט עכשיו — רק לקרוא, כדי לדעת מה מגיע. הבחירות משפיעות זו על זו (מהיר + עיקול חד = אתגר אמיתי), ופרטים על כל אופציה בכרטיסי העזר.</p>
+
+      <!-- modify-code note -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 285); border:1px solid oklch(0.88 0.05 285); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:22px; line-height:1;">🧠</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.45 0.12 285);">שימו לב — שינוי קוד בכוחות עצמכם</div>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.42 0.06 285);">בשלב 3 תשנו את הקוד בעצמכם (ערוץ A, גרסה 2): מתארים מה רוצים, שואלים את קלוד קוד, קוראים את התשובה, עורכים את הקוד ומעלים מחדש. זו לא העתקה — אתם מבינים מה שיניתם.</p>
+        </div>
+      </div>
+
+      <!-- done-when -->
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימתם כש:
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>תיקיית <span dir="ltr">Project_4_Line_Following_Car</span> פתוחה וקלוד קוד עובד בתוכה</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>המכונית מורכבת ומחווטת לפי התרשים — כולל חוט ההארקה המשותפת — והמורה אישר</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>קוד הבסיס <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px; display:inline-block;">T2_line_follow_starter</code> הועלה בהצלחה</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>המכונית עקבה אחרי הקו הישר מההתחלה ועד הסוף, לפחות פעם אחת</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>קראתם את שלוש הבחירות שמחכות בשלבים 2, 3 ו-4</span></div>
+        </div>
+      </div>
+
+      <!-- stuck -->
+      <div style="background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.45 0.12 300); margin-bottom:11px;">
+          <span style="font-size:20px;">🪄</span>תקועים?
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>בשלב הזה יש הרבה צעדים קטנים ביחד. אם משהו לא ברור — מאטים, ואפשר לקבל את הכרטיסים המפורטים של גרסה 1 לכל חלק.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>המכונית לא זזה בכלל? בודקים את מתג הסוללות, את הסוללות עצמן — ואת חוט ההארקה המשותפת (הטעות הנפוצה ביותר).</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>גלגל אחד מסתובב אחורה? מחליפים בין שני החוטים של אותו מנוע בהדקי ה-OUT של בקר המנועים — 30 שניות וזה מסודר.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>המכונית בורחת מהקו במקום לעקוב אחריו? כנראה ההגדרה <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">LINE_IS_HIGH</code> הפוכה. מבקשים מקלוד קוד לעזור להפוך אותה ומעלים מחדש — ואם רוצים, קוראים גם למורה.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>חיבור הלחמה התרופף מאז גרסה 1? זו תחזוקה, לא כישלון. כל דבר שקשור להלחמה — <strong>קוראים למורה, תמיד.</strong></span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:4772}}">
+class Component extends DCLogic {
+  state = { checked: {} };
+  KEY = 'tc_p4t2m1_checks';
+  componentDidMount() {
+    try { const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) }); } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  renderVals() {
+    const v = {};
+    for (let i = 1; i <= 20; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

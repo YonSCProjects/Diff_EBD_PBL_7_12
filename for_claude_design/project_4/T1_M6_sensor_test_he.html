@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית ניווט פרויקט 4 — שלב 6: בודקים את עיני המכונית מעל הקו</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<script src="../task_cards/card.js" defer></script>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #4 — מכונית עוקבת קו: שלב 6 מתוך 8</div>
+  <h1><span class="section-icon">💻</span>בודקים את עיני המכונית מעל הקו</h1>
+  <div class="subtitle">פרויקט 4 • מכונית עוקבת קו</div>
+</div>
+
+<div class="why">
+בשלב זה מעלים לארדואינו קוד מוכן שקורא את שני <strong>חיישני הקו</strong> — ה"עיניים" של המכונית. אין חיווט חדש — הכול מחובר עוד משלב 4. הקוד מדפיס למסך המעקב מה כל עין רואה: <strong>LINE</strong> (קו שחור) או <strong>FLOOR</strong> (רצפה). אם עשיתם את פרויקט 3 — זה אותו קסם שבו המספר השתנה כשהזזתם יד, רק שהפעם יש שתי עיניים.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>פותחים את הקובץ <code dir="ltr">02_sensor_test.ino</code> ב-Arduino IDE.<span class="li-detail">הקובץ נמצא בתיקיית פרויקט 4 שלכם, בתוך <code dir="ltr">ino_files/02_sensor_test/</code>. אם לא בטוחים איזה קובץ לפתוח — בודקים בכרטיס העזר <span class="r-ref">R5</span>.</span></li>
+  <li><strong>לא משנים שום שורה בקוד.</strong> רק פותחים ומעלים.</li>
+  <li>לוחצים על כפתור ה-Upload — הכפתור עם החץ שפונה ימינה. עוקבים אחרי סרגל ההתקדמות בתחתית ה-IDE.</li>
+  <li>כשההעלאה מסתיימת, אמורה להופיע ההודעה הירוקה <strong>Done uploading</strong> בתחתית.</li>
+  <li>פותחים את <strong>מסך המעקב (Serial Monitor)</strong>: לוחצים על סמל <strong>זכוכית המגדלת</strong> בפינה הימנית-עליונה של ה-IDE. מוודאים שמהירות התקשורת (baud) מוגדרת ל-<strong>9600</strong>.</li>
+  <li>מניחים את המכונית על הרצפה מעל <strong>הקו השחור</strong> — הכבל נשאר מחובר למחשב.</li>
+  <li>שמים לב שכבל ה-USB לא נמתח — לא מרחיקים את המכונית מעבר לאורך הכבל; אם צריך, מקרבים את המחשב.</li>
+  <li>מזיזים את המכונית <strong>לאט</strong> ימינה ושמאלה על פני הקו.</li>
+  <li>מסתכלים במסך המעקב: בכל פעם שחיישן חוצה את הסרט השחור, הקריאה שלו מתחלפת בין <strong>FLOOR</strong> ל-<strong>LINE</strong>.</li>
+</ul>
+
+<p>כך נראות השורות במסך המעקב כשמזיזים את המכונית על פני הקו:</p>
+
+<pre class="wiring-block" dir="ltr">LEFT: FLOOR   RIGHT: FLOOR
+LEFT: FLOOR   RIGHT: LINE
+LEFT: LINE    RIGHT: FLOOR</pre>
+
+<p><strong>LINE</strong> = העין הזאת רואה את הקו השחור. <strong>FLOOR</strong> = העין הזאת רואה רצפה. LEFT הוא החיישן השמאלי ו-RIGHT הוא החיישן הימני — שמאל וימין לפי כיוון הנסיעה של המכונית.</p>
+
+<div class="image-slot living-placeholder">
+  <div class="image-slot-header">איור בהכנה</div>
+  <p>כאן ייכנס תרשים: מבט מלמעלה על המכונית מעל קו שחור — שני חיישני הקו בקדמת המכונית משני צידי הקו, וחצים שמראים הזזה איטית ימינה ושמאלה.</p>
+</div>
+
+<div class="key">
+  <strong><span class="section-icon">⚠️</span>המנועים לא זזים בשלב הזה — וזה בכוונה</strong>
+  <p>הקוד הזה הוא <strong>עיניים בלבד</strong>: הוא רק קורא את שני חיישני הקו ומדפיס מה הם רואים. המכונית לא אמורה לנסוע עכשיו. הנסיעה על הקו מגיעה בשלב הבא — קודם מוודאים שהעיניים רואות נכון.</p>
+</div>
+
+<div class="screen-only">
+<h2><span class="section-icon">💡</span>מה הקוד עושה</h2>
+
+<p>כל חיישן קו שולח אור אינפרא-אדום אל הרצפה ובודק כמה אור חוזר אליו: רצפה בהירה מחזירה הרבה אור — FLOOR; סרט שחור בולע את האור וכמעט לא מחזיר — LINE. הקוד קורא את שני החיישנים חמש פעמים בשנייה ומדפיס את התשובות למסך המעקב. לא חייבים להבין כל שורה — אפשר רק לקרוא אם רוצים.</p>
+</div>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>במסך המעקב מופיעות שורות כמו <code dir="ltr">LEFT: FLOOR   RIGHT: LINE</code> שמתעדכנות כמה פעמים בשנייה. כשמזיזים את המכונית לאט על פני הקו, כל צד מתחלף בין FLOOR ל-LINE בדיוק כשהחיישן שלו חוצה את הסרט השחור.</p>
+  <p class="expected-note">הגלגלים לא זזים בזמן הבדיקה — זה בדיוק מה שאמור לקרות. הקוד הזה הוא עיניים בלבד.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>ב-Arduino IDE מופיע Done uploading בירוק</li>
+    <li>מסך המעקב פתוח ומראה ש-LEFT ו-RIGHT מתעדכנים שוב ושוב</li>
+    <li>הקריאות של שני החיישנים מתחלפות בין LINE ל-FLOOR בהתאם למציאות — חיישן שמעל הקו מראה LINE, וחיישן שמעל הרצפה מראה FLOOR</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  <ul>
+    <li><strong>אם מסך המעקב ריק או שלא מופיעות שורות:</strong> כנראה שמסך המעקב לא פתוח, או שה-baud לא מוגדר ל-9600. לוחצים על סמל זכוכית המגדלת ובודקים שה-baud מוגדר ל-9600.</li>
+    <li><strong>אם חיישן מראה תמיד את אותה קריאה — תמיד LINE או תמיד FLOOR, גם כשמזיזים את המכונית:</strong> בודקים שהחיישן נמצא בערך <strong>1 ס"מ</strong> מעל הרצפה — לא צמוד לרצפה ולא גבוה מדי. מוודאים שאין שמש ישירה על הקו — אור שמש חזק מבלבל את החיישן. אם זה עדיין קורה — קוראים למורה: לפעמים צריך לסובב בעדינות בורג כיוון קטן (פוטנציומטר) על החיישן, ואת זה עושים יחד עם המורה.</li>
+    <li><strong>אם ה-Upload נכשל:</strong> בודקים שב-Tools → Board מופיע "Arduino Uno" ושב-Tools → Port מופיעה יציאת COM. אם מסך המעקב פתוח, סוגרים אותו, מעלים שוב, ואז פותחים אותו בחזרה.</li>
+    <li><strong>אם עדיין תקועים אחרי זה,</strong> קוראים למורה לעזרה.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

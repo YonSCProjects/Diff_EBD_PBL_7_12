@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>כרטיסיית ניווט פרויקט 3 — שלב 1: מחווטים את חיישן המרחק</title>
+<link rel="stylesheet" href="../task_cards/style.css">
+<script src="../task_cards/card.js" defer></script>
+</head>
+<body>
+<div class="card">
+
+<div class="card-id">V1</div>
+
+<div class="header">
+  <div class="milestone-badge">פרויקט #3 — לא להתקרב יותר מדי: שלב 1 מתוך 6</div>
+  <h1><span class="section-icon">🔌</span>מחווטים את חיישן המרחק</h1>
+  <div class="subtitle">פרויקט 3 • לא להתקרב יותר מדי</div>
+</div>
+
+<div class="why">
+בשלב זה מחברים את החלק החדש של הפרויקט — <strong>חיישן מרחק על-קולי</strong>. החיישן שולח צליל שאוזניים לא שומעות, מקשיב להד שחוזר, ומחשב כמה רחוק נמצא העצם הקרוב אליו. הוא הלב של אזעקת הקרבה שנבנה כאן.
+</div>
+
+<h2><span class="section-icon">📋</span>מה עושים</h2>
+
+<ul class="checklist">
+  <li>בסרגל הצד של סייר הקבצים לוחצים על <strong>Google Drive</strong>, ואז הולכים ל-<strong>My Drive ← Arduino_Projects</strong>.</li>
+  <li>נכנסים לתיקייה עם הכינוי שלכם.</li>
+  <li>בתוכה יוצרים תיקייה חדשה בשם <strong>Project_3_Dont_Get_Too_Close</strong>.</li>
+  <li>פותחים יחד עם המורה את קלוד קוד ומגדירים אותו לעבוד בתיקייה החדשה.</li>
+  <li>בוחרים את חיישן המרחק <strong>(HC-SR04)</strong> ממגש החלקים. יש לו ארבע רגליים מסומנות: <strong>VCC</strong>, <strong>Trig</strong>, <strong>Echo</strong>, <strong>GND</strong>.</li>
+  <li>מכניסים את ארבע הרגליים בשורה ישרה אחת בברדבורד, כל רגל בטור נפרד, כך ששתי ה"עיניים" העגולות פונות החוצה מעבר לקצה הברדבורד — במקום שבו יד יכולה לעבור מולן.</li>
+  <li>מחברים את <strong>VCC</strong> ל-<strong>5 V</strong>.</li>
+  <li>מחברים את <strong>GND</strong> ל-<strong>GND</strong>.</li>
+  <li>מחברים את <strong>Trig</strong> לרגל דיגיטלית <strong>12</strong>.</li>
+  <li>מחברים את <strong>Echo</strong> לרגל דיגיטלית <strong>11</strong>.</li>
+</ul>
+
+<h2><span class="section-icon">🔌</span>תרשים החיווט</h2>
+
+<pre class="wiring-block" dir="ltr">HC-SR04            Arduino
+  VCC  ───────────  5V
+  Trig ───────────  pin 12
+  Echo ───────────  pin 11
+  GND  ───────────  GND</pre>
+
+<figure class="wiring-figure">
+  <img src="../images/w_p3_01_hcsr04_breadboard.svg" alt="תרשים ברדבורד: חיישן HC-SR04 על הברדבורד — VCC ל-5V (חוט אדום), GND ל-GND (חוט שחור), Trig לרגל 12 (חוט כתום), Echo לרגל 11 (חוט ירוק). שתי העיניים פונות החוצה.">
+  <figcaption><strong>חיישן המרחק:</strong> VCC ל-<strong>5 V</strong> (אדום), GND ל-<strong>GND</strong> (שחור), <strong>Trig לרגל 12</strong> (כתום), <strong>Echo לרגל 11</strong> (ירוק).</figcaption>
+</figure>
+
+<div class="expected">
+  <strong><span class="section-icon">👀</span>מה רואים אם הכול תקין</strong>
+  <p>ארבע הרגליים של החיישן מחוברות: VCC ל-5 V, GND ל-GND, Trig לרגל 12, Echo לרגל 11. שתי ה"עיניים" פונות החוצה מעבר לקצה הברדבורד.</p>
+  <p class="expected-note"><strong>עדיין לא רואים מספר ולא שומעים כלום</strong> — עוד לא העלינו קוד. זה יקרה בשלב 2. בשלב הזה רק בודקים שהחיווט נכון.</p>
+</div>
+
+<div class="done-when">
+  <strong><span class="section-icon">✅</span>סיימתם כש:</strong>
+  <ul>
+    <li>VCC מחובר ל-5 V, ו-GND מחובר ל-GND</li>
+    <li>Trig מחובר לרגל 12, ו-Echo מחובר לרגל 11</li>
+    <li>שתי ה"עיניים" של החיישן פונות החוצה מעבר לקצה הברדבורד</li>
+    <li>המורה אישר שהחיווט נכון</li>
+  </ul>
+</div>
+
+<div class="stuck">
+  <strong><span class="section-icon">🪄</span>תקועים?</strong>
+  קל להחליף בטעות בין <strong>Trig</strong> ל-<strong>Echo</strong>, או בין <strong>VCC</strong> ל-<strong>GND</strong>. בודקים את התוויות שכתובות על החיישן עצמו מול תרשים החיווט. אם החיישן לא יושב יציב בברדבורד, לוחצים עליו בעדינות עד שכל ארבע הרגליים נכנסות. אם לא בטוחים — קוראים למורה.
+</div>
+
+</div>
+</body>
+</html>

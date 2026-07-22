@@ -1,5 +1,11 @@
 # Claude-Design (.dc.html) Card Design Spec — Hebrew Arduino Task Cards
 
+> **Companion log:** when AUTHORING NEW cards (P5–P8) — where the Hebrew is being written,
+> not converted — also read **`Card_Editing_Preferences_Log.md`** (maintained by the
+> `/learn-changes` skill from Yon's review-console edits). FIRM/CONFIRMED rules there are
+> applied silently; TENTATIVE ones are "leanings". For CONVERSION of existing reviewed text,
+> the Prime Directive below still wins: words are final.
+
 Derived verbatim from the 8 exemplar cards:
 
 1. `Arduino_Projects/Project_2_Reaction_Time_Game/task_cards_he/P2_T1_M1_wire_led_and_button_he.dc.html`

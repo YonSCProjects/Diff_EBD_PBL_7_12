@@ -22,3 +22,6 @@ package-lock.json
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Runtime lock files
+.claude/scheduled_tasks.lock

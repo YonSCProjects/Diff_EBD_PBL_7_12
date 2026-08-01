@@ -8328,8 +8328,8 @@
    <g id="breadboard" >
     <rect fill="none" height="10" id="connector0pin" width="10" x="5"  y="35.9"/>
     <rect fill="none" height="10" id="connector1pin" width="10" x="414.17"  y="35.9"/>
-    <line fill="none" id="connector0leg" stroke="#8C8C8C" stroke-linecap="round" stroke-width="29.1" x1="14.55" x2="29.1"  y1="50.45" y2="50.45"/>
-    <line fill="none" id="connector1leg" stroke="#8C8C8C" stroke-linecap="round" stroke-width="29.1" x1="414.62" x2="400.07"  y1="50.45" y2="50.45"/>
+    <line fill="none" id="connector0leg" stroke="#404040" stroke-linecap="round" stroke-width="29.1" x1="10" x2="29.1" y1="40.9" y2="50.45"/>
+    <line fill="none" id="connector1leg" stroke="#404040" stroke-linecap="round" stroke-width="29.1" x1="419.17" x2="400.07" y1="40.9" y2="50.45"/>
     <path d="M14.55,50.45l393.98,0" fill="none" stroke="#8C8C8C" stroke-width="29.1" />
     <path d="M142.33,6.88c-5,-2.3,-13.6,-4.1,-19.1,-4.1l-27.6,0c-5.5,0,-10,4.5,-10,10l0,74.39c0,5.51,4.5,10,10,10l27.6,0c5.5,0,14.1,-1.89,19.1,-4.1l1,-0.49c5,-2.3,13.6,-4.1,19.1,-4.1l99.8,0c5.51,0,14.09,1.89,19.09,4.1l1.01,0.49c5,2.3,13.58,4.1,19.1,4.1l27.6,0c5.52,0,10,-4.49,10,-10L339.03,12.78c0,-5.5,-4.48,-10,-10,-10l-27.6,0c-5.52,0,-14.1,1.9,-19.1,4.1l-1.01,0.5c-5,2.3,-13.58,4.1,-19.09,4.1l-99.8,0c-5.5,0,-14.1,-1.9,-19.1,-4.1L142.33,6.88z" fill="#D9B477" id="body" />
     <rect fill="#ad9f4e" height="94.38" id="gold_band" width="9.76" x="305.82"  y="2.69"/>
@@ -8350,12 +8350,12 @@
  <path d="M3969.59,1988.89L3945.04,1988.89" fill="none" opacity="1" stroke="#8c8c8c" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <path d="M3969.59,1988.89L3945.04,1988.89" fill="none" opacity="0.2" stroke="#00ff00" stroke-linecap="round" stroke-linejoin="round" stroke-width="29.1"/>
  <g partID="90000070">
-  <line stroke="#000000" stroke-linecap="round" stroke-width="44.4444" x1="1949.61" x2="3240.56" y1="2000" y2="755.556"/>
-  <line stroke="#000000" stroke-linecap="round" stroke-width="22.2222" x1="1949.61" x2="3240.56" y1="2000" y2="755.556"/>
+  <line stroke="#000000" stroke-linecap="round" stroke-width="44.4444" x1="1949.61" x2="3240.56" y1="2000" y2="2455.56"/>
+  <line stroke="#000000" stroke-linecap="round" stroke-width="22.2222" x1="1949.61" x2="3240.56" y1="2000" y2="2455.56"/>
  </g>
  <g partID="90000060">
-  <line stroke="#000000" stroke-linecap="round" stroke-width="44.4444" x1="4240.56" x2="4240.56" y1="2155.56" y2="755.556"/>
-  <line stroke="#000000" stroke-linecap="round" stroke-width="22.2222" x1="4240.56" x2="4240.56" y1="2155.56" y2="755.556"/>
+  <line stroke="#000000" stroke-linecap="round" stroke-width="44.4444" x1="4240.56" x2="4240.56" y1="2155.56" y2="2455.56"/>
+  <line stroke="#000000" stroke-linecap="round" stroke-width="22.2222" x1="4240.56" x2="4240.56" y1="2155.56" y2="2455.56"/>
  </g>
  <g partID="90000050">
   <line stroke="#f28a00" stroke-linecap="round" stroke-width="44.4444" x1="1789.61" x2="3940.56" y1="100" y2="2155.56"/>

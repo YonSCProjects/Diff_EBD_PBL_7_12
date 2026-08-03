@@ -96,11 +96,32 @@ inlines it automatically (`inlineImages`).
 
 ---
 
+### T3 — No standalone "how to use this card" intro line — CONFIRMED (swept 2026-08-03)
+**Rule:** Cards do NOT carry the chrome line "עוברים על השלבים לפי הסדר. אפשר לסמן ✓ לכל שלב שמסיימים." between the header band and the first section. The checkboxes are self-explanatory.
+
+**Why:** Yon removed it from T1_M1 (comment: "להוריד לגמרי את השורה הזאת") and then approved a program-wide sweep ("remove from all").
+
+**Sweep record:** 2026-08-03 — removed from all 34 dc task cards that carried it (21 never had it). Two content-bearing near-variants kept pending his call: "השלב (הזה) מאחד כמה צעדים. עוברים אחד-אחד; אפשר לסמן ✓ לכל שלב." (P1×2 merged-step cards).
+**Status:** CONFIRMED. New cards (P5–P8) must not include the line.
+
+### W2 — Expected-boxes state the observation, not the explanation
+**Rule:** "מה רואים אם הכול תקין" gives the shortest observable fact ("הלד הירוק הקטן L, ליד רגל 13, מהבהב."); background explanations (why it blinks, edge cases) are cut even when factually useful.
+
+**Why (explicit):** 2026-08-03 — Claude added a factory-Blink explanation + reused-board hedge to answer Yon's correctness question; Yon replaced it with the bare observation ("let's make it simple"). Simplicity beats completeness in student-facing expected-boxes; put explanations in teacher materials if anywhere.
+
+**Examples:**
+- `…מהבהב פעם בשנייה — לוח חדש מגיע מהמפעל עם קוד הבהוב מובנה. לוח שכבר השתמשו בו עשוי להתנהג אחרת, וזה בסדר.` → `…מהבהב.` (P1 T1_M1, direct instruction)
+
+**Evidence:** 1 (direct, explicit instruction — stronger than an inferred edit) · **Status:** FIRM for expected-boxes; watch for generalization to other callouts.
+
 ## Processed feedback ledger
 | Date learned | Feedback files |
 |---|---|
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-03** — T3 added and CONFIRMED via approved sweep (intro chrome line removed from 34 cards);
+  W2 added (FIRM, explicit "make it simple" instruction on expected-boxes). Feedback 2026-08-03_2232 applied
+  (7 T1_M1 changes; T1_M2 entries were stale cache — Yon had not reset the console).
 - **2026-07-13** — Log bootstrapped by /learn-changes creation: 4 seed rules (T1, T2, W1, V1) from the
   2026-07-05 + 2026-07-08 review rounds; V1 strengthened by Yon's own T1_M1 image rework.

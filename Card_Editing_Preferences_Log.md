@@ -104,22 +104,72 @@ inlines it automatically (`inlineImages`).
 **Sweep record:** 2026-08-03 — removed from all 34 dc task cards that carried it (21 never had it). Two content-bearing near-variants kept pending his call: "השלב (הזה) מאחד כמה צעדים. עוברים אחד-אחד; אפשר לסמן ✓ לכל שלב." (P1×2 merged-step cards).
 **Status:** CONFIRMED. New cards (P5–P8) must not include the line.
 
-### W2 — Expected-boxes state the observation, not the explanation
-**Rule:** "מה רואים אם הכול תקין" gives the shortest observable fact ("הלד הירוק הקטן L, ליד רגל 13, מהבהב."); background explanations (why it blinks, edge cases) are cut even when factually useful.
+### W2 — Expected-boxes and figure captions state the observation, not the explanation
+**Rule:** "מה רואים אם הכול תקין" and figure captions give the shortest observable fact ("הלד הירוק הקטן L ליד רגל 13 מהבהב."); background explanations and warm meta-framing are cut even when factually useful. **This governs NEW text being written — it is NOT a license to trim existing reviewed card content** (see sweep evaluation below).
 
-**Why (explicit):** 2026-08-03 — Claude added a factory-Blink explanation + reused-board hedge to answer Yon's correctness question; Yon replaced it with the bare observation ("let's make it simple"). Simplicity beats completeness in student-facing expected-boxes; put explanations in teacher materials if anywhere.
+**Why (explicit):** 2026-08-03 — Claude added a factory-Blink explanation + reused-board hedge to answer Yon's correctness question; Yon replaced it with the bare observation ("let's make it simple"). When a correctness issue is flagged, fix the claim minimally — don't add background.
 
 **Examples:**
 - `…מהבהב פעם בשנייה — לוח חדש מגיע מהמפעל עם קוד הבהוב מובנה. לוח שכבר השתמשו בו עשוי להתנהג אחרת, וזה בסדר.` → `…מהבהב.` (P1 T1_M1, direct instruction)
+- Caption: `זה הלוח שלכם מהערכה — הלד הירוק L נמצא בשורת הלדים שליד רגל 13. כשהקוד רץ, הוא נדלק בירוק בדיוק כאן.` → `הלד L נמצא בשורת הלדים שליד רגל 13. כשהקוד רץ הוא נדלק באור ירוק.` (P1 T1_M1, feedback 2026-08-03 — warm framing "זה הלוח שלכם", the duplicate "הירוק", and "בדיוק כאן" all dropped)
 
-**Evidence:** 1 (direct, explicit instruction — stronger than an inferred edit) · **Status:** FIRM for expected-boxes; watch for generalization to other callouts.
+**Evidence:** 2 · **Status:** FIRM (authoring-scope).
+**Sweep evaluation (2026-08-03): REJECTED.** A scan flagged 39/55 cards with explanation-style tails in expected-boxes — but nearly all are original, reviewed content: protected catchphrases (`זה תקין, לא תקלה`, `ככה עובדים מהנדסים אמיתיים`), forward-pointers (`זה יקרה בשלב 2`), fails-gracefully reassurances. Mechanically trimming them would violate the protected-motifs guard. W2 applies to new authoring and to boxes Yon edits himself.
+
+### W3 — Everyday verbs over formal register
+**Rule:** Prefer the common verb over its formal synonym in instructions (מוצאים, not מאתרים).
+
+**Why (inferred):** Reading accessibility — the everyday verb is recognized instantly by students with reading difficulty. Complements (does not conflict with) the plural-impersonal rule A1 in `Hebrew_Translation_Preferences_Log.md`.
+
+**Examples:**
+- `מאתרים על הלוח את הלד הירוק הקטן…` → `מוצאים על הלוח את…` (P1 T1_M1, feedback 2026-08-03)
+
+**Evidence:** 1 · **Counterexamples:** 0 — no מאתרים/לאתר/איתור left anywhere.
+**Status:** TENTATIVE (watch for more formal→everyday swaps: מבצעים→עושים, מתבוננים→מסתכלים…).
+
+### W4 — Simple comparative descriptors over shape-jargon
+**Rule:** Describe hardware by the simplest distinguishing feature ("הקצה הגדול יותר"), not by technical shape adjectives ("הקצה השטוח הרחב").
+
+**Examples:**
+- `…והקצה השטוח הרחב (USB-A) נכנס למחשב` → `…והקצה הגדול יותר (USB-A) נכנס למחשב` (P1 T1_M1, feedback 2026-08-03)
+
+**Evidence:** 1 · **Status:** TENTATIVE.
+
+### W5 — Section headers orient; tool names get a de-emphasized gloss
+**Rule:** Part headers say where/what concretely ("מכינים את התיקיות **במחשב**"), and a first-appearance tool name may carry a short parenthetical explanation styled smaller + non-bold ("Arduino IDE <span small normal>(התוכנה שאיתה מתכנתים את הארדואינו)</span>").
+
+**Examples:**
+- `חלק א · מכינים את התיקיות` → `חלק א · מכינים את התיקיות במחשב` (P1 T1_M1, feedback 2026-08-03)
+- `חלק ג · מגדירים את Arduino IDE` → `+ (התוכנה שאיתה מתכנתים את הארדואינו)`, gloss at 14px/400 per Yon's styling comment (P1 T1_M1, feedback 2026-08-03)
+
+**Evidence:** 2 (one card) · **Status:** TENTATIVE.
+
+---
+
+## Category P — Punctuation
+
+### P1 — Minimal commas in short student-facing sentences
+**Rule:** Short observable statements drop commas that Hebrew grammar does not require ("הלד הירוק הקטן L ליד רגל 13 מהבהב." — no commas; "כשהקוד רץ הוא נדלק" — no comma after the clause).
+
+**Why (inferred):** Fewer visual stops = easier scanning for the EBD population; commas reserved for real ambiguity.
+
+**Examples:**
+- `הלד הירוק הקטן L, ליד רגל 13, מהבהב.` → `הלד הירוק הקטן L ליד רגל 13 מהבהב.` (P1 T1_M1, feedback 2026-08-03_2305)
+- `כשהקוד רץ, הוא נדלק…` → `כשהקוד רץ הוא נדלק…` (P1 T1_M1 caption, feedback 2026-08-03)
+
+**Evidence:** 2 (one card) · **Status:** TENTATIVE — do NOT sweep; apply when authoring short callout lines.
 
 ## Processed feedback ledger
 | Date learned | Feedback files |
 |---|---|
+| 2026-08-03 | feedback_2026-08-03_2232 · feedback_2026-08-03_2305 |
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-03 (learn run)** — 4 new rules: W3 everyday verbs (מאתרים→מוצאים), W4 simple descriptors,
+  W5 header orientation + de-emphasized tool gloss, P1 minimal commas. W2 broadened to figure captions
+  (+1 example) and scope-narrowed to authoring-only after a sweep evaluation REJECTED trimming existing
+  boxes (39/55 flags were protected/original content). Ledger: 2026-08-03_2232 + _2305.
 - **2026-08-03** — T3 added and CONFIRMED via approved sweep (intro chrome line removed from 34 cards);
   W2 added (FIRM, explicit "make it simple" instruction on expected-boxes). Feedback 2026-08-03_2232 applied
   (7 T1_M1 changes; T1_M2 entries were stale cache — Yon had not reset the console).

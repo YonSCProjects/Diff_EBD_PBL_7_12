@@ -44,8 +44,10 @@ in W2 — the "cut chrome and comfort, keep information" family.
 **Counterexamples:** 13× `קוראים למורה לעזרה.` survive, all in cards Yon has not reviewed yet (weak).
 **Protected carve-out:** the soldering escalation **"קוראים למורה, תמיד"** (9× across P4 + R6) and every
 soldering-safety "קוראים למורה" line — locked motifs, NEVER trimmed.
-**Status:** FIRM · **Sweep candidate:** the 13 `לעזרה` instances (pure reassurance, mechanical);
-excludes every soldering/safety context and all informational tails above.
+**Status:** CONFIRMED · **Sweep executed 2026-08-04:** all 13 `קוראים למורה לעזרה.` → `קוראים למורה.`
+across 13 cards (P1 T1_M2/M3/M6/M8; P3 T1_M2/M3/M4/M5, T2_M3; P4 T1_M5/M6/M7, T2_M3). Verified after:
+0 leftovers, the 9 protected soldering `קוראים למורה, תמיד` lines untouched, and every informational
+tail left in place. New cards must not reintroduce a reassurance tail.
 
 ### T2 — Drop incidental "יחד עם המורה"
 **Rule:** When teacher involvement is incidental to the action (creating a folder, routine steps),
@@ -268,6 +270,9 @@ batch rather than a blind replace.
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-04 (T1 sweep)** — Yon approved the T1 sweep: 13 `קוראים למורה לעזרה.` → `קוראים למורה.`
+  across 13 cards in P1/P3/P4. Verified 0 leftovers, 9 protected soldering `תמיד` lines intact,
+  informational tails untouched. **T1 → CONFIRMED.**
 - **2026-08-04 (learn run 2)** — 2 new rules: **V2** (teaching annotations span the full extent of what
   they mark, + the measure-don't-eyeball procedure) and **V3** (a figure swap requires sweeping the whole
   card for text describing the old figure). **T1 → FIRM** with a sharpened scope from counterexample

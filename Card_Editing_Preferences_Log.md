@@ -30,11 +30,22 @@ for the EBD population.
 **Examples:**
 - `תקועים? קוראים למורה לעזרה — זה חלק מהתהליך.` → `תקועים? קוראים למורה.` (P1 T1_M1, feedback 2026-07-08)
 
-**Evidence:** 1 · **Counterexamples:** 13× `קוראים למורה לעזרה` survive in not-yet-reviewed cards (weak).
-**Protected carve-out:** the soldering escalation **"קוראים למורה, תמיד"** (8×, P4 + R6) and every
-soldering-safety "קוראים למורה" line — these are locked design motifs and are NEVER trimmed.
-**Status:** TENTATIVE · **Sweep scope (if confirmed):** the 13 `לעזרה` instances + trailing
-justification clauses in stuck boxes, excluding all soldering/safety contexts.
+- `עדיין תקועים? קוראים למורה. זה השלב הראשון של חיווט + העלאה — מבקשים עזרה בלי לחשוש.` →
+  `עדיין תקועים? קוראים למורה.` (P1 T1_M4, feedback 2026-08-04)
+
+**Sharpened scope (from counterexample analysis, 2026-08-04):** trim only *reassurance / justification*
+tails — "לעזרה", "זה חלק מהתהליך", "מבקשים עזרה בלי לחשוש". **Keep informational tails**, which Yon has
+never touched: `קוראים למורה. בשביל זה יש את פרוטוקול…` (3×), `קוראים למורה ובוחרים יחד` (3×),
+`קוראים למורה כשנתקעים שוב באותה בעיה` (2×), `קוראים למורה. גלגל שמתנדנד כנראה לא נדחף עד סוף הציר`,
+and the diagnostic variants in P4 — those carry content, not comfort.
+
+**Evidence:** 2 direct (2 cards), plus the same underlying preference already CONFIRMED in T3 and FIRM
+in W2 — the "cut chrome and comfort, keep information" family.
+**Counterexamples:** 13× `קוראים למורה לעזרה.` survive, all in cards Yon has not reviewed yet (weak).
+**Protected carve-out:** the soldering escalation **"קוראים למורה, תמיד"** (9× across P4 + R6) and every
+soldering-safety "קוראים למורה" line — locked motifs, NEVER trimmed.
+**Status:** FIRM · **Sweep candidate:** the 13 `לעזרה` instances (pure reassurance, mechanical);
+excludes every soldering/safety context and all informational tails above.
 
 ### T2 — Drop incidental "יחד עם המורה"
 **Rule:** When teacher involvement is incidental to the action (creating a folder, routine steps),
@@ -152,6 +163,37 @@ inlines it automatically (`inlineImages`).
 
 **Evidence:** 2 (one card) · **Status:** TENTATIVE.
 
+### V2 — Teaching annotations span the FULL extent of what they mark
+**Rule:** When an overlay marks a concept on a figure, it must cover that concept's full extent — a
+**טור** highlight runs the whole column (both breadboard halves), a **שורה** highlight runs the whole
+row (the board's full width). A partial marker teaches the wrong shape.
+
+**Why (Yon, explicit):** "הסימנים שהוספת כדי שיראו מהו טור ומהי שורה מצוינים, רק בבקשה שנה שהסימון
+של הטור יהיה לכל אורך הטור והסימון של השורה יהיה לכל אורך השורה" (comment, T1_M3, feedback 2026-08-04_0111).
+The overlay's job is to teach an orientation — full length makes the vertical/horizontal contrast
+unmistakable; a short stub reads as "this spot", not "this direction".
+
+**How (procedure):** measure the figure's grid computationally rather than eyeballing percentages —
+sample the image's darkness profile to find hole row/column centers (scratchpad `holes.js`), then
+place the overlay on real coordinates. For `m3_breadboard.png`: hole rows at 41.2/44.5/47.5/50.5/53.6%
+(top half) and 63.1/66.1/69.3/72.4/75.4% (bottom half), pitch ≈3.05%; board spans x≈33–97%.
+Keep the band on a row clear of components.
+
+**Evidence:** 1 (explicit instruction) · **Status:** FIRM (stated as a correction to a pattern Yon
+had just praised) · Applies to any future figure annotation, in any project.
+
+### V3 — When a figure changes, sweep the whole card for text that described the old one
+**Rule:** Replacing a figure is not done until every sentence that referred to the old figure is
+re-checked — including stuck boxes and side notes, not just the caption.
+
+**Why:** After the T1_M5 two-LED figure landed, "רק **טור אחד** הצידה" was wrong in **two** places
+(the info note under the figure and the "תקועים?" box). Yon caught both across two saves
+(feedback 2026-08-04_0110 and _0120) — evidence that the whole card, not just the figure's
+neighbourhood, has to be re-read.
+
+**Examples:** `רק טור אחד הצידה` → `רק כמה טורים הצידה` (P1 T1_M5, ×2 locations).
+**Evidence:** 2 (same card, two locations, two saves) · **Status:** FIRM as a procedure.
+
 ---
 
 ## Category X — Terminology (program-wide vocabulary)
@@ -211,17 +253,27 @@ batch rather than a blind replace.
 **Examples:**
 - `הלד הירוק הקטן L, ליד רגל 13, מהבהב.` → `הלד הירוק הקטן L ליד רגל 13 מהבהב.` (P1 T1_M1, feedback 2026-08-03_2305)
 - `כשהקוד רץ, הוא נדלק…` → `כשהקוד רץ הוא נדלק…` (P1 T1_M1 caption, feedback 2026-08-03)
+- `רק כמה טורים הצידה, ודרך הנגד…` → `רק כמה טורים הצידה ודרך הנגד…` (P1 T1_M5, feedback 2026-08-04 — also P2)
+- `אם הלד הראשון הפסיק להבהב בזמן חיווט השני, אולי הג'אמפר שלו התנתק` → `…בזמן חיווט השני אולי הג'אמפר שלו התנתק` (P1 T1_M5 stuck box, feedback 2026-08-04_0120 — comma before אולי, not a vav: the preference is broader than P2)
 
-**Evidence:** 2 (one card) · **Status:** TENTATIVE — do NOT sweep; apply when authoring short callout lines.
+**Evidence:** 4 (2 cards) · **Status:** FIRM — apply when authoring; still do NOT sweep mechanically
+(many existing commas legitimately close a subordinate clause; needs per-instance judgment, same as P2).
 
 ## Processed feedback ledger
 | Date learned | Feedback files |
 |---|---|
+| 2026-08-04 (2nd run) | feedback_2026-08-04_0110 · _0111 · _0111_2 · _0113 · _0114 · _0120 |
 | 2026-08-04 | feedback_2026-08-03_2351 · feedback_2026-08-03_2351_2 · feedback_2026-08-03_2357 · feedback_2026-08-04_0007 · feedback_2026-08-04_0025 |
 | 2026-08-03 | feedback_2026-08-03_2232 · feedback_2026-08-03_2305 |
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-04 (learn run 2)** — 2 new rules: **V2** (teaching annotations span the full extent of what
+  they mark, + the measure-don't-eyeball procedure) and **V3** (a figure swap requires sweeping the whole
+  card for text describing the old figure). **T1 → FIRM** with a sharpened scope from counterexample
+  analysis: trim reassurance tails only, never informational ones (13 `לעזרה` sites remain as a clean
+  sweep candidate; 9 soldering `תמיד` sites protected). **P1 → FIRM** (4 examples; sweep still deferred).
+  Also applied a late-arriving edit from _0120 that the previous apply round predated.
 - **2026-08-04** — **X1 terminology sweep CONFIRMED + executed**: Arduino pins רגל → חיבור דיגיטלי across
   45 files (313 instances; 0 leftovers, 0 over-reach, 61 component legs preserved), incl. gender-agreement
   flips and cropping three baked-in figure captions. **P2** (no comma before ו') recorded CONFIRMED as a

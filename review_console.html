@@ -157,6 +157,7 @@
   <button class="act" id="nextbtn" title="Alt+←">הבאה ←</button>
   <button class="act good" id="donebtn" title="Alt+D">נראה טוב ✓</button>
   <button class="act" id="resetbtn">איפוס כרטיסייה</button>
+  <button class="act" id="resetallbtn" style="color:#a33; border-color:#d9b2b2;">איפוס הכל</button>
 </header>
 
 <main id="main">
@@ -962,6 +963,23 @@ function resetCard() {
   loadCard(cur);
 }
 
+// Reset-all: wipe the ENTIRE saved review state (all cards' edits, comments,
+// done-marks, global notes). Use after Claude applied a feedback round, so old
+// edits stop re-exporting in every save. Double confirm — this cannot be undone.
+function resetAll() {
+  if (!confirm('לאפס את כל הסקירה? כל העריכות, ההערות וסימוני ה-✓ בכל הכרטיסיות יימחקו מהדפדפן.')) return;
+  if (!confirm('בטוחים? הפעולה מוחקת את כל מצב הסקירה השמור (מה שכבר יושם בקבצים לא נפגע).')) return;
+  const doomed = [];
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith('rvw:')) doomed.push(k);
+    }
+  } catch {}
+  doomed.forEach((k) => store.del(k));
+  location.reload();
+}
+
 function hotkeys(e) {
   if (!e.altKey) return;
   if (e.key === 'ArrowLeft') { e.preventDefault(); flushCommit(); loadCard(cur + 1); }        // RTL: left = next
@@ -980,6 +998,7 @@ function wireUi() {
   $('nextbtn').onclick = () => { flushCommit(); loadCard(cur + 1); };
   $('donebtn').onclick = toggleDone;
   $('resetbtn').onclick = resetCard;
+  $('resetallbtn').onclick = resetAll;
   $('savebtn').onclick = saveToRepo;
   $('dlbtn').onclick = () => download();
   $('copybtn').onclick = copyMd;

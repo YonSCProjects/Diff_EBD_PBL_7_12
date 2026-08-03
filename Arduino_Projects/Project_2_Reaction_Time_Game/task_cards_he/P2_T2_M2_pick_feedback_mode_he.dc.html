@@ -61,7 +61,7 @@
           <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">שלושה לדים (מהיר / בינוני / איטי)</h3>
           <sc-if value="{{ selA }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
-        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה עובד:</strong> תגובה מהירה מאירה לד <strong style="color:oklch(0.55 0.15 145);">ירוק</strong> (רגל 9), בינונית <strong style="color:oklch(0.6 0.13 90);">צהוב</strong> (רגל 10), איטית <strong style="color:oklch(0.55 0.18 28);">אדום</strong> (רגל 11).</p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה עובד:</strong> תגובה מהירה מאירה לד <strong style="color:oklch(0.55 0.15 145);">ירוק</strong> (חיבור דיגיטלי 9), בינונית <strong style="color:oklch(0.6 0.13 90);">צהוב</strong> (חיבור דיגיטלי 10), איטית <strong style="color:oklch(0.55 0.18 28);">אדום</strong> (חיבור דיגיטלי 11).</p>
         <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה צריך לחווט:</strong> שני לדים נוספים, כל אחד עם נגד 220 אוהם. <strong>לכן יש עוד כרטיסיית חיווט (שלב 2b) אחרי השלב הזה.</strong></p>
         <code dir="ltr" style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:2px 7px;">T2_three_led_feedback_starter.ino</code>
       </div>
@@ -161,7 +161,7 @@ class Component extends DCLogic {
       v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
       v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
       v.nextTitle = 'הכרטיסייה הבאה: שלב 2b';
-      v.nextMsg = 'בחרתם מצב א (שלושה לדים) — ממשיכים אל שלב 2b, שבו מחווטים שני לדים נוספים (רגל 10 ורגל 11).';
+      v.nextMsg = 'בחרתם מצב א (שלושה לדים) — ממשיכים אל שלב 2b, שבו מחווטים שני לדים נוספים (חיבור דיגיטלי 10 וחיבור דיגיטלי 11).';
     } else if (sel === 'B' || sel === 'C') {
       v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
       v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';

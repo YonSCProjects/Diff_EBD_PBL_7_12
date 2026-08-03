@@ -34,7 +34,7 @@
       </div>
 
       <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מוסיפים לד שני</h1>
-      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:54ch;">אותה תבנית כמו שלב 3 — רק טור אחד הצידה, ומספר רגל שונה (10).</p>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:54ch;">אותה תבנית כמו שלב 3 — רק טור אחד הצידה, ומספר חיבור שונה (10).</p>
 
       <div style="margin-top:22px;">
         <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
@@ -56,11 +56,12 @@
       </div>
 
       <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:#fff; margin-bottom:30px;">
-        <img src="assets/m5_breadboard.png" alt="תרשים חיווט הלד" style="display:block; width:100%; height:auto;" />
+        <img src="assets/m5_two_leds.svg" alt="תרשים ברדבורד: שני לדים זה לצד זה, כל אחד דרך נגד 220 אוהם — הראשון אל חיבור דיגיטלי 9 והשני אל חיבור דיגיטלי 10, והרגליים הקצרות אל מסילת ה-GND." style="display:block; width:100%; height:auto;" />
+        <div dir="rtl" style="padding:11px 14px; background:oklch(0.985 0.004 85); border-top:1px solid oklch(0.93 0.006 85); font-size:12.5px; line-height:1.55; color:oklch(0.5 0.012 260); text-align:center;">שני לדים זה לצד זה, לכל אחד נגד משלו: <strong>חיבור דיגיטלי 9</strong> ללד הראשון, <strong>חיבור דיגיטלי 10</strong> ללד השני.</div>
       </div>
       <div style="display:flex; gap:12px; align-items:flex-start; background:oklch(0.96 0.03 248); border:1px solid oklch(0.9 0.04 248); border-radius:12px; padding:13px 16px; margin:-16px 0 30px;">
         <span style="flex:none; font-size:18px; line-height:1.4;">ℹ️</span>
-        <p style="margin:0; font-size:14.5px; line-height:1.55; color:oklch(0.42 0.06 248);">בתרשים מופיע לד אחד לדוגמה. הלד <strong>השני</strong> מחווט בדיוק באותה צורה — רק טור אחד הצידה, ודרך הנגד אל <strong>רגל 10</strong> במקום רגל 9.</p>
+        <p style="margin:0; font-size:14.5px; line-height:1.55; color:oklch(0.42 0.06 248);">הלד <strong>השני</strong> מחווט בדיוק כמו הראשון — רק טור אחד הצידה, ודרך הנגד אל <strong>חיבור דיגיטלי 10</strong> במקום חיבור דיגיטלי 9.</p>
       </div>
 
       <!-- STEPS -->
@@ -92,13 +93,13 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הארוכה (+)</strong> של הלד השני ל<strong>רגל דיגיטלית 10</strong> דרך הנגד של 220 אוהם.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הארוכה (+)</strong> של הלד השני ל<strong>חיבור דיגיטלי 10</strong> דרך הנגד של 220 אוהם.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הקצרה (−)</strong> של הלד השני לרגל <strong>GND</strong> בעזרת חוט ג'אמפר.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הקצרה (−)</strong> של הלד השני לחיבור <strong>GND</strong> בעזרת חוט ג'אמפר.</p>
         </div>
 
       </div>
@@ -108,7 +109,7 @@
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
           <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">על הברדבורד יש עכשיו שני לדים זה לצד זה, לכל אחד נגד משלו. <strong>הלד הראשון עדיין מהבהב</strong>; השני עדיין לא אמור להאיר.</p>
-          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">הקוד משלב 4 עדיין רץ ויודע רק על רגל 9. בשלב 6 מעלים קוד חדש שמשתמש בשתי הרגליים.</p>
+          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">הקוד משלב 4 עדיין רץ ויודע רק על חיבור דיגיטלי 9. בשלב 6 מעלים קוד חדש שמשתמש בשני החיבורים.</p>
         </div>
       </div>
 
@@ -118,7 +119,7 @@
         </div>
         <div style="display:flex; flex-direction:column; gap:9px;">
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שני לדים מחוברים לברדבורד, זה לצד זה</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הרגל הארוכה של הלד השני עוברת דרך נגד 220 אוהם לרגל 10</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הרגל הארוכה של הלד השני עוברת דרך נגד 220 אוהם לחיבור דיגיטלי 10</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הרגל הקצרה של הלד השני מחוברת ל־GND</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>אפשר להבחין בין שני הלדים לפי הצבע</span></div>
         </div>

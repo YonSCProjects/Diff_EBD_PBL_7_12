@@ -54,7 +54,7 @@
         <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">הטעות הנפוצה ביותר</div>
-          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">נגד ההורדה של 10 קΩ חייב להיות בין <strong>רגל 2 ל-GND</strong> — <strong>לא</strong> בין 5 V ל-GND. אם שמים אותו בין 5 V ל-GND, לחיצה על הכפתור יוצרת קצר ומאפסת את הארדואינו. עוקבים באצבע: מרגל 2 ל-GND? ✓</p>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">נגד ההורדה של 10 קΩ חייב להיות בין <strong>חיבור דיגיטלי 2 ל-GND</strong> — <strong>לא</strong> בין 5 V ל-GND. אם שמים אותו בין 5 V ל-GND, לחיצה על הכפתור יוצרת קצר ומאפסת את הארדואינו. עוקבים באצבע: מחיבור דיגיטלי 2 ל-GND? ✓</p>
         </div>
       </div>
 
@@ -70,8 +70,8 @@
         </div>
         <div dir="ltr" style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; padding:11px 12px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:12px; font-weight:600;">
           <span style="display:inline-flex; align-items:center; gap:6px; color:oklch(0.5 0.15 28);"><span style="width:16px; height:4px; border-radius:2px; background:oklch(0.55 0.18 28);"></span>9 → 220Ω → לד</span>
-          <span style="display:inline-flex; align-items:center; gap:6px; color:oklch(0.55 0.12 85);"><span style="width:16px; height:4px; border-radius:2px; background:oklch(0.65 0.14 85);"></span>כפתור B → רגל 2</span>
-          <span style="display:inline-flex; align-items:center; gap:6px; color:oklch(0.4 0.012 260);"><span style="width:16px; height:4px; border-radius:2px; background:oklch(0.3 0.012 260);"></span>רגל 2 → 10kΩ → GND</span>
+          <span style="display:inline-flex; align-items:center; gap:6px; color:oklch(0.55 0.12 85);"><span style="width:16px; height:4px; border-radius:2px; background:oklch(0.65 0.14 85);"></span>כפתור B → חיבור דיגיטלי 2</span>
+          <span style="display:inline-flex; align-items:center; gap:6px; color:oklch(0.4 0.012 260);"><span style="width:16px; height:4px; border-radius:2px; background:oklch(0.3 0.012 260);"></span>חיבור דיגיטלי 2 → 10kΩ → GND</span>
         </div>
       </div>
 
@@ -101,7 +101,7 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הארוכה (+)</strong> לרגל <strong>9</strong> דרך נגד <strong>220 אוהם</strong> (אדום · אדום · חום), ואת <strong>הקצרה (−)</strong> ל-<strong>GND</strong>.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הארוכה (+)</strong> לחיבור דיגיטלי <strong>9</strong> דרך נגד <strong>220 אוהם</strong> (אדום · אדום · חום), ואת <strong>הקצרה (−)</strong> ל-<strong>GND</strong>.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
@@ -113,7 +113,7 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים <strong>רגל A</strong> ל-<strong>5 V</strong>, ו<strong>רגל B</strong> ל-<strong>רגל 2</strong>.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים <strong>רגל A</strong> ל-<strong>5 V</strong>, ו<strong>רגל B</strong> ל-<strong>חיבור דיגיטלי 2</strong>.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.04 35); border:1px solid oklch(0.85 0.07 35); border-radius:14px; padding:15px 16px;">
@@ -128,7 +128,7 @@
         <span style="flex:none; font-size:22px; line-height:1;">👀</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
-          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">הלד מחובר לרגל 9 דרך הנגד, והכפתור יושב לרוחב החריץ המרכזי — צד אחד ל-5 V, השני לרגל 2 ודרך נגד ההורדה ל-GND.</p>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">הלד מחובר לחיבור דיגיטלי 9 דרך הנגד, והכפתור יושב לרוחב החריץ המרכזי — צד אחד ל-5 V, השני לחיבור דיגיטלי 2 ודרך נגד ההורדה ל-GND.</p>
           <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);"><strong>עדיין לא אמור להידלק שום דבר</strong> — עוד לא העלינו קוד. זה יקרה בשלב 2.</p>
         </div>
       </div>
@@ -138,9 +138,9 @@
           <span style="font-size:20px;">✅</span>סיימתם כש…
         </div>
         <div style="display:flex; flex-direction:column; gap:9px;">
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הלד מחובר: רגל ארוכה דרך נגד 220 אוהם לרגל 9, קצרה ל-GND</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הכפתור לרוחב החריץ: רגל A ל-5 V, רגל B לרגל 2</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>נגד 10 קΩ בין רגל 2 ל-GND</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הלד מחובר: רגל ארוכה דרך נגד 220 אוהם לחיבור דיגיטלי 9, קצרה ל-GND</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הכפתור לרוחב החריץ: רגל A ל-5 V, רגל B לחיבור דיגיטלי 2</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>נגד 10 קΩ בין חיבור דיגיטלי 2 ל-GND</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>המורה אישר שהחיווט נכון</span></div>
         </div>
       </div>

@@ -34,7 +34,7 @@
       </div>
 
       <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מחווטים את הלד החיצוני הראשון</h1>
-      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:54ch;">מחברים לד לברדבורד בפעם הראשונה — דרך נגד, מרגל 9 ל־GND.</p>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:54ch;">מחברים לד לברדבורד בפעם הראשונה — דרך נגד, מחיבור דיגיטלי 9 ל־GND.</p>
 
       <div style="margin-top:22px;">
         <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
@@ -57,13 +57,14 @@
 
       <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:#fff; margin-bottom:30px;">
         <div style="position:relative;">
-          <img src="assets/m3_breadboard.png" alt="תרשים חיווט: רגל 9 ← נגד 220 אוהם ← רגל ארוכה של הלד, רגל קצרה ← GND" style="display:block; width:100%; height:auto;" />
+          <img src="assets/m3_breadboard.png" alt="תרשים חיווט: חיבור דיגיטלי 9 ← נגד 220 אוהם ← רגל ארוכה של הלד, רגל קצרה ← GND" style="display:block; width:100%; height:auto;" />
           <!-- first-breadboard helpers: one vertical numbered strip = טור, one lettered line = שורה -->
           <span style="position:absolute; left:66.2%; top:31%; width:1.6%; height:18.5%; border:2.5px solid oklch(0.6 0.15 150); border-radius:6px; background:oklch(0.62 0.14 150 / 0.18); pointer-events:none;"></span>
           <span style="position:absolute; left:67%; top:22.5%; transform:translateX(-50%); background:#fff; border:1.5px solid oklch(0.6 0.13 150); border-radius:999px; padding:2px 11px; font-size:12.5px; font-weight:700; color:oklch(0.38 0.08 150); white-space:nowrap; box-shadow:0 3px 9px -4px rgba(0,0,0,0.4);">טור</span>
           <span style="position:absolute; left:56%; top:59.8%; width:38%; height:3.6%; border:2.5px solid oklch(0.62 0.13 60); border-radius:6px; background:oklch(0.72 0.14 60 / 0.20); pointer-events:none;"></span>
           <span style="position:absolute; left:88%; top:51.5%; transform:translateX(-50%); background:#fff; border:1.5px solid oklch(0.62 0.12 60); border-radius:999px; padding:2px 11px; font-size:12.5px; font-weight:700; color:oklch(0.45 0.09 60); white-space:nowrap; box-shadow:0 3px 9px -4px rgba(0,0,0,0.4);">שורה</span>
         </div>
+        <div dir="rtl" style="padding:11px 14px; background:oklch(0.985 0.004 85); border-top:1px solid oklch(0.93 0.006 85); font-size:12.5px; line-height:1.55; color:oklch(0.5 0.012 260); text-align:center;"><strong>חיבור דיגיטלי 9</strong> ← נגד 220 אוהם ← הרגל הארוכה של הלד. הרגל הקצרה ← <strong>GND</strong>.</div>
       </div>
 
       <!-- STEPS -->
@@ -124,13 +125,13 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הארוכה (+)</strong> ל<strong>רגל דיגיטלית 9</strong> דרך הנגד של 220 אוהם. הנגד יושב בין הרגל הארוכה לרגל 9.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הארוכה (+)</strong> ל<strong>חיבור דיגיטלי 9</strong> דרך הנגד של 220 אוהם. הנגד יושב בין הרגל הארוכה לחיבור דיגיטלי 9.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הקצרה (−)</strong> לרגל <strong>GND</strong> בעזרת חוט ג'אמפר.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את <strong>הרגל הקצרה (−)</strong> לחיבור <strong>GND</strong> בעזרת חוט ג'אמפר.</p>
         </div>
 
       </div>
@@ -139,7 +140,7 @@
         <span style="flex:none; font-size:22px; line-height:1;">👀</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
-          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">הלד מחובר לברדבורד. הרגל הארוכה עוברת דרך הנגד לרגל 9, והרגל הקצרה מחוברת ל־GND.</p>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">הלד מחובר לברדבורד. הרגל הארוכה עוברת דרך הנגד לחיבור דיגיטלי 9, והרגל הקצרה מחוברת ל־GND.</p>
           <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);"><strong>הלד עדיין לא אמור להאיר</strong> — עוד לא העלינו קוד שיפעיל אותו. זה יקרה בשלב 4. כאן רק בודקים שהחיווט נכון.</p>
         </div>
       </div>
@@ -150,7 +151,7 @@
         </div>
         <div style="display:flex; flex-direction:column; gap:9px;">
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הלד מוכנס לברדבורד, שתי הרגליים בטורים שונים</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הרגל הארוכה מחוברת לרגל 9 דרך נגד 220 אוהם</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הרגל הארוכה מחוברת לחיבור דיגיטלי 9 דרך נגד 220 אוהם</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הרגל הקצרה מחוברת ל־GND</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>המורה אישר שהחיווט נכון</span></div>
         </div>
@@ -158,7 +159,7 @@
 
       <div style="display:flex; align-items:center; gap:14px; background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
         <span style="flex:none; font-size:22px;">🪄</span>
-        <div style="font-size:16px; line-height:1.5;"><strong style="color:oklch(0.45 0.12 300);">תקועים?</strong> &nbsp;לא בטוחים איזו רגל ארוכה או איזה חור מתחבר לרגל 9? קוראים למורה לעזרה.</div>
+        <div style="font-size:16px; line-height:1.5;"><strong style="color:oklch(0.45 0.12 300);">תקועים?</strong> &nbsp;לא בטוחים איזו רגל ארוכה או איזה חור מתחבר לחיבור דיגיטלי 9? קוראים למורה לעזרה.</div>
       </div>
 
     </div>

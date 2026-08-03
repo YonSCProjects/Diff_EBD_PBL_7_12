@@ -49,7 +49,7 @@
       <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
 
         <div style="background:oklch(0.96 0.05 90); border:1px solid oklch(0.86 0.08 90); border-radius:14px; padding:15px 18px; font-size:16px; line-height:1.6; color:oklch(0.36 0.04 75);">
-          הרגל הארוכה של הלד = <span style="color:oklch(0.5 0.13 150); font-weight:700;">חיובי (+)</span>. היא הולכת ל<strong>נגד</strong>, ומשם לרגל דיגיטלית של הארדואינו.
+          הרגל הארוכה של הלד = <span style="color:oklch(0.5 0.13 150); font-weight:700;">חיובי (+)</span>. היא הולכת ל<strong>נגד</strong>, ומשם לחיבור דיגיטלי של הארדואינו.
         </div>
 
         <div style="background:oklch(0.96 0.05 90); border:1px solid oklch(0.86 0.08 90); border-radius:14px; padding:15px 18px; font-size:16px; line-height:1.6; color:oklch(0.36 0.04 75);">
@@ -65,7 +65,7 @@
         </div>
 
         <div style="background:oklch(0.96 0.05 90); border:1px solid oklch(0.86 0.08 90); border-radius:14px; padding:15px 18px; font-size:16px; line-height:1.6; color:oklch(0.36 0.04 75);">
-          ל<strong>זמזם</strong> אין כיוון ולא צריך לו נגד. רגל אחת הולכת ל<strong>רגל דיגיטלית 8</strong>, הרגל השנייה ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">GND</span>. <span style="color:oklch(0.55 0.2 27); font-weight:700;">לעולם לא מחברים את הזמזם ישירות ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">5 V</span>.</span>
+          ל<strong>זמזם</strong> אין כיוון ולא צריך לו נגד. רגל אחת הולכת ל<strong>חיבור דיגיטלי 8</strong>, הרגל השנייה ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">GND</span>. <span style="color:oklch(0.55 0.2 27); font-weight:700;">לעולם לא מחברים את הזמזם ישירות ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">5 V</span>.</span>
         </div>
 
       </div>
@@ -76,7 +76,7 @@
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חיווט 1 — לד + כפתור (🏁 שלב 1)</h2>
       </div>
 
-      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">מעגל הבסיס של המשחק: לד אחד על <strong>רגל 9</strong> דרך נגד 220 אוהם, וכפתור על <strong>רגל 2</strong> עם נגד הורדה 10 קילו-אוהם. זה בדיוק החיווט שעשיתם בפרויקט 1.</p>
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">מעגל הבסיס של המשחק: לד אחד על <strong>חיבור דיגיטלי 9</strong> דרך נגד 220 אוהם, וכפתור על <strong>חיבור דיגיטלי 2</strong> עם נגד הורדה 10 קילו-אוהם. זה בדיוק החיווט שעשיתם בפרויקט 1.</p>
 
       <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:16px;">
         <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.5; color:oklch(0.88 0.01 260); overflow-x:auto;">Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
@@ -90,13 +90,13 @@ Arduino 5 V ─────────────┬── Button pin A
       </div>
 
       <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
-        <img src="../images/w_p2_01_led_button_breadboard.svg" alt="תרשים ברדבורד: לד על רגל 9 דרך נגד 220 אוהם ל-GND, וכפתור לרוחב החריץ המרכזי — צד אחד ל-5 V, הצד השני לרגל 2 ודרך נגד הורדה 10 קילו-אוהם ל-GND." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+        <img src="../images/w_p2_01_led_button_breadboard.svg" alt="תרשים ברדבורד: לד על חיבור דיגיטלי 9 דרך נגד 220 אוהם ל-GND, וכפתור לרוחב החריץ המרכזי — צד אחד ל-5 V, הצד השני לחיבור דיגיטלי 2 ודרך נגד הורדה 10 קילו-אוהם ל-GND." style="display:block; max-width:100%; height:auto; margin:0 auto;">
       </div>
-      <p style="margin:0 0 26px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong style="color:oklch(0.34 0.012 260);">לד: רגל 9 ← נגד 220 אוהם ← רגל ארוכה</strong>, רגל קצרה ← <strong style="color:oklch(0.34 0.012 260);">GND</strong>. <strong style="color:oklch(0.34 0.012 260);">כפתור: רגל A ← 5 V</strong>, רגל B ← רגל 2 ודרך <strong style="color:oklch(0.34 0.012 260);">נגד הורדה 10 קילו-אוהם ← GND</strong>.</p>
+      <p style="margin:0 0 26px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong style="color:oklch(0.34 0.012 260);">לד: חיבור דיגיטלי 9 ← נגד 220 אוהם ← רגל ארוכה</strong>, רגל קצרה ← <strong style="color:oklch(0.34 0.012 260);">GND</strong>. <strong style="color:oklch(0.34 0.012 260);">כפתור: רגל A ← 5 V</strong>, רגל B ← חיבור דיגיטלי 2 ודרך <strong style="color:oklch(0.34 0.012 260);">נגד הורדה 10 קילו-אוהם ← GND</strong>.</p>
 
       <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:30px;">
         <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
-        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><span style="color:oklch(0.55 0.2 27); font-weight:700;">חשוב:</span> נגד ההורדה של 10 קילו-אוהם הולך בין <strong>רגל 2 לבין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">GND</span></strong>, <span style="color:oklch(0.55 0.2 27); font-weight:700;">לא בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace;">5 V</span> לבין <span dir="ltr" style="font-family:'JetBrains Mono',monospace;">GND</span></span>. אם מחווטים אותו בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">5 V</span> לבין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">GND</span>, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><span style="color:oklch(0.55 0.2 27); font-weight:700;">חשוב:</span> נגד ההורדה של 10 קילו-אוהם הולך בין <strong>חיבור דיגיטלי 2 לבין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">GND</span></strong>, <span style="color:oklch(0.55 0.2 27); font-weight:700;">לא בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace;">5 V</span> לבין <span dir="ltr" style="font-family:'JetBrains Mono',monospace;">GND</span></span>. אם מחווטים אותו בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">5 V</span> לבין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">GND</span>, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
       </div>
 
       <!-- ==== חיווט 2 ==== -->
@@ -105,7 +105,7 @@ Arduino 5 V ─────────────┬── Button pin A
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חיווט 2 — לד + כפתור + זמזם (🏁 שלב 4)</h2>
       </div>
 
-      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">אותו חיווט כמו בחיווט 1, ומוסיפים את ה<strong>זמזם</strong>: רגל אחת ל<strong>רגל 8</strong>, הרגל השנייה ל-<strong>GND</strong>. שתי הרגליים של הזמזם נכנסות ל<strong>טורים שונים</strong> בברדבורד — לא לאותו טור, זה ייצור קצר.</p>
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">אותו חיווט כמו בחיווט 1, ומוסיפים את ה<strong>זמזם</strong>: רגל אחת ל<strong>חיבור דיגיטלי 8</strong>, הרגל השנייה ל-<strong>GND</strong>. שתי הרגליים של הזמזם נכנסות ל<strong>טורים שונים</strong> בברדבורד — לא לאותו טור, זה ייצור קצר.</p>
 
       <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:16px;">
         <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.5; color:oklch(0.88 0.01 260); overflow-x:auto;">Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
@@ -122,9 +122,9 @@ Arduino GND  ───────────── Buzzer leg 2</pre>
       </div>
 
       <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
-        <img src="../images/w_p2_02_led_button_buzzer_breadboard.svg" alt="תרשים ברדבורד: לד על רגל 9 דרך נגד 220 אוהם, כפתור על רגל 2 עם נגד הורדה 10 קילו-אוהם, וזמזם — רגל אחת לרגל 8 והשנייה ל-GND." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+        <img src="../images/w_p2_02_led_button_buzzer_breadboard.svg" alt="תרשים ברדבורד: לד על חיבור דיגיטלי 9 דרך נגד 220 אוהם, כפתור על חיבור דיגיטלי 2 עם נגד הורדה 10 קילו-אוהם, וזמזם — רגל אחת לחיבור דיגיטלי 8 והשנייה ל-GND." style="display:block; max-width:100%; height:auto; margin:0 auto;">
       </div>
-      <p style="margin:0 0 26px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong style="color:oklch(0.34 0.012 260);">זמזם: רגל אחת ← רגל 8</strong>, הרגל השנייה ← <strong style="color:oklch(0.34 0.012 260);">GND</strong>. הזמזם נוסף על חיווט 1 — אין לו כיוון ואין לו נגד. <span style="color:oklch(0.55 0.2 27); font-weight:700;">אף פעם לא מחברים את הזמזם ל-5 V.</span></p>
+      <p style="margin:0 0 26px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong style="color:oklch(0.34 0.012 260);">זמזם: רגל אחת ← חיבור דיגיטלי 8</strong>, הרגל השנייה ← <strong style="color:oklch(0.34 0.012 260);">GND</strong>. הזמזם נוסף על חיווט 1 — אין לו כיוון ואין לו נגד. <span style="color:oklch(0.55 0.2 27); font-weight:700;">אף פעם לא מחברים את הזמזם ל-5 V.</span></p>
 
       <!-- ==== חיווט 3 ==== -->
       <div style="display:flex; align-items:center; gap:12px; margin:6px 0 14px; padding-top:20px; border-top:1px solid oklch(0.93 0.006 85);">
@@ -132,7 +132,7 @@ Arduino GND  ───────────── Buzzer leg 2</pre>
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חיווט 3 — שלושה לדים + כפתור + זמזם (גרסה 2, מצב משוב א')</h2>
       </div>
 
-      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">נחוץ רק למי שבחרו ב<strong>מצב המשוב של שלושה לדים</strong> בגרסה 2 (שלב 2b). מוסיפים לחיווט 2 עוד שני לדים: <strong>לד בינוני על רגל 10</strong> ו<strong>לד איטי על רגל 11</strong>, כל אחד עם נגד 220 אוהם משלו, בדיוק כמו לד הזינוק על רגל 9.</p>
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">נחוץ רק למי שבחרו ב<strong>מצב המשוב של שלושה לדים</strong> בגרסה 2 (שלב 2b). מוסיפים לחיווט 2 עוד שני לדים: <strong>לד בינוני על חיבור דיגיטלי 10</strong> ו<strong>לד איטי על חיבור דיגיטלי 11</strong>, כל אחד עם נגד 220 אוהם משלו, בדיוק כמו לד הזינוק על חיבור דיגיטלי 9.</p>
 
       <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:16px;">
         <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.5; color:oklch(0.88 0.01 260); overflow-x:auto;">Arduino pin 9  ──[220 Ω]──┬── LED fast long leg
@@ -157,9 +157,9 @@ Arduino GND  ───────────── Buzzer leg 2</pre>
       </div>
 
       <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
-        <img src="../images/w_p2_03_three_leds_button_buzzer_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים — רגל 9 דרך נגד 220 אוהם ללד מהיר, רגל 10 דרך נגד 220 אוהם ללד בינוני, רגל 11 דרך נגד 220 אוהם ללד איטי — וכפתור על רגל 2 עם נגד הורדה 10 קילו-אוהם וזמזם על רגל 8." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+        <img src="../images/w_p2_03_three_leds_button_buzzer_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים — חיבור דיגיטלי 9 דרך נגד 220 אוהם ללד מהיר, חיבור דיגיטלי 10 דרך נגד 220 אוהם ללד בינוני, חיבור דיגיטלי 11 דרך נגד 220 אוהם ללד איטי — וכפתור על חיבור דיגיטלי 2 עם נגד הורדה 10 קילו-אוהם וזמזם על חיבור דיגיטלי 8." style="display:block; max-width:100%; height:auto; margin:0 auto;">
       </div>
-      <p style="margin:0 0 26px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong style="color:oklch(0.34 0.012 260);">רגל 9 ← לד מהיר</strong> · <strong style="color:oklch(0.34 0.012 260);">רגל 10 ← לד בינוני</strong> · <strong style="color:oklch(0.34 0.012 260);">רגל 11 ← לד איטי</strong>, כל אחד דרך נגד 220 אוהם ל-GND. נוסף לכפתור (רגל 2) ולזמזם (רגל 8) של חיווט 2.</p>
+      <p style="margin:0 0 26px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong style="color:oklch(0.34 0.012 260);">חיבור דיגיטלי 9 ← לד מהיר</strong> · <strong style="color:oklch(0.34 0.012 260);">חיבור דיגיטלי 10 ← לד בינוני</strong> · <strong style="color:oklch(0.34 0.012 260);">חיבור דיגיטלי 11 ← לד איטי</strong>, כל אחד דרך נגד 220 אוהם ל-GND. נוסף לכפתור (חיבור דיגיטלי 2) ולזמזם (חיבור דיגיטלי 8) של חיווט 2.</p>
 
       <!-- ==== חיווט 4 ==== -->
       <div style="display:flex; align-items:center; gap:12px; margin:6px 0 14px; padding-top:20px; border-top:1px solid oklch(0.93 0.006 85);">
@@ -167,7 +167,7 @@ Arduino GND  ───────────── Buzzer leg 2</pre>
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">חיווט 4 — גרסת שני כפתורים (גרסה 3 בלבד)</h2>
       </div>
 
-      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">נחוץ רק למי שבונים את <strong>משחק שני השחקנים</strong> בגרסה 3. מוסיפים <strong>כפתור שני</strong> על <strong>רגל 3</strong> עם נגד הורדה 10 קילו-אוהם משלו, מחווט בדיוק כמו הכפתור הראשון.</p>
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">נחוץ רק למי שבונים את <strong>משחק שני השחקנים</strong> בגרסה 3. מוסיפים <strong>כפתור שני</strong> על <strong>חיבור דיגיטלי 3</strong> עם נגד הורדה 10 קילו-אוהם משלו, מחווט בדיוק כמו הכפתור הראשון.</p>
 
       <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:16px;">
         <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.5; color:oklch(0.88 0.01 260); overflow-x:auto;">Arduino 5 V ─────────────┬── Button 1 pin A
@@ -183,13 +183,13 @@ Arduino 5 V ─────────────┬── Button 2 pin A
 
       <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:30px;">
         <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
-        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><span style="color:oklch(0.55 0.2 27); font-weight:700;">אותו כלל של נגד הורדה:</span> נגד 10 קילו-אוהם של כל כפתור הולך בין <strong>רגל הכניסה שלו (2 או 3) ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">GND</span></strong>, לא בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace;">5 V</span> ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace;">GND</span>.</p>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><span style="color:oklch(0.55 0.2 27); font-weight:700;">אותו כלל של נגד הורדה:</span> נגד 10 קילו-אוהם של כל כפתור הולך בין <strong>חיבור הכניסה שלו (2 או 3) ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-weight:700;">GND</span></strong>, לא בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace;">5 V</span> ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace;">GND</span>.</p>
       </div>
 
       <div style="border:1px solid oklch(0.9 0.02 248); border-radius:14px; background:oklch(0.99 0.004 248); padding:16px; margin-bottom:12px; text-align:center;">
-        <img src="../images/w_p2_04_two_buttons_variant_breadboard.svg" alt="תרשים ברדבורד: שני כפתורים — כפתור 1 על רגל 2 וכפתור 2 על רגל 3, כל אחד עם נגד הורדה 10 קילו-אוהם ל-GND והצד השני ל-5 V — בנוסף ללד ולזמזם של מעגל הבסיס." style="display:block; max-width:100%; height:auto; margin:0 auto;">
+        <img src="../images/w_p2_04_two_buttons_variant_breadboard.svg" alt="תרשים ברדבורד: שני כפתורים — כפתור 1 על חיבור דיגיטלי 2 וכפתור 2 על חיבור דיגיטלי 3, כל אחד עם נגד הורדה 10 קילו-אוהם ל-GND והצד השני ל-5 V — בנוסף ללד ולזמזם של מעגל הבסיס." style="display:block; max-width:100%; height:auto; margin:0 auto;">
       </div>
-      <p style="margin:0; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong style="color:oklch(0.34 0.012 260);">כפתור 1 ← רגל 2</strong> · <strong style="color:oklch(0.34 0.012 260);">כפתור 2 ← רגל 3</strong>, לכל אחד <strong style="color:oklch(0.34 0.012 260);">נגד הורדה 10 קילו-אוהם ← GND</strong>. אותה תבנית כמו הכפתור הראשון, מספר רגל שונה. נוסף ללד ולזמזם של מעגל הבסיס.</p>
+      <p style="margin:0; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong style="color:oklch(0.34 0.012 260);">כפתור 1 ← חיבור דיגיטלי 2</strong> · <strong style="color:oklch(0.34 0.012 260);">כפתור 2 ← חיבור דיגיטלי 3</strong>, לכל אחד <strong style="color:oklch(0.34 0.012 260);">נגד הורדה 10 קילו-אוהם ← GND</strong>. אותה תבנית כמו הכפתור הראשון, מספר חיבור שונה. נוסף ללד ולזמזם של מעגל הבסיס.</p>
 
     </div>
   </div>

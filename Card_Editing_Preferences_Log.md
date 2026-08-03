@@ -89,8 +89,16 @@ they stay.
 - Yon's own rework of P1 T1_M1 (2026-07-13, uncommitted WIP) replaces the elaborate inline-SVG
   Arduino Uno with a real board photo (`arduino_uno_r3_black_soft.png`) + a real IDE icon.
 
-**Evidence:** 2 (independent cards, consistent direction) · **Counterexamples:** none in edited cards.
-**Status:** TENTATIVE (strong direction — one more consistent instance ⇒ FIRM).
+- Figure must actually show what the card teaches: T1_M5 ("מוסיפים לד שני") had been shipping the
+  single-LED figure from T1_M3 plus a note apologizing for it ("בתרשים מופיע לד אחד לדוגמה"). On
+  Yon's instruction (2026-08-04) it was replaced with the real two-LED render from
+  `images/fritzing/w2_two_leds.fzz`, and the now-false apology sentence was dropped from the note.
+
+**Evidence:** 3 (independent cards, consistent direction) · **Counterexamples:** none in edited cards.
+**Status:** FIRM. Corollaries: (a) prefer the real render/photo over a stand-in; (b) never ship a
+figure that contradicts its card — fix the figure, don't caption around it; (c) captions live in
+**HTML, not baked into the image** (baked Hebrew captions blocked the X1 terminology sweep and had
+to be cropped off three P1 PNGs).
 **Procedure:** Yon supplies the image path; copy into `task_cards_he/assets/`; the bundle build
 inlines it automatically (`inlineImages`).
 
@@ -146,7 +154,54 @@ inlines it automatically (`inlineImages`).
 
 ---
 
+## Category X — Terminology (program-wide vocabulary)
+
+### X1 — "רגל" is reserved for component legs; Arduino pins are "חיבור דיגיטלי N" — CONFIRMED (swept 2026-08-04)
+**Rule:** One word, one concept. **Arduino pins** are `חיבור דיגיטלי 9` (power pins: `חיבור 5V`,
+plural `חיבורים 9 ו-10`, table header `החיבור בארדואינו`, section title `מפת החיבורים`).
+**רגל stays** for physical component legs only: `רגל ארוכה`/`רגל קצרה` of an LED, `רגלי החיישן`,
+`רגל A`/`רגל B` of a button, `רגל אחת של הנגד`.
+
+**Why (Yon, explicit):** "אני מציע שלא נקרא לכניסות של הארדואינו 'רגל' — נשאיר את הרגל לנגדים
+וכאלה" (card note, T1_M3, feedback 2026-08-04_0025), then approved the program-wide sweep. Using
+one word for two different things is exactly the ambiguity this student population can't afford.
+
+**Gender consequence (mandatory):** חיבור is masculine where רגל was feminine — agreement flips
+whenever the pin is the subject (`רגל דיגיטלית` → `חיבור דיגיטלי`, `הרגליים … הן` → `החיבורים … הם`,
+`אחת`→`אחד`). Do NOT flip words whose subject is a component leg
+(`חיבור דיגיטלי 9, והרגל הקצרה **מחוברת** ל-GND` is correct).
+
+**Attribution:** keep the source's own suffix (`חיבור דיגיטלי 9 של הארדואינו`); never inject a new
+one and never double it.
+
+**Never touch:** English/LTR content (`pin 9`, `D9`), code blocks, `<pre>` ASCII wiring panels.
+
+**Sweep record:** 2026-08-04 — 45 files (task + reference cards, P1–P4) swept by a 91-agent workflow
+with an independent auditor per file; final audit: **313** `חיבור דיגיטלי N` instances, **0** pin-context
+`רגל` leftovers, **0** over-reach, **61** component-leg usages preserved unchanged. Three P1 figure
+images had the old terminology *baked in* as captions — those strips were cropped off and replaced
+with HTML captions carrying the new wording (m3, m7; m5 was replaced outright, see V1).
+**Status:** CONFIRMED — binding for all new authoring (P5–P8) and any regenerated card.
+
+---
+
 ## Category P — Punctuation
+
+### P2 — No comma before the conjunction ו' — CONFIRMED (rule stated by Yon)
+**Rule:** Never place a comma before a vav-conjunction (`…מחכים שלוש שניות ומחברים בחזרה`, not
+`…שלוש שניות, ומחברים`).
+
+**Why (Yon, explicit):** "חוק חשוב, לא לשים פסיק לפני וו החיבור" (comment, T1_M2, feedback
+2026-08-03_2357).
+
+**Examples:**
+- `מוציאים את כבל ה־USB, מחכים שלוש שניות, ומחברים בחזרה.` → `…מחכים שלוש שניות ומחברים בחזרה.`
+
+**Status:** CONFIRMED as a writing rule (stated as law).
+**Sweep status: NOT swept.** ~345 candidate `, ו…` sites exist across the dc cards, but many are
+legitimate (comma closing a subordinate clause that happens to be followed by ו', list separators,
+quoted/English content). A sweep would need per-instance judgment — offer it to Yon as a reviewed
+batch rather than a blind replace.
 
 ### P1 — Minimal commas in short student-facing sentences
 **Rule:** Short observable statements drop commas that Hebrew grammar does not require ("הלד הירוק הקטן L ליד רגל 13 מהבהב." — no commas; "כשהקוד רץ הוא נדלק" — no comma after the clause).
@@ -162,10 +217,16 @@ inlines it automatically (`inlineImages`).
 ## Processed feedback ledger
 | Date learned | Feedback files |
 |---|---|
+| 2026-08-04 | feedback_2026-08-03_2351 · feedback_2026-08-03_2351_2 · feedback_2026-08-03_2357 · feedback_2026-08-04_0007 · feedback_2026-08-04_0025 |
 | 2026-08-03 | feedback_2026-08-03_2232 · feedback_2026-08-03_2305 |
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-04** — **X1 terminology sweep CONFIRMED + executed**: Arduino pins רגל → חיבור דיגיטלי across
+  45 files (313 instances; 0 leftovers, 0 over-reach, 61 component legs preserved), incl. gender-agreement
+  flips and cropping three baked-in figure captions. **P2** (no comma before ו') recorded CONFIRMED as a
+  writing rule, sweep deferred (needs per-instance judgment). **V1** promoted to FIRM with the T1_M5
+  two-LED figure replacement + the "captions in HTML, not baked" corollary. Feedback ledger: 2026-08-04_0007/_0025.
 - **2026-08-03 (learn run)** — 4 new rules: W3 everyday verbs (מאתרים→מוצאים), W4 simple descriptors,
   W5 header orientation + de-emphasized tool gloss, P1 minimal commas. W2 broadened to figure captions
   (+1 example) and scope-narrowed to authoring-only after a sweep evaluation REJECTED trimming existing

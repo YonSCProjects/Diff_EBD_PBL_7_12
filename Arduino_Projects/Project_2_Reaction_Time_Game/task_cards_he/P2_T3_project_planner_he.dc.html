@@ -59,7 +59,7 @@
             <h3 style="margin:0; font-size:16.5px; font-weight:700; color:oklch(0.3 0.02 260);">שני שחקנים זה מול זה</h3>
             <sc-if value="{{ sel1 }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:12.5px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:3px 11px;">✓ נבחר</span></sc-if>
           </div>
-          <p style="margin:0; font-size:14.5px; line-height:1.55; color:oklch(0.42 0.012 260);">מוסיפים <strong>כפתור שני על חיבור דיגיטלי 3</strong> עם נגד הורדה משלו. הלד נדלק, מתחרים מי לוחץ ראשון, והמשחק מכריז מי ניצח.</p>
+          <p style="margin:0; font-size:14.5px; line-height:1.55; color:oklch(0.42 0.012 260);">מוסיפים <strong>כפתור שני על חיבור דיגיטלי 3 של הארדואינו</strong> עם נגד הורדה משלו. הלד נדלק, מתחרים מי לוחץ ראשון, והמשחק מכריז מי ניצח.</p>
         </div>
         <div onClick="{{ pick2 }}" style="flex:1; min-width:230px; cursor:pointer; border:2px solid {{ border2 }}; background:{{ bg2 }}; border-radius:15px; padding:16px 18px;">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:7px;">
@@ -96,11 +96,11 @@
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 2 — בונים</h2>
       </div>
-      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);"><strong>מציירים את החיווט על נייר</strong>, ואז מחווטים. לשני שחקנים: כפתור שני לרוחב החריץ — צד אחד ל-<strong>5V</strong>, השני ל-<strong>חיבור דיגיטלי 3</strong> ודרך נגד הורדה <strong>10kΩ</strong> (חום · שחור · כתום) ל-<strong>GND</strong>. בדיוק כמו הכפתור הראשון, רק על חיבור דיגיטלי 3.</p>
+      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);"><strong>מציירים את החיווט על נייר</strong>, ואז מחווטים. לשני שחקנים: כפתור שני לרוחב החריץ — צד אחד ל-<strong>5V</strong>, השני ל-<strong>חיבור דיגיטלי 3 של הארדואינו</strong> ודרך נגד הורדה <strong>10kΩ</strong> (חום · שחור · כתום) ל-<strong>GND</strong>. בדיוק כמו הכפתור הראשון, רק על חיבור דיגיטלי 3 של הארדואינו.</p>
 
       <!-- Fritzing image slot -->
       <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; background:#fff; padding:18px; margin-bottom:10px; text-align:center;"><img src="assets/w_p2_04_two_buttons_variant_breadboard.svg" alt="תרשים ברדבורד — שני כפתורים לשני שחקנים" style="width:600px; max-width:100%; height:auto;" /></div>
-      <p style="margin:0 0 20px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);"><strong>וריאציית שני השחקנים:</strong> כפתור שחקן 2 על חיבור דיגיטלי 3 עם נגד הורדה משלו ל-GND, לצד הכפתור הקיים על חיבור דיגיטלי 2. הלד והזמזם נשארים על חיבורים 9 ו-8.</p>
+      <p style="margin:0 0 20px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);"><strong>וריאציית שני השחקנים:</strong> כפתור שחקן 2 על חיבור דיגיטלי 3 של הארדואינו עם נגד הורדה משלו ל-GND, לצד הכפתור הקיים על חיבור דיגיטלי 2 של הארדואינו. הלד והזמזם נשארים על חיבורים 9 ו-8.</p>
 
       <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px; margin-bottom:30px;">
         <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
@@ -115,7 +115,7 @@
       <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">קלוד קוד במצב דיאלוג חופשי — אין קוד מוכן מראש, בונים מתוך התיאור שלכם. אותה משמעת של (א)(ב)(ג): מתארים את הבעיה לפני שמבקשים פתרון.</p>
       <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px; margin-bottom:30px;">
         <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.4 0.06 285); margin-bottom:5px;">הפנייה הראשונה לקלוד קוד <span style="font-weight:500; color:oklch(0.58 0.012 260);">(מנסחים כאן לפני ששולחים)</span></label>
-        <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">דוגמה (שני שחקנים): "אני בונה משחק זמן תגובה לשני שחקנים. לד על חיבור דיגיטלי 9, זמזם על חיבור דיגיטלי 8, כפתור שחקן 1 על חיבור דיגיטלי 2 וכפתור שחקן 2 על חיבור דיגיטלי 3, לכל אחד נגד הורדה 10kΩ. אחרי השהייה אקראית הלד נדלק, הראשון שלוחץ מנצח, והצג הטורי כותב מי ניצח. תוכל לעזור לי לכתוב את הקוד?"</p>
+        <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">דוגמה (שני שחקנים): "אני בונה משחק זמן תגובה לשני שחקנים. לד על חיבור דיגיטלי 9 של הארדואינו, זמזם על חיבור דיגיטלי 8 של הארדואינו, כפתור שחקן 1 על חיבור דיגיטלי 2 של הארדואינו וכפתור שחקן 2 על חיבור דיגיטלי 3 של הארדואינו, לכל אחד נגד הורדה 10kΩ. אחרי השהייה אקראית הלד נדלק, הראשון שלוחץ מנצח, והצג הטורי כותב מי ניצח. תוכל לעזור לי לכתוב את הקוד?"</p>
         <textarea value="{{ f4 }}" onInput="{{ on4 }}" rows="3" placeholder="כותבים כאן את הפנייה…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
       </div>
 

@@ -34,7 +34,7 @@
       </div>
 
       <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מעלים את הקוד שמופעל בעזרת הכפתור</h1>
-      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.88); max-width:56ch;">לחיצה על הכפתור מחליפה איזה לד דולק. זה <strong style="color:#fff;">הפרויקט האינטראקטיבי הראשון שלכם</strong>: קלט מהכפתור משנה את פלט הלדים.</p>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.88); max-width:56ch;">לחיצה על הכפתור מחליפה את הלד הדולק.</p>
 
       <div style="margin-top:22px;">
         <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
@@ -160,20 +160,12 @@
   }
 }</pre>
       </div>
-      <div style="display:flex; gap:11px; align-items:center; flex-wrap:wrap; margin:0 0 30px; padding:13px 16px; background:oklch(0.96 0.03 285); border:1px solid oklch(0.9 0.04 285); border-radius:12px;">
-        <span style="font-size:14.5px; color:oklch(0.42 0.05 285); line-height:1.5;">התבנית הבסיסית של כל פרויקט אינטראקטיבי:</span>
-        <span style="display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:14px; color:oklch(0.4 0.08 285);">
-          <span style="background:#fff; border:1px solid oklch(0.85 0.04 285); border-radius:7px; padding:4px 11px;">קלט</span>→
-          <span style="background:#fff; border:1px solid oklch(0.85 0.04 285); border-radius:7px; padding:4px 11px;">החלטה</span>→
-          <span style="background:#fff; border:1px solid oklch(0.85 0.04 285); border-radius:7px; padding:4px 11px;">פלט</span>
-        </span>
-      </div>
 
       <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
         <span style="flex:none; font-size:22px; line-height:1;">👀</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
-          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">כשהכפתור לא לחוץ: לד 1 (חיבור דיגיטלי 9) דולק, לד 2 (חיבור דיגיטלי 10) כבוי. בלחיצה והחזקה: לד 1 נכבה ולד 2 מאיר. בשחרור: לד 1 שוב מאיר.</p>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">כשהכפתור לא לחוץ: לד 1 (חיבור דיגיטלי 9 של הארדואינו) דולק, לד 2 (חיבור דיגיטלי 10 של הארדואינו) כבוי. בלחיצה והחזקה: לד 1 נכבה ולד 2 מאיר. בשחרור: לד 1 שוב מאיר.</p>
           <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">ההחלפה מיידית — בלחיצה ובשחרור.</p>
         </div>
       </div>
@@ -193,7 +185,7 @@
           <span style="font-size:20px;">🪄</span>תקועים? הכפתור לא משנה כלום?
         </div>
         <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
-          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>הסיבה הנפוצה ביותר:</strong> נגד ההורדה של 10kΩ במקום הלא נכון. הוא חייב להיות בין <strong>חיבור דיגיטלי 2 ל־GND</strong>, לא בין 5V ל־GND.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>הסיבה הנפוצה ביותר:</strong> נגד ההורדה של 10kΩ במקום הלא נכון. הוא חייב להיות בין <strong>חיבור דיגיטלי 2 של הארדואינו ל־GND</strong>, לא בין 5V ל־GND.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>אם הכפתור עדיין לא עובד אחרי בדיקת מיקום הנגד — <strong>קוראים למורה.</strong></span></div>
         </div>
       </div>
@@ -202,7 +194,7 @@
       <div style="position:relative; overflow:hidden; background:linear-gradient(135deg, oklch(0.55 0.13 285), oklch(0.5 0.13 248)); color:#fff; border-radius:18px; padding:26px 26px 24px;">
         <div style="font-size:38px; line-height:1; margin-bottom:8px;">🎉</div>
         <div style="font-size:22px; font-weight:700; margin-bottom:10px;">השלמתם את פרויקט 1!</div>
-        <p style="margin:0; font-size:15.5px; line-height:1.6; color:rgba(255,255,255,0.92); max-width:58ch;">חיווטתם ברדבורד מאפס. העליתם ארבעה קבצי קוד. בניתם מעגל אינטראקטיבי עם לדים וכפתור. אפשר לבקש מהמורה תמונה של פרויקט 1 הגמור שלכם — זו הנדסת חשמל אמיתית, ועשיתם אותה בעצמכם.</p>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:rgba(255,255,255,0.92); max-width:58ch;">חיווטתם ברדבורד מאפס. העליתם ארבעה קבצי קוד. בניתם מעגל אינטראקטיבי עם לדים וכפתור. אפשר לצלם תמונה של פרויקט 1 הגמור שלכם — זו הנדסת חשמל אמיתית, ועשיתם אותה בעצמכם.</p>
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
           <span style="background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.25); border-radius:999px; padding:6px 14px; font-size:13px; font-weight:600;">🔌 חיווט ברדבורד</span>
           <span style="background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.25); border-radius:999px; padding:6px 14px; font-size:13px; font-weight:600;">🏁 4 העלאות קוד</span>

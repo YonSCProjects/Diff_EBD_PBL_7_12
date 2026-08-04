@@ -118,7 +118,7 @@
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">איך מחברים את חיישן הקו למסילות</h2>
       </div>
 
-      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.3 0.012 260);">לכל חיישן קו יש <strong>שלוש רגליים מסומנות</strong>: VCC, GND ו-OUT. שלושה חוטי ג'אמפר מחברים אותן למקומות קבועים: <strong>VCC</strong> אל ה<strong>מסילה האדומה (+)</strong>, <strong>GND</strong> אל ה<strong>מסילה הכחולה (−)</strong>, ו-<strong>OUT</strong> אל חיבור דיגיטלי <strong>11</strong> של הארדואינו או <strong>12</strong> של הארדואינו.</p>
+      <p style="margin:0 0 16px; font-size:16px; line-height:1.6; color:oklch(0.3 0.012 260);">לכל חיישן קו יש <strong>שלוש רגליים מסומנות</strong>: VCC, GND ו-OUT. שלושה חוטי ג'אמפר מחברים אותן למקומות קבועים: <strong>VCC</strong> אל ה<strong>מסילה האדומה (+)</strong>, <strong>GND</strong> אל ה<strong>מסילה הכחולה (−)</strong>, ו-<strong>OUT</strong> אל חיבור דיגיטלי <strong>11</strong> של הארדואינו או <strong>12</strong>.</p>
 
       <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
         <span style="flex:none; font-size:22px; line-height:1;">🧭</span>
@@ -148,7 +148,7 @@
       <ul style="margin:0 0 28px; padding-inline-start:22px; display:flex; flex-direction:column; gap:9px; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);">
         <li>הכפתור יושב לרוחב החריץ המרכזי — רגל A בטור ממוספר אחד, רגל B בטור אחר.</li>
         <li>מהטור של <strong>רגל A</strong> יוצא חוט ג'אמפר אל ה<strong>מסילה האדומה (+)</strong> — זו השרשרת הראשונה, וזהו.</li>
-        <li>מהטור של <strong>רגל B</strong> יוצא חוט ג'אמפר אל <strong>חיבור דיגיטלי 2 של הארדואינו</strong> של הארדואינו — הם חולקים טור אחד, ולכן מחוברים.</li>
+        <li>מהטור של <strong>רגל B</strong> יוצא חוט ג'אמפר אל <strong>חיבור דיגיטלי 2 של הארדואינו</strong> — הם חולקים טור אחד, ולכן מחוברים.</li>
         <li>רגל אחת של <strong>נגד 10kΩ</strong> נכנסת ל<strong>אותו טור</strong> של רגל B — עכשיו רגל B, הג'אמפר לחיבור דיגיטלי 2 של הארדואינו והנגד מחוברים יחד.</li>
         <li>הרגל השנייה של הנגד נכנסת ל<strong>טור חדש</strong>, ומשם חוט ג'אמפר אל ה<strong>מסילה הכחולה (−)</strong>.</li>
       </ul>
@@ -159,7 +159,7 @@
           <li>לכל חיישן קו יש <strong>שלוש רגליים</strong> מסומנות: VCC, GND, OUT.</li>
           <li>החיישנים לא יושבים על הברדבורד — הם מורכבים בקדמת השלדה, עם הפנים לרצפה. אליהם מגיעים <strong>חוטי ג'אמפר</strong>.</li>
           <li>VCC מתחבר ל<strong>מסילה האדומה (+)</strong> ו-GND ל<strong>מסילה הכחולה (−)</strong> — בדיוק כמו כל רכיב שצורך מתח.</li>
-          <li>OUT היא רגל האות: החיישן השמאלי לחיבור דיגיטלי <strong>11</strong> של הארדואינו, החיישן הימני לחיבור דיגיטלי <strong>12</strong> של הארדואינו. דרכה הארדואינו יודע אם החיישן רואה קו שחור או רצפה.</li>
+          <li>OUT היא רגל האות: החיישן השמאלי לחיבור דיגיטלי <strong>11</strong> של הארדואינו, החיישן הימני לחיבור דיגיטלי <strong>12</strong>. דרכה הארדואינו יודע אם החיישן רואה קו שחור או רצפה.</li>
           <li><span style="color:oklch(0.53 0.2 27); font-weight:700;">VCC ו-GND הפוכים זה לזה — לא מתחלפים.</span> VCC תמיד למסילה האדומה, GND תמיד לכחולה. בודקים פעמיים לפני שמדליקים את הארדואינו.</li>
         </ul>
       </div>
@@ -178,7 +178,7 @@
 
       <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
         <span style="flex:none; font-size:22px; line-height:1;">②</span>
-        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.36 0.04 150);"><strong>בדיקה 2 — האם כל רגל חולקת את הטור שלה עם בדיוק השכן הנכון?</strong> עוברים על השרשרת בקול רם. לחיישן הקו: "ה-VCC נכנס למסילה ה<em>אדומה</em>; ה-GND נכנס למסילה ה<em>כחולה</em>; ה-OUT מגיע לחיבור דיגיטלי 11 של הארדואינו או 12". לכפתור של גרסה 3: "רגל A והג'אמפר למסילה האדומה נכנסים ל<em>אותו</em> טור; רגל B, הג'אמפר לחיבור דיגיטלי 2 של הארדואינו ורגל אחת של הנגד נכנסים ל<em>אותו</em> טור; הרגל השנייה של הנגד והג'אמפר למסילה הכחולה נכנסים ל<em>אותו</em> טור". אם זוג כלשהו נמצא ב<em>טורים שונים</em> — השרשרת שבורה שם. מעבירים את הרגל לטור המתאים.</p>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.36 0.04 150);"><strong>בדיקה 2 — האם כל רגל חולקת את הטור שלה עם בדיוק השכן הנכון?</strong> עוברים על השרשרת בקול רם. לחיישן הקו: "ה-VCC נכנס למסילה ה<em>אדומה</em>; ה-GND נכנס למסילה ה<em>כחולה</em>; ה-OUT מגיע לחיבור דיגיטלי 11 של הארדואינו או 12". לכפתור של גרסה 3: "רגל A והג'אמפר למסילה האדומה נכנסים ל<em>אותו</em> טור; רגל B, הג'אמפר לחיבור דיגיטלי 2 ורגל אחת של הנגד נכנסים ל<em>אותו</em> טור; הרגל השנייה של הנגד והג'אמפר למסילה הכחולה נכנסים ל<em>אותו</em> טור". אם זוג כלשהו נמצא ב<em>טורים שונים</em> — השרשרת שבורה שם. מעבירים את הרגל לטור המתאים.</p>
       </div>
 
       <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">

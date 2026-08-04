@@ -290,10 +290,18 @@ reading difficulty; one relationship per row can be followed with a finger.
 - T2_M2's one-paragraph "תקועים?" → four bullets (feedback 2026-08-04_1446)
 
 **Evidence:** 3 (3 cards, all explicit) · **Status:** FIRM.
-**Sweep candidate (small):** ~3 real wiring chains survive — `חיבור דיגיטלי 8 של הארדואינו → זמזם → GND`
-(P2), `חיבור דיגיטלי 2 של הארדואינו → 10kΩ → GND`, `9 → 220Ω → לד`. **Not** to be touched: file paths
-(`Google Drive → My Drive → …`), menu paths, English `<pre>`/alt strings, and pattern sequences
-(`לסירוגין → רדיפה → נשימה`), which are lists rather than wiring chains.
+
+**Sweep evaluated 2026-08-04 → NO-OP (nothing to change).** The three "candidates" a grep had flagged
+turned out to be **figure legends** — colour-keyed strips under the breadboard diagrams, where each entry
+pairs a colour swatch with a 3-token chain (`9 → 220Ω → לד`). A legend is not prose: the compact chain is
+the right form there, and stacking rows inside a horizontal legend would make it worse. The only prose
+chains left are a **file path** (`Google Drive → My Drive → …`) and a **cycle**
+(`לסירוגין → רדיפה → נשימה → חוזר`), where the arrow means "then" and reads correctly.
+
+**Scope, sharpened by that check:** V5 governs **prose instructions and stuck/expected boxes** — lines the
+student reads as a sentence. It does NOT apply to legends, file/menu paths, sequence-of-states lists, or
+the English `<pre>` panels. *Lesson for future sweeps: look at the surrounding element before trusting a
+text-pattern grep — the same characters mean different things in a legend and in a sentence.*
 
 ### V3 — When a figure changes, sweep the whole card for text that described the old one
 **Rule:** Replacing a figure is not done until every sentence that referred to the old figure is
@@ -332,9 +340,15 @@ Verified 0 bare refs, 0 doubled attributions.
 Always anchor the number: `\d+(?!\d)`. This run was verified clean (all 2-digit pins intact), but the
 scripts are **not** safe to re-run as written.
 
-**Known cosmetic effect:** 31 sentences carry 2+ pin references and now repeat the attribution twice
-(e.g. `לד 1 (חיבור דיגיטלי 9 של הארדואינו) דולק, לד 2 (חיבור דיגיטלי 10 של הארדואינו) כבוי`). Applied
-literally per instruction; flagged to Yon — thin to first-mention-per-sentence if he finds it heavy.
+**Thinning sweep — approved and applied 2026-08-04.** The literal sweep left blocks repeating the
+attribution (`לד 1 (חיבור דיגיטלי 9 של הארדואינו) דולק, לד 2 (חיבור דיגיטלי 10 של הארדואינו) כבוי`).
+Yon approved thinning, so the standing form of X3 is now:
+
+> **Keep the attribution on the FIRST pin mention in a block** (paragraph, caption, list item, table
+> cell); later mentions in that same block are bare `חיבור דיגיטלי N`.
+
+Applied: **101 repeats removed across 31 files, 254 first-mentions kept**; verified 0 blocks with a
+doubled attribution. New cards must follow the first-mention-per-block form.
 
 ### X2 — Units are written with no space, using the symbol: "5V", "220Ω", "10kΩ" — CONFIRMED (swept 2026-08-04)
 **Rule:** `5V`, `220Ω`, `10kΩ` — never `5 V`, `220 אוהם`, `10 קילו-אוהם`, `10 קΩ`. The number and its
@@ -462,6 +476,11 @@ and say so, rather than treating it as a style change.
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-04 (approved sweeps)** — **X3 thinning applied**: attribution kept on the first pin mention
+  per block, 101 repeats removed across 31 files (254 first-mentions kept, 0 doubled blocks remain).
+  **V5 sweep evaluated → NO-OP**: the flagged "wiring chains" were figure legends (compact chain is
+  correct there) and the remaining prose chains are a file path and a state sequence. V5's scope
+  sharpened to prose/stuck-box lines only.
 - **2026-08-04 (learn run 4)** — 3 new rules: **X3** (Arduino pins carry "של הארדואינו" — CONFIRMED,
   312 swept, incl. 40 refs hidden inside inline markup; documents the regex-backtracking hazard),
   **W7** (no abstract concept-framing — Yon deleted the קלט→החלטה→פלט box *and* its lede sentence),

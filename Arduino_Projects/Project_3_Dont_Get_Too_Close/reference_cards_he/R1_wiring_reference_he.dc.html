@@ -123,13 +123,13 @@
   Echo ───────────  pin 11
   GND  ───────────  GND</pre>
       </div>
-      <div class="dc-frame"><img src="../images/w_p3_01_hcsr04_breadboard.svg" alt="תרשים ברדבורד: חיישן HC-SR04 עם ארבע רגליו — VCC ל-5V (אדום), GND ל-GND (שחור), Trig לחיבור דיגיטלי 12 של הארדואינו (כתום), Echo לחיבור דיגיטלי 11 של הארדואינו (ירוק)."></div>
-      <p class="dc-cap"><strong>חיווט 1:</strong> VCC ל-<strong>5V</strong> (אדום), GND ל-<strong>GND</strong> (שחור), <strong>Trig לחיבור דיגיטלי 12 של הארדואינו</strong> (כתום), <strong>Echo לחיבור דיגיטלי 11 של הארדואינו</strong> (ירוק).</p>
+      <div class="dc-frame"><img src="../images/w_p3_01_hcsr04_breadboard.svg" alt="תרשים ברדבורד: חיישן HC-SR04 עם ארבע רגליו — VCC ל-5V (אדום), GND ל-GND (שחור), Trig לחיבור דיגיטלי 12 של הארדואינו (כתום), Echo לחיבור דיגיטלי 11 (ירוק)."></div>
+      <p class="dc-cap"><strong>חיווט 1:</strong> VCC ל-<strong>5V</strong> (אדום), GND ל-<strong>GND</strong> (שחור), <strong>Trig לחיבור דיגיטלי 12 של הארדואינו</strong> (כתום), <strong>Echo לחיבור דיגיטלי 11</strong> (ירוק).</p>
       <div class="dc-sechead">
         <span class="dc-ico dc-ico-blue">🔌</span>
         <h2 class="dc-h2">חיווט 2 — חיישן + לד אזעקה (שלב 3)</h2>
       </div>
-      <p class="dc-wp">אותו חיווט כמו בחיווט 1, ומוסיפים <strong>לד</strong> אחד על <strong>חיבור דיגיטלי 9 של הארדואינו</strong> דרך נגד 220Ω: הרגל הארוכה ← נגד ← חיבור דיגיטלי 9 של הארדואינו, הרגל הקצרה ← GND. זה בדיוק חיווט הלד שעשיתם בפרויקט 1 ובפרויקט 2.</p>
+      <p class="dc-wp">אותו חיווט כמו בחיווט 1, ומוסיפים <strong>לד</strong> אחד על <strong>חיבור דיגיטלי 9 של הארדואינו</strong> דרך נגד 220Ω: הרגל הארוכה ← נגד ← חיבור דיגיטלי 9, הרגל הקצרה ← GND. זה בדיוק חיווט הלד שעשיתם בפרויקט 1 ובפרויקט 2.</p>
       <div class="dc-pre-wrap" dir="ltr">
         <div class="dc-pre-bar">
           <span class="dc-dot" style="background:oklch(0.6 0.16 28);"></span>
@@ -146,7 +146,7 @@ Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
                          ▼
                     LED short leg (−) ── Arduino GND</pre>
       </div>
-      <div class="dc-frame"><img src="../images/w_p3_02_hcsr04_led_breadboard.svg" alt="תרשים ברדבורד: חיווט 1 ובנוסף לד על חיבור דיגיטלי 9 של הארדואינו — הרגל הארוכה דרך נגד 220Ω לחיבור דיגיטלי 9 של הארדואינו, הרגל הקצרה ל-GND."></div>
+      <div class="dc-frame"><img src="../images/w_p3_02_hcsr04_led_breadboard.svg" alt="תרשים ברדבורד: חיווט 1 ובנוסף לד על חיבור דיגיטלי 9 של הארדואינו — הרגל הארוכה דרך נגד 220Ω לחיבור דיגיטלי 9, הרגל הקצרה ל-GND."></div>
       <p class="dc-cap"><strong>חיווט 2:</strong> חיווט 1, ובנוסף <strong>לד</strong> — הרגל הארוכה (+) דרך נגד <strong>220Ω</strong> לחיבור דיגיטלי <strong>9</strong> של הארדואינו, הרגל הקצרה (−) ל-<strong>GND</strong>.</p>
       <div class="dc-sechead">
         <span class="dc-ico dc-ico-blue">🔌</span>
@@ -178,7 +178,7 @@ Arduino GND  ───────────── Buzzer leg 2</pre>
         <span class="dc-ico dc-ico-blue">🔌</span>
         <h2 class="dc-h2">חיווט 4 — אזעקה בשני שלבים (גרסה 3 בלבד)</h2>
       </div>
-      <p class="dc-wp">נחוץ רק למי שבונים <strong>אזעקה בשני שלבים</strong> בגרסה 3: לד אזהרה <strong>(צהוב)</strong> שמאיר כשמשהו מתקרב, ולד אזעקה <strong>(אדום)</strong> שמאיר כשמתקרבים עוד יותר. מוסיפים לחיווט 3 <strong>לד שני</strong> על <strong>חיבור דיגיטלי 10 של הארדואינו</strong> עם נגד 220Ω משלו, מחווט בדיוק כמו לד האזעקה על חיבור דיגיטלי 9 של הארדואינו.</p>
+      <p class="dc-wp">נחוץ רק למי שבונים <strong>אזעקה בשני שלבים</strong> בגרסה 3: לד אזהרה <strong>(צהוב)</strong> שמאיר כשמשהו מתקרב, ולד אזעקה <strong>(אדום)</strong> שמאיר כשמתקרבים עוד יותר. מוסיפים לחיווט 3 <strong>לד שני</strong> על <strong>חיבור דיגיטלי 10 של הארדואינו</strong> עם נגד 220Ω משלו, מחווט בדיוק כמו לד האזעקה על חיבור דיגיטלי 9.</p>
       <div class="dc-pre-wrap" dir="ltr">
         <div class="dc-pre-bar">
           <span class="dc-dot" style="background:oklch(0.6 0.16 28);"></span>
@@ -202,7 +202,7 @@ Arduino pin 10 ──[220 Ω]──┬── warning LED long leg (+)
 Arduino pin 8 ───────────── Buzzer leg 1
 Arduino GND  ───────────── Buzzer leg 2</pre>
       </div>
-      <div class="dc-frame"><img src="../images/w_p3_04_two_stage_breadboard.svg" alt="תרשים ברדבורד: חיווט 3 ובנוסף לד אזהרה שני על חיבור דיגיטלי 10 של הארדואינו דרך נגד 220Ω משלו — הרגל הארוכה דרך הנגד לחיבור דיגיטלי 10 של הארדואינו, הרגל הקצרה ל-GND."></div>
+      <div class="dc-frame"><img src="../images/w_p3_04_two_stage_breadboard.svg" alt="תרשים ברדבורד: חיווט 3 ובנוסף לד אזהרה שני על חיבור דיגיטלי 10 של הארדואינו דרך נגד 220Ω משלו — הרגל הארוכה דרך הנגד לחיבור דיגיטלי 10, הרגל הקצרה ל-GND."></div>
       <p class="dc-cap"><strong>חיווט 4:</strong> חיווט 3, ובנוסף <strong>לד אזהרה שני</strong> על חיבור דיגיטלי <strong>10</strong> של הארדואינו דרך נגד <strong>220Ω</strong> משלו. כל לד עם הנגד שלו.</p>
     </div>
   </div>

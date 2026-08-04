@@ -47,6 +47,8 @@ soldering-safety "קוראים למורה" line — locked motifs, NEVER trimmed
 - `זה שלב החיווט הקשה ביותר בפרויקט 1. המורה מצפה לעזור בשלב זה — קוראים לו.` →
   `זה שלב החיווט הקשה ביותר בפרויקט 1. אם נתקעים קוראים למורה.` (P1 T1_M7, feedback 2026-08-04_1312 —
   4th instance; note the conditional framing "אם נתקעים" replacing the reassurance)
+- `קוראים למורה — מעבר לקצב הזה הוא רגע שבו עדיף לא להיאבק לבד.` → `קוראים למורה.`
+  (P1 T2_M1, feedback 2026-08-04_1442 — 5th instance)
 
 **Status:** CONFIRMED · **Sweep executed 2026-08-04:** all 13 `קוראים למורה לעזרה.` → `קוראים למורה.`
 across 13 cards (P1 T1_M2/M3/M6/M8; P3 T1_M2/M3/M4/M5, T2_M3; P4 T1_M5/M6/M7, T2_M3). Verified after:
@@ -170,8 +172,33 @@ the hard one" before they have read a single step.
 - `מוסיפים כפתור לחיצה ונגד הורדה. שלב החיווט הקשה ביותר בפרויקט — אם לא בטוחים, קוראים למורה.`
   → `**מוסיפים כפתור לחיצה ונגד הורדה.**` (P1 T1_M7, feedback 2026-08-04_1312)
 
-**Evidence:** 1 (edit + styling comment) · **Status:** TENTATIVE — the de-duplication logic
-(say it where it belongs, once) is consistent with T1/T3/W2, so treat it as a leaning.
+- `לחיצה על הכפתור מחליפה איזה לד דולק. זה הפרויקט האינטראקטיבי הראשון שלכם: קלט מהכפתור משנה את פלט הלדים.`
+  → `לחיצה על הכפתור מחליפה את הלד הדולק.` (P1 T1_M8, feedback 2026-08-04_1435)
+- `הפעלה מרוכזת: פותחים עמדת עבודה, מחווטים לד אחד…` → `פותחים עמדת עבודה, מחווטים לד אחד…`
+  (P1 T2_M1, feedback 2026-08-04_1451 — a category label is chrome too)
+
+**Evidence:** 3 (3 cards) · **Status:** FIRM. The de-duplication logic (say it where it belongs, once)
+matches T1/T3/W2. Ledes carry the action, nothing else — no difficulty warning, no meta-framing,
+no category label.
+
+### W7 — No abstract concept-framing — the card teaches the action, not the pattern behind it
+**Rule:** Cards don't name the computer-science abstraction a step illustrates. No "this is the basic
+pattern of every interactive project", no קלט → החלטה → פלט diagram, no "input changes output" framing.
+The student does the concrete thing; the concept is the teacher's material, not the card's.
+
+**Why (Yon, 2026-08-04, T1_M8):** he cut `זה הפרויקט האינטראקטיבי הראשון שלכם: קלט מהכפתור משנה את פלט
+הלדים` from the lede **and** deleted the whole קלט→החלטה→פלט chip box beneath the code ("הסר את השורה
+הזאת ואת השורה שמתחתיה") — two separate removals of the same idea on one card. Naming an abstraction
+adds vocabulary to learn on top of the task; the pattern is felt by doing it, not by being told.
+
+**Examples:**
+- lede: `…זה הפרויקט האינטראקטיבי הראשון שלכם: קלט מהכפתור משנה את פלט הלדים.` → removed
+- the `התבנית הבסיסית של כל פרויקט אינטראקטיבי:` box with קלט/החלטה/פלט chips → removed entirely
+
+**Evidence:** 2 removals on 1 card (one edit + one comment, same concept) · **Counterexamples:** 0 —
+no קלט/פלט framing survives anywhere in the cards. **Status:** FIRM (the concept was eliminated, not
+trimmed). Distinct from W2 (which is about explanation vs observation): W7 is about *abstraction* —
+don't teach the category, teach the doing.
 
 ### W4 — Simple comparative descriptors over shape-jargon
 **Rule:** Describe hardware by the simplest distinguishing feature ("הקצה הגדול יותר"), not by technical shape adjectives ("הקצה השטוח הרחב").
@@ -225,16 +252,48 @@ who has never held the part cannot match a name to an object from prose alone �
 - P1 T1_M7 — pushbutton drawing matching the Fritzing part; "החריץ המרכזי" overlay; 10 kΩ resistor
   with its bands (חום · שחור · כתום) under the "not the 220 Ω one" warning.
 
-**How:** inline SVG in the card (crisp at print size, editable later, no asset to manage) unless a real
-photo/screenshot is called for (rule V1). Match the look of the part as it appears in the card's own
-Fritzing figure so the student can pair them. Label in Hebrew; never leave English chrome in the drawing.
-A Fritzing part is usually too small to crop and enlarge (~50 px) — draw it instead.
+**How — best source first (learned the hard way 2026-08-04):**
+1. **Extract the real part from the Fritzing SVG as vector.** `scratchpad/find_part.js` lists each
+   `g[partID]` with its bbox; `extract_part.js <svg> <partID> <out.svg>` pulls one part into a
+   tightly-cropped standalone SVG (defs carried along). Crisp at any size, and it is *literally* the
+   component the student sees in the card's wiring figure. (P1 button = part `90000120` of
+   `w3_leds_and_button_pulldown_breadboard.svg` → `assets/pushbutton.svg`.)
+2. Only if the part isn't in a Fritzing figure, draw an inline SVG — and match the Fritzing look.
+3. Never crop-and-enlarge the PNG figure: the part is ~50 px there and turns to mush.
+
+**A drawn imitation can mislead:** Claude's hand-drawn pushbutton showed two top tabs and read as a
+**2-leg** part; Yon caught it ("in this image only 2 legs are seen and this may be misleading") and asked
+for the Fritzing one. Fidelity of the *part count / distinguishing features* matters more than style.
+Label in Hebrew; never leave English chrome (a "4 legs" caption) in the drawing.
 
 **Evidence:** 5 (2 cards, 4 separate explicit requests) · **Status:** FIRM.
 **Counterexamples / sweep candidate:** only T1_M3 and T1_M7 currently carry component illustrations.
 Parts introduced with no picture anywhere: **buzzer** (P2 T1_M4), **HC-SR04** (P3 T1_M1), **gear motors**
 (P4 T1_M2), **L298N driver** (P4 T1_M4), **line sensors** (P4 T1_M3), plus the **soldering iron** (P4 T1_M1).
 Yon simply hasn't reached those cards yet — offer the illustrations when he does, or as a batch.
+
+### V5 — Multi-part technical lines are stacked rows, never one long chain
+**Rule:** A line that strings several technical steps together with arrows or semicolons gets broken
+into stacked rows (or bullets) — one relationship per row, colour-coded where it helps.
+
+**Why (Yon, 3 times):** "הטקסט של השורה הזאת מצוין אבל בגלל החיצים הוא נראה קצת מבולגן ויכול להרתיע
+תלמידים שקשה להם עם קריאה וריכוז" (T1_M2); "שורות טקסט כאלה שיש בהן חצים צריך לארגן בצורה שתהיה יותר
+ברורה לעין. אולי להפריד את הרגל הארוכה והרגל הקצרה לשתי שורות" (T2_M1); "לכתוב את הטקסט הזה באופן ברור
+יותר ויזואלית, לא כשורה אחת ארוכה" (T2_M2). A dense chain is a wall of symbols for a student with
+reading difficulty; one relationship per row can be followed with a finger.
+
+**Examples:**
+- `בודקים שב־Tools → Board מופיע "Arduino Uno" ושב־Tools → Port מופיעה יציאת COM` → lead-in + two rows,
+  each with the menu path in a mono chip (P1 T1_M2, feedback 2026-08-03_2357)
+- `מחווטים לד אחד: רגל ארוכה (+) → נגד 220Ω → חיבור דיגיטלי 9, רגל קצרה (−) → GND` → two colour-coded
+  rows, green long-leg / red short-leg (P1 T2_M1, feedback 2026-08-04_1442)
+- T2_M2's one-paragraph "תקועים?" → four bullets (feedback 2026-08-04_1446)
+
+**Evidence:** 3 (3 cards, all explicit) · **Status:** FIRM.
+**Sweep candidate (small):** ~3 real wiring chains survive — `חיבור דיגיטלי 8 של הארדואינו → זמזם → GND`
+(P2), `חיבור דיגיטלי 2 של הארדואינו → 10kΩ → GND`, `9 → 220Ω → לד`. **Not** to be touched: file paths
+(`Google Drive → My Drive → …`), menu paths, English `<pre>`/alt strings, and pattern sequences
+(`לסירוגין → רדיפה → נשימה`), which are lists rather than wiring chains.
 
 ### V3 — When a figure changes, sweep the whole card for text that described the old one
 **Rule:** Replacing a figure is not done until every sentence that referred to the old figure is
@@ -251,6 +310,31 @@ neighbourhood, has to be re-read.
 ---
 
 ## Category X — Terminology (program-wide vocabulary)
+
+### X3 — Arduino pins carry the attribution: "חיבור דיגיטלי N של הארדואינו" — CONFIRMED (swept 2026-08-04)
+**Rule:** Every Arduino pin reference names the board: `חיבור דיגיטלי 9 של הארדואינו` (and
+`חיבור אנלוגי N של הארדואינו` if analog pins ever appear). Builds on X1 — X1 stopped calling pins "רגל",
+X3 says whose connection it is.
+
+**Why (Yon, explicit):** "כאן ובכל מקום אחר בכרטיסים כתוב 'חיבור דיגיטלי 9 של הארדואינו' במקום
+'חיבור דיגיטלי 9'… ואם זה חיבור אנלוגי אז כתוב 'חיבור אנלוגי 9 של הארדואינו'" (T1_M8, feedback
+2026-08-04_1435). A student wiring a breadboard has connections everywhere; naming the board removes
+the ambiguity at every mention.
+
+**Sweep record:** 2026-08-04 — **312** references: 272 in plain prose + **40 where the number sat inside
+inline markup** (`חיבור דיגיטלי <strong>9</strong>`, `<code dir="ltr">2</code>`) that a plain-text pass
+misses entirely — always run a second markup-aware pass. `<pre>` ASCII panels excluded (English layer).
+Verified 0 bare refs, 0 doubled attributions.
+
+**⚠ Sweep-script hazard (found here, applies to every future sweep):** a regex like
+`(חיבור דיגיטלי \d+)(?! של הארדואינו)` **backtracks** — on already-attributed text `\d+` matches just the
+`1` of `13`, the lookahead then sees `3 של…` and succeeds, producing `חיבור דיגיטלי 1 של הארדואינו3`.
+Always anchor the number: `\d+(?!\d)`. This run was verified clean (all 2-digit pins intact), but the
+scripts are **not** safe to re-run as written.
+
+**Known cosmetic effect:** 31 sentences carry 2+ pin references and now repeat the attribution twice
+(e.g. `לד 1 (חיבור דיגיטלי 9 של הארדואינו) דולק, לד 2 (חיבור דיגיטלי 10 של הארדואינו) כבוי`). Applied
+literally per instruction; flagged to Yon — thin to first-mention-per-sentence if he finds it heavy.
 
 ### X2 — Units are written with no space, using the symbol: "5V", "220Ω", "10kΩ" — CONFIRMED (swept 2026-08-04)
 **Rule:** `5V`, `220Ω`, `10kΩ` — never `5 V`, `220 אוהם`, `10 קילו-אוהם`, `10 קΩ`. The number and its
@@ -370,6 +454,7 @@ and say so, rather than treating it as a style change.
 ## Processed feedback ledger
 | Date learned | Feedback files |
 |---|---|
+| 2026-08-04 (4th run) | feedback_2026-08-04_1429 · _1435 · _1442 · _1443 · _1446 · _1451 · _1451_2 · _1452 … _1452_9 (16 saves; _1452_9 is the superset) |
 | 2026-08-04 (3rd run) | feedback_2026-08-04_1302 · _1312 · _1322 (_1322 = byte-identical re-save) |
 | 2026-08-04 (2nd run) | feedback_2026-08-04_0110 · _0111 · _0111_2 · _0113 · _0114 · _0120 |
 | 2026-08-04 | feedback_2026-08-03_2351 · feedback_2026-08-03_2351_2 · feedback_2026-08-03_2357 · feedback_2026-08-04_0007 · feedback_2026-08-04_0025 |
@@ -377,6 +462,13 @@ and say so, rather than treating it as a style change.
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-04 (learn run 4)** — 3 new rules: **X3** (Arduino pins carry "של הארדואינו" — CONFIRMED,
+  312 swept, incl. 40 refs hidden inside inline markup; documents the regex-backtracking hazard),
+  **W7** (no abstract concept-framing — Yon deleted the קלט→החלטה→פלט box *and* its lede sentence),
+  **V5** (multi-part technical lines become stacked rows — 3 explicit requests, FIRM). **W6 → FIRM**
+  (3rd instance: category labels are chrome too). **T1** gained a 5th instance. **V4** gained the
+  best-source procedure: extract the real part from the Fritzing SVG as vector (`find_part.js` /
+  `extract_part.js`) — a hand-drawn imitation misled about leg count.
 - **2026-08-04 (rulings + ohm sweep)** — Yon ruled on both open items: (1) **A1 holds, no exception** —
   his imperative `קראו` was a slip, normalize to `קוראים`; (2) **"use the 10kΩ format"** → X2 extended to
   resistance and swept: 141 prose instances across 29 files → `220Ω` / `10kΩ`, with the 27 `<pre>`

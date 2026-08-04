@@ -44,6 +44,10 @@ in W2 — the "cut chrome and comfort, keep information" family.
 **Counterexamples:** 13× `קוראים למורה לעזרה.` survive, all in cards Yon has not reviewed yet (weak).
 **Protected carve-out:** the soldering escalation **"קוראים למורה, תמיד"** (9× across P4 + R6) and every
 soldering-safety "קוראים למורה" line — locked motifs, NEVER trimmed.
+- `זה שלב החיווט הקשה ביותר בפרויקט 1. המורה מצפה לעזור בשלב זה — קוראים לו.` →
+  `זה שלב החיווט הקשה ביותר בפרויקט 1. אם נתקעים קוראים למורה.` (P1 T1_M7, feedback 2026-08-04_1312 —
+  4th instance; note the conditional framing "אם נתקעים" replacing the reassurance)
+
 **Status:** CONFIRMED · **Sweep executed 2026-08-04:** all 13 `קוראים למורה לעזרה.` → `קוראים למורה.`
 across 13 cards (P1 T1_M2/M3/M6/M8; P3 T1_M2/M3/M4/M5, T2_M3; P4 T1_M5/M6/M7, T2_M3). Verified after:
 0 leftovers, the 9 protected soldering `קוראים למורה, תמיד` lines untouched, and every informational
@@ -137,16 +141,37 @@ inlines it automatically (`inlineImages`).
 **Evidence:** 2 · **Status:** FIRM (authoring-scope).
 **Sweep evaluation (2026-08-03): REJECTED.** A scan flagged 39/55 cards with explanation-style tails in expected-boxes — but nearly all are original, reviewed content: protected catchphrases (`זה תקין, לא תקלה`, `ככה עובדים מהנדסים אמיתיים`), forward-pointers (`זה יקרה בשלב 2`), fails-gracefully reassurances. Mechanically trimming them would violate the protected-motifs guard. W2 applies to new authoring and to boxes Yon edits himself.
 
-### W3 — Everyday verbs over formal register
-**Rule:** Prefer the common verb over its formal synonym in instructions (מוצאים, not מאתרים).
+### W3 — The plainer, more concrete word wins
+**Rule:** Prefer the common verb over its formal synonym (מוצאים, not מאתרים), and the plainer noun
+phrase over the terser one (שום דבר, not כלום).
 
 **Why (inferred):** Reading accessibility — the everyday verb is recognized instantly by students with reading difficulty. Complements (does not conflict with) the plural-impersonal rule A1 in `Hebrew_Translation_Preferences_Log.md`.
 
 **Examples:**
 - `מאתרים על הלוח את הלד הירוק הקטן…` → `מוצאים על הלוח את…` (P1 T1_M1, feedback 2026-08-03)
+- `עדיין לא קורה כלום חדש בלחיצה` → `עדיין לא קורה שום דבר חדש בלחיצה` (P1 T1_M7, feedback 2026-08-04_1312)
+- `הם אמורים להתחלף לסירוגין` → `הם אמורים להידלק לסירוגין` (P1 T1_M6, same round) — also restores the
+  program's LED-verb convention: a LED **נדלק/מאיר**; "מתחלף" describes the pair, not the component.
 
-**Evidence:** 1 · **Counterexamples:** 0 — no מאתרים/לאתר/איתור left anywhere.
-**Status:** TENTATIVE (watch for more formal→everyday swaps: מבצעים→עושים, מתבוננים→מסתכלים…).
+**Evidence:** 3 (3 cards) · **Counterexamples:** 0 — no מאתרים/לאתר/איתור left anywhere.
+**Status:** FIRM (watch for more: מבצעים→עושים, מתבוננים→מסתכלים…).
+
+### W6 — The header lede states what the card does — nothing else
+**Rule:** The subtitle under the card title names the action only. Difficulty warnings, help offers and
+encouragement do not belong there (they live in the warning box or the "תקועים?" box), and the lede is
+**bold**.
+
+**Why (Yon, explicit):** on T1_M7 he cut `שלב החיווט הקשה ביותר בפרויקט — אם לא בטוחים, קוראים למורה`
+from the lede and commented "הדגש את הפונט". The difficulty warning already exists twice on that card
+(the red warning box and the stuck box) — front-loading it in the lede greets the student with "this is
+the hard one" before they have read a single step.
+
+**Examples:**
+- `מוסיפים כפתור לחיצה ונגד הורדה. שלב החיווט הקשה ביותר בפרויקט — אם לא בטוחים, קוראים למורה.`
+  → `**מוסיפים כפתור לחיצה ונגד הורדה.**` (P1 T1_M7, feedback 2026-08-04_1312)
+
+**Evidence:** 1 (edit + styling comment) · **Status:** TENTATIVE — the de-duplication logic
+(say it where it belongs, once) is consistent with T1/T3/W2, so treat it as a leaning.
 
 ### W4 — Simple comparative descriptors over shape-jargon
 **Rule:** Describe hardware by the simplest distinguishing feature ("הקצה הגדול יותר"), not by technical shape adjectives ("הקצה השטוח הרחב").
@@ -184,6 +209,33 @@ Keep the band on a row clear of components.
 **Evidence:** 1 (explicit instruction) · **Status:** FIRM (stated as a correction to a pattern Yon
 had just praised) · Applies to any future figure annotation, in any project.
 
+### V4 — First encounter with a part or a board feature gets a picture
+**Rule:** The first time a card introduces a physical component (LED, resistor, pushbutton, buzzer,
+sensor, motor driver…) or a breadboard feature (טור, שורה, החריץ המרכזי), the step carries a small
+labelled illustration beside the text — not just words. Later mentions don't need it.
+
+**Why (Yon, repeatedly):** "זו הפעם הראשונה שהתלמיד פוגש breadboard — בוא נוסיף לציור משהו שיבהיר מהי
+שורה ומהו טור"; "הוסף איור של נגד 220 אום שרואים בו את הצבעים"; "להוסיף תמונה של כפתור לחיצה כמו זה
+שמופיע למעלה באיור של fritzing"; "הוסף כאן איור של נגד 10 קילו אוהם עם הצבעים הנכונים שלו". A student
+who has never held the part cannot match a name to an object from prose alone — and colour-coded parts
+(resistors) are *only* identifiable visually.
+
+**Examples (5, across 2 cards, all 2026-08-04):**
+- P1 T1_M3 — טור/שורה overlays on the wiring figure (first breadboard); 220 Ω resistor with its bands.
+- P1 T1_M7 — pushbutton drawing matching the Fritzing part; "החריץ המרכזי" overlay; 10 kΩ resistor
+  with its bands (חום · שחור · כתום) under the "not the 220 Ω one" warning.
+
+**How:** inline SVG in the card (crisp at print size, editable later, no asset to manage) unless a real
+photo/screenshot is called for (rule V1). Match the look of the part as it appears in the card's own
+Fritzing figure so the student can pair them. Label in Hebrew; never leave English chrome in the drawing.
+A Fritzing part is usually too small to crop and enlarge (~50 px) — draw it instead.
+
+**Evidence:** 5 (2 cards, 4 separate explicit requests) · **Status:** FIRM.
+**Counterexamples / sweep candidate:** only T1_M3 and T1_M7 currently carry component illustrations.
+Parts introduced with no picture anywhere: **buzzer** (P2 T1_M4), **HC-SR04** (P3 T1_M1), **gear motors**
+(P4 T1_M2), **L298N driver** (P4 T1_M4), **line sensors** (P4 T1_M3), plus the **soldering iron** (P4 T1_M1).
+Yon simply hasn't reached those cards yet — offer the illustrations when he does, or as a batch.
+
 ### V3 — When a figure changes, sweep the whole card for text that described the old one
 **Rule:** Replacing a figure is not done until every sentence that referred to the old figure is
 re-checked — including stuck boxes and side notes, not just the caption.
@@ -199,6 +251,20 @@ neighbourhood, has to be re-read.
 ---
 
 ## Category X — Terminology (program-wide vocabulary)
+
+### X2 — Voltage is written with no space: "5V" — CONFIRMED (swept 2026-08-04)
+**Rule:** `5V`, never `5 V`. The number and its unit symbol are one token.
+
+**Why (Yon, explicit):** "בכל מקום בכרטיסיות שכתוב 5 V צריך לשנות ל-5V" (comment, T1_M6, feedback
+2026-08-04_1302). A split token reads as two things and can wrap across a line.
+
+**Sweep record:** 2026-08-04 — 81 instances across 25 cards (all four projects, task + reference).
+Verified 0 leftovers. New cards must write `5V`.
+
+**OPEN QUESTION for Yon — resistor units are still inconsistent** (the same instinct probably applies,
+but the target form is his call). Current spread across the cards:
+`220 אוהם` ×89 · `220 Ω` ×20 · `220Ω` ×5 · `10 קילו-אוהם` ×32 · `10 קΩ` ×17 · `10 kΩ` ×10 · `10kΩ` ×1.
+Ask before sweeping — the Hebrew spelled-out form may be deliberate for this population.
 
 ### X1 — "רגל" is reserved for component legs; Arduino pins are "חיבור דיגיטלי N" — CONFIRMED (swept 2026-08-04)
 **Rule:** One word, one concept. **Arduino pins** are `חיבור דיגיטלי 9` (power pins: `חיבור 5V`,
@@ -231,6 +297,20 @@ with HTML captions carrying the new wording (m3, m7; m5 was replaced outright, s
 
 ## Category P — Punctuation
 
+### P3 — Background explanations inside a step go in parentheses
+**Rule:** When a step's sentence carries a "why this works" clause after the action, wrap it in
+parentheses so the eye can skip it and still execute the step.
+
+**Example:**
+- `…ל-GND. זהו נגד ההורדה — הוא מחזיק את חיבור דיגיטלי 2 על 0 וולט כשהכפתור לא לחוץ.`
+  → `…ל-GND. (זהו נגד ההורדה — הוא מחזיק את חיבור דיגיטלי 2 על 0 וולט כשהכפתור לא לחוץ).`
+  (P1 T1_M7, feedback 2026-08-04_1312)
+
+**Why (inferred):** same instinct as W2 — the action must stay findable; explanation is optional
+reading, and parentheses mark it as such without deleting it.
+
+**Evidence:** 1 · **Status:** TENTATIVE.
+
 ### P2 — No comma before the conjunction ו' — CONFIRMED (rule stated by Yon)
 **Rule:** Never place a comma before a vav-conjunction (`…מחכים שלוש שניות ומחברים בחזרה`, not
 `…שלוש שניות, ומחברים`).
@@ -261,15 +341,37 @@ batch rather than a blind replace.
 **Evidence:** 4 (2 cards) · **Status:** FIRM — apply when authoring; still do NOT sweep mechanically
 (many existing commas legitimately close a subordinate clause; needs per-instance judgment, same as P2).
 
+---
+
+## Open conflicts — awaiting Yon's ruling
+
+### 2026-08-04 — imperative "קראו" vs the plural-impersonal rule (A1)
+On T1_M7's stuck line Yon typed `אם נתקעים קראו למורה` — **imperative** קראו, which contradicts
+Pattern A1 in `Hebrew_Translation_Preferences_Log.md` (instructional prose uses plural impersonal —
+קוראים — never imperative), and mixes forms inside his own sentence (`נתקעים` impersonal + `קראו`
+imperative). **Applied as `אם נתקעים קוראים למורה.`** and reported to him.
+If he confirms he meant the imperative, this is the first deliberate A1 exception and needs recording
+in BOTH logs; if it was a typing slip, nothing more to do. Until he rules: keep A1 as-is.
+
 ## Processed feedback ledger
 | Date learned | Feedback files |
 |---|---|
+| 2026-08-04 (3rd run) | feedback_2026-08-04_1302 · _1312 · _1322 (_1322 = byte-identical re-save) |
 | 2026-08-04 (2nd run) | feedback_2026-08-04_0110 · _0111 · _0111_2 · _0113 · _0114 · _0120 |
 | 2026-08-04 | feedback_2026-08-03_2351 · feedback_2026-08-03_2351_2 · feedback_2026-08-03_2357 · feedback_2026-08-04_0007 · feedback_2026-08-04_0025 |
 | 2026-08-03 | feedback_2026-08-03_2232 · feedback_2026-08-03_2305 |
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-04 (learn run 3)** — 4 new rules: **V4** (first encounter with a part or board feature gets a
+  labelled picture — 5 explicit requests, FIRM, with a clear sweep candidate: buzzer/HC-SR04/motors/L298N/
+  line-sensors/soldering-iron have none), **W6** (header lede states the action only, bold), **P3**
+  (background explanation inside a step goes in parentheses), **X2** (voltage written `5V`, CONFIRMED —
+  81 sites swept). **W3 → FIRM** and broadened from "everyday verbs" to "the plainer, more concrete word"
+  (+2 examples, incl. the LED-verb convention להידלק). **T1** gained a 4th example. Logged an **open
+  conflict**: Yon's imperative `קראו` vs rule A1 — applied as impersonal, awaiting his ruling. Also
+  surfaced: resistor-unit notation has 7 variants (220 אוהם/220 Ω/220Ω/10 קילו-אוהם/10 קΩ/10 kΩ/10kΩ) —
+  needs his decision before any sweep.
 - **2026-08-04 (T1 sweep)** — Yon approved the T1 sweep: 13 `קוראים למורה לעזרה.` → `קוראים למורה.`
   across 13 cards in P1/P3/P4. Verified 0 leftovers, 9 protected soldering `תמיד` lines intact,
   informational tails untouched. **T1 → CONFIRMED.**

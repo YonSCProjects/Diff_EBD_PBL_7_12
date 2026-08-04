@@ -114,7 +114,7 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
 
       <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.4 0.012 260);">הכפתור נעוץ מעל <strong>המרווח המרכזי</strong> של הברדבורד, כך שארבע הרגליים שלו נוחתות בארבעה חורים שונים.</p>
 
-      <pre dir="ltr" style="margin:0 0 14px; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.6; color:oklch(0.87 0.012 260); background:oklch(0.22 0.012 260); border-radius:14px; box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); overflow-x:auto;">Arduino 5 V ──────────────┬─── Button pin A
+      <pre dir="ltr" style="margin:0 0 14px; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.6; color:oklch(0.87 0.012 260); background:oklch(0.22 0.012 260); border-radius:14px; box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); overflow-x:auto;">Arduino 5V ──────────────┬─── Button pin A
                           │
                           ▼
                       Button pin B ────┬─── Arduino pin 2
@@ -123,16 +123,16 @@ Arduino pin 10 ───[220 Ω]───┬─── LED 2 long leg
 
       <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:16px 20px; margin:0 0 14px;">
         <span style="flex:none; font-size:22px; line-height:1;">⚠️</span>
-        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><span style="color:oklch(0.53 0.2 27); font-weight:700;">חשוב:</span> נגד ההורדה של 10 קילו-אוהם הולך בין <strong>חיבור דיגיטלי 2 לבין GND</strong>, <span style="color:oklch(0.53 0.2 27); font-weight:700;">לא בין 5 V לבין GND</span>. אם מחווטים אותו בין 5 V לבין GND, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><span style="color:oklch(0.53 0.2 27); font-weight:700;">חשוב:</span> נגד ההורדה של 10 קילו-אוהם הולך בין <strong>חיבור דיגיטלי 2 לבין GND</strong>, <span style="color:oklch(0.53 0.2 27); font-weight:700;">לא בין 5V לבין GND</span>. אם מחווטים אותו בין 5V לבין GND, לחיצה על הכפתור יוצרת קצר והארדואינו יתאפס.</p>
       </div>
 
       <figure style="margin:0 0 4px;">
         <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85);">
           <div dir="ltr" style="padding:20px 18px; display:flex; justify-content:center;">
-            <img src="../images/w3_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שני לדים על חיבורים 9 ו-10 וכפתור נעוץ מעל המרווח המרכזי — צד אחד ל-5 V, הצד השני לחיבור דיגיטלי 2 ודרך נגד הורדה 10 קילו-אוהם ל-GND." style="max-width:100%; height:auto;">
+            <img src="../images/w3_leds_and_button_pulldown_breadboard.svg" alt="תרשים ברדבורד: שני לדים על חיבורים 9 ו-10 וכפתור נעוץ מעל המרווח המרכזי — צד אחד ל-5V, הצד השני לחיבור דיגיטלי 2 ודרך נגד הורדה 10 קילו-אוהם ל-GND." style="max-width:100%; height:auto;">
           </div>
         </div>
-        <figcaption style="margin-top:10px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong>רגל A של הכפתור ← 5 V</strong> · <strong>רגל B של הכפתור ← חיבור דיגיטלי 2</strong> ודרך <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. זה חיווט pull-<em>down</em>: הנגד יושב בין חיבור דיגיטלי 2 ל-GND, <strong>לא</strong> בין 5 V ל-GND.</figcaption>
+        <figcaption style="margin-top:10px; font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong>רגל A של הכפתור ← 5V</strong> · <strong>רגל B של הכפתור ← חיבור דיגיטלי 2</strong> ודרך <strong>נגד הורדה 10 קילו-אוהם ← GND</strong>. זה חיווט pull-<em>down</em>: הנגד יושב בין חיבור דיגיטלי 2 ל-GND, <strong>לא</strong> בין 5V ל-GND.</figcaption>
       </figure>
 
       <div style="display:flex; align-items:center; gap:12px; margin:34px 0 16px;">
@@ -174,14 +174,14 @@ Arduino pin 11 ───[220 Ω]───┬─── LED 3 long leg
                            ▼
                       LED 3 short leg ─── Arduino GND
 
-Arduino 5 V ──────────────┬─── Button pin A
+Arduino 5V ──────────────┬─── Button pin A
                           ▼
                       Button pin B ────┬─── Arduino pin 2
                                        └─[10 kΩ]── Arduino GND</pre>
 
       <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:16px 20px; margin:0 0 14px;">
         <span style="flex:none; font-size:22px; line-height:1;">⚠️</span>
-        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><span style="color:oklch(0.53 0.2 27); font-weight:700;">אותו כלל של נגד הורדה:</span> נגד 10 קילו-אוהם הולך בין <strong>חיבור דיגיטלי 2 ל-GND</strong>, לא בין 5 V ל-GND.</p>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><span style="color:oklch(0.53 0.2 27); font-weight:700;">אותו כלל של נגד הורדה:</span> נגד 10 קילו-אוהם הולך בין <strong>חיבור דיגיטלי 2 ל-GND</strong>, לא בין 5V ל-GND.</p>
       </div>
 
       <figure style="margin:0 0 4px;">

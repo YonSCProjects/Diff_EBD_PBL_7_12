@@ -34,7 +34,7 @@
       </div>
 
       <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מחווטים את הכפתור</h1>
-      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;">מוסיפים כפתור לחיצה ונגד הורדה. <strong style="color:#fff;">שלב החיווט הקשה ביותר בפרויקט</strong> — אם לא בטוחים, קוראים למורה.</p>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;"><strong style="color:#fff;">מוסיפים כפתור לחיצה ונגד הורדה.</strong></p>
 
       <div style="margin-top:22px;">
         <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
@@ -54,7 +54,7 @@
         <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">הטעות הנפוצה ביותר בפרויקט 1</div>
-          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">נגד ההורדה של 10 קΩ חייב להיות בין <strong>חיבור דיגיטלי 2 ל־GND</strong> — <strong>לא</strong> בין 5 V ל־GND. אם שמים אותו בין 5 V ל־GND, לחיצה על הכפתור יוצרת קצר ומאפסת את הארדואינו. עוקבים באצבע: מחיבור דיגיטלי 2 ל־GND? ✓</p>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">נגד ההורדה של 10 קΩ חייב להיות בין <strong>חיבור דיגיטלי 2 ל־GND</strong> — <strong>לא</strong> בין 5V ל־GND. אם שמים אותו בין 5V ל־GND, לחיצה על הכפתור יוצרת קצר ומאפסת את הארדואינו. עוקבים באצבע: מחיבור דיגיטלי 2 ל־GND? ✓</p>
         </div>
       </div>
 
@@ -65,7 +65,13 @@
       </div>
 
       <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:#fff; margin-bottom:30px;">
-        <img src="assets/m7_breadboard.png" alt="תרשים חיווט הכפתור: 5V ← כפתור A, כפתור B ← חיבור דיגיטלי 2 ודרך נגד הורדה 10 קילו-אוהם ← GND" style="display:block; width:100%; height:auto;" />
+        <div style="position:relative;">
+          <img src="assets/m7_breadboard.png" alt="תרשים חיווט הכפתור: 5V ← כפתור A, כפתור B ← חיבור דיגיטלי 2 ודרך נגד הורדה 10 קילו-אוהם ← GND. הכפתור יושב לרוחב החריץ המרכזי." style="display:block; width:100%; height:auto;" />
+          <!-- first encounter with the centre channel: mark it along its whole length -->
+          <span style="position:absolute; left:32%; top:54.3%; width:65%; height:6.4%; border:2.5px solid oklch(0.55 0.16 300); border-radius:6px; background:oklch(0.72 0.15 300 / 0.20); pointer-events:none;"></span>
+          <span style="position:absolute; left:80%; top:44.5%; transform:translateX(-50%); background:#fff; border:1.5px solid oklch(0.55 0.14 300); border-radius:999px; padding:2px 11px; font-size:12.5px; font-weight:700; color:oklch(0.42 0.12 300); white-space:nowrap; box-shadow:0 3px 9px -4px rgba(0,0,0,0.4);">החריץ המרכזי</span>
+          <span style="position:absolute; left:80%; top:50.5%; height:4%; width:2px; transform:translateX(-50%); background:oklch(0.55 0.14 300); border-radius:2px;"></span>
+        </div>
         <div dir="rtl" style="padding:11px 14px; background:oklch(0.985 0.004 85); border-top:1px solid oklch(0.93 0.006 85); font-size:12.5px; line-height:1.55; color:oklch(0.5 0.012 260); text-align:center;">רגל A של הכפתור ← <strong>5V</strong> · רגל B של הכפתור ← <strong>חיבור דיגיטלי 2</strong> ודרך <strong>נגד הורדה 10 קילו-אוהם</strong> ← <strong>GND</strong>. הנגד יושב בין חיבור דיגיטלי 2 ל-GND, <strong>לא</strong> בין 5V ל-GND.</div>
       </div>
 
@@ -80,7 +86,23 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בוחרים כפתור לחיצה ממגש החלקים. יש לו <strong>ארבע רגליים</strong>.</p>
+          <div style="padding-top:3px; flex:1;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">בוחרים כפתור לחיצה ממגש החלקים. יש לו <strong>ארבע רגליים</strong>.</p>
+            <div dir="ltr" style="display:inline-block; margin-top:10px; background:#fff; border:1px solid oklch(0.9 0.006 85); border-radius:10px; padding:10px 14px;">
+              <svg viewBox="0 0 150 132" width="122" style="display:block; max-width:100%; height:auto;">
+                <rect x="46" y="6" width="13" height="22" rx="3" fill="#b9bcc0" stroke="#8a8d91" stroke-width="1.5"/>
+                <rect x="91" y="6" width="13" height="22" rx="3" fill="#b9bcc0" stroke="#8a8d91" stroke-width="1.5"/>
+                <rect x="30" y="24" width="90" height="86" rx="6" fill="#a8abaf" stroke="#7d8084" stroke-width="2"/>
+                <circle cx="75" cy="67" r="27" fill="#7a5b4c" stroke="#5c453a" stroke-width="2"/>
+                <circle cx="46" cy="40" r="7.5" fill="#1c1c1c"/>
+                <circle cx="104" cy="40" r="7.5" fill="#1c1c1c"/>
+                <circle cx="46" cy="94" r="7.5" fill="#1c1c1c"/>
+                <circle cx="104" cy="94" r="7.5" fill="#1c1c1c"/>
+                <text x="18" y="44" font-family="Rubik, sans-serif" font-size="12.5" font-weight="700" fill="#5a5d61">A</text>
+                <text x="18" y="98" font-family="Rubik, sans-serif" font-size="12.5" font-weight="700" fill="#5a5d61">B</text>
+              </svg>
+            </div>
+          </div>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
@@ -95,13 +117,28 @@
           <div style="padding-top:3px; flex:1;">
             <p style="margin:0; font-size:16px; line-height:1.55;">בוחרים <strong>נגד של 10 קילו-אוהם</strong> — פסים <strong>חום · שחור · כתום</strong>.</p>
             <p style="margin:7px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.04 35);">⚠️ זה <strong>לא</strong> אותו נגד כמו נגד ה-220 אוהם של הלדים.</p>
+            <div dir="ltr" style="display:inline-block; margin-top:10px; background:#fff; border:1px solid oklch(0.9 0.006 85); border-radius:10px; padding:10px 14px 6px;">
+              <svg viewBox="0 0 300 74" width="250" style="display:block; max-width:100%; height:auto;">
+                <line x1="4" y1="30" x2="70" y2="30" stroke="#9a9da1" stroke-width="4" stroke-linecap="round"/>
+                <line x1="230" y1="30" x2="296" y2="30" stroke="#9a9da1" stroke-width="4" stroke-linecap="round"/>
+                <rect x="68" y="12" width="164" height="36" rx="16" fill="#e8d9b8" stroke="#b8a480" stroke-width="2"/>
+                <rect x="92" y="12" width="14" height="36" fill="#7b4a12"/>
+                <rect x="118" y="12" width="14" height="36" fill="#141414"/>
+                <rect x="144" y="12" width="14" height="36" fill="#e07b1a"/>
+                <rect x="196" y="12" width="14" height="36" fill="#d4af37"/>
+                <text x="96" y="66" text-anchor="middle" font-family="Rubik, sans-serif" font-size="10.5" fill="#6b4210">חום</text>
+                <text x="126" y="66" text-anchor="middle" font-family="Rubik, sans-serif" font-size="10.5" fill="#333">שחור</text>
+                <text x="155" y="66" text-anchor="middle" font-family="Rubik, sans-serif" font-size="10.5" fill="#a1560f">כתום</text>
+                <text x="203" y="66" text-anchor="middle" font-family="Rubik, sans-serif" font-size="10.5" fill="#8a7420">זהב</text>
+              </svg>
+            </div>
           </div>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים צד אחד של הכפתור (<strong>רגל A</strong>) ל<strong>5 V</strong> של הארדואינו.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים צד אחד של הכפתור (<strong>רגל A</strong>) ל<strong>5V</strong> של הארדואינו.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
@@ -113,7 +150,7 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.04 35); border:1px solid oklch(0.85 0.07 35); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.08 35); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.58 0.16 35); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מרגל B, מחברים <strong>גם</strong> דרך הנגד של 10 קΩ ל<strong>GND</strong>. זהו נגד ההורדה — הוא מחזיק את חיבור דיגיטלי 2 על 0 וולט כשהכפתור לא לחוץ.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מרגל B, מחברים <strong>גם</strong> דרך הנגד של 10 קΩ ל<strong>GND</strong>. (זהו נגד ההורדה — הוא מחזיק את חיבור דיגיטלי 2 על 0 וולט כשהכפתור לא לחוץ).</p>
         </div>
 
       </div>
@@ -122,8 +159,8 @@
         <span style="flex:none; font-size:22px; line-height:1;">👀</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
-          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">הכפתור מחובר לרוחב החריץ המרכזי. צד אחד ל-5 V, הצד השני לחיבור דיגיטלי 2 וגם דרך הנגד של 10 קΩ ל-GND. שני הלדים מקודם עדיין מחווטים.</p>
-          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);"><strong>עדיין לא קורה כלום חדש</strong> בלחיצה — הקוד הנוכחי לא יודע על הכפתור. שלב 8 משנה את זה.</p>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">הכפתור מחובר לרוחב החריץ המרכזי. צד אחד ל-5V, הצד השני לחיבור דיגיטלי 2 וגם דרך הנגד של 10 קΩ ל-GND. שני הלדים מקודם עדיין מחווטים.</p>
+          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);"><strong>עדיין לא קורה שום דבר חדש</strong> בלחיצה — הקוד הנוכחי לא יודע על הכפתור. שלב 8 משנה את זה.</p>
         </div>
       </div>
 
@@ -133,7 +170,7 @@
         </div>
         <div style="display:flex; flex-direction:column; gap:9px;">
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הכפתור על הברדבורד, לרוחב החריץ המרכזי</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>רגל A מחוברת ל-5 V</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>רגל A מחוברת ל-5V</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>רגל B מחוברת לחיבור דיגיטלי 2</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>נגד 10 קΩ בין חיבור דיגיטלי 2 ל-GND (נגד ההורדה)</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שני הלדים משלבים 3 ו-5 עדיין מחווטים ומתחלפים לסירוגין</span></div>
@@ -145,7 +182,7 @@
           <span style="font-size:20px;">🪄</span>תקועים?
         </div>
         <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
-          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>זה שלב החיווט הקשה ביותר בפרויקט 1. <strong>המורה מצפה לעזור בשלב זה — קוראים לו.</strong></span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>זה שלב החיווט הקשה ביותר בפרויקט 1. <strong>אם נתקעים קוראים למורה.</strong></span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם הארדואינו ממשיך להתאתחל או להיכבות</strong> — כמעט בטוח שנגד ההורדה בצד הלא נכון. מוציאים את ה-USB, מתקנים, ומחברים בחזרה.</span></div>
         </div>
       </div>

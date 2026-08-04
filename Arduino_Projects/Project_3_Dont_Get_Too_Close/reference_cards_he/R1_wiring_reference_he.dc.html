@@ -75,7 +75,7 @@
           <li>בחיישן יש <strong>ארבע רגליים מסומנות</strong>: VCC, Trig, Echo, GND. בודקים את התווית שכתובה על החיישן עצמו מול התרשים. קל להחליף בין <strong>Trig</strong> ל-<strong>Echo</strong>, או בין <strong>VCC</strong> ל-<strong>GND</strong>.</li>
           <li>הרגל הארוכה של הלד = <strong>חיובי (+)</strong>. היא הולכת ל<strong>נגד</strong>, ומשם לחיבור דיגיטלי של הארדואינו. הרגל הקצרה = <strong>שלילי (−)</strong> — היא הולכת ל-<strong>GND</strong>.</li>
           <li>לכל לד צריך <strong>נגד של 220 אוהם</strong> משלו (פסי צבע: אדום · אדום · חום). בלי נגד = לד שרוף.</li>
-          <li>ל<strong>זמזם</strong> אין כיוון ולא צריך לו נגד. רגל אחת הולכת ל<strong>חיבור דיגיטלי 8</strong>, הרגל השנייה ל-<strong>GND</strong>. לעולם לא מחברים את הזמזם ישירות ל-5 V.</li>
+          <li>ל<strong>זמזם</strong> אין כיוון ולא צריך לו נגד. רגל אחת הולכת ל<strong>חיבור דיגיטלי 8</strong>, הרגל השנייה ל-<strong>GND</strong>. לעולם לא מחברים את הזמזם ישירות ל-5V.</li>
           <li>רגליו של החיישן ורגלי הלד נכנסות ל<strong>טורים שונים</strong> בברדבורד (טור = פס ממוספר 1–30) — אף פעם לא שתי רגליים של אותו רכיב באותו טור.</li>
         </ul>
       </div>
@@ -96,7 +96,7 @@
           <tbody>
             <tr><td class="dc-td">חיישן — <code class="dc-code" dir="ltr">Trig</code></td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">12</code></td><td class="dc-td">חיווט 1</td></tr>
             <tr><td class="dc-td">חיישן — <code class="dc-code" dir="ltr">Echo</code></td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">11</code></td><td class="dc-td">חיווט 1</td></tr>
-            <tr><td class="dc-td">חיישן — <code class="dc-code" dir="ltr">VCC</code></td><td class="dc-td"><code class="dc-code" dir="ltr">5 V</code></td><td class="dc-td">חיווט 1</td></tr>
+            <tr><td class="dc-td">חיישן — <code class="dc-code" dir="ltr">VCC</code></td><td class="dc-td"><code class="dc-code" dir="ltr">5V</code></td><td class="dc-td">חיווט 1</td></tr>
             <tr><td class="dc-td">חיישן — <code class="dc-code" dir="ltr">GND</code></td><td class="dc-td"><code class="dc-code" dir="ltr">GND</code></td><td class="dc-td">חיווט 1</td></tr>
             <tr><td class="dc-td">לד אזעקה (דרך נגד 220 אוהם)</td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">9</code></td><td class="dc-td">חיווט 2</td></tr>
             <tr><td class="dc-td">זמזם</td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">8</code></td><td class="dc-td">חיווט 3</td></tr>
@@ -124,7 +124,7 @@
   GND  ───────────  GND</pre>
       </div>
       <div class="dc-frame"><img src="../images/w_p3_01_hcsr04_breadboard.svg" alt="תרשים ברדבורד: חיישן HC-SR04 עם ארבע רגליו — VCC ל-5V (אדום), GND ל-GND (שחור), Trig לחיבור דיגיטלי 12 (כתום), Echo לחיבור דיגיטלי 11 (ירוק)."></div>
-      <p class="dc-cap"><strong>חיווט 1:</strong> VCC ל-<strong>5 V</strong> (אדום), GND ל-<strong>GND</strong> (שחור), <strong>Trig לחיבור דיגיטלי 12</strong> (כתום), <strong>Echo לחיבור דיגיטלי 11</strong> (ירוק).</p>
+      <p class="dc-cap"><strong>חיווט 1:</strong> VCC ל-<strong>5V</strong> (אדום), GND ל-<strong>GND</strong> (שחור), <strong>Trig לחיבור דיגיטלי 12</strong> (כתום), <strong>Echo לחיבור דיגיטלי 11</strong> (ירוק).</p>
       <div class="dc-sechead">
         <span class="dc-ico dc-ico-blue">🔌</span>
         <h2 class="dc-h2">חיווט 2 — חיישן + לד אזעקה (שלב 3)</h2>
@@ -173,7 +173,7 @@ Arduino pin 8 ───────────── Buzzer leg 1
 Arduino GND  ───────────── Buzzer leg 2</pre>
       </div>
       <div class="dc-frame"><img src="../images/w_p3_03_hcsr04_led_buzzer_breadboard.svg" alt="תרשים ברדבורד: חיווט 2 ובנוסף זמזם — רגל אחת לחיבור דיגיטלי 8, הרגל השנייה ל-GND, שתי הרגליים בטורים שונים."></div>
-      <p class="dc-cap"><strong>חיווט 3:</strong> חיווט 2, ובנוסף <strong>זמזם</strong> — רגל אחת לחיבור דיגיטלי <strong>8</strong> (כתום), הרגל השנייה ל-<strong>GND</strong> (שחור). אין לזמזם כיוון ואין לו נגד; אף פעם לא מחברים אותו ל-5 V.</p>
+      <p class="dc-cap"><strong>חיווט 3:</strong> חיווט 2, ובנוסף <strong>זמזם</strong> — רגל אחת לחיבור דיגיטלי <strong>8</strong> (כתום), הרגל השנייה ל-<strong>GND</strong> (שחור). אין לזמזם כיוון ואין לו נגד; אף פעם לא מחברים אותו ל-5V.</p>
       <div class="dc-sechead">
         <span class="dc-ico dc-ico-blue">🔌</span>
         <h2 class="dc-h2">חיווט 4 — אזעקה בשני שלבים (גרסה 3 בלבד)</h2>

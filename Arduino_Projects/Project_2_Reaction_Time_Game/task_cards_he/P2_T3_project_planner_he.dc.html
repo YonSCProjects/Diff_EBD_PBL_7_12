@@ -86,7 +86,7 @@
 
         <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
           <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">איזו חומרה צריך? <span style="font-weight:500; color:oklch(0.58 0.012 260);">(כפתורים, לדים, נגדים, זמזם, חוטים — כמה מכל אחד)</span></label>
-          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">וריאציית שני השחקנים: כפתור נוסף + נגד הורדה 10 קΩ נוסף. וריאציית הניקוד: בדרך כלל כלום. רכיב לא רגיל? שואלים את המורה קודם.</p>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">וריאציית שני השחקנים: כפתור נוסף + נגד הורדה 10kΩ נוסף. וריאציית הניקוד: בדרך כלל כלום. רכיב לא רגיל? שואלים את המורה קודם.</p>
           <textarea value="{{ f3 }}" onInput="{{ on3 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
         </div>
       </div>
@@ -96,7 +96,7 @@
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 2 — בונים</h2>
       </div>
-      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);"><strong>מציירים את החיווט על נייר</strong>, ואז מחווטים. לשני שחקנים: כפתור שני לרוחב החריץ — צד אחד ל-<strong>5V</strong>, השני ל-<strong>חיבור דיגיטלי 3</strong> ודרך נגד הורדה <strong>10 קΩ</strong> (חום · שחור · כתום) ל-<strong>GND</strong>. בדיוק כמו הכפתור הראשון, רק על חיבור דיגיטלי 3.</p>
+      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);"><strong>מציירים את החיווט על נייר</strong>, ואז מחווטים. לשני שחקנים: כפתור שני לרוחב החריץ — צד אחד ל-<strong>5V</strong>, השני ל-<strong>חיבור דיגיטלי 3</strong> ודרך נגד הורדה <strong>10kΩ</strong> (חום · שחור · כתום) ל-<strong>GND</strong>. בדיוק כמו הכפתור הראשון, רק על חיבור דיגיטלי 3.</p>
 
       <!-- Fritzing image slot -->
       <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; background:#fff; padding:18px; margin-bottom:10px; text-align:center;"><img src="assets/w_p2_04_two_buttons_variant_breadboard.svg" alt="תרשים ברדבורד — שני כפתורים לשני שחקנים" style="width:600px; max-width:100%; height:auto;" /></div>
@@ -115,7 +115,7 @@
       <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">קלוד קוד במצב דיאלוג חופשי — אין קוד מוכן מראש, בונים מתוך התיאור שלכם. אותה משמעת של (א)(ב)(ג): מתארים את הבעיה לפני שמבקשים פתרון.</p>
       <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px; margin-bottom:30px;">
         <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.4 0.06 285); margin-bottom:5px;">הפנייה הראשונה לקלוד קוד <span style="font-weight:500; color:oklch(0.58 0.012 260);">(מנסחים כאן לפני ששולחים)</span></label>
-        <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">דוגמה (שני שחקנים): "אני בונה משחק זמן תגובה לשני שחקנים. לד על חיבור דיגיטלי 9, זמזם על חיבור דיגיטלי 8, כפתור שחקן 1 על חיבור דיגיטלי 2 וכפתור שחקן 2 על חיבור דיגיטלי 3, לכל אחד נגד הורדה 10 קΩ. אחרי השהייה אקראית הלד נדלק, הראשון שלוחץ מנצח, והצג הטורי כותב מי ניצח. תוכל לעזור לי לכתוב את הקוד?"</p>
+        <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">דוגמה (שני שחקנים): "אני בונה משחק זמן תגובה לשני שחקנים. לד על חיבור דיגיטלי 9, זמזם על חיבור דיגיטלי 8, כפתור שחקן 1 על חיבור דיגיטלי 2 וכפתור שחקן 2 על חיבור דיגיטלי 3, לכל אחד נגד הורדה 10kΩ. אחרי השהייה אקראית הלד נדלק, הראשון שלוחץ מנצח, והצג הטורי כותב מי ניצח. תוכל לעזור לי לכתוב את הקוד?"</p>
         <textarea value="{{ f4 }}" onInput="{{ on4 }}" rows="3" placeholder="כותבים כאן את הפנייה…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
       </div>
 

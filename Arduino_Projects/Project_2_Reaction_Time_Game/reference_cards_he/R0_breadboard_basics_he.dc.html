@@ -108,10 +108,10 @@
 
       <div style="display:flex; align-items:center; gap:12px; margin:28px 0 14px;">
         <span style="flex:none; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔗</span>
-        <h2 style="margin:0; font-size:18px; font-weight:700; line-height:1.35; color:oklch(0.32 0.02 260);">מה משמעות "חיבור דיגיטלי 9 ← נגד 220 אוהם ← לד" על הברדבורד</h2>
+        <h2 style="margin:0; font-size:18px; font-weight:700; line-height:1.35; color:oklch(0.32 0.02 260);">מה משמעות "חיבור דיגיטלי 9 ← נגד 220Ω ← לד" על הברדבורד</h2>
       </div>
 
-      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.34 0.012 260);">כאשר כרטיסיית העזר <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-size:12px; font-weight:700; vertical-align:middle;">R1</span> (חיווט פרויקט 2) כותבת <em dir="ltr" style="unicode-bidi:isolate;">"Arduino pin 9 → 220 Ω → LED long leg"</em>, זו שרשרת החיבורים שבונים:</p>
+      <p style="margin:0 0 14px; font-size:16px; line-height:1.6; color:oklch(0.34 0.012 260);">כאשר כרטיסיית העזר <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-size:12px; font-weight:700; vertical-align:middle;">R1</span> (חיווט פרויקט 2) כותבת <em dir="ltr" style="unicode-bidi:isolate;">"Arduino pin 9 → 220Ω → LED long leg"</em>, זו שרשרת החיבורים שבונים:</p>
 
       <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:14px;">
         <pre style="margin:0; padding:14px 18px; font-family:'JetBrains Mono',monospace; font-size:12px; line-height:1.6; color:oklch(0.88 0.01 260); overflow-x:auto;">[Arduino pin 9] ── wire ── [resistor] ── [LED long leg] ── [LED short leg] ── wire ── [GND]</pre>
@@ -122,7 +122,7 @@
       <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:16px 18px; margin-bottom:14px;">
         <div style="display:flex; flex-direction:column; gap:9px;">
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>חוט ג'אמפר מחיבור דיגיטלי 9 של הארדואינו נכנס לחור אחד בברדבורד.</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>רגל אחת של נגד 220 אוהם נכנסת ל<strong>אותו טור ממוספר</strong> שאליו הכנסנו את הג'אמפר — עכשיו הם מחוברים.</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>רגל אחת של נגד 220Ω נכנסת ל<strong>אותו טור ממוספר</strong> שאליו הכנסנו את הג'אמפר — עכשיו הם מחוברים.</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>הרגל השנייה של הנגד נכנסת ל<strong>טור חדש</strong> — חיבור נפרד לגמרי.</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>הרגל הארוכה של הלד נכנסת לאותו טור חדש — עכשיו הזרם יכול לזרום: חיבור דיגיטלי 9 ← נגד ← לד.</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.55; color:oklch(0.36 0.012 260);"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>הרגל הקצרה של הלד נכנסת לטור משלה, ומשם חוט ג'אמפר חוזר למסילת ה-GND הכחולה.</span></div>

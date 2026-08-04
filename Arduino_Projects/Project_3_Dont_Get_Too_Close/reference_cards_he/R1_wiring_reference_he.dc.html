@@ -74,7 +74,7 @@
         <ul class="dc-warnlist">
           <li>בחיישן יש <strong>ארבע רגליים מסומנות</strong>: VCC, Trig, Echo, GND. בודקים את התווית שכתובה על החיישן עצמו מול התרשים. קל להחליף בין <strong>Trig</strong> ל-<strong>Echo</strong>, או בין <strong>VCC</strong> ל-<strong>GND</strong>.</li>
           <li>הרגל הארוכה של הלד = <strong>חיובי (+)</strong>. היא הולכת ל<strong>נגד</strong>, ומשם לחיבור דיגיטלי של הארדואינו. הרגל הקצרה = <strong>שלילי (−)</strong> — היא הולכת ל-<strong>GND</strong>.</li>
-          <li>לכל לד צריך <strong>נגד של 220 אוהם</strong> משלו (פסי צבע: אדום · אדום · חום). בלי נגד = לד שרוף.</li>
+          <li>לכל לד צריך <strong>נגד של 220Ω</strong> משלו (פסי צבע: אדום · אדום · חום). בלי נגד = לד שרוף.</li>
           <li>ל<strong>זמזם</strong> אין כיוון ולא צריך לו נגד. רגל אחת הולכת ל<strong>חיבור דיגיטלי 8</strong>, הרגל השנייה ל-<strong>GND</strong>. לעולם לא מחברים את הזמזם ישירות ל-5V.</li>
           <li>רגליו של החיישן ורגלי הלד נכנסות ל<strong>טורים שונים</strong> בברדבורד (טור = פס ממוספר 1–30) — אף פעם לא שתי רגליים של אותו רכיב באותו טור.</li>
         </ul>
@@ -98,9 +98,9 @@
             <tr><td class="dc-td">חיישן — <code class="dc-code" dir="ltr">Echo</code></td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">11</code></td><td class="dc-td">חיווט 1</td></tr>
             <tr><td class="dc-td">חיישן — <code class="dc-code" dir="ltr">VCC</code></td><td class="dc-td"><code class="dc-code" dir="ltr">5V</code></td><td class="dc-td">חיווט 1</td></tr>
             <tr><td class="dc-td">חיישן — <code class="dc-code" dir="ltr">GND</code></td><td class="dc-td"><code class="dc-code" dir="ltr">GND</code></td><td class="dc-td">חיווט 1</td></tr>
-            <tr><td class="dc-td">לד אזעקה (דרך נגד 220 אוהם)</td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">9</code></td><td class="dc-td">חיווט 2</td></tr>
+            <tr><td class="dc-td">לד אזעקה (דרך נגד 220Ω)</td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">9</code></td><td class="dc-td">חיווט 2</td></tr>
             <tr><td class="dc-td">זמזם</td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">8</code></td><td class="dc-td">חיווט 3</td></tr>
-            <tr><td class="dc-td">לד אזהרה שני (דרך נגד 220 אוהם)</td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">10</code></td><td class="dc-td">חיווט 4 — גרסה 3</td></tr>
+            <tr><td class="dc-td">לד אזהרה שני (דרך נגד 220Ω)</td><td class="dc-td">חיבור דיגיטלי <code class="dc-code" dir="ltr">10</code></td><td class="dc-td">חיווט 4 — גרסה 3</td></tr>
           </tbody>
         </table>
       </div>
@@ -129,7 +129,7 @@
         <span class="dc-ico dc-ico-blue">🔌</span>
         <h2 class="dc-h2">חיווט 2 — חיישן + לד אזעקה (שלב 3)</h2>
       </div>
-      <p class="dc-wp">אותו חיווט כמו בחיווט 1, ומוסיפים <strong>לד</strong> אחד על <strong>חיבור דיגיטלי 9</strong> דרך נגד 220 אוהם: הרגל הארוכה ← נגד ← חיבור דיגיטלי 9, הרגל הקצרה ← GND. זה בדיוק חיווט הלד שעשיתם בפרויקט 1 ובפרויקט 2.</p>
+      <p class="dc-wp">אותו חיווט כמו בחיווט 1, ומוסיפים <strong>לד</strong> אחד על <strong>חיבור דיגיטלי 9</strong> דרך נגד 220Ω: הרגל הארוכה ← נגד ← חיבור דיגיטלי 9, הרגל הקצרה ← GND. זה בדיוק חיווט הלד שעשיתם בפרויקט 1 ובפרויקט 2.</p>
       <div class="dc-pre-wrap" dir="ltr">
         <div class="dc-pre-bar">
           <span class="dc-dot" style="background:oklch(0.6 0.16 28);"></span>
@@ -146,8 +146,8 @@ Arduino pin 9 ──[220 Ω]──┬── LED long leg (+)
                          ▼
                     LED short leg (−) ── Arduino GND</pre>
       </div>
-      <div class="dc-frame"><img src="../images/w_p3_02_hcsr04_led_breadboard.svg" alt="תרשים ברדבורד: חיווט 1 ובנוסף לד על חיבור דיגיטלי 9 — הרגל הארוכה דרך נגד 220 אוהם לחיבור דיגיטלי 9, הרגל הקצרה ל-GND."></div>
-      <p class="dc-cap"><strong>חיווט 2:</strong> חיווט 1, ובנוסף <strong>לד</strong> — הרגל הארוכה (+) דרך נגד <strong>220 אוהם</strong> לחיבור דיגיטלי <strong>9</strong>, הרגל הקצרה (−) ל-<strong>GND</strong>.</p>
+      <div class="dc-frame"><img src="../images/w_p3_02_hcsr04_led_breadboard.svg" alt="תרשים ברדבורד: חיווט 1 ובנוסף לד על חיבור דיגיטלי 9 — הרגל הארוכה דרך נגד 220Ω לחיבור דיגיטלי 9, הרגל הקצרה ל-GND."></div>
+      <p class="dc-cap"><strong>חיווט 2:</strong> חיווט 1, ובנוסף <strong>לד</strong> — הרגל הארוכה (+) דרך נגד <strong>220Ω</strong> לחיבור דיגיטלי <strong>9</strong>, הרגל הקצרה (−) ל-<strong>GND</strong>.</p>
       <div class="dc-sechead">
         <span class="dc-ico dc-ico-blue">🔌</span>
         <h2 class="dc-h2">חיווט 3 — חיישן + לד + זמזם = אזעקה מלאה (שלב 4)</h2>
@@ -178,7 +178,7 @@ Arduino GND  ───────────── Buzzer leg 2</pre>
         <span class="dc-ico dc-ico-blue">🔌</span>
         <h2 class="dc-h2">חיווט 4 — אזעקה בשני שלבים (גרסה 3 בלבד)</h2>
       </div>
-      <p class="dc-wp">נחוץ רק למי שבונים <strong>אזעקה בשני שלבים</strong> בגרסה 3: לד אזהרה <strong>(צהוב)</strong> שמאיר כשמשהו מתקרב, ולד אזעקה <strong>(אדום)</strong> שמאיר כשמתקרבים עוד יותר. מוסיפים לחיווט 3 <strong>לד שני</strong> על <strong>חיבור דיגיטלי 10</strong> עם נגד 220 אוהם משלו, מחווט בדיוק כמו לד האזעקה על חיבור דיגיטלי 9.</p>
+      <p class="dc-wp">נחוץ רק למי שבונים <strong>אזעקה בשני שלבים</strong> בגרסה 3: לד אזהרה <strong>(צהוב)</strong> שמאיר כשמשהו מתקרב, ולד אזעקה <strong>(אדום)</strong> שמאיר כשמתקרבים עוד יותר. מוסיפים לחיווט 3 <strong>לד שני</strong> על <strong>חיבור דיגיטלי 10</strong> עם נגד 220Ω משלו, מחווט בדיוק כמו לד האזעקה על חיבור דיגיטלי 9.</p>
       <div class="dc-pre-wrap" dir="ltr">
         <div class="dc-pre-bar">
           <span class="dc-dot" style="background:oklch(0.6 0.16 28);"></span>
@@ -202,8 +202,8 @@ Arduino pin 10 ──[220 Ω]──┬── warning LED long leg (+)
 Arduino pin 8 ───────────── Buzzer leg 1
 Arduino GND  ───────────── Buzzer leg 2</pre>
       </div>
-      <div class="dc-frame"><img src="../images/w_p3_04_two_stage_breadboard.svg" alt="תרשים ברדבורד: חיווט 3 ובנוסף לד אזהרה שני על חיבור דיגיטלי 10 דרך נגד 220 אוהם משלו — הרגל הארוכה דרך הנגד לחיבור דיגיטלי 10, הרגל הקצרה ל-GND."></div>
-      <p class="dc-cap"><strong>חיווט 4:</strong> חיווט 3, ובנוסף <strong>לד אזהרה שני</strong> על חיבור דיגיטלי <strong>10</strong> דרך נגד <strong>220 אוהם</strong> משלו. כל לד עם הנגד שלו.</p>
+      <div class="dc-frame"><img src="../images/w_p3_04_two_stage_breadboard.svg" alt="תרשים ברדבורד: חיווט 3 ובנוסף לד אזהרה שני על חיבור דיגיטלי 10 דרך נגד 220Ω משלו — הרגל הארוכה דרך הנגד לחיבור דיגיטלי 10, הרגל הקצרה ל-GND."></div>
+      <p class="dc-cap"><strong>חיווט 4:</strong> חיווט 3, ובנוסף <strong>לד אזהרה שני</strong> על חיבור דיגיטלי <strong>10</strong> דרך נגד <strong>220Ω</strong> משלו. כל לד עם הנגד שלו.</p>
     </div>
   </div>
 </div>

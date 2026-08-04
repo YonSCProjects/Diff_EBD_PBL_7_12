@@ -252,8 +252,9 @@ neighbourhood, has to be re-read.
 
 ## Category X — Terminology (program-wide vocabulary)
 
-### X2 — Voltage is written with no space: "5V" — CONFIRMED (swept 2026-08-04)
-**Rule:** `5V`, never `5 V`. The number and its unit symbol are one token.
+### X2 — Units are written with no space, using the symbol: "5V", "220Ω", "10kΩ" — CONFIRMED (swept 2026-08-04)
+**Rule:** `5V`, `220Ω`, `10kΩ` — never `5 V`, `220 אוהם`, `10 קילו-אוהם`, `10 קΩ`. The number and its
+unit symbol are one token, and the unit uses the Latin/symbol form even in Hebrew prose.
 
 **Why (Yon, explicit):** "בכל מקום בכרטיסיות שכתוב 5 V צריך לשנות ל-5V" (comment, T1_M6, feedback
 2026-08-04_1302). A split token reads as two things and can wrap across a line.
@@ -261,10 +262,24 @@ neighbourhood, has to be re-read.
 **Sweep record:** 2026-08-04 — 81 instances across 25 cards (all four projects, task + reference).
 Verified 0 leftovers. New cards must write `5V`.
 
-**OPEN QUESTION for Yon — resistor units are still inconsistent** (the same instinct probably applies,
-but the target form is his call). Current spread across the cards:
-`220 אוהם` ×89 · `220 Ω` ×20 · `220Ω` ×5 · `10 קילו-אוהם` ×32 · `10 קΩ` ×17 · `10 kΩ` ×10 · `10kΩ` ×1.
-Ask before sweeping — the Hebrew spelled-out form may be deliberate for this population.
+**Resistor units — RESOLVED 2026-08-04.** Yon: *"use the 10kΩ format"* → the same no-space symbol form
+applies to resistance: **`220Ω`** and **`10kΩ`**. The seven prior variants (`220 אוהם` ×89, `220 Ω` ×20,
+`220Ω` ×5, `10 קילו-אוהם` ×32, `10 קΩ` ×17, `10 kΩ` ×10, `10kΩ` ×1) are gone from Hebrew prose.
+
+**Sweep record:** 2026-08-04 — 141 prose instances across 29 files; 0 prose leftovers.
+**Deliberate carve-out — the LTR ASCII wiring panels keep `[220 Ω]` / `[10 kΩ]` (27 instances).**
+Those `<pre>` diagrams are column-aligned — `│` and `▼` on following lines sit under the `┬` that
+follows the value, so deleting a space would shift the connector and break the drawing:
+```
+Arduino pin 9  ───[220 Ω]───┬─── LED long leg
+                           │
+                           ▼
+```
+They are also the English/technical layer, where a space before the unit is the normal convention.
+Any future unit sweep must exclude `<pre>` blocks the same way.
+
+**Bidi note (verified by render, not assumed):** `10kΩ` inside RTL Hebrew displays correctly as
+`10kΩ` — digits + `k` + `Ω` form one LTR run. No `dir="ltr"` wrapper or `&lrm;` is needed.
 
 ### X1 — "רגל" is reserved for component legs; Arduino pins are "חיבור דיגיטלי N" — CONFIRMED (swept 2026-08-04)
 **Rule:** One word, one concept. **Arduino pins** are `חיבור דיגיטלי 9` (power pins: `חיבור 5V`,
@@ -343,15 +358,14 @@ batch rather than a blind replace.
 
 ---
 
-## Open conflicts — awaiting Yon's ruling
+## Resolved conflicts
 
-### 2026-08-04 — imperative "קראו" vs the plural-impersonal rule (A1)
-On T1_M7's stuck line Yon typed `אם נתקעים קראו למורה` — **imperative** קראו, which contradicts
-Pattern A1 in `Hebrew_Translation_Preferences_Log.md` (instructional prose uses plural impersonal —
-קוראים — never imperative), and mixes forms inside his own sentence (`נתקעים` impersonal + `קראו`
-imperative). **Applied as `אם נתקעים קוראים למורה.`** and reported to him.
-If he confirms he meant the imperative, this is the first deliberate A1 exception and needs recording
-in BOTH logs; if it was a typing slip, nothing more to do. Until he rules: keep A1 as-is.
+### 2026-08-04 — imperative "קראו" vs the plural-impersonal rule (A1) — RESOLVED, A1 HOLDS
+Yon typed `אם נתקעים קראו למורה` (imperative) on T1_M7's stuck line; it was applied as
+`אם נתקעים קוראים למורה.` and queried. **Yon confirmed: "you are correct, use 'קוראים'."**
+A1 (plural impersonal, never imperative) stands with **no exception**. Precedent for future rounds:
+an isolated imperative in Yon's own edit text is a typing slip — normalize it to the impersonal form
+and say so, rather than treating it as a style change.
 
 ## Processed feedback ledger
 | Date learned | Feedback files |
@@ -363,6 +377,10 @@ in BOTH logs; if it was a typing slip, nothing more to do. Until he rules: keep 
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-04 (rulings + ohm sweep)** — Yon ruled on both open items: (1) **A1 holds, no exception** —
+  his imperative `קראו` was a slip, normalize to `קוראים`; (2) **"use the 10kΩ format"** → X2 extended to
+  resistance and swept: 141 prose instances across 29 files → `220Ω` / `10kΩ`, with the 27 `<pre>`
+  ASCII-panel instances deliberately preserved (column alignment). Bidi verified by render.
 - **2026-08-04 (learn run 3)** — 4 new rules: **V4** (first encounter with a part or board feature gets a
   labelled picture — 5 explicit requests, FIRM, with a clear sweep candidate: buzzer/HC-SR04/motors/L298N/
   line-sensors/soldering-iron have none), **W6** (header lede states the action only, bold), **P3**

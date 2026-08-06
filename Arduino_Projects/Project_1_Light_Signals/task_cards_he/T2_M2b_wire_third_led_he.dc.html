@@ -33,8 +33,8 @@
         <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול יוצרים · אפשרות ב (רדיפה)</div>
       </div>
 
-      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מחווטים לד שלישי</h1>
-      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:58ch;">רק לתבנית הרדיפה (<strong style="color:#fff;">אפשרות ב</strong>). מוסיפים לד שלישי על חיבור דיגיטלי 11 של הארדואינו — אותה תבנית כמו לדים 1 ו-2.</p>
+      <h1 style="margin:18px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מוסיפים שני לדים לרדיפה</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:58ch;">רק לתבנית הרדיפה (<strong style="color:#fff;">אפשרות ב</strong>). אחרי שלב 1 יש על הברדבורד לד אחד — מוסיפים עוד שניים, על חיבורים 10 ו-11 של הארדואינו, באותה תבנית כמו הלד הראשון.</p>
     </div>
 
     <div style="padding:30px 34px 34px;">
@@ -69,22 +69,32 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בוחרים לד שלישי <strong>בצבע שלישי</strong>, שונה מ-1 ו-2 (כדי לראות את הרדיפה בבירור), ועוד נגד 220Ω.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בוחרים שני לדים נוספים <strong>בשני צבעים חדשים</strong>, שונים מהלד הראשון (כדי לראות את הרדיפה בבירור), ושני נגדי 220Ω.</p>
         </div>
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מכניסים את הלד השלישי טור אחד הצידה מהשני. כל רגל בטור שונה.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מכניסים את הלד השני טור אחד הצידה מהלד הראשון. כל רגל בטור שונה.</p>
         </div>
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">רגל ארוכה (+) ל<strong>חיבור דיגיטלי 11 של הארדואינו</strong> דרך נגד 220Ω, רגל קצרה (−) ל-<strong>GND</strong>.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">הרגל הארוכה (+) של הלד השני ל<strong>חיבור דיגיטלי 10 של הארדואינו</strong> דרך נגד 220Ω, הרגל הקצרה (−) ל-<strong>GND</strong>.</p>
         </div>
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בודקים ששני הלדים הראשונים <strong>עדיין מחוברים</strong> לחיבורים 9 ו-10.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מכניסים את הלד השלישי טור אחד הצידה מהשני. כל רגל בטור שונה.</p>
+        </div>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">הרגל הארוכה (+) של הלד השלישי ל<strong>חיבור דיגיטלי 11 של הארדואינו</strong> דרך נגד 220Ω, הרגל הקצרה (−) ל-<strong>GND</strong>.</p>
+        </div>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בודקים שהלד הראשון <strong>עדיין מחובר</strong> לחיבור דיגיטלי 9 של הארדואינו.</p>
         </div>
       </div>
 
@@ -102,9 +112,10 @@
         </div>
         <div style="display:flex; flex-direction:column; gap:9px;">
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שלושה לדים בברדבורד, טור אחד בין כל אחד, בשלושה צבעים</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>רגל ארוכה של לד 2 דרך נגד 220Ω לחיבור דיגיטלי 10 של הארדואינו</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>רגל ארוכה של לד 3 דרך נגד 220Ω לחיבור דיגיטלי 11 של הארדואינו</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>רגל קצרה של לד 3 מחוברת ל-GND</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שני הלדים הראשונים עדיין מחווטים לחיבורים 9 ו-10</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הרגליים הקצרות של שני הלדים החדשים מחוברות ל-GND</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הלד הראשון עדיין מחווט לחיבור דיגיטלי 9 של הארדואינו</span></div>
         </div>
       </div>
 
@@ -113,7 +124,7 @@
           <span style="font-size:20px;">🪄</span>תקועים?
         </div>
         <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
-          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>אותה תבנית כמו לדים 1 ו-2 — רק טור אחד הצידה, לחיבור דיגיטלי 11 של הארדואינו.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>אותה תבנית כמו הלד הראשון — כל לד חדש טור אחד הצידה, הרגל הארוכה דרך נגד 220Ω לחיבור שלו, הרגל הקצרה ל-GND.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>אם לד קודם הפסיק לעבוד בזמן החיווט — כנראה ג'אמפר התנתק. מחברים מחדש.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>צריך עזרה? קוראים למורה.</span></div>
         </div>

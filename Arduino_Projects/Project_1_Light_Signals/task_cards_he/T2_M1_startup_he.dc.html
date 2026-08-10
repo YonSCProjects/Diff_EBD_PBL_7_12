@@ -49,15 +49,6 @@
     <div style="padding:30px 34px 34px;">
 
 
-      <!-- together notice -->
-      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 248); border:1px solid oklch(0.88 0.05 248); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
-        <span style="flex:none; font-size:22px; line-height:1;">🤝</span>
-        <div>
-          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.11 248);">אם זו הפעם הראשונה שלכם בסדנה — זה שלב משותף עם המורה</div>
-          <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.42 0.06 248);">המורה יעבור אתכם על יצירת התיקייה. אם המורה ליד תלמיד אחר כרגע — מחכים בעמדה, הוא יגיע אליכם.</p>
-        </div>
-      </div>
-
       <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה עושים</h2>
@@ -70,20 +61,20 @@
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
           <div style="padding-top:3px;">
             <p style="margin:0; font-size:16px; line-height:1.55;">פותחים את סייר הקבצים ונכנסים אל <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">G:\My Drive\Arduino_Projects\</code></p>
-            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">יוצרים או מוצאים את התיקייה שלכם (יחד עם המורה אם זו הפעם הראשונה).</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">יוצרים או מוצאים את התיקייה שלכם.</p>
           </div>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בתוך התיקייה שלכם יוצרים תיקייה חדשה בשם <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">Project_1_Light_Signals</code>, וקוראים למורה שיפתח אתכם את קלוד קוד ויכוון אותו לתיקייה.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בתוך התיקייה שלכם יוצרים תיקייה חדשה בשם <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">Project_1_Light_Signals</code></p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את הארדואינו Uno עם כבל USB, ומוודאים שהלד <strong>L</strong> שעל הלוח מהבהב מקוד היצרן.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את הארדואינו Uno עם כבל USB, ומוודאים שהלד <strong>L</strong> שעל הלוח מהבהב.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">

@@ -62,7 +62,7 @@
           <sc-if value="{{ selA }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
         <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה נראה:</strong> שני לדים מהבהבים בניגוד — כשאחד דולק, השני כבוי.</p>
-        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> מוסיפים ללד משלב 1 לד שני על חיבור דיגיטלי 10 של הארדואינו, עם נגד 220Ω משלו — אותה תבנית כמו הלד הראשון, טור אחד הצידה.</p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> מוסיפים ללד משלב 1 לד שני על חיבור דיגיטלי 10 של הארדואינו, עם נגד 220Ω משלו — אותה תבנית כמו הלד הראשון, מספר טורים הצידה.</p>
         <div style="border:1px solid oklch(0.9 0.02 248); border-radius:12px; background:#fff; padding:10px; margin:0 0 8px; text-align:center;">
           <img src="../images/w2_two_leds_breadboard.svg" alt="תרשים ברדבורד: שני לדים במקביל — חיבור דיגיטלי 9 של הארדואינו דרך נגד 220Ω ללד 1, חיבור דיגיטלי 10 דרך נגד 220Ω ללד 2, הרגליים הקצרות ל-GND." style="display:block; max-width:440px; width:100%; height:auto; margin:0 auto;">
         </div>
@@ -105,6 +105,7 @@
           <span style="font-size:19px;">🧭</span>{{ nextTitle }}
         </div>
         <p style="margin:0; font-size:15px; line-height:1.6; color:{{ nextBody }};">{{ nextMsg }}</p>
+        <sc-if value="{{ showStep3Link }}" hint-placeholder-val="{{ false }}"><p style="margin:10px 0 0; font-size:15px;"><a href="./T2_M3_claude_code_level2_he.dc.html" style="color:oklch(0.42 0.11 248); font-weight:700; text-decoration:underline;">פותחים את כרטיסיית שלב 3</a></p></sc-if>
       </div>
 
       <!-- STEPS -->
@@ -214,6 +215,7 @@ class Component extends DCLogic {
       v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
       v.nextTitle = 'הכרטיסייה הבאה: שלב 3';
       v.nextMsg = 'בחרתם ' + (sel === 'A' ? 'לסירוגין (2 לדים)' : 'נשימה (לד אחד)') + ' — אין צורך בכרטיסיית חיווט נוספת. אחרי החיווט עוברים ישר לשלב 3.';
+      v.showStep3Link = true;
     } else {
       v.nextBg = 'oklch(0.985 0.004 85)'; v.nextBorder = 'oklch(0.92 0.006 85)';
       v.nextText = 'oklch(0.5 0.012 260)'; v.nextBody = 'oklch(0.55 0.012 260)';

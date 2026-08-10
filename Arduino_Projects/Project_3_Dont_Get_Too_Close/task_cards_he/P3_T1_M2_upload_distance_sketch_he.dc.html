@@ -49,7 +49,7 @@
 
     <div style="padding:30px 34px 34px;">
 
-      <p style="margin:0 0 14px; font-size:16.5px; line-height:1.6; color:oklch(0.46 0.012 260);">בשלב זה מעלים לארדואינו קוד מוכן שקורא את חיישן המרחק. החיישן מודד שוב ושוב כמה רחוק נמצא העצם הקרוב אליו, והקוד מדפיס את המרחק ב<strong>סנטימטרים</strong> למסך. אין חיווט חדש — החיישן כבר מחובר משלב 1. כל מה שעושים כאן: מעלים את הקוד, פותחים את מסך המעקב, ומזיזים יד מול החיישן כדי לראות את המספר משתנה.</p>
+      <p style="margin:0 0 14px; font-size:16.5px; line-height:1.6; color:oklch(0.46 0.012 260);">בשלב זה מעלים לארדואינו קוד מוכן שקורא את חיישן המרחק. החיישן מודד שוב ושוב כמה רחוק נמצא העצם הקרוב אליו והקוד מדפיס את המרחק ב<strong>סנטימטרים</strong> למסך. אין חיווט חדש — החיישן כבר מחובר משלב 1. כל מה שעושים כאן: מעלים את הקוד, פותחים את מסך המעקב ומזיזים יד מול החיישן כדי לראות את המספר משתנה.</p>
 
       <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
@@ -103,7 +103,7 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">במסך המעקב מופיע עכשיו מרחק בסנטימטרים, ומתעדכן שוב ושוב.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">במסך המעקב מופיע עכשיו מרחק בסנטימטרים ומתעדכן שוב ושוב.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
@@ -118,7 +118,7 @@
         <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">מספר גדול מאוד זה תקין — לא תקלה</div>
-          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">כשאין כלום מול החיישן, לפעמים מופיע מספר גדול מאוד (למשל <strong>999</strong>). זו <strong>לא</strong> תקלה ולא באג — פשוט החיישן לא שמע שום הד שחוזר, אז הוא מדווח "רחוק מאוד". כשמקרבים יד או עצם, המספר יורד מיד. חיישנים אמיתיים לא מושלמים, וזה בסדר גמור.</p>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">כשאין כלום מול החיישן, לפעמים מופיע מספר גדול מאוד (למשל <strong>999</strong>). זו <strong>לא</strong> תקלה ולא באג — פשוט החיישן לא שמע שום הד שחוזר, אז הוא מדווח "רחוק מאוד". כשמקרבים יד או עצם, המספר יורד מיד. חיישנים אמיתיים לא מושלמים וזה בסדר גמור.</p>
         </div>
       </div>
 
@@ -128,7 +128,7 @@
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה הקוד עושה</h2>
       </div>
       <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:16px 18px; margin-bottom:18px;">
-        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.012 260);">החיישן שולח צליל קצר שאנחנו לא שומעים. הקוד מקשיב להד שחוזר. לפי זמן החזרה הוא מחשב את המרחק לעצם הקרוב, ומדפיס אותו למסך המעקב בסנטימטרים, שוב ושוב, פעמים רבות בשנייה. לא חייבים להבין כל שורה — אפשר לקרוא אם רוצים.</p>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.012 260);">החיישן שולח צליל קצר שאנחנו לא שומעים. הקוד מקשיב להד שחוזר. לפי זמן החזרה הוא מחשב את המרחק לעצם הקרוב ומדפיס אותו למסך המעקב בסנטימטרים, שוב ושוב, פעמים רבות בשנייה. לא חייבים להבין כל שורה — אפשר לקרוא אם רוצים.</p>
       </div>
 
       <!-- serial monitor mock -->
@@ -144,7 +144,7 @@
         <span style="flex:none; font-size:22px; line-height:1;">👀</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
-          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">במסך המעקב מופיעה שורה כמו <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px; display:inline-block;">Distance: 34 cm</code> שמתעדכנת שוב ושוב. כשמקרבים יד אל החיישן המספר קטֵן, וכשמרחיקים אותה המספר גדֵל. ב-Arduino IDE מופיע Done uploading בירוק בתחתית.</p>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">במסך המעקב מופיעה שורה כמו <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px; display:inline-block;">Distance: 34 cm</code> שמתעדכנת שוב ושוב. כשמקרבים יד אל החיישן המספר קטֵן וכשמרחיקים אותה המספר גדֵל. ב-Arduino IDE מופיע Done uploading בירוק בתחתית.</p>
           <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">מספר גדול מאוד (כמו 999) כשאין כלום מול החיישן הוא תקין — זה אומר "רחוק", לא "תקלה".</p>
         </div>
       </div>
@@ -167,7 +167,7 @@
         <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם מסך המעקב ריק או שלא מופיע מרחק:</strong> כנראה שמסך המעקב לא פתוח, או שה-<span dir="ltr">baud</span> לא מוגדר ל-<span dir="ltr">9600</span>. לוחצים על סמל זכוכית המגדלת ובודקים שה-<span dir="ltr">baud</span> מוגדר ל-<span dir="ltr">9600</span>.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם המספר תמיד 999 או קופץ בלי קשר ליד:</strong> בודקים את חיווט החיישן משלב 1 — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">VCC</span> ל-<span dir="ltr">5V</span>, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span>, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">Trig</span> לחיבור דיגיטלי 12 של הארדואינו, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">Echo</span> לחיבור דיגיטלי 11. קל להחליף בטעות בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">Trig</span> ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">Echo</span>.</span></div>
-          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם ה-<span dir="ltr">Upload</span> נכשל:</strong> בודקים שב-<span dir="ltr">Tools → Board</span> מופיע "Arduino Uno" ושב-<span dir="ltr">Tools → Port</span> מופיעה יציאת COM. אם מסך המעקב פתוח, סוגרים אותו, מעלים שוב, ואז פותחים אותו בחזרה.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם ה-<span dir="ltr">Upload</span> נכשל:</strong> בודקים שב-<span dir="ltr">Tools → Board</span> מופיע "Arduino Uno" ושב-<span dir="ltr">Tools → Port</span> מופיעה יציאת COM. אם מסך המעקב פתוח, סוגרים אותו, מעלים שוב ואז פותחים אותו בחזרה.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם עדיין תקועים אחרי זה,</strong> קוראים למורה.</span></div>
         </div>
       </div>

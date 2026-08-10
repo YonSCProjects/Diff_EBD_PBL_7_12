@@ -70,7 +70,29 @@ reserving the teacher for moments that need the teacher keeps those moments mean
 at least 5 are in P4 T1_M1 soldering context (protected — teacher presence IS the point there).
 **Note (2026-07-13):** Yon's own uncommitted rework of T1_M1 reintroduces the phrase — most likely
 an old-text-baseline artifact of that rework, not a reversal (pending his confirmation).
-**Status:** TENTATIVE · **Sweep scope:** non-safety, non-soldering instances only, case-by-case.
+**Status:** FIRM (2026-08-10) · **Sweep scope:** non-safety, non-soldering instances only, case-by-case.
+
+**T2a — the scoping dimension is the TIER, not just the action (2026-08-10, explicit).**
+Yon deleted the *entire* 🤝 "אם זו הפעם הראשונה שלכם בסדנה — זה שלב משותף עם המורה" block from
+**T2**_M1, plus both remaining teacher clauses on that card, and gave the reason:
+
+> "חלק גדול מהתלמידים שיגיעו ל T2 מסוגלים להתמודד עם זה לבד ואם לא אז הם יקראו לי —
+> אין צורך להוסיף מילים מיותרות" (comment, T2_M1, feedback 2026-08-10_1544)
+
+So the same action carries teacher framing in **T1** and drops it in **T2/T3**: reaching T2 is
+itself evidence of capability, and the student will ask if they need to. The measured gradient after
+his edit confirms it: `יחד עם המורה` survives in **8 T1 files, 1 T2 file, 0 T3 files**; `קוראים למורה`
+runs **39 / 20 / 9** across T1 / T2 / T3.
+
+**Authoring rule:** when writing a T2 or T3 card, do not add teacher-presence framing to a routine
+action, and do not add "first time in the workshop" onboarding blocks — those belong to T1. Keep the
+**stuck-box** escalation at every tier (it is the student's own choice to use it), and keep every
+protected safety escalation, above all the soldering **"קוראים למורה, תמיד"**.
+
+**Related caution:** the same edit removed the only step that told the student to open Claude Code,
+while the card's done-when list still requires "קלוד קוד פתוח ומכוון לתיקיית פרויקט 1 שלכם".
+Trimming teacher scaffolding can orphan a done-when item — re-read the whole card after such a trim
+(same failure mode as **V3**, but for text rather than figures). Flagged to Yon, not yet resolved.
 
 ---
 
@@ -154,8 +176,11 @@ phrase over the terser one (שום דבר, not כלום).
 - `עדיין לא קורה כלום חדש בלחיצה` → `עדיין לא קורה שום דבר חדש בלחיצה` (P1 T1_M7, feedback 2026-08-04_1312)
 - `הם אמורים להתחלף לסירוגין` → `הם אמורים להידלק לסירוגין` (P1 T1_M6, same round) — also restores the
   program's LED-verb convention: a LED **נדלק/מאיר**; "מתחלף" describes the pair, not the component.
+- `מה ההתנהגות? ⭐ השדה הכי חשוב` → `מה זה עושה? ⭐ השדה הכי חשוב` (P1 T3 planner field label,
+  feedback 2026-08-10_1622) — the abstract noun **התנהגות** replaced by the question a student can
+  actually answer. Note this is the field the card itself stars as the most important one.
 
-**Evidence:** 3 (3 cards) · **Counterexamples:** 0 — no מאתרים/לאתר/איתור left anywhere.
+**Evidence:** 4 (4 cards) · **Counterexamples:** 0 — no מאתרים/לאתר/איתור left anywhere.
 **Status:** FIRM (watch for more: מבצעים→עושים, מתבוננים→מסתכלים…).
 
 ### W6 — The header lede states what the card does — nothing else
@@ -315,6 +340,146 @@ neighbourhood, has to be re-read.
 **Examples:** `רק טור אחד הצידה` → `רק כמה טורים הצידה` (P1 T1_M5, ×2 locations).
 **Evidence:** 2 (same card, two locations, two saves) · **Status:** FIRM as a procedure.
 
+**X4 — the phrase was standardized program-wide on 2026-08-10 — CONFIRMED (swept).**
+Yon turned the ad-hoc T1_M5 fix above into a rule: "שנה את **'טור אחד הצידה'** ל**'מספר טורים הצידה'**
+ועשה זאת **בכל הכרטיסיות**" (card note, P1 T2_M2, feedback 2026-08-10_1544). Swept to zero across
+every card (P1 T1_M5 / T2_M2 / T2_M2b ×3, P2 T2_M2b ×3, and the R0 reference cards in P1/P2/P3), then
+extended on his follow-up "swap these too" to `project_1_tutorial_he.html` (×3) and the P2
+`claude_code_channel_b_scaffold_he.md` (×1). Zero occurrences remain anywhere in `Arduino_Projects/`.
+**Note:** in the R0 cards the phrase describes moving a *single LED leg* to clear a short; it was
+swept there too, per Yon's standing "no carve-outs when I say all cards" rule — flagged to him.
+
+---
+
+### W8 — Name what the student does, not the tool's mode
+**Rule:** Open a Claude Code step with the student's action, not with the name of a mode or feature.
+`מבקשים מקלוד קוד לתכנת` — not `קלוד קוד במצב דיאלוג חופשי`.
+
+**Why (inferred):** a mode name is product vocabulary the student has no model for; the action is
+something they can picture doing. Same instinct as **W7** (no abstract concept-framing) applied to
+tool names rather than CS concepts.
+
+**Examples:**
+- `קלוד קוד במצב דיאלוג חופשי. מתארים מה בונים, וקלוד עוזר לכתוב — משפרים יחד עד שזה עובד. אותה משמעת של (א)(ב)(ג).`
+  → `מבקשים מקלוד קוד לתכנת - מתארים מה בונים וקלוד עוזר לכתוב. משפרים יחד עם קלוד קוד עד שזה עובד.`
+  (P1 T3, feedback 2026-08-10_1622)
+
+**Evidence:** 1 · **Counterexamples:** 1 surviving — `P2_T3_project_planner`:
+"קלוד קוד במצב דיאלוג חופשי — אין קוד מוכן מראש…" (unreviewed card, weak).
+**Status:** TENTATIVE · **Sweep scope:** the P2 T3 instance, if Yon confirms.
+
+**⚠ Side effect to raise with Yon:** the same rewrite deleted `אותה משמעת של (א)(ב)(ג)` — the last
+place the describe-first protocol was named in the T3 tier. The (א)(ב)(ג) fields still exist on
+T2_M3/T2_M4, but T3's planner no longer names the discipline it inherits.
+
+### W9 — Point back to what the student already wrote, in bold
+**Rule:** When a step should consume something the student wrote earlier on the card, say so
+explicitly and bold it — don't rely on them connecting the two.
+
+**Why (Yon, explicit):** "הדגש את 'משתמשים במה שכתבתם בשלב 1 כדי לתאר לקלוד קוד מה רוצים.'"
+(comment, P1 T3, feedback 2026-08-10_1622). The planner's value is that step 1's written intent
+becomes the spec for step 3; without a pointer, students treat each field as an isolated exercise.
+
+**Examples:**
+- added, bolded: `**משתמשים במה שכתבתם בשלב 1 כדי לתאר לקלוד קוד מה רוצים.**` (P1 T3)
+
+**Evidence:** 1 explicit · **Status:** TENTATIVE.
+**Sweep candidate:** the P2/P3/P4 T3 planners have the same plan→code structure and no such pointer.
+
+### W10 — Introduce an example list with "למשל", not a bare dash
+**Rule:** `בוחרים רעיון אמיתי, למשל - מנורת מצב רוח…` rather than `בוחרים רעיון אמיתי — מנורת מצב רוח…`.
+The dash alone leaves the list's relationship to the sentence unmarked.
+
+**Examples:**
+- `בוחרים רעיון אמיתי — מנורת מצב רוח, איתות לאופניים…` → `בוחרים רעיון אמיתי, למשל - מנורת מצב רוח…`
+  (P1 T3 lede, feedback 2026-08-10_1622)
+
+**Evidence:** 1 · **Status:** TENTATIVE (note: Yon typed a hyphen `-`, not an em-dash, after למשל —
+kept verbatim).
+
+---
+
+## Category C — Choice points and cross-card continuity
+
+### C1 — Every option at a choice point carries its own target-state figure
+**Rule:** On a choice card, each option (א/ב/ג) shows the Fritzing diagram of the board **as it will
+look if you pick that option** — not one shared diagram, and not none. Reuse the canonical
+`images/w*_breadboard.svg` exports; an option that adds nothing re-shows the unchanged wiring.
+
+**Why (Yon, explicit):** "הכרטיסייה הזאת לא ברורה מספיק… אני מציע שלכל אחת משלוש אפשרויות הבחירה
+א', ב' ו-ג' יהיה איור Fritzing מתאים" (card note, P1 T2_M2, feedback 2026-08-06_1325). Choosing
+between three abstract names is a harder decision than choosing between three pictures, and the
+options differ in workload (0 / 1 / 2 extra LEDs) — the picture makes that cost visible before the
+student commits.
+
+**Examples:**
+- P1 T2_M2 gained three figures: א→`w2_two_leds`, ב→`w4_three_leds_chasing`, ג→`w1_single_led`
+  (the unchanged step-1 wiring). Applied 2026-08-06, commit `c1dfaff`.
+
+**Evidence:** 1 explicit design instruction (not an inferred edit).
+**Counterexamples:** 3 choice cards with **zero** figures, all unreviewed — `P2_T2_M2_pick_feedback_mode`,
+`P3_T2_M2_pick_threshold`, `P4_T2_M2_pick_speed`.
+**Status:** FIRM for P1; **proposed sweep** to those 3 cards (P3/P4 choose a threshold and a speed —
+a "target state" there may be a screen/behaviour illustration rather than a wiring diagram, so this
+needs Yon's call before building).
+
+### C2 — A card states the state the previous card actually left
+**Rule:** A card that adds hardware must be written from the true starting state of the student's
+board at that point in the chain, and must say so. Never assume a state a later or parallel card
+produced.
+
+**Why (Yon, explicit):** "בהוראות האלה ההנחה היא שמתחילים כבר ממצב של שני לדים וזה להבנתי לא נכון
+כי אחרי כרטיס T2_M1 אנחנו במצב של לד אחד" (card note, feedback 2026-08-06_1325). The 2b wiring card
+had been written as "add a third LED" when the student arrives holding **one** — so option-ב students
+never got instructions for LED 2 at all. A wrong starting-state assumption doesn't just confuse, it
+silently drops a build step.
+
+**Examples:**
+- `מחווטים לד שלישי` / "add a third LED on pin 11" → `מוסיפים שני לדים לרדיפה`, subtitle anchored
+  with "אחרי שלב 1 יש על הברדבורד לד אחד", steps rebuilt as LED 2→pin 10 then LED 3→pin 11, plus a
+  regression check that LED 1 is still on pin 9 (P1 T2_M2b, 2026-08-06_1325).
+
+**Evidence:** 1 explicit note (high-severity: it was a build-blocking content bug, not a style nit).
+**Counterexamples:** not surveyed — **worth auditing** every `*_M2b_*` and post-branch card in P2–P4
+for the same assumption, since they were authored from the same template.
+**Status:** FIRM · **Authoring check:** when writing card N, re-read card N−1's "מה אמורים לראות"
+and start from exactly that state.
+
+---
+
+## Category I — Interaction integrity (text vs. the controls the card actually has)
+
+### I1 — Never instruct an action the card provides no control for
+**Rule:** If the text says to mark / tick / choose / fill something, the card must contain the
+control that does it. A written list of options with no clickable or writable affordance is a
+dangling instruction — either build the control or delete the sentence.
+
+**Why (Yon, explicit):** he commented **"איפה מסמנים?"** ("where do we mark?") on the photo step of
+the P1 T3 planner, and in the same round deleted the offending clause himself rather than asking for
+a control to be built. The line named three options with nowhere to record them — for a student who
+takes instructions literally, an instruction that cannot be carried out is a dead end and a source of
+"I did it wrong" anxiety.
+
+**Examples:**
+- `מצלמים תמונה של החיווט הגמור. מסמנים: **צולמה / עדיין לא / לא רוצה תמונה**.`
+  → `מצלמים תמונה של החיווט הגמור.` (P1 T3, feedback 2026-08-10_1622 — edit + comment agreeing)
+
+**Evidence:** 1 explicit comment + 1 matching self-edit (same block).
+**Counterexamples:** **2 surviving, both the exact same pattern**, in cards Yon has not reached yet
+(weak counterexamples — he is reviewing P1 first):
+- `P3_T3_project_planner` — `מצלמים תמונה של החיווט הגמור. מסמנים כאן: תמונה צולמה / עדיין לא / לא רוצה תמונה`
+- `P4_T3_project_planner` — `מצלמים תמונה של המסלול הגמור. מסמנים כאן: …` (same wording)
+
+**Carve-outs (NOT this rule — these mark physical things, not UI state):**
+`P4_T1_M4` "מחברים חוט, **מסמנים אותו** מול…" (labelling a real wire) and `P4_T3` "**מסמנים** נקודת
+התחלה ונקודת סיום" (drawing on paper).
+
+**Status:** FIRM · **Sweep scope:** the 2 planner instances above — delete the "מסמנים כאן:" clause,
+keeping the "מצלמים תמונה…" sentence. Needs Yon's approval.
+
+**Authoring check:** before shipping a card, every imperative that implies recording state
+(מסמנים / כותבים / בוחרים / מדרגים) must resolve to a real checkbox, choice card, or textarea.
+
 ---
 
 ## Category X — Terminology (program-wide vocabulary)
@@ -424,21 +589,46 @@ reading, and parentheses mark it as such without deleting it.
 
 **Evidence:** 1 · **Status:** TENTATIVE.
 
-### P2 — No comma before the conjunction ו' — CONFIRMED (rule stated by Yon)
+### P2 — No comma before the conjunction ו' — CONFIRMED (swept program-wide 2026-08-10)
 **Rule:** Never place a comma before a vav-conjunction (`…מחכים שלוש שניות ומחברים בחזרה`, not
 `…שלוש שניות, ומחברים`).
 
 **Why (Yon, explicit):** "חוק חשוב, לא לשים פסיק לפני וו החיבור" (comment, T1_M2, feedback
-2026-08-03_2357).
+2026-08-03_2357). Restated as a sweep order 2026-08-10_1622: "הסר את הפסיק הזה **והסר פסיקים לפני
+ו החיבור בכל הכרטיסיות**."
 
 **Examples:**
 - `מוציאים את כבל ה־USB, מחכים שלוש שניות, ומחברים בחזרה.` → `…מחכים שלוש שניות ומחברים בחזרה.`
+- `מתארים מה בונים, וקלוד עוזר לכתוב` → `מתארים מה בונים וקלוד עוזר לכתוב` (P1 T3, 2026-08-10_1622 —
+  Yon's own `afterText` still carried the comma; his comment overrode his edit)
 
-**Status:** CONFIRMED as a writing rule (stated as law).
-**Sweep status: NOT swept.** ~345 candidate `, ו…` sites exist across the dc cards, but many are
-legitimate (comma closing a subordinate clause that happens to be followed by ו', list separators,
-quoted/English content). A sweep would need per-instance judgment — offer it to Yon as a reviewed
-batch rather than a blind replace.
+**Status:** CONFIRMED · **Sweep: APPLIED 2026-08-10** — 349 removals across 75 cards, in three passes,
+because the first two were provably incomplete:
+1. **328 in visible text** — the sweeper masks tag interiors so markup can never break.
+2. **20 in `alt` / `title` / `aria-label`** — pass 1's masking hid these. They ARE card content:
+   screen readers and the Channel C spoken-companion mode read them aloud.
+3. **1 in a `placeholder`** — visible inside the textarea.
+Residual across all card sources: 0. Verified by unchanged angle-bracket and quote counts vs HEAD.
+
+**The ~11% exception shape (found by review, repaired — do NOT re-introduce commas here).**
+A Hebrew review of the 28 removals sitting in subordinate-clause shapes found **3 genuine
+readability regressions**, all one pattern: `[verb] כש-clause, ו[bare verb] כש-clause`, where the
+bare verb after ו can mis-attach to the nearest preceding phrase (garden path). All three were the
+"light-switch contrast" shape in P3:
+- `שהלד מאיר כשהיד קרובה וכבה כשמרחיקים אותה` → `…כשהיד קרובה, **אבל** כבה כשמרחיקים אותה`
+- `האזעקה מגיבה כשמגיעים קרוב מספיק ונרגעת כשמתרחקים` → `…קרוב מספיק, **אבל** נרגעת כשמתרחקים`
+**Repair pattern:** swap the ו for **אבל** — it honours P2 (the rule targets ו specifically), takes
+its own comma by uncontested convention, and marks the contrast that was being lost. Do NOT repair by
+restoring the comma.
+
+**Why the other 25 were safe** (use this as the authoring test): the subordinator repeats after the ו
+(`…המספר קטֵן וכשמרחיקים…`), or subject/number/gender mismatch blocks mis-attachment (plural
+`ועוזרים` cannot attach to a singular subject), or a strong lexical cue already marks the boundary
+(`ואז`, `וגם`, `ולא`, a colon, or a Hebrew↔Latin script switch).
+
+**Not swept (out of scope, flagged to Yon):** 38 instances in `Arduino_PBL_Program_Overview_he.md`'s
+own prose. His order said "בכל הכרטיסיות"; the overview is a funder/staff document, not a כרטיסייה.
+Its embedded card appendix is clean.
 
 ### P1 — Minimal commas in short student-facing sentences
 **Rule:** Short observable statements drop commas that Hebrew grammar does not require ("הלד הירוק הקטן L ליד רגל 13 מהבהב." — no commas; "כשהקוד רץ הוא נדלק" — no comma after the clause).
@@ -456,6 +646,31 @@ batch rather than a blind replace.
 
 ---
 
+## Authoring hazards (not style rules — things that silently break when you edit)
+
+### H1 — A card's `<h1>` feeds the generated navigation labels
+Since 2026-08-10 each task card loads `card_nav.js`, generated by `build_card_nav.js` from the card
+**filenames** (for the prev/next chain) and each card's **`<h1>` title + "שלב N מתוך M" label** (for
+the link text). So **renaming or retitling a card, or editing a title's wording, makes the nav labels
+stale** — including a title touched only by a program-wide sweep.
+
+Caught live: the P2 comma sweep changed the title `מעלים, בודקים, ומכוונים את הגרסה שלכם` →
+`מעלים, בודקים ומכוונים…`, silently desynchronising P2's nav labels. `node build_card_nav.js --check`
+flagged it; `node build_card_nav.js` fixed it.
+
+**Rule: after ANY sweep or title edit, run `node build_card_nav.js --check` before committing.**
+(It also verifies every prev/next target still exists on disk.)
+
+### H2 — Text attributes are card content and sweeps must include them
+A text sweep that only walks visible text nodes misses `alt`, `title`, `aria-label` and `placeholder`.
+Those are student-facing here: screen readers and the **Channel C spoken-companion mode** read `alt`
+aloud, and `placeholder` is visible inside every textarea. The 2026-08-10 comma sweep needed three
+passes for exactly this reason (328 text + 20 attributes + 1 placeholder). Sweep attributes too, but
+in a **separate pass** — the visible-text pass must keep masking tag interiors so it can never
+corrupt markup.
+
+---
+
 ## Resolved conflicts
 
 ### 2026-08-04 — imperative "קראו" vs the plural-impersonal rule (A1) — RESOLVED, A1 HOLDS
@@ -468,6 +683,7 @@ and say so, rather than treating it as a style change.
 ## Processed feedback ledger
 | Date learned | Feedback files |
 |---|---|
+| 2026-08-10 | feedback_2026-08-06_1325 · feedback_2026-08-10_1512 · _1544 · _1605 · _1607 · _1620 · _1622 (7 saves; _1544 and _1622 are the supersets. _1512 was subsumed by _1544; **_1605 was a pure stale re-export of _1544** — console cache not reset; _1620 subsumed by _1622) |
 | 2026-08-04 (4th run) | feedback_2026-08-04_1429 · _1435 · _1442 · _1443 · _1446 · _1451 · _1451_2 · _1452 … _1452_9 (16 saves; _1452_9 is the superset) |
 | 2026-08-04 (3rd run) | feedback_2026-08-04_1302 · _1312 · _1322 (_1322 = byte-identical re-save) |
 | 2026-08-04 (2nd run) | feedback_2026-08-04_0110 · _0111 · _0111_2 · _0113 · _0114 · _0120 |
@@ -476,6 +692,23 @@ and say so, rather than treating it as a style change.
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-10 (learn run 5)** — 7 feedback files ingested. **6 new rules**: **C1** (each choice
+  option carries its own target-state Fritzing figure — explicit instruction, FIRM), **C2** (a card
+  starts from the state the previous card actually left — caught a build-blocking bug where option-ב
+  students never got LED 2), **I1** (never instruct an action the card has no control for — from his
+  "איפה מסמנים?"), **W8** (name the action, not the tool's mode), **W9** (point back to what the
+  student wrote earlier, in bold), **W10** (introduce examples with למשל). **2 new authoring hazards**:
+  **H1** (card titles feed the generated nav labels — always run `build_card_nav.js --check` after a
+  sweep; caught a live desync) and **H2** (sweeps must cover alt/title/aria-label/placeholder, in a
+  separate pass). **Rules upgraded:** **P2 → CONFIRMED + swept program-wide** (349 removals over 3
+  passes, 0 residual) and now documents the ~11% harmful shape (`כש-clause, ו+bare verb`) with the
+  **אבל** repair pattern and the test for why the other 25 were safe; **T2 → FIRM** and gained
+  **T2a**, the finding that teacher scaffolding is scoped by **tier** not by action (Yon: T2 students
+  can handle it alone) with the measured gradient 8/1/0 and 39/20/9; **X4 → CONFIRMED** ("מספר טורים
+  הצידה" swept to zero everywhere); **W3** gained a 4th example (מה ההתנהגות → מה זה עושה).
+  **Open items raised, not resolved:** T2_M1's done-when still requires Claude Code open though the
+  step that opened it was trimmed; the T3 rewrite dropped the last (א)(ב)(ג) mention in that tier;
+  the R0 "single leg" instances were swept per the no-carve-outs rule and may want reverting.
 - **2026-08-04 (approved sweeps)** — **X3 thinning applied**: attribution kept on the first pin mention
   per block, 101 repeats removed across 31 files (254 first-mentions kept, 0 doubled blocks remain).
   **V5 sweep evaluated → NO-OP**: the flagged "wiring chains" were figure legends (compact chain is

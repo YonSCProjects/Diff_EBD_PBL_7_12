@@ -82,6 +82,7 @@ const CARD_STEMS = {
     'T:T1_M8_button_control',
     'T:T2_M1_startup',
     'T:T2_M2_pick_pattern',
+    'T:T2_M2a_wire_second_led',
     'T:T2_M2b_wire_third_led',
     'T:T2_M3_claude_code_level2',
     'T:T2_M4_button_behavior',

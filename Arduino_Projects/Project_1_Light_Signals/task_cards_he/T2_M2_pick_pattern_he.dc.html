@@ -63,7 +63,7 @@
           <sc-if value="{{ selA }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
         <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה נראה:</strong> שני לדים מהבהבים בניגוד — כשאחד דולק, השני כבוי.</p>
-        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> מוסיפים ללד משלב 1 לד שני על חיבור דיגיטלי 10 של הארדואינו, עם נגד 220Ω משלו — אותה תבנית כמו הלד הראשון, מספר טורים הצידה.</p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> מוסיפים ללד משלב 1 לד שני על חיבור דיגיטלי 10 של הארדואינו, עם נגד 220Ω משלו — אותה תבנית כמו הלד הראשון, מספר טורים הצידה. <strong><a href="./T2_M2a_wire_second_led_he.dc.html" style="color:oklch(0.42 0.11 248); text-decoration:underline;">ההוראות המלאות בכרטיסיית 2a</a>, אחרי השלב הזה.</strong></p>
         <div style="border:1px solid oklch(0.9 0.02 248); border-radius:12px; background:#fff; padding:10px; margin:0 0 8px; text-align:center;">
           <img src="../images/w2_two_leds_breadboard.svg" alt="תרשים ברדבורד: שני לדים במקביל — חיבור דיגיטלי 9 של הארדואינו דרך נגד 220Ω ללד 1, חיבור דיגיטלי 10 דרך נגד 220Ω ללד 2, הרגליים הקצרות ל-GND." style="display:block; max-width:440px; width:100%; height:auto; margin:0 auto;">
         </div>
@@ -78,7 +78,7 @@
           <sc-if value="{{ selB }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
         <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>איך זה נראה:</strong> שלושה לדים מאירים בזה אחר זה, כמו אורות מרדף בשלט.</p>
-        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> מוסיפים ללד משלב 1 עוד שני לדים — על חיבורים 10 ו-11 של הארדואינו, כל אחד עם נגד 220Ω משלו. <strong>ההוראות המלאות בכרטיסיית 2b, אחרי השלב הזה.</strong></p>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> מוסיפים ללד משלב 1 עוד שני לדים — על חיבורים 10 ו-11 של הארדואינו, כל אחד עם נגד 220Ω משלו. <strong><a href="./T2_M2b_wire_third_led_he.dc.html" style="color:oklch(0.42 0.11 248); text-decoration:underline;">ההוראות המלאות בכרטיסיית 2b</a>, אחרי השלב הזה.</strong></p>
         <div style="border:1px solid oklch(0.9 0.02 248); border-radius:12px; background:#fff; padding:10px; margin:0 0 8px; text-align:center;">
           <img src="../images/w4_three_leds_chasing_breadboard.svg" alt="תרשים ברדבורד: שלושה לדים במקביל — חיבור דיגיטלי 9 של הארדואינו דרך נגד 220Ω ללד 1, חיבור דיגיטלי 10 דרך נגד 220Ω ללד 2, חיבור דיגיטלי 11 דרך נגד 220Ω ללד 3, כל הרגליים הקצרות ל-GND." style="display:block; max-width:440px; width:100%; height:auto; margin:0 auto;">
         </div>
@@ -106,6 +106,8 @@
           <span style="font-size:19px;">🧭</span>{{ nextTitle }}
         </div>
         <p style="margin:0; font-size:15px; line-height:1.6; color:{{ nextBody }};">{{ nextMsg }}</p>
+        <sc-if value="{{ showStep2aLink }}" hint-placeholder-val="{{ false }}"><p style="margin:10px 0 0; font-size:15px;"><a href="./T2_M2a_wire_second_led_he.dc.html" style="color:oklch(0.42 0.11 248); font-weight:700; text-decoration:underline;">פותחים את כרטיסיית שלב 2a</a></p></sc-if>
+        <sc-if value="{{ showStep2bLink }}" hint-placeholder-val="{{ false }}"><p style="margin:10px 0 0; font-size:15px;"><a href="./T2_M2b_wire_third_led_he.dc.html" style="color:oklch(0.42 0.11 248); font-weight:700; text-decoration:underline;">פותחים את כרטיסיית שלב 2b</a></p></sc-if>
         <sc-if value="{{ showStep3Link }}" hint-placeholder-val="{{ false }}"><p style="margin:10px 0 0; font-size:15px;"><a href="./T2_M3_claude_code_level2_he.dc.html" style="color:oklch(0.42 0.11 248); font-weight:700; text-decoration:underline;">פותחים את כרטיסיית שלב 3</a></p></sc-if>
       </div>
 
@@ -124,7 +126,7 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחווטים כל לד נוסף שהתבנית דורשת, לפי האיור שבאפשרות שבחרתם (א: עוד לד על חיבור דיגיטלי 10 של הארדואינו · ב: עוד שניים, לפי כרטיסיית 2b · ג: בלי חיווט חדש).</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחווטים כל לד נוסף שהתבנית דורשת, לפי האיור שבאפשרות שבחרתם (א: עוד לד, לפי כרטיסיית 2a · ב: עוד שניים, לפי כרטיסיית 2b · ג: בלי חיווט חדש).</p>
         </div>
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
@@ -210,18 +212,25 @@ class Component extends DCLogic {
       v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
       v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
       v.nextTitle = 'הכרטיסייה הבאה: שלב 2b';
-      v.nextMsg = 'בחרתם רדיפה (3 לדים) — ממשיכים אל שלב 2b, שבו מוסיפים שני לדים (חיבורים 10 ו-11 של הארדואינו).';
-    } else if (sel === 'A' || sel === 'C') {
+      v.nextMsg = 'אם בחרתם רדיפה (3 לדים) — ממשיכים אל שלב 2b, שבו מוסיפים שני לדים (חיבורים 10 ו-11 של הארדואינו).';
+      v.showStep2bLink = true;
+    } else if (sel === 'A') {
+      v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
+      v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
+      v.nextTitle = 'הכרטיסייה הבאה: שלב 2a';
+      v.nextMsg = 'אם בחרתם לסירוגין (2 לדים) — ממשיכים אל שלב 2a, שבו מוסיפים לד שני (חיבור דיגיטלי 10 של הארדואינו).';
+      v.showStep2aLink = true;
+    } else if (sel === 'C') {
       v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
       v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
       v.nextTitle = 'הכרטיסייה הבאה: שלב 3';
-      v.nextMsg = 'בחרתם ' + (sel === 'A' ? 'לסירוגין (2 לדים)' : 'נשימה (לד אחד)') + ' — אין צורך בכרטיסיית חיווט נוספת. אחרי החיווט עוברים ישר לשלב 3.';
+      v.nextMsg = 'אם בחרתם נשימה (לד אחד) — אין צורך בכרטיסיית חיווט נוספת. עוברים ישר לשלב 3.';
       v.showStep3Link = true;
     } else {
       v.nextBg = 'oklch(0.985 0.004 85)'; v.nextBorder = 'oklch(0.92 0.006 85)';
       v.nextText = 'oklch(0.5 0.012 260)'; v.nextBody = 'oklch(0.55 0.012 260)';
       v.nextTitle = 'לאן ממשיכים?';
-      v.nextMsg = 'בוחרים תבנית למעלה כדי לראות לאן להמשיך. רדיפה (ב) ← שלב 2b · לסירוגין (א) או נשימה (ג) ← ישר לשלב 3.';
+      v.nextMsg = 'בוחרים תבנית למעלה כדי לראות לאן להמשיך. לסירוגין (א) ← שלב 2a · רדיפה (ב) ← שלב 2b · נשימה (ג) ← ישר לשלב 3.';
     }
     for (let i = 1; i <= 14; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
     return v;

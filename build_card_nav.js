@@ -25,30 +25,40 @@ const PROJECTS = [
 
 // Branch points: a card whose NEXT depends on the pattern/mode the student
 // picked, stored in localStorage by that card's own DCLogic.
-//   optionsSkippingBranch — choices that do NOT need the extra wiring card.
-// Anything else (including "not chosen yet") routes THROUGH the branch card,
-// which opens with its own "you can skip this if you chose X" notice — so a
-// student who lands there wrongly is corrected on arrival, whereas one who
-// skips wiring by accident is not.
+//   options — per choice value, the wiring card it routes through, or null to
+//   skip straight to the card after the branch block.
+// "Not chosen yet" routes to the FIRST option card, which opens with its own
+// "you can skip this if you chose X" notice — so a student who lands there
+// wrongly is corrected on arrival, whereas one who skips wiring by accident
+// is not.
 const BRANCHES = {
   'T2_M2_pick_pattern_he.dc.html': {
     key: 'tc_p1t2m2_choice',
-    optionsSkippingBranch: ['A', 'C'],
+    options: {
+      A: 'T2_M2a_wire_second_led_he.dc.html',
+      B: 'T2_M2b_wire_third_led_he.dc.html',
+      C: null,
+    },
   },
   'P2_T2_M2_pick_feedback_mode_he.dc.html': {
     key: 'tc_p2t2m2_choice',
-    optionsSkippingBranch: ['B', 'C'],
+    options: {
+      A: 'P2_T2_M2b_wire_three_leds_he.dc.html',
+      B: null,
+      C: null,
+    },
   },
 };
 
 const stripEmoji = (s) =>
   s.replace(/^[\s -㌀\uD83C-􏰀-\uDFFF️‍]+/, '').trim();
 
-// "T2_M2b_wire_third_led_he.dc.html" -> {tier:2, num:2, sub:1}
+// "T2_M2b_wire_third_led_he.dc.html" -> {tier:2, num:2, sub:2}
+// sub: '' = the milestone card itself, 'a' = 1, 'b' = 2 (optional branch cards)
 function parseName(file) {
-  const m = file.match(/^(?:P(\d)_)?T(\d)_M(\d+)(b?)_/);
+  const m = file.match(/^(?:P(\d)_)?T(\d)_M(\d+)([ab]?)_/);
   if (!m) return null;
-  return { tier: Number(m[2]), num: Number(m[3]), sub: m[4] ? 1 : 0 };
+  return { tier: Number(m[2]), num: Number(m[3]), sub: m[4] ? m[4].charCodeAt(0) - 96 : 0 };
 }
 
 function cardMeta(dir, file) {
@@ -59,7 +69,7 @@ function cardMeta(dir, file) {
   const p = parseName(file);
   let label;
   if (step) label = 'שלב ' + step[1];
-  else if (p && p.sub) label = 'שלב ' + p.num + 'b';
+  else if (p && p.sub) label = 'שלב ' + p.num + String.fromCharCode(96 + p.sub);
   else label = '';
   return { title, label };
 }
@@ -88,19 +98,26 @@ function buildProject(dir) {
       labels[file] = cardMeta(dir, file);
     });
 
-    // Rewire the two branch points around their optional wiring card.
+    // Rewire the branch points around their optional wiring card(s). The
+    // option cards are ALTERNATIVES, not a sequence: each one's prev is the
+    // branch card and its next is the card after the whole branch block.
     for (const [branchFile, cfg] of Object.entries(BRANCHES)) {
       const bi = chain.indexOf(branchFile);
       if (bi === -1) continue;
-      const branchCard = chain[bi + 1];              // the ...M2b... card
-      const afterBranch = chain[bi + 2];             // the ...M3... card
-      if (!branchCard || !afterBranch) continue;
+      const subCards = [];
+      for (let j = bi + 1; j < chain.length && parseName(chain[j]).sub > 0; j++) subCards.push(chain[j]);
+      const afterBranch = chain[bi + 1 + subCards.length];
+      if (!subCards.length || !afterBranch) continue;
+      const firstSub = subCards[0];
       const m = {};
-      for (const opt of cfg.optionsSkippingBranch) m[opt] = afterBranch;
-      nav[branchFile].next = { k: cfg.key, m, d: branchCard };
       const pm = {};
-      for (const opt of cfg.optionsSkippingBranch) pm[opt] = branchFile;
-      nav[afterBranch].prev = { k: cfg.key, m: pm, d: branchCard };
+      for (const [opt, target] of Object.entries(cfg.options)) {
+        m[opt] = target || afterBranch;
+        pm[opt] = target || branchFile;
+      }
+      nav[branchFile].next = { k: cfg.key, m, d: firstSub };
+      nav[afterBranch].prev = { k: cfg.key, m: pm, d: firstSub };
+      for (const sub of subCards) nav[sub] = { prev: branchFile, next: afterBranch };
     }
   }
   return { nav, labels, files };

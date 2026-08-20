@@ -127,9 +127,9 @@ Students progress through projects in the order shown below, but the sequence is
 | 1 | **Light Signals** | Arduino Uno + LEDs + button | Breadboarding, digital I/O, first upload, Claude Code intro | 1–2 |
 | 2 | **Reaction-Time Game** | Arduino + LEDs + buzzer + buttons | `millis()` timing, game logic | 2 |
 | 3 | **Don't Get Too Close** | Arduino + ultrasonic sensor | Sensor reading, threshold logic | 2 |
-| 4 | **Line-Following Car** | Car chassis + IR sensors + motors | **First soldering**, motor control, proportional correction | 3 |
-| 5 | **Remote-Controlled Car** | Car chassis + Bluetooth/IR receiver | External input, state machines | 3–4 |
-| 6 | **ESP32 Wi-Fi Controller** | ESP32 + I2C sensor + web UI | ESP32 transition, Wi-Fi, I2C, web hosting | 4 |
+| 4 | **Line-Following Car** | Hand-built polygal chassis (1:1 printed template) + 4 motors + IR sensors + 2×18650 | **First soldering**, chassis fabrication, motor control, proportional correction | 3 |
+| 5 | **Remote-Controlled Car** | Project 4's chassis + ESP32 replacing the Uno + phone-browser driving page | **First ESP32**, Wi-Fi web control, external input, state machines | 3–4 |
+| 6 | **ESP32 Wi-Fi Controller** | ESP32 + I2C sensor + web UI | I2C, sensing and serving live data | 4 |
 | 7 | **Camera Explorer** | ESP32-CAM + car chassis + motors | Integration capstone (ground): streaming + control | 5–6 |
 | 8 | **Tiny Quadcopter** | Custom ESP32 drone (8.5×20mm motors) | **Apex capstone**: soldering, IMU, PID, flight safety | 6–8 |
 

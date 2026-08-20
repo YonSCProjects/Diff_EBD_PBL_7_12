@@ -22,9 +22,9 @@ const { resolveCardFile, renderCardPdf, snapshotCardHtml, DC_FONTS_LINK, scopeCs
 // `node build_cards_only.js he` invocation still builds Project 1.
 const args = process.argv.slice(2);
 const lang = args.find((a) => ['en', 'he'].includes(a));
-const projectKey = args.find((a) => ['1', '2', '3', '4', '5'].includes(a)) || '1';
+const projectKey = args.find((a) => ['1', '2', '3', '4', '5', '7'].includes(a)) || '1';
 if (!lang) {
-  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3|4|5]');
+  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3|4|5|7]');
   process.exit(1);
 }
 
@@ -65,6 +65,12 @@ const PROJECTS = {
     outBase: 'Project_5_Cards',
     titleHe: 'פרויקט 5 — מכונית נשלטת מרחוק: חוברת כרטיסיות (משימה)',
     titleEn: 'Project 5 — Remote-Controlled Car: Cards Bundle (Task)',
+  },
+  '7': {
+    dir: 'Project_7_Camera_Explorer',
+    outBase: 'Project_7_Cards',
+    titleHe: 'פרויקט 7 — סייר עם מצלמה: חוברת כרטיסיות (משימה)',
+    titleEn: 'Project 7 — Camera-Equipped Explorer: Cards Bundle (Task)',
   },
 };
 
@@ -174,6 +180,25 @@ const CARD_STEMS = {
     'T:T2_M4_page_design',
     'T:T2_M5_layout_with_claude',
     'T:T2_M6_signature_drive',
+    'T:T3_project_planner',
+  ],
+  '7': [
+    'T:T1_M1_meet_the_cam',
+    'T:T1_M2_upload_camera_sketch',
+    'T:T1_M3_first_stream',
+    'T:T1_M4_mount_camera',
+    'T:T1_M5_power_rail',
+    'T:T1_M6_wire_motors',
+    'T:T1_M7_drive_from_page',
+    'T:T1_M8_drive_by_video',
+    'T:T1_M9_exploration_celebrate',
+    'T:T2_M1_startup',
+    'T:T2_M2_explorer_identity',
+    'T:T2_M3_speed_profile',
+    'T:T2_M4_page_design',
+    'T:T2_M5_interface_with_claude',
+    'T:T2_M6_design_mission',
+    'T:T2_M7_signature_exploration',
     'T:T3_project_planner',
   ],
 };

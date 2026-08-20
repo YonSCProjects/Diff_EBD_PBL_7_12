@@ -48,7 +48,7 @@
       <!-- STEP 1: PLAN -->
       <div style="display:flex; align-items:center; gap:12px; margin:0 0 12px;">
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📝</span>
-        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 1 — מתכננים (PLAN)</h2>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 1 — מתכננים</h2>
       </div>
 
       <p style="margin:0 0 12px; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260);">איזו אזעקה בונים? מקיפים אחת:</p>
@@ -99,83 +99,59 @@
 
       <div style="background:oklch(0.97 0.025 285); border:1px solid oklch(0.9 0.04 285); border-radius:14px; padding:16px 18px; margin-bottom:30px;">
         <div style="font-weight:700; font-size:15.5px; color:oklch(0.42 0.1 285); margin-bottom:4px;">רעיון נוסף — אזעקה בשני שלבים (לא חובה)</div>
-        <p style="margin:0; font-size:15px; line-height:1.55; color:oklch(0.42 0.04 285);">אפשר להוסיף לד צהוב <strong>"מתקרב"</strong> על <strong>חיבור דיגיטלי 10 של הארדואינו</strong>, שמאיר <em>לפני</em> הלד האדום של האזעקה. כך מקבלים שני אזורים: כשמתקרבים — הצהוב מאיר כאזהרה; כשמתקרבים יותר מדי — האדום והזמזם מגיבים. מציירים את שני האזורים על נייר לפני שבונים.</p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:oklch(0.42 0.04 285);">אפשר להוסיף לד צהוב <strong>"מתקרב"</strong>, שמאיר <em>לפני</em> הלד האדום של האזעקה. כך מקבלים שני אזורים: כשמתקרבים — הצהוב מאיר כאזהרה; כשמתקרבים יותר מדי — האדום והזמזם מגיבים. מבקשים מקלוד קוד לתכנן את זה בשלב 2.</p>
       </div>
 
       <!-- STEP 2: BUILD -->
       <div style="display:flex; align-items:center; gap:12px; margin:0 0 12px;">
-        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
-        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 2 — בונים (BUILD)</h2>
-      </div>
-
-      <p style="margin:0 0 10px; font-size:15.5px; font-weight:700; line-height:1.55; color:oklch(0.34 0.012 260);">מציירים את החיווט על נייר, אחר כך מחווטים אותו על הברדבורד.</p>
-      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">מחווטים את אזעקת הקרבה המלאה שכבר מכירים: חיישן המרחק (VCC ל-5V, GND ל-GND, Trig לחיבור דיגיטלי 12 של הארדואינו, Echo לחיבור דיגיטלי 11), הלד על <strong>חיבור דיגיטלי 9</strong> דרך נגד 220Ω (פסים: <strong>אדום · אדום · חום</strong>) והזמזם על <strong>חיבור דיגיטלי 8</strong>. רגלי החיישן ורגלי הלד נכנסות ל<strong>טורים</strong> שונים. אפשר להיעזר במעגל 4 שבכרטיסיית החיווט <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R1</span> (<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">w_p3_04_two_stage</code>).</p>
-
-      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.1 35); border-radius:16px; padding:16px 20px; margin-bottom:20px;">
-        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
-        <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.42 0.07 32);"><strong style="color:oklch(0.48 0.13 32);">רק אם בחרתם אזעקה בשני שלבים:</strong> מוסיפים לד צהוב שני על <strong>חיבור דיגיטלי 10 של הארדואינו</strong>, עם נגד 220Ω משלו — בדיוק כמו הלד האדום, רק על חיבור דיגיטלי 10. אם דילגתם על אזעקה בשני שלבים — מתעלמים מהשורה הזו ומהלד הצהוב בתרשים.</p>
-      </div>
-
-      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:14px;">
-        <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
-          <span style="font-size:13px;">🔌</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">HC-SR04 + LED + Buzzer → Arduino</span>
-        </div>
-        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.7 0.01 260);">HC-SR04            Arduino</span>
-  VCC  ───────────  5V
-  Trig ───────────  pin 12
-  Echo ───────────  pin 11
-  GND  ───────────  GND
-
-LED (red, alarm)   pin 9  (via 220Ω) , GND
-<span style="color:oklch(0.82 0.13 90);">LED (yellow, warn) pin 10 (via 220Ω) , GND   ← two-stage only</span>
-Buzzer             pin 8 , GND</pre>
-      </div>
-
-      <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85); margin-bottom:20px;">
-        <div dir="ltr" style="padding:22px 18px 14px; display:flex; justify-content:center;">
-          <img src="./assets/w_p3_04_two_stage_breadboard.svg" alt="תרשים ברדבורד: אזעקה בשני שלבים — חיישן HC-SR04, לד אזעקה על חיבור דיגיטלי 9 של הארדואינו, לד אזהרה שני על חיבור דיגיטלי 10 (כל אחד דרך נגד 220Ω משלו) וזמזם על חיבור דיגיטלי 8 ל-GND." style="width:600px; max-width:100%; height:auto;" />
-        </div>
-        <div style="padding:11px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13px; line-height:1.6; color:oklch(0.5 0.012 260); text-align:center;"><strong>אזעקה בשני שלבים:</strong> החיישן כרגיל; <strong>לד אזעקה</strong> על חיבור דיגיטלי <strong>9</strong> של הארדואינו ו<strong>לד אזהרה</strong> על חיבור דיגיטלי <strong>10</strong> — כל אחד דרך נגד 220Ω משלו; <strong>זמזם</strong> על חיבור דיגיטלי <strong>8</strong>.</div>
-      </div>
-
-      <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px; margin-bottom:30px;">
-        <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-        <p style="margin:0; font-size:15.5px; line-height:1.55; padding-top:3px;">מצלמים תמונה של החיווט הגמור.</p>
-      </div>
-
-      <!-- STEP 3: CODE -->
-      <div style="display:flex; align-items:center; gap:12px; margin:0 0 12px;">
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.95 0.05 285); color:oklch(0.5 0.13 285); font-size:16px;">💻</span>
-        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 3 — קוד (CODE)</h2>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 2 — מתכננים עם קלוד קוד</h2>
       </div>
 
-      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">מבקשים מקלוד קוד לתכנת - מתארים מה בונים וקלוד עוזר לכתוב. משפרים יחד עם קלוד קוד עד שזה עובד. <strong>משתמשים במה שכתבתם בשלב 1 כדי לתאר לקלוד קוד מה רוצים.</strong></p>
+      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">מבקשים מקלוד קוד לתכנן את הפרויקט - קלוד קוד מציע כמה פתרונות, בודק איתכם אילו רכיבים יש בסדנה, מצייר שרטוט ברור של החיווט וכותב את הקוד. בוחרים את הפתרון שמתאים לחזון שלכם. <strong>משתמשים במה שכתבתם בשלב 1 כדי לתאר לקלוד קוד מה רוצים.</strong></p>
 
       <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
         <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
-          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.4 0.06 285); margin-bottom:5px;">הפנייה הראשונה לקלוד קוד (מנסחים אותה כאן לפני ששולחים)</label>
-          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">מתארים מה רוצים שהאזעקה תעשה ומה הסף. <strong>דוגמה לרעיון מתקדם</strong>: <strong>אזעקת מגירה שמצפצפת רק כשהמגירה נפתחת ולא כל הזמן שמשהו קרוב.</strong> לדוגמה: "אני בונה אזעקת מגירה עם חיישן מרחק, לד וזמזם — החיווט כבר מוכן. החיישן בתוך המגירה ואני רוצה שהזמזם יצפצף רק ברגע שהמגירה נפתחת — כלומר ברגע שהמרחק קופץ מקרוב לרחוק — ולא כל הזמן שמשהו קרוב לחיישן. תכנן איתי את הקוד תוך כדי שיחה כדי לוודא שאני מבין כל שלב ואז כתוב אותו". אזעקה בשני שלבים (הלד הצהוב מהשלב הקודם) היא רעיון מתקדם נוסף שאפשר לבקש מקלוד קוד לתכנת — הקוד בלבד, החיווט כבר מתואר למעלה.</p>
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.4 0.06 285); margin-bottom:5px;">הפנייה הראשונה לקלוד קוד <span style="font-weight:500; color:oklch(0.58 0.012 260);">(מנסחים אותה כאן לפני ששולחים)</span></label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">מתארים מה רוצים שהאזעקה תעשה ומה הסף. <strong>דוגמה לרעיון מתקדם</strong>: <strong>אזעקת מגירה שמצפצפת רק כשהמגירה נפתחת ולא כל הזמן שמשהו קרוב.</strong> לדוגמה: "אני בונה אזעקת מגירה עם חיישן מרחק, לד וזמזם. החיישן בתוך המגירה ואני רוצה שהזמזם יצפצף רק ברגע שהמגירה נפתחת — כלומר ברגע שהמרחק קופץ מקרוב לרחוק — ולא כל הזמן שמשהו קרוב לחיישן. תכנן את הפרויקט תוך כדי שיחה איתי כדי לוודא שאני מבין ושיש לנו בסדנה את הרכיבים בהם אתה מציע להשתמש. הצע לי כמה פתרונות שונים ושאל אותי איזה מהם מתאים לי. אחרי שנחליט על הרכיבים צור שרטוט ברור של החיווט וכתוב את הקוד". הדוגמה מראה את המבנה — מתאימים אותה לאזעקה שבחרתם ולמה שכתבתם בשלב 1. אזעקה בשני שלבים (הרעיון משלב 1) אפשר לבקש מקלוד קוד לתכנן באותה שיחה.</p>
           <textarea value="{{ f4 }}" onInput="{{ on4 }}" rows="3" placeholder="כותבים כאן את הפנייה…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
         </div>
 
         <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
           <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.4 0.06 285); margin-bottom:5px;">אחרי שקלוד קוד עזר — אפשר לומר במשפט אחד מה הקוד עושה?</label>
-          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">מעלים את הקוד לארדואינו ובודקים. אם זה לא עובד כמו שרצינו, חוזרים לקלוד קוד עם (א), (ב) ו-(ג) חדשים.</p>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">קוראים את הקוד שקלוד קוד כתב. אם משהו לא ברור — שואלים אותו.</p>
           <textarea value="{{ f5 }}" onInput="{{ on5 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+      </div>
+
+      <!-- STEP 3: build -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 3 — בונים</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:15.5px; line-height:1.55; padding-top:3px;">מחווטים על הברדבורד לפי השרטוט שקלוד קוד יצר.</p>
+        </div>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <p style="margin:0; font-size:15.5px; line-height:1.55; padding-top:3px;">מצלמים תמונה של החיווט הגמור.</p>
         </div>
       </div>
 
       <!-- STEP 4: TEST -->
       <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔍</span>
-        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 4 — בודקים (TEST)</h2>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 4 — בודקים</h2>
       </div>
 
       <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
         <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
           <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">האזעקה עושה את העבודה שתכננתם? בודקים אותה במקום האמיתי.</label>
-          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">מנסים את האזעקה בדיוק במקום שהיא אמורה לשמור עליו — פותחים את המגירה האמיתית, עומדים בפתח האמיתי, מקרבים יד לקערה. אם משהו שונה ממה שתכננתם, כותבים מה, חוזרים לקלוד קוד ומשפרים. התוכנית יכולה להשתנות תוך כדי — זה בסדר גמור.</p>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">מעלים את הקוד לארדואינו ומנסים את האזעקה בדיוק במקום שהיא אמורה לשמור עליו — פותחים את המגירה האמיתית, עומדים בפתח האמיתי, מקרבים יד לקערה. אם משהו שונה ממה שתכננתם, כותבים מה, חוזרים לקלוד קוד עם (א)(ב)(ג) חדשים ומשפרים. התוכנית יכולה להשתנות תוך כדי — זה בסדר גמור.</p>
           <textarea value="{{ f6 }}" onInput="{{ on6 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
         </div>
 
@@ -189,7 +165,7 @@ Buzzer             pin 8 , GND</pre>
       <!-- STEP 5: SHOW -->
       <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.96 0.06 90); color:oklch(0.5 0.12 75); font-size:16px;">🎬</span>
-        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 5 — מראים (SHOW)</h2>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 5 — מראים</h2>
       </div>
 
       <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:28px;">

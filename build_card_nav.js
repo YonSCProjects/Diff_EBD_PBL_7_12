@@ -21,6 +21,7 @@ const PROJECTS = [
   'Project_2_Reaction_Time_Game',
   'Project_3_Dont_Get_Too_Close',
   'Project_4_Line_Following_Car',
+  'Project_5_Remote_Controlled_Car',
 ];
 
 // Branch points: a card whose NEXT depends on the pattern/mode the student

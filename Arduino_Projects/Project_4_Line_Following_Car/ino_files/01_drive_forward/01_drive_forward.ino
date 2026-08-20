@@ -20,14 +20,19 @@
 
 
 // ---- PIN NUMBERS (L298N driver: six pins in a row, D5-D10) ----
-const int ENB = 5;   // right motor speed (PWM)
-const int IN4 = 6;   // right motor direction
-const int IN3 = 7;   // right motor direction
-const int IN2 = 8;   // left motor direction
-const int IN1 = 9;   // left motor direction
-const int ENA = 10;  // left motor speed (PWM)
+// Note: each "motor" below is really a PAIR of motors wired in
+// parallel on the same L298N channel - the code treats each pair
+// as one motor, so nothing else changes.
+const int ENB = 5;   // right motor pair speed (PWM)
+const int IN4 = 6;   // right motor pair direction
+const int IN3 = 7;   // right motor pair direction
+const int IN2 = 8;   // left motor pair direction
+const int IN1 = 9;   // left motor pair direction
+const int ENA = 10;  // left motor pair speed (PWM)
 
-// ---- SPEED (0 = stopped, 255 = fastest) ----
+// ---- SPEED (0 = stopped, 200 = fastest allowed) ----
+// Keep speeds at 200 or below: a freshly charged 8.4V battery
+// pack would over-volt the 3-6V motors at full (255) duty.
 const int DRIVE_SPEED = 150;  // medium speed for the first test
 
 

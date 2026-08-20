@@ -7,8 +7,10 @@
 // marked at the top. Change only the numbers in the "THINGS YOU
 // CAN CHANGE" box - you do not have to touch anything below it.
 //
-//   BASE_SPEED  - how fast the car drives (0-255).
+//   BASE_SPEED  - how fast the car drives (0-200).
 //                 Slow ~110, medium ~140, fast ~180.
+//                 200 is the MAX - a freshly charged 8.4V battery
+//                 pack would over-volt the 3-6V motors above that.
 //   CORRECTION  - how strongly the car steers back to the line.
 //                 Gentle ~60, strong ~110.
 //                 (CORRECTION must stay SMALLER than BASE_SPEED.)
@@ -22,19 +24,22 @@
 
 
 // ====== THINGS YOU CAN CHANGE (this is your design) ======
-const int  BASE_SPEED   = 140;   // driving speed (0-255): slow 110 / medium 140 / fast 180
+const int  BASE_SPEED   = 140;   // driving speed (0-200 MAX): slow 110 / medium 140 / fast 180
 const int  CORRECTION   = 90;    // steering strength: gentle 60 / strong 110
 const bool LINE_IS_HIGH = true;  // flip only if the car steers away from the line
 // =========================================================
 
 
 // ---- PIN NUMBERS (you do not need to change these) ----
-const int ENB = 5;   // right motor speed (PWM)
-const int IN4 = 6;   // right motor direction
-const int IN3 = 7;   // right motor direction
-const int IN2 = 8;   // left motor direction
-const int IN1 = 9;   // left motor direction
-const int ENA = 10;  // left motor speed (PWM)
+// Note: each "motor" below is really a PAIR of motors wired in
+// parallel on the same L298N channel - the code treats each pair
+// as one motor, so nothing else changes.
+const int ENB = 5;   // right motor pair speed (PWM)
+const int IN4 = 6;   // right motor pair direction
+const int IN3 = 7;   // right motor pair direction
+const int IN2 = 8;   // left motor pair direction
+const int IN1 = 9;   // left motor pair direction
+const int ENA = 10;  // left motor pair speed (PWM)
 
 const int SENSOR_LEFT  = 11;  // left IR sensor OUT
 const int SENSOR_RIGHT = 12;  // right IR sensor OUT

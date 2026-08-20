@@ -58,7 +58,7 @@
       <!-- A: alternating -->
       <div onClick="{{ pickA }}" style="cursor:pointer; border:2px solid {{ borderA }}; background:{{ bgA }}; border-radius:16px; padding:18px 20px; margin-bottom:14px;">
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
-          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagA }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">א</span>
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagA }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">א׳</span>
           <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">לסירוגין <span style="font-weight:500; color:oklch(0.55 0.012 260); font-size:14px;">(2 לדים)</span></h3>
           <sc-if value="{{ selA }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
@@ -73,7 +73,7 @@
       <!-- B: chasing -->
       <div onClick="{{ pickB }}" style="cursor:pointer; border:2px solid {{ borderB }}; background:{{ bgB }}; border-radius:16px; padding:18px 20px; margin-bottom:14px;">
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
-          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagB }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ב</span>
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagB }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ב׳</span>
           <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">רדיפה <span style="font-weight:500; color:oklch(0.55 0.012 260); font-size:14px;">(3 לדים)</span></h3>
           <sc-if value="{{ selB }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
@@ -88,7 +88,7 @@
       <!-- C: breathing -->
       <div onClick="{{ pickC }}" style="cursor:pointer; border:2px solid {{ borderC }}; background:{{ bgC }}; border-radius:16px; padding:18px 20px; margin-bottom:20px;">
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
-          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagC }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ג</span>
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagC }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ג׳</span>
           <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">נשימה <span style="font-weight:500; color:oklch(0.55 0.012 260); font-size:14px;">(לד אחד, עמעום PWM)</span></h3>
           <sc-if value="{{ selC }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
@@ -121,12 +121,12 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בוחרים תבנית למעלה (א, ב, או ג) — הבחירה נשמרת.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בוחרים תבנית למעלה (א׳, ב׳, או ג׳) — הבחירה נשמרת.</p>
         </div>
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחווטים כל לד נוסף שהתבנית דורשת, לפי האיור שבאפשרות שבחרתם (א: עוד לד, לפי כרטיסיית 2a · ב: עוד שניים, לפי כרטיסיית 2b · ג: בלי חיווט חדש).</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחווטים כל לד נוסף שהתבנית דורשת, לפי האיור שבאפשרות שבחרתם (א׳: עוד לד, לפי כרטיסיית 2a · ב׳: עוד שניים, לפי כרטיסיית 2b · ג׳: בלי חיווט חדש).</p>
         </div>
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
@@ -139,7 +139,7 @@
         <span style="flex:none; font-size:22px; line-height:1;">👀</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה אמורים לראות</div>
-          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">התבנית שבחרתם רצה על הברדבורד. א: שני לדים לסירוגין · ב: שלושה לדים ברדיפה · ג: לד אחד בנשימה.</p>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">התבנית שבחרתם רצה על הברדבורד. א׳: שני לדים לסירוגין · ב׳: שלושה לדים ברדיפה · ג׳: לד אחד בנשימה.</p>
           <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">מסתכלים כמה שניות — בשלב הבא משנים אותה: מהירה יותר, איטית יותר, או שונה.</p>
         </div>
       </div>
@@ -149,7 +149,7 @@
           <span style="font-size:20px;">✅</span>סיימנו כש…
         </div>
         <div style="display:flex; flex-direction:column; gap:9px;">
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בחרתם תבנית (א, ב, או ג)</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בחרתם תבנית (א׳, ב׳, או ג׳)</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>החומרה מחווטת לתבנית שבחרתם</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הקוד ההתחלתי הועלה ורץ</span></div>
         </div>
@@ -160,8 +160,8 @@
         <div style="font-size:15.5px; line-height:1.55; flex:1;">
           <strong style="color:oklch(0.45 0.12 300);">תקועים? התבנית לא רצה?</strong>
           <div style="display:flex; flex-direction:column; gap:8px; margin-top:9px;">
-            <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>רדיפה (ב)</strong> צריכה שלושה לדים, לא שניים.</span></div>
-            <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>נשימה (ג)</strong> משתמשת ב-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">analogWrite</code> (שונה מ-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">digitalWrite</code>).</span></div>
+            <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>רדיפה (ב׳)</strong> צריכה שלושה לדים, לא שניים.</span></div>
+            <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>נשימה (ג׳)</strong> משתמשת ב-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">analogWrite</code> (שונה מ-<code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">digitalWrite</code>).</span></div>
             <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>הלד נשאר בבהירות מלאה? ייתכן שהקוד לא הועלה.</span></div>
             <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>מבקשים עזרה מהמורה.</span></div>
           </div>
@@ -230,7 +230,7 @@ class Component extends DCLogic {
       v.nextBg = 'oklch(0.985 0.004 85)'; v.nextBorder = 'oklch(0.92 0.006 85)';
       v.nextText = 'oklch(0.5 0.012 260)'; v.nextBody = 'oklch(0.55 0.012 260)';
       v.nextTitle = 'לאן ממשיכים?';
-      v.nextMsg = 'בוחרים תבנית למעלה כדי לראות לאן להמשיך. לסירוגין (א) ← שלב 2a · רדיפה (ב) ← שלב 2b · נשימה (ג) ← ישר לשלב 3.';
+      v.nextMsg = 'בוחרים תבנית למעלה כדי לראות לאן להמשיך. לסירוגין (א׳) ← שלב 2a · רדיפה (ב׳) ← שלב 2b · נשימה (ג׳) ← ישר לשלב 3.';
     }
     for (let i = 1; i <= 14; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
     return v;

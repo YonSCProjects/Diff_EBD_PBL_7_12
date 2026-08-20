@@ -58,7 +58,7 @@
       <!-- OPTION A -->
       <div onClick="{{ pickA }}" style="cursor:pointer; border:2px solid {{ borderA }}; background:{{ bgA }}; border-radius:16px; padding:18px 20px; margin-bottom:14px; transition:border-color .15s;">
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
-          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagA }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">א</span>
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagA }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">א׳</span>
           <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">שלושה לדים (מהיר / בינוני / איטי)</h3>
           <sc-if value="{{ selA }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
@@ -70,7 +70,7 @@
       <!-- OPTION B -->
       <div onClick="{{ pickB }}" style="cursor:pointer; border:2px solid {{ borderB }}; background:{{ bgB }}; border-radius:16px; padding:18px 20px; margin-bottom:14px; transition:border-color .15s;">
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
-          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagB }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ב</span>
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagB }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ב׳</span>
           <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">תבנית זמזם</h3>
           <sc-if value="{{ selB }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
@@ -82,7 +82,7 @@
       <!-- OPTION C -->
       <div onClick="{{ pickC }}" style="cursor:pointer; border:2px solid {{ borderC }}; background:{{ bgC }}; border-radius:16px; padding:18px 20px; margin-bottom:20px; transition:border-color .15s;">
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
-          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagC }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ג</span>
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagC }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ג׳</span>
           <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">קריאה עשירה בצג הטורי</h3>
           <sc-if value="{{ selC }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
         </div>
@@ -103,7 +103,7 @@
         <span style="flex:none; font-size:22px; line-height:1;">👀</span>
         <div>
           <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
-          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">בחרתם בבירור מצב משוב — א, ב, או ג — והוא מסומן למעלה. אתם יודעים לאיזו כרטיסייה ממשיכים.</p>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">בחרתם בבירור מצב משוב — א׳, ב׳, או ג׳ — והוא מסומן למעלה. אתם יודעים לאיזו כרטיסייה ממשיכים.</p>
           <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">עדיין לא משנים קוד ולא מעלים כלום — בשלב הזה רק מחליטים.</p>
         </div>
       </div>
@@ -113,14 +113,14 @@
           <span style="font-size:20px;">✅</span>סיימתם כש…
         </div>
         <div style="display:flex; flex-direction:column; gap:9px;">
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בחרתם מצב משוב (א, ב, או ג)</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>אתם יודעים לאן ממשיכים: מצב א ← שלב 2b, מצב ב או ג ← שלב 3</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בחרתם מצב משוב (א׳, ב׳, או ג׳)</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>אתם יודעים לאן ממשיכים: מצב א׳ ← שלב 2b, מצב ב׳ או ג׳ ← שלב 3</span></div>
         </div>
       </div>
 
       <div style="display:flex; align-items:flex-start; gap:14px; background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
         <span style="flex:none; font-size:22px;">🪄</span>
-        <div style="font-size:15.5px; line-height:1.55;"><strong style="color:oklch(0.45 0.12 300);">תקועים?</strong> &nbsp;אין בחירה "לא נכונה" — כולן עובדות. אוהבים אורות? מצב א. אוהבים צלילים? מצב ב. אוהבים מילים ומספרים? מצב ג. עדיין מתלבטים — קוראים למורה ובוחרים יחד.</div>
+        <div style="font-size:15.5px; line-height:1.55;"><strong style="color:oklch(0.45 0.12 300);">תקועים?</strong> &nbsp;אין בחירה "לא נכונה" — כולן עובדות. אוהבים אורות? מצב א׳. אוהבים צלילים? מצב ב׳. אוהבים מילים ומספרים? מצב ג׳. עדיין מתלבטים — קוראים למורה ובוחרים יחד.</div>
       </div>
 
     </div>
@@ -162,7 +162,7 @@ class Component extends DCLogic {
       v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
       v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
       v.nextTitle = 'הכרטיסייה הבאה: שלב 2b';
-      v.nextMsg = 'בחרתם מצב א (שלושה לדים) — ממשיכים אל שלב 2b, שבו מחווטים שני לדים נוספים (חיבור דיגיטלי 10 של הארדואינו וחיבור דיגיטלי 11).';
+      v.nextMsg = 'בחרתם מצב א׳ (שלושה לדים) — ממשיכים אל שלב 2b, שבו מחווטים שני לדים נוספים (חיבור דיגיטלי 10 של הארדואינו וחיבור דיגיטלי 11).';
     } else if (sel === 'B' || sel === 'C') {
       v.nextBg = 'oklch(0.96 0.04 248)'; v.nextBorder = 'oklch(0.86 0.06 248)';
       v.nextText = 'oklch(0.42 0.11 248)'; v.nextBody = 'oklch(0.4 0.06 248)';
@@ -172,7 +172,7 @@ class Component extends DCLogic {
       v.nextBg = 'oklch(0.985 0.004 85)'; v.nextBorder = 'oklch(0.92 0.006 85)';
       v.nextText = 'oklch(0.5 0.012 260)'; v.nextBody = 'oklch(0.55 0.012 260)';
       v.nextTitle = 'לאן ממשיכים?';
-      v.nextMsg = 'בוחרים מצב למעלה כדי לראות לאיזו כרטיסייה להמשיך. מצב א ← שלב 2b (חיווט נוסף) · מצב ב או ג ← ישר לשלב 3.';
+      v.nextMsg = 'בוחרים מצב למעלה כדי לראות לאיזו כרטיסייה להמשיך. מצב א׳ ← שלב 2b (חיווט נוסף) · מצב ב׳ או ג׳ ← ישר לשלב 3.';
     }
     return v;
   }

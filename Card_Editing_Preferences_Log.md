@@ -49,6 +49,14 @@ soldering-safety "קוראים למורה" line — locked motifs, NEVER trimmed
   4th instance; note the conditional framing "אם נתקעים" replacing the reassurance)
 - `קוראים למורה — מעבר לקצב הזה הוא רגע שבו עדיף לא להיאבק לבד.` → `קוראים למורה.`
   (P1 T2_M1, feedback 2026-08-04_1442 — 5th instance)
+- `מציירים את החיווט על נייר… אפילו ציור גס עוזר.` → the tail `אפילו ציור גס עוזר.` dropped
+  (P1 T3 planner, feedback 2026-08-19_2131 — 6th instance, reassurance tail in a step)
+- Planner stuck box: `המתכנן פתוח — וזו המטרה. … השיחה כאן היא שיחת עיצוב — מספרים מה מנסים לבנות
+  ומה לא עובד.` trimmed away (P1 T3, feedback 2026-08-20_0806, absorbed into the b5dc6dd rewrite —
+  7th instance, meta-framing about the card itself)
+- `להיות תקועים זה חלק מהפרויקט משלכם.` dropped from the same box one round later (feedback
+  2026-08-20_1255 — 8th instance). The informational tail `משתמשים בקלוד קוד כדי לחשוב על הבעיה
+  וקוראים למורה כשמרגישים שהולכים במעגלים` was kept — consistent with the sharpened scope.
 
 **Status:** CONFIRMED · **Sweep executed 2026-08-04:** all 13 `קוראים למורה לעזרה.` → `קוראים למורה.`
 across 13 cards (P1 T1_M2/M3/M6/M8; P3 T1_M2/M3/M4/M5, T2_M3; P4 T1_M5/M6/M7, T2_M3). Verified after:
@@ -153,6 +161,13 @@ inlines it automatically (`inlineImages`).
 **Sweep record:** 2026-08-03 — removed from all 34 dc task cards that carried it (21 never had it). Two content-bearing near-variants kept pending his call: "השלב (הזה) מאחד כמה צעדים. עוברים אחד-אחד; אפשר לסמן ✓ לכל שלב." (P1×2 merged-step cards).
 **Status:** CONFIRMED. New cards (P5–P8) must not include the line.
 
+**T3a — no helper line that restates its own field label (2026-08-20).** Yon deleted the planner
+helper `קוראים את הקוד שקלוד קוד כתב. אם משהו לא ברור — שואלים אותו.` sitting under the label
+"אחרי שקלוד קוד עזר — אפשר לומר במשפט אחד מה הקוד עושה?" — the helper only restated what the label
+implies. Removed from all four planners (verbatim-identical mirror sync, commit 4a21571); 0 remain.
+A field whose label is self-explanatory carries no helper line. **Status:** FIRM (1 explicit
+deletion, applied program-wide).
+
 ### W2 — Expected-boxes and figure captions state the observation, not the explanation
 **Rule:** "מה רואים אם הכול תקין" and figure captions give the shortest observable fact ("הלד הירוק הקטן L ליד רגל 13 מהבהב."); background explanations and warm meta-framing are cut even when factually useful. **This governs NEW text being written — it is NOT a license to trim existing reviewed card content** (see sweep evaluation below).
 
@@ -201,8 +216,12 @@ the hard one" before they have read a single step.
   → `לחיצה על הכפתור מחליפה את הלד הדולק.` (P1 T1_M8, feedback 2026-08-04_1435)
 - `הפעלה מרוכזת: פותחים עמדת עבודה, מחווטים לד אחד…` → `פותחים עמדת עבודה, מחווטים לד אחד…`
   (P1 T2_M1, feedback 2026-08-04_1451 — a category label is chrome too)
+- `מעצבים גרסה משלכם מאפס. בוחרים רעיון אמיתי, למשל - …` → `מעצבים גרסה משלכם. בוחרים רעיון,
+  למשל - …` (P1 T3 lede, feedback 2026-08-19_2131 — intensifiers **מאפס** / **אמיתי** are lede
+  chrome too. Note: `מאפס` deliberately survives in the same card's celebration block — triumph
+  framing is the celebration's job, not the lede's.)
 
-**Evidence:** 3 (3 cards) · **Status:** FIRM. The de-duplication logic (say it where it belongs, once)
+**Evidence:** 4 (4 cards) · **Status:** FIRM. The de-duplication logic (say it where it belongs, once)
 matches T1/T3/W2. Ledes carry the action, nothing else — no difficulty warning, no meta-framing,
 no category label.
 
@@ -364,13 +383,15 @@ tool names rather than CS concepts.
   → `מבקשים מקלוד קוד לתכנת - מתארים מה בונים וקלוד עוזר לכתוב. משפרים יחד עם קלוד קוד עד שזה עובד.`
   (P1 T3, feedback 2026-08-10_1622)
 
-**Evidence:** 1 · **Counterexamples:** 1 surviving — `P2_T3_project_planner`:
-"קלוד קוד במצב דיאלוג חופשי — אין קוד מוכן מראש…" (unreviewed card, weak).
-**Status:** TENTATIVE · **Sweep scope:** the P2 T3 instance, if Yon confirms.
+**Evidence:** 1 · **Counterexamples:** 0 — the surviving P2 instance was eliminated by the
+b5dc6dd T3 rewrite (verified 2026-08-20); no mode-name openers remain anywhere.
+**Status:** FIRM (2026-08-20 — the pattern was eliminated program-wide by the Yon-directed rewrite).
 
-**⚠ Side effect to raise with Yon:** the same rewrite deleted `אותה משמעת של (א)(ב)(ג)` — the last
-place the describe-first protocol was named in the T3 tier. The (א)(ב)(ג) fields still exist on
-T2_M3/T2_M4, but T3's planner no longer names the discipline it inherits.
+**Side effect — RESOLVED 2026-08-20:** the rewrite's deletion of `אותה משמעת של (א)(ב)(ג)` from the
+T3 tier turned out to be Yon's intent, not an accident: he flagged the planners' remaining
+`(א)(ב)(ג)` reference as a leftover ("אנ חושב ש (א)(ב)(ג) כבר לא קיימים") and it was fixed to
+`עם מה שכתבתם` in all four planners. T3 planners do not reference the (א)(ב)(ג) discipline;
+it lives on the T2 cards only. See hazard **H3**.
 
 ### W9 — Point back to what the student already wrote, in bold
 **Rule:** When a step should consume something the student wrote earlier on the card, say so
@@ -396,6 +417,36 @@ The dash alone leaves the list's relationship to the sentence unmarked.
 
 **Evidence:** 1 · **Status:** TENTATIVE (note: Yon typed a hyphen `-`, not an em-dash, after למשל —
 kept verbatim).
+
+### W11 — Branch-outcome lines open with the condition: "אם בחרתם X׳ (שם) ← יעד"
+**Rule:** A line telling the student what to do given a prior choice opens with the explicit
+condition, one branch per sentence — `אם בחרתם ב׳ (רדיפה) ← כרטיסיית 2b. אם בחרתם ג׳ (נשימה) — …` —
+not a telegraphic label-mapping `רדיפה (ב) ← כרטיסיית 2b. נשימה (ג) — …`.
+
+**Why (inferred):** "אם בחרתם" makes the student first recall their own choice, then read only their
+branch; the telegraphic form reads like a table row and invites reading both. Same one-relationship-
+per-row instinct as V5.
+
+**Examples:**
+- `בחרתם לסירוגין (2 לדים) — אין צורך בכרטיסיית חיווט נוספת…` → `אם בחרתם לסירוגין (2 לדים) — …`
+  (P1 T2_M2 next-step message, feedback 2026-08-19_2131)
+- `רדיפה (ב) ← כרטיסיית 2b. נשימה (ג) — החיווט שלכם כבר מוכן…` → `אם בחרתם ב׳ (רדיפה) ← כרטיסיית
+  2b. אם בחרתם ג׳ (נשימה) — …` (P1 T2_M2a skip box, feedback 2026-08-20_1255; synced to the 2b twin)
+
+**Evidence:** 2 explicit edits (2 cards, 2 rounds) + 1 twin sync · **Counterexamples:** 2 weak —
+P2 T2_M2's JS branch messages still open `בחרתם מצב א׳…` (unreviewed card). **Out of scope:**
+done-when items (`בחרתם תבנית (א׳, ב׳, או ג׳)`) — past-tense confirmations, not branch conditions.
+**Status:** TENTATIVE (leaning FIRM) · **Sweep scope:** the 2 P2 JS messages, on approval.
+
+### W12 — Enumeration items name the action fully, no one-word shorthand
+**Rule:** In a lede or summary enumeration, each item is a full noun phrase: `ארגון עמדת העבודה,
+לד ראשון, העלאה ראשונה` — not the clipped `עמדה, לד ראשון…`.
+
+**Example:**
+- `הפעלה ראשונית — עמדה, לד ראשון, העלאה ראשונה` → `הפעלה ראשונית — ארגון עמדת העבודה, לד ראשון,
+  העלאה ראשונה.` (P1 T2_M1, feedback 2026-08-19_2131)
+
+**Evidence:** 1 · **Status:** TENTATIVE.
 
 ---
 
@@ -445,6 +496,40 @@ for the same assumption, since they were authored from the same template.
 **Status:** FIRM · **Authoring check:** when writing card N, re-read card N−1's "מה אמורים לראות"
 and start from exactly that state.
 
+### C3 — Option parity: every branch that requires wiring gets its own wiring card
+**Rule:** If one option at a choice point has a dedicated wiring card, every option that adds
+wiring gets one too. No branch is second-class.
+
+**Why (Yon, explicit):** "אני חושב שכדאי שגם לתבנית א (לסירוגין) תהיה כרטיסיית הוראות כמו שלתבנית
+רדיפה יש את כרטיסייה 2b" (card note, P1 T2_M2, feedback 2026-08-19_2131) → the T2_M2a wiring card
+was built to mirror 2b (commit 97ebe36). Option ג (no new wiring) correctly gets none.
+
+**Status:** CONFIRMED (instructed and implemented) · Authoring check for every P5–P8 choice point.
+
+### C4 — Name a card → link the card
+**Rule:** An in-text reference to another card is a hyperlink to that card's file
+(`<a href="./T2_M2b_…">ההוראות המלאות בכרטיסיית 2b</a>`), never bare text.
+
+**Why (Yon, explicit):** "בוא נהפוך את הטקסט הזה גם ללינק שיביא ישירות לכרטיסייה 2b" (comment,
+P1 T2_M2, feedback 2026-08-19_2131). Applied to the 2a/2b references (commit 97ebe36). Print keeps
+the visible card name, so nothing is lost on paper.
+
+**Status:** CONFIRMED for card-to-card references.
+
+### C5 — Claude-led planning: the student states intent; components are Claude Code's job
+**Rule:** Planner prompts and examples model *describing the wanted behaviour* ("מנורת מצב רוח עם
+לדים, כפתור וארדואינו. הכפתור בוחר את מצב הרוח של הצבע…") and explicitly hand component choice,
+wiring diagram, and code to Claude Code ("תכנן את הפרויקט תוך כדי שיחה איתי… הצע לי כמה פתרונות…
+צור שרטוט ברור של החיווט וכתוב את הקוד"). Never write planner text that expects the student to know
+pins, resistor values, or part names.
+
+**Why (Yon, explicit):** "אני רוצה שהתלמיד יעזר בקלוד קוד גם לשלב תכנון הפרוייקט, בחירת הרכיבים,
+שרטוט הפרוייקט…" and, deleting a component-picking section: "אני לא מצפה מהתלמידים לדעת את זה.
+אני מצפה מהם להצליח לגרום לקלוד קוד לבחור את הרכיבים המתאימים ושנמצאים בסדנה שלנו" (feedback
+2026-08-19_2131). Implemented across all four planners (commits 97ebe36 + b5dc6dd).
+
+**Status:** CONFIRMED — the governing principle of every T3 planner and any future planning scaffold.
+
 ---
 
 ## Category I — Interaction integrity (text vs. the controls the card actually has)
@@ -474,8 +559,8 @@ takes instructions literally, an instruction that cannot be carried out is a dea
 `P4_T1_M4` "מחברים חוט, **מסמנים אותו** מול…" (labelling a real wire) and `P4_T3` "**מסמנים** נקודת
 התחלה ונקודת סיום" (drawing on paper).
 
-**Status:** FIRM · **Sweep scope:** the 2 planner instances above — delete the "מסמנים כאן:" clause,
-keeping the "מצלמים תמונה…" sentence. Needs Yon's approval.
+**Status:** FIRM · **Sweep scope — RESOLVED 2026-08-20:** the b5dc6dd T3 rewrite removed both
+P3/P4 "מסמנים כאן:" instances; 0 remain program-wide. No sweep needed.
 
 **Authoring check:** before shipping a card, every imperative that implies recording state
 (מסמנים / כותבים / בוחרים / מדרגים) must resolve to a real checkbox, choice card, or textarea.
@@ -570,6 +655,28 @@ with an independent auditor per file; final audit: **313** `חיבור דיגי�
 images had the old terminology *baked in* as captions — those strips were cropped off and replaced
 with HTML captions carrying the new wording (m3, m7; m5 was replaced outright, see V1).
 **Status:** CONFIRMED — binding for all new authoring (P5–P8) and any regenerated card.
+
+### X5 — Option/example/section letters carry a geresh: א׳, ב׳, ג׳ — CONFIRMED (swept 2026-08-20)
+**Rule:** Any Hebrew letter naming an option, mode, example, or section part is written with a
+geresh: `אפשרות א׳`, `מצב ב׳`, `חלק ג׳`, the `(א׳)(ב׳)(ג׳)` framework, `בוחרים א׳, ב׳, או ג׳` —
+including the letter badges on choice cards and JS-built `v.nextMsg` messages.
+
+**Why (Yon, explicit, program-wide):** "בכל הכרטיסים בכל הפרוייקטים כשמופיעה אות שמסמלת אפשרות
+מסויימת מוסיפים אפוסטרוף אחרי האות למשל - אפשרות ג', דוגמה ב'" (comment + globalNotes, feedback
+2026-08-20_1255).
+
+**Sweep record:** 2026-08-20 (commit 4a21571 + one gap fix) — **190** insertions across 20 task
+cards: option headers/chips, letter badges, the (א׳)(ב׳)(ג׳) framework on T2 cards, enumerations,
+branch texts, JS messages. Reference cards scanned — no targets. **Not labels, never touched:** the
+preposition ב- (`ב-Arduino IDE`), prefix-ב before a tagged word (`ב<strong>טורים`),
+transliterations (`ג'אמפר`), HTML source comments.
+**Character decision (flag for veto):** Yon typed ASCII `'` in the console; the sweep used the
+typographic **׳ (U+05F3)** to match the pre-existing `חלק א׳` headings in P4 — one mark, one
+function, program-wide.
+**Sweep-gap lesson:** the first pass missed a letter inside a single-quoted JS string
+(`'ב (זמזם)'`) because its boundary set lacked `'`. When card text also lives in JS strings, quote
+characters are word boundaries too. Verified 0 bare labels remain.
+**Status:** CONFIRMED — binding for all new authoring.
 
 ---
 
@@ -669,6 +776,22 @@ passes for exactly this reason (328 text + 20 attributes + 1 placeholder). Sweep
 in a **separate pass** — the visible-text pass must keep masking tag interiors so it can never
 corrupt markup.
 
+### H3 — Removing a named scaffold requires sweeping its references
+The T3 rewrite removed the planners' (א)(ב)(ג) fields but left `חוזרים לקלוד קוד עם (א)(ב)(ג)
+חדשים` dangling in all four planners — a reference students would try to follow to a structure that
+no longer exists. Yon caught it ("אנ חושב ש (א)(ב)(ג) כבר לא קיימים", feedback 2026-08-20_1255);
+fixed to `עם מה שכתבתם` in all four (commit 4a21571). When a rewrite deletes a named structure
+(fields, sections, lettered labels), grep the whole program for the name before shipping.
+(Closes the open item flagged in the 2026-08-10 changelog.)
+
+### H4 — The console export's `file` field can be wrong — locate edits by their text
+The 2026-08-20 round filed three **T2_M2a** edits under `T2_M2_pick_pattern` (whose sourceHash
+matched — the hash tracks the *labeled* file, not the edited one), and filed under P1's planner an
+edit whose beforeText matched no current file at all. Apply procedure: find the real target card by
+exact-matching `beforeText` + context; treat the export's `file` field as a hint only. An edit whose
+beforeText matches nothing anywhere and whose afterText is already present somewhere is a stale
+re-export — the standing unreset-console problem ("איפוס הכל").
+
 ---
 
 ## Resolved conflicts
@@ -683,6 +806,7 @@ and say so, rather than treating it as a style change.
 ## Processed feedback ledger
 | Date learned | Feedback files |
 |---|---|
+| 2026-08-20 | feedback_2026-08-19_1436 · _1438 · _1439 · _1447 · _2130 · _2131 (6 saves; _2131 superset — applied in 97ebe36 + b5dc6dd) · feedback_2026-08-20_0806 (single edit, absorbed pre-apply into b5dc6dd) · _1123 · _1129 · _1130 · _1130_2 · _1249 · _1250 · _1250_2 · _1253 · _1255 (superset — applied in 4a21571; the #38 planner edit inside it was a stale re-export of _0806) |
 | 2026-08-10 | feedback_2026-08-06_1325 · feedback_2026-08-10_1512 · _1544 · _1605 · _1607 · _1620 · _1622 (7 saves; _1544 and _1622 are the supersets. _1512 was subsumed by _1544; **_1605 was a pure stale re-export of _1544** — console cache not reset; _1620 subsumed by _1622) |
 | 2026-08-04 (4th run) | feedback_2026-08-04_1429 · _1435 · _1442 · _1443 · _1446 · _1451 · _1451_2 · _1452 … _1452_9 (16 saves; _1452_9 is the superset) |
 | 2026-08-04 (3rd run) | feedback_2026-08-04_1302 · _1312 · _1322 (_1322 = byte-identical re-save) |
@@ -692,6 +816,22 @@ and say so, rather than treating it as a style change.
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-20 (learn run 6)** — 16 feedback files ingested (the 2026-08-19 round + all of today's).
+  **7 new rules:** **X5** (geresh on option/example/section letters — CONFIRMED, 190 sites swept,
+  incl. a JS-string gap found and fixed after; documents the quote-boundary lesson and the U+05F3
+  character decision), **C3** (option parity — the 2a wiring card was born from it), **C4** (card
+  references are links), **C5** (Claude-led planning: student states intent, components are Claude
+  Code's job — the governing T3 principle, CONFIRMED), **W11** (branch-outcome lines open with
+  "אם בחרתם", TENTATIVE-leaning-FIRM, 2 P2 JS messages as sweep scope), **W12** (full noun phrases
+  in enumerations), **T3a** (no helper line restating its own field label — deleted from all 4
+  planners). **2 new hazards:** **H3** (a rewrite that removes a named scaffold must sweep its
+  references — the (א)(ב)(ג) leftover reached all four planners before Yon caught it) and **H4**
+  (the console export's `file` field can be wrong — locate edits by beforeText; hash follows the
+  label, not the text). **Strengthened:** **T1** +3 planner-trim examples (6th–8th, incl. the
+  two-step תקועים-box trim), **W6** +1 (lede intensifiers מאפס/אמיתי are chrome; celebrations keep
+  the triumph). **Resolved:** **I1**'s pending sweep is moot (the rewrite removed both instances),
+  **W8** → FIRM (counterexample eliminated program-wide) and its (א)(ב)(ג) side-effect closed as
+  intended-by-Yon.
 - **2026-08-10 (learn run 5)** — 7 feedback files ingested. **6 new rules**: **C1** (each choice
   option carries its own target-state Fritzing figure — explicit instruction, FIRM), **C2** (a card
   starts from the state the previous card actually left — caught a build-blocking bug where option-ב

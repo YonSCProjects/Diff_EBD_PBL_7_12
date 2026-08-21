@@ -1,0 +1,195 @@
+{
+  "name": "w_p7_02_power_rails",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "drv",
+      "part": "L298N-DC-motor-driver-improved",
+      "x": 110,
+      "y": -70,
+      "title": "L298N"
+    },
+    {
+      "id": "bat",
+      "part": "8xAA_box",
+      "x": -420,
+      "y": 230,
+      "title": "8 x AA battery box"
+    },
+    {
+      "id": "buck",
+      "part": "Mini560 buck module",
+      "x": 300,
+      "y": 330,
+      "rotation": 180,
+      "title": "Buck 5V"
+    },
+    {
+      "id": "cam",
+      "part": "ESP32-CAM_FRONT-fixed",
+      "x": 420,
+      "y": 200,
+      "title": "ESP32-CAM"
+    },
+    {
+      "id": "cap",
+      "core": "capacitor_electrolytic_small",
+      "x": 385,
+      "y": 150,
+      "title": "470 uF",
+      "properties": {
+        "capacitance": "470µF"
+      }
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "bat.+",
+      "to": "drv.12V",
+      "color": "#cc1414",
+      "width": 36
+    },
+    {
+      "from": "bat.-",
+      "to": "drv.GND",
+      "color": "#000000",
+      "width": 36
+    },
+    {
+      "from": "bat.+",
+      "to": "buck.Vin1",
+      "color": "#cc1414",
+      "width": 36
+    },
+    {
+      "from": "bat.-",
+      "to": "buck.GND1",
+      "color": "#000000",
+      "width": 36
+    },
+    {
+      "from": "buck.Vout1",
+      "to": "cam.5V",
+      "color": "#cc1414",
+      "width": 32
+    },
+    {
+      "from": "buck.GND1*",
+      "to": "cam.GND",
+      "color": "#000000",
+      "width": 32
+    },
+    {
+      "from": "cap.+",
+      "to": "cam.5V",
+      "color": "#cc1414"
+    },
+    {
+      "from": "cap.-",
+      "to": "cam.GND",
+      "color": "#000000"
+    }
+  ],
+  "labels": [
+    {
+      "ref": "drv.12V",
+      "dx": -190,
+      "dy": 170,
+      "text": "12V",
+      "size": 60
+    },
+    {
+      "ref": "drv.GND",
+      "dx": 190,
+      "dy": 170,
+      "text": "GND",
+      "size": 60
+    },
+    {
+      "ref": "buck.Vin1",
+      "dx": -260,
+      "dy": -140,
+      "text": "IN +",
+      "size": 50,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "buck.GND1",
+      "dx": -260,
+      "dy": 140,
+      "text": "IN −",
+      "size": 50
+    },
+    {
+      "ref": "buck.Vout1",
+      "dx": 280,
+      "dy": -140,
+      "text": "OUT 5V",
+      "size": 50,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "buck.GND1*",
+      "dx": 280,
+      "dy": 140,
+      "text": "OUT −",
+      "size": 50
+    },
+    {
+      "ref": "buck.@b",
+      "dy": 120,
+      "text": "buck converter  12V → 5V",
+      "size": 50
+    },
+    {
+      "ref": "cam.5V",
+      "dx": 230,
+      "text": "5V",
+      "size": 50
+    },
+    {
+      "ref": "cam.GND",
+      "dx": 250,
+      "text": "GND",
+      "size": 46
+    },
+    {
+      "ref": "cap.@t",
+      "dy": -100,
+      "text": "470 µF\nstripe → GND",
+      "size": 42
+    },
+    {
+      "ref": "bat.+",
+      "dx": -90,
+      "dy": -120,
+      "text": "+",
+      "size": 80,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "bat.-",
+      "dx": -90,
+      "dy": 120,
+      "text": "−",
+      "size": 80
+    },
+    {
+      "ref": "drv.@t",
+      "dy": -110,
+      "text": "L298N — motors only",
+      "size": 54
+    },
+    {
+      "ref": "cam.@b",
+      "dy": 120,
+      "text": "camera — its own 5V rail",
+      "size": 50
+    }
+  ]
+}

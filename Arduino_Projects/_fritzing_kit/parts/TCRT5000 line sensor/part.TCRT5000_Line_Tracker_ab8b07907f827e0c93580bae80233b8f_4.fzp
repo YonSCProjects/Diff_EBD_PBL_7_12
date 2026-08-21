@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module fritzingVersion="0.1.b.1486" moduleId="TCRT5000_Line_Tracker_ab8b07907f827e0c93580bae80233b8f_4" referenceFile="pushbutton_4_horizontal.fzp">
+ <version>4</version>
+ <title>TCRT5000 Line Tracker</title>
+ <label>U</label>
+ <date>vi. may. 19 2017</date>
+ <tags>
+  <tag>Vishay</tag>
+  <tag>sensor</tag>
+  <tag>line tracker</tag>
+  <tag>fritzing core</tag>
+  <tag>infrared</tag>
+  <tag>TCRT5000</tag>
+ </tags>
+ <properties>
+  <property name="family">sensor</property>
+  <property name="variant">variant 3</property>
+  <property name="part number"></property>
+  <property name="layer"></property>
+ </properties>
+ <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">A line tracker module based on TCRT500 (Vishay)&lt;/p>&lt;/body>&lt;/html></description>
+ <views>
+  <iconView>
+   <layers image="icon/TCRT5000_Line_Tracker_ab8b07907f827e0c93580bae80233b8f_4_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+  <breadboardView>
+   <layers image="breadboard/TCRT5000_Line_Tracker_ab8b07907f827e0c93580bae80233b8f_4_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView flipvertical="true" fliphorizontal="true">
+   <layers image="schematic/TCRT5000_Line_Tracker_ab8b07907f827e0c93580bae80233b8f_4_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/TCRT5000_Line_Tracker_ab8b07907f827e0c93580bae80233b8f_4_pcb.svg">
+    <layer layerId="copper0"/>
+    <layer layerId="keepout"/>
+    <layer layerId="soldermask"/>
+    <layer layerId="silkscreen"/>
+    <layer layerId="outline"/>
+    <layer layerId="copper1"/>
+   </layers>
+  </pcbView>
+ </views>
+ <connectors>
+  <connector type="male" id="connector3" name="Ao">
+   <description>Ao</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector3pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector3pin" terminalId="connector3terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector3pad" layer="copper0"/>
+     <p svgId="connector3pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector type="male" id="connector0" name="Vcc">
+   <description>Vcc</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector0pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector0pin" terminalId="connector0terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector0pad" layer="copper0"/>
+     <p svgId="connector0pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector type="male" id="connector1" name="Gnd">
+   <description>Gnd</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector1pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector1pin" terminalId="connector1terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector1pad" layer="copper0"/>
+     <p svgId="connector1pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector type="male" id="connector2" name="Do">
+   <description>Do</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector2pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector2pin" terminalId="connector2terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector2pad" layer="copper0"/>
+     <p svgId="connector2pad" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+ <buses>
+  <bus id="bus0">
+   <nodeMember connectorId="connector0"/>
+   <nodeMember connectorId="connector1"/>
+  </bus>
+  <bus id="bus1">
+   <nodeMember connectorId="connector2"/>
+   <nodeMember connectorId="connector3"/>
+  </bus>
+ </buses>
+ <author>leoaran</author>
+</module>

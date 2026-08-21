@@ -1,0 +1,101 @@
+{
+  "name": "w_p4_01_motors_to_driver",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "drv",
+      "part": "L298N-DC-motor-driver-improved",
+      "x": 400,
+      "y": 0,
+      "title": "L298N"
+    },
+    {
+      "id": "mA",
+      "part": "Getriebemotor",
+      "x": 370,
+      "y": 72,
+      "rotation": 180,
+      "title": "Front-left motor"
+    },
+    {
+      "id": "mB",
+      "part": "Getriebemotor",
+      "x": 370,
+      "y": 232,
+      "rotation": 180,
+      "title": "Rear-left motor"
+    },
+    {
+      "id": "mC",
+      "part": "Getriebemotor",
+      "x": 582,
+      "y": -45,
+      "title": "Front-right motor"
+    },
+    {
+      "id": "mD",
+      "part": "Getriebemotor",
+      "x": 582,
+      "y": 115,
+      "title": "Rear-right motor"
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "mA.pin 2",
+      "to": "drv.OUT1",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mA.pin 1",
+      "to": "drv.OUT2",
+      "color": "#000000"
+    },
+    {
+      "from": "mB.pin 2",
+      "to": "drv.OUT1",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mB.pin 1",
+      "to": "drv.OUT2",
+      "color": "#000000"
+    },
+    {
+      "from": "mC.pin 1",
+      "to": "drv.OUT4",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mC.pin 2",
+      "to": "drv.OUT3",
+      "color": "#000000"
+    },
+    {
+      "from": "mD.pin 1",
+      "to": "drv.OUT4",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mD.pin 2",
+      "to": "drv.OUT3",
+      "color": "#000000"
+    }
+  ],
+  "labels": [
+    {
+      "ref": "mA.@b",
+      "dy": 230,
+      "text": "LEFT MOTORS",
+      "size": 80
+    },
+    {
+      "ref": "mC.@b",
+      "dy": 230,
+      "text": "RIGHT MOTORS",
+      "size": 80
+    }
+  ]
+}

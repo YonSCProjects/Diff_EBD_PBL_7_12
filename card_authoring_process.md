@@ -75,15 +75,20 @@ The breadboard diagrams the cards embed are generated with the project-scoped
 4. **LED export bug:** the CLI silently DROPS any LED whose color property
    isn't `Red (633nm)` — set all LEDs Red (captions carry the pin numbers) or
    use per-colour parts.
-5. **Parts the headless MCP can't snap+wire** (buzzer, second button, HC-SR04):
-   use the proven **SVG-compositing** technique — place the part, export,
-   extract flattened coordinates with a puppeteer script, inject
-   Fritzing-style `<polyline>` wires into the SVG, rasterize with
-   `svg_to_png.js` and LOOK at it, iterate. Save BOTH the `.fzz` and the
-   composited SVG (a plain re-export loses the injected wires). Parts missing
-   from the library entirely (L298N, TCRT5000, battery holders): labeled-module
-   compositing via
-   `Arduino_Projects/Project_4_Line_Following_Car/images/fritzing/inject_modules.js`.
+5. **Parts the headless MCP can't snap+wire, or that Fritzing's library lacks**
+   (ESP32 DevKit / ESP32-CAM / L298N / TT motor / DHT22 / OLED / FTDI / buck /
+   TCRT5000 / 8×AA box): use **`Arduino_Projects/_fritzing_kit/`** (since
+   2026-08-22, the pipeline behind every P4–P7 figure). It bundles real
+   community `.fzpz` parts inside the `.fzz`, exports through the Fritzing CLI,
+   extracts every connector's coordinates with puppeteer and composites
+   Fritzing-style wires + callout tags at those exact points — one command per
+   figure (`node _fritzing_kit/build_figure.js <spec.json>`), spec files in the
+   project's `images/fritzing/` (or a `gen_specs.py` that writes them), and
+   `embed_figures.js` drops the figure block into the cards. Read the kit's
+   README for the spec format and the CLI gotchas (no spaces in bundled part
+   names, `<g id="breadboard">` layer, no gradients in custom parts, rail holes
+   skip every 6th number, bendable-leg offsets). The older P2 hand-compositing
+   recipe and P4's `inject_modules.js` labeled blocks are superseded by it.
 6. Cards reference the SVGs **by filename** from `./assets/` (copied from
    `../images/`), so overwriting an SVG auto-updates every card that uses it —
    just rebuild the bundle afterwards.
@@ -212,4 +217,5 @@ Every content change must end with `build_output/` regenerated:
 | `Arduino_Projects/Project_N_*/images/fritzing/*.fzz` | Canonical Fritzing sketch sources — copy + modify, don't hand-build |
 | `fix_wiring_svgs.js` | Post-processes exported SVGs: moves GND rail to the bottom (next to the Arduino's GND/5V pins) |
 | `svg_to_png.js` | Rasterize exported/composited SVGs for visual QA |
-| `Arduino_Projects/Project_4_Line_Following_Car/images/fritzing/inject_modules.js` | Labeled-module + wire compositing for parts missing from the Fritzing library |
+| `Arduino_Projects/_fritzing_kit/` | Real-part figure pipeline for P4–P7+ (`build_figure.js`, `embed_figures.js`, bundled community parts, README with gotchas) |
+| `Arduino_Projects/Project_4_Line_Following_Car/images/fritzing/inject_modules.js` | (superseded) Labeled-module + wire compositing for parts missing from the Fritzing library |

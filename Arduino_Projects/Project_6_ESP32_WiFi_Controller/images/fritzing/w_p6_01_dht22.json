@@ -1,0 +1,141 @@
+{
+  "name": "w_p6_01_dht22",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "bb",
+      "core": "breadboard2",
+      "x": 0,
+      "y": 330,
+      "title": "Breadboard"
+    },
+    {
+      "id": "esp",
+      "part": "DOIT Esp32 DevKit v1 improved",
+      "x": 20,
+      "y": 110,
+      "title": "ESP32 DevKit V1"
+    },
+    {
+      "id": "dht",
+      "part": "DHT22 temperature-humidity sensor",
+      "x": 347,
+      "y": 230,
+      "title": "DHT22",
+      "snap": {
+        "pin": "VCC",
+        "to": "bb.pin40J"
+      }
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "esp.3V3",
+      "to": "bb.pin12Y",
+      "color": "#cc1414",
+      "route": "vh",
+      "width": 32
+    },
+    {
+      "from": "esp.GND.2",
+      "to": "bb.pin15Z",
+      "color": "#000000",
+      "route": "vh",
+      "width": 32,
+      "out": [
+        "right",
+        150
+      ]
+    },
+    {
+      "from": "bb.pin40I",
+      "to": "bb.pin39Y",
+      "color": "#cc1414",
+      "route": "hv"
+    },
+    {
+      "from": "bb.pin42I",
+      "to": "bb.pin45Z",
+      "color": "#000000",
+      "route": "hv"
+    },
+    {
+      "from": "bb.pin41G",
+      "to": "esp.D4",
+      "color": "#f28a00",
+      "route": "hv",
+      "via": [
+        {
+          "ref": "esp.D4",
+          "dx": 330
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "ref": "esp.3V3",
+      "dx": 200,
+      "text": "3V3",
+      "size": 52
+    },
+    {
+      "ref": "esp.GND.2",
+      "dx": 420,
+      "text": "GND",
+      "size": 52
+    },
+    {
+      "ref": "esp.D4",
+      "dx": -210,
+      "text": "4",
+      "size": 56
+    },
+    {
+      "ref": "bb.pin3Y",
+      "dx": -150,
+      "text": "+",
+      "size": 60,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "bb.pin3Z",
+      "dx": -150,
+      "dy": -120,
+      "text": "−",
+      "size": 60
+    },
+    {
+      "ref": "dht.@t",
+      "dy": -110,
+      "text": "DHT22",
+      "size": 52
+    },
+    {
+      "ref": "bb.pin40J",
+      "dx": 0,
+      "dy": 430,
+      "text": "+",
+      "size": 46,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "bb.pin41J",
+      "dx": 0,
+      "dy": 560,
+      "text": "out",
+      "size": 46
+    },
+    {
+      "ref": "bb.pin42J",
+      "dx": 0,
+      "dy": 430,
+      "text": "−",
+      "size": 46
+    }
+  ]
+}

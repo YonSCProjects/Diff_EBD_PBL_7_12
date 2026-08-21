@@ -1,0 +1,30 @@
+[
+  { "card": "../Project_5_Remote_Controlled_Car/task_cards_he/P5_T1_M1_prepare_esp32_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p5_01_esp32_pins_breadboard.svg", "width": 420, "title": "הלוח:", "caption": "ESP32 DevKit V1 — שורת ששת החיבורים 32, 33, 25, 26, 27, 14 מסומנת בירוק בטור השמאלי; GND ו-VIN בתחתית אותו טור; שקע ה-USB למטה, לידו הכפתורים EN ו-BOOT.", "alt": "לוח ESP32 DevKit V1: ששת החיבורים 32 עד 14 מסומנים בטור השמאלי, GND ו-VIN מתחתיהם, שקע USB למטה עם כפתורי EN ו-BOOT" } ] },
+  { "card": "../Project_5_Remote_Controlled_Car/task_cards_he/P5_T1_M2_swap_brain_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p5_01_esp32_pins_breadboard.svg", "width": 420, "title": "איפה מתחילים לספור:", "caption": "כששקע ה-USB פונה למטה, ששת החיבורים הצמודים — 32 עד 14 — יושבים בטור השמאלי, ומתחתיהם GND ו-VIN.", "alt": "לוח ESP32 DevKit V1 עם ששת החיבורים 32 עד 14 מסומנים בטור השמאלי" } ] },
+  { "card": "../Project_5_Remote_Controlled_Car/task_cards_he/P5_T1_M3_rewire_driver_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p5_02_esp32_to_l298n_breadboard.svg", "title": "ESP32 ↔ L298N:", "caption": "שישה חוטי אות משורת ENA–ENB של הבקר אל 32–14 של ה-ESP32 (ירוק = מהירות, כתום = כיוון) וזוג החשמל: 5V של הבקר אל VIN ו-GND אל GND.", "alt": "תרשים חיווט: שישה חוטים מההדקים ENA, IN1, IN2, IN3, IN4, ENB של בקר L298N אל חיבורים 32, 33, 25, 26, 27, 14 של ESP32, וחוטי 5V ו-GND אל VIN ו-GND" } ] },
+  { "card": "../Project_5_Remote_Controlled_Car/task_cards_he/P5_T2_M1_startup_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p5_03_full_car_breadboard.svg", "title": "החיווט המלא:", "caption": "ארבעת המנועים — שניים בכל צד — אל OUT1/OUT2 ו-OUT3/OUT4, בית הסוללות (8 סוללות AA) אל 12V ו-GND של הבקר, שישה חוטי האות וזוג החשמל אל ה-ESP32.", "alt": "תרשים המכונית המלא: בקר L298N במרכז, ארבעה מנועים צהובים משני צדדיו, בית סוללות 8 סוללות AA למטה משמאל ו-ESP32 למטה מימין עם שישה חוטי אות וחוטי VIN ו-GND" } ] },
+
+  { "card": "../Project_6_ESP32_WiFi_Controller/task_cards_he/P6_T1_M2_wire_dht22_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p6_01_dht22_breadboard.svg", "title": "DHT22 → פסי החשמל → ESP32:", "caption": "3V3 של ה-ESP32 אל פס הפלוס (האדום) ו-GND אל פס המינוס (הכחול); החיישן יושב בברדבורד — + לפס הפלוס, out לחיבור 4, − לפס המינוס.", "alt": "תרשים חיווט: ESP32 מחובר לפסי החשמל של הברדבורד, חיישן DHT22 בברדבורד עם שלושה חוטים — פלוס לפס הפלוס, out לחיבור 4, מינוס לפס המינוס" } ] },
+  { "card": "../Project_6_ESP32_WiFi_Controller/task_cards_he/P6_T1_M4_wire_oled_i2c_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p6_02_dht22_oled_breadboard.svg", "title": "התחנה המלאה:", "caption": "ה-OLED יושב בברדבורד — GND לפס המינוס, VCC לפס הפלוס, SDA לחיבור 21 (כחול) ו-SCL לחיבור 22 (ירוק); החיישן נשאר מחובר כמו בשלב 2.", "alt": "תרשים חיווט: ESP32, ברדבורד עם צג OLED וחיישן DHT22; חוטי GND ו-VCC של הצג לפסי החשמל, SDA לחיבור 21 ו-SCL לחיבור 22" } ] },
+  { "card": "../Project_6_ESP32_WiFi_Controller/task_cards_he/P6_T2_M1_startup_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p6_02_dht22_oled_breadboard.svg", "title": "תחנת מזג האוויר:", "caption": "פסי החשמל מ-3V3 ו-GND של ה-ESP32, החיישן על חיבור 4 והצג על 21 (SDA) ו-22 (SCL). הכול על 3.3V.", "alt": "תרשים תחנת מזג האוויר: ESP32, ברדבורד, חיישן DHT22 על חיבור 4 וצג OLED על חיבורים 21 ו-22" } ] },
+  { "card": "../Project_6_ESP32_WiFi_Controller/task_cards_he/P6_T2_M2_pick_output_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p6_03a_led_breadboard.svg", "title": "א׳ — נורית:", "caption": "הרגל הארוכה דרך נגד 220Ω אל חיבור 26, הרגל הקצרה לפס המינוס. השאר — כמו בכרטיסייה 1.", "alt": "תרשים: נורית ונגד 220 אוהם בברדבורד, הנגד אל חיבור 26 של ה-ESP32 והרגל הקצרה לפס המינוס, לצד חיישן DHT22 וצג OLED" },
+    { "file": "w_p6_03b_buzzer_breadboard.svg", "title": "ב׳ — זמזם:", "caption": "+ אל חיבור 27, − לפס המינוס. הזמזם יושב על המרווח שבאמצע הברדבורד.", "alt": "תרשים: זמזם בברדבורד, רגל הפלוס אל חיבור 27 של ה-ESP32 ורגל המינוס לפס המינוס" },
+    { "file": "w_p6_03c_servo_breadboard.svg", "title": "ג׳ — סרוו:", "caption": "חום (או שחור) לפס המינוס, אדום אל VIN — לא לפס הפלוס — וכתום אל חיבור 14.", "alt": "תרשים: סרוו ליד ה-ESP32, החוט החום לפס המינוס, האדום אל VIN והכתום אל חיבור 14" } ] },
+
+  { "card": "../Project_7_Camera_Explorer/task_cards_he/P7_T1_M1_meet_the_cam_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p7_01_ftdi_upload_breadboard.svg", "width": 560, "title": "המתכנת ↔ ESP32-CAM:", "caption": "5V אל 5V, GND אל GND, TX אל U0R ו-RX אל U0T — החוטים מצטלבים בכוונה. החוט הצהוב הוא חוט מצב הצריבה: IO0 אל GND.", "alt": "תרשים: מתכנת FTDI מחובר ל-ESP32-CAM בארבעה חוטים — 5V, GND, TX אל U0R, RX אל U0T — וחוט צהוב קצר מ-IO0 אל GND" } ] },
+  { "card": "../Project_7_Camera_Explorer/task_cards_he/P7_T1_M5_power_rail_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p7_02_power_rails_breadboard.svg", "title": "שתי מסילות חשמל:", "caption": "בית הסוללות (8 סוללות AA) אל 12V ו-GND של הבקר ואל IN של הממיר; OUT של הממיר (5V) אל 5V ו-GND של המצלמה, והקבל צמוד למצלמה. כל ה\"מינוסים\" מחוברים יחד.", "alt": "תרשים חשמל: בית סוללות 8 סוללות AA מחובר לבקר L298N ולכניסת ממיר המתח; יציאת הממיר 5V אל המצלמה ESP32-CAM עם קבל בין 5V ל-GND" } ] },
+  { "card": "../Project_7_Camera_Explorer/task_cards_he/P7_T1_M6_wire_motors_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p7_03_cam_to_l298n_breadboard.svg", "title": "ESP32-CAM ↔ L298N:", "caption": "IN1 אל 14, IN2 אל 15, IN3 אל 13, IN4 אל 12 — ושני הכובעונים על ENA ו-ENB נשארים במקומם.", "alt": "תרשים: ארבעה חוטים מההדקים IN1 עד IN4 של בקר L298N אל חיבורים 14, 15, 13, 12 של ה-ESP32-CAM; הכובעונים על ENA ו-ENB במקומם" } ] },
+  { "card": "../Project_7_Camera_Explorer/task_cards_he/P7_T2_M1_startup_he.dc.html", "pre": 1, "figures": [
+    { "file": "w_p7_04_full_explorer_breadboard.svg", "title": "המפה המלאה:", "caption": "ארבעת המנועים אל הבקר, בית הסוללות (8 סוללות AA) אל הבקר ואל הממיר, הממיר והקבל אל המצלמה, ארבעת חוטי האות מהבקר אל 14, 15, 13, 12 — וכל ה-GND משותף.", "alt": "תרשים הרובוט המלא: בקר L298N עם ארבעה מנועים, בית סוללות 8 סוללות AA, ממיר מתח, קבל ומצלמת ESP32-CAM עם ארבעה חוטי אות" } ] }
+]

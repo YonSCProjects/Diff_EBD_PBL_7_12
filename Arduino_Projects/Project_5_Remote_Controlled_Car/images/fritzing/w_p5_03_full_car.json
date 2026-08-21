@@ -1,0 +1,296 @@
+{
+  "name": "w_p5_03_full_car",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "drv",
+      "part": "L298N-DC-motor-driver-improved",
+      "x": 400,
+      "y": 0,
+      "title": "L298N"
+    },
+    {
+      "id": "mA",
+      "part": "Getriebemotor",
+      "x": 370,
+      "y": 72,
+      "rotation": 180,
+      "title": "Front-left motor"
+    },
+    {
+      "id": "mB",
+      "part": "Getriebemotor",
+      "x": 370,
+      "y": 232,
+      "rotation": 180,
+      "title": "Rear-left motor"
+    },
+    {
+      "id": "mC",
+      "part": "Getriebemotor",
+      "x": 582,
+      "y": -45,
+      "title": "Front-right motor"
+    },
+    {
+      "id": "mD",
+      "part": "Getriebemotor",
+      "x": 582,
+      "y": 115,
+      "title": "Rear-right motor"
+    },
+    {
+      "id": "bat",
+      "part": "8xAA_box",
+      "x": -100,
+      "y": 300,
+      "title": "8 x AA battery box"
+    },
+    {
+      "id": "esp",
+      "part": "DOIT Esp32 DevKit v1 improved",
+      "x": 640,
+      "y": 262,
+      "title": "ESP32 DevKit V1"
+    }
+  ],
+  "wires": [
+    {
+      "from": "mA.pin 2",
+      "to": "drv.OUT1",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mA.pin 1",
+      "to": "drv.OUT2",
+      "color": "#000000"
+    },
+    {
+      "from": "mB.pin 2",
+      "to": "drv.OUT1",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mB.pin 1",
+      "to": "drv.OUT2",
+      "color": "#000000"
+    },
+    {
+      "from": "mC.pin 1",
+      "to": "drv.OUT4",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mC.pin 2",
+      "to": "drv.OUT3",
+      "color": "#000000"
+    },
+    {
+      "from": "mD.pin 1",
+      "to": "drv.OUT4",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mD.pin 2",
+      "to": "drv.OUT3",
+      "color": "#000000"
+    },
+    {
+      "from": "bat.+",
+      "to": "drv.12V",
+      "color": "#cc1414",
+      "width": 36
+    },
+    {
+      "from": "bat.-",
+      "to": "drv.GND",
+      "color": "#000000",
+      "width": 36
+    },
+    {
+      "from": "drv.ENA",
+      "to": "esp.D32",
+      "color": "#25cc35",
+      "route": "vh"
+    },
+    {
+      "from": "drv.IN1",
+      "to": "esp.D33",
+      "color": "#f28a00",
+      "route": "vh"
+    },
+    {
+      "from": "drv.IN2",
+      "to": "esp.D25",
+      "color": "#f28a00",
+      "route": "vh"
+    },
+    {
+      "from": "drv.IN3",
+      "to": "esp.D26",
+      "color": "#f28a00",
+      "route": "vh"
+    },
+    {
+      "from": "drv.IN4",
+      "to": "esp.D27",
+      "color": "#f28a00",
+      "route": "vh"
+    },
+    {
+      "from": "drv.ENB",
+      "to": "esp.D14",
+      "color": "#25cc35",
+      "route": "vh"
+    },
+    {
+      "from": "drv.5V",
+      "to": "esp.VIN",
+      "color": "#cc1414",
+      "route": "vh",
+      "width": 36
+    },
+    {
+      "from": "drv.GND",
+      "to": "esp.GND",
+      "color": "#000000",
+      "route": "vh",
+      "width": 36
+    }
+  ],
+  "labels": [
+    {
+      "ref": "esp.D32",
+      "dx": -250,
+      "text": "32",
+      "size": 92
+    },
+    {
+      "ref": "esp.D33",
+      "dx": -470,
+      "text": "33",
+      "size": 92
+    },
+    {
+      "ref": "esp.D25",
+      "dx": -250,
+      "text": "25",
+      "size": 92
+    },
+    {
+      "ref": "esp.D26",
+      "dx": -470,
+      "text": "26",
+      "size": 92
+    },
+    {
+      "ref": "esp.D27",
+      "dx": -250,
+      "text": "27",
+      "size": 92
+    },
+    {
+      "ref": "esp.D14",
+      "dx": -470,
+      "text": "14",
+      "size": 92
+    },
+    {
+      "ref": "esp.GND",
+      "dx": -290,
+      "text": "GND",
+      "size": 84
+    },
+    {
+      "ref": "esp.VIN",
+      "dx": -560,
+      "text": "VIN",
+      "size": 84
+    },
+    {
+      "ref": "drv.ENA",
+      "dy": -200,
+      "text": "ENA",
+      "size": 80
+    },
+    {
+      "ref": "drv.IN1",
+      "dy": -370,
+      "text": "IN1",
+      "size": 80
+    },
+    {
+      "ref": "drv.IN2",
+      "dy": -200,
+      "text": "IN2",
+      "size": 80
+    },
+    {
+      "ref": "drv.IN3",
+      "dy": -370,
+      "text": "IN3",
+      "size": 80
+    },
+    {
+      "ref": "drv.IN4",
+      "dy": -200,
+      "text": "IN4",
+      "size": 80
+    },
+    {
+      "ref": "drv.ENB",
+      "dy": -370,
+      "text": "ENB",
+      "size": 80
+    },
+    {
+      "ref": "drv.12V",
+      "dx": -150,
+      "dy": 280,
+      "text": "12V",
+      "size": 80
+    },
+    {
+      "ref": "drv.5V",
+      "dx": 150,
+      "dy": 280,
+      "text": "5V",
+      "size": 80
+    },
+    {
+      "ref": "drv.GND",
+      "dx": 0,
+      "dy": 470,
+      "text": "GND",
+      "size": 80
+    },
+    {
+      "ref": "bat.+",
+      "dx": -90,
+      "dy": -120,
+      "text": "+",
+      "size": 100,
+      "color": "#cc1414"
+    },
+    {
+      "ref": "bat.-",
+      "dx": -90,
+      "dy": 120,
+      "text": "−",
+      "size": 100
+    },
+    {
+      "ref": "mA.@b",
+      "dy": 230,
+      "text": "LEFT MOTORS",
+      "size": 90
+    },
+    {
+      "ref": "mC.@b",
+      "dy": 230,
+      "text": "RIGHT MOTORS",
+      "size": 90
+    }
+  ]
+}

@@ -127,7 +127,7 @@ Students progress through projects in the order shown below, but the sequence is
 | 1 | **Light Signals** | Arduino Uno + LEDs + button | Breadboarding, digital I/O, first upload, Claude Code intro | 1–2 |
 | 2 | **Reaction-Time Game** | Arduino + LEDs + buzzer + buttons | `millis()` timing, game logic | 2 |
 | 3 | **Don't Get Too Close** | Arduino + ultrasonic sensor | Sensor reading, threshold logic | 2 |
-| 4 | **Line-Following Car** | Hand-built polygal chassis (1:1 printed template) + 4 motors + IR sensors + 2×18650 | **First soldering**, chassis fabrication, motor control, proportional correction | 3 |
+| 4 | **Line-Following Car** | Hand-built polygal chassis (1:1 printed template) + 4 motors + IR sensors + 8×AA battery box | **First soldering**, chassis fabrication, motor control, proportional correction | 3 |
 | 5 | **Remote-Controlled Car** | Project 4's chassis + ESP32 replacing the Uno + phone-browser driving page | **First ESP32**, Wi-Fi web control, external input, state machines | 3–4 |
 | 6 | **ESP32 Wi-Fi Controller** | ESP32 + DHT22 sensor + small I2C OLED screen + live web page | **I2C** (via the screen), first library install, sensing and serving live data | 4 |
 | 7 | **Camera Explorer** | ESP32-CAM + car chassis + motors | Integration capstone (ground): streaming + control | 5–6 |
@@ -159,8 +159,8 @@ Every 45-minute session follows the same seven-phase structure:
 
 | | Year 1 (setup + all 8 projects) | Year 2 (consumables only) |
 |---|---|---|
-| **Total for 8-student cohort** | USD 1,753–1,828 | USD 415–505 |
-| **Per student** | USD 219–229 | USD 52–63 |
+| **Total for 8-student cohort** | USD 1,734–1,808 | USD 421–511 |
+| **Per student** | USD 217–226 | USD 53–64 |
 
 The program's highest-cost single item is Project 8 (quadcopter) at ~USD 65 per drone. The first five projects together cost less than one educational drone kit. All components are sourced from AliExpress with 15–45 day lead time.
 

@@ -1,0 +1,175 @@
+{
+  "name": "w_p4_04_line_sensors",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "uno",
+      "core": "arduino_Uno_Rev3(fix)",
+      "x": 440,
+      "y": 250,
+      "title": "Arduino Uno"
+    },
+    {
+      "id": "bb",
+      "core": "breadboard2",
+      "x": 600,
+      "y": 290,
+      "title": "Breadboard"
+    },
+    {
+      "id": "sL",
+      "part": "TCRT5000 line sensor",
+      "x": 720,
+      "y": 520,
+      "title": "LEFT line sensor"
+    },
+    {
+      "id": "sR",
+      "part": "TCRT5000 line sensor",
+      "x": 890,
+      "y": 520,
+      "title": "RIGHT line sensor"
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "uno.c87",
+      "to": "bb.pin5W",
+      "color": "#cc1414",
+      "route": "vh",
+      "width": 32
+    },
+    {
+      "from": "uno.c88",
+      "to": "bb.pin3X",
+      "color": "#000000",
+      "route": "vh",
+      "width": 32
+    },
+    {
+      "from": "sL.Vcc",
+      "to": "bb.pin21W",
+      "color": "#cc1414",
+      "route": "vh",
+      "out": [
+        "left",
+        100
+      ]
+    },
+    {
+      "from": "sL.Gnd",
+      "to": "bb.pin23X",
+      "color": "#000000",
+      "route": "vh",
+      "out": [
+        "left",
+        200
+      ]
+    },
+    {
+      "from": "sL.Do",
+      "to": "uno.c54",
+      "color": "#f28a00",
+      "route": "vh",
+      "out": [
+        "left",
+        300
+      ],
+      "via": [
+        {
+          "ref": "uno.c54",
+          "dy": -350
+        }
+      ]
+    },
+    {
+      "from": "sR.Vcc",
+      "to": "bb.pin40W",
+      "color": "#cc1414",
+      "route": "vh",
+      "out": [
+        "left",
+        100
+      ]
+    },
+    {
+      "from": "sR.Gnd",
+      "to": "bb.pin42X",
+      "color": "#000000",
+      "route": "vh",
+      "out": [
+        "left",
+        200
+      ]
+    },
+    {
+      "from": "sR.Do",
+      "to": "uno.c55",
+      "color": "#25cc35",
+      "route": "vh",
+      "out": [
+        "left",
+        400
+      ],
+      "via": [
+        {
+          "ref": "uno.c55",
+          "dy": -500
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "ref": "uno.c87",
+      "dx": -260,
+      "dy": 420,
+      "text": "5V",
+      "size": 56
+    },
+    {
+      "ref": "bb.pin3W",
+      "dx": -150,
+      "dy": 0,
+      "text": "+",
+      "size": 60,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "bb.pin3X",
+      "dx": -150,
+      "dy": 0,
+      "text": "−",
+      "size": 60
+    },
+    {
+      "ref": "sL.@b",
+      "dy": 110,
+      "text": "LEFT sensor → 11",
+      "size": 56
+    },
+    {
+      "ref": "sR.@b",
+      "dy": 110,
+      "text": "RIGHT sensor → 12",
+      "size": 56
+    },
+    {
+      "ref": "uno.c54",
+      "dx": -160,
+      "dy": -110,
+      "text": "11",
+      "size": 56
+    },
+    {
+      "ref": "uno.c55",
+      "dx": 160,
+      "dy": -110,
+      "text": "12",
+      "size": 56
+    }
+  ]
+}

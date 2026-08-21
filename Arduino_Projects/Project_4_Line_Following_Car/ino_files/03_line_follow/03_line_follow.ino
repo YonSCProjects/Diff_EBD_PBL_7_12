@@ -31,8 +31,9 @@ const int SENSOR_LEFT  = 11;  // left IR sensor OUT
 const int SENSOR_RIGHT = 12;  // right IR sensor OUT
 
 // ---- DRIVING SETTINGS ----
-// Keep BASE_SPEED at 200 or below: a freshly charged 8.4V battery
-// pack would over-volt the 3-6V motors at full (255) duty.
+// Keep BASE_SPEED at 200 or below: the 8 x AA pack is 12V when fresh, and
+// full (255) duty would over-volt the 3-6V motors. (Fresh alkaline cells
+// are strong - 160 is gentler on the motors.)
 const int  BASE_SPEED  = 140;   // normal forward speed (0-200)
 const int  CORRECTION  = 90;    // how much the inner wheel slows in a turn
 const bool LINE_IS_HIGH = true; // flip to false if your sensor boards are inverted

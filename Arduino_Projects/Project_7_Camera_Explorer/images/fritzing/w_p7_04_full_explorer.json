@@ -1,0 +1,381 @@
+{
+  "name": "w_p7_04_full_explorer",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "drv",
+      "part": "L298N-DC-motor-driver-improved",
+      "x": 400,
+      "y": 0,
+      "title": "L298N"
+    },
+    {
+      "id": "mA",
+      "part": "Getriebemotor",
+      "x": 370,
+      "y": 72,
+      "rotation": 180,
+      "title": "Front-left motor"
+    },
+    {
+      "id": "mB",
+      "part": "Getriebemotor",
+      "x": 370,
+      "y": 232,
+      "rotation": 180,
+      "title": "Rear-left motor"
+    },
+    {
+      "id": "mC",
+      "part": "Getriebemotor",
+      "x": 582,
+      "y": -100,
+      "title": "Front-right motor"
+    },
+    {
+      "id": "mD",
+      "part": "Getriebemotor",
+      "x": 582,
+      "y": 25,
+      "title": "Rear-right motor"
+    },
+    {
+      "id": "bat",
+      "part": "8xAA_box",
+      "x": -100,
+      "y": 300,
+      "title": "8 x AA battery box"
+    },
+    {
+      "id": "cam",
+      "part": "ESP32-CAM_FRONT-fixed",
+      "x": 575.7,
+      "y": 230,
+      "rotation": 90,
+      "title": "ESP32-CAM",
+      "snap": {
+        "pin": "IO14",
+        "to": "drv.IN1",
+        "axis": "x"
+      }
+    },
+    {
+      "id": "buck",
+      "part": "Mini560 buck module",
+      "x": 700,
+      "y": 320,
+      "rotation": 180,
+      "title": "Buck 5V"
+    },
+    {
+      "id": "cap",
+      "core": "capacitor_electrolytic_small",
+      "x": 575,
+      "y": 180,
+      "title": "470 uF",
+      "properties": {
+        "capacitance": "470µF"
+      }
+    }
+  ],
+  "shapes": [
+    {
+      "a": "drv.ENA",
+      "b": "drv.+5V-J1",
+      "pad": 42,
+      "fill": "#1a1a1a",
+      "stroke": "#000",
+      "rx": 10
+    },
+    {
+      "a": "drv.ENB",
+      "b": "drv.+5V-J2",
+      "pad": 42,
+      "fill": "#1a1a1a",
+      "stroke": "#000",
+      "rx": 10
+    }
+  ],
+  "wires": [
+    {
+      "from": "mA.pin 2",
+      "to": "drv.OUT1",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mA.pin 1",
+      "to": "drv.OUT2",
+      "color": "#000000"
+    },
+    {
+      "from": "mB.pin 2",
+      "to": "drv.OUT1",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mB.pin 1",
+      "to": "drv.OUT2",
+      "color": "#000000"
+    },
+    {
+      "from": "mC.pin 1",
+      "to": "drv.OUT4",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mC.pin 2",
+      "to": "drv.OUT3",
+      "color": "#000000"
+    },
+    {
+      "from": "mD.pin 1",
+      "to": "drv.OUT4",
+      "color": "#cc1414"
+    },
+    {
+      "from": "mD.pin 2",
+      "to": "drv.OUT3",
+      "color": "#000000"
+    },
+    {
+      "from": "bat.+",
+      "to": "drv.12V",
+      "color": "#cc1414",
+      "width": 36
+    },
+    {
+      "from": "bat.-",
+      "to": "drv.GND",
+      "color": "#000000",
+      "width": 36
+    },
+    {
+      "from": "bat.+",
+      "to": "buck.Vin1",
+      "color": "#cc1414",
+      "width": 36,
+      "via": [
+        {
+          "ref": "buck.Vin1",
+          "dx": -170,
+          "dy": 950
+        },
+        {
+          "ref": "buck.Vin1",
+          "dx": -170
+        }
+      ]
+    },
+    {
+      "from": "bat.-",
+      "to": "buck.GND1",
+      "color": "#000000",
+      "width": 36,
+      "via": [
+        {
+          "ref": "buck.GND1",
+          "dx": -110,
+          "dy": 680
+        },
+        {
+          "ref": "buck.GND1",
+          "dx": -110
+        }
+      ]
+    },
+    {
+      "from": "drv.IN1",
+      "to": "cam.IO14",
+      "color": "#f28a00"
+    },
+    {
+      "from": "drv.IN2",
+      "to": "cam.IO15",
+      "color": "#f28a00"
+    },
+    {
+      "from": "drv.IN3",
+      "to": "cam.IO13",
+      "color": "#25cc35"
+    },
+    {
+      "from": "drv.IN4",
+      "to": "cam.IO12",
+      "color": "#25cc35"
+    },
+    {
+      "from": "buck.Vout1",
+      "to": "cam.5V",
+      "color": "#cc1414",
+      "width": 32,
+      "via": [
+        {
+          "ref": "buck.Vout1",
+          "dx": 100
+        },
+        {
+          "ref": "buck.Vout1",
+          "dx": 100,
+          "dy": -1245
+        },
+        {
+          "ref": "cam.5V",
+          "dy": -245
+        }
+      ]
+    },
+    {
+      "from": "buck.GND1*",
+      "to": "cam.GND",
+      "color": "#000000",
+      "width": 32,
+      "via": [
+        {
+          "ref": "buck.GND1*",
+          "dx": 200
+        },
+        {
+          "ref": "buck.GND1*",
+          "dx": 200,
+          "dy": -1805
+        },
+        {
+          "ref": "cam.GND",
+          "dy": -355
+        }
+      ]
+    },
+    {
+      "from": "cap.+",
+      "to": "cam.5V",
+      "color": "#cc1414"
+    },
+    {
+      "from": "cap.-",
+      "to": "cam.GND",
+      "color": "#000000"
+    }
+  ],
+  "labels": [
+    {
+      "ref": "cam.IO14",
+      "dy": 300,
+      "text": "14",
+      "size": 52
+    },
+    {
+      "ref": "cam.IO15",
+      "dy": 440,
+      "text": "15",
+      "size": 52
+    },
+    {
+      "ref": "cam.IO13",
+      "dy": 300,
+      "text": "13",
+      "size": 52
+    },
+    {
+      "ref": "cam.IO12",
+      "dy": 440,
+      "text": "12",
+      "size": 52
+    },
+    {
+      "ref": "drv.IN1",
+      "dy": -200,
+      "text": "IN1",
+      "size": 60
+    },
+    {
+      "ref": "drv.IN2",
+      "dy": -360,
+      "text": "IN2",
+      "size": 60
+    },
+    {
+      "ref": "drv.IN3",
+      "dy": -200,
+      "text": "IN3",
+      "size": 60
+    },
+    {
+      "ref": "drv.IN4",
+      "dy": -360,
+      "text": "IN4",
+      "size": 60
+    },
+    {
+      "ref": "drv.12V",
+      "dx": -150,
+      "dy": 260,
+      "text": "12V",
+      "size": 64
+    },
+    {
+      "ref": "drv.GND",
+      "dx": 150,
+      "dy": 260,
+      "text": "GND",
+      "size": 64
+    },
+    {
+      "ref": "bat.+",
+      "dx": -90,
+      "dy": -120,
+      "text": "+",
+      "size": 90,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "bat.-",
+      "dx": -90,
+      "dy": 120,
+      "text": "−",
+      "size": 90
+    },
+    {
+      "ref": "mA.@b",
+      "dy": 230,
+      "text": "LEFT MOTORS",
+      "size": 80
+    },
+    {
+      "ref": "mC.@b",
+      "dy": 260,
+      "text": "RIGHT MOTORS",
+      "size": 80
+    },
+    {
+      "ref": "buck.@b",
+      "dy": 120,
+      "text": "buck 12V → 5V",
+      "size": 56
+    },
+    {
+      "ref": "cam.@b",
+      "dy": 120,
+      "text": "ESP32-CAM",
+      "size": 56
+    },
+    {
+      "ref": "cap.@t",
+      "dx": 250,
+      "dy": -60,
+      "text": "470 µF",
+      "size": 46
+    },
+    {
+      "ref": "drv.+5V-J2",
+      "dx": 2750,
+      "dy": 1420,
+      "text": "ENA / ENB caps ON",
+      "size": 50,
+      "leader": true,
+      "fill": "#fff8d6",
+      "stroke": "#b08900"
+    }
+  ]
+}

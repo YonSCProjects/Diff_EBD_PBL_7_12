@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module referenceFile="resistor.fzp" moduleId="prefix0000_8b7f36af2ae306c83f0a25dbcbfb94fa_15" fritzingVersion="0.1.1201">
+ <version>4</version>
+ <title>Getriebemotor</title>
+ <label>M</label>
+ <date>Di Aug 27 2019</date>
+ <author>admin</author>
+ <tags/>
+ <properties>
+  <property name="variant">Motor</property>
+  <property name="family">Motor</property>
+  <property name="part number"></property>
+ </properties>
+ <taxonomy>discreteParts.resistor.220</taxonomy>
+ <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>&lt;/body>&lt;/html></description>
+ <spice>
+  <line>R{instanceTitle} {net connector0} {net connector1} {resistance}</line>
+ </spice>
+ <views>
+  <iconView>
+   <layers image="icon/prefix0000_6c460fe0b7b54466b3fbeb1bb794a100_2_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+  <breadboardView>
+   <layers image="breadboard/prefix0000_6c460fe0b7b54466b3fbeb1bb794a100_2_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/prefix0000_6c460fe0b7b54466b3fbeb1bb794a100_2_schematic.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/prefix0000_6c460fe0b7b54466b3fbeb1bb794a100_2_pcb.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </pcbView>
+ </views>
+ <connectors>
+  <connector id="connector1" type="male" name="pin 1">
+   <description>pin 1</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector1pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector1pin" layer="breadboard"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector1pin" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector2" type="male" name="pin 2">
+   <description>pin 2</description>
+   <views>
+    <breadboardView>
+     <p svgId="connector2pin" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="connector2pin" layer="breadboard"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="connector2pin" layer="breadboard"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+</module>

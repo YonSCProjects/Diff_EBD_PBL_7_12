@@ -1,0 +1,162 @@
+{
+  "name": "w_p7_01_ftdi_upload",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "cam",
+      "part": "ESP32-CAM_FRONT-fixed",
+      "x": 100,
+      "y": 0,
+      "title": "ESP32-CAM"
+    },
+    {
+      "id": "ftdi",
+      "part": "FTDI Basic Programmer",
+      "x": 378,
+      "y": 74.5,
+      "rotation": 180,
+      "title": "FTDI programmer"
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "ftdi.TXO",
+      "to": "cam.VOR",
+      "color": "#25cc35",
+      "route": "vh",
+      "out": [
+        "left",
+        200
+      ]
+    },
+    {
+      "from": "ftdi.RXI",
+      "to": "cam.VOT",
+      "color": "#418dd9",
+      "route": "vh",
+      "out": [
+        "left",
+        300
+      ]
+    },
+    {
+      "from": "ftdi.GND",
+      "to": "cam.GND.2",
+      "color": "#000000",
+      "route": "vh",
+      "out": [
+        "left",
+        400
+      ],
+      "width": 32
+    },
+    {
+      "from": "ftdi.POWER",
+      "to": "cam.5V",
+      "color": "#cc1414",
+      "route": "vh",
+      "out": [
+        "left",
+        50
+      ],
+      "width": 32,
+      "via": [
+        {
+          "ref": "ftdi.POWER",
+          "dx": -50,
+          "dy": 1250
+        },
+        {
+          "ref": "cam.5V",
+          "dx": -245,
+          "dy": 1580
+        }
+      ]
+    },
+    {
+      "from": "cam.IO0",
+      "to": "cam.GND.3",
+      "color": "#e0b400",
+      "route": "vh",
+      "out": [
+        "right",
+        150
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "ref": "cam.5V",
+      "dx": 230,
+      "text": "5V",
+      "size": 50
+    },
+    {
+      "ref": "cam.GND.2",
+      "dx": -230,
+      "text": "GND",
+      "size": 46
+    },
+    {
+      "ref": "cam.VOR",
+      "dx": -230,
+      "text": "U0R",
+      "size": 46
+    },
+    {
+      "ref": "cam.VOT",
+      "dx": -450,
+      "text": "U0T",
+      "size": 46
+    },
+    {
+      "ref": "cam.IO0",
+      "dx": 520,
+      "dy": -140,
+      "text": "IO0 → GND\n(flash mode)",
+      "size": 42,
+      "leader": true,
+      "fill": "#fff8d6",
+      "stroke": "#b08900"
+    },
+    {
+      "ref": "ftdi.TXO",
+      "dx": 230,
+      "text": "TX",
+      "size": 44
+    },
+    {
+      "ref": "ftdi.RXI",
+      "dx": 230,
+      "text": "RX",
+      "size": 44
+    },
+    {
+      "ref": "ftdi.POWER",
+      "dx": 250,
+      "text": "5V",
+      "size": 44
+    },
+    {
+      "ref": "ftdi.GND",
+      "dx": 250,
+      "text": "GND",
+      "size": 44
+    },
+    {
+      "ref": "ftdi.@t",
+      "dy": -110,
+      "text": "FTDI programmer",
+      "size": 50
+    },
+    {
+      "ref": "cam.@t",
+      "dy": -110,
+      "text": "ESP32-CAM",
+      "size": 50
+    }
+  ],
+  "preview_scale": 2
+}

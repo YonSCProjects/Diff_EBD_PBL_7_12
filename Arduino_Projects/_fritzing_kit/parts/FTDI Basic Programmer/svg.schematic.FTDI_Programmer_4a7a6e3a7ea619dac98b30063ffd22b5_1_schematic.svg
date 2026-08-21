@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" x="0in" y="0in" version="1.2" width="1.1in" height="1in" viewBox="0 0 27.94 25.4"  baseProfile="tiny">
+    <desc >
+        <referenceFile >FTDI Basic-v13_3.3v_schematic.svg</referenceFile>
+    </desc>
+    <g gorn="0.1" id="schematic" >
+        <rect x="5.23875" stroke-width="0.3175" y="5.23875" stroke="#000000" width="17.4625" stroke-linecap="round" class="interior rect" height="14.9225" fill="#FFFFFF" />
+        <line stroke-width="0.246944" gorn="0.1.1" stroke="#787878" id="connector8pin" stroke-linecap="round" y1="12.7" class="pin" y2="12.7" fill="none" x1="22.7365"  x2="27.8165"/>
+        <text stroke-width="0" font-size="1.23472" x="22.2426" y="12.9469" font-family="'Droid Sans'" stroke="none" class="text" fill="#8c8c8c" text-anchor="end" >TXO</text>
+        <rect x="27.8165" stroke-width="0" y="12.5765" gorn="0.1.3" stroke="none" id="connector8terminal" width="0.246944" class="terminal" height="0.246944" fill="none" />
+        <line stroke-width="0.246944" gorn="0.1.4" stroke="#787878" id="connector7pin" stroke-linecap="round" y1="15.24" class="pin" y2="15.24" fill="none" x1="22.7365"  x2="27.8165"/>
+        <text stroke-width="0" font-size="1.23472" x="22.2426" y="15.4869" font-family="'Droid Sans'" stroke="none" class="text" fill="#8c8c8c" text-anchor="end" >RXI</text>
+        <rect x="27.8165" stroke-width="0" y="15.1165" gorn="0.1.6" stroke="none" id="connector7terminal" width="0.246944" class="terminal" height="0.246944" fill="none" />
+        <line stroke-width="0.246944" gorn="0.1.7" stroke="#787878" id="connector10pin" stroke-linecap="round" y1="12.7" class="pin" y2="12.7" fill="none" x1="0.123472"  x2="5.20347"/>
+        <text stroke-width="0" font-size="1.23472" x="5.69736" y="12.9469" font-family="'Droid Sans'" stroke="none" class="text" fill="#8c8c8c" text-anchor="start" >CTS</text>
+        <rect x="-0.123472" stroke-width="0" y="12.5765" gorn="0.1.9" stroke="none" id="connector10terminal" width="0.246944" class="terminal" height="0.246944" fill="none" />
+        <line stroke-width="0.246944" gorn="0.1.10" stroke="#787878" id="connector6pin" stroke-linecap="round" y1="15.24" class="pin" y2="15.24" fill="none" x1="0.123472"  x2="5.20347"/>
+        <text stroke-width="0" font-size="1.23472" x="5.69736" y="15.4869" font-family="'Droid Sans'" stroke="none" class="text" fill="#8c8c8c" text-anchor="start" >DTR</text>
+        <rect x="-0.123472" stroke-width="0" y="15.1165" gorn="0.1.12" stroke="none" id="connector6terminal" width="0.246944" class="terminal" height="0.246944" fill="none" />
+        <line stroke-width="0.246944" gorn="0.1.13" stroke="#787878" id="connector11pin" stroke-linecap="round" y1="20.1965" class="pin" y2="25.2765" fill="none" x1="12.7"  x2="12.7"/>
+        <g transform="translate(12.9469,19.7026)" >
+            <g >
+                <g >
+                    <g >
+                        <g transform="rotate(270)" >
+                            <g >
+                                <g >
+                                    <g >
+                                        <text stroke-width="0" font-size="1.23472" x="0" y="0" font-family="'Droid Sans'" stroke="none" class="text" fill="#8c8c8c" text-anchor="start" >GND</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <rect x="12.5765" stroke-width="0" y="25.2765" gorn="0.1.15" stroke="none" id="connector11terminal" width="0.246944" class="terminal" height="0.246944" fill="none" />
+        <line stroke-width="0.246944" gorn="0.1.16" stroke="#787878" id="connector9pin" stroke-linecap="round" y1="0.123472" class="pin" y2="5.20347" fill="none" x1="12.7"  x2="12.7"/>
+        <g transform="translate(12.9469,5.69736)" >
+            <g >
+                <g >
+                    <g >
+                        <g transform="rotate(270)" >
+                            <g >
+                                <g >
+                                    <g >
+                                        <text stroke-width="0" font-size="1.23472" x="0" y="0" font-family="'Droid Sans'" stroke="none" class="text" fill="#8c8c8c" text-anchor="end" >POWER</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <rect x="12.5765" stroke-width="0" y="-0.123472" gorn="0.1.18" stroke="none" id="connector9terminal" width="0.246944" class="terminal" height="0.246944" fill="none" />
+        <text stroke-width="0" font-size="1.49931" x="14.1288" y="12.4119" font-family="'Droid Sans'" gorn="0.1.19" id="label" stroke="none" class="text" fill="#000000" text-anchor="middle" >FTDI Basic</text>
+        <text stroke-width="0" font-size="1.49931" x="14.1288" y="14.0112" font-family="'Droid Sans'" gorn="0.1.20" id="label" stroke="none" class="text" fill="#000000" text-anchor="middle" >Programmer</text>
+    </g>
+</svg>

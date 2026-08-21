@@ -1,0 +1,255 @@
+{
+  "name": "w_p6_03a_led",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "bb",
+      "core": "breadboard2",
+      "x": 0,
+      "y": 330,
+      "title": "Breadboard"
+    },
+    {
+      "id": "esp",
+      "part": "DOIT Esp32 DevKit v1 improved",
+      "x": 20,
+      "y": 110,
+      "title": "ESP32 DevKit V1"
+    },
+    {
+      "id": "dht",
+      "part": "DHT22 temperature-humidity sensor",
+      "x": 347.292,
+      "y": 229.977,
+      "title": "DHT22",
+      "snap": {
+        "pin": "VCC",
+        "to": "bb.pin40J"
+      }
+    },
+    {
+      "id": "oled",
+      "part": "OLED-128x64-I2C-Monochrome-Display-GND-VDD",
+      "x": 132.312,
+      "y": 403.919,
+      "title": "OLED SSD1306",
+      "snap": {
+        "pin": "GND",
+        "to": "bb.pin18F"
+      }
+    },
+    {
+      "id": "led",
+      "core": "LED-generic-5mm",
+      "x": 43.991,
+      "y": 374.974,
+      "title": "LED",
+      "snap": {
+        "pin": "cathode",
+        "to": "bb.pin5E",
+        "offset": [
+          0,
+          -30.8
+        ]
+      },
+      "properties": {
+        "color": "Red (633nm)"
+      }
+    },
+    {
+      "id": "res",
+      "core": "resistor",
+      "x": 57.749,
+      "y": 452.318,
+      "title": "220 ohm",
+      "snap": {
+        "pin": "Pin 0",
+        "to": "bb.pin6C"
+      },
+      "properties": {
+        "resistance": "220"
+      }
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "esp.3V3",
+      "to": "bb.pin12Y",
+      "color": "#cc1414",
+      "route": "vh",
+      "width": 32
+    },
+    {
+      "from": "esp.GND.2",
+      "to": "bb.pin15Z",
+      "color": "#000000",
+      "route": "vh",
+      "width": 32,
+      "out": [
+        "right",
+        150
+      ]
+    },
+    {
+      "from": "bb.pin40I",
+      "to": "bb.pin39Y",
+      "color": "#cc1414",
+      "route": "hv"
+    },
+    {
+      "from": "bb.pin42I",
+      "to": "bb.pin45Z",
+      "color": "#000000",
+      "route": "hv"
+    },
+    {
+      "from": "bb.pin41G",
+      "to": "esp.D4",
+      "color": "#f28a00",
+      "route": "hv",
+      "via": [
+        {
+          "ref": "esp.D4",
+          "dx": 330
+        }
+      ]
+    },
+    {
+      "from": "bb.pin18J",
+      "to": "bb.pin18Z",
+      "color": "#000000"
+    },
+    {
+      "from": "bb.pin19J",
+      "to": "bb.pin19Y",
+      "color": "#cc1414"
+    },
+    {
+      "from": "bb.pin20I",
+      "to": "esp.D22",
+      "color": "#25cc35",
+      "route": "hv",
+      "via": [
+        {
+          "ref": "esp.D22",
+          "dx": 620
+        }
+      ]
+    },
+    {
+      "from": "bb.pin21H",
+      "to": "esp.D21",
+      "color": "#418dd9",
+      "route": "hv",
+      "via": [
+        {
+          "ref": "esp.D21",
+          "dx": 470
+        }
+      ]
+    },
+    {
+      "from": "bb.pin10B",
+      "to": "esp.D26",
+      "color": "#f28a00",
+      "route": "hv",
+      "via": [
+        {
+          "ref": "esp.D26",
+          "dx": -220
+        }
+      ]
+    },
+    {
+      "from": "bb.pin5D",
+      "to": "bb.pin4Z",
+      "color": "#000000",
+      "route": "hv"
+    }
+  ],
+  "labels": [
+    {
+      "ref": "esp.3V3",
+      "dx": 200,
+      "text": "3V3",
+      "size": 52
+    },
+    {
+      "ref": "esp.GND.2",
+      "dx": 420,
+      "text": "GND",
+      "size": 52
+    },
+    {
+      "ref": "esp.D4",
+      "dx": -210,
+      "text": "4",
+      "size": 56
+    },
+    {
+      "ref": "bb.pin3Y",
+      "dx": -150,
+      "text": "+",
+      "size": 60,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "bb.pin3Z",
+      "dx": -150,
+      "dy": -120,
+      "text": "−",
+      "size": 60
+    },
+    {
+      "ref": "dht.@t",
+      "dy": -110,
+      "text": "DHT22",
+      "size": 52
+    },
+    {
+      "ref": "bb.pin40J",
+      "dx": 0,
+      "dy": 430,
+      "text": "+",
+      "size": 46,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "bb.pin41J",
+      "dx": 0,
+      "dy": 560,
+      "text": "out",
+      "size": 46
+    },
+    {
+      "ref": "bb.pin42J",
+      "dx": 0,
+      "dy": 430,
+      "text": "−",
+      "size": 46
+    },
+    {
+      "ref": "esp.D26",
+      "dx": 210,
+      "text": "26",
+      "size": 56
+    },
+    {
+      "ref": "res.@t",
+      "dy": -90,
+      "text": "220 Ω",
+      "size": 46
+    },
+    {
+      "ref": "led.@t",
+      "dx": -20,
+      "dy": -90,
+      "text": "LED",
+      "size": 46
+    }
+  ]
+}

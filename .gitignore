@@ -31,3 +31,9 @@ desktop.ini
 
 # Runtime lock files
 .claude/scheduled_tasks.lock
+
+# _fritzing_kit intermediates (regenerable by build_figure.js)
+**/images/fritzing/*.pins.json
+**/images/fritzing/*.spec.tmp.json
+**/images/fritzing/*_preview.png
+**/images/fritzing/_export_*/

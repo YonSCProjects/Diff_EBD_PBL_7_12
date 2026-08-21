@@ -31,7 +31,7 @@
 // ---- YOUR CAR'S NAME (English letters/numbers for the Wi-Fi) ----
 const char* CAR_WIFI_NAME = "CAR-01";     // change 01 to your station number
 
-// ---- SPEED (0-200 maximum! fresh batteries are strong) ----
+// ---- SPEED (0-200 maximum! 8 x AA = 12V - fresh batteries are strong) ----
 const int SPEED      = 170;   // driving speed
 const int TURN_SPEED = 150;   // pivot-turn speed
 

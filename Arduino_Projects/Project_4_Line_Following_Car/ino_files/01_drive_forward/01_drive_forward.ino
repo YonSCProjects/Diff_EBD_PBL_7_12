@@ -31,8 +31,9 @@ const int IN1 = 9;   // left motor pair direction
 const int ENA = 10;  // left motor pair speed (PWM)
 
 // ---- SPEED (0 = stopped, 200 = fastest allowed) ----
-// Keep speeds at 200 or below: a freshly charged 8.4V battery
-// pack would over-volt the 3-6V motors at full (255) duty.
+// Keep speeds at 200 or below: the 8 x AA pack is 12V when fresh, and
+// full (255) duty would over-volt the 3-6V motors. (Alkaline cells fresh
+// out of the pack are strong - 160 is gentler on the motors.)
 const int DRIVE_SPEED = 150;  // medium speed for the first test
 
 

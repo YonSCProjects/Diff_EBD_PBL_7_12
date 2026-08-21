@@ -31,7 +31,7 @@
 // ---- YOUR EXPLORER'S NAME (English letters/numbers) ----
 const char* CAR_WIFI_NAME = "EXPLORER-01";   // change 01 to your station number
 
-// ---- SPEED (0-200 maximum! fresh batteries are strong) ----
+// ---- SPEED (0-200 maximum! 8 x AA = 12V - fresh batteries are strong) ----
 const int SPEED      = 160;   // driving speed
 const int TURN_SPEED = 140;   // pivot-turn speed
 

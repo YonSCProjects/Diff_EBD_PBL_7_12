@@ -9,8 +9,8 @@
 //
 //   BASE_SPEED  - how fast the car drives (0-200).
 //                 Slow ~110, medium ~140, fast ~180.
-//                 200 is the MAX - a freshly charged 8.4V battery
-//                 pack would over-volt the 3-6V motors above that.
+//                 200 is the MAX - the 8 x AA pack is 12V when fresh and
+//                 would over-volt the 3-6V motors above that.
 //   CORRECTION  - how strongly the car steers back to the line.
 //                 Gentle ~60, strong ~110.
 //                 (CORRECTION must stay SMALLER than BASE_SPEED.)

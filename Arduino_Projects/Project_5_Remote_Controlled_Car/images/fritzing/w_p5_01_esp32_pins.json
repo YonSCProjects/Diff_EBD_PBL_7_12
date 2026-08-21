@@ -1,0 +1,28 @@
+{
+  "name": "w_p5_01_esp32_pins",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "preview_scale": 2,
+  "instances": [
+    { "id": "esp", "part": "DOIT Esp32 DevKit v1 improved", "x": 100, "y": 100, "title": "ESP32 DevKit V1" }
+  ],
+  "shapes": [
+    { "a": "esp.D32", "b": "esp.D14", "pad": 62, "stroke": "#25cc35", "strokeWidth": 12, "rx": 40 }
+  ],
+  "wires": [],
+  "labels": [
+    { "ref": "esp.D32", "dx": -220, "text": "32", "size": 58 },
+    { "ref": "esp.D33", "dx": -220, "text": "33", "size": 58 },
+    { "ref": "esp.D25", "dx": -220, "text": "25", "size": 58 },
+    { "ref": "esp.D26", "dx": -220, "text": "26", "size": 58 },
+    { "ref": "esp.D27", "dx": -220, "text": "27", "size": 58 },
+    { "ref": "esp.D14", "dx": -220, "text": "14", "size": 58 },
+    { "ref": "esp.GND", "dx": -240, "text": "GND", "size": 54 },
+    { "ref": "esp.VIN", "dx": -240, "text": "VIN", "size": 54 },
+    { "ref": "esp.D25", "dx": -560, "dy": 50, "text": "six in\na row", "size": 52, "fill": "#eafbe7", "stroke": "#25cc35" },
+    { "ref": "esp.@b", "dy": -250, "text": "USB", "size": 56 },
+    { "ref": "esp.@br", "dx": -170, "dy": -150, "text": "BOOT", "size": 46 },
+    { "ref": "esp.@bl", "dx": 170, "dy": -150, "text": "EN", "size": 46 },
+    { "ref": "esp.@t", "dy": -120, "text": "ESP32 DevKit V1", "size": 58 }
+  ]
+}

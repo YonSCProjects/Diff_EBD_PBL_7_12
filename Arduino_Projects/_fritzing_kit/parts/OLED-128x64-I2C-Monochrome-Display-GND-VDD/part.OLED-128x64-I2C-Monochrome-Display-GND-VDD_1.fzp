@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<module fritzingVersion="0.9.4" moduleId="OLED-128x64-I2C-Monochrome-Display-GND-VDD_1" referenceFile="OLED-128x64-I2C-Monochrome-Display-GND-VDD_1.fzp">
+  <author>Metod Sem (modified by vanepp Feb 2021)</author>
+  <title>OLED 128x64 I2C Monochrome Display GND-VDD</title>
+  <label>OLED</label>
+  <date>Wed Jul 8 2020</date>
+  <url/>
+  <tags>
+    <tag>OLED</tag>
+    <tag>SD1306</tag>
+    <tag>I2C</tag>
+    <tag>display</tag>
+  </tags>
+  <properties>
+    <property name="family">OLED I2C</property>
+    <property name="variant">GND-VDD</property>
+    <property name="layer"/>
+    <property name="part number"/>
+  </properties>
+  <description>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;"&gt;
+    &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;&lt;span style=" font-size:8pt;"&gt;OLED 128x64 I2C Monochrome Display. Note: there are two variants of this part, this one is the GND VDD SCK SDA variant. The other is VDD GND SCK SDA. Make sure you select the part that matches your module as using the incorrect part will probably destroy your module! In addition the mounting holes are marked on silkscreen but not by default drilled. If you want drilled mounting holes, copy a hole from core parts/pcb in to your sketch over top of the mounting hole on silkscreen and set the size of the hole the approriate value.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <views>
+    <iconView>
+      <layers image="breadboard/OLED-128x64-I2C-Monochrome-Display-GND-VDD_1_breadboard.svg">
+        <layer layerId="icon"/>
+      </layers>
+    </iconView>
+    <breadboardView>
+      <layers image="breadboard/OLED-128x64-I2C-Monochrome-Display-GND-VDD_1_breadboard.svg">
+        <layer layerId="breadboard"/>
+      </layers>
+    </breadboardView>
+    <schematicView>
+      <layers image="schematic/OLED-128x64-I2C-Monochrome-Display-GND-VDD_1_schematic.svg">
+        <layer layerId="schematic"/>
+      </layers>
+    </schematicView>
+    <pcbView>
+      <layers image="pcb/OLED-128x64-I2C-Monochrome-Display-GND-VDD_1_pcb.svg">
+        <layer layerId="copper0"/>
+        <layer layerId="copper1"/>
+        <layer layerId="silkscreen"/>
+      </layers>
+    </pcbView>
+  </views>
+  <connectors>
+    <connector type="male" name="GND" id="connector0">
+      <description>Ground</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" svgId="connector0pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector0terminal" svgId="connector0pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper1" svgId="connector0pin"/>
+          <p layer="copper0" svgId="connector0pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector type="male" name="VDD" id="connector1">
+      <description>3V3</description>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" svgId="connector1pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector1terminal" svgId="connector1pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper1" svgId="connector1pin"/>
+          <p layer="copper0" svgId="connector1pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector type="male" name="SCK" id="connector2">
+      <description/>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" svgId="connector2pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector2terminal" svgId="connector2pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper1" svgId="connector2pin"/>
+          <p layer="copper0" svgId="connector2pin"/>
+        </pcbView>
+      </views>
+    </connector>
+    <connector type="male" name="SDA" id="connector3">
+      <description/>
+      <views>
+        <breadboardView>
+          <p layer="breadboard" svgId="connector3pin"/>
+        </breadboardView>
+        <schematicView>
+          <p layer="schematic" terminalId="connector3terminal" svgId="connector3pin"/>
+        </schematicView>
+        <pcbView>
+          <p layer="copper1" svgId="connector3pin"/>
+          <p layer="copper0" svgId="connector3pin"/>
+        </pcbView>
+      </views>
+    </connector>
+  </connectors>
+</module>

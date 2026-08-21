@@ -1,4 +1,14 @@
-# Project 4 wiring-diagram sources (hybrid pipeline)
+# Project 4 wiring-diagram sources
+
+**2026-08-22:** `w_p4_01_motors_to_driver`, `w_p4_02_power_and_common_ground`,
+`w_p4_04_line_sensors` and `w_p4_01_driver_wiring` were regenerated with real parts
+(4 TT motors, 8×AA battery box, native Uno / breadboard / TCRT5000 modules) through
+`Arduino_Projects/_fritzing_kit/` — specs come from `gen_specs.py` here, build with
+`node ../../../_fritzing_kit/build_figure.js <name>.json`. The `.fzz` files of those four
+figures are now kit-built (parts bundled inside). `w_p4_00`, `w_p4_03` and `w_p4_05` are
+unchanged exports from the older pipeline described below.
+
+## Older hybrid pipeline (kept for w_p4_03 / w_p4_05)
 
 The Fritzing parts library has no L298N driver, TCRT5000 line sensor, or
 4xAA holder, so the P4 diagrams are **hybrid**: a real Fritzing export as

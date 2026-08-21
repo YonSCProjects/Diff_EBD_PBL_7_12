@@ -1,0 +1,125 @@
+{
+  "name": "w_p7_03_cam_to_l298n",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "drv",
+      "part": "L298N-DC-motor-driver-improved",
+      "x": 60,
+      "y": 0,
+      "title": "L298N"
+    },
+    {
+      "id": "cam",
+      "part": "ESP32-CAM_FRONT-fixed",
+      "x": 330,
+      "y": 190,
+      "title": "ESP32-CAM"
+    }
+  ],
+  "shapes": [
+    {
+      "a": "drv.ENA",
+      "b": "drv.+5V-J1",
+      "pad": 42,
+      "fill": "#1a1a1a",
+      "stroke": "#000",
+      "rx": 10
+    },
+    {
+      "a": "drv.ENB",
+      "b": "drv.+5V-J2",
+      "pad": 42,
+      "fill": "#1a1a1a",
+      "stroke": "#000",
+      "rx": 10
+    }
+  ],
+  "wires": [
+    {
+      "from": "drv.IN1",
+      "to": "cam.IO14",
+      "color": "#f28a00",
+      "route": "vh"
+    },
+    {
+      "from": "drv.IN2",
+      "to": "cam.IO15",
+      "color": "#f28a00",
+      "route": "vh"
+    },
+    {
+      "from": "drv.IN3",
+      "to": "cam.IO13",
+      "color": "#25cc35",
+      "route": "vh"
+    },
+    {
+      "from": "drv.IN4",
+      "to": "cam.IO12",
+      "color": "#25cc35",
+      "route": "vh"
+    }
+  ],
+  "labels": [
+    {
+      "ref": "cam.IO14",
+      "dx": 210,
+      "text": "14",
+      "size": 56
+    },
+    {
+      "ref": "cam.IO15",
+      "dx": 210,
+      "text": "15",
+      "size": 56
+    },
+    {
+      "ref": "cam.IO13",
+      "dx": 210,
+      "text": "13",
+      "size": 56
+    },
+    {
+      "ref": "cam.IO12",
+      "dx": 210,
+      "text": "12",
+      "size": 56
+    },
+    {
+      "ref": "drv.IN1",
+      "dy": -200,
+      "text": "IN1",
+      "size": 50
+    },
+    {
+      "ref": "drv.IN2",
+      "dy": -340,
+      "text": "IN2",
+      "size": 50
+    },
+    {
+      "ref": "drv.IN3",
+      "dy": -200,
+      "text": "IN3",
+      "size": 50
+    },
+    {
+      "ref": "drv.IN4",
+      "dy": -340,
+      "text": "IN4",
+      "size": 50
+    },
+    {
+      "ref": "drv.+5V-J2",
+      "dx": 520,
+      "dy": -260,
+      "text": "ENA / ENB caps\nstay ON",
+      "size": 44,
+      "leader": true,
+      "fill": "#fff8d6",
+      "stroke": "#b08900"
+    }
+  ]
+}

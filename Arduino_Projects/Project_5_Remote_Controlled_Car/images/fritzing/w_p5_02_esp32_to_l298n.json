@@ -1,0 +1,37 @@
+{
+  "name": "w_p5_02_esp32_to_l298n",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    { "id": "drv", "part": "L298N-DC-motor-driver-improved", "x": 80, "y": 40, "title": "L298N" },
+    { "id": "esp", "part": "DOIT Esp32 DevKit v1 improved", "x": 330, "y": 170, "title": "ESP32 DevKit V1" }
+  ],
+  "wires": [
+    { "from": "drv.ENA", "to": "esp.D32", "color": "#25cc35", "route": "vh" },
+    { "from": "drv.IN1", "to": "esp.D33", "color": "#f28a00", "route": "vh" },
+    { "from": "drv.IN2", "to": "esp.D25", "color": "#f28a00", "route": "vh" },
+    { "from": "drv.IN3", "to": "esp.D26", "color": "#f28a00", "route": "vh" },
+    { "from": "drv.IN4", "to": "esp.D27", "color": "#f28a00", "route": "vh" },
+    { "from": "drv.ENB", "to": "esp.D14", "color": "#25cc35", "route": "vh" },
+    { "from": "drv.5V", "to": "esp.VIN", "color": "#cc1414", "route": "vh", "width": 36 },
+    { "from": "drv.GND", "to": "esp.GND", "color": "#000000", "route": "vh", "width": 36 }
+  ],
+  "labels": [
+    { "ref": "esp.D32", "dx": -230, "text": "32", "size": 64 },
+    { "ref": "esp.D33", "dx": -230, "text": "33", "size": 64 },
+    { "ref": "esp.D25", "dx": -230, "text": "25", "size": 64 },
+    { "ref": "esp.D26", "dx": -230, "text": "26", "size": 64 },
+    { "ref": "esp.D27", "dx": -230, "text": "27", "size": 64 },
+    { "ref": "esp.D14", "dx": -230, "text": "14", "size": 64 },
+    { "ref": "esp.GND", "dx": -230, "text": "GND", "size": 56 },
+    { "ref": "esp.VIN", "dx": -230, "text": "VIN", "size": 56 },
+    { "ref": "drv.ENA", "dy": -170, "text": "ENA", "size": 50 },
+    { "ref": "drv.IN1", "dy": -300, "text": "IN1", "size": 50 },
+    { "ref": "drv.IN2", "dy": -170, "text": "IN2", "size": 50 },
+    { "ref": "drv.IN3", "dy": -300, "text": "IN3", "size": 50 },
+    { "ref": "drv.IN4", "dy": -170, "text": "IN4", "size": 50 },
+    { "ref": "drv.ENB", "dy": -300, "text": "ENB", "size": 50 },
+    { "ref": "drv.5V", "dx": 0, "dy": 300, "text": "5V", "size": 56 },
+    { "ref": "drv.GND", "dx": -250, "dy": 300, "text": "GND", "size": 56 }
+  ]
+}

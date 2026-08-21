@@ -6,6 +6,7 @@ const path = require('path');
 (async () => {
   const svgPath = process.argv[2];
   const pngPath = process.argv[3];
+  const scale = Number(process.argv[4]) || 1; // optional zoom for inspection
   if (!svgPath || !pngPath) {
     console.error('Usage: node svg_to_png.js <input.svg> <output.png>');
     process.exit(1);
@@ -14,7 +15,7 @@ const path = require('path');
   const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   try {
     const page = await browser.newPage();
-    await page.setViewport({ width: 1400, height: 1000, deviceScaleFactor: 1 });
+    await page.setViewport({ width: 1400, height: 1000, deviceScaleFactor: scale });
     await page.goto(fileUrl, { waitUntil: 'load', timeout: 60000 });
     // Give the SVG a white backdrop (SVG documents have no <body>).
     await page.evaluate(() => {

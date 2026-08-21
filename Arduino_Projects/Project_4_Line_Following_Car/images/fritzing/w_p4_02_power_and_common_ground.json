@@ -1,0 +1,139 @@
+{
+  "name": "w_p4_02_power_and_common_ground",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "drv",
+      "part": "L298N-DC-motor-driver-improved",
+      "x": 400,
+      "y": 0,
+      "title": "L298N"
+    },
+    {
+      "id": "bat",
+      "part": "8xAA_box",
+      "x": -170,
+      "y": 300,
+      "title": "8 x AA battery box"
+    },
+    {
+      "id": "uno",
+      "core": "arduino_Uno_Rev3(fix)",
+      "x": 440,
+      "y": 250,
+      "title": "Arduino Uno",
+      "snap": {
+        "pin": "c53",
+        "to": "drv.ENA",
+        "axis": "x"
+      }
+    },
+    {
+      "id": "bb",
+      "core": "breadboard2",
+      "x": 600,
+      "y": 290,
+      "title": "Breadboard"
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "bat.+",
+      "to": "drv.12V",
+      "color": "#cc1414",
+      "width": 36
+    },
+    {
+      "from": "bat.-",
+      "to": "drv.GND",
+      "color": "#000000",
+      "width": 36
+    },
+    {
+      "from": "drv.GND",
+      "to": "uno.c89",
+      "color": "#000000",
+      "width": 44
+    },
+    {
+      "from": "uno.c87",
+      "to": "bb.pin5W",
+      "color": "#cc1414",
+      "route": "vh",
+      "width": 32
+    },
+    {
+      "from": "uno.c88",
+      "to": "bb.pin3X",
+      "color": "#000000",
+      "route": "vh",
+      "width": 32
+    }
+  ],
+  "labels": [
+    {
+      "ref": "bat.+",
+      "dx": -90,
+      "dy": -120,
+      "text": "+",
+      "size": 90,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "bat.-",
+      "dx": -90,
+      "dy": 120,
+      "text": "−",
+      "size": 90
+    },
+    {
+      "ref": "drv.12V",
+      "dx": -150,
+      "dy": 260,
+      "text": "12V",
+      "size": 64
+    },
+    {
+      "ref": "drv.GND",
+      "dx": 150,
+      "dy": 260,
+      "text": "GND",
+      "size": 64
+    },
+    {
+      "ref": "uno.c89",
+      "dx": 120,
+      "dy": 260,
+      "text": "★ common ground",
+      "size": 64,
+      "fill": "#fff8d6",
+      "stroke": "#b08900"
+    },
+    {
+      "ref": "uno.c87",
+      "dx": -260,
+      "dy": 420,
+      "text": "5V",
+      "size": 56
+    },
+    {
+      "ref": "bb.pin3W",
+      "dx": -150,
+      "dy": 0,
+      "text": "+",
+      "size": 60,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "bb.pin3X",
+      "dx": -150,
+      "dy": 0,
+      "text": "−",
+      "size": 60
+    }
+  ]
+}

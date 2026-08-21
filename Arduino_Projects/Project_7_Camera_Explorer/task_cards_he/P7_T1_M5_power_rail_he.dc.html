@@ -107,12 +107,20 @@
           <span style="font-size:13px;">🔋</span>
           <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Power Map — Two Rails</span>
         </div>
-        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.88 0.01 260);">Battery 7.4V ────&gt;  L298N 12V / GND    (motors)
-Battery 7.4V ────&gt;  Buck IN+ / IN-
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.88 0.01 260);">Battery 12V  ────&gt;  L298N 12V / GND    (motors)
+Battery 12V  ────&gt;  Buck IN+ / IN-
 </span><span style="color:oklch(0.82 0.13 90);">Buck OUT 5V  ────&gt;  CAM 5V / GND       (camera only!)
 Capacitor across CAM 5V-GND   (stripe -&gt; GND)
 </span><span style="color:oklch(0.78 0.15 145);">All GND joined together</span></pre>
       </div>
+
+      <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85); margin-bottom:30px;">
+        <div dir="ltr" style="padding:22px 18px 14px; display:flex; justify-content:center;">
+          <img src="./assets/w_p7_02_power_rails_breadboard.svg" alt="תרשים חשמל: בית סוללות 8 סוללות AA מחובר לבקר L298N ולכניסת ממיר המתח; יציאת הממיר 5V אל המצלמה ESP32-CAM עם קבל בין 5V ל-GND" style="width:640px; max-width:100%; height:auto;" />
+        </div>
+        <div style="padding:11px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>שתי מסילות חשמל:</strong> בית הסוללות (8 סוללות AA) אל 12V ו-GND של הבקר ואל IN של הממיר; OUT של הממיר (5V) אל 5V ו-GND של המצלמה, והקבל צמוד למצלמה. כל ה"מינוסים" מחוברים יחד.</div>
+      </div>
+
 
       <!-- EXPECTED -->
       <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">

@@ -15,6 +15,8 @@ build_output/*
 !build_output/Project_4_Cards*.pdf
 !build_output/Project_5_Cards*.html
 !build_output/Project_5_Cards*.pdf
+!build_output/Project_6_Cards*.html
+!build_output/Project_6_Cards*.pdf
 !build_output/Project_7_Cards*.html
 !build_output/Project_7_Cards*.pdf
 

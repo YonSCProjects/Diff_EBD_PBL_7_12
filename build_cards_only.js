@@ -22,9 +22,9 @@ const { resolveCardFile, renderCardPdf, snapshotCardHtml, DC_FONTS_LINK, scopeCs
 // `node build_cards_only.js he` invocation still builds Project 1.
 const args = process.argv.slice(2);
 const lang = args.find((a) => ['en', 'he'].includes(a));
-const projectKey = args.find((a) => ['1', '2', '3', '4', '5', '7'].includes(a)) || '1';
+const projectKey = args.find((a) => ['1', '2', '3', '4', '5', '6', '7'].includes(a)) || '1';
 if (!lang) {
-  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3|4|5|7]');
+  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3|4|5|6|7]');
   process.exit(1);
 }
 
@@ -65,6 +65,12 @@ const PROJECTS = {
     outBase: 'Project_5_Cards',
     titleHe: 'פרויקט 5 — מכונית נשלטת מרחוק: חוברת כרטיסיות (משימה)',
     titleEn: 'Project 5 — Remote-Controlled Car: Cards Bundle (Task)',
+  },
+  '6': {
+    dir: 'Project_6_ESP32_WiFi_Controller',
+    outBase: 'Project_6_Cards',
+    titleHe: 'פרויקט 6 — תחנת מזג אוויר ב-ESP32: חוברת כרטיסיות (משימה)',
+    titleEn: 'Project 6 — ESP32 Wi-Fi Controller: Cards Bundle (Task)',
   },
   '7': {
     dir: 'Project_7_Camera_Explorer',
@@ -180,6 +186,23 @@ const CARD_STEMS = {
     'T:T2_M4_page_design',
     'T:T2_M5_layout_with_claude',
     'T:T2_M6_signature_drive',
+    'T:T3_project_planner',
+  ],
+  '6': [
+    'T:T1_M1_toolchain_and_libraries',
+    'T:T1_M2_wire_dht22',
+    'T:T1_M3_upload_sensor_serial',
+    'T:T1_M4_wire_oled_i2c',
+    'T:T1_M5_upload_screen',
+    'T:T1_M6_upload_wifi_connect',
+    'T:T1_M7_live_page',
+    'T:T1_M8_show_celebrate',
+    'T:T2_M1_startup',
+    'T:T2_M2_pick_output',
+    'T:T2_M3_set_threshold',
+    'T:T2_M4_page_style_with_claude',
+    'T:T2_M5_station_identity',
+    'T:T2_M6_signature_station',
     'T:T3_project_planner',
   ],
   '7': [

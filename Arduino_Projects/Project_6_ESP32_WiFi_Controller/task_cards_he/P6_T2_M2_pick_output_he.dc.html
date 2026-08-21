@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./card_nav.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 6 · תחנת מזג אוויר
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול יוצרים · כרטיסייה V2</div>
+      </div>
+
+      <div style="margin-top:16px; font-size:12.5px; font-weight:600; color:rgba(255,255,255,0.62);">פרויקט #6 — תחנת מזג אוויר: שלב 2 מתוך 6</div>
+
+      <h1 style="margin:10px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">בוחרים מה קורה כשהלחות עולה</h1>
+
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;"><strong style="color:#fff;">התחנה תגיב — אתם בוחרים איך.</strong></p>
+
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>מסלול יוצרים · שלב 2 מתוך 6</span><span>33%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:33.3%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <!-- STEP 1: pick -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 8px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.95 0.06 90); color:oklch(0.5 0.12 75); font-size:16px;">🎯</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 1 — בוחרים את הפלט</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:14.5px; line-height:1.5; color:oklch(0.55 0.012 260);">לוחצים על האפשרות שאתם רוצים — היא תיבחר ותישמר. אפשר להחליף אחר כך.</p>
+
+      <!-- A: LED -->
+      <div onClick="{{ pickA }}" style="cursor:pointer; border:2px solid {{ borderA }}; background:{{ bgA }}; border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagA }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">א׳</span>
+          <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">לד מאיר <span style="font-weight:500; color:oklch(0.55 0.012 260); font-size:14px;">(הכי פשוט)</span></h3>
+          <sc-if value="{{ selA }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
+        </div>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה קורה:</strong> כשהלחות עולה מעל הסף — הלד מאיר. כשהיא יורדת — הוא כבה.</p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> הרגל הארוכה → נגד 220Ω → חיבור 26 של ה-ESP32. הרגל הקצרה → פס המינוס.</p>
+      </div>
+
+      <!-- B: buzzer -->
+      <div onClick="{{ pickB }}" style="cursor:pointer; border:2px solid {{ borderB }}; background:{{ bgB }}; border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagB }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ב׳</span>
+          <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">זמזם מצפצף <span style="font-weight:500; color:oklch(0.55 0.012 260); font-size:14px;">(זמזם אקטיבי)</span></h3>
+          <sc-if value="{{ selB }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
+        </div>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה קורה:</strong> כשהלחות עולה מעל הסף — הזמזם מצפצף ברציפות עד שהיא יורדת.</p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> רגל + של הזמזם → חיבור 27 של ה-ESP32. רגל − → פס המינוס. בלי נגד.</p>
+      </div>
+
+      <!-- C: servo -->
+      <div onClick="{{ pickC }}" style="cursor:pointer; border:2px solid {{ borderC }}; background:{{ bgC }}; border-radius:16px; padding:18px 20px; margin-bottom:30px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <span style="flex:none; width:34px; height:34px; border-radius:10px; background:{{ tagC }}; color:#fff; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center;">ג׳</span>
+          <h3 style="margin:0; font-size:17px; font-weight:700; color:oklch(0.3 0.02 260);">מחוג סרוו שזז <span style="font-weight:500; color:oklch(0.55 0.012 260); font-size:14px;">(דרך קלוד קוד — בכרטיסייה 4)</span></h3>
+          <sc-if value="{{ selC }}" hint-placeholder-val="{{ false }}"><span style="margin-inline-start:auto; font-size:13px; font-weight:700; color:oklch(0.5 0.12 150); background:oklch(0.95 0.05 150); border-radius:999px; padding:4px 12px;">✓ נבחר</span></sc-if>
+        </div>
+        <p style="margin:0 0 6px; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה קורה:</strong> זרוע הסרוו מסתובבת לפי הלחות — כמו מחוג של מד. הקוד לזה נכתב עם קלוד קוד בכרטיסייה 4. כאן רק בוחרים ומחווטים.</p>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:oklch(0.42 0.012 260);"><strong>מה מחווטים:</strong> חוט חום (או שחור) → פס המינוס. חוט אדום → חיבור VIN של ה-ESP32 (הסרוו צריך 5V — <strong>לא לפס הפלוס</strong>). חוט כתום (אות) → חיבור 14 של ה-ESP32.</p>
+      </div>
+
+      <!-- STEP 2: wire, set, upload -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 2 — מחווטים, מגדירים, מעלים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">בוחרים למעלה — א׳, ב׳ או ג׳. אפשר להחליף אחר כך.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">מנתקים את כבל ה-USB ומחווטים את הפלט שבחרתם לפי השורה שלו במפה שלמטה.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">לד: שתי הרגליים נכנסות לשני <strong>טורים</strong> שונים בברדבורד. הנגד מגשר מהטור של הרגל הארוכה אל חיבור 26 של ה-ESP32.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">בקובץ <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:1px 6px; display:inline-block;">T2_smart_device_starter.ino</code> מוצאים את הבלוק <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:5px; padding:1px 6px; display:inline-block;">==== CHANGE THIS 2 ====</code> ומשנים רק את <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">OUTPUT_PIN</code>:</p>
+            <div style="display:flex; flex-direction:column; gap:6px; margin-top:8px; font-size:15px; line-height:1.5;">
+              <div style="display:flex; gap:9px; align-items:flex-start;"><span style="flex:none; color:oklch(0.55 0.13 285); font-weight:700;">א׳</span><span>לד ← <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">OUTPUT_PIN = 26</code></span></div>
+              <div style="display:flex; gap:9px; align-items:flex-start;"><span style="flex:none; color:oklch(0.55 0.13 285); font-weight:700;">ב׳</span><span>זמזם ← <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">OUTPUT_PIN = 27</code></span></div>
+              <div style="display:flex; gap:9px; align-items:flex-start;"><span style="flex:none; color:oklch(0.55 0.13 285); font-weight:700;">ג׳</span><span>סרוו ← משאירים <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">26</code> בינתיים. הסרוו נכנס לקוד בכרטיסייה 4.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">מחברים את כבל ה-USB ולוחצים על <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.95 0.006 260); border-radius:6px; padding:2px 7px; display:inline-block;">Upload</span>. מחכים ל-"Done uploading".</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">הפלט לא מגיב? זה תקין, לא תקלה — הסף עדיין 60% והחדר יבש מזה. את הסף קובעים בשלב הבא.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- wiring map -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מפת החיווט — שורה אחת לכל בחירה</h2>
+      </div>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:10px;">
+        <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="font-size:13px;">🔌</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Output ↔ ESP32 — pick ONE block</span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.7 0.01 260);">A  LED
+</span><span>  long leg ──── 220Ω ──── pin 26
+  short leg ─────────────  (−) rail
+</span><span style="color:oklch(0.7 0.01 260);">
+B  Active buzzer
+</span><span>  +  ───────────────────  pin 27
+  −  ───────────────────  (−) rail
+</span><span style="color:oklch(0.7 0.01 260);">
+C  Servo  (code comes in card 4)
+</span><span>  brown/black ──────────  (−) rail
+</span><span style="color:oklch(0.82 0.13 90);">  red ──────────────────  ESP32 VIN   (5V, NOT the + rail)
+</span><span>  orange (signal) ──────  pin 14
+</span><span style="color:oklch(0.7 0.01 260);">
+Rails (from card 1): ESP32 3V3 → (+) rail, ESP32 GND → (−) rail</span></pre>
+      </div>
+      <p style="margin:0 0 28px; font-size:14px; line-height:1.55; color:oklch(0.55 0.012 260);">הלד והזמזם יושבים על הברדבורד, ליד החיישן והמסך. הסרוו מתחבר בחוטי זכר-זכר ישירות.</p>
+
+      <!-- expected -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
+          <p style="margin:0; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">הפלט מחווט. המסך והדף ממשיכים להראות טמפרטורה ולחות כרגיל. הפלט עוד לא מגיב — סף ההתראה נקבע בשלב הבא.</p>
+        </div>
+      </div>
+
+      <!-- done-when -->
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימתם כש:
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בחרתם — א׳, ב׳ או ג׳</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הפלט מחווט לפי השורה שלו במפה</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span><code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px; display:inline-block;">OUTPUT_PIN</code> מוגדר לפי הבחירה</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>ההעלאה הסתיימה ב-"Done uploading"</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>המורה אישר שהחיווט נכון</span></div>
+        </div>
+      </div>
+
+      <!-- stuck -->
+      <div style="background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.45 0.12 300); margin-bottom:11px;">
+          <span style="font-size:20px;">🪄</span>תקועים?
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>הלד לא מאיר גם בהמשך? בודקים שהרגל הארוכה בצד של הנגד. אם לא — הופכים את הלד. זה תקין להפוך אותו.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>ההעלאה נכשלה? בודקים ש-Tools → Port מראה את ה-ESP32 ומנסים שוב.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>לא בטוחים בחיווט? קוראים למורה.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:3000}}">
+class Component extends DCLogic {
+  state = { checked: {}, choice: null };
+  KEY = 'tc_p6t2m2_checks';
+  CKEY = 'tc_p6t2m2_choice';
+  componentDidMount() {
+    try {
+      const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) });
+      const c = localStorage.getItem(this.CKEY); if (c) this.setState({ choice: c });
+    } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  pick(c) {
+    try { localStorage.setItem(this.CKEY, c); } catch (e) {}
+    this.setState({ choice: c });
+  }
+  renderVals() {
+    const sel = this.state.choice;
+    const on = (c) => sel === c;
+    const SEL = 'oklch(0.55 0.13 285)', OFF = 'oklch(0.9 0.006 85)';
+    const SELBG = 'oklch(0.975 0.02 285)', OFFBG = 'oklch(0.99 0.003 85)';
+    const v = {
+      pickA: () => this.pick('A'), pickB: () => this.pick('B'), pickC: () => this.pick('C'),
+      selA: on('A'), selB: on('B'), selC: on('C'),
+      borderA: on('A') ? SEL : OFF, borderB: on('B') ? SEL : OFF, borderC: on('C') ? SEL : OFF,
+      bgA: on('A') ? SELBG : OFFBG, bgB: on('B') ? SELBG : OFFBG, bgC: on('C') ? SELBG : OFFBG,
+      tagA: on('A') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)',
+      tagB: on('B') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)',
+      tagC: on('C') ? 'oklch(0.55 0.13 285)' : 'oklch(0.7 0.04 285)'
+    };
+    for (let i = 1; i <= 20; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

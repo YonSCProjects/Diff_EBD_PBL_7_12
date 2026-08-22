@@ -1,0 +1,225 @@
+{
+  "name": "w_p8_01_mosfet_channel",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "lipo",
+      "part": "lipo_1s_1000",
+      "x": 0,
+      "y": 120,
+      "title": "1S LiPo"
+    },
+    {
+      "id": "m",
+      "part": "motor_8520_cw",
+      "x": 420,
+      "y": 60,
+      "title": "Motor"
+    },
+    {
+      "id": "d",
+      "core": "diode_schottky_1N5817_300mil",
+      "x": 580,
+      "y": 60,
+      "rotation": 90,
+      "title": "Flyback diode"
+    },
+    {
+      "id": "fet",
+      "core": "basic_fet_n",
+      "x": 480,
+      "y": 120,
+      "title": "IRLB8721"
+    },
+    {
+      "id": "rg",
+      "core": "resistor",
+      "x": 340,
+      "y": 230,
+      "title": "100 ohm",
+      "properties": {
+        "resistance": "100"
+      }
+    },
+    {
+      "id": "rp",
+      "core": "resistor",
+      "x": 530,
+      "y": 228,
+      "rotation": 90,
+      "title": "10k",
+      "properties": {
+        "resistance": "10k"
+      }
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "lipo.+",
+      "to": "m.+",
+      "color": "#cc1414",
+      "width": 32,
+      "via": [
+        {
+          "ref": "lipo.+",
+          "dx": 180
+        },
+        {
+          "ref": "lipo.+",
+          "dx": 180,
+          "dy": -1455
+        },
+        {
+          "ref": "m.+",
+          "dx": -260,
+          "dy": -411
+        },
+        {
+          "ref": "m.+",
+          "dx": -260
+        }
+      ]
+    },
+    {
+      "from": {
+        "ref": "m.+",
+        "dx": -260,
+        "dy": -411
+      },
+      "to": "d.cathode",
+      "color": "#cc1414",
+      "width": 32,
+      "via": [
+        {
+          "ref": "d.cathode",
+          "dy": -229
+        }
+      ]
+    },
+    {
+      "from": "m.-",
+      "to": "fet.drain",
+      "color": "#000000",
+      "width": 30
+    },
+    {
+      "from": "d.anode",
+      "to": "fet.drain",
+      "color": "#000000",
+      "width": 30
+    },
+    {
+      "from": "fet.gate",
+      "to": "rg.Pin 1",
+      "color": "#f28a00"
+    },
+    {
+      "from": "fet.gate",
+      "to": "rp.Pin 0",
+      "color": "#f28a00"
+    },
+    {
+      "from": {
+        "ref": "rg.Pin 0",
+        "dx": -450
+      },
+      "to": "rg.Pin 0",
+      "color": "#f28a00"
+    },
+    {
+      "from": "lipo.-",
+      "to": "fet.source",
+      "color": "#000000",
+      "width": 32,
+      "via": [
+        {
+          "ref": "lipo.-",
+          "dx": 300
+        },
+        {
+          "ref": "lipo.-",
+          "dx": 300,
+          "dy": 1154
+        },
+        {
+          "ref": "fet.source",
+          "dy": 1410
+        }
+      ]
+    },
+    {
+      "from": "rp.Pin 1",
+      "to": {
+        "ref": "fet.source",
+        "dy": 1410
+      },
+      "color": "#000000",
+      "via": [
+        {
+          "ref": "rp.Pin 1",
+          "dy": 366
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "ref": "rg.Pin 0",
+      "dx": -640,
+      "text": "GPIO 25",
+      "size": 50,
+      "fill": "#fff3e0",
+      "stroke": "#b06000"
+    },
+    {
+      "ref": "rg.@t",
+      "dy": -90,
+      "text": "100 Ω",
+      "size": 44
+    },
+    {
+      "ref": "rp.@r",
+      "dx": 260,
+      "text": "10 kΩ\npull-down",
+      "size": 40
+    },
+    {
+      "ref": "fet.@r",
+      "dx": 330,
+      "dy": -100,
+      "text": "IRLB8721\nG · D · S",
+      "size": 44
+    },
+    {
+      "ref": "d.@r",
+      "dx": 360,
+      "text": "flyback\nband → BAT+",
+      "size": 40
+    },
+    {
+      "ref": "m.@t",
+      "dy": -130,
+      "text": "M1",
+      "size": 50
+    },
+    {
+      "ref": "lipo.+",
+      "dx": 180,
+      "dy": -1600,
+      "text": "BAT+",
+      "size": 50,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "lipo.-",
+      "dx": 300,
+      "dy": 1300,
+      "text": "GND",
+      "size": 50
+    }
+  ],
+  "preview_scale": 2
+}

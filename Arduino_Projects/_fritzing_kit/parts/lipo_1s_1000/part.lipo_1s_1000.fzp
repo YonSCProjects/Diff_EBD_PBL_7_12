@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.9.4" moduleId="lipo_1s_1000_yon_2026">
+    <author>Yon (drawn for the Arduino PBL program, 2026)</author>
+    <title>1S LiPo 1000 mAh (PH2.0)</title>
+    <label>P</label>
+    <date>2026-08-22</date>
+    <tags><tag>quadcopter</tag></tags>
+    <properties><property name="family">1S LiPo 1000 mAh (PH2.0)</property></properties>
+    <description>1S 3.7 V 1000 mAh LiPo pouch with a PH2.0 plug: red (+) and black (-).</description>
+    <views>
+        <iconView><layers image="icon/lipo_1s_1000_icon.svg"><layer layerId="icon"/></layers></iconView>
+        <schematicView><layers image="schematic/lipo_1s_1000_schematic.svg"><layer layerId="schematic"/></layers></schematicView>
+        <pcbView><layers image="pcb/lipo_1s_1000_pcb.svg"><layer layerId="copper0"/></layers></pcbView>
+        <breadboardView><layers image="breadboard/lipo_1s_1000_breadboard.svg"><layer layerId="breadboard"/></layers></breadboardView>
+    </views>
+    <connectors>
+        <connector id="connector0" type="male" name="+">
+            <description>+</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector0pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector0pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector0pin"/></pcbView>
+            </views>
+        </connector>
+        <connector id="connector1" type="male" name="-">
+            <description>-</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector1pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector1pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector1pin"/></pcbView>
+            </views>
+        </connector>
+    </connectors>
+</module>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3.6220in" height="1.4173in" viewBox="0 0 92.0 36.0">
+<g id="copper0">
+<rect x="1.0" y="1.0" width="52.0" height="34.0" rx="2.5" style="fill:#b9bec6;stroke:#6f747c;stroke-width:0.5"/>
+<rect x="2.5" y="2.5" width="49.0" height="31.0" rx="2" style="fill:#cfd4db;stroke:none"/>
+<rect x="7.0" y="9.0" width="40.0" height="18.0" rx="1.5" style="fill:#f2c744;stroke:#b48a10;stroke-width:0.4"/>
+<text x="27.00" y="17.20" style="font-family:Arial;font-size:4.2px;font-weight:bold;fill:#2b2b2b;text-anchor:middle">1S LiPo 3.7 V</text>
+<text x="27.00" y="23.50" style="font-family:Arial;font-size:4.6px;font-weight:bold;fill:#2b2b2b;text-anchor:middle">1000 mAh</text>
+<text x="27.00" y="28.20" style="font-family:Arial;font-size:2.6px;font-weight:normal;fill:#2b2b2b;text-anchor:middle">25C  ·  PH2.0</text>
+<path d="M 53.0 15.5 C 63.0 15.5, 71.0 14.5, 79.0 14.5" style="fill:none;stroke:#cc1414;stroke-width:1.6;stroke-linecap:round"/>
+<path d="M 53.0 20.5 C 63.0 20.5, 71.0 21.5, 79.0 21.5" style="fill:none;stroke:#111111;stroke-width:1.6;stroke-linecap:round"/>
+<rect x="79.0" y="12.5" width="8" height="10" rx="1" style="fill:#f4f4f4;stroke:#9a9a9a;stroke-width:0.4"/>
+<rect x="80.2" y="13.7" width="5.6" height="7.6" rx="0.6" style="fill:#e2e2e2;stroke:none"/>
+<rect x="87.0" y="13.8" width="3.2" height="1.4" style="fill:#c9a227;stroke:#8a6f10;stroke-width:0.2"/>
+<rect x="87.0" y="20.8" width="3.2" height="1.4" style="fill:#c9a227;stroke:#8a6f10;stroke-width:0.2"/>
+<text x="83.00" y="11.00" style="font-family:Arial;font-size:2.2px;font-weight:normal;fill:#444;text-anchor:middle">PH2.0</text>
+<rect id="connector0pin" x="89.00" y="13.90" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+<rect id="connector1pin" x="89.00" y="20.90" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+<text x="92.50" y="15.30" style="font-family:Arial;font-size:2.6px;font-weight:bold;fill:#cc1414;text-anchor:start">+</text>
+<text x="92.50" y="22.30" style="font-family:Arial;font-size:2.6px;font-weight:bold;fill:#111;text-anchor:start">−</text>
+</g></svg>

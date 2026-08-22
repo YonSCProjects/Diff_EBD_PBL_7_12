@@ -1,0 +1,359 @@
+{
+  "name": "w_p8_06_full_drone",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "esp",
+      "part": "DOIT Esp32 DevKit v1 improved",
+      "x": 0,
+      "y": 0,
+      "title": "ESP32 DevKit V1"
+    },
+    {
+      "id": "mpu",
+      "core": "InvenSense_MPU6050",
+      "x": 200,
+      "y": 20,
+      "title": "MPU6050"
+    },
+    {
+      "id": "mt",
+      "part": "mt3608_module",
+      "x": -200,
+      "y": 120,
+      "title": "MT3608 → 5.0 V"
+    },
+    {
+      "id": "lipo",
+      "part": "lipo_1s_1000",
+      "x": -300,
+      "y": 150,
+      "title": "1S LiPo 1000 mAh"
+    },
+    {
+      "id": "b",
+      "part": "mosfet_board_4ch",
+      "x": -100,
+      "y": 420,
+      "title": "MOSFET board"
+    },
+    {
+      "id": "mF",
+      "part": "motor_8520_cw",
+      "x": -58,
+      "y": 380,
+      "rotation": 270,
+      "title": "FRONT (CW)",
+      "snap": {
+        "pin": "+",
+        "to": "b.M1+",
+        "axis": "x",
+        "offset": [
+          2.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "mR",
+      "part": "motor_8520_ccw",
+      "x": -7,
+      "y": 380,
+      "rotation": 270,
+      "title": "RIGHT (CCW)",
+      "snap": {
+        "pin": "+",
+        "to": "b.M2+",
+        "axis": "x",
+        "offset": [
+          2.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "mB",
+      "part": "motor_8520_cw",
+      "x": 45,
+      "y": 380,
+      "rotation": 270,
+      "title": "BACK (CW)",
+      "snap": {
+        "pin": "+",
+        "to": "b.M3+",
+        "axis": "x",
+        "offset": [
+          2.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "mL",
+      "part": "motor_8520_ccw",
+      "x": 96,
+      "y": 380,
+      "rotation": 270,
+      "title": "LEFT (CCW)",
+      "snap": {
+        "pin": "+",
+        "to": "b.M4+",
+        "axis": "x",
+        "offset": [
+          2.5,
+          0
+        ]
+      }
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "lipo.+",
+      "to": "mt.Vin",
+      "color": "#cc1414",
+      "width": 34,
+      "route": "hv"
+    },
+    {
+      "from": "lipo.-",
+      "to": "mt.GND",
+      "color": "#000000",
+      "width": 34,
+      "route": "hv"
+    },
+    {
+      "from": "mt.Vout",
+      "to": "esp.VIN",
+      "color": "#cc1414",
+      "width": 32,
+      "route": "hv"
+    },
+    {
+      "from": "mt.GND*",
+      "to": "esp.GND",
+      "color": "#000000",
+      "width": 32,
+      "route": "hv"
+    },
+    {
+      "from": "lipo.+",
+      "to": "b.BAT+",
+      "color": "#cc1414",
+      "width": 34,
+      "route": "vh",
+      "out": [
+        "right",
+        120
+      ]
+    },
+    {
+      "from": "lipo.-",
+      "to": "b.GND",
+      "color": "#000000",
+      "width": 34,
+      "route": "vh",
+      "out": [
+        "right",
+        240
+      ]
+    },
+    {
+      "from": "esp.3V3",
+      "to": "mpu.VCC",
+      "color": "#cc1414",
+      "route": "hv",
+      "out": [
+        "right",
+        200
+      ]
+    },
+    {
+      "from": "esp.GND.2",
+      "to": "mpu.GND",
+      "color": "#000000",
+      "route": "hv",
+      "out": [
+        "right",
+        300
+      ]
+    },
+    {
+      "from": "esp.D21",
+      "to": "mpu.SDA",
+      "color": "#418dd9",
+      "route": "hv",
+      "out": [
+        "right",
+        400
+      ]
+    },
+    {
+      "from": "esp.D22",
+      "to": "mpu.SCL",
+      "color": "#e0b400",
+      "route": "hv",
+      "out": [
+        "right",
+        500
+      ]
+    },
+    {
+      "from": "esp.D25",
+      "to": "b.G1",
+      "color": "#f28a00",
+      "route": "hv",
+      "out": [
+        "left",
+        150
+      ]
+    },
+    {
+      "from": "esp.D26",
+      "to": "b.G2",
+      "color": "#f28a00",
+      "route": "hv",
+      "out": [
+        "left",
+        300
+      ]
+    },
+    {
+      "from": "esp.D14",
+      "to": "b.G3",
+      "color": "#25cc35",
+      "route": "hv",
+      "out": [
+        "left",
+        450
+      ]
+    },
+    {
+      "from": "esp.D27",
+      "to": "b.G4",
+      "color": "#25cc35",
+      "route": "hv",
+      "out": [
+        "left",
+        600
+      ]
+    },
+    {
+      "from": "mF.+",
+      "to": "b.M1+",
+      "color": "#cc1414",
+      "route": "vh"
+    },
+    {
+      "from": "mF.-",
+      "to": "b.M1-",
+      "color": "#418dd9",
+      "route": "vh"
+    },
+    {
+      "from": "mR.+",
+      "to": "b.M2+",
+      "color": "#e8e8e8",
+      "route": "vh"
+    },
+    {
+      "from": "mR.-",
+      "to": "b.M2-",
+      "color": "#000000",
+      "route": "vh"
+    },
+    {
+      "from": "mB.+",
+      "to": "b.M3+",
+      "color": "#cc1414",
+      "route": "vh"
+    },
+    {
+      "from": "mB.-",
+      "to": "b.M3-",
+      "color": "#418dd9",
+      "route": "vh"
+    },
+    {
+      "from": "mL.+",
+      "to": "b.M4+",
+      "color": "#e8e8e8",
+      "route": "vh"
+    },
+    {
+      "from": "mL.-",
+      "to": "b.M4-",
+      "color": "#000000",
+      "route": "vh"
+    }
+  ],
+  "labels": [
+    {
+      "ref": "esp.D25",
+      "dx": 230,
+      "text": "25",
+      "size": 52
+    },
+    {
+      "ref": "esp.D26",
+      "dx": 230,
+      "text": "26",
+      "size": 52
+    },
+    {
+      "ref": "esp.D14",
+      "dx": 230,
+      "text": "14",
+      "size": 52
+    },
+    {
+      "ref": "esp.D27",
+      "dx": 230,
+      "text": "27",
+      "size": 52
+    },
+    {
+      "ref": "esp.D21",
+      "dx": -230,
+      "text": "21",
+      "size": 52
+    },
+    {
+      "ref": "esp.D22",
+      "dx": -230,
+      "text": "22",
+      "size": 52
+    },
+    {
+      "ref": "mt.@t",
+      "dy": -110,
+      "text": "MT3608 → 5.0 V → VIN",
+      "size": 50
+    },
+    {
+      "ref": "mF.@t",
+      "dy": -90,
+      "text": "FRONT\nCW",
+      "size": 42
+    },
+    {
+      "ref": "mR.@t",
+      "dy": -90,
+      "text": "RIGHT\nCCW",
+      "size": 42
+    },
+    {
+      "ref": "mB.@t",
+      "dy": -90,
+      "text": "BACK\nCW",
+      "size": 42
+    },
+    {
+      "ref": "mL.@t",
+      "dy": -90,
+      "text": "LEFT\nCCW",
+      "size": 42
+    }
+  ]
+}

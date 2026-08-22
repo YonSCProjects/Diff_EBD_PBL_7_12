@@ -1,0 +1,135 @@
+{
+  "name": "w_p8_05_signals",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "esp",
+      "part": "DOIT Esp32 DevKit v1 improved",
+      "x": 0,
+      "y": 0,
+      "title": "ESP32 DevKit V1"
+    },
+    {
+      "id": "mpu",
+      "core": "InvenSense_MPU6050",
+      "x": 200,
+      "y": 20,
+      "title": "MPU6050"
+    },
+    {
+      "id": "b",
+      "part": "mosfet_board_4ch",
+      "x": -100,
+      "y": 260,
+      "title": "MOSFET board"
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "esp.D25",
+      "to": "b.G1",
+      "color": "#f28a00",
+      "route": "hv",
+      "out": [
+        "left",
+        150
+      ]
+    },
+    {
+      "from": "esp.D26",
+      "to": "b.G2",
+      "color": "#f28a00",
+      "route": "hv",
+      "out": [
+        "left",
+        300
+      ]
+    },
+    {
+      "from": "esp.D14",
+      "to": "b.G3",
+      "color": "#25cc35",
+      "route": "hv",
+      "out": [
+        "left",
+        450
+      ]
+    },
+    {
+      "from": "esp.D27",
+      "to": "b.G4",
+      "color": "#25cc35",
+      "route": "hv",
+      "out": [
+        "left",
+        600
+      ]
+    },
+    {
+      "from": "esp.D21",
+      "to": "mpu.SDA",
+      "color": "#418dd9",
+      "route": "hv",
+      "out": [
+        "right",
+        200
+      ]
+    },
+    {
+      "from": "esp.D22",
+      "to": "mpu.SCL",
+      "color": "#e0b400",
+      "route": "hv",
+      "out": [
+        "right",
+        350
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "ref": "esp.D25",
+      "dx": 230,
+      "text": "25 → G1 FRONT",
+      "size": 46
+    },
+    {
+      "ref": "esp.D26",
+      "dx": 230,
+      "text": "26 → G2 RIGHT",
+      "size": 46
+    },
+    {
+      "ref": "esp.D14",
+      "dx": 230,
+      "text": "14 → G3 BACK",
+      "size": 46
+    },
+    {
+      "ref": "esp.D27",
+      "dx": 230,
+      "text": "27 → G4 LEFT",
+      "size": 46
+    },
+    {
+      "ref": "esp.D21",
+      "dx": -230,
+      "text": "21 SDA",
+      "size": 46
+    },
+    {
+      "ref": "esp.D22",
+      "dx": -230,
+      "text": "22 SCL",
+      "size": 46
+    },
+    {
+      "ref": "mpu.@t",
+      "dy": -110,
+      "text": "MPU6050 — arrow forward, flat",
+      "size": 48
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "name": "w_p8_02_mosfet_board",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "b",
+      "part": "mosfet_board_4ch",
+      "x": 100,
+      "y": 100,
+      "title": "MOSFET board"
+    }
+  ],
+  "shapes": [],
+  "wires": [],
+  "labels": [
+    {
+      "ref": "b.BAT+",
+      "dx": -300,
+      "text": "BAT+",
+      "size": 60,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "b.GND",
+      "dx": -300,
+      "text": "GND",
+      "size": 60
+    },
+    {
+      "ref": "b.M1+",
+      "dx": 100,
+      "dy": -330,
+      "text": "M1 = FRONT",
+      "size": 52
+    },
+    {
+      "ref": "b.M2+",
+      "dx": 100,
+      "dy": -330,
+      "text": "M2 = RIGHT",
+      "size": 52
+    },
+    {
+      "ref": "b.M3+",
+      "dx": 100,
+      "dy": -330,
+      "text": "M3 = BACK",
+      "size": 52
+    },
+    {
+      "ref": "b.M4+",
+      "dx": 100,
+      "dy": -330,
+      "text": "M4 = LEFT",
+      "size": 52
+    },
+    {
+      "ref": "b.G1",
+      "dy": 360,
+      "text": "G1 ← 25",
+      "size": 50
+    },
+    {
+      "ref": "b.G2",
+      "dy": 360,
+      "text": "G2 ← 26",
+      "size": 50
+    },
+    {
+      "ref": "b.G3",
+      "dy": 360,
+      "text": "G3 ← 14",
+      "size": 50
+    },
+    {
+      "ref": "b.G4",
+      "dy": 360,
+      "text": "G4 ← 27",
+      "size": 50
+    }
+  ],
+  "preview_scale": 2
+}

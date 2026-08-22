@@ -1,0 +1,193 @@
+{
+  "name": "w_p8_03_power_tree",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "lipo",
+      "part": "lipo_1s_1000",
+      "x": -60,
+      "y": 80,
+      "title": "1S LiPo 1000 mAh"
+    },
+    {
+      "id": "mt",
+      "part": "mt3608_module",
+      "x": 150,
+      "y": 40,
+      "title": "MT3608 → 5.0 V"
+    },
+    {
+      "id": "esp",
+      "part": "DOIT Esp32 DevKit v1 improved",
+      "x": 330,
+      "y": 0,
+      "title": "ESP32 DevKit V1"
+    },
+    {
+      "id": "mpu",
+      "core": "InvenSense_MPU6050",
+      "x": 520,
+      "y": 40,
+      "title": "MPU6050"
+    },
+    {
+      "id": "b",
+      "part": "mosfet_board_4ch",
+      "x": 150,
+      "y": 250,
+      "title": "MOSFET board"
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "lipo.+",
+      "to": "mt.Vin",
+      "color": "#cc1414",
+      "width": 34,
+      "route": "hv"
+    },
+    {
+      "from": "lipo.-",
+      "to": "mt.GND",
+      "color": "#000000",
+      "width": 34,
+      "route": "hv"
+    },
+    {
+      "from": "mt.Vout",
+      "to": "esp.VIN",
+      "color": "#cc1414",
+      "width": 32,
+      "route": "hv"
+    },
+    {
+      "from": "mt.GND*",
+      "to": "esp.GND",
+      "color": "#000000",
+      "width": 32,
+      "route": "hv"
+    },
+    {
+      "from": "lipo.+",
+      "to": "b.BAT+",
+      "color": "#cc1414",
+      "width": 34,
+      "route": "vh",
+      "out": [
+        "right",
+        120
+      ]
+    },
+    {
+      "from": "lipo.-",
+      "to": "b.GND",
+      "color": "#000000",
+      "width": 34,
+      "route": "vh",
+      "out": [
+        "right",
+        240
+      ]
+    },
+    {
+      "from": "esp.3V3",
+      "to": "mpu.VCC",
+      "color": "#cc1414",
+      "route": "hv",
+      "out": [
+        "right",
+        200
+      ]
+    },
+    {
+      "from": "esp.GND.2",
+      "to": "mpu.GND",
+      "color": "#000000",
+      "route": "hv",
+      "out": [
+        "right",
+        300
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "ref": "mt.Vin",
+      "dx": -60,
+      "dy": -120,
+      "text": "IN",
+      "size": 48
+    },
+    {
+      "ref": "mt.Vout",
+      "dx": 60,
+      "dy": -120,
+      "text": "OUT 5.0 V",
+      "size": 48
+    },
+    {
+      "ref": "esp.VIN",
+      "dx": -230,
+      "text": "VIN",
+      "size": 54
+    },
+    {
+      "ref": "esp.GND",
+      "dx": -240,
+      "text": "GND",
+      "size": 54
+    },
+    {
+      "ref": "esp.3V3",
+      "dx": 230,
+      "text": "3V3",
+      "size": 52
+    },
+    {
+      "ref": "esp.GND.2",
+      "dx": 450,
+      "text": "GND",
+      "size": 52
+    },
+    {
+      "ref": "mpu.VCC",
+      "dx": -200,
+      "text": "VCC",
+      "size": 44
+    },
+    {
+      "ref": "mpu.GND",
+      "dx": -200,
+      "text": "GND",
+      "size": 44
+    },
+    {
+      "ref": "b.BAT+",
+      "dx": -260,
+      "text": "BAT+",
+      "size": 54,
+      "color": "#cc1414",
+      "stroke": "#cc1414"
+    },
+    {
+      "ref": "b.GND",
+      "dx": -260,
+      "text": "GND",
+      "size": 54
+    },
+    {
+      "ref": "mt.@t",
+      "dy": -110,
+      "text": "MT3608 — pre-tuned to 5.0 V",
+      "size": 50
+    },
+    {
+      "ref": "lipo.@b",
+      "dy": 120,
+      "text": "1S LiPo · PH2.0",
+      "size": 50
+    }
+  ]
+}

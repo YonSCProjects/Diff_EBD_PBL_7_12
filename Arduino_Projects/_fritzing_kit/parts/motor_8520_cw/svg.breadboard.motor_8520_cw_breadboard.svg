@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1.3386in" height="0.4724in" viewBox="0 0 34.0 12.0">
+<g id="breadboard">
+<rect x="8.0" y="1.75" width="20" height="8.5" rx="1.2" style="fill:#b9bcc2;stroke:#6f737a;stroke-width:0.35"/>
+<rect x="8.0" y="2.65" width="20" height="2.2" rx="0.8" style="fill:#dfe2e6;stroke:none"/>
+<rect x="8.0" y="7.75" width="20" height="1.6" rx="0.6" style="fill:#8d9096;stroke:none"/>
+<rect x="28.0" y="5.5" width="3.2" height="1.0" style="fill:#9a9ca0;stroke:#55585c;stroke-width:0.2"/>
+<rect x="27.2" y="2.95" width="1.4" height="6.1" rx="0.4" style="fill:#6f737a;stroke:none"/>
+<text x="18.00" y="7.35" style="font-family:Arial;font-size:2.4px;font-weight:bold;fill:#3b3e43;text-anchor:middle">8520</text>
+<rect x="7.4" y="3.15" width="1.2" height="5.7" rx="0.3" style="fill:#2b2b2b;stroke:none"/>
+<path d="M 7.6 4.55 C 5.0 4.55, 4.0 4.75, 1.6 4.75" style="fill:none;stroke:#cc1414;stroke-width:0.9;stroke-linecap:round"/>
+<line x1="1.7" y1="4.75" x2="0.6" y2="4.75" style="stroke:#c9c9c9;stroke-width:0.6;stroke-linecap:round"/>
+<path d="M 7.6 7.45 C 5.0 7.45, 4.0 7.65, 1.6 7.65" style="fill:none;stroke:#2158c7;stroke-width:0.9;stroke-linecap:round"/>
+<line x1="1.7" y1="7.65" x2="0.6" y2="7.65" style="stroke:#c9c9c9;stroke-width:0.6;stroke-linecap:round"/>
+<rect id="connector0pin" x="0.20" y="4.15" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+<rect id="connector1pin" x="0.20" y="7.05" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+</g></svg>

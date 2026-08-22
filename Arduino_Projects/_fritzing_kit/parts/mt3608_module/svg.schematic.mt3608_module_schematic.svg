@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1.5748in" height="0.8268in" viewBox="0 0 40.0 21.0">
+<g id="schematic">
+<rect x="2.0" y="2.0" width="36.0" height="17.0" rx="1.2" style="fill:#1d5fa8;stroke:#0f3a6b;stroke-width:0.45"/>
+<circle cx="16.0" cy="10.5" r="5.2" style="fill:#1b1b1b;stroke:#000;stroke-width:0.3"/>
+<text x="16.00" y="11.80" style="font-family:Arial;font-size:3.0px;font-weight:bold;fill:#cfcfcf;text-anchor:middle">4R7</text>
+<rect x="24.5" y="5.0" width="9.5" height="11" rx="0.8" style="fill:#2f6fc4;stroke:#143a6e;stroke-width:0.35"/>
+<circle cx="29.25" cy="8.2" r="1.6" style="fill:#c9a227;stroke:#6b5410;stroke-width:0.3"/>
+<line x1="28.1" y1="8.2" x2="30.4" y2="8.2" style="stroke:#6b5410;stroke-width:0.35"/>
+<text x="29.25" y="14.20" style="font-family:Arial;font-size:2.0px;font-weight:normal;fill:#dfe8f5;text-anchor:middle">ADJ</text>
+<rect x="10.5" y="3.2" width="5" height="3" style="fill:#2a2a2a;stroke:none"/>
+<text x="20.00" y="18.30" style="font-family:Arial;font-size:1.9px;font-weight:normal;fill:#dfe8f5;text-anchor:middle">MT3608 2A step-up</text>
+<circle cx="4.00" cy="5.00" r="1.3" style="fill:#e9c46a;stroke:#8a6f3c;stroke-width:0.3"/>
+<circle cx="4.00" cy="5.00" r="0.55" style="fill:#5a4a2a;stroke:none"/>
+<text x="6.20" y="5.90" style="font-family:Arial;font-size:2.1px;font-weight:bold;fill:#ffffff;text-anchor:start">IN+</text>
+<rect id="connector0pin" x="3.40" y="4.40" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+<circle cx="4.00" cy="16.00" r="1.3" style="fill:#e9c46a;stroke:#8a6f3c;stroke-width:0.3"/>
+<circle cx="4.00" cy="16.00" r="0.55" style="fill:#5a4a2a;stroke:none"/>
+<text x="6.20" y="16.90" style="font-family:Arial;font-size:2.1px;font-weight:bold;fill:#ffffff;text-anchor:start">IN−</text>
+<rect id="connector1pin" x="3.40" y="15.40" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+<circle cx="36.00" cy="5.00" r="1.3" style="fill:#e9c46a;stroke:#8a6f3c;stroke-width:0.3"/>
+<circle cx="36.00" cy="5.00" r="0.55" style="fill:#5a4a2a;stroke:none"/>
+<text x="33.80" y="5.90" style="font-family:Arial;font-size:2.1px;font-weight:bold;fill:#ffffff;text-anchor:end">OUT+</text>
+<rect id="connector2pin" x="35.40" y="4.40" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+<circle cx="36.00" cy="16.00" r="1.3" style="fill:#e9c46a;stroke:#8a6f3c;stroke-width:0.3"/>
+<circle cx="36.00" cy="16.00" r="0.55" style="fill:#5a4a2a;stroke:none"/>
+<text x="33.80" y="16.90" style="font-family:Arial;font-size:2.1px;font-weight:bold;fill:#ffffff;text-anchor:end">OUT−</text>
+<rect id="connector3pin" x="35.40" y="15.40" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+</g></svg>

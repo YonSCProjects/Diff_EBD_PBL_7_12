@@ -1,0 +1,159 @@
+{
+  "name": "w_p8_04_motors",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    {
+      "id": "b",
+      "part": "mosfet_board_4ch",
+      "x": 0,
+      "y": 200,
+      "title": "MOSFET board"
+    },
+    {
+      "id": "mF",
+      "part": "motor_8520_cw",
+      "x": 42,
+      "y": 160,
+      "rotation": 270,
+      "title": "FRONT (CW)",
+      "snap": {
+        "pin": "+",
+        "to": "b.M1+",
+        "axis": "x",
+        "offset": [
+          2.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "mR",
+      "part": "motor_8520_ccw",
+      "x": 93,
+      "y": 160,
+      "rotation": 270,
+      "title": "RIGHT (CCW)",
+      "snap": {
+        "pin": "+",
+        "to": "b.M2+",
+        "axis": "x",
+        "offset": [
+          2.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "mB",
+      "part": "motor_8520_cw",
+      "x": 145,
+      "y": 160,
+      "rotation": 270,
+      "title": "BACK (CW)",
+      "snap": {
+        "pin": "+",
+        "to": "b.M3+",
+        "axis": "x",
+        "offset": [
+          2.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "mL",
+      "part": "motor_8520_ccw",
+      "x": 196,
+      "y": 160,
+      "rotation": 270,
+      "title": "LEFT (CCW)",
+      "snap": {
+        "pin": "+",
+        "to": "b.M4+",
+        "axis": "x",
+        "offset": [
+          2.5,
+          0
+        ]
+      }
+    }
+  ],
+  "shapes": [],
+  "wires": [
+    {
+      "from": "mF.+",
+      "to": "b.M1+",
+      "color": "#cc1414",
+      "route": "vh"
+    },
+    {
+      "from": "mF.-",
+      "to": "b.M1-",
+      "color": "#418dd9",
+      "route": "vh"
+    },
+    {
+      "from": "mR.+",
+      "to": "b.M2+",
+      "color": "#e8e8e8",
+      "route": "vh"
+    },
+    {
+      "from": "mR.-",
+      "to": "b.M2-",
+      "color": "#000000",
+      "route": "vh"
+    },
+    {
+      "from": "mB.+",
+      "to": "b.M3+",
+      "color": "#cc1414",
+      "route": "vh"
+    },
+    {
+      "from": "mB.-",
+      "to": "b.M3-",
+      "color": "#418dd9",
+      "route": "vh"
+    },
+    {
+      "from": "mL.+",
+      "to": "b.M4+",
+      "color": "#e8e8e8",
+      "route": "vh"
+    },
+    {
+      "from": "mL.-",
+      "to": "b.M4-",
+      "color": "#000000",
+      "route": "vh"
+    }
+  ],
+  "labels": [
+    {
+      "ref": "mF.@t",
+      "dy": -100,
+      "text": "FRONT\nCW",
+      "size": 46
+    },
+    {
+      "ref": "mR.@t",
+      "dy": -100,
+      "text": "RIGHT\nCCW",
+      "size": 46
+    },
+    {
+      "ref": "mB.@t",
+      "dy": -100,
+      "text": "BACK\nCW",
+      "size": 46
+    },
+    {
+      "ref": "mL.@t",
+      "dy": -100,
+      "text": "LEFT\nCCW",
+      "size": 46
+    }
+  ]
+}

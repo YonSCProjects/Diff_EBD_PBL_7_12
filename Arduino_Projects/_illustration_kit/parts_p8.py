@@ -188,8 +188,9 @@ def prop_on(sc, which, z=0.0, spinning=False, layer=5, lift=0.0, hub=True):
     if hub:
         cyl_z(sc, rx, ry, zt, 3.2, PROP_HUB, '#1f2329', layer=layer, hole=0.6)
     if spinning:
-        disc(sc, rx, ry, zt + 2.4, PROP_R, col, extra='fill-opacity:0.20', layer=layer, bump=0.6)
-        disc(sc, rx, ry, zt + 2.4, PROP_R, 'none', stroke=col, sw=0.7, layer=layer, bump=0.7)
+        # a spinning prop is a blur, not a coloured cloud — the ring keeps the CW/CCW cue
+        disc(sc, rx, ry, zt + 2.4, PROP_R, '#8d99a8', extra='fill-opacity:0.13', layer=layer, bump=0.6)
+        disc(sc, rx, ry, zt + 2.4, PROP_R, 'none', stroke=col, sw=0.8, layer=layer, bump=0.7)
         spin_arc(sc, rx, ry, zt + 5, PROP_R + 5, cw=cw)
     else:
         for a in (0, 180):
@@ -271,9 +272,18 @@ def mosfet_board(sc, x=None, y=None, z=None, label=False, layer=3, channels=4,
     cuboid(sc, x, y, z, MOSFET_W, MOSFET_D, MOSFET_T, C_PERF, layer=layer)
     zt = z + MOSFET_T
     if flip:
-        for gx in range(3, int(MOSFET_W) - 2, 4):          # solder blobs, seen from above
+        # mounted under the plate: what faces the viewer is the solder side, so the components
+        # are hidden and only the joints and the labelled motor pads show
+        for gx in range(3, int(MOSFET_W) - 2, 4):
             for gy in range(3, int(MOSFET_D) - 2, 4):
                 disc(sc, x + gx, y + gy, zt + 0.02, 0.8, '#b9bec6', layer=layer, bump=0.05)
+        if pads:
+            for c, which in enumerate(('front', 'right', 'back', 'left')[:channels]):
+                px = x + 8.5 + c * 11.4
+                for py, lab in ((y + 3.4, '+'), (y + MOSFET_D - 4.2, '−')):
+                    disc(sc, px, py, zt + 0.05, 1.7, '#c87533', layer=layer, bump=0.2)
+                tag(sc, (px, y + 3.4, zt + 1), 'M%d' % CHANNEL[which],
+                    dx=(c - 1.5) * 15, dy=-24 - abs(c - 1.5) * 9, size=5.8)
         return
     for gx in range(3, int(MOSFET_W) - 2, 5):              # the perfboard hole grid
         for gy in range(3, int(MOSFET_D) - 2, 5):
@@ -420,32 +430,34 @@ def kitchen_scale(sc, x, y, z, layer=0, reading=None):
 
 
 def multimeter(sc, x, y, z, layer=3, reading=None, mode=None, probes=None, probe_col=(None, None)):
-    """The multimeter. probes = two world points the tips touch."""
-    cuboid(sc, x, y, z, 74, 116, 22, '#e0651a', layer=layer)
-    cuboid(sc, x + 8, y + 80, z + 22, 58, 28, 0.8, '#15181c', layer=layer)
-    cyl_z(sc, x + 37, y + 44, z + 22, 3.0, 15, '#2b3038', layer=layer)
+    """A pocket multimeter. probes = the two world points the tips touch."""
+    W, D, H = 52.0, 86.0, 16.0
+    cuboid(sc, x, y, z, W, D, H, '#e0651a', layer=layer)
+    cuboid(sc, x + 5, y + 56, z + H, W - 10, 22, 0.8, '#15181c', layer=layer)     # display
+    cyl_z(sc, x + W / 2, y + 30, z + H, 2.4, 11, '#2b3038', layer=layer)          # dial
     if reading:
-        cx, cy = iso(x + 37, y + 94, z + 23)
-        sc.over('<text x="%.2f" y="%.2f" style="font-family:JetBrains Mono,monospace;font-size:8.5px;'
-                'font-weight:700;fill:#7ee0a0;text-anchor:middle">%s</text>' % (cx, cy + 3.0, reading))
+        cx, cy = iso(x + W / 2, y + 68, z + H + 1)
+        sc.over('<text x="%.2f" y="%.2f" style="font-family:JetBrains Mono,monospace;font-size:7.5px;'
+                'font-weight:700;fill:#7ee0a0;text-anchor:middle">%s</text>' % (cx, cy + 2.6, reading))
     if mode:
-        cx, cy = iso(x + 37, y + 44, z + 25)
-        sc.over('<text x="%.2f" y="%.2f" style="font-family:Rubik,Arial;font-size:6px;font-weight:700;'
-                'fill:#e8edf2;text-anchor:middle">%s</text>' % (cx, cy + 2.2, mode))
+        cx, cy = iso(x + W / 2, y + 30, z + H + 3)
+        sc.over('<text x="%.2f" y="%.2f" style="font-family:Rubik,Arial;font-size:5.6px;font-weight:700;'
+                'fill:#e8edf2;text-anchor:middle">%s</text>' % (cx, cy + 2.0, mode))
     if probes:
         for (p, col) in zip(probes, (RED, BLACK)):
-            wire(sc, [(x + 24, y + 4, z + 12), (x + 4, y - 24, z + 18), p], col, 1.4, layer=4)
-            cyl_z(sc, p[0], p[1], p[2], 7, 0.8, col, layer=5)
+            wire(sc, [(x + 16, y + 3, z + 9), (x - 6, y - 20, z + 14), p], col, 1.2, layer=4)
+            cyl_z(sc, p[0], p[1], p[2], 6, 0.7, col, layer=5)
 
 
-def soldering_iron(sc, tip, ang=210.0, layer=5):
-    """Iron coming in from `ang` degrees with its tip at `tip`."""
+def soldering_iron(sc, tip, layer=6):
+    """The iron, held nearly flat with its bit on `tip` and the handle running out toward +x
+    (which in this projection is toward the viewer's lower right, i.e. out of the work)."""
     tx, ty, tz = tip
-    a = math.radians(ang)
-    ca, sa = math.cos(a), math.sin(a)
-    cyl_x(sc, tx + ca * 8, ty + sa * 8, tz + 6, 12, 1.6, '#b9873a', layer=layer)
-    cuboid(sc, tx + ca * 20 - 4, ty + sa * 20 - 5, tz + 9, 46, 10, 10, '#2f343b', layer=layer)
-    cuboid(sc, tx + ca * 20 + 42 - 4, ty + sa * 20 - 6, tz + 8, 20, 12, 12, '#c0392b', layer=layer)
+    cyl_x(sc, tx, ty, tz + 2.6, 15, 1.2, '#b9873a', layer=layer)          # the bit
+    cyl_x(sc, tx + 15, ty, tz + 4.4, 8, 2.6, '#7d848c', layer=layer)      # the nut
+    cyl_x(sc, tx + 23, ty, tz + 5.6, 16, 3.4, '#9aa0a6', layer=layer)     # the shaft sleeve
+    cyl_x(sc, tx + 39, ty, tz + 8.0, 54, 6.4, '#2f343b', layer=layer)     # the handle
+    cyl_x(sc, tx + 93, ty, tz + 8.0, 13, 5.2, '#c0392b', layer=layer)     # the cable boot
 
 
 def iron_stand(sc, x, y, z, layer=3):
@@ -505,18 +517,21 @@ def tape_line(sc, x, y0, y1, z, col='#e0b400', layer=0, bump=9400):
     sc.add(bump, poly([iso(px, py, z) for px, py in pts], col, None), layer)
 
 
+# The laptop and the phone are drawn at roughly 3/4 of life size. At true scale they are each
+# bigger than the whole 100 mm drone and swallow the subject of the picture; the drone is what
+# the card is about, so the desk props are the ones that give way.
 def laptop(sc, x, y, z, layer=5, screen='#e8edf2'):
-    cuboid(sc, x, y, z, 150, 108, 5, '#3a4048', layer=layer)
-    cuboid(sc, x + 12, y + 20, z + 5, 126, 62, 0.6, '#22262c', layer=layer)
-    cuboid(sc, x + 52, y + 88, z + 5, 46, 14, 0.6, '#4a5058', layer=layer)
-    cuboid(sc, x, y - 5, z, 150, 5, 100, '#4a5058', layer=layer)
-    cuboid(sc, x + 6, y - 0.6, z + 8, 138, 0.7, 86, screen, layer=layer)
-    cuboid(sc, x + 14, y - 1.0, z + 60, 122, 0.4, 8, '#2f8fd0', layer=layer)
+    cuboid(sc, x, y, z, 112, 80, 4, '#3a4048', layer=layer)
+    cuboid(sc, x + 9, y + 15, z + 4, 94, 46, 0.6, '#22262c', layer=layer)
+    cuboid(sc, x + 39, y + 65, z + 4, 34, 10, 0.6, '#4a5058', layer=layer)
+    cuboid(sc, x, y - 4, z, 112, 4, 74, '#4a5058', layer=layer)
+    cuboid(sc, x + 5, y - 0.5, z + 6, 102, 0.7, 63, screen, layer=layer)
+    cuboid(sc, x + 11, y - 0.9, z + 45, 90, 0.4, 6, '#2f8fd0', layer=layer)
 
 
 def phone_flat(sc, x, y, z, label=None, armed=False, throttle=0.0, layer=5):
     """The phone running the drone's page: the big ARM/DISARM button and the throttle slider."""
-    W, D = 155.0, 75.0
+    W, D = 122.0, 58.0
     cuboid(sc, x, y, z, W, D, 7, '#2b3038', layer=layer)
     zt = z + 7
     key = depth(x + W / 2, y + D / 2, z + 3.5)
@@ -525,12 +540,12 @@ def phone_flat(sc, x, y, z, label=None, armed=False, throttle=0.0, layer=5):
         sc.add(key + bump, poly([iso(x0, y0, zt), iso(x0 + w, y0, zt),
                                  iso(x0 + w, y0 + d_, zt), iso(x0, y0 + d_, zt)], col, None), layer)
 
-    face(x + 4, y + 4, W - 8, D - 8, '#e8edf2', 1)
-    face(x + 12, y + 12, 54, D - 24, '#dc2626' if armed else '#25a05a', 2)     # ARM / DISARM
-    face(x + 76, y + 18, 64, 9, '#c3cad2', 3)                                  # throttle track
-    face(x + 76 + 4 + throttle * 46, y + 13, 12, 19, '#2563eb', 4)             # knob
+    face(x + 3, y + 3, W - 6, D - 6, '#e8edf2', 1)
+    face(x + 9, y + 9, 42, D - 18, '#dc2626' if armed else '#25a05a', 2)       # ARM / DISARM
+    face(x + 60, y + 14, 52, 8, '#c3cad2', 3)                                  # throttle track
+    face(x + 60 + 3 + throttle * 38, y + 10, 11, 16, '#2563eb', 4)             # knob
     if label:
-        tag(sc, (x + W / 2, y + 2, z + 9), label, dy=-34, size=6.4)
+        tag(sc, (x + W / 2, y + 2, z + 9), label, dy=-30, size=6.4)
 
 
 def hand_thumb(sc, x, y, z, ang=225.0, layer=6):

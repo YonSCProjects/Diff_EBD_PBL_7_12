@@ -56,9 +56,10 @@ def gate_wires(sc, z=0.0, layer=4, only=None):
         if only and which not in only:
             continue
         px, py, pz = P.devkit_pin('right', idx[which], z=z + ZD)
-        bx = P.MOSFET_XY[0] + 8.5 + (P.CHANNEL[which] - 1) * 11.4
-        by = P.MOSFET_XY[1] + 3.4
-        wire(sc, [(px, py, pz), (px, py + 12, pz - 2), (bx + 2, by + 16, z + ZM + 3),
+        # land on that channel's GATE pad, never on the motor pads sitting on the BAT+ rail
+        bx = P.MOSFET_XY[0] + P.CH_X0 + (P.CHANNEL[which] - 1) * P.CH_PITCH + 1.9
+        by = P.MOSFET_XY[1] + P.PAD_GATE_DY
+        wire(sc, [(px, py, pz), (px, py + 14, pz - 2), (bx + 2, by + 8, z + ZM + 3),
                   (bx, by, z + ZM + 1.4)], P.SIG_COL[which], 0.75, layer=layer)
 
 
@@ -74,10 +75,12 @@ def power_tree(sc, z=0.0, layer=4, battery=False):
     """The six power wires, in the order the card builds them."""
     mx, my = P.MOSFET_XY
     tx, ty = P.MT_XY
-    # 1-2  board second BAT+/GND  ->  MT3608 IN (the side with the big inductor)
-    for i, col in enumerate((RED, BLACK)):
-        wire(sc, [(mx + 44, my + 4 + i * 3, z + ZM + 2),
-                  (mx + 52, my - 6 + i * 3, z + 4),
+    # 1-2  board second BAT+/GND  ->  MT3608 IN (the side with the big inductor).
+    # The two wires leave from OPPOSITE edges of the board, because that is where the two rails
+    # are — starting them side by side would read as battery positive feeding the booster's minus.
+    for i, (col, dy) in enumerate(((RED, P.RAIL_BAT_DY + 1.0), (BLACK, P.RAIL_GND_DY + 0.9))):
+        wire(sc, [(mx + 44, my + dy, z + ZM + 2),
+                  (mx + 53, my + dy - 6 + i * 4, z + 4),
                   (tx + 2, ty + 3 + i * 6, z + ZD + 1)], col, 1.3, layer=layer)
     # 3-4  MT3608 OUT  ->  DevKit VIN and the GND beside it, both on the right header
     for i, col in enumerate((RED, BLACK)):
@@ -102,15 +105,18 @@ def motor_wires_to_board(sc, z=0.0, layer=2):
     mx, my = P.MOSFET_XY
     for which in P.ORDER:
         rx, ry = P.POS[which]
-        bx = mx + 4 + (P.CHANNEL[which] - 1) * 11.4
+        bx = mx + P.CH_X0 + (P.CHANNEL[which] - 1) * P.CH_PITCH + 5.0
         ang = math.radians(P.ARM_ANGLE[which] + 180)
         ca, sa = math.cos(ang), math.sin(ang)
-        for i, col in enumerate(P.LEAD_COL[P.SPIN[which]]):
+        # '+' to the pad on the BAT+ rail, '−' to the Drain pad beside it — the minus lead
+        # goes to the MOSFET, never to ground
+        for i, (col, dy) in enumerate(zip(P.LEAD_COL[P.SPIN[which]],
+                                          (P.PAD_MPLUS_DY, P.PAD_MMINUS_DY))):
             off = (i - 0.5) * 2.4
             wire(sc, [(rx + ca * (P.MOTOR_R + 0.2) - sa * off, ry + sa * (P.MOTOR_R + 0.2) + ca * off,
                        z + P.Z_CAN + 6),
                       (rx + ca * 16 - sa * off, ry + sa * 16 + ca * off, z - 1.2),
-                      (bx + 1 + i * 4, my + (3.4 if i == 0 else 36), z + ZM + 1.6)], col, 0.9, layer=layer)
+                      (bx, my + dy, z + ZM + 1.6)], col, 0.9, layer=layer)
 
 
 def probes_on(sc, a, b, x=250, y=40, z=-20, reading=None, mode=None):
@@ -158,7 +164,7 @@ def t1_m1_parts_contract():
 def t1_m2_press_fit_motors():
     """Thumb pressure only: each 8520 goes down through its rubber grommet, shaft up."""
     sc = Scene()
-    bench_for_drone(sc, pad=34)
+    bench_for_drone(sc, pad=20)
     P.frame(sc, front_mark=True)
     for which in ('left', 'right', 'back'):
         P.coreless_motor(sc, which, leads=True)
@@ -195,7 +201,7 @@ def t1_m3_meet_mosfet_board():
 def t1_m4_mount_electronics():
     """Every board comes down onto its own full-footprint pad. The battery bay stays empty."""
     sc = Scene()
-    bench_for_drone(sc, pad=40)
+    bench_for_drone(sc, pad=20)
     P.frame(sc, front_mark=True, tether_loop=True)
     P.motors_all(sc)
     P.mosfet_board(sc, z=ZM - 26, flip=True, layer=2)
@@ -218,7 +224,7 @@ def t1_m4_mount_electronics():
 def t1_m5_power_tree():
     """Six power wires and nothing else. The cell is still in the teacher's bag."""
     sc = Scene()
-    bench_for_drone(sc, pad=40)
+    bench_for_drone(sc, pad=20)
     P.frame(sc, front_mark=True)
     P.motors_all(sc)
     P.mosfet_board(sc, z=ZM, flip=True, layer=2)
@@ -257,7 +263,7 @@ def t1_m6_motor_wiring():
 def t1_m7_signal_wiring():
     """Four gate wires and two sensor wires — the thin ones."""
     sc = Scene()
-    bench_for_drone(sc, pad=40)
+    bench_for_drone(sc, pad=20)
     P.frame(sc, front_mark=True)
     P.motors_all(sc, leads=False)
     P.mosfet_board(sc, z=ZM, flip=True, layer=2)
@@ -272,7 +278,7 @@ def t1_m7_signal_wiring():
             dx=66, dy=dy, size=6.0)
     tag(sc, (P.IMU_XY[0] + 6, P.IMU_XY[1] + 1.4, ZD + 4), 'לבן 21 · אפור 22', dx=-56, dy=28, size=6.2)
     tag(sc, (CX, CY + 26, ZM + 3), 'מעבירים את חוטי השערים מתחת ללוחית', dx=-30, dy=52, size=6.2)
-    safe_state(sc, CX - 27, CY - 90, P.Z_PLATE, 'מחווטים רק במצב הבטוח')
+    safe_state(sc, CX - 90, CY + 46, P.Z_PLATE, 'מחווטים רק במצב הבטוח')
     return 'w_p8_s07_signal_wiring', sc, 'the signal wires'
 
 
@@ -321,7 +327,7 @@ def t1_m10_spin_no_props():
     P.drone(sc, front_mark=True)
     power_tree(sc, battery=True); gate_wires(sc); i2c_wires(sc); motor_wires_to_board(sc)
     P.coreless_motor(sc, 'front', spinning=True, leads=False)
-    P.phone_flat(sc, 236, 150, -20, armed=True, throttle=0.25,
+    P.phone_flat(sc, 236, 150, -20, armed=True, throttle=0.0,
                  label='המחוון על 0 לפני ARM')
     fx, fy = P.POS['front']
     tag(sc, (fx, fy, P.Z_SHAFT + 6), 'לוחצים FRONT —\nרק הקדמי מסתובב', dx=-46, dy=-30, size=6.4)
@@ -382,7 +388,7 @@ def t1_m12_upload_flight():
     """The gyro check: push one arm down with a pencil and watch that motor's number fall."""
     sc = Scene()
     P.bench(sc, 58, 26, 300, 200)
-    P.drone(sc, front_mark=True)
+    P.drone(sc, front_mark=True, spinning=True)
     power_tree(sc, battery=True); gate_wires(sc); i2c_wires(sc); motor_wires_to_board(sc)
     fx, fy = P.POS['front']
     cyl_x(sc, fx - 40, fy - 26, P.Z_PLATE_TOP + 30, 46, 2.6, '#e0b400', layer=6)   # the pencil
@@ -399,15 +405,19 @@ def t1_m12_upload_flight():
 def _flight_scene(sc, hover=32, spinning=True, spectator=True):
     """The tethered flight set-up: taped circle, anchor, line, drone in the air.
     The 3 m circle is symbolic — at true scale the drone would be a speck inside it."""
-    P.floor(sc, z=-120, x0=CX - 118, y0=CY - 96, w=250, d=200)
-    disc(sc, CX, CY, -118, 84, 'none', stroke='#c9c3b6', sw=1.6, layer=0)
-    P.anchor_weight(sc, CX - 22, CY - 18, -118)
+    P.floor(sc, z=-120, x0=CX - 122, y0=CY - 92, w=262, d=206)
+    disc(sc, CX + 20, CY + 20, -118, 88, 'none', stroke='#c9c3b6', sw=1.6, layer=0)
+    # the anchor sits on its own taped X, out toward the viewer. The drone lifts off from a mark
+    # about 40 cm away — never from directly above the weight it is tied to.
+    ax, ay = CX + 48, CY + 48
+    P.anchor_weight(sc, ax - 22, ay - 18, -118)
+    disc(sc, CX, CY, -117.8, 11, 'none', stroke='#e0651a', sw=1.3, layer=0, bump=41)   # lift-off mark
     z = -118 + hover + 18
     P.drone(sc, z=z, props=True, spinning=spinning, front_mark=True, tether_loop=True)
-    P.tether(sc, CX, CY, z - 11, CX, CY - 4, -114)
-    P.tape_line(sc, CX + 96, CY - 92, CY + 96, -119)
+    P.tether(sc, CX, CY, z - 11, ax, ay, -116)
+    P.tape_line(sc, CX + 108, CY - 88, CY + 128, -119)
     if spectator:
-        P.goggles(sc, CX + 108, CY + 34, -118)
+        P.goggles(sc, CX + 128, CY + 62, -118)
     return z
 
 
@@ -415,11 +425,12 @@ def t1_m13_tethered_hover():
     """Ten to thirty centimetres, on a line that stays slack."""
     sc = Scene()
     z = _flight_scene(sc)
-    P.phone_flat(sc, CX + 102, CY - 84, -118, armed=True, throttle=0.45)
+    P.phone_flat(sc, CX - 114, CY + 74, -118, armed=True, throttle=0.45)
     tag(sc, (CX, CY, z + P.Z_PROP), 'מעלים את המחוון לאט', dx=-70, dy=-46, size=6.6)
     tag(sc, (CX + 30, CY, z - 30), 'מחזיקים בגובה 10–30 ס״מ', dx=70, dy=-16, size=6.4)
-    tag(sc, (CX, CY - 2, -112), 'החוט נשאר רפוי', dx=-64, dy=26, size=6.2)
-    tag(sc, (CX + 98, CY + 54, -119), 'טלפון המורה — DISARM בלבד', dx=40, dy=26, size=6.2)
+    tag(sc, (CX + 26, CY + 26, -113), 'החוט נשאר רפוי', dx=54, dy=-14, size=6.2)
+    P.teacher_phone(sc, CX + 118, CY + 84, -118)
+    tag(sc, (CX + 151, CY + 100, -112), 'טלפון המורה — DISARM בלבד', dx=30, dy=28, size=6.2)
     return 'w_p8_s13_tethered_hover', sc, 'the tethered hover'
 
 
@@ -481,7 +492,7 @@ def t2_m2_solder_channel_1():
     P.mat(sc, 90, 64, 126, 84, z=-19.4)
     P.mosfet_board(sc, x=96, y=72, z=-18.0, channels=1, cap=False, pads=True)
     zt = -18.0 + P.MOSFET_T
-    P.soldering_iron(sc, (96 + 10, 72 + 10, zt))
+    P.soldering_iron(sc, (96 + 12, 72 + 14, zt))
     P.goggles(sc, 98, 146, -19.4)
     tag(sc, (96 + 10, 72 + 8, zt + 3), 'הטבעת פונה אל BAT+', dx=-64, dy=22, size=6.4)
     tag(sc, (96 + 5, 72 + 26, zt + 6), 'הכיתוב פונה לצד פד G1', dx=-56, dy=-34, size=6.2)
@@ -509,14 +520,14 @@ def t2_m4_solder_channels_2_4():
     sc = Scene()
     P.bench(sc, 84, 58, 140, 96)
     P.mat(sc, 90, 64, 126, 84, z=-19.4)
-    P.mosfet_board(sc, x=96, y=72, z=-18.0, pads=True)
+    P.mosfet_board(sc, x=96, y=72, z=-18.0)
     zt = -18.0 + P.MOSFET_T
-    P.soldering_iron(sc, (96 + 28, 72 + 24, zt))
+    P.soldering_iron(sc, (96 + 33, 72 + 20, zt))
     tag(sc, (96 + 3, 72 + 24, zt + 6), 'ערוץ 1 כבר מוכן', dx=-58, dy=-14, size=6.2)
     tag(sc, (96 + 20, 72 + 22, zt + 6), 'לפחות שני חורים ריקים\nבין מוספט למוספט',
         dx=-24, dy=-46, size=6.2)
     tag(sc, (96 + 43.5, 72 + 12, zt + 11), 'הרגל הארוכה אל פס BAT+', dx=54, dy=-32, size=6.2)
-    tag(sc, (96 + 26, 72 + 34, zt + 5), 'שרוול מתכווץ על ארבע הלשוניות', dx=40, dy=46, size=6.2)
+    tag(sc, (96 + 26, 72 + 30, zt + 5), 'שרוול מתכווץ על ארבע הלשוניות', dx=8, dy=52, size=6.2)
     return 'w_p8_t2_s04_solder_channels_2_4', sc, 'solder channels 2-4'
 
 
@@ -544,7 +555,7 @@ def t2_m5_tune_mt3608():
 def t2_m6_mount_and_wire():
     """Everything mounted and every wire run — the whole machine in one picture."""
     sc = Scene()
-    bench_for_drone(sc, pad=44)
+    bench_for_drone(sc, pad=22)
     P.frame(sc, front_mark=True, tether_loop=True)
     P.motors_all(sc, leads=False)
     P.mosfet_board(sc, z=ZM, flip=True, layer=2)
@@ -591,7 +602,7 @@ def t2_m8_upload_and_spin():
     P.laptop(sc, 246, 40, -20, screen='#1b2430')
     wire(sc, [(262, 128, -18), (286, 116, -18)], '#d0d4d8', 1.8, layer=5)   # the unplugged cable
     tag(sc, (274, 122, -18), 'מנתקים את כבל ה-USB', dx=26, dy=34, size=6.2)
-    P.phone_flat(sc, 60, 160, -20, armed=True, throttle=0.2, label='המחוון על 0 ולוחצים ARM')
+    P.phone_flat(sc, 60, 160, -20, armed=True, throttle=0.0, label='המחוון על 0 ולוחצים ARM')
     fx, fy = P.POS['front']
     tag(sc, (fx, fy, P.Z_SHAFT + 6), 'לוחצים FRONT:\nרק הקדמי מסתובב', dx=-44, dy=-28, size=6.4)
     tag(sc, (P.POS['back'][0], P.POS['back'][1], P.Z_SHAFT + 2),
@@ -606,7 +617,7 @@ def t2_m9_thrust_test():
     z = _thrust_rig(sc)
     tag(sc, (CX - 46, CY - 40, z - 9), 'הרחפן הפוך על ראש העמוד', dx=-48, dy=14, size=6.6)
     tag(sc, (CX + 14, CY, z), 'שתי גומיות על הצלחות המרכזיות', dx=64, dy=-8, size=6.2)
-    P.tether(sc, CX + 20, CY + 14, z + 2, CX - 26, CY - 8, -108)
+    P.tether(sc, CX + 20, CY + 14, z + 2, CX - 26, CY - 8, -108, sag=0.55)
     tag(sc, (CX - 20, CY - 6, -106), 'חוט גיבוי של 30 ס״מ — רפוי', dx=-52, dy=26, size=6.2)
     P.tape_line(sc, CX + 108, CY - 110, CY + 110, -122)
     tag(sc, (CX + 110, CY + 70, -122), 'הידיים מאחורי קו הסרט', dx=44, dy=22, size=6.2)
@@ -638,11 +649,11 @@ def t2_m11_tethered_hover_tuning():
     """Hover, land, change exactly one constant, fly again."""
     sc = Scene()
     z = _flight_scene(sc)
-    P.phone_flat(sc, CX + 102, CY - 84, -118, armed=True, throttle=0.4)
+    P.phone_flat(sc, CX - 114, CY + 74, -118, armed=True, throttle=0.4)
     tag(sc, (CX, CY, z + P.Z_PROP), 'מחוון על 0, לוחצים ARM ומעלים לאט', dx=-58, dy=-48, size=6.4)
     tag(sc, (CX + 30, CY, z - 30), 'מרחפים 10–30 ס״מ', dx=68, dy=-14, size=6.4)
-    tag(sc, (CX, CY - 2, -112), 'החוט שוכב רפוי על הרצפה', dx=-62, dy=26, size=6.2)
-    P.card(sc, CX - 112, CY + 54, -118, w=56, d=38, lines=3)
+    tag(sc, (CX + 26, CY + 26, -113), 'החוט שוכב רפוי על הרצפה', dx=58, dy=-14, size=6.2)
+    P.card(sc, CX - 112, CY - 62, -118, w=56, d=38, lines=3)
     tag(sc, (CX - 84, CY + 73, -117), 'משנים קבוע אחד\nוטסים טיסה אחת', dx=-30, dy=28, size=6.2)
     return 'w_p8_t2_s11_tethered_hover_tuning', sc, 'hover and the tuning loop'
 
@@ -652,14 +663,14 @@ def t2_m12_flight_sequence():
     sc = Scene()
     P.floor(sc, z=-120, x0=CX - 124, y0=CY - 100, w=262, d=208)
     disc(sc, CX, CY, -118, 88, 'none', stroke='#c9c3b6', sw=1.6, layer=0)
-    P.anchor_weight(sc, CX - 22, CY - 18, -118)
+    P.anchor_weight(sc, CX + 26, CY + 30, -118)
     for i, (mx, my, lab) in enumerate(((CX - 50, CY + 44, 'א׳'), (CX, CY + 60, 'ב׳'),
                                        (CX + 50, CY + 44, 'ג׳'))):
         disc(sc, mx, my, -117.6, 9, '#efe4c8', stroke='#c9b98a', sw=0.8, layer=0, bump=40)
         tag(sc, (mx, my, -117), lab, dy=-16, size=6.4)
     z = -118 + 30 + 18
     P.drone(sc, z=z, props=True, spinning=True, front_mark=True, tether_loop=True)
-    P.tether(sc, CX, CY, z - 11, CX, CY - 4, -114)
+    P.tether(sc, CX, CY, z - 11, CX + 48, CY + 48, -116)
     P.tape_line(sc, CX + 100, CY - 96, CY + 100, -119)
     P.card(sc, CX + 110, CY - 30, -118, w=54, d=40, lines=5)
     tag(sc, (CX + 137, CY - 10, -117), 'קוראים בקול\nאת רשימת R4', dx=38, dy=-18, size=6.2)
@@ -672,13 +683,13 @@ def t2_m13_signature_flight():
     """The flight the whole project was for — once, on the line, with a witness."""
     sc = Scene()
     z = _flight_scene(sc, hover=42)
-    P.phone_flat(sc, CX + 102, CY - 86, -118, armed=True, throttle=0.5)
-    P.goggles(sc, CX + 112, CY + 38, -118)
-    tag(sc, (CX + 124, CY + 46, -117), 'הצופה נשאר מאחורי קו הצופים', dx=40, dy=26, size=6.2)
+    P.phone_flat(sc, CX - 114, CY + 74, -118, armed=True, throttle=0.5)
+    P.goggles(sc, CX + 128, CY + 62, -118)
+    tag(sc, (CX + 144, CY + 66, -117), 'הצופה נשאר מאחורי קו הצופים', dx=32, dy=26, size=6.2)
     tag(sc, (CX, CY, z + P.Z_PROP), 'מטיסים את הרצף שבחרתם פעם אחת', dx=-56, dy=-50, size=6.6)
-    tag(sc, (CX, CY - 2, -112), 'החוט קשור בלולאה ובעוגן השטוח', dx=-60, dy=26, size=6.2)
-    P.lipo_bag(sc, CX - 116, CY + 60, -120, layer=0)
-    tag(sc, (CX - 71, CY + 91, -98), 'הסוללה יוצאת ואז המדחפים יורדים', dx=-14, dy=34, size=6.2)
+    tag(sc, (CX + 26, CY + 26, -113), 'החוט קשור בלולאה ובעוגן השטוח', dx=62, dy=-14, size=6.2)
+    P.lipo_bag(sc, CX - 114, CY - 78, -120, layer=0)
+    tag(sc, (CX - 69, CY - 47, -98), 'הסוללה יוצאת ואז המדחפים יורדים', dx=-20, dy=-28, size=6.2)
     return 'w_p8_t2_s13_signature_flight', sc, 'the signature flight'
 
 
@@ -696,7 +707,7 @@ def t3_planner():
     for i, col in enumerate((WHITE_W, GREY_W)):
         wire(sc, [(P.IMU_XY[0] + 4 + i * 2.6, P.IMU_XY[1] + 1.4, ZD + P.IMU_T + 2),
                   (nx + 2 + i * 3, ny + 2, ZD + 16 + 1.5)], col, 0.7, layer=6)
-    tag(sc, (nx + 8, ny + 6, ZD + 20), 'משתמשים רק בפינים הפנויים\n33 · 32 · 4 · 16 · 17',
+    tag(sc, (nx + 8, ny + 6, ZD + 20), 'משתמשים רק בפינים הפנויים\n33 · 34 · 32 · 23 · 19 · 18',
         dx=54, dy=-26, size=6.2)
     P.kitchen_scale(sc, 240, 44, -20, reading='104 g')
     tag(sc, (300, 130, -11), 'שוקלים את הרחפן שוב במאזניים', dx=34, dy=-30, size=6.4)

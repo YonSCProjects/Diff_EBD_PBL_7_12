@@ -76,6 +76,16 @@ LEAD_COL = {'cw': (RED, BLUE), 'ccw': (WHITE_W, BLACK)}
 # ---------------------------------------------------------------- board footprints
 DEVKIT_W, DEVKIT_D, DEVKIT_T = 51.5, 28.3, 1.4
 MOSFET_W, MOSFET_D, MOSFET_T = 50.0, 40.0, 1.6
+
+# The perfboard's own layout, board-local, running from the BAT+ edge to the GND edge exactly as
+# Arduino_Project_8.md lays it out: BAT+ rail, motor pads, diode, resistors, the TO-220, the gate
+# pads, GND rail. Everything that lands a wire on this board reads these, so a gate wire can never
+# drift onto the BAT+ rail again.
+CH_PITCH, CH_X0 = 11.4, 3.5        # channel spacing and the first channel's x
+PAD_MPLUS_DY = 3.4                 # motor '+' — sits on the BAT+ rail
+PAD_MMINUS_DY = 7.6                # motor '−' — the Drain side, NOT ground
+PAD_GATE_DY = 32.6                 # G1..G4, between the gate legs and the GND rail
+RAIL_BAT_DY, RAIL_GND_DY = 2.4, MOSFET_D - 4.2
 MT_W, MT_D, MT_T = 36.0, 17.0, 1.4
 IMU_W, IMU_D, IMU_T = 21.2, 15.7, 1.2
 BAT_W, BAT_D, BAT_H = 52.0, 30.0, 9.0
@@ -246,13 +256,15 @@ def devkit_pin(which_row, idx, x=None, y=None, z=None):
 
 def to220(sc, x, y, z, layer=3, flat=True, shrink=True, label=None):
     """One IRLB8721. On this build they lie FLAT on the board, body toward the near edge and
-    the heat-shrunk metal tab at the far end. Legs (G-D-S, left to right) point toward +y."""
+    the heat-shrunk metal tab at the far end. Legs are Gate, Drain, Source left to right.
+    Only the SOURCE leg reaches the GND rail — drawing all three onto it would show the gate
+    and the drain soldered to ground, which is a dead channel and a shorted driver."""
     if flat:
         cuboid(sc, x, y, z, 10.16, 11.0, 4.6, C_TO220, layer=layer)             # plastic body
         cuboid(sc, x - 0.2, y - 4.4, z, 10.56, 4.6, 5.0,
                '#1b2b6b' if shrink else '#9aa0a6', layer=layer)                  # tab (heat-shrunk)
-        for i in range(3):
-            cuboid(sc, x + 1.9 + i * 2.54, y + 11.0, z, 0.9, 4.0, 0.9, '#c9ced4', layer=layer)
+        for i, leg in enumerate((1.6, 1.6, 6.8)):                                # G, D, S
+            cuboid(sc, x + 1.9 + i * 2.54, y + 11.0, z, 0.9, leg, 0.9, '#c9ced4', layer=layer)
     else:
         cuboid(sc, x, y, z + 2.6, 10.16, 4.6, 11.0, C_TO220, layer=layer)
         cuboid(sc, x + 0.4, y + 0.3, z + 13.4, 9.4, 4.0, 4.2, '#9aa0a6', layer=layer)
@@ -279,32 +291,42 @@ def mosfet_board(sc, x=None, y=None, z=None, label=False, layer=3, channels=4,
                 disc(sc, x + gx, y + gy, zt + 0.02, 0.8, '#b9bec6', layer=layer, bump=0.05)
         if pads:
             for c, which in enumerate(('front', 'right', 'back', 'left')[:channels]):
-                px = x + 8.5 + c * 11.4
-                for py, lab in ((y + 3.4, '+'), (y + MOSFET_D - 4.2, '−')):
-                    disc(sc, px, py, zt + 0.05, 1.7, '#c87533', layer=layer, bump=0.2)
-                tag(sc, (px, y + 3.4, zt + 1), 'M%d' % CHANNEL[which],
+                cx = x + CH_X0 + c * CH_PITCH
+                for dy in (PAD_MPLUS_DY, PAD_MMINUS_DY):        # the motor pair, near BAT+
+                    disc(sc, cx + 5.0, y + dy, zt + 0.05, 1.7, '#c87533', layer=layer, bump=0.2)
+                disc(sc, cx + 1.9, y + PAD_GATE_DY, zt + 0.05, 1.5, '#c9a227', layer=layer, bump=0.2)
+                tag(sc, (cx + 5.0, y + PAD_MPLUS_DY, zt + 1), 'M%d' % CHANNEL[which],
                     dx=(c - 1.5) * 15, dy=-24 - abs(c - 1.5) * 9, size=5.8)
+                tag(sc, (cx + 1.9, y + PAD_GATE_DY, zt + 1), 'G%d' % CHANNEL[which],
+                    dx=(c - 1.5) * 19, dy=30 + abs(c - 1.5) * 13, size=5.8)
         return
     for gx in range(3, int(MOSFET_W) - 2, 5):              # the perfboard hole grid
         for gy in range(3, int(MOSFET_D) - 2, 5):
             disc(sc, x + gx, y + gy, zt + 0.02, 0.62, '#0a4c2c', layer=layer, bump=0.05)
     if rails:
         # BAT+ (bare copper, far edge) and GND (tinned, near edge) — both flooded with solder
-        cuboid(sc, x + 2, y + 2.4, zt, MOSFET_W - 4, 1.8, 1.2, '#c87533', layer=layer)
-        cuboid(sc, x + 2, y + MOSFET_D - 4.2, zt, MOSFET_W - 4, 1.8, 1.2, '#c9ced4', layer=layer)
+        cuboid(sc, x + 2, y + RAIL_BAT_DY, zt, MOSFET_W - 4, 1.8, 1.2, '#c87533', layer=layer)
+        cuboid(sc, x + 2, y + RAIL_GND_DY, zt, MOSFET_W - 4, 1.8, 1.2, '#c9ced4', layer=layer)
     for c in range(channels):
-        cx = x + 3.5 + c * 11.4                            # four channels side by side
-        to220(sc, cx, y + 24.5, zt, layer=layer)           # body mid-board, tab toward BAT+
-        cuboid(sc, cx + 0.6, y + 15.0, zt, 2.2, 7.0, 2.2, '#c8b28a', layer=layer)    # 100R gate resistor
-        cuboid(sc, cx + 5.4, y + 15.0, zt, 2.2, 7.0, 2.2, '#8fa2c9', layer=layer)    # 10k pull-down
-        cyl_y(sc, cx + 8.6, y + 6.0, zt + 1.3, 7.4, 1.3, '#3a3f46', layer=layer)     # 1N5819 flyback
-        cuboid(sc, cx + 7.7, y + 11.4, zt + 0.4, 1.8, 1.4, 1.6, '#e8edf2', layer=layer)  # cathode band
+        cx = x + CH_X0 + c * CH_PITCH                      # four channels side by side
+        disc(sc, cx + 5.0, y + PAD_MPLUS_DY, zt + 0.05, 1.6, '#c87533', layer=layer, bump=0.2)
+        disc(sc, cx + 5.0, y + PAD_MMINUS_DY, zt + 0.05, 1.6, '#c87533', layer=layer, bump=0.2)
+        cyl_y(sc, cx + 8.6, y + 10.0, zt + 1.3, 6.4, 1.3, '#3a3f46', layer=layer)    # 1N5819 flyback
+        cuboid(sc, cx + 7.7, y + 8.6, zt + 0.4, 1.8, 1.4, 1.6, '#e8edf2', layer=layer)  # cathode band
+        cuboid(sc, cx + 0.6, y + 11.0, zt, 2.2, 6.0, 2.2, '#c8b28a', layer=layer)    # 100R gate resistor
+        cuboid(sc, cx + 3.6, y + 11.0, zt, 2.2, 6.0, 2.2, '#8fa2c9', layer=layer)    # 10k pull-down
+        to220(sc, cx, y + 18.0, zt, layer=layer)           # body mid-board, tab toward BAT+
+        # the gate pad, and the short link from the 100R up to it
+        disc(sc, cx + 1.9, y + PAD_GATE_DY, zt + 0.05, 1.4, '#c9a227', layer=layer, bump=0.2)
     if cap:
-        cyl_z(sc, x + MOSFET_W - 6.5, y + 12, zt, 11.0, 4.0, '#1b2b6b', layer=layer)
+        cyl_z(sc, x + MOSFET_W - 6.5, y + 24, zt, 11.0, 4.0, '#1b2b6b', layer=layer)
     if pads:
         for c, which in enumerate(('front', 'right', 'back', 'left')[:channels]):
-            tag(sc, (x + 8.5 + c * 11.4, y + 3.4, zt + 2),
-                'M%d' % CHANNEL[which], dx=(c - 1.5) * 15, dy=-26 - abs(c - 1.5) * 9, size=5.8)
+            cx = x + CH_X0 + c * CH_PITCH
+            tag(sc, (cx + 5.0, y + PAD_MPLUS_DY, zt + 2), 'M%d' % CHANNEL[which],
+                dx=(c - 1.5) * 15, dy=-26 - abs(c - 1.5) * 9, size=5.8)
+            tag(sc, (cx + 1.9, y + PAD_GATE_DY, zt + 2), 'G%d' % CHANNEL[which],
+                dx=(c - 1.5) * 19, dy=30 + abs(c - 1.5) * 13, size=5.8)
     if label:
         tag(sc, (x + MOSFET_W / 2, y + MOSFET_D / 2, zt + 12), 'לוח המוספטים', dy=-18)
 
@@ -356,11 +378,13 @@ def lipo(sc, x=None, y=None, z=None, label=False, layer=0, leads=True, plug=True
     cuboid(sc, x, y, z, BAT_W, BAT_D, BAT_H, C_LIPO, layer=layer)
     cuboid(sc, x + 6, y + 4, z + BAT_H, BAT_W - 12, BAT_D - 8, 0.4, '#3f4653', layer=layer)
     if plug:
-        cuboid(sc, x - 5.0, y + BAT_D / 2 - 3, z + BAT_H * 0.35, 5.0, 6.0, 4.0, WHITE_W, layer=layer)
+        # the PH2.0 exits at the frame's SIDE, on the diagonal between two arms — never straight
+        # out along an arm, where it would sit under that prop
+        cuboid(sc, x + BAT_W - 2, y + BAT_D - 4, z + BAT_H * 0.35, 5.0, 6.0, 4.0, WHITE_W, layer=layer)
     if leads:
         for i, col in enumerate((RED, BLACK)):
-            wire(sc, [(x - 5.0, y + BAT_D / 2 - 1.4 + i * 2.6, z + BAT_H * 0.5),
-                      (x - 17, y + BAT_D / 2 - 1.4 + i * 2.6, z + BAT_H + 5)], col, 1.3, layer=4)
+            wire(sc, [(x + BAT_W + 2, y + BAT_D - 2.6 + i * 2.6, z + BAT_H * 0.5),
+                      (x + BAT_W + 13, y + BAT_D + 7 + i * 2.6, z + BAT_H + 5)], col, 1.3, layer=4)
     if label:
         tag(sc, (x + BAT_W / 2, y + BAT_D / 2, z), '1S LiPo 1000mAh', dx=-40, dy=26, size=6.2)
 
@@ -453,11 +477,12 @@ def soldering_iron(sc, tip, layer=6):
     """The iron, held nearly flat with its bit on `tip` and the handle running out toward +x
     (which in this projection is toward the viewer's lower right, i.e. out of the work)."""
     tx, ty, tz = tip
-    cyl_x(sc, tx, ty, tz + 2.6, 15, 1.2, '#b9873a', layer=layer)          # the bit
-    cyl_x(sc, tx + 15, ty, tz + 4.4, 8, 2.6, '#7d848c', layer=layer)      # the nut
-    cyl_x(sc, tx + 23, ty, tz + 5.6, 16, 3.4, '#9aa0a6', layer=layer)     # the shaft sleeve
-    cyl_x(sc, tx + 39, ty, tz + 8.0, 54, 6.4, '#2f343b', layer=layer)     # the handle
-    cyl_x(sc, tx + 93, ty, tz + 8.0, 13, 5.2, '#c0392b', layer=layer)     # the cable boot
+    # deliberately drawn short: a real iron is ~200 mm and would swamp a 50 mm board
+    cyl_x(sc, tx, ty, tz + 2.2, 11, 0.9, '#b9873a', layer=layer)          # the bit
+    cyl_x(sc, tx + 11, ty, tz + 3.4, 5, 1.9, '#7d848c', layer=layer)      # the nut
+    cyl_x(sc, tx + 16, ty, tz + 4.2, 11, 2.4, '#9aa0a6', layer=layer)     # the shaft sleeve
+    cyl_x(sc, tx + 27, ty, tz + 6.0, 34, 4.6, '#2f343b', layer=layer)     # the handle
+    cyl_x(sc, tx + 61, ty, tz + 6.0, 9, 3.8, '#c0392b', layer=layer)      # the cable boot
 
 
 def iron_stand(sc, x, y, z, layer=3):
@@ -496,12 +521,16 @@ def card(sc, x, y, z, w=58, d=44, col='#fffdf7', lines=3, layer=3):
                % (a[0], a[1], b[0], b[1]), layer)
 
 
-def tether(sc, x, y, z_top, ax, ay, az, layer=5):
-    """The fishing line every practice flight is flown on: drone loop to floor anchor."""
+def tether(sc, x, y, z_top, ax, ay, az, layer=5, sag=0.42):
+    """The fishing line every practice flight is flown on: drone loop to floor anchor.
+    It is drawn SLACK, with a real sag — a straight line reads as taut, which is the failure
+    the cards keep telling the pilot to avoid."""
     a = iso(x, y, z_top)
     b = iso(ax, ay, az)
-    sc.over('<path d="M %.2f %.2f L %.2f %.2f" style="fill:none;stroke:#8a94a2;stroke-width:0.9;'
-            'stroke-dasharray:5 3"/>' % (a[0], a[1], b[0], b[1]))
+    # the control point hangs below the straight chord by a fraction of the drop
+    cx_, cy_ = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2 + abs(b[1] - a[1]) * sag + 6
+    sc.over('<path d="M %.2f %.2f Q %.2f %.2f %.2f %.2f" style="fill:none;stroke:#8a94a2;'
+            'stroke-width:0.9;stroke-dasharray:5 3"/>' % (a[0], a[1], cx_, cy_, b[0], b[1]))
     sc.over('<circle cx="%.2f" cy="%.2f" r="1.5" style="fill:none;stroke:#8a94a2;stroke-width:0.9"/>'
             % (a[0], a[1]))
 
@@ -554,3 +583,10 @@ def hand_thumb(sc, x, y, z, ang=225.0, layer=6):
     ca, sa = math.cos(a), math.sin(a)
     cyl_z(sc, x, y, z, 13, 5.2, '#e8c9a8', layer=layer)
     cuboid(sc, x + ca * 6 - 7, y + sa * 6 - 7, z + 12, 26, 16, 12, '#e8c9a8', layer=layer)
+
+def teacher_phone(sc, x, y, z, layer=5):
+    """The second phone, the one that only ever presses DISARM. Drawn small and plainly
+    different from the pilot's phone so the two are never confused."""
+    cuboid(sc, x, y, z, 66, 32, 6, '#1b1e24', layer=layer)
+    cuboid(sc, x + 3, y + 3, z + 6, 60, 26, 0.5, '#e8edf2', layer=layer)
+    cuboid(sc, x + 9, y + 8, z + 6.5, 48, 16, 0.4, '#dc2626', layer=layer)

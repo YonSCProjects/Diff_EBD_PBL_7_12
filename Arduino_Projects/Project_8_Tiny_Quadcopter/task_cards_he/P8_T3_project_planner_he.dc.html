@@ -54,8 +54,8 @@
           <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
           <div>
             <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">כל רעיון חדש טס בדיוק כמו כל טיסה אחרת</div>
-            <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><strong>משקפי מגן לכל מי שנמצא בחדר</strong>, שיער אסוף ושרוולים מופשלים. הטיסה <strong>על החוט</strong>, בתוך המעגל, ולפני כל סוללה המורה קורא איתכם בקול את רשימת הבדיקה של כרטיס <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R4</span> לפי הסדר. הפרופלורים עולים אחרונים — כשהסוללה עדיין בחוץ — ויורדים ראשונים, מיד אחרי שהסוללה יצאה.</p>
-            <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:oklch(0.5 0.06 32);">בחירום: בלי פרופלורים — שולפים את תקע הסוללה, כל אחד יכול. עם פרופלורים — אף יד לא מתקרבת: מחוון ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">0</span>, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">DISARM</span>, אומרים ״עצור״, מחכים שכל הפרופלורים ייעצרו — ורק אז המורה שולף את הסוללה. הרחבה חדשה לא מקצרת אף שלב.</p>
+            <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><strong>משקפי מגן לכל מי שנמצא בחדר</strong>, שיער אסוף ושרוולים מופשלים. הטיסה <strong>על החוט</strong>, בתוך המעגל, ולפני כל סוללה המורה קורא איתכם בקול את רשימת הבדיקה של כרטיס <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R4</span> לפי הסדר. המדחפים עולים אחרונים — כשהסוללה עדיין בחוץ — ויורדים ראשונים, מיד אחרי שהסוללה יצאה.</p>
+            <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:oklch(0.5 0.06 32);">בחירום: בלי מדחפים — שולפים את תקע הסוללה, כל אחד יכול. עם מדחפים — אף יד לא מתקרבת: מחוון ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">0</span>, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">DISARM</span>, אומרים ״עצור״, מחכים שכל המדחפים ייעצרו — ורק אז המורה שולף את הסוללה. הרחבה חדשה לא מקצרת אף שלב.</p>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
             <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.3 0.02 260);">ניטור סוללה ונחיתה אוטומטית</h3>
           </div>
           <p style="margin:0; font-size:14.5px; line-height:1.5; color:oklch(0.45 0.012 260);">מחלק מתח <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">100k/100k</span> מ-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">BAT+</span> ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GPIO 34</span>, <strong>וקבל קרמי <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">100nF</span> מהרגל ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GND</span> ליד ה-DevKit</strong> — בלעדיו הקריאה נודדת. הדף מציג וולט, ומתחת ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">3.5 V</span> הקוד מוריד את המצערת בהדרגה תוך 3 שניות ומנטרל.</p>
-          <p style="margin:8px 0 0; font-size:13px; line-height:1.5; color:oklch(0.55 0.012 260);">שני דברים לתכנן: המתח <strong>צונח כשנותנים מצערת</strong>, אז בודקים את הסף מול קריאה שנלקחת כשהרחפן חמוש ולא במנוחה — ולכן מוסיפים זמן החזקה של כשנייה מתחת לסף לפני שהנחיתה מופעלת. הכיול לרחפן שלכם מגיע חינם, מהמדידה במודד שאתם עושים ממילא לפני כל הפעלה.</p>
+          <p style="margin:8px 0 0; font-size:13px; line-height:1.5; color:oklch(0.55 0.012 260);">שני דברים לתכנן: המתח <strong>צונח כשנותנים מצערת</strong>, אז בודקים את הסף מול קריאה שנלקחת כשהרחפן חמוש ולא במנוחה — ולכן מוסיפים זמן החזקה של כשנייה מתחת לסף לפני שהנחיתה מופעלת. הכיול לרחפן שלכם מגיע חינם, מהמדידה במולטימטר שאתם עושים ממילא לפני כל הפעלה.</p>
           <p style="margin:8px 0 0; font-size:13px; line-height:1.5; font-weight:600; color:oklch(0.45 0.11 248);">⭐ ההרחבה הכי שימושית לכל החדר — היא מוציאה מהמשוואה את הניחוש ״כמה זמן הסוללה הזאת בחוץ״.</p>
         </div>
 
@@ -159,7 +159,7 @@
 
         <div style="background:oklch(0.96 0.04 90); border:1px solid oklch(0.88 0.06 90); border-radius:13px; padding:15px 16px;">
           <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.42 0.08 75); margin-bottom:5px;">איך תדעו שזה עובד?</label>
-          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.5 0.04 75);">מבחן אחד, עם מספר בתוכו, שאפשר להראות למישהו. דוגמאות: ״הדף מראה וולט שמתאים למודד בסטייה של <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">0.1 V</span>״ · ״נשאר בטווח <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">±10</span> ס״מ במשך 10 שניות״ · ״קובץ <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">CSV</span> ירד ויש בו 20 שורות לשנייה״ · ״הלד ירוק כשמנוטרל ואדום כשחמוש״.</p>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.5 0.04 75);">מבחן אחד, עם מספר בתוכו, שאפשר להראות למישהו. דוגמאות: ״הדף מראה וולט שמתאים למולטימטר בסטייה של <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">0.1 V</span>״ · ״נשאר בטווח <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">±10</span> ס״מ במשך 10 שניות״ · ״קובץ <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">CSV</span> ירד ויש בו 20 שורות לשנייה״ · ״הלד ירוק כשמנוטרל ואדום כשחמוש״.</p>
           <textarea value="{{ f5 }}" onInput="{{ on5 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.85 0.05 90); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.65 0.12 90)"></textarea>
         </div>
 
@@ -176,7 +176,7 @@
           <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
           <div style="padding-top:3px; flex:1; min-width:0;">
-            <p style="margin:0; font-size:16px; line-height:1.55;">מחברים את החומרה החדשה — <strong>הסוללה בחוץ, הפרופלורים למטה</strong> — לפי השרטוט שקלוד קוד עשה איתכם.</p>
+            <p style="margin:0; font-size:16px; line-height:1.55;">מחברים את החומרה החדשה — <strong>הסוללה בחוץ, המדחפים למטה</strong> — לפי השרטוט שקלוד קוד עשה איתכם.</p>
             <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">משתמשים רק בפינים הפנויים: <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">33, 34, 32, 23, 19, 18</span>. ארבעת פיני המנועים, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">21/22</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">3V3</span> נשארים כמו שהם. הרחבה בלי חומרה חדשה — מדלגים על הסעיף הזה.</p>
           </div>
         </div>
@@ -236,7 +236,7 @@
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
           <div style="padding-top:3px; flex:1; min-width:0;">
             <p style="margin:0; font-size:16px; line-height:1.55;">מקלידים את השינויים ב-<span dir="ltr">Arduino IDE</span>, לוחצים <strong dir="ltr">Verify</strong> ואז <strong dir="ltr">Upload</strong>.</p>
-            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">מעלים תמיד כשהסוללה בחוץ והפרופלורים למטה. בצג הטורי בודקים שהבאנר עולה ושהחיישן עונה.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">מעלים תמיד כשהסוללה בחוץ והמדחפים למטה. בצג הטורי בודקים שהבאנר עולה ושהחיישן עונה.</p>
           </div>
         </div>
 
@@ -263,7 +263,7 @@
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
           <div style="padding-top:3px; flex:1; min-width:0;">
             <p style="margin:0; font-size:16px; line-height:1.55;"><strong>דף בדיקת המנועים</strong> — מתחברים לרשת של הרחפן, פותחים את הדף ובודקים שהוא עולה ושההרחבה מופיעה בו.</p>
-            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">משקפי מגן על העיניים, אין פרופלורים (בודקים במגע) והמורה עומד לידכם.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">משקפי מגן על העיניים, אין מדחפים (בודקים במגע) והמורה עומד לידכם.</p>
           </div>
         </div>
 
@@ -271,8 +271,8 @@
           <span onClick="{{ toggle8 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check8 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
           <div style="padding-top:3px; flex:1; min-width:0;">
-            <p style="margin:0; font-size:16px; line-height:1.55;"><strong>בדיקת התנהגות בלי פרופלורים</strong> — מטים את הרחפן ביד ובודקים שהמספרים בדף זזים לכיוון הנכון ושההרחבה מגיבה כמו שתכננתם.</p>
-            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">כאן מתגלות רוב הטעויות — לפני שיש פרופלור על ציר.</p>
+            <p style="margin:0; font-size:16px; line-height:1.55;"><strong>בדיקת התנהגות בלי מדחפים</strong> — מטים את הרחפן ביד ובודקים שהמספרים בדף זזים לכיוון הנכון ושההרחבה מגיבה כמו שתכננתם.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">כאן מתגלות רוב הטעויות — לפני שיש מדחף על ציר.</p>
           </div>
         </div>
 
@@ -329,7 +329,7 @@
           <span onClick="{{ toggle13 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check13 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
           <div style="padding-top:3px; flex:1; min-width:0;">
-            <p style="margin:0; font-size:16px; line-height:1.55;">סוגרים בסדר הקבוע — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">DISARM</span>, הסוללה החוצה, הפרופלורים למטה — רושמים שורה ביומן ומצלמים תמונה, אם רוצים.</p>
+            <p style="margin:0; font-size:16px; line-height:1.55;">סוגרים בסדר הקבוע — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">DISARM</span>, הסוללה החוצה, המדחפים למטה — רושמים שורה ביומן ומצלמים תמונה, אם רוצים.</p>
             <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">ביומן כותבים גם מה ההרחבה ומה קרה בטיסה. התמונה נשמרת בתיקיית פרויקט 8 שלכם ב-Google Drive, לתיק העבודות.</p>
           </div>
         </div>
@@ -353,6 +353,12 @@
         <div style="font-size:38px; line-height:1; margin-bottom:8px;">🎉</div>
         <div style="font-size:22px; font-weight:700; margin-bottom:10px;">הרחפן שלכם עושה משהו שאף רחפן אחר בסדנה לא עושה</div>
         <p style="margin:0; font-size:15.5px; line-height:1.6; color:rgba(255,255,255,0.92); max-width:58ch;">רעיון שבחרתם, תוכנית שכתבתם, חומרה שהוספתם וקוד שבניתם עם קלוד קוד על גבי קוד הטיסה שכיווננתם בעצמכם — והכול טס על החוט, בבטחה.</p>
+      </div>
+
+      <!-- SAFETY FOOTER (brief: the short version on every card) -->
+      <div style="display:flex; gap:11px; align-items:flex-start; margin-top:26px; padding-top:16px; border-top:1px solid oklch(0.92 0.006 85);">
+        <span style="flex:none; font-size:16px; line-height:1.5;">🛡️</span>
+        <p style="margin:0; font-size:12.5px; line-height:1.6; color:oklch(0.55 0.012 260);">זה הפרויקט האחד שבו החומרה יכולה לפגוע בכם — <strong>המדחפים והסוללה</strong>. בגלל זה המורה מחזיק את שניהם, בגלל זה חובשים משקפי מגן בכל רגע שמנוע יכול להסתובב, בגלל זה הרחפן תמיד על חוט ובגלל זה כל אחד רשאי להגיד <span dir="ltr">STOP</span>. כל הכללים בכרטיסיית <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:11.5px;">R1</span>.</p>
       </div>
 
     </div>

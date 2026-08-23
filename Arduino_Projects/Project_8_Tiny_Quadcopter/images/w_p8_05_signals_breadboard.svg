@@ -698,7 +698,7 @@
     <line stroke="#999" stroke-width="19.6847" x1="2645.63" x2="2645.63"  y1="748.023" y2="125.983"/>
     <line stroke="#999" stroke-width="19.6847" x1="2645.63" x2="2645.63"  y1="1220.46" y2="1925.96"/>
     <text fill="#ffffff" font-size="78.7389" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="2645.63"  y="1011.8">C</text>
-    <text fill="#5a4a2a" font-size="62.9911" style="font-family:Arial;font-weight:normal;text-anchor:middle" x="1417.3"  y="2133.83">4 x IRLB8721 low-side  |  SS34 flyback  |  100R gate  |  10k pull-down</text>
+    <text fill="#5a4a2a" font-size="62.9911" style="font-family:Arial;font-weight:normal;text-anchor:middle" x="1417.3"  y="2133.83">4 x IRLB8721 low-side  |  1N5819 flyback  |  100 ohm gate  |  10k pull-down</text>
    </g>
   </g>
  </g>

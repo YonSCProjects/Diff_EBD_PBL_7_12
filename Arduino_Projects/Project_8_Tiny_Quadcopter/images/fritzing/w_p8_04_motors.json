@@ -13,7 +13,7 @@
     {
       "id": "mF",
       "part": "motor_8520_cw",
-      "x": 42,
+      "x": 24.505,
       "y": 160,
       "rotation": 270,
       "title": "FRONT (CW)",
@@ -30,7 +30,7 @@
     {
       "id": "mR",
       "part": "motor_8520_ccw",
-      "x": 93,
+      "x": 75.883,
       "y": 160,
       "rotation": 270,
       "title": "RIGHT (CCW)",
@@ -47,7 +47,7 @@
     {
       "id": "mB",
       "part": "motor_8520_cw",
-      "x": 145,
+      "x": 127.259,
       "y": 160,
       "rotation": 270,
       "title": "BACK (CW)",
@@ -64,7 +64,7 @@
     {
       "id": "mL",
       "part": "motor_8520_ccw",
-      "x": 196,
+      "x": 178.636,
       "y": 160,
       "rotation": 270,
       "title": "LEFT (CCW)",

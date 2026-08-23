@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./card_nav.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 8 · רחפן זעיר
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול 1 · כרטיסייה V1</div>
+      </div>
+
+      <div style="margin-top:16px; font-size:12.5px; font-weight:600; color:rgba(255,255,255,0.65);">פרויקט #8 — רחפן זעיר: שלב 5 מתוך 14</div>
+      <h1 style="margin:10px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מחווטים את עץ החשמל</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;"><strong style="color:#fff;">שישה חוטי חשמל: מהלוח אל הממיר, מהממיר אל ה-ESP32 וממנו אל החיישן.</strong></p>
+
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>שלב 5 מתוך 14</span><span>36%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:35.7%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <!-- BATTERY STAYS OUT -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">הסוללה נשארת אצל המורה</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">לאורך כל השלב הזה הסוללה לא נכנסת לרחפן — היא מחכה בשקית חסינת האש שעל שולחן המורה. מחברים אותה בפעם הראשונה רק בשלב 8, יחד עם המורה.</p>
+        </div>
+      </div>
+
+      <!-- POWER TREE -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">עץ החשמל</h2>
+      </div>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:20px;">
+        <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="font-size:13px;">🔋</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Power Tree — Battery to Brain</span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.7 0.01 260);">Battery PH2.0   ────&gt;  Board BAT+ / GND     (teacher)
+</span><span style="color:oklch(0.88 0.01 260);">Board BAT+/GND  ────&gt;  MT3608 IN+ / IN-
+</span><span style="color:oklch(0.82 0.13 90);">MT3608 OUT 5.0V ────&gt;  ESP32 VIN / GND
+</span><span style="color:oklch(0.78 0.15 145);">ESP32 3V3 / GND ────&gt;  MPU6050 VCC / GND    (3V3 only!)</span></pre>
+      </div>
+
+      <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85); margin-bottom:30px;">
+        <div dir="ltr" style="padding:22px 18px 14px; display:flex; justify-content:center;">
+          <img src="./assets/w_p8_03_power_tree_breadboard.svg" alt="תרשים חשמל של הרחפן: סוללת ליתיום 1S עם תקע PH2.0 מחוברת לחיבורי BAT+ ו-GND של לוח המוספטים; מהלוח שני חוטים אל IN+ ו-IN− של ממיר MT3608; מ-OUT+ ו-OUT− של הממיר אל VIN ו-GND של ה-ESP32; ומחיבורי 3V3 ו-GND של ה-ESP32 אל VCC ו-GND של חיישן MPU6050" style="width:640px; max-width:100%; height:auto;" />
+        </div>
+        <div style="padding:11px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>מסלול החשמל:</strong> הסוללה מזינה את לוח המוספטים; הלוח מזין את הממיר <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">MT3608</span>; הממיר מזין את ה-ESP32 ב-5V והחיישן מקבל 3V3 מה-ESP32 עצמו. בתרשים הסוללה מחוברת כדי להראות את המסלול — בשלב הזה היא נשארת בחוץ.</div>
+      </div>
+
+      <!-- STEPS -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה עושים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מוצאים את חוט הסוללה עם התקע <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">PH2.0</span> שהמורה כבר הלחים ללוח המוספטים: האדום הוא <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</strong> והשחור הוא <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong>.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">מהלוח אל הממיר: חוט אדום עבה (<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">22–24 AWG</span>) מפד <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</strong> השני בלוח אל <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">IN+</strong> של הממיר וחוט שחור עבה מפד <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> השני אל <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">IN−</strong>.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">בלוח יש שני פדי <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">BAT+</span> ושני פדי <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> — הראשונים תפוסים בחוט הסוללה. מפשיטים 3 מ"מ, מצפים את הקצה בבדיל ומלחימים — אותו טקס מפרויקט 4. המורה לידכם.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">מהממיר אל ה-ESP32: חוט אדום (<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">26 AWG</span>) מ-<strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">OUT+</strong> אל חיבור <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">VIN</strong> של ה-ESP32 וחוט שחור מ-<strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">OUT−</strong> אל חיבור <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> שנמצא לידו.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">בצד ה-ESP32 אפשר להשתמש במחברי דופונט נקבה או להלחים לפיני המחבר.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.04 35); border:1px solid oklch(0.85 0.07 35); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.08 35); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.58 0.16 35); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מה-ESP32 אל החיישן <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">MPU6050</span>: חוט אדום דק מחיבור <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">3V3</strong> אל <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">VCC</strong> של החיישן וחוט שחור דק מחיבור <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> שנמצא ליד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">3V3</span> אל <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> של החיישן. <strong>3V3 — לא VIN ולא 5V.</strong></p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מסדרים את החוטים: מרחיקים אותם ממעגלי המדחפים ומקבעים כל חוט באזיקון קטן או בטיפת דבק חם — לא על לוח המוספטים.</p>
+        </div>
+
+      </div>
+
+      <!-- THE SIX POWER WIRES -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 8px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📝</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">ששת חוטי החשמל</h2>
+      </div>
+      <p style="margin:0 0 16px; font-size:14.5px; line-height:1.5; color:oklch(0.55 0.012 260);">עוברים חוט-חוט ומסמנים ✓ אחרי שעוקבים באצבע מאיפה החוט יוצא ולאן הוא מגיע.</p>
+
+      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:30px;">
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:13px 16px;">
+          <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <p style="margin:0; font-size:15.5px; line-height:1.5; padding-top:2px;"><strong style="color:oklch(0.5 0.15 28);">אדום:</strong> מפד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">BAT+</span> השני בלוח אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">IN+</span> של הממיר</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:13px 16px;">
+          <span onClick="{{ toggle7 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check7 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <p style="margin:0; font-size:15.5px; line-height:1.5; padding-top:2px;"><strong style="color:oklch(0.4 0.012 260);">שחור:</strong> מפד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> השני בלוח אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">IN−</span> של הממיר</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:13px 16px;">
+          <span onClick="{{ toggle8 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check8 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <p style="margin:0; font-size:15.5px; line-height:1.5; padding-top:2px;"><strong style="color:oklch(0.5 0.15 28);">אדום:</strong> מ-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OUT+</span> של הממיר אל חיבור <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">VIN</span> של ה-ESP32</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:13px 16px;">
+          <span onClick="{{ toggle9 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check9 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <p style="margin:0; font-size:15.5px; line-height:1.5; padding-top:2px;"><strong style="color:oklch(0.4 0.012 260);">שחור:</strong> מ-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OUT−</span> של הממיר אל חיבור <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> של ה-ESP32 שנמצא ליד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">VIN</span></p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:13px 16px;">
+          <span onClick="{{ toggle10 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check10 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <p style="margin:0; font-size:15.5px; line-height:1.5; padding-top:2px;"><strong style="color:oklch(0.5 0.15 28);">אדום דק:</strong> מחיבור <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">3V3</span> של ה-ESP32 אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">VCC</span> של החיישן</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:13px 16px;">
+          <span onClick="{{ toggle11 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check11 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <p style="margin:0; font-size:15.5px; line-height:1.5; padding-top:2px;"><strong style="color:oklch(0.4 0.012 260);">שחור דק:</strong> מחיבור <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> של ה-ESP32 שנמצא ליד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">3V3</span> אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> של החיישן</p>
+        </div>
+
+      </div>
+
+      <!-- EXPECTED -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">שישה חוטי חשמל במקום: אדום לפלוס ושחור למינוס, בדיוק כמו בתרשים.</p>
+          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">הסוללה עדיין בחוץ ושום דבר לא דולק — זה יקרה בשלב 8.</p>
+        </div>
+      </div>
+
+      <!-- DONE WHEN -->
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימתם כש:
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>ששת החוטים ברשימה מסומנים</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בכל שישה החוטים האדום הולך לפלוס והשחור למינוס</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>החיישן מקבל חשמל מ-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">3V3</span> — לא מ-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">VIN</span> ולא מ-5V</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>המורה בדק את הקוטביות בממיר ובחיבורים של ה-ESP32</span></div>
+        </div>
+      </div>
+
+      <!-- STUCK -->
+      <div style="background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.45 0.12 300); margin-bottom:11px;">
+          <span style="font-size:20px;">🪄</span>תקועים?
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>איזה <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span>? ל-ESP32 יש שני חיבורי <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span>: זה שליד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">VIN</span> הולך לממיר וזה שליד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">3V3</span> הולך לחיישן.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>הכיתוב <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">IN</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OUT</span> על הממיר זעיר. ברוב המודולים <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">IN</span> הוא הצד שליד הסליל הגדול. המורה כבר סימן בטוש כסוף <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">IN</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OUT 5.0V ✓</span>.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>קוראים למורה.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:2650}}">
+class Component extends DCLogic {
+  state = { checked: {} };
+  KEY = 'tc_p8t1m5_checks';
+  componentDidMount() {
+    try { const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) }); } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  renderVals() {
+    const v = {};
+    for (let i = 1; i <= 20; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

@@ -71,7 +71,7 @@ def motor_svg(lead_a, lead_b):
     return '\n'.join(s)
 
 # ------------------------------------------------------------ 4-channel low-side MOSFET board on a 50 x 40 mm perfboard
-def board_svg(diode_label='SS34'):
+def board_svg(diode_label='1N5819'):
     W, H = 72.0, 56.0
     s = ['<?xml version="1.0" encoding="UTF-8"?>',
          f'<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="{W/25.4:.4f}in" height="{H/25.4:.4f}in" viewBox="0 0 {W} {H}">',
@@ -134,7 +134,7 @@ def board_svg(diode_label='SS34'):
     s.append(f'<line x1="{cxp:.2f}" y1="{cyp-6:.2f}" x2="{cxp:.2f}" y2="{yb:.2f}" style="stroke:#999;stroke-width:0.5"/>')
     s.append(f'<line x1="{cxp:.2f}" y1="{cyp+6:.2f}" x2="{cxp:.2f}" y2="{yg:.2f}" style="stroke:#999;stroke-width:0.5"/>')
     s.append(text(cxp, cyp+0.7, 'C', 2.0, '#ffffff'))
-    s.append(text(ox+35, oy+53.2, f'4 x IRLB8721 low-side  |  {diode_label} flyback  |  100R gate  |  10k pull-down', 1.6, '#5a4a2a', 'normal'))
+    s.append(text(ox+35, oy+53.2, f'4 x IRLB8721 low-side  |  {diode_label} flyback  |  100 ohm gate  |  10k pull-down', 1.6, '#5a4a2a', 'normal'))
     s.append('</g></svg>')
     return '\n'.join(s), conns
 

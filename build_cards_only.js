@@ -22,9 +22,9 @@ const { resolveCardFile, renderCardPdf, snapshotCardHtml, DC_FONTS_LINK, scopeCs
 // `node build_cards_only.js he` invocation still builds Project 1.
 const args = process.argv.slice(2);
 const lang = args.find((a) => ['en', 'he'].includes(a));
-const projectKey = args.find((a) => ['1', '2', '3', '4', '5', '6', '7'].includes(a)) || '1';
+const projectKey = args.find((a) => ['1', '2', '3', '4', '5', '6', '7', '8'].includes(a)) || '1';
 if (!lang) {
-  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3|4|5|6|7]');
+  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3|4|5|6|7|8]');
   process.exit(1);
 }
 
@@ -77,6 +77,12 @@ const PROJECTS = {
     outBase: 'Project_7_Cards',
     titleHe: 'פרויקט 7 — סייר עם מצלמה: חוברת כרטיסיות (משימה)',
     titleEn: 'Project 7 — Camera-Equipped Explorer: Cards Bundle (Task)',
+  },
+  '8': {
+    dir: 'Project_8_Tiny_Quadcopter',
+    outBase: 'Project_8_Cards',
+    titleHe: 'פרויקט 8 — רחפן זעיר: חוברת כרטיסיות (משימה)',
+    titleEn: 'Project 8 — Tiny ESP32 Quadcopter: Cards Bundle (Task)',
   },
 };
 
@@ -222,6 +228,37 @@ const CARD_STEMS = {
     'T:T2_M5_interface_with_claude',
     'T:T2_M6_design_mission',
     'T:T2_M7_signature_exploration',
+    'T:T3_project_planner',
+  ],
+  '8': [
+    'R:R1_flight_safety',
+    'T:T1_M1_meet_parts_contract',
+    'T:T1_M2_press_fit_motors',
+    'T:T1_M3_meet_mosfet_board',
+    'T:T1_M4_mount_electronics',
+    'T:T1_M5_power_tree',
+    'T:T1_M6_motor_wiring',
+    'T:T1_M7_signal_wiring',
+    'T:T1_M8_pre_power_check',
+    'T:T1_M9_upload_motor_test',
+    'T:T1_M10_spin_no_props',
+    'T:T1_M11_thrust_test',
+    'T:T1_M12_upload_flight',
+    'T:T1_M13_tethered_hover',
+    'T:T1_M14_post_flight_celebrate',
+    'T:T2_M1_startup',
+    'T:T2_M2_solder_channel_1',
+    'T:T2_M3_check_channel_1',
+    'T:T2_M4_solder_channels_2_4',
+    'T:T2_M5_tune_mt3608',
+    'T:T2_M6_mount_and_wire',
+    'T:T2_M7_pre_power_check',
+    'T:T2_M8_upload_and_spin',
+    'T:T2_M9_thrust_test',
+    'T:T2_M10_choices_and_claude',
+    'T:T2_M11_tethered_hover_tuning',
+    'T:T2_M12_flight_sequence',
+    'T:T2_M13_signature_flight',
     'T:T3_project_planner',
   ],
 };

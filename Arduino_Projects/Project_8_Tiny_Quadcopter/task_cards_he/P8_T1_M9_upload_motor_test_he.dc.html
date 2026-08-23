@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./card_nav.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 8 · רחפן זעיר
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול 1 · כרטיסייה V1</div>
+      </div>
+
+      <div style="margin-top:16px; font-size:12.5px; font-weight:600; color:rgba(255,255,255,0.65);">פרויקט #8 — רחפן זעיר: שלב 9 מתוך 14</div>
+      <h1 style="margin:10px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מעלים את קוד בדיקת המנועים</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;"><strong style="color:#fff;">מתקינים שתי ספריות ומעלים לרחפן את הקוד שבודק את המנועים.</strong></p>
+
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>שלב 9 מתוך 14</span><span>64%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:64.3%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <!-- top warning: the program's power rule -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">USB בפנים = סוללה בחוץ</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">כבל ה-USB והסוללה אף פעם לא מחוברים לרחפן ביחד. מעלים קוד עם ה-USB בלבד, כשהסוללה מנותקת ואצל המורה. מפעילים מנועים עם הסוללה בלבד, כשכבל ה-USB בחוץ. זה חוק הפרויקט מאז פרויקט 4.</p>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:oklch(0.48 0.06 32);">כל עוד הסוללה בחוץ שום דבר לא מזין את <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">BAT+</span> בלוח המוספטים — המנועים לא יכולים לזוז, גם אם הקוד מנסה. לכן כל ההעלאות נעשות ככה.</p>
+        </div>
+      </div>
+
+      <!-- what to do -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה עושים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:26px;">
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מסתכלים על הרחפן ומוודאים <strong>שהסוללה לא מחוברת</strong> — היא נמצאת אצל המורה. מחברים את כבל ה-USB ללוח ה-ESP32 שעל הרחפן.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <div style="flex:1; min-width:0; padding-top:3px;">
+            <p style="margin:0 0 10px; font-size:16px; line-height:1.55;">ב-Arduino IDE מכוונים שלוש הגדרות בתפריט <span dir="ltr">Tools</span>:</p>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div style="display:flex; gap:10px; align-items:flex-start; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:10px; padding:9px 12px;">
+                <span style="flex:none; min-width:64px; font-size:13.5px; font-weight:700; color:oklch(0.45 0.11 248);">לוח</span>
+                <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; line-height:1.5; color:oklch(0.34 0.012 260);">Tools → Board → ESP32 Arduino → DOIT ESP32 DEVKIT V1</span>
+              </div>
+              <div style="display:flex; gap:10px; align-items:flex-start; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:10px; padding:9px 12px;">
+                <span style="flex:none; min-width:64px; font-size:13.5px; font-weight:700; color:oklch(0.45 0.11 248);">יציאה</span>
+                <div style="min-width:0;">
+                  <span dir="ltr" style="display:block; font-family:'JetBrains Mono',monospace; font-size:12.5px; line-height:1.5; color:oklch(0.34 0.012 260);">Tools → Port</span>
+                  <span style="display:block; margin-top:3px; font-size:13px; line-height:1.5; color:oklch(0.55 0.012 260);">בוחרים את יציאת ה-COM שנוספה כשחיברתם את הכבל.</span>
+                </div>
+              </div>
+              <div style="display:flex; gap:10px; align-items:flex-start; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:10px; padding:9px 12px;">
+                <span style="flex:none; min-width:64px; font-size:13.5px; font-weight:700; color:oklch(0.45 0.11 248);">מהירות</span>
+                <div style="min-width:0;">
+                  <span dir="ltr" style="display:block; font-family:'JetBrains Mono',monospace; font-size:12.5px; line-height:1.5; color:oklch(0.34 0.012 260);">Tools → Upload Speed → 115200</span>
+                  <span style="display:block; margin-top:3px; font-size:13px; line-height:1.5; color:oklch(0.55 0.012 260);">(מהירות נמוכה יותר — פחות העלאות שנכשלות עם כבלים זולים).</span>
+                </div>
+              </div>
+            </div>
+            <p style="margin:10px 0 0; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);">בפרויקטים 5 ו-6 בחרתם <span dir="ltr">ESP32 Dev Module</span>. כאן בוחרים את הלוח של הרחפן — <span dir="ltr">DOIT ESP32 DEVKIT V1</span>.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">נכנסים ל-<span dir="ltr">Sketch → Include Library → Manage Libraries</span>, כותבים בחיפוש <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">Adafruit MPU6050</code> ומתקינים. כשנפתח חלון ששואל על ספריות נוספות — לוחצים <strong dir="ltr">Install all</strong>.<span style="display:block; margin-top:6px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);">אחר כך מחפשים <span dir="ltr">Adafruit Unified Sensor</span> ובודקים שכתוב לידה <span dir="ltr">INSTALLED</span>. זו אותה התקנה כמו הספריות של פרויקט 6. שתי הספריות האלה שייכות ל-<span dir="ltr">MPU6050</span> — החיישן שמרגיש לאן זה למטה — ומשמשות את קוד התעופה בכרטיסיות הבאות.</span></p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מעתיקים את הקובץ <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">00_motor_test.ino</code> מתיקיית המורה לתיקיית פרויקט 8 שלכם ופותחים אותו ב-<span dir="ltr">File → Open</span>.<span style="display:block; margin-top:6px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);">קוראים את הכותרת בראש הקובץ: כתוב בה מה הקוד עושה ושהוא רץ <strong>בלי פרופלורים</strong>. המורה כבר הגדיר בקובץ את מספר העמדה שלכם (<span dir="ltr">STATION</span>), כך שרשת ה-Wi-Fi של הרחפן תיקרא <span dir="ltr">DRONE-01</span> עד <span dir="ltr">DRONE-08</span> לפי המספר שלכם — אותו שם שכתוב על המדבקה שעל הרחפן.</span></p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">לוחצים על <strong dir="ltr">Upload</strong> ומחכים שתופיע למטה השורה <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.95 0.006 260); border-radius:6px; padding:2px 7px; display:inline-block;">Hard resetting via RTS pin...</span><span style="display:block; margin-top:6px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);">אם המסך תקוע על <span dir="ltr">Connecting...</span> — מחזיקים את כפתור ה-BOOT שעל הלוח לחוץ עד שהנקודות מתחילות לזוז. (ביום טיסה ההעלאות עוצרות בזמן שרחפן פעיל בקו הטיסה — המורה מכריז "מקטע טיסה" ואחר כך "פנוי" — כי גם רחפן שמחובר ב-USB משדר רשת).</span></p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">פותחים את הצג הטורי (<span dir="ltr">Tools → Serial Monitor</span>), בוחרים מהירות <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.95 0.006 260); border-radius:6px; padding:2px 7px; display:inline-block;">115200</span> וקוראים את הכותרת שהקוד מדפיס.<span style="display:block; margin-top:6px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);">משווים את שם הרשת שבצג הטורי לשם שעל מדבקת הרחפן — הם חייבים להיות זהים. רושמים את שם הרשת על הכרטיסייה, בשורה שלמטה. הסיסמה של הרשת נמצאת על כרטיס העמדה שלכם ולא נרשמת כאן.</span></p>
+        </div>
+
+      </div>
+
+      <!-- serial monitor mock -->
+      <p style="margin:0 0 12px; font-size:15px; line-height:1.55; color:oklch(0.46 0.012 260);">כך נראה הצג הטורי אחרי ההעלאה:</p>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="font-size:13px;">🔍</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Serial Monitor — 115200 baud</span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.82 0.13 90);">===== PROJECT 8 - MOTOR TEST (props OFF!) =====
+</span><span style="color:oklch(0.88 0.01 260);">Throttle ceiling: 100 % = 255 / 255
+Motor pins:       FRONT 25  RIGHT 26  BACK 14  LEFT 27
+</span><span style="color:oklch(0.82 0.13 90);">Network:  DRONE-01
+</span><span style="color:oklch(0.88 0.01 260);">Password: ...
+</span><span style="color:oklch(0.78 0.15 145);">Page:     http://192.168.4.1
+</span><span style="color:oklch(0.7 0.01 260);">Ready - DISARMED. Slider on 0, then ARM.</span></pre>
+      </div>
+
+      <!-- write it on the card -->
+      <div style="border:1px solid oklch(0.92 0.006 85); border-radius:13px; overflow:hidden; background:#fff; margin-bottom:26px;">
+        <div style="display:flex; align-items:center; gap:10px; padding:12px 16px; background:oklch(0.985 0.004 85); border-bottom:1px solid oklch(0.93 0.006 85); font-size:14px; font-weight:700; color:oklch(0.34 0.012 260);"><span style="font-size:15px;">📝</span>שם הרשת של הרחפן — רושמים כאן</div>
+        <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding:12px 16px;">
+          <span style="flex:none; min-width:190px; font-size:15px; font-weight:600; color:oklch(0.34 0.012 260);">השורה <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">Network:</span> שבצג הטורי</span>
+          <span dir="ltr" style="flex:none; font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:oklch(0.42 0.1 248); background:oklch(0.96 0.01 248); border-radius:999px; padding:3px 11px;">DRONE-01 … DRONE-08</span>
+          <span style="flex:1; min-width:110px; height:20px; border-bottom:1.5px dashed oklch(0.84 0.02 85);"></span>
+        </div>
+      </div>
+
+      <!-- expected -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">בצג הטורי מופיעה הכותרת של הקוד: השם שלו, תקרת המצערת ומספרי הפינים של ארבעת המנועים. אחריה מופיעים שם הרשת של הרחפן והכתובת של הדף.</p>
+          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);">אצלכם מופיע מספר העמדה שלכם — לא בהכרח <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px;">DRONE-01</span>.</p>
+        </div>
+      </div>
+
+      <!-- done when -->
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימתם כש:
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הקוד עלה — הופיעה ההודעה <strong dir="ltr">Done uploading</strong></span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>ליד <span dir="ltr">Adafruit MPU6050</span> וליד <span dir="ltr">Adafruit Unified Sensor</span> כתוב <span dir="ltr">INSTALLED</span></span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בצג הטורי מופיעה הכותרת של הקוד עם שם הרשת של הרחפן</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שם הרשת שבצג הטורי זהה לשם שעל מדבקת הרחפן</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שם הרשת רשום על הכרטיסייה</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>הסוללה עדיין אצל המורה</span></div>
+        </div>
+      </div>
+
+      <!-- stuck -->
+      <div style="background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.45 0.12 300); margin-bottom:11px;">
+          <span style="font-size:20px;">🪄</span>תקועים?
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם לא מופיעה שום יציאת COM:</strong> הכבל אולי כבל טעינה בלבד — מחליפים כבל ובודקים שוב. אם גם הכבל השני לא עוזר, חסר במחשב הזה מנהל ההתקן של שבב ה-USB (<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">CP2102</span>) — קוראים למורה.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם מופיע טקסט שגיאה אדום שמזכיר את <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">ledcAttach</span>:</strong> חבילת ה-ESP32 שבמחשב ישנה — מעדכנים ב-<span dir="ltr">Boards Manager</span> את <span dir="ltr">esp32 by Espressif</span> לגרסה 3.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם ההעלאה נשארת על <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">Connecting...</span>:</strong> מחזיקים את כפתור ה-BOOT. אם זה לא עוזר — מנתקים את ה-USB, מחברים שוב ומעלים מחדש.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>עדיין תקועים? קוראים למורה.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:2600}}">
+class Component extends DCLogic {
+  state = { checked: {} };
+  KEY = 'tc_p8t1m9_checks';
+  componentDidMount() {
+    try { const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) }); } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  renderVals() {
+    const v = {};
+    for (let i = 1; i <= 20; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./card_nav.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 8 · רחפן זעיר
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול 2 · כרטיסייה V2</div>
+      </div>
+
+      <div style="margin-top:16px; font-size:12.5px; font-weight:600; color:rgba(255,255,255,0.65);">פרויקט #8 — רחפן זעיר: שלב 3 מתוך 13</div>
+      <h1 style="margin:10px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">בודקים את ערוץ 1 במולטימטר</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;"><strong style="color:#fff;">הערוץ הראשון מולחם — עכשיו מוכיחים שהוא תקין, לפני שערוץ 2 בכלל קיים.</strong></p>
+
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>שלב 3 מתוך 13</span><span>23%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:23.1%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <!-- WHY NOTE -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 285); border:1px solid oklch(0.88 0.05 285); border-radius:16px; padding:16px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:22px; line-height:1;">💡</span>
+        <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.42 0.06 285);">בערוץ שהלחמתם עוד לא עבר חשמל. המולטימטר הוא הדרך היחידה לדעת שההלחמה נכונה — לפני הסוללה ולפני המנוע. טעות שנמצאת כאן נמצאת פעם אחת ולא ארבע. הבדיקה הזאת היא שלכם, מהחוגה ועד התוצאה שכותבים.</p>
+      </div>
+
+      <!-- FIGURE -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">הערוץ שאתם בודקים</h2>
+      </div>
+
+      <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85); margin-bottom:30px;">
+        <div dir="ltr" style="padding:22px 18px 14px; display:flex; justify-content:center;">
+          <img src="./assets/w_p8_01_mosfet_channel_breadboard.svg" alt="תרשים ערוץ אחד בלוח המוספטים: סוללת ליתיום 1S מזינה את פס BAT+ ואת פס GND, מנוע 8520 מחובר בין BAT+ לפד M1 מינוס, דיודת החזר שהטבעת שלה פונה אל BAT+, נגד 100Ω בין GPIO 25 של הבקר לשער המוספט ונגד הורדה 10kΩ בין השער לפס GND" style="width:600px; max-width:100%; height:auto;" />
+        </div>
+        <div style="padding:11px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>ערוץ 1:</strong> פד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">M1−</span> הוא רגל ה-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">Drain</span> (וגם הלשונית), הטבעת של הדיודה פונה אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">BAT+</span>, נגד ההורדה 10kΩ מחזיק את השער על 0V. <strong>הסוללה והמנוע לא מחוברים בשלב הזה</strong> — כך ייראה הערוץ בהמשך.</div>
+      </div>
+
+      <!-- STEPS -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה עושים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:26px;">
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.04 35); border:1px solid oklch(0.85 0.07 35); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.08 35); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.58 0.16 35); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">מכוונים את המולטימטר ל<strong>מצב רציפות</strong> (<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">Continuity</span> — זה שמצפצף) ובודקים פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</span> מול פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</span>: <strong>אין צפצוף</strong>.</p>
+            <p style="margin:9px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.42 0.08 32);">צפצוף = קצר בין הפסים. עוצרים כאן, לא מחברים ללוח שום דבר וקוראים למורה.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0 0 9px; font-size:16px; line-height:1.55;">נשארים במצב רציפות ובודקים את <strong>הלשונית</strong> של המוספט פעמיים:</p>
+            <div style="display:flex; flex-direction:column; gap:7px; font-size:15px; line-height:1.5;">
+              <div style="display:flex; gap:9px; align-items:flex-start;"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>לשונית מול פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> — <strong>אין צפצוף</strong></span></div>
+              <div style="display:flex; gap:9px; align-items:flex-start;"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>לשונית מול פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">BAT+</span> — <strong>אין צפצוף</strong></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">מעבירים ל<strong>מצב אוהם</strong> בטווח <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">20k</span> ובודקים פד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">G1</span> מול פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</span>: <strong>בערך 10kΩ</strong> (בין 9kΩ ל-11kΩ).</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">זה נגד ההורדה שהלחמתם. כל עוד ה-<span dir="ltr">ESP32</span> לא מפעיל את השער, הנגד מחזיק אותו על 0V.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">באותו טווח בודקים פד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M1−</span> מול פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</span>: <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">OL</strong> — התנגדות גבוהה מאוד.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">המוספט כבוי כשהשער על 0V ולכן אין מעבר מ-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">M1−</span> אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GND</span>.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0 0 9px; font-size:16px; line-height:1.55;">מעבירים ל<strong>מצב בדיקת דיודה</strong> (סימן הדיודה על החוגה) ובודקים את דיודת ההחזר בשני הכיוונים:</p>
+            <div style="display:flex; flex-direction:column; gap:7px; font-size:15px; line-height:1.5;">
+              <div style="display:flex; gap:9px; align-items:flex-start;"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>מחוש אדום על <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">M1−</span> (צד האנודה), שחור על <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">BAT+</span> — <strong>בין 0.2V ל-0.35V</strong></span></div>
+              <div style="display:flex; gap:9px; align-items:flex-start;"><span style="flex:none; color:oklch(0.45 0.11 248); font-weight:700;">●</span><span>מחליפים בין המחושים — <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OL</strong></span></div>
+            </div>
+            <p style="margin:9px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">שתי התוצאות יחד מוכיחות שהטבעת של הדיודה פונה אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">BAT+</span>, בדיוק כמו בתרשים.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
+          <div style="padding-top:3px;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">כותבים את כל התוצאות על הכרטיס — כולל המספר המדויק של <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">G1</span> ושל בדיקת הדיודה.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">ממשיכים לערוצים 2 עד 4 רק כשכל התוצאות תקינות. ערוץ תקין הוא התבנית שלפיה מלחימים את השאר.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- METER PANEL -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔍</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה המולטימטר צריך להראות</h2>
+      </div>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:30px;">
+        <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="font-size:13px;">🔎</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Multimeter — channel 1, expected readings</span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.7 0.01 260);">Continuity (beep)
+</span><span style="color:oklch(0.78 0.15 145);">  BAT+  &lt;-&gt;  GND     no beep
+  tab   &lt;-&gt;  GND     no beep
+  tab   &lt;-&gt;  BAT+    no beep
+</span><span style="color:oklch(0.7 0.01 260);">
+Ohm, 20k range
+</span><span style="color:oklch(0.82 0.13 90);">  G1    &lt;-&gt;  GND     ~10 kΩ
+  M1-   &lt;-&gt;  GND     OL
+</span><span style="color:oklch(0.7 0.01 260);">
+Diode test
+</span><span style="color:oklch(0.82 0.13 90);">  red M1- / black BAT+    0.2-0.35 V
+  probes reversed         OL</span></pre>
+      </div>
+
+      <!-- EXPECTED -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
+          <p style="margin:0 0 6px; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">אין צפצוף באף אחת משלוש בדיקות הרציפות. <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">G1</span> מול <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> מראה בערך 10kΩ, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">M1−</span> מול <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> מראה <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OL</span> ובמצב דיודה מתקבל מספר בכיוון אחד ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OL</span> בכיוון ההפוך.</p>
+          <p style="margin:0; font-size:14px; line-height:1.5; color:oklch(0.5 0.03 75);"><strong>הלוח עדיין לא מחובר לסוללה ולא למנוע</strong> — כל הבדיקות האלה נעשות לפני שהוא מקבל חשמל.</p>
+        </div>
+      </div>
+
+      <!-- DONE WHEN -->
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימתם כש:
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>אין צפצוף בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">BAT+</span> ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">GND</span></span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>אין צפצוף בין הלשונית ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">GND</span> ואין צפצוף בין הלשונית ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">BAT+</span></span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span><span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">G1</span> מול <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">GND</span> בין 9kΩ ל-11kΩ</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span><span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">M1−</span> מול <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">GND</span> מראה <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">OL</span></span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>בדיקת הדיודה נותנת בין 0.2V ל-0.35V בכיוון אחד ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:rgba(255,255,255,0.65); border-radius:5px; padding:1px 6px;">OL</span> בכיוון ההפוך</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>כל התוצאות כתובות על הכרטיס ואף אחת מהן לא שגויה</span></div>
+        </div>
+      </div>
+
+      <!-- STUCK -->
+      <div style="background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.45 0.12 300); margin-bottom:11px;">
+          <span style="font-size:20px;">🪄</span>תקועים?
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>בבדיקת <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">G1</span> מופיע <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">1</span> או <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OL</span> — החוגה בטווח לא נכון. מעבירים ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">20k</span> (או אוטומטי) ומוודאים שהמחוש נוגע בנחושת חשופה ולא בציפוי או בהלחמה קרה.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>יש צפצוף בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">BAT+</span> ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> — לא מחברים ללוח שום דבר וקוראים למורה. בערוץ בודד זה כמעט תמיד גשר הלחמה או דיודה הפוכה.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>בדיקת הדיודה מתהפכת — המספר מתקבל דווקא כשהאדום על <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">BAT+</span>. הטבעת הולחמה הפוך. המורה מסיר את הדיודה (פירוק בהלחמה נעשה תמיד על ידי המורה) ואתם מלחימים אותה מחדש עם הטבעת אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">BAT+</span>. משווים לתרשים ולכרטיס <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R2</span>.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>תוצאה שלא נראית כמו אף אחת מהאפשרויות כאן — לא ממשיכים לערוץ הבא וקוראים למורה.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:2400}}">
+class Component extends DCLogic {
+  state = { checked: {} };
+  KEY = 'tc_p8t2m3_checks';
+  componentDidMount() {
+    try { const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) }); } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  renderVals() {
+    const v = {};
+    for (let i = 1; i <= 20; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

@@ -19,6 +19,8 @@ build_output/*
 !build_output/Project_6_Cards*.pdf
 !build_output/Project_7_Cards*.html
 !build_output/Project_7_Cards*.pdf
+!build_output/Project_8_Cards*.html
+!build_output/Project_8_Cards*.pdf
 
 # Node modules (if md-to-pdf is installed locally)
 node_modules/

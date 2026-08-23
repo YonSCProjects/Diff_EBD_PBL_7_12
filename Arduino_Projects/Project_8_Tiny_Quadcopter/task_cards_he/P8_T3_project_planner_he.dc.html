@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./card_nav.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <!-- Planner header (V3) -->
+    <div style="position:relative; background:linear-gradient(135deg, oklch(0.42 0.13 285), oklch(0.45 0.11 248)); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.24); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 8 · רחפן זעיר
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מתכנן פרויקט · V3</div>
+      </div>
+
+      <div style="margin:18px 0 0; font-size:12.5px; font-weight:600; letter-spacing:0.02em; color:rgba(255,255,255,0.66);">פרויקט #8 — רחפן זעיר: מתכנן הפרויקט</div>
+      <h1 style="margin:8px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;"><span style="margin-inline-end:8px;">🚁</span>מעצבים הרחבה משלכם לרחפן</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.88); max-width:58ch;"><strong style="color:#fff;">בוחרים הרחבה אחת, מתכננים אותה כאן ובונים אותה על הרחפן המכוונן שלכם.</strong> ניטור סוללה עם נחיתה אוטומטית, ייצוב גובה עם ברומטר, מצבי טיסה, רישום נתוני טיסה, לד מצב, סיבוב מהטלפון או פילטר משופר.</p>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <!-- purple intro note -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.04 285); border:1px solid oklch(0.88 0.05 285); border-radius:16px; padding:16px 20px; margin-bottom:22px;">
+        <span style="flex:none; font-size:22px; line-height:1;">💡</span>
+        <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.42 0.06 285);">מתכננים, בונים, בודקים ומראים. הבסיס הוא קוד הטיסה המכוונן שלכם מסוף מסלול 2 — כל הרחבה נבנית עליו. הכול נשמר במחשב הזה — אפשר לחזור ולערוך בכל רגע.</p>
+      </div>
+
+      <!-- governing safety box -->
+      <div style="background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <div style="display:flex; gap:14px; align-items:flex-start;">
+          <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+          <div>
+            <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">כל רעיון חדש טס בדיוק כמו כל טיסה אחרת</div>
+            <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><strong>משקפי מגן לכל מי שנמצא בחדר</strong>, שיער אסוף ושרוולים מופשלים. הטיסה <strong>על החוט</strong>, בתוך המעגל, ולפני כל סוללה המורה קורא איתכם בקול את רשימת הבדיקה של כרטיס <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R4</span> לפי הסדר. הפרופלורים עולים אחרונים — כשהסוללה עדיין בחוץ — ויורדים ראשונים, מיד אחרי שהסוללה יצאה.</p>
+            <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:oklch(0.5 0.06 32);">בחירום: בלי פרופלורים — שולפים את תקע הסוללה, כל אחד יכול. עם פרופלורים — אף יד לא מתקרבת: מחוון ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">0</span>, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">DISARM</span>, אומרים ״עצור״, מחכים שכל הפרופלורים ייעצרו — ורק אז המורה שולף את הסוללה. הרחבה חדשה לא מקצרת אף שלב.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 1 — PLAN -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 12px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📝</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 1 — מתכננים</h2>
+      </div>
+      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">בוחרים <strong>הרחבה אחת</strong>. הרחבה שנייה מגיעה רק אחרי שהראשונה טסה. שבע ההצעות כאן הן השראה — אפשר גם רעיון משלכם, בתיאום עם המורה.</p>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:26px;">
+
+        <div style="flex:1; min-width:230px; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:15px; padding:16px 18px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+            <span style="flex:none; width:32px; height:32px; border-radius:9px; background:oklch(0.45 0.11 248); color:#fff; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;">1</span>
+            <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.3 0.02 260);">ניטור סוללה ונחיתה אוטומטית</h3>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.5; color:oklch(0.45 0.012 260);">מחלק מתח <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">100k/100k</span> מ-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">BAT+</span> ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GPIO 34</span>, <strong>וקבל קרמי <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">100nF</span> מהרגל ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GND</span> ליד ה-DevKit</strong> — בלעדיו הקריאה נודדת. הדף מציג וולט, ומתחת ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">3.5 V</span> הקוד מוריד את המצערת בהדרגה תוך 3 שניות ומנטרל.</p>
+          <p style="margin:8px 0 0; font-size:13px; line-height:1.5; color:oklch(0.55 0.012 260);">שני דברים לתכנן: המתח <strong>צונח כשנותנים מצערת</strong>, אז בודקים את הסף מול קריאה שנלקחת כשהרחפן חמוש ולא במנוחה — ולכן מוסיפים זמן החזקה של כשנייה מתחת לסף לפני שהנחיתה מופעלת. הכיול לרחפן שלכם מגיע חינם, מהמדידה במודד שאתם עושים ממילא לפני כל הפעלה.</p>
+          <p style="margin:8px 0 0; font-size:13px; line-height:1.5; font-weight:600; color:oklch(0.45 0.11 248);">⭐ ההרחבה הכי שימושית לכל החדר — היא מוציאה מהמשוואה את הניחוש ״כמה זמן הסוללה הזאת בחוץ״.</p>
+        </div>
+
+        <div style="flex:1; min-width:230px; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:15px; padding:16px 18px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+            <span style="flex:none; width:32px; height:32px; border-radius:9px; background:oklch(0.45 0.11 248); color:#fff; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;">2</span>
+            <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.3 0.02 260);">ייצוב גובה</h3>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.5; color:oklch(0.45 0.012 260);">חיישן לחץ <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">BMP280</span> על אותו קו <span dir="ltr">I2C</span> (<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">21/22</span>, כתובת <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">0x76</span>). לולאת <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">P</span> איטית על גובה-הלחץ מוסיפה או מורידה כמה ספרות <span dir="ltr">PWM</span> כדי להחזיק גובה.</p>
+          <p style="margin:8px 0 0; font-size:13px; line-height:1.5; color:oklch(0.55 0.012 260);">אומרים את זה בכנות: ייצוב לפי לחץ בגובה 20 ס״מ בתוך חדר הוא רועש. היעד הוא ״נשאר בטווח <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">±10</span> ס״מ במשך 10 שניות״.</p>
+        </div>
+
+        <div style="flex:1; min-width:230px; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:15px; padding:16px 18px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+            <span style="flex:none; width:32px; height:32px; border-radius:9px; background:oklch(0.45 0.11 248); color:#fff; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;">3</span>
+            <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.3 0.02 260);">מצבי טיסה</h3>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.5; color:oklch(0.45 0.012 260);">כפתור מצב בדף: <strong>ידני</strong> (ההתנהגות של מסלול 2), <strong>ייצוב זווית בלבד</strong>, <strong>ריחוף אוטומטי</strong> עם ייצוב גובה. מכונת מצבים נקייה — המיומנות שרכשתם בפרויקט 5.</p>
+        </div>
+
+        <div style="flex:1; min-width:230px; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:15px; padding:16px 18px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+            <span style="flex:none; width:32px; height:32px; border-radius:9px; background:oklch(0.45 0.11 248); color:#fff; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;">4</span>
+            <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.3 0.02 260);">רישום נתוני טיסה</h3>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.5; color:oklch(0.45 0.012 260);">פיץ׳, רול, מצערת, ארבעת מספרי המנועים — ואם מותקן, גם וולט הסוללה — 20 פעם בשנייה, זורמים לדף וניתנים להורדה כקובץ <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">CSV</span>. לא צריך כרטיס <span dir="ltr">SD</span>: ל-ESP32 יש זיכרון ל-60 שניות. אחר כך משרטטים גרף של ריחוף ומסתכלים עליו.</p>
+        </div>
+
+        <div style="flex:1; min-width:230px; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:15px; padding:16px 18px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+            <span style="flex:none; width:32px; height:32px; border-radius:9px; background:oklch(0.45 0.11 248); color:#fff; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;">5</span>
+            <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.3 0.02 260);">לד מצב</h3>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.5; color:oklch(0.45 0.012 260);">פיקסל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">WS2812</span> על <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GPIO 33</span>, לצד הכחול שעל הלוח: ירוק = מנוטרל, אדום = חמוש, אדום מהבהב = סוללה חלשה. מעט מאוד קוד — והמורה רואה את המצב מקצה החדר.</p>
+        </div>
+
+        <div style="flex:1; min-width:230px; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:15px; padding:16px 18px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+            <span style="flex:none; width:32px; height:32px; border-radius:9px; background:oklch(0.45 0.11 248); color:#fff; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;">6</span>
+            <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.3 0.02 260);">סיבוב מהטלפון</h3>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.5; color:oklch(0.45 0.012 260);">זוג כפתורים שמאלה/ימינה בדף שמטה את זוג ה-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">CW</span> מול זוג ה-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">CCW</span> — והרחפן מסתובב במקום, על החוט.</p>
+        </div>
+
+        <div style="flex:1; min-width:230px; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:15px; padding:16px 18px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+            <span style="flex:none; width:32px; height:32px; border-radius:9px; background:oklch(0.45 0.11 248); color:#fff; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;">7</span>
+            <h3 style="margin:0; font-size:16px; font-weight:700; color:oklch(0.3 0.02 260);">פילטר משופר</h3>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.5; color:oklch(0.45 0.012 260);">הלולאה כבר רצה ב-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">250 Hz</span>, אז כאן העבודה היא על הפילטר עצמו: מכווננים את <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">ALPHA</span> של הפילטר המשלים (<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">0.98</span> בסקיצה), מוסיפים פילטר מעביר-נמוכים לג׳ירו, או מעלים את קצב הלולאה מעל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">250 Hz</span> — ובודקים אם משהו באמת השתפר. מודדים את ההבדל ב״שניות ריחוף יציב עד לתיקון״.</p>
+        </div>
+
+      </div>
+
+      <!-- planner fields -->
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
+
+        <div style="background:oklch(0.96 0.04 90); border:1px solid oklch(0.88 0.06 90); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.42 0.08 75); margin-bottom:5px;">מה אתם רוצים שהרחפן שלכם יעשה? <span style="font-weight:600;">⭐ השדה הכי חשוב</span></label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.5 0.04 75);">לא שם של רכיב — מה קורה בפועל. דוגמה: ״הרחפן שלי יגיד לי כמה נשאר בסוללה, ואם היא נגמרת הוא ינחית את עצמו לבד במקום ליפול״.</p>
+          <textarea value="{{ f1 }}" onInput="{{ on1 }}" rows="3" placeholder="מתארים במילים שלכם…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.85 0.05 90); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.65 0.12 90)"></textarea>
+        </div>
+
+        <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">איזו הרחבה בחרתם?</label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">כותבים את המספר ואת השם מהכרטיסים שלמעלה — או את הרעיון שלכם, אם המורה אישר אותו. <strong>אחת בלבד.</strong></p>
+          <textarea value="{{ f2 }}" onInput="{{ on2 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+
+        <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">מה משתנה בדף שבטלפון?</label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">כפתור חדש, מספר חדש, צבע חדש, קישור להורדה. דוגמה: ״מתחת לבאנר יופיע מספר וולט, ואם הוא יורד מתחת ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">3.5</span> הוא נצבע באדום״.</p>
+          <textarea value="{{ f3 }}" onInput="{{ on3 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+
+        <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">מה תצטרכו? <span style="font-weight:500; color:oklch(0.58 0.012 260);">(רכיבים, פינים ומשקל)</span></label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">איזה רכיב מגיע מהמורה, לאיזה פין הוא מתחבר, וכמה גרם הוא מוסיף. הפינים הפנויים לפי כרטיס <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:22px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R1</span>: <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">33, 34, 32, 23, 19, 18</span>. יש הרחבות שלא מוסיפות שום חומרה — כותבים ״אין חומרה חדשה״.</p>
+          <textarea value="{{ f4 }}" onInput="{{ on4 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+
+        <div style="background:oklch(0.96 0.04 90); border:1px solid oklch(0.88 0.06 90); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.42 0.08 75); margin-bottom:5px;">איך תדעו שזה עובד?</label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.5 0.04 75);">מבחן אחד, עם מספר בתוכו, שאפשר להראות למישהו. דוגמאות: ״הדף מראה וולט שמתאים למודד בסטייה של <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">0.1 V</span>״ · ״נשאר בטווח <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">±10</span> ס״מ במשך 10 שניות״ · ״קובץ <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12px;">CSV</span> ירד ויש בו 20 שורות לשנייה״ · ״הלד ירוק כשמנוטרל ואדום כשחמוש״.</p>
+          <textarea value="{{ f5 }}" onInput="{{ on5 }}" rows="2" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.85 0.05 90); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.65 0.12 90)"></textarea>
+        </div>
+
+      </div>
+
+      <!-- STEP 2 — BUILD -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 2 — בונים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">מחברים את החומרה החדשה — <strong>הסוללה בחוץ, הפרופלורים למטה</strong> — לפי השרטוט שקלוד קוד עשה איתכם.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">משתמשים רק בפינים הפנויים: <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">33, 34, 32, 23, 19, 18</span>. ארבעת פיני המנועים, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">21/22</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">3V3</span> נשארים כמו שהם. הרחבה בלי חומרה חדשה — מדלגים על הסעיף הזה.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">שוקלים את הרחפן שוב במאזניים ורושמים את המספר החדש.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">כל גרם שמתווסף יוצא מהמרווח שיש לרחפן מעל הריחוף — ולכן שוקלים לפני שמטיסים, לא אחרי.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.12 35); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.16 35)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.55 0.16 35); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55; color:oklch(0.38 0.08 32);">אם המשקל הכולל השתנה ביותר <strong>מ-3 גרם</strong> — חוזרים על <strong>מבחן הדחף</strong> על השולחן לפני שמטיסים.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.5 0.05 35);">אותו מבחן ואותה טבלה כמו קודם. אם נקודת הריחוף עלתה, כותבים את המספר החדש בכרטיסייה של מבחן הדחף — ומטיסים לפיו.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 — CODE -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 12px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.95 0.05 285); color:oklch(0.5 0.13 285); font-size:16px;">💻</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 3 — מתכנתים עם קלוד קוד</h2>
+      </div>
+      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">כאן השיחה חופשית — אין בלוקים מסומנים ואין ערכים מוכנים. מה שנשאר הוא <strong>(א׳)(ב׳)(ג׳)</strong>: מה אני רוצה, מה יש עכשיו בקוד, ומה כבר בדקתי בעצמי. את (א׳) כבר כתבתם למעלה — מעתיקים משם. הבסיס לשיחה הוא <strong>קוד הטיסה המכוונן שלכם</strong>, לא הסקיצה המקורית.</p>
+
+      <p style="margin:0 0 12px; font-size:15px; line-height:1.55; color:oklch(0.46 0.012 260);">מדביקים בחלון של קלוד קוד את הפנייה הזאת. במקום <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px;">[מדביקים את כל הקובץ]</span> מדביקים את כל קוד הטיסה שלכם, ובמקום <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px;">[ההרחבה שלי]</span> כותבים את מה שרשמתם בשדות של שלב 1:</p>
+
+      <div dir="rtl" style="background:oklch(0.96 0.03 285); border:1px solid oklch(0.88 0.05 285); border-radius:13px; padding:16px 18px; margin-bottom:20px; font-size:15px; line-height:1.6; color:oklch(0.36 0.06 285);">
+        אני בונה רחפן זעיר על <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">ESP32 DevKit</span>. ארבעה מנועים מוברשים על מוספטים בצד הנמוך, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">LEDC 20 kHz 8-bit</span>, והפינים מוגדרים <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">OUTPUT LOW</span> לפני החיבור ל-LEDC. מפת הפינים: <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">G1 FRONT = 25, G2 RIGHT = 26, G3 BACK = 14, G4 LEFT = 27</span>, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">MPU6050</span> על <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">SDA 21 / SCL 22</span> וניזון מ-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">3V3</span>. הפינים הפנויים היחידים הם <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">33, 34, 32, 23, 19, 18</span>. זה קוד הטיסה שלי אחרי הכוונון: <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">[מדביקים את כל הקובץ]</span>. אני רוצה להוסיף: <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:oklch(0.5 0.08 285);">[ההרחבה שלי]</span>. <strong>אל תשנה את תקרת המצערת, את מגביל העלייה של המצערת, את נעילת הטייס, את שומר הזמן של 600 מילישניות או את ניתוק ההטיה ב-60 מעלות</strong> — הם חייבים להישאר בדיוק כמו שהם. תכנן איתי תוך כדי שיחה, ודא שאני מבין, הצע שתי דרכים — ואחרי שנחליט, תן לי את השינוי כהחלפות שורה מסומנות והסבר בשתי שורות מה כל אחת עושה.
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:20px;">
+        <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.4 0.06 285); margin-bottom:5px;">הפנייה שלכם <span style="font-weight:500; color:oklch(0.58 0.012 260);">(מנסחים אותה כאן לפני ששולחים)</span></label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">כותבים את שתי השורות שאתם מוסיפים לשלד — מה ההרחבה עושה ואיך תדעו שהיא עובדת. ככל שהן מדויקות יותר, התשובה ממוקדת יותר.</p>
+          <textarea value="{{ f6 }}" onInput="{{ on6 }}" rows="3" placeholder="כותבים כאן את הפנייה…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">שולחים את הפנייה עם הקוד המודבק, קוראים את התשובה ומשווים אותה למה שתכננתם.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">תשובה שנוגעת באחד מהדברים שאסור לשנות לא נכנסת לקובץ. מבקשים מקלוד קוד לנסח אותה מחדש בלעדיהם.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">מקלידים את השינויים ב-<span dir="ltr">Arduino IDE</span>, לוחצים <strong dir="ltr">Verify</strong> ואז <strong dir="ltr">Upload</strong>.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">מעלים תמיד כשהסוללה בחוץ והפרופלורים למטה. בצג הטורי בודקים שהבאנר עולה ושהחיישן עונה.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">אומרים במשפט אחד מה הקוד החדש עושה ואיפה בקובץ הוא יושב.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">אם אי אפשר לומר את זה במשפט — חוזרים לקלוד קוד ומבקשים שיסביר את החלק שלא ברור, לפני שמטיסים.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4 — TEST -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 12px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔍</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 4 — בודקים</h2>
+      </div>
+      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.46 0.012 260);">כל הרחבה משנה את קוד הטיסה — ולכן <strong>כל העלאה חדשה עוברת את סולם הבדיקות המלא מלמעלה למטה</strong>, גם אם שיניתם שורה אחת. אין קיצור דרך אחרי שינוי בקוד.</p>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px;">
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle7 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check7 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;"><strong>דף בדיקת המנועים</strong> — מתחברים לרשת של הרחפן, פותחים את הדף ובודקים שהוא עולה ושההרחבה מופיעה בו.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">משקפי מגן על העיניים, אין פרופלורים (בודקים במגע) והמורה עומד לידכם.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle8 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check8 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;"><strong>בדיקת התנהגות בלי פרופלורים</strong> — מטים את הרחפן ביד ובודקים שהמספרים בדף זזים לכיוון הנכון ושההרחבה מגיבה כמו שתכננתם.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">כאן מתגלות רוב הטעויות — לפני שיש פרופלור על ציר.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle9 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check9 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;"><strong>מבחן דחף על השולחן</strong> — רק אם המשקל השתנה ביותר מ-3 גרם.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">אם המשקל לא זז — עוברים ישר לסעיף 4.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle10 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check10 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;"><strong>ריחוף על החוט</strong> — רשימת הבדיקה <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R4</span> בקול עם המורה, ואז ריחוף קצר בתוך המעגל, בגובה נמוך.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">מסתכלים על מה שכתבתם ב״איך תדעו שזה עובד״ — זה מה שבודקים עכשיו, ולא שום דבר אחר.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
+        <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:13px; padding:15px 16px;">
+          <label style="display:block; font-size:14.5px; font-weight:700; color:oklch(0.34 0.012 260); margin-bottom:5px;">מה קרה בפועל?</label>
+          <p style="margin:0 0 9px; font-size:12.5px; line-height:1.5; color:oklch(0.6 0.012 260);">אם היה שונה ממה שתכננתם, כותבים כאן מה בדיוק קרה, חוזרים לקלוד קוד עם המשפט הזה ומשפרים. תוכנית שמשתנה תוך כדי היא תוכנית בריאה — גם ״זה לא עבד ולכן שיניתי את היעד״ הוא תוצאה.</p>
+          <textarea value="{{ f7 }}" onInput="{{ on7 }}" rows="3" placeholder="כותבים כאן…" style="width:100%; resize:vertical; font-family:'Rubik',sans-serif; font-size:14.5px; line-height:1.5; color:oklch(0.3 0.012 260); background:#fff; border:1px solid oklch(0.88 0.006 85); border-radius:9px; padding:9px 11px; outline:none;" style-focus="border-color:oklch(0.6 0.1 248)"></textarea>
+        </div>
+      </div>
+
+      <!-- STEP 5 — SHOW -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.96 0.06 90); color:oklch(0.5 0.12 75); font-size:16px;">🎬</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">שלב 5 — מראים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:28px;">
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle11 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check11 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">כשההרחבה עובדת (או כשמחליטים שזה מספיק טוב להיום), קוראים למורה ולצופה אחד.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle12 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check12 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">מטיסים <strong>טיסה אחת על החוט</strong> שבה רואים את ההרחבה עובדת, ומסבירים במשפט מה היא עושה.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">אותה רשימת בדיקה, אותו מעגל, אותו חוט, אותם משקפי מגן. הצופה עומד מאחורי קו הצופים.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle13 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check13 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <div style="padding-top:3px; flex:1; min-width:0;">
+            <p style="margin:0; font-size:16px; line-height:1.55;">סוגרים בסדר הקבוע — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">DISARM</span>, הסוללה החוצה, הפרופלורים למטה — רושמים שורה ביומן ומצלמים תמונה, אם רוצים.</p>
+            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">ביומן כותבים גם מה ההרחבה ומה קרה בטיסה. התמונה נשמרת בתיקיית פרויקט 8 שלכם ב-Google Drive, לתיק העבודות.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- stuck box -->
+      <div style="background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px; margin-bottom:22px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.45 0.12 300); margin-bottom:8px;">
+          <span style="font-size:20px;">🪄</span>תקועים בשלב כלשהו?
+        </div>
+        <ul style="margin:0; padding-inline-start:20px; font-size:15px; line-height:1.65; color:oklch(0.4 0.04 300);">
+          <li>ההרחבה גדולה מדי לזמן שנשאר — מקטינים אותה לחצי ומטיסים את החצי. חצי שעובד שווה יותר משלם שלא הספיק.</li>
+          <li>קלוד קוד נוגע בדברים שאסור לשנות — אומרים לו את זה במפורש ומבקשים ניסוח מחדש כהחלפת שורה אחת.</li>
+          <li>הרחפן טס פחות טוב מקודם — מורידים את ההרחבה, חוזרים לקוד המכוונן שלכם ומוסיפים אותה שוב חתיכה-חתיכה.</li>
+          <li>לא ברור אם התוכנית בכלל הגיונית או שהולכים במעגלים — קוראים למורה.</li>
+        </ul>
+      </div>
+
+      <!-- celebration -->
+      <div style="position:relative; overflow:hidden; background:linear-gradient(135deg, oklch(0.55 0.13 285), oklch(0.5 0.13 248)); color:#fff; border-radius:18px; padding:26px;">
+        <div style="font-size:38px; line-height:1; margin-bottom:8px;">🎉</div>
+        <div style="font-size:22px; font-weight:700; margin-bottom:10px;">הרחפן שלכם עושה משהו שאף רחפן אחר בסדנה לא עושה</div>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:rgba(255,255,255,0.92); max-width:58ch;">רעיון שבחרתם, תוכנית שכתבתם, חומרה שהוספתם וקוד שבניתם עם קלוד קוד על גבי קוד הטיסה שכיווננתם בעצמכם — והכול טס על החוט, בבטחה.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:5200}}">
+class Component extends DCLogic {
+  state = { checked: {}, f1: '', f2: '', f3: '', f4: '', f5: '', f6: '', f7: '' };
+  KEY = 'tc_p8t3_checks';
+  FKEY = 'tc_p8t3_planner';
+  componentDidMount() {
+    try {
+      const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) });
+      const f = localStorage.getItem(this.FKEY); if (f) { const o = JSON.parse(f); this.setState({ f1: o.f1 || '', f2: o.f2 || '', f3: o.f3 || '', f4: o.f4 || '', f5: o.f5 || '', f6: o.f6 || '', f7: o.f7 || '' }); }
+    } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  setField(k, val) {
+    this.setState(s => {
+      const next = { f1: s.f1, f2: s.f2, f3: s.f3, f4: s.f4, f5: s.f5, f6: s.f6, f7: s.f7, [k]: val };
+      try { localStorage.setItem(this.FKEY, JSON.stringify({ f1: next.f1, f2: next.f2, f3: next.f3, f4: next.f4, f5: next.f5, f6: next.f6, f7: next.f7 })); } catch (e) {}
+      return { [k]: val };
+    });
+  }
+  renderVals() {
+    const v = {};
+    for (let i = 1; i <= 7; i++) { v['f' + i] = this.state['f' + i]; v['on' + i] = (e) => this.setField('f' + i, e.target.value); }
+    for (let i = 1; i <= 20; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

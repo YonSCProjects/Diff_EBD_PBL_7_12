@@ -36,8 +36,13 @@ const FONT = "'Rubik','Segoe UI',Arial,sans-serif";
 let layer = '';
 for (const it of spec.items || []) {
   const a = meta.anchors[it.anchor];
-  if (!a) { console.warn('no anchor:', it.anchor); continue; }
-  if (a.onscreen === false) console.warn('anchor off-screen:', it.anchor);
+  if (!a) { console.warn('  no such anchor:', it.anchor); continue; }
+  // An off-screen anchor draws a leader that runs off the edge of the frame and reads as a
+  // broken figure. Better to drop the label and say so than to publish that.
+  if (a.onscreen === false || a.depth <= 0) {
+    console.warn('  SKIPPED (anchor off-screen):', it.anchor, '-', String(it.he).split('\n')[0]);
+    continue;
+  }
 
   const size = (it.size || 19) * K;
   const lines = String(it.he).split('\n');

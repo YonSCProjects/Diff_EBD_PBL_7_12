@@ -60,13 +60,6 @@
       }
     },
     {
-      "id": "bb",
-      "core": "breadboard2",
-      "x": 600,
-      "y": 290,
-      "title": "Breadboard"
-    },
-    {
       "id": "sL",
       "part": "TCRT5000 line sensor",
       "x": 720,
@@ -76,12 +69,29 @@
     {
       "id": "sR",
       "part": "TCRT5000 line sensor",
-      "x": 890,
+      "x": 1020,
       "y": 520,
       "title": "RIGHT line sensor"
     }
   ],
-  "shapes": [],
+  "shapes": [
+    {
+      "a": {
+        "ref": "uno.5V.3",
+        "dx": -70,
+        "dy": 630
+      },
+      "b": {
+        "ref": "uno.5V.3",
+        "dx": 70,
+        "dy": 770
+      },
+      "fill": "#f2ede4",
+      "stroke": "#8b7f6a",
+      "strokeWidth": 10,
+      "rx": 40
+    }
+  ],
   "wires": [
     {
       "from": "mA.pin 2",
@@ -142,20 +152,6 @@
       "width": 44
     },
     {
-      "from": "uno.c87",
-      "to": "bb.pin5W",
-      "color": "#cc1414",
-      "route": "vh",
-      "width": 32
-    },
-    {
-      "from": "uno.c88",
-      "to": "bb.pin3X",
-      "color": "#000000",
-      "route": "vh",
-      "width": 32
-    },
-    {
       "from": "drv.ENA",
       "to": "uno.c53",
       "color": "#25cc35"
@@ -186,24 +182,28 @@
       "color": "#25cc35"
     },
     {
-      "from": "sL.Vcc",
-      "to": "bb.pin21W",
+      "from": "uno.5V.3",
+      "to": "sL.Vcc",
       "color": "#cc1414",
       "route": "vh",
-      "out": [
-        "left",
-        100
-      ]
+      "via": [
+        {
+          "ref": "uno.5V.3",
+          "dy": 700
+        }
+      ],
+      "width": 32
     },
     {
-      "from": "sL.Gnd",
-      "to": "bb.pin23X",
+      "from": "uno.GND.4",
+      "to": "sL.Gnd",
       "color": "#000000",
       "route": "vh",
       "out": [
         "left",
         200
-      ]
+      ],
+      "width": 32
     },
     {
       "from": "sL.Do",
@@ -222,24 +222,28 @@
       ]
     },
     {
-      "from": "sR.Vcc",
-      "to": "bb.pin40W",
+      "from": "uno.5V.3",
+      "to": "sR.Vcc",
       "color": "#cc1414",
       "route": "vh",
-      "out": [
-        "left",
-        100
-      ]
+      "via": [
+        {
+          "ref": "uno.5V.3",
+          "dy": 700
+        }
+      ],
+      "width": 32
     },
     {
-      "from": "sR.Gnd",
-      "to": "bb.pin42X",
+      "from": "uno.GND.5",
+      "to": "sR.Gnd",
       "color": "#000000",
       "route": "vh",
       "out": [
         "left",
-        200
-      ]
+        260
+      ],
+      "width": 32
     },
     {
       "from": "sR.Do",
@@ -316,22 +320,6 @@
       "dy": 420,
       "text": "5V",
       "size": 56
-    },
-    {
-      "ref": "bb.pin3W",
-      "dx": -150,
-      "dy": 0,
-      "text": "+",
-      "size": 60,
-      "color": "#cc1414",
-      "stroke": "#cc1414"
-    },
-    {
-      "ref": "bb.pin3X",
-      "dx": -150,
-      "dy": 0,
-      "text": "−",
-      "size": 60
     },
     {
       "ref": "drv.ENA",
@@ -430,6 +418,13 @@
       "dy": -110,
       "text": "12",
       "size": 56
+    },
+    {
+      "ref": "uno.5V.3",
+      "dx": 340,
+      "dy": 710,
+      "text": "Y-splitter: soldered + heat-shrink",
+      "size": 54
     }
   ]
 }

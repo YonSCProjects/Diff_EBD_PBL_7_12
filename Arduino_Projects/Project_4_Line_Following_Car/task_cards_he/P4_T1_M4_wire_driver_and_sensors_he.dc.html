@@ -52,6 +52,13 @@
 
 
       <!-- STEPS -->
+      <div data-iso="step" style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85); margin:0 0 26px;">
+        <div dir="ltr" style="padding:20px 18px 12px; display:flex; justify-content:center;">
+          <img src="./assets/w_p4_s04_wiring.svg" alt="מבט על המכונית המורכבת מלמעלה באלכסון: הארדואינו על צד אחד של הפלטה, בקר המנועים L298N לידו ומחזיק הסוללות מאחור. שישה חוטי אות צבעוניים עוברים מהבקר אל הארדואינו, חוט שחור עבה מחבר בין ההארקות ושני חיישני הקו תלויים מתחת לחרטום." style="width:620px; max-width:100%; height:auto;" />
+        </div>
+        <div style="padding:11px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>כך זה נראה על המכונית:</strong> שישה חוטי אות מהבקר אל חיבורים <strong>5–10</strong>, שני חיישני הקו מתחת לפלטה אל חיבורים <strong>11</strong> ו-<strong>12</strong>, והחוט השחור העבה הוא ★ <strong>ההארקה המשותפת</strong>. אין ברדבורד על המכונית.</div>
+      </div>
+
       <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
         <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה עושים</h2>
@@ -126,7 +133,7 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle9 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check9 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים חוט בין <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> של הבקר ל-<strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> של הארדואינו — זהו <strong>חוט ההארקה המשותפת</strong>. אפשר להעביר אותו דרך המסילה הכחולה (−) של הברדבורד.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים חוט בין <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> של הבקר ל-<strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> של הארדואינו — זהו <strong>חוט ההארקה המשותפת</strong>. לארדואינו יש שלושה חיבורי <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> — החוט הזה תופס את הראשון מהם.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.04 35); border:1px solid oklch(0.85 0.07 35); border-radius:14px; padding:15px 16px;">
@@ -224,29 +231,29 @@
       <!-- חלק ד -->
       <div style="display:flex; align-items:center; gap:10px; margin:0 0 10px;">
         <span style="flex:none; width:5px; height:20px; border-radius:3px; background:oklch(0.45 0.11 248);"></span>
-        <h3 style="margin:0; font-size:16.5px; font-weight:700; color:oklch(0.34 0.012 260);">חלק ד׳ — הברדבורד הופך לתחנת החשמל</h3>
+        <h3 style="margin:0; font-size:16.5px; font-weight:700; color:oklch(0.34 0.012 260);">חלק ד׳ — מפצל ה-5V ושני החיישנים</h3>
       </div>
 
-      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.5 0.012 260);">למה דרך הברדבורד? לארדואינו יש רק חיבור <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">5V</span> אחד — המסילות מפצלות אותו לשני החיישנים. הברדבורד הוא תחנת החשמל של המכונית.</p>
+      <p style="margin:0 0 14px; font-size:15px; line-height:1.6; color:oklch(0.5 0.012 260);">על המכונית אין ברדבורד — הוא גדול מדי ונשלף מכל טלטלה. במקומו מלחימים <strong>מפצל Y</strong>: חוט אחד שמתפצל לשניים, עם שרוול מתכווץ על ההלחמה. לארדואינו יש רק חיבור <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">5V</span> אחד ולשני החיישנים יש שני חוטי <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">VCC</span> — המפצל נותן לכל אחד מהם את החשמל שלו.</p>
 
       <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:30px;">
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle14 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check14 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים חוט מחיבור <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">5V</strong> של הארדואינו אל <strong>המסילה האדומה (+)</strong> של הברדבורד.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מלחימים את <strong>מפצל ה-Y</strong>: קצה אדום אחד שמתפצל לשני קצוות אדומים. מעבירים <strong>שרוול מתכווץ</strong> על ההלחמה ומחממים אותו עד שהוא נסגר.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle15 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check15 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים חוט מ-<strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> של הארדואינו אל <strong>המסילה הכחולה (−)</strong>.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">הקצה היחיד של המפצל נכנס לחיבור <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">5V</strong> של הארדואינו, ושני הקצוות האחרים אל <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">VCC</strong> של שני החיישנים.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle16 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check16 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">לכל אחד משני חיישני הקו: <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">VCC</strong> אל המסילה האדומה (+), <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> אל המסילה הכחולה (−).</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;"><strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> של כל חיישן נכנס לחיבור <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> משלו בארדואינו — יש שם שלושה, ואחד מהם כבר תפוס בהארקה המשותפת.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
@@ -266,7 +273,7 @@
       <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:16px;">
         <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
           <span style="font-size:13px;">🔌</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Wiring Map — L298N · Arduino · Breadboard</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Wiring Map — L298N · Arduino · IR sensors</span>
         </div>
         <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.7 0.01 260);">Motors                 L298N</span>
   left  motors (×2) ─  OUT1 / OUT2
@@ -284,21 +291,20 @@ Battery (−) black ───  GND
   IN1 ───────────────  pin 9
   ENA ───────────────  pin 10
 
-<span style="color:oklch(0.7 0.01 260);">Arduino                Breadboard</span>
-  5V  ───────────────  (+) rail
-  GND ───────────────  (−) rail
+<span style="color:oklch(0.7 0.01 260);">Arduino                Y-splitter</span>
+  5V  ───────────────  1 in  →  2 out
 
 <span style="color:oklch(0.7 0.01 260);">IR sensor LEFT         IR sensor RIGHT</span>
-  VCC ── (+) rail        VCC ── (+) rail
-  GND ── (−) rail        GND ── (−) rail
+  VCC ── splitter        VCC ── splitter
+  GND ── Arduino GND     GND ── Arduino GND
   OUT ── pin 11          OUT ── pin 12</pre>
       </div>
 
       <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85); margin-bottom:30px;">
         <div dir="ltr" style="padding:22px 18px 14px; display:flex; justify-content:center;">
-          <img src="./assets/w_p4_01_driver_wiring_breadboard.svg" alt="תרשים החיווט המלא: בקר המנועים L298N עם ארבעת המנועים — שניים בכל צד — ומחזיק הסוללות, שישה חוטי אות אל חיבורים 5 עד 10, הברדבורד כתחנת החשמל ושני חיישני הקו — VCC ו-GND מהמסילות, OUT אל חיבורים 11 ו-12. חוט שחור עבה מחבר את GND של הבקר אל GND של הארדואינו." style="width:640px; max-width:100%; height:auto;" />
+          <img src="./assets/w_p4_01_driver_wiring_breadboard.svg" alt="תרשים החיווט המלא: בקר המנועים L298N עם ארבעת המנועים — שניים בכל צד — ומחזיק הסוללות, שישה חוטי אות אל חיבורים 5 עד 10, מפצל Y מולחם שמחלק את ה-5V לשני חיישני הקו, ו-GND של כל חיישן אל חיבור GND משלו בארדואינו. OUT של השמאלי אל חיבור 11 ושל הימני אל חיבור 12. חוט שחור עבה מחבר את GND של הבקר אל GND של הארדואינו." style="width:640px; max-width:100%; height:auto;" />
         </div>
-        <div style="padding:11px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>החיווט המלא:</strong> הבקר עם ארבעת המנועים ומחזיק הסוללות, שישה חוטי האות אל חיבורים <strong>5–10</strong>, הברדבורד כתחנת החשמל ושני חיישני הקו. החוט השחור <strong>העבה</strong> הוא ★ <strong>ההארקה המשותפת</strong>.</div>
+        <div style="padding:11px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>החיווט המלא בקרוב:</strong> הבקר עם ארבעת המנועים ומחזיק הסוללות, שישה חוטי האות אל חיבורים <strong>5–10</strong>, מפצל ה-Y ושני חיישני הקו. החוט השחור <strong>העבה</strong> הוא ★ <strong>ההארקה המשותפת</strong>.</div>
       </div>
 
       <!-- EXPECTED -->
@@ -319,7 +325,7 @@ Battery (−) black ───  GND
         <div style="display:flex; flex-direction:column; gap:9px;">
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>כל חוט תואם את טבלת החיווט בכרטיס העזר <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R1</span> — עברתם עליהם אחד-אחד</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>חוט ההארקה המשותפת (<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> של הבקר ↔ <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">GND</span> של הארדואינו) במקומו</span></div>
-          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שני החיישנים מקבלים חשמל מהמסילות ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OUT</span> שלהם מחובר לחיבורים 11 ו-12</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>שני החיישנים מקבלים חשמל ממפצל ה-Y ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OUT</span> שלהם מחובר לחיבורים 11 ו-12</span></div>
           <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>המורה עבר על החיווט ואישר</span></div>
         </div>
       </div>

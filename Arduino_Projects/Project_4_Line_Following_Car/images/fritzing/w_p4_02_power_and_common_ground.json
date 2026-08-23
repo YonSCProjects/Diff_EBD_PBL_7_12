@@ -20,7 +20,7 @@
     {
       "id": "uno",
       "core": "arduino_Uno_Rev3(fix)",
-      "x": 440,
+      "x": 332.191,
       "y": 250,
       "title": "Arduino Uno",
       "snap": {
@@ -28,13 +28,6 @@
         "to": "drv.ENA",
         "axis": "x"
       }
-    },
-    {
-      "id": "bb",
-      "core": "breadboard2",
-      "x": 600,
-      "y": 290,
-      "title": "Breadboard"
     }
   ],
   "shapes": [],
@@ -56,20 +49,6 @@
       "to": "uno.c89",
       "color": "#000000",
       "width": 44
-    },
-    {
-      "from": "uno.c87",
-      "to": "bb.pin5W",
-      "color": "#cc1414",
-      "route": "vh",
-      "width": 32
-    },
-    {
-      "from": "uno.c88",
-      "to": "bb.pin3X",
-      "color": "#000000",
-      "route": "vh",
-      "width": 32
     }
   ],
   "labels": [
@@ -118,22 +97,6 @@
       "dy": 420,
       "text": "5V",
       "size": 56
-    },
-    {
-      "ref": "bb.pin3W",
-      "dx": -150,
-      "dy": 0,
-      "text": "+",
-      "size": 60,
-      "color": "#cc1414",
-      "stroke": "#cc1414"
-    },
-    {
-      "ref": "bb.pin3X",
-      "dx": -150,
-      "dy": 0,
-      "text": "−",
-      "size": 60
     }
   ]
 }

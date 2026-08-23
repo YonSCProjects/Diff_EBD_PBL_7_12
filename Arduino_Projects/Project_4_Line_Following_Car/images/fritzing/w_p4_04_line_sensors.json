@@ -11,61 +11,85 @@
       "title": "Arduino Uno"
     },
     {
-      "id": "bb",
-      "core": "breadboard2",
-      "x": 600,
-      "y": 290,
-      "title": "Breadboard"
-    },
-    {
       "id": "sL",
       "part": "TCRT5000 line sensor",
-      "x": 720,
-      "y": 520,
+      "x": 700,
+      "y": 560,
       "title": "LEFT line sensor"
     },
     {
       "id": "sR",
       "part": "TCRT5000 line sensor",
-      "x": 890,
-      "y": 520,
+      "x": 1000,
+      "y": 560,
       "title": "RIGHT line sensor"
     }
   ],
-  "shapes": [],
+  "shapes": [
+    {
+      "a": {
+        "ref": "uno.5V.3",
+        "dx": -70,
+        "dy": 620
+      },
+      "b": {
+        "ref": "uno.5V.3",
+        "dx": 70,
+        "dy": 760
+      },
+      "fill": "#f2ede4",
+      "stroke": "#8b7f6a",
+      "strokeWidth": 10,
+      "rx": 40
+    }
+  ],
   "wires": [
     {
-      "from": "uno.c87",
-      "to": "bb.pin5W",
+      "from": "uno.5V.3",
+      "to": "sL.Vcc",
       "color": "#cc1414",
       "route": "vh",
-      "width": 32
-    },
-    {
-      "from": "uno.c88",
-      "to": "bb.pin3X",
-      "color": "#000000",
-      "route": "vh",
-      "width": 32
-    },
-    {
-      "from": "sL.Vcc",
-      "to": "bb.pin21W",
-      "color": "#cc1414",
-      "route": "vh",
-      "out": [
-        "left",
-        100
+      "width": 32,
+      "via": [
+        {
+          "ref": "uno.5V.3",
+          "dy": 690
+        }
       ]
     },
     {
-      "from": "sL.Gnd",
-      "to": "bb.pin23X",
+      "from": "uno.5V.3",
+      "to": "sR.Vcc",
+      "color": "#cc1414",
+      "route": "vh",
+      "width": 32,
+      "via": [
+        {
+          "ref": "uno.5V.3",
+          "dy": 690
+        }
+      ]
+    },
+    {
+      "from": "uno.GND.4",
+      "to": "sL.Gnd",
       "color": "#000000",
       "route": "vh",
+      "width": 32,
       "out": [
         "left",
         200
+      ]
+    },
+    {
+      "from": "uno.GND.5",
+      "to": "sR.Gnd",
+      "color": "#000000",
+      "route": "vh",
+      "width": 32,
+      "out": [
+        "left",
+        260
       ]
     },
     {
@@ -75,7 +99,7 @@
       "route": "vh",
       "out": [
         "left",
-        300
+        340
       ],
       "via": [
         {
@@ -85,33 +109,13 @@
       ]
     },
     {
-      "from": "sR.Vcc",
-      "to": "bb.pin40W",
-      "color": "#cc1414",
-      "route": "vh",
-      "out": [
-        "left",
-        100
-      ]
-    },
-    {
-      "from": "sR.Gnd",
-      "to": "bb.pin42X",
-      "color": "#000000",
-      "route": "vh",
-      "out": [
-        "left",
-        200
-      ]
-    },
-    {
       "from": "sR.Do",
       "to": "uno.c55",
       "color": "#25cc35",
       "route": "vh",
       "out": [
         "left",
-        400
+        440
       ],
       "via": [
         {
@@ -123,27 +127,27 @@
   ],
   "labels": [
     {
-      "ref": "uno.c87",
-      "dx": -260,
-      "dy": 420,
-      "text": "5V",
-      "size": 56
-    },
-    {
-      "ref": "bb.pin3W",
+      "ref": "uno.5V.3",
       "dx": -150,
-      "dy": 0,
-      "text": "+",
-      "size": 60,
+      "dy": 130,
+      "text": "5V",
+      "size": 56,
       "color": "#cc1414",
       "stroke": "#cc1414"
     },
     {
-      "ref": "bb.pin3X",
-      "dx": -150,
-      "dy": 0,
-      "text": "−",
-      "size": 60
+      "ref": "uno.GND.4",
+      "dx": 40,
+      "dy": 130,
+      "text": "GND  GND",
+      "size": 52
+    },
+    {
+      "ref": "uno.5V.3",
+      "dx": 330,
+      "dy": 700,
+      "text": "Y-splitter: soldered + heat-shrink",
+      "size": 54
     },
     {
       "ref": "sL.@b",
@@ -159,14 +163,14 @@
     },
     {
       "ref": "uno.c54",
-      "dx": -160,
+      "dx": 160,
       "dy": -110,
       "text": "11",
       "size": 56
     },
     {
       "ref": "uno.c55",
-      "dx": 160,
+      "dx": -160,
       "dy": -110,
       "text": "12",
       "size": 56

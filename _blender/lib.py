@@ -45,7 +45,7 @@ def configure(engine='CYCLES', samples=128, res=(1800, 1350), transparent=True, 
     names = [v.name for v in sc.view_settings.bl_rna.properties['view_transform'].enum_items]
     sc.view_settings.view_transform = next((n for n in ('AgX', 'Filmic', 'Standard') if n in names),
                                            'Standard')
-    sc.view_settings.exposure = 0.0
+    sc.view_settings.exposure = -0.45
     sc.view_settings.look = 'None'
     if engine == 'CYCLES':
         sc.cycles.samples = samples
@@ -178,6 +178,72 @@ def cyl(x, y, z, r, h, m=None, axis='z', seg=64, name='cyl', bevel=0.0):
     return _finish(ob, m, shade_smooth=True, bevel=bevel)
 
 
+def prism_xz(pts_xz, x, y, z, depth, m=None, name='prism_xz', bevel=0.0):
+    """Extrude a SIDE profile across the object's width. `pts_xz` is the silhouette you would
+    draw looking at the tool from the side, in (along, up) millimetres; it sweeps `depth` in y.
+
+    Most hand tools are shaped in side view — a glue gun's pistol grip, a knife's taper — so
+    extruding their outline upward (as prism() does) gives the right silhouette in the wrong plane
+    and the tool comes out as a slab.
+    """
+    import bmesh
+    me = bpy.data.meshes.new(name)
+    ob = bpy.data.objects.new(name, me)
+    bpy.context.collection.objects.link(ob)
+    bm = bmesh.new()
+    verts = [bm.verts.new((p[0] * MM, 0.0, p[1] * MM)) for p in pts_xz]
+    face = bm.faces.new(verts)
+    r = bmesh.ops.extrude_face_region(bm, geom=[face])
+    moved = [v for v in r['geom'] if isinstance(v, bmesh.types.BMVert)]
+    bmesh.ops.translate(bm, vec=(0, depth * MM, 0), verts=moved)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    bm.to_mesh(me)
+    bm.free()
+    bpy.context.view_layer.objects.active = ob
+    ob.location = (x * MM, y * MM, z * MM)
+    return _finish(ob, m, bevel=bevel)
+
+
+def revolve(profile, x, y, z, m=None, axis='z', seg=64, name='revolve', smooth=True):
+    """Spin a 2-D profile into a solid of revolution — the one operation that makes a hand tool
+    look like a hand tool. `profile` is [(radius, height), ...] in mm, measured from the object's
+    base at (x, y, z) and running up its axis. Stacking cylinders cannot give you the taper of an
+    iron's handle or the swell of a glue-gun nozzle; this can.
+    """
+    import bmesh
+    me = bpy.data.meshes.new(name)
+    ob = bpy.data.objects.new(name, me)
+    bpy.context.collection.objects.link(ob)
+    bm = bmesh.new()
+    verts = [bm.verts.new((r * MM, 0.0, h * MM)) for r, h in profile]
+    edges = [bm.edges.new((verts[i], verts[i + 1])) for i in range(len(verts) - 1)]
+    bmesh.ops.spin(bm, geom=verts + edges, angle=math.radians(360), steps=seg,
+                   axis=(0, 0, 1), cent=(0, 0, 0))
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-6)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    bm.to_mesh(me)
+    bm.free()
+    bpy.context.view_layer.objects.active = ob
+    if axis == 'x':
+        ob.rotation_euler = (0, math.radians(90), 0)
+    elif axis == 'y':
+        ob.rotation_euler = (math.radians(-90), 0, 0)
+    ob.location = (x * MM, y * MM, z * MM)
+    bpy.ops.object.transform_apply(rotation=True)
+    return _finish(ob, m, shade_smooth=smooth)
+
+
+def helix(x, y, z, r, turns, height, wire_r, m=None, axis='z', name='helix', steps=24):
+    """A coiled spring — the iron stand's holder, chiefly."""
+    pts = []
+    n = int(turns * steps)
+    for i in range(n + 1):
+        t = i / steps
+        a = 2 * math.pi * t
+        pts.append((x + math.cos(a) * r, y + math.sin(a) * r, z + height * (i / max(1, n))))
+    return tube(pts, wire_r, m, name=name, seg=10)
+
+
 def prism(pts2d, z, h, m=None, name='prism', bevel=0.0):
     """Extrude an xy outline upward from z. pts2d is a list of (x, y) in mm."""
     import bmesh
@@ -235,7 +301,7 @@ def studio(strength=1.0, warm=False):
     w.use_nodes = True
     bg = w.node_tree.nodes['Background']
     bg.inputs[0].default_value = (0.62, 0.65, 0.70, 1.0)
-    bg.inputs[1].default_value = 0.34 * strength
+    bg.inputs[1].default_value = 0.46 * strength
 
     def area(name, loc, rot, size, energy, colour=(1, 1, 1)):
         d = bpy.data.lights.new(name, 'AREA')
@@ -249,7 +315,7 @@ def studio(strength=1.0, warm=False):
         bpy.context.collection.objects.link(ob)
         return ob
 
-    area('key', (-120, -260, 420), (34, 0, -22), (0.55, 0.42), 17 * strength,
+    area('key', (-120, -260, 420), (34, 0, -22), (0.62, 0.48), 11 * strength,
          (1.0, 0.97, 0.93) if warm else (1, 1, 1))
     area('fill', (360, -180, 250), (58, 0, 58), (0.7, 0.5), 6 * strength, (0.92, 0.95, 1.0))
     area('rim', (240, 340, 300), (-46, 0, 150), (0.5, 0.4), 9 * strength)

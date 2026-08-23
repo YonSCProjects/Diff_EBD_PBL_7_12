@@ -34,14 +34,16 @@ if '--res' in argv:
 
 import lib as L
 import p4_car
+import tools
 import scenes_p4
 
-for mod in (L, p4_car, scenes_p4):
+for mod in (L, p4_car, tools, scenes_p4):
     importlib.reload(mod)
 
 L.reset()
 L.ANCHORS.clear()
 p4_car.M = None                          # materials are per-file, so rebuild them
+tools.reset()
 fn = getattr(scenes_p4, scene_name, None)
 if fn is None:
     print('no such scene:', scene_name)

@@ -9,6 +9,7 @@ Naming: s_<same key the SVG kit uses>, so the two stay in step.
 import math
 import lib as L
 import p4_car as C
+import tools as T
 from lib import MM, box, cyl, prism, tube, mat, hexcol
 
 CAR_CENTRE = (148.0, 110.0, -10.0)
@@ -49,16 +50,8 @@ def s_cut_plate():
     tape = mat('masking', hexcol('#ffdf7a'), rough=0.8)
     for tx, ty in ((28, 40), (244, 40), (28, 166), (244, 166)):
         box(tx, ty, 2.6, 22, 13, 0.3, tape, bevel=0, name='masktape')
-    knife(150, 27, 4.0)
+    T.craft_knife(96, 30, 3.0, ang=6, tilt=-14)
     L.camera((150, 105, 0), 620, azimuth=40, elevation=42, lens=62)
-
-
-def knife(x, y, z):
-    m_h = mat('knife_h', hexcol('#c8542a'), rough=0.45)
-    m_b = mat('knife_b', hexcol('#d5d9de'), rough=0.22, metal=1.0)
-    box(x, y - 5, z, 96, 12, 11, m_h, bevel=1.5, name='knife')
-    b = box(x - 22, y - 1, z + 1, 26, 1.0, 12, m_b, bevel=0, name='blade')
-    b.rotation_euler = (0, math.radians(-12), 0)
 
 
 # ---------------------------------------------------------------- M3b — glue the motors
@@ -76,7 +69,10 @@ def s_glue_motors():
     my = C.PLATE_Y1 - C.MOTOR_D
     for gx in range(int(mx) + 6, int(mx + C.MOTOR_W) - 4, 10):
         cyl(gx, my + C.MOTOR_D / 2, C.PLATE_T, 3.4, 1.6, glue, name='bead')
-    L.camera((150, 110, 0), 640, azimuth=36, elevation=30, lens=58)
+    T.glue_gun(212, 214, C.PLATE_T, ang=-152)
+    L.anchor('gun', (250, 236, C.PLATE_T + 22))
+    L.anchor('beads', (mx + 34, my + 12, C.PLATE_T + 2))
+    L.camera((150, 120, 0), 680, azimuth=36, elevation=32, lens=58)
 
 
 # ---------------------------------------------------------------- M3c — rolling chassis
@@ -112,8 +108,7 @@ def s_wiring():
 def s_wheels_in_air():
     _studio()
     _bench(C.Z_GROUND - 60)
-    riser = mat('riser', hexcol('#c8b28a'), rough=0.8)
-    box(96, 66, C.Z_GROUND - 60, 110, 88, 60, riser, bevel=1.5, name='box')
+    T.riser(96, 66, C.Z_GROUND - 60)
     C.car()
     L.camera(CAR_CENTRE, 640, azimuth=34, elevation=22, lens=58)
 
@@ -134,6 +129,71 @@ def s_first_run():
     _floor_tape(-80, 101, 480, C.Z_GROUND)
     C.car()
     L.camera(CAR_CENTRE, 700, azimuth=52, elevation=18, lens=62)
+
+
+# ---------------------------------------------------------------- a tool rack, for checking
+def s_toolcheck():
+    """Not a card figure — every tool side by side, at real scale, so shapes can be judged."""
+    _studio()
+    _bench(0, x0=-20, y0=-20, w=470, d=330)
+    T.soldering_iron(30, 42, 12, ang=6)
+    T.iron_stand(24, 96, 0)
+    T.solder_spool(176, 96, 0)
+    T.craft_knife(250, 40, 0, ang=10)
+    T.glue_gun(258, 122, 0, ang=16)
+    T.goggles(40, 236, 0, ang=-12)
+    T.heat_shrink(196, 42, 3, ang=24)
+    T.rules_card(226, 232, 0, 72, 54, ang=-6)
+    L.camera((208, 132, 24), 760, azimuth=41, elevation=40, lens=56)
+
+
+# ---------------------------------------------------------------- M1 — the soldering station
+def s_soldering_station():
+    """Everything laid out and named before the iron is switched on — and the iron itself
+    parked in its coil, which is the whole point of the card."""
+    _studio()
+    _bench(0, x0=-10, y0=-10, w=400, d=290)
+    T.heat_mat(20, 24, 0, 250, 190)
+    T.iron_stand(30, 40, 1.4)
+    # resting in the coil: nose down into the holder, handle up and back
+    T.soldering_iron(52, 76, 74, ang=-24, tilt=34)
+    T.solder_spool(214, 52, 1.4)
+    T.goggles(178, 168, 1.4, ang=-16)
+    T.rules_card(276, 150, 1.4, 74, 56, ang=-8)
+    L.anchor('iron', (108, 62, 56))
+    L.anchor('sponge', (58, 100, 12))
+    L.anchor('solder', (214, 52, 62))
+    L.anchor('goggles', (237, 183, 14))
+    L.anchor('rules', (313, 178, 2))
+    L.camera((168, 104, 22), 700, azimuth=44, elevation=36, lens=58)
+
+
+# ---------------------------------------------------------------- M2 — solder the motor leads
+def s_solder_motor_leads():
+    """One motor on the mat, iron on the pad, the two leads going on."""
+    _studio()
+    _bench(0, x0=-20, y0=-20, w=430, d=300)
+    T.heat_mat(20, 30, 0, 230, 180)
+    C.ensure()
+    mx, my, mz = 70, 96, 1.4
+    box(mx, my, mz, C.MOTOR_W, C.MOTOR_D, C.MOTOR_H, C.M['motor_yellow'], bevel=1.2, name='motor')
+    cyl(mx + C.MOTOR_W - 24, my + C.MOTOR_D / 2, mz + C.MOTOR_H / 2, 9.6, 24,
+        C.M['motor_can'], axis='x', name='can')
+    # the two copper tabs on the can's end face
+    for i in range(2):
+        box(mx + C.MOTOR_W + 1, my + 6 + i * 9, mz + 9, 3, 5, 1.4,
+            mat('pad_cu', hexcol('#b87333'), rough=0.34, metal=1.0), bevel=0.2, name='pad')
+    L.tube([(mx + C.MOTOR_W + 4, my + 8, mz + 10), (mx + C.MOTOR_W + 60, my - 6, mz + 6),
+            (mx + C.MOTOR_W + 130, my - 20, mz + 2)], 1.2, C.M['w_red'], name='lead_red')
+    L.tube([(mx + C.MOTOR_W + 4, my + 17, mz + 10), (mx + C.MOTOR_W + 60, my + 34, mz + 6),
+            (mx + C.MOTOR_W + 130, my + 52, mz + 2)], 1.2, C.M['w_black'], name='lead_black')
+    T.soldering_iron(mx + C.MOTOR_W + 12, my + 12, mz + 16, ang=24, tilt=14)
+    T.heat_shrink(96, 208, 1.4, 20, 2.4, ang=-8)
+    T.solder_spool(300, 40, 1.4)
+    L.anchor('pads', (mx + C.MOTOR_W + 3, my + 12, mz + 11))
+    L.anchor('shrink', (106, 208, 5))
+    L.anchor('motor', (mx + 28, my + 12, mz + C.MOTOR_H))
+    L.camera((170, 110, 16), 620, azimuth=34, elevation=34, lens=60)
 
 
 # ---------------------------------------------------------------- a plain hero, for checking

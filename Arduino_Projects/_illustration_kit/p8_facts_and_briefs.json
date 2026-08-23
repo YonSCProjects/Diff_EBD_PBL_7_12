@@ -1,0 +1,1850 @@
+{
+ "facts": {
+  "geometry": [
+   {
+    "part": "Frame — FEICHAO/JMT hollow-cup carbon kit, wheelbase",
+    "value": "100 mm motor-shaft to motor-shaft (diagonal). Square X frame, FLOWN PLUS-STYLE: one arm points FRONT.",
+    "source": "Arduino_Project_8.md locked-decisions table (Frame row) + BOM row 1 + 'Rotation pairs' section"
+   },
+   {
+    "part": "Frame plates",
+    "value": "Two carbon plates, 1.5 mm thick each, joined by the kit's METAL standoffs + M2 screws. Both plates conduct electricity (ohms to a few hundred ohms edge-to-edge).",
+    "source": "Arduino_Project_8.md locked-decisions Frame row; 'The carbon plates conduct' bullet in the MOSFET channel section"
+   },
+   {
+    "part": "Frame weight",
+    "value": "9 g complete (2 plates, standoffs, screws, 4 rubber grommets, 4 rubber motor caps, battery O-rings)",
+    "source": "Arduino_Project_8.md BOM table row 1"
+   },
+   {
+    "part": "Maximum propeller the frame takes",
+    "value": "65 mm — leaves 5.7 mm tip clearance. 55 mm props were explicitly REJECTED.",
+    "source": "Arduino_Project_8.md BOM row 1 Notes + locked-decisions 'Propeller guards' row"
+   },
+   {
+    "part": "Motor — 8520 coreless brushed",
+    "value": "8.5 mm diameter x 20 mm long can; ~70 mm leads as supplied; 5 g each (20 g for four); output shaft 1.0 mm",
+    "source": "Arduino_Project_8.md BOM row 2 + prop bore note row 3"
+   },
+   {
+    "part": "Motor mounting",
+    "value": "PRESS-FIT shaft-up through the rubber grommet in the arm ring until the motor's shoulder sits on the rubber. No glue, no screws, no tools — thumb pressure only.",
+    "source": "Arduino_Project_8.md T1 Milestone 2 steps 2-3"
+   },
+   {
+    "part": "Landing feet",
+    "value": "A rubber motor cap pressed onto the BOTTOM of each motor can (4 off) — these are the feet the drone stands on.",
+    "source": "Arduino_Project_8.md T1 Milestone 2 step 4 + BOM row 1"
+   },
+   {
+    "part": "Propeller",
+    "value": "65 mm diameter, 1.0 mm bore (NOT the standard 1.5 mm whoop bore), 1 g each. 2 CW + 2 CCW per drone, plus 8 spares.",
+    "source": "Arduino_Project_8.md BOM row 3"
+   },
+   {
+    "part": "ESP32 DevKit V1 (30-pin DOIT) board outline",
+    "value": "PCB 51.5 x 28.3 x 1.4 mm; two 15-pin headers at 2.54 mm pitch, header rows ~25.4 mm apart; micro-USB connector on one short edge; 10 g",
+    "source": "_illustration_kit/parts.py esp32_devkit() (w,d,h = 51.5, 28.3, 1.4; _header n=15) + Arduino_Project_8.md BOM row 4 for weight"
+   },
+   {
+    "part": "ESP32 DevKit V1 header pin tips",
+    "value": "With pre-soldered male headers the 30 pin tips protrude 2-3 mm BELOW the PCB. Either clipped flush or sunk into a 3 mm foam pad.",
+    "source": "Arduino_Project_8.md 'What the teacher pre-builds' item 9"
+   },
+   {
+    "part": "ESP32 DevKit V1 orientation on the frame",
+    "value": "On the TOP plate, centred, micro-USB connector facing the BACK arm (so the cable never crosses FRONT).",
+    "source": "Arduino_Project_8.md T1 Milestone 4 step 2"
+   },
+   {
+    "part": "MT3608 boost module",
+    "value": "36 x 17 mm PCB (the common module), 2 g. IN+/IN- pads on one end, OUT+/OUT- on the other; black drum inductor; 25-turn blue trimmer pot; a drop of clear nail polish locks the pot; silver-marker legend '5.0 V ok + date'.",
+    "source": "Arduino_Project_8.md BOM row 5 + pre-build item 2; _fritzing_kit/draw_p8_parts.py mt3608 (bw,bh = 36.0, 17.0)"
+   },
+   {
+    "part": "MPU6050 / GY-521 module",
+    "value": "2 g. Approx 21.2 x 15.7 mm PCB (standard GY-521 outline — NOT stated in the brief; use it only as an illustrator default). Chip side UP, board FLAT to the plate, silk-screen X arrow pointing at the FRONT motor. I2C address 0x68.",
+    "source": "Arduino_Project_8.md BOM row 6 (weight, address) + T1 Milestone 4 step 3 (orientation); PCB size is standard-part knowledge, not in the repo"
+   },
+   {
+    "part": "MOSFET board — perfboard",
+    "value": "~4 x 5 cm (40 x 50 mm), single-sided, 2.54 mm hole pitch. 18 g total = 5 g board + 8 g for the four TO-220s + 5 g of parts.",
+    "source": "Arduino_Project_8.md BOM row 7 + 'Suggested perfboard layout (4x5 cm, single-sided, 2.54 mm pitch)'"
+   },
+   {
+    "part": "MOSFET spacing on the board",
+    "value": "Leave at least 2 empty holes (>= 5.08 mm) between adjacent MOSFETs, so the four Drain tabs can never touch. All four tabs heat-shrunk, unconditionally.",
+    "source": "Arduino_Project_8.md 'IRLB8721 pinout' bullet + T2 Milestone 3 step 3"
+   },
+   {
+    "part": "IRLB8721 package",
+    "value": "TO-220 (TO-220AB): body ~10.16 mm wide x 15.24 mm tall x 4.6 mm thick, metal tab with mounting hole at the top, 3 leads at 2.54 mm pitch. Laid FLAT on the board on this build. Package dims are standard TO-220AB, not stated in the brief.",
+    "source": "Arduino_Project_8.md BOM row 7 + T1 M4 step 5 ('laid flat'); TO-220AB dimensions are package-standard knowledge"
+   },
+   {
+    "part": "Flyback diode package",
+    "value": "1N5819 Schottky, 1 A / 40 V, DO-41 axial (~2.6 mm dia x 5.2 mm body). NOT 1N4007. 1N5822 (3 A) is the drop-in upgrade.",
+    "source": "Arduino_Project_8.md BOM row 7 + 'Flyback diode orientation' bullet + Technical review record"
+   },
+   {
+    "part": "Bulk capacitor",
+    "value": "220 uF / 6.3 V low-ESR radial electrolytic, ONE per board (not one per channel), across BAT+/GND.",
+    "source": "Arduino_Project_8.md BOM row 7 + '220 uF bulk capacitor' bullet"
+   },
+   {
+    "part": "Gate resistors",
+    "value": "4x 100 ohm, 1/4 W axial (brown-black-brown). 4x 10 kohm, 1/4 W axial (brown-black-orange).",
+    "source": "Arduino_Project_8.md BOM row 7 + T2 Milestone 1"
+   },
+   {
+    "part": "Board rails",
+    "value": "BAT+ rail and GND rail = bare copper wire (or doubled resistor-leg offcuts) laid straight across the board, soldered at every third hole and flooded with solder. They carry 6-8 A bursts.",
+    "source": "Arduino_Project_8.md 'Power path' bullet + T2 Milestone 3 step 2"
+   },
+   {
+    "part": "MOSFET board placement",
+    "value": "UNDER the bottom plate, labelled side readable, M1 pad nearest the FRONT arm, TO-220s laid flat with tabs heat-shrunk. Stack under it: insulating sheet (Kapton or trimmed plastic card) between solder side and carbon, then full-footprint 1-2 mm foam double-sided tape, then a 2.5 mm zip tie through the plate slots ON TOP of that layer.",
+    "source": "Arduino_Project_8.md T1 Milestone 4 step 5"
+   },
+   {
+    "part": "Battery — 1S LiPo 3.7 V 1000 mAh",
+    "value": "24 g, PH2.0 (JST-PH) connector, 25C+. Pouch dimensions are not stated in the brief; the repo's Fritzing part draws it 52 x 34 mm. A real 1S 1000 mAh pouch is ~52 x 30 x 9 mm — illustrator default only.",
+    "source": "Arduino_Project_8.md BOM row 8 (weight/connector); _fritzing_kit/draw_p8_parts.py lipo (px,py,pw,ph = 1,1,52,34)"
+   },
+   {
+    "part": "Battery bay",
+    "value": "Cell sits UNDER the bottom plate, below the MOSFET board, on a 2 mm foam/EVA pad covering its whole component side, held ONLY by the two frame O-rings through the plate slots — never a zip tie, never tape on the cell. Cloth tape on the two plate edges the O-rings cross. Must slide in and out by hand.",
+    "source": "Arduino_Project_8.md T1 Milestone 4 step 6"
+   },
+   {
+    "part": "PH2.0 pigtail routing",
+    "value": "Soldered by the teacher to the board's BAT+/GND pads; routed so the plug exits at the frame's SIDE, between two arms. The plug sits UNDER the propellers — that geometry is the reason for the props-on no-touch rule.",
+    "source": "Arduino_Project_8.md pre-build item 1 + stuck-protocol red note"
+   },
+   {
+    "part": "Insulation under every board",
+    "value": "Full-footprint 2-3 mm foam double-sided tape PLUS a 0.5-1 mm plastic/Kapton shim between every board's solder side and the carbon plate. Never corner dots, never a centre dot. DevKit gets a 3 mm foam pad (or 2 nylon standoffs); MPU6050 gets a full-footprint foam square; MT3608 full-footprint foam.",
+    "source": "Arduino_Project_8.md BOM wires row + T1 Milestone 4 steps 2-4"
+   },
+   {
+    "part": "Tether loop on the airframe",
+    "value": "A 10 mm loop of 1 mm braided cord threaded through two adjacent holes on the BOTTOM plate's centreline, knotted on the TOP face, hanging ~10 mm clear below the plate, under the centre of gravity and clear of the battery bay and every prop circle.",
+    "source": "Arduino_Project_8.md T1 Milestone 4 step 1 + Safety Protocol R5 tether spec"
+   },
+   {
+    "part": "Tether line",
+    "value": "Nylon monofilament fishing line 0.35-0.40 mm (>= 6 kg breaking strain), 1.2 m from anchor knot to drone (0.8 m for the Tier 2 'short tether' choice). Fixed bowline at each end; girth-hitched to the frame loop.",
+    "source": "Arduino_Project_8.md Safety Protocol R5"
+   },
+   {
+    "part": "Tether anchor",
+    "value": "FLAT, <= 10 cm tall, 2-3 kg — a 2.5 kg barbell plate lying flat, a flat sandbag, or a 2 L sand bottle LAID ON ITS SIDE. Never upright, never furniture.",
+    "source": "Arduino_Project_8.md Safety Protocol R5 + shared-equipment list"
+   },
+   {
+    "part": "Lift-off mark",
+    "value": "Taped ~40 cm from the anchor X, so the slack line lies flat on the floor and the drone never hovers over the anchor. FRONT points away from the spectator line.",
+    "source": "Arduino_Project_8.md T1 Milestone 13 step 2 + R7 item 9"
+   },
+   {
+    "part": "Hover envelope",
+    "value": "10-30 cm for a first hover; <= 1 m ever, indoors, on the tether. <= 3 minutes motor time per battery.",
+    "source": "Arduino_Project_8.md Safety Protocol R8 + T1 Milestone 13 steps 3 and 5"
+   },
+   {
+    "part": "Flight zone",
+    "value": "3 m diameter tape circle with a centre X; spectator line 2.5 m from the centre (1 m outside the circle) with a 60 cm flight-line box on it for pilot + teacher; room >= 4 x 4 m free, no glass within 3 m, no ceiling fixtures below 2.5 m.",
+    "source": "Arduino_Project_8.md 'Flight-zone marking' section"
+   },
+   {
+    "part": "Bench thrust-test post",
+    "value": "Rigid 4 x 4 cm wooden block 15 cm tall on a wide low base (or a sand-filled 0.5 L bottle); >= 300 g total; top no wider than ~45 mm. Two rubber bands across the CENTRE PLATES (never across arms or motors). A 30 cm slack backup line from the post's base to the frame's tether loop.",
+    "source": "Arduino_Project_8.md shared-equipment list + T1 Milestone 11 step 3"
+   },
+   {
+    "part": "Thrust-rig geometry",
+    "value": "The drone sits UPSIDE-DOWN on top of the post: props pointing DOWN toward the scale pan, exhaust toward the ceiling. Prop plane >= 65 mm (one prop diameter) above the pan. Post + drone stand on the scale, tared to 0 with everything in place. A tape line 50 cm in front of the bench = hands behind it while props turn.",
+    "source": "Arduino_Project_8.md T1 Milestone 11 step 3 + 'Flight-zone marking' bench-station bullet"
+   },
+   {
+    "part": "Weight budget (itemised)",
+    "value": "frame 9 + motors 20 (4x5) + props 4 (4x1) + DevKit 10 + MT3608 2 + MPU6050 2 + MOSFET board 18 + battery 24 + wires/tape 6 = 95 g itemised, +5 g build allowance = planning AUW ~100 g (105 g with margin, 110 g worst case).",
+    "source": "Arduino_Project_8.md BOM table subtotal rows"
+   },
+   {
+    "part": "Wire gauges",
+    "value": "Battery pigtail and board->MT3608: 22-24 AWG silicone, red/black only. MT3608->VIN/GND: 26 AWG. Signal wires (4 gates, SDA, SCL, 3V3/GND to MPU): 28-30 AWG, ~8 cm each. Motor leads trimmed to reach their pads with ~1 cm spare.",
+    "source": "Arduino_Project_8.md BOM wires row + T1 Milestones 5, 6, 7"
+   },
+   {
+    "part": "Connection count for the whole drone",
+    "value": "22 connections: battery 2 + board->MT3608 2 + MT3608->DevKit 2 + DevKit->MPU 4 + gates 4 + motors 8.",
+    "source": "Arduino_Project_8.md power-tree ASCII block, last line + T1 Milestone 7 step 5"
+   }
+  ],
+  "pins": [
+   {
+    "pin": "GPIO 25",
+    "connectsTo": "G1 gate pad on the MOSFET board = FRONT motor channel M1 (through the channel's 100 ohm gate resistor). Wire colour per the brief: YELLOW, 28-30 AWG.",
+    "confirmedIn": "00_motor_test.ino:103 `const int MOTOR_FRONT = 25;`  01_flight.ino:145  T2_flight_starter.ino:106 — all three agree with the brief's pin map"
+   },
+   {
+    "pin": "GPIO 26",
+    "connectsTo": "G2 gate pad = RIGHT motor channel M2. Wire colour per the brief: ORANGE.",
+    "confirmedIn": "00_motor_test.ino:104 `const int MOTOR_RIGHT = 26;`  01_flight.ino:146  T2_flight_starter.ino:106"
+   },
+   {
+    "pin": "GPIO 14",
+    "connectsTo": "G3 gate pad = BACK motor channel M3. Wire colour per the brief: GREEN. Note: GPIO 14 can emit a millisecond pulse at reset, so a <=0.1 s BACK-motor twitch at power-up is normal (GPIO 33 is the documented alternative).",
+    "confirmedIn": "00_motor_test.ino:105 `const int MOTOR_BACK  = 14;`  01_flight.ino:147  T2_flight_starter.ino:106; twitch note in the brief's pin-map table"
+   },
+   {
+    "pin": "GPIO 27",
+    "connectsTo": "G4 gate pad = LEFT motor channel M4. Wire colour per the brief: BLUE.",
+    "confirmedIn": "00_motor_test.ino:106 `const int MOTOR_LEFT  = 27;`  01_flight.ino:148  T2_flight_starter.ino:106"
+   },
+   {
+    "pin": "GPIO 21",
+    "connectsTo": "MPU6050 (GY-521) SDA. Wire colour per the brief's pin map: WHITE (the repo's existing Fritzing figures draw it BLUE — see warnings).",
+    "confirmedIn": "01_flight.ino:158 `const int SDA_PIN = 21, SCL_PIN = 22;`  T2_flight_starter.ino:112. Not present in 00_motor_test.ino — that sketch has no sensor at all."
+   },
+   {
+    "pin": "GPIO 22",
+    "connectsTo": "MPU6050 (GY-521) SCL. Wire colour per the brief's pin map: GREY (the repo's existing Fritzing figures draw it YELLOW — see warnings).",
+    "confirmedIn": "01_flight.ino:158  T2_flight_starter.ino:112; error string at 01_flight.ino:250 names 'SDA(21) SCL(22)'"
+   },
+   {
+    "pin": "3V3 (LEFT header — the column carrying 3V3, GND, 15, 2, 4, 16, 17, 5, 18, 19, 21, 3, 1, 22, 23)",
+    "connectsTo": "MPU6050 VCC, thin RED 28-30 AWG. Absolutely never VIN, never 5 V — the whole build keeps one 3.3 V sensor rail.",
+    "confirmedIn": "Not a firmware constant (power pin). Brief pin-map row 'MPU6050 VCC | 3V3'; measured 3.2-3.4 V at T1 Milestone 8 step 4"
+   },
+   {
+    "pin": "GND on the LEFT header, the one immediately NEXT TO 3V3",
+    "connectsTo": "MPU6050 GND, thin BLACK 28-30 AWG. The DevKit has exactly two GND pins, one per side: this one is the sensor's.",
+    "confirmedIn": "Not a firmware constant. Brief pin-map row 'MPU6050 GND | GND (left header, next to 3V3)' + T1 Milestone 5 step 4 and its Stuck note"
+   },
+   {
+    "pin": "VIN (RIGHT header — the column VIN, GND, 13, 12, 14, 27, 26, 25, 33, 32, 35, 34, VN, VP, EN)",
+    "connectsTo": "MT3608 OUT+, RED 26 AWG. 5.00 V. NEVER the battery directly, NEVER the 3V3 pin.",
+    "confirmedIn": "Not a firmware constant. Brief pin-map row 'MT3608 OUT+ | VIN' + 'Why the MT3608 is there at all'; measured 4.9-5.1 V at T1 Milestone 8 step 4"
+   },
+   {
+    "pin": "GND on the RIGHT header, the one immediately NEXT TO VIN",
+    "connectsTo": "MT3608 OUT-, BLACK 26 AWG. This is the power return; the MOSFET board's GND reaches the DevKit through the MT3608's common IN-/OUT- copper.",
+    "confirmedIn": "Not a firmware constant. Brief pin-map row 'MT3608 OUT- | GND (right header, next to VIN)'"
+   },
+   {
+    "pin": "GPIO 2",
+    "connectsTo": "The DevKit's ONBOARD BLUE LED. No wire leaves the board. States: fast flicker = gyro calibrating (~2 s); short blink once a second = ready/disarmed; solid ON = ARMED; endless fast flicker = MPU6050 not found or lost.",
+    "confirmedIn": "00_motor_test.ino:107 `const int LED = 2;`  01_flight.ino:150  T2_flight_starter.ino:108; state list in the brief's pin-map table"
+   },
+   {
+    "pin": "Micro-USB socket",
+    "connectsTo": "Nothing in flight — but it fixes the DevKit's orientation: the USB connector faces the BACK arm. USB in = battery out, always.",
+    "confirmedIn": "Brief T1 Milestone 4 step 2; the rule is restated in every sketch header (00_motor_test.ino:21-24)"
+   },
+   {
+    "pin": "GPIO 34 (Tier 3 only, input-only ADC1)",
+    "connectsTo": "Battery-sense: 100 k / 100 k divider from BAT+, with a 100 nF-1 uF ceramic from the pin to GND right at the DevKit pin.",
+    "confirmedIn": "Not in any shipped sketch — brief pin-map 'Tier 3 only' row + Tier 3 planner extension 1. Draw only if the illustration is a Tier 3 figure."
+   },
+   {
+    "pin": "NEVER used for motors or wiring",
+    "connectsTo": "GPIO 0, 5, 12, 15 (strapping), GPIO 2 (strapping — onboard LED only), GPIO 6-11 (flash), GPIO 34-39 (cannot be outputs).",
+    "confirmedIn": "Brief pin-map last row; confirmed in the Technical review record ('25 / 26 / 14 / 27 are non-strapping')"
+   }
+  ],
+  "rotation": [
+   {
+    "position": "FRONT (the arm with the teacher's paint mark; board channel M1 / gate pad G1; ESP32 GPIO 25)",
+    "spin": "CW — clockwise seen from ABOVE, looking down on the drone with FRONT pointing away from you",
+    "prop": "CW propeller, 65 mm, 1.0 mm bore. Motor is a CW-type 8520, identified by its RED (+) and BLUE (-) leads. Red lead to M1+, blue to M1-."
+   },
+   {
+    "position": "RIGHT (the drone's right when FRONT points away from you; channel M2 / gate pad G2; ESP32 GPIO 26)",
+    "spin": "CCW — counter-clockwise seen from above",
+    "prop": "CCW propeller, 65 mm, 1.0 mm bore. Motor is a CCW-type 8520, identified by its WHITE (+) and BLACK (-) leads. White lead to M2+, black to M2-."
+   },
+   {
+    "position": "BACK (the arm opposite FRONT, the side the DevKit's USB connector faces; channel M3 / gate pad G3; ESP32 GPIO 14)",
+    "spin": "CW — clockwise seen from above; same direction as FRONT",
+    "prop": "CW propeller, 65 mm, 1.0 mm bore. CW-type 8520 with RED (+) / BLUE (-) leads. Red to M3+, blue to M3-."
+   },
+   {
+    "position": "LEFT (the drone's left when FRONT points away from you; channel M4 / gate pad G4; ESP32 GPIO 27)",
+    "spin": "CCW — counter-clockwise seen from above; same direction as RIGHT",
+    "prop": "CCW propeller, 65 mm, 1.0 mm bore. CCW-type 8520 with WHITE (+) / BLACK (-) leads. White to M4+, black to M4-."
+   },
+   {
+    "position": "THE RULE BEHIND THE FOUR ROWS (draw this, do not just imply it)",
+    "spin": "OPPOSITE arms spin the SAME way: FRONT+BACK = CW pair; RIGHT+LEFT = CCW pair. This is the PLUS-style pairing, and it is a deliberate correction of the source tutorial's 'Front+Right CW, Back+Left CCW' (that is the X-configuration rule wrongly applied to a plus layout — with it, every pitch correction would also yaw the drone).",
+    "prop": "Prop always follows its motor: CW prop on a CW motor, CCW prop on a CCW motor. The firmware mixer assumes exactly this pairing (yaw term subtracts from FRONT+BACK and adds to RIGHT+LEFT); a drone built the other way round is corrected in software with YAW_SIGN = -1, not by re-propping."
+   },
+   {
+    "position": "HOW A WRONG DIRECTION IS FIXED (relevant if the illustration shows a repair)",
+    "spin": "Brushed coreless motors REVERSE WITH POLARITY — the tutorial's claim that they ignore polarity is wrong and the brief says so explicitly.",
+    "prop": "If a motor spins backwards: props off, battery out, unsolder that motor's two leads and SWAP them at its M+ / M- pads, re-run the M+/M- continuity check. Never a new motor, never a sketch edit."
+   }
+  ],
+  "powerTree": [
+   {
+    "from": "1S LiPo 3.7 V 1000 mAh, PH2.0 plug, + terminal",
+    "to": "MOSFET board BAT+ pad (via the teacher-soldered PH2.0 mating pigtail)",
+    "colour": "red, 22-24 AWG silicone",
+    "volts": "3.7-4.2 V raw battery (nominal 3.7 V, 4.1-4.2 V freshly charged, 3.8 V storage floor)"
+   },
+   {
+    "from": "1S LiPo PH2.0 plug, - terminal",
+    "to": "MOSFET board GND pad (same pigtail)",
+    "colour": "black, 22-24 AWG silicone",
+    "volts": "0 V — this pad's rail is the STAR GROUND of the entire drone"
+   },
+   {
+    "from": "MOSFET board BAT+ rail (bare copper)",
+    "to": "The four motor '+' pads M1+ / M2+ / M3+ / M4+, the four diode CATHODES, and the 220 uF long leg",
+    "colour": "bare copper rail flooded with solder (no insulated wire)",
+    "volts": "3.7-4.2 V — motors run DIRECTLY off the battery; there is NO booster on the motor rail"
+   },
+   {
+    "from": "Each motor's '-' pad (M1- ... M4-)",
+    "to": "That channel's IRLB8721 DRAIN (middle leg + the metal tab), and that channel's diode ANODE",
+    "colour": "board copper / the motor's own dark lead",
+    "volts": "Switched: ~0 V when the MOSFET is on, battery voltage when it is off (clamped ~0.3 V above BAT+ by the Schottky)"
+   },
+   {
+    "from": "Each IRLB8721 SOURCE (right leg)",
+    "to": "MOSFET board GND rail (leg bent onto the rail and soldered)",
+    "colour": "bare copper rail",
+    "volts": "0 V"
+   },
+   {
+    "from": "220 uF / 6.3 V low-ESR electrolytic — LONG leg (+)",
+    "to": "BAT+ rail",
+    "colour": "n/a (component lead)",
+    "volts": "3.7-4.2 V. One capacitor per board, not per channel. Stripe leg (-) goes to the GND rail."
+   },
+   {
+    "from": "MOSFET board's SECOND BAT+ pad",
+    "to": "MT3608 IN+",
+    "colour": "red, 22-24 AWG (must be >= 24 AWG — 30 AWG here causes brown-outs)",
+    "volts": "3.7-4.2 V"
+   },
+   {
+    "from": "MOSFET board's SECOND GND pad",
+    "to": "MT3608 IN-",
+    "colour": "black, 22-24 AWG",
+    "volts": "0 V"
+   },
+   {
+    "from": "MT3608 OUT+",
+    "to": "ESP32 DevKit V1 VIN pin (right header)",
+    "colour": "red, 26 AWG",
+    "volts": "5.00 V, pre-tuned by the teacher to 4.95-5.05 V and locked with nail polish; measured 4.9-5.1 V at the pin during the M8 power-up check"
+   },
+   {
+    "from": "MT3608 OUT-",
+    "to": "ESP32 DevKit V1 GND pin immediately NEXT TO VIN (right header)",
+    "colour": "black, 26 AWG",
+    "volts": "0 V. This is the ONLY ground path from the MOSFET board to the DevKit — it runs through the MT3608's common IN-/OUT- copper."
+   },
+   {
+    "from": "ESP32 DevKit V1 3V3 pin (left header)",
+    "to": "MPU6050 / GY-521 VCC",
+    "colour": "thin red, 28-30 AWG",
+    "volts": "3.3 V from the DevKit's onboard AMS1117; measured 3.2-3.4 V at the sensor. NEVER VIN, NEVER 5 V."
+   },
+   {
+    "from": "ESP32 DevKit V1 GND pin immediately NEXT TO 3V3 (left header)",
+    "to": "MPU6050 / GY-521 GND",
+    "colour": "thin black, 28-30 AWG",
+    "volts": "0 V"
+   },
+   {
+    "from": "ESP32 GPIO 25 / 26 / 14 / 27",
+    "to": "Board gate pads G1 (FRONT) / G2 (RIGHT) / G3 (BACK) / G4 (LEFT)",
+    "colour": "yellow / orange / green / blue, 28-30 AWG signal wire, ~8 cm each",
+    "volts": "0 V or 3.3 V, 20 kHz PWM, 8-bit duty 0-255 (LEDC)"
+   },
+   {
+    "from": "ESP32 GPIO 21 / GPIO 22",
+    "to": "MPU6050 SDA / SCL",
+    "colour": "white / grey per the brief's pin map (the repo's Fritzing figures use blue / yellow)",
+    "volts": "3.3 V logic; the GY-521 carries its own onboard pull-ups to its 3.3 V rail"
+   },
+   {
+    "from": "NOT A CONNECTION — draw it as forbidden if the figure shows the rail at all",
+    "to": "Battery or MT3608 output into the DevKit 3V3 pin",
+    "colour": "—",
+    "volts": "Forbidden. 4.2 V on 3V3 exceeds the ESP32's 3.6 V absolute maximum and back-drives the AMS1117; a 3.7 V cell on VIN cannot make a clean 3.3 V either — that is why the MT3608 exists."
+   },
+   {
+    "from": "NOT A CONNECTION — never draw both at once",
+    "to": "USB cable and battery plugged in at the same time",
+    "colour": "—",
+    "volts": "Program rule since P4: USB in = battery out; battery in = USB out. The battery plug is the drone's arming authority."
+   }
+  ],
+  "mosfetChannel": [
+   {
+    "component": "Motor — 8520 coreless, FRONT arm, CW type (this is channel 1; channels 2/3/4 are identical, RIGHT/BACK/LEFT on M2/M3/M4 with gate pads G2/G3/G4)",
+    "leadA": "RED (+) lead -> board pad M1+, which sits ON the BAT+ rail",
+    "leadB": "BLUE (-) lead -> board pad M1-, which is the DRAIN node. (CCW motors use WHITE (+) / BLACK (-) instead of red/blue.)"
+   },
+   {
+    "component": "1N5819 Schottky flyback diode D1 (DO-41 axial, 1 A / 40 V) — sits across the motor",
+    "leadA": "CATHODE = the end with the printed BAND -> M1+ / the BAT+ rail (the motor's '+' side). THE BAND POINTS AT BAT+.",
+    "leadB": "ANODE = the plain unbanded end -> M1- / the Drain node (the motor's '-' side). Reversed, this diode is a dead short across the battery through the MOSFET the moment the gate goes high — it smokes."
+   },
+   {
+    "component": "IRLB8721 Q1 — GATE, the LEFT leg when the printed label faces you and the legs point down",
+    "leadA": "One end of the 100 ohm gate resistor (whose other end is the G1 pad)",
+    "leadB": "One end of the 10 kohm pull-down (whose other end is the GND rail). Both resistors meet AT THE GATE LEG — the 10 k is on the MOSFET side of the 100 ohm, not the GPIO side."
+   },
+   {
+    "component": "IRLB8721 Q1 — DRAIN, the MIDDLE leg",
+    "leadA": "M1- pad — i.e. the motor's '-' lead and the diode's anode, all one node",
+    "leadB": "Nothing else. The Drain node terminates here. It is NOT tied to BAT+ and NOT tied to GND."
+   },
+   {
+    "component": "IRLB8721 Q1 — the METAL TAB (electrically identical to the Drain)",
+    "leadA": "Internally bonded to Drain — the tab IS the motor's '-' node, live whenever the battery is in",
+    "leadB": "MUST TOUCH NOTHING: heat-shrink over every tab (unconditional), >= 2 empty holes to the next MOSFET, never the BAT+ rail, never the GND rail, never another tab (that would join all four motors into one), never the carbon plate 1 mm away."
+   },
+   {
+    "component": "IRLB8721 Q1 — SOURCE, the RIGHT leg",
+    "leadA": "Bent over onto the GND rail",
+    "leadB": "Soldered to the GND rail. This is a LOW-SIDE switch: the motor is always at battery potential; the MOSFET only completes the path to ground."
+   },
+   {
+    "component": "100 ohm gate resistor, 1/4 W axial (brown-black-brown)",
+    "leadA": "G1 pad — the pad where the YELLOW 28-30 AWG wire from ESP32 GPIO 25 lands",
+    "leadB": "Q1's Gate leg. Why: the gate is a ~1.5 nF capacitor; 3.3 V / 100 ohm = 33 mA peak for under a microsecond, inside the GPIO's 40 mA rating."
+   },
+   {
+    "component": "10 kohm gate pull-down, 1/4 W axial (brown-black-orange)",
+    "leadA": "Q1's Gate leg (same node as the 100 ohm's MOSFET-side end)",
+    "leadB": "GND rail. Why: it holds the gate at 0 V during the ~1 s of boot when GPIOs float, during reset, and if the gate wire ever falls off. From the DevKit pin the meter reads ~10 kohm through the 100 ohm — the 9-11 kohm check at M3 and M7."
+   },
+   {
+    "component": "G1 gate pad (the board's connector to the brain)",
+    "leadA": "YELLOW 28-30 AWG signal wire from ESP32 GPIO 25 (female Dupont at the DevKit end)",
+    "leadB": "The 100 ohm gate resistor. G2 = orange from GPIO 26, G3 = green from GPIO 14, G4 = blue from GPIO 27."
+   },
+   {
+    "component": "BAT+ rail (bare copper wire, soldered every third hole, flooded with solder)",
+    "leadA": "PH2.0 pigtail RED wire (battery +) at one pad; the SECOND BAT+ pad feeds MT3608 IN+",
+    "leadB": "Serves M1+ / M2+ / M3+ / M4+, the four diode cathodes, and the 220 uF long leg. Carries 6-8 A bursts."
+   },
+   {
+    "component": "GND rail (bare copper wire, same construction)",
+    "leadA": "PH2.0 pigtail BLACK wire (battery -) at one pad; the SECOND GND pad feeds MT3608 IN-",
+    "leadB": "Serves the four Sources, the four 10 kohm pull-downs, and the 220 uF striped leg. This rail is the drone's star ground."
+   },
+   {
+    "component": "220 uF / 6.3 V low-ESR electrolytic (ONE per board, shared by all four channels)",
+    "leadA": "LONG leg (+) -> BAT+ rail",
+    "leadB": "STRIPED leg (-) -> GND rail. Local energy reservoir for the moment all four motors switch on together."
+   },
+   {
+    "component": "Gate-drive ground return — the reason the channel works at all (worth drawing as a dashed path)",
+    "leadA": "MOSFET board GND rail -> MT3608 IN-",
+    "leadB": "MT3608 OUT- -> DevKit GND (right header, next to VIN). The ESP32's ground and the MOSFET's Source are ONE node; there is no separate gate-ground wire. One ground, star point = the board's GND rail."
+   },
+   {
+    "component": "Board labelling (a student reads the drawing then the board)",
+    "leadA": "Marker legend beside the pads: M1-M4, G1-G4, BAT+, GND",
+    "leadB": "Plus an arrow marked 'FRONT'. Channel map: M1/G1 = FRONT (GPIO 25), M2/G2 = RIGHT (GPIO 26), M3/G3 = BACK (GPIO 14), M4/G4 = LEFT (GPIO 27)."
+   }
+  ],
+  "warnings": [
+   "ROTATION IS THE #1 THING TO GET WRONG. Plus-style, NOT X-style: FRONT and BACK are the CW pair, RIGHT and LEFT are the CCW pair. The source tutorial's 'Front + Right CW, Back + Left CCW' is explicitly overruled in Arduino_Project_8.md 'Rotation pairs'. If a drawing shows adjacent arms spinning the same way, it is wrong and the firmware mixer (01_flight.ino:331-334) will fight it.",
+   "DIODE BAND ORIENTATION. The 1N5819's printed BAND (cathode) faces BAT+ / the motor's '+' side; the plain anode end faces the Drain / motor '-'. Drawn the other way it is a dead short across the LiPo through the MOSFET. On the perfboard layout the band therefore points UP toward the BAT+ rail.",
+   "ELECTROLYTIC POLARITY. 220 uF: LONG leg = '+' -> BAT+ rail; the leg beside the printed STRIPE = '-' -> GND rail. Do not draw the stripe on the BAT+ side.",
+   "MOSFET LEG ORDER. IRLB8721, printed LABEL FACING THE VIEWER and legs pointing DOWN: G - D - S, left to right. The METAL TAB IS THE DRAIN, not ground — so it is live, it must be heat-shrunk, and two tabs touching joins two motors. A drawing that shows the tab bolted down, grounded, or touching a neighbour or the carbon plate is teaching a short circuit.",
+   "LOW-SIDE, NOT HIGH-SIDE. The motor is between BAT+ and the Drain. Never draw the motor between the MOSFET and ground, and never draw the Drain tied to a rail.",
+   "10 k PULL-DOWN GOES ON THE MOSFET SIDE OF THE 100 OHM. From the Gate leg to GND, not from the G1 pad to GND. (The meter reads ~10 k either way, which is why it is easy to draw wrong.)",
+   "MPU6050 ORIENTATION. Chip side UP, board FLAT to the plate (check by eye from the side), silk-screen X ARROW POINTING AT THE FRONT MOTOR — then the Y arrow points LEFT. A tilted pad or a rotated arrow produces a drone that always leans, and the fix is the mounting, never the code.",
+   "DEVKIT ORIENTATION. Micro-USB connector faces the BACK arm. Do not draw the USB toward FRONT.",
+   "LEFT/RIGHT HEADER NAMING IS THE BRIEF'S, NOT A VIEW DIRECTION. The brief's 'right header' is the column VIN, GND, 13, 12, 14, 27, 26, 25, 33, 32, 35, 34, VN, VP, EN (USB at the bottom); its 'left header' is 3V3, GND, 15, 2, 4, 16, 17, 5, 18, 19, 21, 3, 1, 22, 23. Because the DevKit is mounted USB-toward-BACK, those columns appear MIRRORED in a top-down drone view. Label every pin by NAME, never by side.",
+   "TWO DIFFERENT GND PINS, AND THEY ARE NOT INTERCHANGEABLE IN THE DRAWING. The DevKit has exactly one GND per side. GND next to VIN = MT3608 OUT- (power return). GND next to 3V3 = MPU6050 GND. Swapping them in a figure contradicts T1 M5's Stuck note, which students use to diagnose.",
+   "5 V GOES TO VIN ONLY. Never draw MT3608 OUT+ into 3V3, and never draw the battery into 3V3 or into VIN directly. Only the ESP32 sees 5.0 V; only the MPU6050 sees 3.3 V; motors see raw battery. There is exactly ONE MT3608 and NO booster on the motor rail.",
+   "MOTOR POWER DOES NOT COME FROM THE MT3608. A figure that routes motor current through the boost module is wrong: motors run directly off the 1S cell through their MOSFETs.",
+   "THE CARBON PLATES CONDUCT. Every board must be drawn sitting on a visible full-footprint insulating layer (foam tape + a 0.5-1 mm Kapton/plastic shim), never on bare carbon, never on corner dots or a centre dot. The DevKit's 30 protruding pin tips (2-3 mm) must be shown sunk into 3 mm foam or clipped flush. The MOSFET board's solder side never faces bare plate.",
+   "BATTERY IS HELD BY O-RINGS ONLY. Never draw a zip tie or tape across the LiPo cell. The bay sits under the bottom plate on a 2 mm foam/EVA pad; the cell must slide out by hand.",
+   "PH2.0 POLARITY IS NOT STANDARDISED on micro-drone batteries. Do not draw a plug whose colour order implies a guaranteed polarity; the build step is 'check with the meter, red must read positive'. A reverse-reading battery is retired, never 'just flipped'.",
+   "PROPS ARE THE LAST THING FITTED. Any figure of a build, wiring, upload, or bench step must show BARE MOTOR SHAFTS. Props exist in exactly two scenes: the M11 inverted bench thrust test and the M13 tethered flight line. There are NO prop guards in this kit.",
+   "THE THRUST RIG IS INVERTED. The drone sits UPSIDE-DOWN on the post with props pointing DOWN at the scale pan, held by two rubber bands across the CENTRE PLATES (never across arms or motors), prop plane >= 65 mm above the pan, post top <= 45 mm across, plus a SLACK 30 cm backup line. The upright rig was explicitly scrapped (it under-reads 30-70 %). Do not draw a drone sitting the right way up on a scale.",
+   "TETHER GEOMETRY. The line girth-hitches to the 10 mm cord loop hanging ~10 mm below the BOTTOM plate (under the CG) — the frame has NO 'centre ring'. Anchor is FLAT and <= 10 cm tall, never an upright bottle: the drone hovers at 10-30 cm, inside a standing bottle's height. Lift-off mark ~40 cm from the anchor X so the slack line lies flat and the drone never hovers over the anchor.",
+   "WIRE-COLOUR CONFLICT BETWEEN THE BRIEF AND THE EXISTING FIGURES. The brief's canonical pin map says gates = yellow (25) / orange (26) / green (14) / blue (27), SDA = white, SCL = grey. The repo's already-built Fritzing figures (images/fritzing/w_p8_05_signals.json) use orange/orange/green/green for the gates and blue SDA / yellow SCL. New illustrations should follow the BRIEF's pin map, and the discrepancy should be flagged to Yon rather than silently propagated.",
+   "MOSFET BOARD SIZE CONFLICT. The brief specifies ~4 x 5 cm (40 x 50 mm) perfboard; the repo's Fritzing part (_fritzing_kit/draw_p8_parts.py board_svg) draws a 70 x 50 mm board despite its own comment saying 50 x 40. Use the brief's 40 x 50 mm.",
+   "POWER-TREE TOPOLOGY DETAIL. The brief routes MT3608 IN+/IN- from the MOSFET board's SECOND BAT+/GND pads (the board is the junction). The existing figure w_p8_03_power_tree.json draws lipo.+ straight to mt.Vin — electrically the same node, but a build drawing should show the board's spare pads as the take-off point, because that is what the student solders.",
+   "NO FIRMWARE/BRIEF PIN DISAGREEMENT EXISTS. All three sketches (00_motor_test.ino:103-107, 01_flight.ino:145-158, T2_flight_starter.ino:106-112) agree exactly with the brief's pin map: FRONT 25, RIGHT 26, BACK 14, LEFT 27, SDA 21, SCL 22, LED 2. Any figure showing other numbers is wrong regardless of which source it came from.",
+   "GPIO 14 TWITCH IS EXPECTED, NOT A FAULT. A <=0.1 s BACK-motor twitch at battery plug-in is normal (GPIO 14 pulses at reset). A motor that KEEPS turning means pull the plug. If a figure annotates power-up behaviour, say this.",
+   "A 'FULL DRONE' FIGURE MUST NOT SHOW USB AND BATTERY TOGETHER. USB in = battery out, battery in = USB out. Drawing both cables attached contradicts the rule that carries the whole safety model.",
+   "MOTOR-BOARD CHANNEL ORDER ON THE FRAME. M1 pad must be nearest the FRONT arm, and the board carries a marker arrow 'FRONT'. A drawing that lets the board sit any way round loses the one physical cue that stops a channel/arm mismatch.",
+   "PROPS-ON EMERGENCY RULE IS A GEOMETRY FACT. The PH2.0 plug exits at the frame's side and sits UNDER the propeller discs — that is why nobody's hand may reach for the plug with props on. If a figure shows the plug, show it under the prop plane so the rule reads as obvious.",
+   "SPIN DIRECTION IS 'SEEN FROM ABOVE'. State the viewpoint on every rotation arrow. An isometric view from below silently reverses every arrow."
+  ]
+ },
+ "cards": [
+  {
+   "id": "P8_T1_M1_meet_parts_contract",
+   "titleHe": "פוגשים את הרכיבים וחותמים על חוזה הבטיחות",
+   "action": "The student picks up each part in the tray one at a time, names it out loud with the teacher, then signs the safety-contract card next to the teacher's signature, puts the safety goggles on, and finally sets the bare frame plus the tray's parts (no battery) on the kitchen scale and reads ~75 g. Nothing is assembled in this step - the drawing is the tray, the signing hand and the scale.",
+   "objects": [
+    "digital kitchen scale, pan holding the bare carbon frame and the tray's parts, display reading 75",
+    "parts tray, laid out in named groups",
+    "the frame: two screwed 1.5 mm carbon plates, four rubber grommets in the arm rings, four rubber motor caps, battery O-rings",
+    "four 8520 coreless motors, loose, in two colour pairs: two with red/blue leads and two with black/white leads",
+    "ESP32 DevKit V1 (30-pin), loose",
+    "MPU6050 (GY-521) breakout, loose",
+    "MT3608 boost module, loose",
+    "the pre-soldered MOSFET board (perfboard, four TO-220 laid flat)",
+    "safety-contract card R3 with two signature lines, and a pen in the student's hand",
+    "safety goggles with an adjustable strap",
+    "teacher's hands at the edge of frame holding up one 1S LiPo and one 65 mm prop, at a distance, not handing them over"
+   ],
+   "callouts": [
+    {
+     "he": "מחזיקים כל רכיב ואומרים את שמו",
+     "anchor": "the student's hand holding one part over the tray"
+    },
+    {
+     "he": "מדחף וסוללה — המורה מראה ולא מוסר",
+     "anchor": "the teacher's raised hands holding the prop and the battery"
+    },
+    {
+     "he": "חותמים על חוזה הבטיחות",
+     "anchor": "the contract card R3 and the pen"
+    },
+    {
+     "he": "שוקלים בלי סוללה — בערך 75 גרם",
+     "anchor": "the kitchen scale display"
+    }
+   ],
+   "mustBeCorrect": [
+    "Nothing is assembled yet: the four motors lie loose in the tray, NOT pressed into the frame's arm rings",
+    "The battery and the props are never in the tray and never in the student's hands - only the teacher holds them, at a distance",
+    "The scale reading is the frame plus the tray's parts WITHOUT the battery, about 75 g",
+    "The frame is already two carbon plates screwed to standoffs with four rubber grommets sitting in the arm rings",
+    "The four motors are two colour pairs: red/blue leads (CW) and black/white leads (CCW), two of each",
+    "The brain is an ESP32 DevKit V1, 30-pin DOIT layout, not an Uno",
+    "The contract card carries two signatures - student and teacher"
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M2_press_fit_motors",
+   "titleHe": "מכניסים את ארבעת המנועים למסגרת",
+   "action": "The frame lies flat on the table with the painted FRONT arm pointing away from the student; the student pushes each 8520 motor shaft-up through a rubber grommet with steady thumb pressure until the motor's shoulder sits on the rubber, presses a rubber cap onto the bottom of each motor, lays both leads of every motor along its arm toward the center plate and tucks them under the plate edge, then spins each shaft with a fingertip.",
+   "objects": [
+    "the 100 mm carbon frame lying flat, FRONT arm marked with a paint stripe and pointing away from the viewer",
+    "the student's thumb pressing down on the top of an 8520 motor, mid-press, in the FRONT arm ring",
+    "the rubber grommet in the arm ring, with the motor's shoulder seating onto it",
+    "the other three 8520 motors: red/blue pair for FRONT and BACK, black/white pair for RIGHT and LEFT",
+    "four rubber motor caps (the landing feet) being pressed onto the motor bottoms",
+    "eight motor leads running along the arms to the center and tucked under the edge of the center plate",
+    "a fingertip flicking one motor shaft, with a small spin arc",
+    "an empty table surface - no glue bottle, no screwdriver, no hammer anywhere in frame"
+   ],
+   "callouts": [
+    {
+     "he": "לוחצים באגודל — בלי דבק ובלי כלים",
+     "anchor": "the thumb pressing the motor into the grommet"
+    },
+    {
+     "he": "אדום/כחול — FRONT ו-BACK",
+     "anchor": "the red/blue leads of the FRONT motor"
+    },
+    {
+     "he": "שחור/לבן — RIGHT ו-LEFT",
+     "anchor": "the black/white leads of the RIGHT motor"
+    },
+    {
+     "he": "שום חוט לא נשאר במעגל המדחף",
+     "anchor": "the leads tucked under the center plate edge"
+    }
+   ],
+   "mustBeCorrect": [
+    "FRONT and BACK get the red/blue CW motors; RIGHT and LEFT get the black/white CCW motors - opposite arms spin the same way (plus-style layout)",
+    "Every motor goes in shaft UP, pushed down through the grommet until the motor's shoulder rests on the rubber",
+    "Thumb pressure only: no glue, no screws, no hammer, no tool of any kind in the scene",
+    "The rubber caps go on the BOTTOM face of the motors and are the landing feet - the frame then stands level on them",
+    "Both leads of each motor run along the arm toward the center plate and tuck under its edge; nothing hangs into the circle the prop will sweep",
+    "Frame is the 100 mm square X frame with two 1.5 mm plates already screwed together; motors are 8.5 x 20 mm cans",
+    "No props and no battery anywhere in this scene - props go on only at the very last step"
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M3_meet_mosfet_board",
+   "titleHe": "מכירים את לוח ה-MOSFET ובודקים אותו",
+   "action": "One hand holds a spare IRLB8721 label-up with the legs pointing down while the student names Gate-Drain-Source and touches the metal tab; the other hand works the multimeter - both probes on the board's BAT+ and GND rails in continuity mode (must stay silent), then tab-to-tab, then in the 20k ohm range from each G pad to GND and from each M- pad to GND, writing the four gate readings on the card.",
+   "objects": [
+    "the pre-soldered MOSFET perfboard, about 4 x 5 cm, lying on the bench",
+    "the BAT+ rail along the top of the board and the GND rail along the bottom",
+    "four channels M1-M4, each with a plus pad and a minus pad, and four gate pads G1-G4 along the bottom edge",
+    "four IRLB8721 TO-220 laid flat, tabs heat-shrunk, clearly not touching each other",
+    "four 1N5819 Schottky diodes, band facing the BAT+ rail",
+    "four 100 ohm gate resistors and four 10k pull-down resistors",
+    "the 220uF electrolytic across the two rails, its minus stripe visible",
+    "the PH2.0 pigtail soldered to BAT+/GND, lying loose and unplugged",
+    "a multimeter, dial on continuity, its two probes touching the BAT+ rail and the GND rail",
+    "a spare loose IRLB8721 held label-up, legs down, a fingertip on the metal tab",
+    "the card and a pen for writing the four G readings"
+   ],
+   "callouts": [
+    {
+     "he": "הלשונית היא ה-Drain",
+     "anchor": "the fingertip on the metal tab of the held IRLB8721"
+    },
+    {
+     "he": "BAT+ מול GND — אין צפצוף",
+     "anchor": "the two probes on the two rails"
+    },
+    {
+     "he": "פד G מול GND — בערך 10kΩ",
+     "anchor": "a gate pad G1 and the multimeter display"
+    },
+    {
+     "he": "טבעת הדיודה פונה אל BAT+",
+     "anchor": "the band end of one flyback diode"
+    }
+   ],
+   "mustBeCorrect": [
+    "The board is connected to NOTHING: no battery, no motor, no ESP32 in the scene - the pigtail lies unplugged",
+    "IRLB8721 held with the printed label facing the viewer and the legs down: Gate, Drain, Source from left to right; the metal tab is the Drain",
+    "The four TO-220 tabs never touch each other and never touch the BAT+ or GND rail",
+    "Each flyback diode's band (cathode) points at the BAT+ rail, the anode at the Drain / M- side",
+    "The 220uF electrolytic's stripe is the minus side and sits on the GND rail",
+    "Continuity between BAT+ and GND must show NO beep; each G pad to GND reads about 10k on the 20k range; each M- pad to GND reads OL",
+    "The probes touch bare copper, not a coated or tinned surface",
+    "This is a low-side board: the motor sits between BAT+ and the Drain pad, so the M- pad is the Drain side"
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M13_tethered_hover",
+   "titleHe": "ממריאים — הריחוף הראשון על החוט",
+   "action": "Standing behind the spectator line, the student holds the phone in both hands and pushes the on-screen throttle slider up slowly with one thumb until the drone's four rubber feet leave the floor, holds it there at 10-30 cm while the fishing line stays slack, then slides back to 0 and taps DISARM.",
+   "objects": [
+    "The quadcopter airborne 10-30 cm above the floor, all four 65 mm props fitted and spinning (blurred discs), the four rubber feet clear of the ground",
+    "Slack nylon fishing line running from the 10 mm cord loop under the bottom plate, sagging down to the floor and along it to the anchor",
+    "A flat anchor (2.5 kg barbell plate lying flat, under 10 cm tall) sitting on the taped X at the centre of the flight circle",
+    "The taped lift-off mark on the floor about 40 cm from the anchor X, now empty",
+    "Floor tape: the 3 m flight circle and the straight spectator line the two people stand behind",
+    "The pilot's hands holding the phone upright, thumb pushing the slider up, browser page at 192.168.4.1 showing ARMED and the motor-time counter",
+    "The teacher standing beside the student at the line, a second phone in hand showing the page with only DISARM reachable",
+    "Safety goggles on both faces, hair tied back, sleeves pushed up",
+    "The 1S LiPo strapped in the frame's battery bay, PH2.0 plug exiting at the frame's side between two arms, no USB cable anywhere"
+   ],
+   "callouts": [
+    {
+     "he": "מעלים את המחוון לאט",
+     "anchor": "the pilot's thumb on the on-screen slider"
+    },
+    {
+     "he": "מחזיקים בגובה 10–30 ס\"מ",
+     "anchor": "the air gap between the drone's rubber feet and the floor"
+    },
+    {
+     "he": "החוט נשאר רפוי",
+     "anchor": "the sagging fishing line lying on the floor between drone and anchor"
+    },
+    {
+     "he": "טלפון המורה — DISARM בלבד",
+     "anchor": "the second phone in the teacher's hand"
+    }
+   ],
+   "mustBeCorrect": [
+    "This is the ONLY stage with propellers fitted — all four 65 mm props are on, one per motor: CW on FRONT and BACK, CCW on RIGHT and LEFT. No prop guards exist in this kit, so do not draw any.",
+    "The drone hovers at 10-30 cm and the tether is SLACK — a taut line would be wrong and dangerous; the line lies along the floor, not stretched.",
+    "The tether is nylon fishing line girth-hitched to the 10 mm braided-cord loop hanging under the centre of the bottom plate, and bowlined to a FLAT anchor on the taped X. Never an upright bottle, never furniture, never a loop around an arm or a motor.",
+    "The drone lifted off from a taped mark about 40 cm from the anchor X, so it hovers beside the anchor and never above it.",
+    "Nobody is inside the flight circle while the drone is armed: both the student and the teacher stand outside the tape, behind the spectator line, hands nowhere near the drone.",
+    "Both people wear safety goggles; hair tied back and sleeves pushed up.",
+    "The FRONT arm (the one with the paint-pen arrow, matching the MPU6050's arrow) points away from the spectator line.",
+    "The pilot's phone is the only one with a raised slider; the teacher's phone must not show a raised slider or a pressed ARM.",
+    "No USB cable is connected to the DevKit. Power is the 1S LiPo in the bay, PH2.0 plug at the frame's side.",
+    "The frame is the 100 mm-wheelbase carbon quad: two thin plates, four 8520 coreless motors press-fit through rubber grommets in the arm rings, ESP32 DevKit + MPU6050 + MOSFET perfboard + MT3608 stacked between the plates."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M14_post_flight_celebrate",
+   "titleHe": "סוגרים בסדר הנכון — וחוגגים",
+   "action": "With the phone already face-down out of their hands and the battery already unplugged, the student pulls the four propellers straight up off the motor shafts into the teacher's box, then touches the back of one finger to each motor, to the MOSFET board and to the MT3608 to feel how warm they are, and hands the battery to the teacher.",
+   "objects": [
+    "The drone on the bench, battery bay empty, one propeller pinched between thumb and forefinger being lifted straight up off a motor shaft",
+    "The teacher's open prop box on the bench with props already lying in it",
+    "The disconnected 1S LiPo lying beside the drone with its PH2.0 plug visibly free of the frame's pigtail",
+    "The pilot's phone lying screen-down on the bench (or floor) beside the drone",
+    "The back of a finger touching one of the four 8520 motors, with the MOSFET perfboard and the MT3608 module visible on the frame as the other two heat-check points",
+    "The zipped fireproof STORAGE bag at the teacher's side, open, with a multimeter and probes on the battery terminals beside it",
+    "The fishing-line tether unhitched from the frame's cord loop, lying loose on the bench",
+    "The paper flight-log card with a pen on it",
+    "Safety goggles still on both faces"
+   ],
+   "callouts": [
+    {
+     "he": "מורידים את ארבעת המדחפים",
+     "anchor": "the fingers lifting a prop off the motor shaft"
+    },
+    {
+     "he": "הטלפון יורד מהיד",
+     "anchor": "the phone lying screen-down on the bench"
+    },
+    {
+     "he": "בגב האצבע בודקים אם חם",
+     "anchor": "the back of the finger touching a motor"
+    },
+    {
+     "he": "הסוללה נכנסת לשקית חסינת האש",
+     "anchor": "the open zipped fireproof storage bag"
+    }
+   ],
+   "mustBeCorrect": [
+    "The shutdown order must be readable in the frame and must not be violated: DISARM, then the phone leaves the hand, then the battery comes out, then the props come off. So the phone is already face-down and the PH2.0 plug is already unplugged BEFORE any hand touches a prop.",
+    "No hand may be near a prop while the battery is connected — draw the plug clearly separated from the frame's pigtail, or the battery already in the teacher's hand.",
+    "All four props come off; do not leave one still fitted on a motor. They are 65 mm props with a 1.0 mm bore, pulled straight up off the shaft, and they go into the teacher's box, not onto the bench.",
+    "The heat check uses the BACK of the finger, not the pad, and touches exactly three things: the four motors, the MOSFET perfboard, the MT3608 module.",
+    "Goggles stay on until the battery is out and all four props are in the teacher's box — so goggles are still worn in this frame.",
+    "The battery goes to the teacher, gets measured with the multimeter, and only then enters the zipped fireproof STORAGE bag. Do not draw a charger or a charging bag in this frame.",
+    "The tether is unhitched from the frame's cord loop under the bottom plate — not cut, not left tied.",
+    "No USB cable, no prop guards, and no spinning motors in this frame; the drone is inert on the bench."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M10_spin_no_props",
+   "titleHe": "מסובבים את המנועים — בלי מדחפים",
+   "action": "The student sweeps a finger across all four bare motor shafts to prove no prop is fitted, unplugs the USB cable, plugs in the battery the teacher just handed over, and then — drone lying flat on the table, other hand off it — taps FRONT on the phone page so that one motor and only that motor spins for two seconds.",
+   "objects": [
+    "the quadcopter lying flat on the table: 100 mm carbon frame, two plates, four 8520 coreless motors pressed through the rubber grommets, all four shafts BARE",
+    "the phone held in one hand, showing the motor-test page at 192.168.4.1: green ARMED bar, slider at 0 on the left, four buttons FRONT / RIGHT / BACK / LEFT, the thumb pressing FRONT",
+    "the front motor's bare shaft spinning (short motion arcs) while the other three shafts are perfectly still",
+    "the 1S LiPo battery with its PH2.0 plug connected, sitting in its bay under the frame",
+    "ESP32 DevKit V1 (30-pin) on the top plate, red power LED lit, blue LED on steady",
+    "the small MOSFET perfboard: four TO-220 IRLB8721 standing in a row, one bulk electrolytic capacitor",
+    "the USB cable unplugged, lying coiled to one side of the table",
+    "safety glasses on the student, sleeves rolled, hair tied",
+    "the two closed prop boxes far away on the teacher's desk in the background"
+   ],
+   "callouts": [
+    {
+     "he": "אין מדחף על אף מנוע",
+     "anchor": "the four bare motor shafts, with the finger sweeping across them"
+    },
+    {
+     "he": "כבל ה-USB מנותק",
+     "anchor": "the coiled USB cable lying aside on the table"
+    },
+    {
+     "he": "המחוון על 0 לפני ARM",
+     "anchor": "the slider at the far left of the phone page"
+    },
+    {
+     "he": "לוחצים FRONT — רק הקדמי מסתובב",
+     "anchor": "the thumb on the FRONT button, with an arrow to the single spinning front motor"
+    }
+   ],
+   "mustBeCorrect": [
+    "Not a single propeller anywhere on the drone or on the work table — the shafts are bare. This is the whole point of the card.",
+    "Exactly one motor is spinning (the front one). The other three shafts show no motion whatsoever.",
+    "The USB cable is disconnected while the battery is connected — the two are never on the drone together.",
+    "The battery is a 1S LiPo (3.7 V) with a two-wire PH2.0 plug; it feeds the MOSFET board / power rail, never the ESP32 3V3 pin.",
+    "Motors are 8520 coreless cans (8.5 x 20 mm) press-fit through the rubber grommets in the arm rings, not screwed to the arms.",
+    "The MOSFETs are low-side switches on a small perfboard: four TO-220 packages, one bulk electrolytic across the battery rail.",
+    "Phone page state must be consistent: bar green and reading ARMED, slider at 0 — the motor buttons only work when armed AND the slider is at 0.",
+    "The drone stays flat on the table; the free hand is off the drone, at the side. Nobody is holding the airframe.",
+    "Safety glasses are worn — from this step on a motor can spin."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M11_thrust_test",
+   "titleHe": "מדחפים ומדידת הדחף על המאזניים",
+   "action": "The student presses each of the four 65 mm props straight down onto its 1.0 mm shaft and tugs it to check it holds, and then stands back with the phone behind the tape line while the drone — mounted UPSIDE DOWN on the post on the kitchen scale — blows air down onto the pan and the scale climbs past the drone's own weight.",
+   "objects": [
+    "kitchen scale on the table, display showing a positive gram reading, tared to 0 with the rig already on it",
+    "a heavy post (300 g or more, top no wider than ~45 mm) standing on the scale pan",
+    "the drone mounted UPSIDE DOWN on top of the post: props facing down at the pan, exhaust up to the ceiling",
+    "two rubber bands crossing only the two centre plates of the frame — clear of the arms and of the motors",
+    "four 65 mm props, spinning, at least 65 mm above the scale pan (draw the gap)",
+    "a slack 30 cm backup line from the base of the post to the frame's tie loop, visibly loose and curved",
+    "the 1S LiPo sitting in its O-rings in the bay, staying put even though the drone is inverted; the teacher's hand at the PH2.0 plug",
+    "a strip of tape across the table with all student hands and the phone behind it, at least 50 cm from the props",
+    "the phone showing the page with the slider pushed to 100%",
+    "the two prop boxes on the table, one marked CW and one marked CCW, still holding no props",
+    "the task card and a pencil where the gram readings are being written",
+    "safety glasses on everyone in frame, including the teacher"
+   ],
+   "callouts": [
+    {
+     "he": "מדחפים כלפי צלחת המאזניים",
+     "anchor": "the downward-facing props and the airflow arrows hitting the pan"
+    },
+    {
+     "he": "שתי גומיות על הצלחות המרכזיות",
+     "anchor": "the two rubber bands over the centre plates"
+    },
+    {
+     "he": "מאפסים את המאזניים ל-0",
+     "anchor": "the scale display / tare button"
+    },
+    {
+     "he": "הידיים מאחורי קו הסרט",
+     "anchor": "the tape line on the table with the hands behind it"
+    }
+   ],
+   "mustBeCorrect": [
+    "The drone is INVERTED: props point down at the scale pan, the exhaust column goes up to the ceiling. A drone drawn upright teaches the wrong measurement.",
+    "The rubber bands cross the two centre plates only — never over the arms and never over the motors.",
+    "The prop plane is at least 65 mm (one prop diameter) above the pan, and the post top is no wider than about 45 mm.",
+    "The backup line is 30 cm and clearly SLACK — a taut line would make the scale lie.",
+    "CW props go on the front and back motors, CCW props on the right and left motors; props press straight down onto the 1.0 mm shaft.",
+    "The battery stays seated in its O-rings while inverted, and only the teacher touches the plug.",
+    "No USB cable anywhere in the frame — props are on.",
+    "Every hand is behind the tape line, at least 50 cm from the props, from the moment the battery goes in until it comes out.",
+    "The scale reads a positive number that grows with the slider; it is measuring thrust pushing the drone onto the post.",
+    "Safety glasses on everyone in the room, hair tied, sleeves rolled; the soldering iron is off, unplugged and cold on its stand."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M12_upload_flight",
+   "titleHe": "מעלים את קוד התעופה ובודקים את החיישן",
+   "action": "After uploading 01_flight.ino over USB and unplugging the cable, the student arms the drone at about 30% and pushes one arm tip up 2-3 cm with a PENCIL — never a finger — while the other hand holds the phone and watches that motor's number fall and the opposite motor's number rise.",
+   "objects": [
+    "the drone flat on the table, four BARE motor shafts spinning, one arm tip lifted 2-3 cm off the table",
+    "a pencil in the student's hand, tip under the raised arm tip, the hand well clear of the spinning shafts",
+    "the phone in the other hand showing the flight page: green ARMED bar, slider at about 30%, ROLL and PITCH in degrees, a rotation-rate number, and the four motor numbers FRONT / RIGHT / BACK / LEFT with the pushed motor's number down and the opposite one up",
+    "the MPU6050 (GY-521) on its foam pad on the top plate, four wires running to the DevKit",
+    "ESP32 DevKit V1 (30-pin) with the blue LED on, red power LED lit",
+    "the 1S LiPo with its PH2.0 plug connected, in the bay",
+    "the MOSFET perfboard with its four TO-220 devices",
+    "the laptop in the background, Arduino IDE Serial Monitor open at 115200 showing the calibration lines and the DRONE-xx network name",
+    "the USB cable unplugged from the ESP32 and coiled next to the laptop",
+    "safety glasses on the student, the teacher standing beside the table"
+   ],
+   "callouts": [
+    {
+     "he": "אין מדחף על אף מנוע",
+     "anchor": "the four bare spinning shafts"
+    },
+    {
+     "he": "דוחפים בעיפרון ולא באצבע",
+     "anchor": "the pencil under the raised arm tip"
+    },
+    {
+     "he": "המחוון על 30% והרחפן חמוש",
+     "anchor": "the slider and the green armed bar on the phone"
+    },
+    {
+     "he": "המספר של המנוע הנדחף יורד",
+     "anchor": "the motor number on the phone that belongs to the lifted arm"
+    }
+   ],
+   "mustBeCorrect": [
+    "No props on any motor — the shafts are bare, and they ARE spinning in this scene.",
+    "The lift is done with a pencil, not a finger, and only one arm tip rises 2-3 cm; the rest of the drone stays on the table.",
+    "The USB cable is unplugged and lying aside while the battery is connected — never both at once.",
+    "The blue LED state must match an armed drone (steady on); the fast 2-second blink belongs to the earlier calibration moment, and a short blink once per second means ready-but-disarmed.",
+    "MPU6050 wiring: VCC to the DevKit 3V3 (never 5 V), GND, SDA to 21, SCL to 22 — four wires, sensor flat on its foam pad.",
+    "The pushed-up motor's number goes DOWN and the opposite motor's number goes UP; the numbers are live, not greyed out, because the page is armed.",
+    "Battery is the 1S LiPo with PH2.0 plug; motors run straight off it through the low-side MOSFETs.",
+    "If the drone is shown being tilted by hand anywhere in the frame, it is held only by the two centre plates, fingers under the bottom plate and never over an arm.",
+    "Safety glasses on, teacher standing beside — this is the second and last time the drone is armed on the work table."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T2_M7_pre_power_check",
+   "titleHe": "מוכיחים שהרחפן בטוח ומדליקים",
+   "action": "The student, in safety glasses, holds the two multimeter probes onto the powered-up drone's ESP32 VIN and GND pins to read about 5.0 V, right after the teacher's hand plugged the 1S LiPo's PH2.0 connector in — the drone lying flat, propless, USB cable unplugged and pushed aside; the earlier probe sweep of the bare carbon plate (one probe on a screw head, the other walking the pad list for OL) is the second beat of the same scene.",
+   "objects": [
+    "the propless quadcopter lying flat on the bench: 100 mm carbon frame, two 1.5 mm plates, four 8520 motors press-fit in the rubber grommets",
+    "multimeter with two probes, dial on DC V, display reading about 5.0 V",
+    "ESP32 DevKit V1 on the top plate with its red power LED lit, probes touching the VIN and GND pins",
+    "teacher's hand holding the 1S LiPo 1000 mAh with the PH2.0 plug just seated",
+    "MOSFET perfboard with the four IRLB8721 TO-220 devices, the bulk electrolytic and the BAT+/GND measuring point",
+    "MT3608 boost module with a silver 5.0 V ✓ mark on it, OUT wires running to VIN/GND",
+    "MPU6050 (GY-521) fed from the DevKit 3V3, its VCC/GND pads as the third measuring point",
+    "USB cable clearly unplugged, coiled off to the side of the bench",
+    "safety glasses on the student and on the teacher",
+    "fire-safe LiPo bag open on the teacher's table, closed prop boxes beside it"
+   ],
+   "callouts": [
+    {
+     "he": "אין מדחפים וכבל USB לא מחובר",
+     "anchor": "the four bare motor shafts and the unplugged USB cable at the edge of the bench"
+    },
+    {
+     "he": "המורה מחבר את הסוללה",
+     "anchor": "the teacher's hand on the PH2.0 plug"
+    },
+    {
+     "he": "מודדים VIN ↔ GND: 4.9–5.1V",
+     "anchor": "the two probes on the ESP32 VIN and GND pins, with the meter display"
+    },
+    {
+     "he": "סורקים את לוח הפחמן: OL בכל נקודה",
+     "anchor": "the probe resting on a screw head / drilled-hole edge of the carbon plate"
+    }
+   ],
+   "mustBeCorrect": [
+    "No propellers anywhere on the drone — all four 8520 shafts bare.",
+    "The USB cable is disconnected while the battery is connected; the two are never both in.",
+    "The DC-V probes sit on VIN and GND of the ESP32 DevKit, never on 3V3 — the MT3608 OUT (5.0 V) feeds VIN only.",
+    "The MPU6050 is powered from the DevKit 3V3, not from the booster.",
+    "The battery is a 1S LiPo 3.7 V with a PH2.0 connector, and only the teacher's hand touches it.",
+    "The carbon-plate sweep probe touches a screw head or the edge of a drilled hole, never the glossy plate face; every listed pad reads OL.",
+    "The MOSFET board carries four TO-220 packages as low-side switches, with motor wires going to BAT+ and to the drains.",
+    "Everyone in frame wears safety glasses; no motor is turning.",
+    "The drone lies flat on the bench — it is never held in a hand while the battery is in."
+   ],
+   "worthDrawing": true,
+   "reuseOf": "P8_T1_M8_pre_power_check"
+  },
+  {
+   "id": "P8_T2_M8_upload_and_spin",
+   "titleHe": "מעלים את קוד הבדיקה ומסובבים את המנועים",
+   "action": "With the USB cable now unplugged and the teacher's battery connected, the student holds the phone showing the ARMED page at 192.168.4.1 and taps FRONT with one thumb while both hands stay off the drone — the front motor alone spins for two seconds and the other three stay still.",
+   "objects": [
+    "the propless quadcopter flat on the bench, front arm pointing away from the student, only the front 8520 motor showing a motion blur arc",
+    "the phone in the student's hand: green חמוש · ARMED bar, slider at 0%, and the FRONT/LEFT/RIGHT/BACK buttons laid out as a cross, FRONT lit",
+    "1S LiPo plugged into the drone via its PH2.0 connector, sitting in the centre bay",
+    "ESP32 DevKit V1 with the red power LED and the steady blue LED",
+    "USB cable unplugged and lying beside the laptop, well away from the drone",
+    "laptop in the background with the serial monitor open at 115200 showing the DRONE-01 header",
+    "MOSFET perfboard with its four TO-220 devices and the wires to the four motors",
+    "safety glasses on the student and the teacher, the teacher standing beside watching the motors",
+    "the two closed prop boxes on the teacher's table, lids on"
+   ],
+   "callouts": [
+    {
+     "he": "אין מדחף על אף מנוע",
+     "anchor": "the four bare motor shafts"
+    },
+    {
+     "he": "מנתקים את כבל ה-USB",
+     "anchor": "the unplugged USB cable lying beside the laptop"
+    },
+    {
+     "he": "המחוון על 0 ולוחצים ARM",
+     "anchor": "the slider and the ARM button on the phone screen"
+    },
+    {
+     "he": "לוחצים FRONT: רק הקדמי מסתובב",
+     "anchor": "the thumb on the FRONT button and the blurred front rotor"
+    }
+   ],
+   "mustBeCorrect": [
+    "No propellers on any motor — this whole card runs bare-shaft.",
+    "The USB cable is disconnected because the battery is in; both are never connected at once.",
+    "Exactly one motor is turning — the FRONT one (GPIO 25, the front arm) — while RIGHT, BACK and LEFT are still.",
+    "The four buttons on the phone are arranged like the arms seen from above: FRONT top, BACK bottom, LEFT left, RIGHT right.",
+    "The slider reads 0% while ARM is pressed and while a single-motor test runs; the test is ~25% (64 of 255) for two seconds.",
+    "The status bar reads חמוש · ARMED in green and the DevKit's blue LED is steady, not blinking.",
+    "Hands stay off the drone; it lies flat on the bench and nobody is holding it down.",
+    "The battery is the teacher's 1S LiPo with a PH2.0 plug, connected while he watches the motors.",
+    "Safety glasses on everyone in the room."
+   ],
+   "worthDrawing": true,
+   "reuseOf": "P8_T1_M10_spin_no_props"
+  },
+  {
+   "id": "P8_T2_M9_thrust_test",
+   "titleHe": "מודדים דחף ומחליטים לפי מספרים",
+   "action": "Hands behind the tape line, the student holds the phone with the slider pushed up while the drone — mounted upside down on the weighted post, four 65 mm props spinning downward at the pan — drives the kitchen scale reading up in grams; the opening beat of the same card is the student pressing each 65 mm prop straight down onto a 1.0 mm shaft and tugging it to test the fit.",
+   "objects": [
+    "digital kitchen scale, tared to 0, showing a grams reading, the whole rig standing on its pan",
+    "the weighted post (heavy base, small top) carrying the drone upside down on its head",
+    "the drone inverted: props on the underside blowing down at the pan, motors and arms above, exhaust arrows going up to the ceiling",
+    "two rubber bands stretched across the two central plates only, clear of the arms and motors",
+    "four 65 mm props spinning with blur arcs — CW on front and back, CCW on right and left",
+    "the 1S LiPo held in its O-rings inside the centre bay, plainly not falling out although the drone is inverted",
+    "the 30 cm backup line from the post base to the tie loop, drawn visibly slack and curved",
+    "tape line across the bench with every hand behind it, at least 50 cm from the props",
+    "the phone in the student's hand with the throttle slider pushed high and the ARMED bar green",
+    "the two prop boxes marked CW and CCW, open, on the teacher's table; the teacher standing beside the rig",
+    "safety glasses on everyone; the soldering iron unplugged and cold on its stand at the back",
+    "the task card with the AUW / 60% / 80% / 100% / hover-point fields waiting to be filled"
+   ],
+   "callouts": [
+    {
+     "he": "הרחפן הפוך על ראש העמוד",
+     "anchor": "the inverted drone sitting on the post head"
+    },
+    {
+     "he": "שתי גומיות על הצלחות המרכזיות",
+     "anchor": "the two rubber bands over the central plates"
+    },
+    {
+     "he": "חוט גיבוי של 30 ס״מ — רפוי",
+     "anchor": "the slack line curving from the post base to the tie loop"
+    },
+    {
+     "he": "הידיים מאחורי קו הסרט",
+     "anchor": "the tape line on the bench with the student's hands behind it"
+    }
+   ],
+   "mustBeCorrect": [
+    "The drone sits UPSIDE DOWN on the post: props face the scale pan and the exhaust blows up to the ceiling — never right-way-up over the pan.",
+    "The rubber bands cross the two central plates only; nothing is strapped over an arm or over a motor.",
+    "The prop plane sits at least 65 mm above the pan; the post top is at most 45 mm and the post weighs at least 300 g.",
+    "The backup line is 30 cm and slack — a taut line falsifies the scale reading.",
+    "The scale is tared to 0 with the whole rig already standing on it.",
+    "CW props go on the front and back motors, CCW props on the right and left motors; each is pressed straight down onto the 1.0 mm shaft and tugged to check it holds.",
+    "Props are 65 mm and they go on only here, at the test station, while the battery is still out; they come off first, before the drone leaves the station.",
+    "Only the teacher connects and removes the 1S LiPo, because its plug sits under the props.",
+    "Every hand is behind the tape line, at least 50 cm from the props, from battery in to battery out.",
+    "Safety glasses on everyone in the room; the soldering iron is off, unplugged and cold.",
+    "The scale reading is positive and grows with the slider — a positive number means the motor lifts."
+   ],
+   "worthDrawing": true,
+   "reuseOf": "P8_T1_M11_thrust_test"
+  },
+  {
+   "id": "P8_T1_M4_mount_electronics",
+   "titleHe": "מרכיבים את האלקטרוניקה על המסגרת",
+   "action": "The student presses each board down onto its own full-footprint foam pad on the insulated carbon plates — the ESP32 centred with its USB connector aimed at the back arm, the MPU6050 flat in front of it with its X arrow aimed at the front motor, the MT3608 beside it — holding each one down for ten seconds, then runs a multimeter probe from a bare plate edge to every pad and pin in turn.",
+   "objects": [
+    "the assembled 100 mm FEICHAO carbon frame, two 1.5 mm plates on metal standoffs, seen from above at an angle",
+    "the four 8520 coreless motors already press-fit through the rubber grommets in the arm rings, leads running loose to the centre",
+    "ESP32 DevKit V1 (30-pin DOIT) centred on the top plate, USB connector toward the BACK arm, being pressed down by two fingers",
+    "MPU6050 (GY-521) on the top plate directly in front of the DevKit, chip side up, dead flat, silkscreen X arrow pointing at the FRONT motor",
+    "MT3608 boost module on the top plate beside the DevKit, trim-pot screw reachable from above, silver-marker mark 'OUT 5.0 V'",
+    "the layer stack shown in a cutaway or exploded slice under one board: carbon plate, then Kapton/plastic shim, then full-footprint foam double-sided tape, then the board",
+    "MOSFET perfboard mounted under the bottom plate, labelled side readable, M1 pad nearest the FRONT arm, four IRLB8721 TO-220s laid flat with heat-shrink over their metal tabs",
+    "the empty battery bay under the MOSFET board: a 2 mm foam pad, two rubber frame O-rings crossing the plate slots, cloth tape on the two plate edges, and no battery",
+    "the 10 mm tether loop of 1 mm braided cord through two adjacent holes on the bottom plate centreline, knotted on the top face, hanging ~10 mm clear below",
+    "multimeter set to Ω, black probe on a bare plate edge or screw hole, red probe on a pad, display reading OL",
+    "the student's hands, safety glasses on the bench"
+   ],
+   "callouts": [
+    {
+     "he": "החץ X מצביע על המנוע הקדמי",
+     "anchor": "the silkscreen X arrow on the MPU6050"
+    },
+    {
+     "he": "ה-USB פונה לזרוע האחורית",
+     "anchor": "the ESP32 DevKit's USB connector"
+    },
+    {
+     "he": "רפידה M1 קרובה לזרוע הקדמית",
+     "anchor": "the M1 pad on the MOSFET board under the bottom plate"
+    },
+    {
+     "he": "כל לוח יושב על בידוד משלו",
+     "anchor": "the cutaway layer stack: shim + full-footprint foam under a board"
+    }
+   ],
+   "mustBeCorrect": [
+    "Every board sits on a full-footprint insulating pad — a thin shim/Kapton sheet plus foam tape covering the board's whole footprint — never a centre dot. No metal touches carbon anywhere.",
+    "The ESP32 DevKit V1 is on the TOP plate, centred, USB connector toward the BACK arm; its header-pin tips sink into the 3 mm foam and never reach the plate.",
+    "The MPU6050 is on the TOP plate directly in front of the DevKit, chip side up, perfectly flat (no visible tilt), X arrow pointing at the FRONT motor.",
+    "The MT3608 is on the top plate beside the DevKit with its pot screw reachable from above; it is a single booster — there is no second one.",
+    "The MOSFET board is UNDER the bottom plate, labelled side readable, M1 pad nearest the FRONT arm, the four TO-220s laid flat with heat-shrink over the metal tabs (the tab is the Drain).",
+    "The battery bay is under the MOSFET board and completely EMPTY — no LiPo anywhere in frame. The cell would be held only by the two rubber O-rings: no zip tie and no tape on a cell.",
+    "A 2.5 mm zip tie through the plate slots may pass on top of the shim+foam layers, never in place of them.",
+    "No propellers anywhere — the four motors are bare shafts. No prop guards exist in this build.",
+    "No inter-board wires yet: only the four motor leads routed to the centre and the teacher-soldered PH2.0 pigtail exiting at the frame's side between two arms.",
+    "The tether loop hangs outside the battery bay and outside all four 65 mm prop circles.",
+    "Multimeter is on Ω with the black probe on a bare cut edge or screw hole — not on the glossy plate face — and the display reads OL.",
+    "Motors are press-fit through the rubber grommets: no glue, no screws, no tools on the motors."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M5_power_tree",
+   "titleHe": "מחווטים את עץ החשמל",
+   "action": "The student strips, tins and joins six power wires one at a time — two thick ones from the MOSFET board's second BAT+/GND pads to the MT3608 IN, two from the MT3608 OUT to the ESP32 VIN and the GND beside it, and two thin ones from the ESP32 3V3 and its neighbouring GND to the MPU6050 — then dresses each wire clear of the prop circles with a small zip tie or a dot of hot glue.",
+   "objects": [
+    "the drone from the previous step, all four boards already mounted, seen from a three-quarter angle so both the top plate and the MOSFET board under the bottom plate are readable",
+    "the six power wires, colour-coded: two thick red/black (22–24 AWG silicone) board → MT3608, two red/black 26 AWG MT3608 → DevKit, two thin red/black (28–30 AWG) DevKit → MPU6050",
+    "the MOSFET board's second BAT+ and GND pads, with the teacher-soldered PH2.0 pigtail already occupying the first pair",
+    "the MT3608 module with the big inductor on the IN side and silver-marker labels 'IN' and 'OUT 5.0 V ✓', nail polish on the pot",
+    "the ESP32 DevKit's right header showing VIN and the GND next to it, and the left header showing 3V3 and the GND next to it — female Dupont housings or soldered joints",
+    "the MPU6050's VCC and GND pins receiving the two thin wires",
+    "soldering iron in the student's hand, solder, wire strippers, flush cutters on the bench; safety glasses on the student",
+    "a small zip tie or hot-glue dot fixing a wire to the frame — never onto the MOSFET board",
+    "the empty battery bay and, at the edge of the frame, the closed fireproof LiPo bag on the teacher's desk"
+   ],
+   "callouts": [
+    {
+     "he": "הסוללה נשארת אצל המורה",
+     "anchor": "the empty battery bay / the closed fireproof bag on the teacher's desk"
+    },
+    {
+     "he": "אדום לפלוס ושחור למינוס",
+     "anchor": "the thick red/black pair entering the MT3608 IN+/IN−"
+    },
+    {
+     "he": "מ-OUT+ אל VIN של ה-ESP32",
+     "anchor": "the red 26 AWG wire from MT3608 OUT+ to the DevKit VIN pin"
+    },
+    {
+     "he": "3V3 — לא VIN ולא 5V",
+     "anchor": "the thin red wire at the ESP32 3V3 pin going to the MPU6050 VCC"
+    }
+   ],
+   "mustBeCorrect": [
+    "Exactly six power wires and nothing else — no gate wires (25/26/14/27) and no I2C wires (21/22) yet; those belong to a later milestone.",
+    "The MT3608 is fed from the MOSFET board's SECOND BAT+ and GND pads; the first pair is already taken by the teacher-soldered PH2.0 battery pigtail.",
+    "MT3608 IN+/IN− is the side next to the big inductor; OUT+/OUT− is the opposite side, marked in silver 'OUT 5.0 V ✓'.",
+    "MT3608 OUT+ → DevKit VIN, OUT− → the GND on the SAME right header next to VIN. The booster output never goes to 3V3.",
+    "MPU6050 VCC comes from the DevKit 3V3 and its GND from the OTHER GND pin, on the left header next to 3V3. The DevKit has exactly two GND pins, one per side.",
+    "Red is always plus and black always minus, on all six wires. Gauge steps down along the chain: thick to the booster, 26 AWG to the DevKit, thin to the sensor.",
+    "Motors stay on the raw battery through the MOSFET board — no wire runs from the MT3608 to the motor rail.",
+    "No battery is plugged in and nothing is lit or glowing; the battery bay is empty and the cell is in the teacher's fireproof bag.",
+    "No propellers on the motors.",
+    "Wires are routed clear of all four 65 mm prop circles and fixed with a small zip tie or a hot-glue dot on the frame — never on the MOSFET board.",
+    "Safety glasses are on while the soldering iron is hot, and the teacher is beside the student for the soldered joints."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M6_motor_wiring",
+   "titleHe": "כל מנוע לערוץ שלו",
+   "action": "The student trims each motor's two leads to about a centimetre of slack, strips 2 mm and tins them, solders each pair onto its own channel pads on the MOSFET board (front motor first: red to M1+, blue to M1−), slides heat-shrink over any exposed wire, then holds the multimeter probes on a channel's two pads to hear it beep.",
+   "objects": [
+    "the drone held or resting so the MOSFET board under the bottom plate faces the viewer, its marker labels readable: BAT+ rail, M1+ M1− … M4+ M4−, G1–G4, GND rail, the 220 µF capacitor and the four flat TO-220s with heat-shrunk tabs",
+    "the four 8520 motors still press-fit in their grommets, leads shortened and routed to the centre: FRONT red/blue (CW), RIGHT white/black (CCW), BACK red/blue (CW), LEFT white/black (CCW)",
+    "the front motor's red lead being soldered onto the M1+ pad, blue lead already on M1−",
+    "soldering iron and solder in the student's hands, flush cutters and wire strippers on the bench, a strip of heat-shrink sleeving",
+    "multimeter in continuity mode, probes on M1+ and M1−, display showing about 2 Ω with the beep symbol",
+    "the FRONT arm marked with a paint-pen arrow",
+    "safety glasses on the student, teacher's hand steadying the frame",
+    "the empty battery bay and bare motor shafts — no cell, no props"
+   ],
+   "callouts": [
+    {
+     "he": "החוט האדום אל M1+ והכחול אל M1−",
+     "anchor": "the front motor's two leads at the M1 pads"
+    },
+    {
+     "he": "אדום או לבן הם הפלוס",
+     "anchor": "the four motor lead pairs fanning in to the board"
+    },
+    {
+     "he": "צפצוף או 1–3 אוהם",
+     "anchor": "the multimeter display with probes on M1+ and M1−"
+    },
+    {
+     "he": "M1+ מול M2− — אין צפצוף",
+     "anchor": "a probe reaching across from the M1 pads to the M2− pad"
+    }
+   ],
+   "mustBeCorrect": [
+    "Channel map is fixed: FRONT → M1 (CW), RIGHT → M2 (CCW), BACK → M3 (CW), LEFT → M4 (CCW). Two CW motors carry red/blue leads and two CCW motors carry white/black.",
+    "Polarity per the motor colours: red or white is the plus lead (to M+), blue or black is the minus lead (to M−).",
+    "The motor's minus lead lands on the MOSFET Drain pad; the plus pad hangs off the BAT+ rail. No motor lead may be shown going to the GND rail.",
+    "Eight solder joints in total, two per motor, on four separate channels — no bridge or shared wire between channels.",
+    "Leads are shortened to ~1 cm of slack with 2 mm stripped and tinned; heat-shrink covers any exposed wire that could touch a neighbour.",
+    "The four TO-220 tabs stay covered in heat-shrink and never touch each other or the carbon plate — the tab is the Drain.",
+    "Multimeter is in continuity (beep) mode: M1+ to M1− beeps at 1–3 Ω (the motor winding); M1+ to M2− is silent.",
+    "No battery is plugged in and no propellers are fitted — nothing can spin. This is the Safe state.",
+    "Motors stay press-fit in the rubber grommets; they are not pulled out, glued or screwed.",
+    "The MOSFET board is under the bottom plate with M1 nearest the FRONT arm and its labelled side readable.",
+    "Safety glasses are on whenever the iron is hot, and the teacher is beside the student for every joint."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M7_signal_wiring",
+   "titleHe": "חוטי האות — ארבעה שערים וחיישן",
+   "action": "With the battery still in the teacher's fireproof bag and the USB unplugged, the student cuts six thin ~8 cm signal wires in six colours, pushes female Dupont housings onto the DevKit's right-header pins 25/26/14/27 and solders their far ends to pads G1–G4 on the MOSFET board under the bottom plate, runs two more (white 21→SDA, grey 22→SCL) to the MPU6050, tucks all four gate wires under the plate away from the fat motor wires, then puts the multimeter on Ω and probes each of the four gate pins against GND expecting about 10 kΩ, ticking off the 22 connections on the printed card.",
+   "objects": [
+    "fully wired 100 mm carbon quadcopter lying flat on the bench — two 1.5 mm plates, four 8520 motors press-fit through the rubber grommets, NO propellers",
+    "ESP32 DevKit V1 on the top plate, USB connector facing the BACK arm, its right header (VIN·GND·13·12·14·27·26·25) exposed",
+    "MOSFET perfboard under the bottom plate, four IRLB8721 TO-220s laid flat with heat-shrunk tabs, pads labelled G1–G4 and M1–M4",
+    "six thin signal wires: yellow, orange, green, blue for the gates, white and grey for the sensor — visibly thinner than the red/black power and motor wires",
+    "MPU6050 (GY-521) on the top plate directly in front of the DevKit, flat, its X arrow pointing at the FRONT motor",
+    "female Dupont single-way housings being pushed onto the header pins by the student's fingers",
+    "multimeter set to Ω, black probe on a GND pin, red probe on GPIO 25",
+    "MT3608 boost module beside the DevKit with its silver 5.0 V mark, PH2.0 pigtail hanging free and empty",
+    "fireproof LiPo bag closed on the teacher's table in the background, USB cable coiled and unplugged",
+    "the printed task card with the 22-connection tick list and a pencil"
+   ],
+   "callouts": [
+    {
+     "he": "מחווטים רק במצב הבטוח",
+     "anchor": "the empty PH2.0 pigtail and the unplugged USB cable"
+    },
+    {
+     "he": "הסוללה מחכה בשקית חסינת האש",
+     "anchor": "the closed fireproof bag on the teacher's table"
+    },
+    {
+     "he": "מעבירים את חוטי השערים מתחת ללוחית",
+     "anchor": "the four coloured gate wires running under the bottom plate, clear of the motor wires"
+    },
+    {
+     "he": "בערך 10kΩ מכל פין שער מול GND",
+     "anchor": "the multimeter display with the probes on GPIO 25 and GND"
+    }
+   ],
+   "mustBeCorrect": [
+    "No propellers anywhere in frame — props stay in the teacher's boxes until step 11",
+    "No battery on the drone and no USB cable connected: the PH2.0 pigtail hangs loose and empty",
+    "Gate wire colours and destinations: yellow 25→G1 front, orange 26→G2 right, green 14→G3 back, blue 27→G4 left",
+    "Sensor wires: white 21→SDA, grey 22→SCL on the MPU6050",
+    "The four gate pins sit consecutively on the DevKit's RIGHT header; counting from VIN the order is VIN·GND·13·12·14·27·26·25",
+    "Signal wires are thin (28–30 AWG) and must read as clearly thinner than the red/black battery and motor wires",
+    "MOSFET board is UNDER the bottom plate with the four TO-220 tabs heat-shrunk; the DevKit, MPU6050 and MT3608 are on the TOP plate",
+    "DevKit's USB connector faces the BACK arm so the cable never crosses the FRONT",
+    "MPU6050 sits flat on full-footprint foam tape with its X arrow toward the FRONT motor",
+    "Multimeter dial is on Ω, not on continuity and not on DC V",
+    "Motors are press-fit through the rubber grommets — no glue and no screws on the motors"
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M8_pre_power_check",
+   "titleHe": "בדיקת מולטימטר וההדלקה הראשונה",
+   "action": "In safety glasses, the student first sweeps the drone with the multimeter on Ω — one probe parked on a frame screw head or a drilled-hole edge of the carbon plate, the other touching BAT+, GND, VIN, 3V3, M1−…M4− and G1…G4 one at a time looking for OL at every point — and then, with the drone flat and the USB unplugged, watches the motors and the ESP32's red LED while the teacher pushes the single 1S LiPo's PH2.0 plug in, before measuring VIN↔GND and VCC↔GND on DC V and back-of-finger testing the MT3608, the ESP32 regulator and all four MOSFETs.",
+   "objects": [
+    "the fully wired quadcopter lying flat on the bench, no propellers, four motors still",
+    "multimeter with red and black probes — dial on Ω (2M/auto) in the sweep half, on DC V in the power half",
+    "one probe resting on a frame screw head or the edge of a drilled hole in the carbon plate, never on the glossy face",
+    "teacher's hand holding the 1S LiPo 3.7 V 1000 mAh and pushing its PH2.0 plug into the drone's pigtail",
+    "the ESP32 DevKit's small red power LED lit",
+    "MOSFET board under the bottom plate with its four TO-220s, the MT3608 with its silver 5.0 V mark, the MPU6050 on the top plate",
+    "safety glasses on the student and on the teacher; hair tied back, sleeves rolled up",
+    "the open fireproof LiPo bag with the rest of the cells on the teacher's table, one cell out",
+    "the USB cable lying disconnected on the bench",
+    "the printed card's three-reading table with a pencil filling in 5.0 V and 3.3 V",
+    "a back-of-finger touching the MT3608 module"
+   ],
+   "callouts": [
+    {
+     "he": "חלק א׳ — סורקים בלי סוללה",
+     "anchor": "the two multimeter probes on the bare carbon plate, battery still in the bag"
+    },
+    {
+     "he": "בכל נקודה המכשיר מראה OL",
+     "anchor": "the multimeter display during the plate sweep"
+    },
+    {
+     "he": "חלק ב׳ — החשמל הראשון, עם המורה",
+     "anchor": "the teacher's hand pushing the PH2.0 plug home"
+    },
+    {
+     "he": "הנורית נדלקת ואף מנוע לא זז",
+     "anchor": "the red LED on the ESP32 and the four motionless motors"
+    }
+   ],
+   "mustBeCorrect": [
+    "No propellers on the drone — they stay in the teacher's boxes; props go on last and come off first",
+    "USB cable is disconnected the whole time the battery is in: battery in = USB out",
+    "Safety glasses on every person in frame, the teacher included; hair tied, sleeves rolled",
+    "Only the teacher handles the battery, and exactly one cell is out of the fireproof bag",
+    "Plate sweep uses Ω (2M or auto); the roving probe touches BAT+, GND, VIN, 3V3, M1−…M4−, G1…G4 and every one must read OL",
+    "The parked probe sits on a screw head or a drilled-hole edge of the carbon plate, not on the shiny face",
+    "The no-beep continuity check is between the board's red and black battery wires and between tab and tab of each MOSFET pair",
+    "Expected DC V readings: VIN↔GND 4.9–5.1 V, VCC↔GND 3.2–3.4 V, BAT+↔GND = battery voltage; the battery plug itself reads 3.7–4.2 V with red as plus",
+    "The MT3608 carries a silver 5.0 V ✓ mark and feeds the DevKit's VIN, never 3V3",
+    "Finger test is the BACK of the finger on the MT3608, the ESP32 regulator and each of the four MOSFETs — cold or lukewarm, never hot",
+    "The drone lies flat on the bench; a sub-tenth-of-a-second twitch of the BACK motor at connection is normal"
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T1_M9_upload_motor_test",
+   "titleHe": "מעלים את קוד בדיקת המנועים",
+   "action": "The student confirms the battery is off the drone, plugs the USB cable into the DevKit's micro-USB, sets Board / Port / Upload Speed in the Arduino IDE, installs the Adafruit MPU6050 library, opens 00_motor_test.ino, clicks Upload — holding the DevKit's BOOT button if it hangs on Connecting… — then opens the Serial Monitor at 115200 and pencils the drone's DRONE-0x network name onto the printed card.",
+   "objects": [
+    "open laptop with the Arduino IDE — Tools menu showing DOIT ESP32 DEVKIT V1, a COM port and Upload Speed 115200",
+    "USB cable running from the laptop into the DevKit's micro-USB connector, which faces the BACK arm",
+    "the quadcopter lying flat on the bench beside the laptop: no propellers, no battery, PH2.0 pigtail hanging empty",
+    "the DevKit's BOOT button, with a fingertip on it",
+    "Serial Monitor window showing the sketch banner: PROJECT 8 - MOTOR TEST (props OFF!), Motor pins FRONT 25 RIGHT 26 BACK 14 LEFT 27, Network: DRONE-01, Page: http://192.168.4.1, Ready - DISARMED",
+    "the drone's name sticker on the top plate reading DRONE-01",
+    "printed task card with the 'שם הרשת של הרחפן' line and a pencil writing DRONE-01",
+    "closed fireproof LiPo bag on the teacher's desk in the background",
+    "MOSFET board under the bottom plate with the four TO-220s, MT3608 and MPU6050 in place"
+   ],
+   "callouts": [
+    {
+     "he": "USB בפנים = סוללה בחוץ",
+     "anchor": "the USB cable in the DevKit next to the empty PH2.0 pigtail"
+    },
+    {
+     "he": "בוחרים מהירות 115200",
+     "anchor": "the Serial Monitor baud dropdown"
+    },
+    {
+     "he": "מחזיקים את כפתור ה-BOOT",
+     "anchor": "the fingertip on the DevKit's BOOT button"
+    },
+    {
+     "he": "רושמים את שם הרשת על הכרטיסייה",
+     "anchor": "the pencil writing DRONE-01 on the printed card"
+    }
+   ],
+   "mustBeCorrect": [
+    "Battery is NOT on the drone — the PH2.0 pigtail hangs empty and the cell is in the teacher's fireproof bag",
+    "No propellers on the drone; the sketch banner itself says props OFF",
+    "USB goes into the DevKit's micro-USB, which faces the BACK arm so the cable never crosses the FRONT",
+    "Board is DOIT ESP32 DEVKIT V1 (not ESP32 Dev Module), Upload Speed 115200, Serial Monitor 115200",
+    "Sketch file is 00_motor_test.ino, copied from the teacher's folder",
+    "BOOT is the DevKit's own button beside EN — pressed only while the IDE is stuck on Connecting…",
+    "Serial banner must show the motor pins as FRONT 25, RIGHT 26, BACK 14, LEFT 27 and the page as http://192.168.4.1",
+    "Network name on the Serial Monitor matches the sticker on the drone's top plate; the password is never written on the card",
+    "Motors are motionless throughout — with no battery nothing feeds BAT+ on the MOSFET board",
+    "No phone appears in this step; the phone control page comes later"
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T2_M10_choices_and_claude",
+   "titleHe": "ההחלטות שהופכות את קוד ההתחלה לרחפן שלכם",
+   "action": "At the bench, the student runs a finger across all four bare motor shafts to confirm no prop is fitted, then plugs the USB cable into the ESP32 DevKit and types the chosen values into the four marked CHANGE THIS blocks in the Arduino IDE before pressing Verify and Upload.",
+   "objects": [
+    "laptop open on the bench, Arduino IDE showing T2_flight_starter.ino with the four '==== CHANGE THIS ====' comment blocks highlighted (STATION / KP / KD / MAX_THROTTLE_PERCENT / colors) and a Serial Monitor pane at 115200",
+    "the quadcopter sitting upright on the bench on its rubber feet: 100 mm carbon frame, two 1.5 mm plates, four 8520 coreless motors pressed through the rubber grommets, ALL FOUR BARE",
+    "one hand sweeping a finger over the four bare motor shafts; the other hand holding the micro-USB plug",
+    "USB cable running from the laptop to the ESP32 DevKit V1 on the top plate",
+    "the small MOSFET perfboard on the frame with its four TO-220 IRLB8721 devices, the MT3608 boost module and the GY-521 MPU6050 lying flat",
+    "the teacher's closed propeller box off to the side, lid shut, four 65 mm props inside",
+    "the 1S LiPo in the zipped fireproof STORAGE bag on the teacher's desk, PH2.0 plug unconnected",
+    "the paper station card and a pen, where the new Wi-Fi password gets written"
+   ],
+   "callouts": [
+    {
+     "he": "עוברים באצבע על ארבעת המנועים",
+     "anchor": "the finger sweeping across the four bare motor shafts"
+    },
+    {
+     "he": "אין מדחף על אף מנוע",
+     "anchor": "the closed propeller box on the far side of the bench"
+    },
+    {
+     "he": "הסוללה מנותקת ונמצאת אצל המורה",
+     "anchor": "the zipped fireproof bag with the 1S LiPo inside"
+    },
+    {
+     "he": "משנים רק בתוך הבלוקים המסומנים",
+     "anchor": "the highlighted CHANGE THIS blocks on the laptop screen"
+    }
+   ],
+   "mustBeCorrect": [
+    "No propellers anywhere on the drone — all four 8520 motors are bare shafts. The 65 mm props stay in the teacher's closed box.",
+    "No battery on the frame and no PH2.0 plug connected. USB in = battery out; the LiPo is in the teacher's fireproof bag.",
+    "The USB cable goes into the ESP32 DevKit V1's own micro-USB port — never into the MT3608, never into the MOSFET board.",
+    "The MT3608 is drawn feeding the DevKit VIN, never 3V3; the MPU6050 is drawn on 3V3 with SDA=21, SCL=22. Even if only glimpsed, do not redraw these wrong.",
+    "Motor drive is four separate TO-220 low-side N-MOSFETs on a perfboard — not an H-bridge module, not an L298N.",
+    "The drone rests flat on the bench on its rubber feet. This is a bench scene: no flight circle, no tether, no anchor, no goggles-and-props staging.",
+    "Exactly four CHANGE THIS blocks on screen; the STATION line is visible but untouched.",
+    "The MPU6050 must be drawn lying flat and level on the plate — it is the level reference."
+   ],
+   "worthDrawing": true,
+   "reuseOf": "P8_T1_M12_upload_flight"
+  },
+  {
+   "id": "P8_T2_M11_tethered_hover_tuning",
+   "titleHe": "ריחוף ראשון על החוט ולולאת הכוונון",
+   "action": "Standing behind the spectator line with the phone in both hands, the pilot eases the on-screen throttle slider up with one thumb after pressing ARM, and the drone lifts 10-30 cm off the lift-off mark while the fishing line stays slack on the floor; nobody's hands go near the drone.",
+   "objects": [
+    "the quadcopter hovering 10-30 cm above the floor, all four 65 mm props spinning as blur discs, the 1S LiPo held in its O-rings on the bottom plate",
+    "the fishing line: girth-hitched to the 10 mm cord loop hanging below the bottom plate's centreline, running slack and lying on the floor to the flat anchor",
+    "the flat anchor (2.5 kg barbell plate lying flat, bowline through its centre hole) sitting on the taped X at the circle's centre",
+    "floor tape: the 3 m flight circle, the X at its centre, the lift-off mark ~40 cm from the X, and the spectator line",
+    "the pilot behind the line, goggles on, hair tied back, sleeves up, thumb on the vertical throttle slider of the phone page (ARM button in the pilot's chosen colour, red DISARM below it, motor-time counter and 'רשת: DRONE-01' beside the ARMED banner)",
+    "the teacher standing beside the pilot, goggles on, holding the second phone — DISARM only",
+    "a small inset strip at the bench outside the circle: laptop showing the KP and KD lines, one number being changed by one step"
+   ],
+   "callouts": [
+    {
+     "he": "מחוון על 0, לוחצים ARM ומעלים לאט",
+     "anchor": "the pilot's thumb on the phone slider and the ARM button"
+    },
+    {
+     "he": "מרחפים 10–30 ס״מ",
+     "anchor": "the gap between the drone's rubber feet and the floor"
+    },
+    {
+     "he": "החוט שוכב רפוי על הרצפה",
+     "anchor": "the slack fishing line between the anchor and the frame loop"
+    },
+    {
+     "he": "משנים קבוע אחד וטסים טיסה אחת",
+     "anchor": "the inset laptop strip showing the KP / KD lines"
+    }
+   ],
+   "mustBeCorrect": [
+    "Props ARE on for this card and all four are spinning — this is the one Tier-2 card where the drone is live.",
+    "Nobody is inside the circle while the battery is in the drone. Pilot and teacher are both behind the spectator line, and no hand is near the drone.",
+    "The tether is girth-hitched to the 10 mm braided-cord loop that hangs ~10 mm below the bottom plate's centreline, under the centre of gravity — never tied to an arm, a motor or a standoff.",
+    "The anchor is FLAT and no more than ~10 cm tall (barbell plate lying flat, flat sandbag, or a bottle laid on its side). Never an upright bottle, never furniture — the drone hovers inside that height band.",
+    "The drone hovers over the lift-off mark ~40 cm from the anchor X, never over the anchor itself.",
+    "The line is slack and lying on the floor. A taut line is the failure state the card warns about, not the picture.",
+    "Hover height is 10-30 cm — knee height at most. Never head height, never above the spectator line.",
+    "Goggles on every person in frame, hair tied back, sleeves up — teacher and spectators included.",
+    "No USB cable anywhere in this frame: battery in = USB out.",
+    "No prop guards on the drone — they are not in the kit. Do not invent them.",
+    "If prop rotation is indicated: CW on FRONT and BACK, CCW on RIGHT and LEFT.",
+    "The teacher's phone shows DISARM only — never an ARM button lit, never a raised slider on it."
+   ],
+   "worthDrawing": true,
+   "reuseOf": "P8_T1_M13_tethered_hover"
+  },
+  {
+   "id": "P8_T2_M12_flight_sequence",
+   "titleHe": "בוחרים רצף טיסה וטסים אותו",
+   "action": "The pilot announces the chosen sequence aloud to the teacher and reads the eleven R4 checklist items off the laminated card with them, then flies that one sequence from behind the spectator line — thumb on the slider — while a classmate witnesses from behind the line; afterwards the hands hold the multimeter probes on the battery and the pen for the log line.",
+   "objects": [
+    "the whole taped flight zone seen wide: 3 m circle, [X] anchor at the centre, [L] lift-off mark ~40 cm from X, [M] tape mark 50 cm from [L], spectator line 2.5 m from X",
+    "the quadcopter flying low over the marks, all four 65 mm props spinning, the slack fishing line trailing to the anchor",
+    "three light dashed path overlays labelled with the sequence letters: א׳ three separate hops up and down over [L]; ב׳ one long hold over [L]; ג׳ a low move from [L] across to [M] and a landing on it",
+    "the pilot behind the line, goggles on, both hands on the phone, thumb on the throttle slider, motor-time counter visible beside the ARMED banner",
+    "the teacher beside the pilot holding the laminated R4 checklist card in one hand and the second phone (DISARM only) in the other",
+    "the witness classmate further along the line, goggles on, counting seconds on their fingers",
+    "at the bench outside the circle: multimeter with probes on the LiPo's PH2.0 pigtail, the teacher's open prop box, the fireproof bag, the log card and a pen"
+   ],
+   "callouts": [
+    {
+     "he": "בוחרים רצף ומכריזים עליו למורה",
+     "anchor": "the pilot facing the teacher, before the battery comes out"
+    },
+    {
+     "he": "קוראים בקול את רשימת הבדיקה של R4",
+     "anchor": "the laminated R4 card held between teacher and pilot"
+    },
+    {
+     "he": "הגובה נשאר 10–30 ס״מ",
+     "anchor": "the gap between the drone and the floor over the marks"
+    },
+    {
+     "he": "רצף ג׳ — רק עם חוט מלא",
+     "anchor": "the [M] tape mark 50 cm from the lift-off mark"
+    }
+   ],
+   "mustBeCorrect": [
+    "Zone geometry is exact: 3 m circle, flat anchor on the centre X, lift-off mark [L] ~40 cm from X, tape mark [M] 50 cm from [L], spectator line 2.5 m from X.",
+    "Pilot, teacher and witness are ALL behind the spectator line while the battery is in the drone. Nobody stands inside the circle.",
+    "Sequence ג׳'s path runs [L] to [M] and lands on [M], and it belongs only to the 1.2 m full tether — do not draw it as the default path.",
+    "The tether runs from the bowline at the flat anchor to the girth hitch on the bottom-plate cord loop, slack and lying on the floor.",
+    "The anchor is flat and no more than ~10 cm tall, on the X. Never upright, never furniture.",
+    "Props are on and spinning, and no hand touches the drone. The props were fitted at checklist item 6 with the battery still out.",
+    "The teacher's phone is the second DISARM button only — no ARM, no slider, on that screen.",
+    "Goggles on everyone in frame, including the witness and anyone passing through.",
+    "No prop guards — they are not in the kit yet. Both no-tether options are suspended, so every flight in this drawing is on the line.",
+    "The multimeter / log moment is at the bench outside the circle, with the battery unplugged and the props already back in the teacher's box.",
+    "Hover height stays 10-30 cm for all three sequences."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T2_M4_solder_channels_2_4",
+   "titleHe": "מלחימים את ערוצים 2–4 ואת הקבל",
+   "action": "The student, in safety glasses, solders three more identical MOSFET channels onto the perfboard that already carries a finished channel 1 — MOSFET, then flyback diode, then the two resistors, then the bent Source leg — and finishes with the 220 µF capacitor across the two rails and two spare pads, labelling each channel with a marker as it is done.",
+   "objects": [
+    "perfboard ~4x5 cm held in a helping-hands / small vise, bare copper BAT+ rail along the top edge and GND rail along the bottom edge",
+    "channel 1 already finished at the left and marked in marker (M1 / G1 / FRONT)",
+    "three IRLB8721 TO-220 MOSFETs, label side facing the gate-pad row, legs G-D-S left to right, laid flat with visible empty holes between them",
+    "three 1N5819 Schottky diodes between the M+ and M- pads, the printed band pointing up at the BAT+ rail",
+    "100 ohm and 10 k resistors per channel (gate pad to Gate leg; Gate leg to GND rail)",
+    "220 uF electrolytic capacitor standing across the two rails, long leg into BAT+, stripe side into GND",
+    "soldering iron in one hand, solder wire in the other, iron stand and damp sponge on the mat",
+    "flush cutters and clipped leg offcuts",
+    "black permanent marker writing M2/G2/RIGHT beside the pads",
+    "heat-shrink sleeves over the four metal tabs",
+    "safety glasses on the student's face",
+    "multimeter parked at the edge of the bench, leads coiled, not yet in use",
+    "NO battery, NO motors, NO drone frame anywhere in the scene"
+   ],
+   "callouts": [
+    {
+     "he": "הטבעת אל פס BAT+",
+     "anchor": "the printed band on each 1N5819 diode, with a leader pointing up to the BAT+ rail"
+    },
+    {
+     "he": "לפחות שני חורים ריקים בין מוספט למוספט",
+     "anchor": "the empty perfboard holes in the gap between two adjacent TO-220 tabs"
+    },
+    {
+     "he": "הרגל הארוכה אל פס BAT+",
+     "anchor": "the long leg of the 220 uF electrolytic where it enters the BAT+ rail"
+    },
+    {
+     "he": "שרוול מתכווץ על ארבע הלשוניות",
+     "anchor": "the heat-shrink sleeves covering the four TO-220 metal tabs"
+    }
+   ],
+   "mustBeCorrect": [
+    "The board has exactly two bare copper rails: BAT+ along the top, GND along the bottom; every channel spans between them in the same orientation.",
+    "IRLB8721 is a TO-220 held label-out with legs down: Gate left, Drain middle, Source right. The label faces the gate-pad side of the board.",
+    "The metal tab of the TO-220 IS the Drain (electrically the motor's minus wire) — it must never touch another tab, the BAT+ rail or the GND rail, and it is heat-shrunk.",
+    "At least two empty perfboard holes separate each MOSFET from the next; the four MOSFETs lie flat, not standing upright.",
+    "The 1N5819 sits across the motor pads (M+ to M-), not in series with the motor. Band = cathode = toward BAT+ / M+; anode toward the Drain / M- pad.",
+    "100 ohm goes from the gate pad to the Gate leg; 10 k goes from the Gate leg down to the GND rail; the Source leg is bent over and soldered to the GND rail.",
+    "One single 220 uF electrolytic per board across BAT+/GND — not one per channel. Long leg to BAT+, the body stripe to GND.",
+    "Two extra bare pads exist — one on BAT+, one on GND — left empty for the MT3608 wires that come later.",
+    "The battery pigtail (PH2.0) is soldered by the teacher, so no battery, no PH2.0 plug and no motors appear in the student's hands here.",
+    "Channel order left to right is M1 FRONT, M2 RIGHT, M3 BACK, M4 LEFT, with G1-G4 pads in a row just above the GND rail.",
+    "Safety glasses are worn the whole time the iron is on."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T2_M5_tune_mt3608",
+   "titleHe": "מכוונים את הממיר ל-5V",
+   "action": "The student turns the MT3608's multi-turn trim-pot with a tiny screwdriver while watching the multimeter reading on OUT+/OUT-, the module sitting alone on the bench with only the teacher's battery clipped to IN+/IN-, and then locks the screw with a drop of clear nail polish and writes 5.0 V + today's date on the module.",
+   "objects": [
+    "MT3608 boost module lying alone on the bench (small blue PCB, large inductor on the IN side, blue multi-turn trim-pot)",
+    "small flat-blade screwdriver in the student's fingers, tip seated in the pot screw",
+    "multimeter set to DC V, red probe on the OUT+ pad and black probe on the OUT-, display showing 5.01 V",
+    "1S LiPo with PH2.0 pigtail on the teacher's side of the bench, clipped to IN+ / IN- through test leads with alligator clips",
+    "the teacher's hand resting on the battery leads",
+    "ESP32 DevKit pushed to the far edge of the bench, unconnected, with a small crossed-out marker on it",
+    "open fireproof LiPo bag behind the battery",
+    "clear nail-polish bottle with brush and a silver paint marker waiting beside the module",
+    "the card's readings table / pencil for writing the three numbers",
+    "NO drone frame, NO motors, NO props in the scene"
+   ],
+   "callouts": [
+    {
+     "he": "המחוש האדום על OUT+ והשחור על OUT−",
+     "anchor": "the two multimeter probe tips on the module's output pads"
+    },
+    {
+     "he": "מסובבים שלושה סיבובים לכיוון אחד",
+     "anchor": "the screwdriver tip in the trim-pot, with a small rotation arc arrow"
+    },
+    {
+     "he": "עוצרים בין 4.95V ל-5.05V",
+     "anchor": "the multimeter display"
+    },
+    {
+     "he": "ה-ESP32 לא מחובר בשלב הזה",
+     "anchor": "the DevKit pushed aside at the edge of the bench"
+    }
+   ],
+   "mustBeCorrect": [
+    "The MT3608 is completely alone: no ESP32, no MPU6050, no MOSFET board and no drone wires attached to it.",
+    "The battery connects to IN+ / IN- (the input side, next to the large inductor); the multimeter reads OUT+ / OUT-. Never the reverse.",
+    "The multimeter is on DC V — not continuity, not ohms.",
+    "The battery is one 1S LiPo, connected and taken back by the teacher, and it lives in the fireproof bag before and after.",
+    "The pot is a 25-turn trimmer: a single turn barely moves the number, and the correct direction is not fixed — it is decided by watching the meter, so no drawing may imply 'clockwise raises it'.",
+    "The displayed value must lie inside 4.95-5.05 V (draw e.g. 5.01 V), never 5.00 exactly-as-a-target and never 12 V or 20 V.",
+    "The nail polish goes on the pot screw only; the silver marker writes on the module body, not on the pot.",
+    "Boost module, so the pass-through floor equals the battery voltage (~3.8 V) — if a 'before' reading is shown it must be around battery voltage, not 0 V.",
+    "No props, no motors, no assembled drone anywhere — the module never meets the drone in this step."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T2_M6_mount_and_wire",
+   "titleHe": "מרכיבים ומחווטים את כל הרחפן",
+   "action": "The student presses each board onto its own full-footprint foam pad on the carbon frame — the MPU6050 pushed flat with its printed X arrow aimed at the front arm — and then runs and solders all 22 colour-coded wires between the MOSFET board, the booster, the DevKit, the sensor and the four motors, with the battery bay still empty and no propellers anywhere.",
+   "objects": [
+    "FEICHAO 100 mm carbon frame, two 1.5 mm plates on metal standoffs, four arms with rubber grommets and the four 8520 motors already press-fit, bare shafts with no props",
+    "top plate: ESP32 DevKit V1 centred on a 3 mm foam pad, USB connector aimed at the BACK arm",
+    "MT3608 stuck beside the DevKit on its own pad, its nail-polish-locked pot screw still reachable",
+    "MPU6050 (GY-521) in front of the DevKit, dead flat on a full-footprint foam square, chip side up, printed X arrow pointing at the front arm, under the student's pressing fingertip",
+    "underside of the bottom plate: the MOSFET board on a Kapton / plastic shim plus full-footprint foam, labelled side readable, four tabs heat-shrunk, M1 pad nearest the front arm, a 2.5 mm zip tie over the layers",
+    "empty battery bay below the MOSFET board with its 2 mm foam pad and the frame's two rubber O-rings",
+    "10 mm tether loop of 1 mm braided cord through two adjacent centre-line holes, hanging about 10 mm under the bottom plate",
+    "power wires: thick red/black board->MT3608 IN, red/black OUT->VIN and GND, thin red/black 3V3->VCC and GND->GND",
+    "gate wires colour-coded yellow 25->G1, orange 26->G2, green 14->G3, blue 27->G4, plus white 21 SDA and grey 22 SCL, routed under the plate and away from the motor wires",
+    "eight motor wires, each pair shortened with about 1 cm of slack, heat-shrink over exposed ends",
+    "multimeter with the black probe on a cut edge or screw hole of the carbon plate and the red probe on a pad, screen showing OL",
+    "soldering iron, safety glasses, and a visibly absent battery (in the fireproof bag on the teacher's desk) and absent props (in the teacher's boxes)"
+   ],
+   "callouts": [
+    {
+     "he": "החץ X מצביע על המנוע הקדמי",
+     "anchor": "the printed X arrow on the MPU6050 board"
+    },
+    {
+     "he": "שום מתכת לא נוגעת בפחמן",
+     "anchor": "the shim + foam sandwich under one of the boards, drawn as a peeled-back layer detail"
+    },
+    {
+     "he": "רפידה M1 קרובה לזרוע הקדמית",
+     "anchor": "the MOSFET board on the underside of the bottom plate"
+    },
+    {
+     "he": "3V3 — לא VIN ולא 5V",
+     "anchor": "the thin red wire leaving the DevKit's 3V3 pin toward the sensor's VCC"
+    }
+   ],
+   "mustBeCorrect": [
+    "No battery in the bay and no propellers on the motor shafts — the battery is in the fireproof bag on the teacher's desk and the USB cable is unplugged.",
+    "Every board sits on its own insulating layer that covers its whole footprint (shim + full-footprint foam), never a corner dot; the zip tie goes on top of those layers, never instead of them.",
+    "MPU6050: chip side up, board perfectly flat, printed X arrow pointing at the FRONT arm, mounted in front of the DevKit on the top plate.",
+    "ESP32 DevKit centred on the top plate with its USB connector facing the BACK arm; the MT3608 beside it with the pot screw still reachable.",
+    "MOSFET board goes on the UNDERSIDE of the bottom plate, labelled side readable, all four TO-220 tabs heat-shrunk and lying flat, M1 pad nearest the front arm.",
+    "Power chain, in this order only: battery pigtail -> board BAT+/GND; board's second BAT+/GND pads -> MT3608 IN+/IN-; MT3608 OUT+ -> DevKit VIN and OUT- -> the GND next to VIN on the right header; DevKit 3V3 -> MPU VCC and the GND next to 3V3 -> MPU GND. Nothing ever feeds 3V3 from the booster or the battery.",
+    "Motors run straight off the battery through the MOSFET board — no booster anywhere on the motor rail.",
+    "Gate wiring: GPIO 25 -> G1 front, 26 -> G2 right, 14 -> G3 back, 27 -> G4 left; I2C 21 = SDA, 22 = SCL. The right header order counting from VIN is VIN, GND, 13, 12, 14, 27, 26, 25.",
+    "Motor-to-channel map: FRONT->M1, RIGHT->M2, BACK->M3, LEFT->M4; red or white lead is plus, blue or black is minus. Front and back turn CW, right and left CCW.",
+    "The tether loop is tied on the top side of the bottom plate through two adjacent centre-line holes, hangs about 10 mm below, and stays outside the battery bay and outside the propeller discs.",
+    "The battery is held by the frame's two rubber O-rings only — no zip tie and no tape on the cell — and the bay stays open enough to insert and remove the cell by hand.",
+    "The connection count in frame is 22: 6 power + 8 motor + 4 gate + 2 I2C + 2 battery (the battery pigtail is the teacher's joint).",
+    "Safety glasses on whenever the iron is hot; the multimeter insulation check reads OL at every pad against the carbon plate."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T2_M1_startup",
+   "titleHe": "התחלה — חוזה, ארבע ערימות ומנועים במסגרת",
+   "action": "The student thumb-presses each 8520 coreless motor straight down through a rubber grommet ring in a frame arm until the motor's shoulder seats on the rubber (red/blue-lead motors into FRONT and BACK, black/white into RIGHT and LEFT), pops a rubber dome onto each motor's underside as a landing foot, tucks the two leads of each motor along the arm under the edge of the centre plate, and on the same bench lays the bag of parts out as four identical four-piece piles.",
+   "objects": [
+    "carbon-fibre frame lying flat on the bench, two 1.5 mm plates screwed together, 100 mm wheelbase, the arm marked FRONT pointing away from the student",
+    "four 8520 coreless motors: plain 8.5 mm x 20 mm cans, shaft pointing UP, two thin leads out of the back",
+    "the four rubber grommet rings sitting in the arm rings, one motor caught mid-insertion",
+    "the student's thumb pressing flat and straight down on the top of that motor can, with no tool touching it",
+    "four rubber landing domes pressed onto the bottom of each motor — these are the landing feet",
+    "four identical parts piles beside the frame, each exactly: one IRLB8721 TO-220 (black body, metal tab, three legs), one 1N5819 with a marked band at one end, one 100 ohm resistor (brown-black-brown), one 10k resistor (brown-black-orange)",
+    "the single 220uF electrolytic capacitor set apart beside the piles, belonging to no pile",
+    "the empty ~4x5 cm perfboard, nothing soldered on it yet",
+    "multimeter set to ohms with one resistor held across its probes",
+    "kitchen scale under the frame reading about 75 g",
+    "safety goggles and the signed contract card (R3, two signatures) in the student's tray",
+    "ESP32 DevKit V1, MPU6050 (GY-521) and the MT3608 module lying in the tray, unwired"
+   ],
+   "callouts": [
+    {
+     "he": "המנועים נכנסים בלחיצת אגודל בלבד",
+     "anchor": "the thumb pressing the motor down into the grommet ring"
+    },
+    {
+     "he": "אדום/כחול — FRONT ו-BACK",
+     "anchor": "the motor seated in the FRONT arm and its red/blue leads"
+    },
+    {
+     "he": "שחור/לבן — RIGHT ו-LEFT",
+     "anchor": "the motor seated in the RIGHT arm and its black/white leads"
+    },
+    {
+     "he": "ארבע ערימות זהות — אחת לכל ערוץ",
+     "anchor": "the four sorted component piles on the bench"
+    }
+   ],
+   "mustBeCorrect": [
+    "FRONT and BACK arms carry the red/blue-lead motors (CW); RIGHT and LEFT carry the black/white-lead motors (CCW). Opposite arms always share a rotation direction — never adjacent ones.",
+    "The frame is oriented with FRONT pointing away from the student; right and left are the drone's right and left in that orientation.",
+    "Motors are held only by the rubber grommets, press-fit by thumb. NO glue, NO screws, NO hammer and no tool of any kind may appear touching a motor.",
+    "Motor shafts point UP. The rubber landing dome goes on the BOTTOM of the motor can, not on the shaft.",
+    "Every motor lead runs along its arm toward the centre plate and disappears under the plate edge — no lead may be drawn hanging out into the circle the propeller will sweep.",
+    "NO propellers and NO battery anywhere on the bench in this frame; those two live in the teacher's boxes at this stage.",
+    "Each pile holds exactly four parts and no capacitor; the one 220uF electrolytic sits aside because it belongs to the whole board.",
+    "The perfboard is completely bare — this card ends before any soldering.",
+    "The 1N5819's band is visible at one end of the body; the two resistors are told apart by their third band (brown vs orange).",
+    "The frame is two flat plates with screws, not a moulded plastic body, and the arms are open with no prop guards."
+   ],
+   "worthDrawing": true,
+   "reuseOf": "P8_T1_M2_press_fit_motors"
+  },
+  {
+   "id": "P8_T2_M2_solder_channel_1",
+   "titleHe": "מלחימים את ערוץ 1",
+   "action": "Wearing goggles at the soldering station with the teacher seated alongside, the student holds the iron in one hand and the solder wire in the other and solders the flyback diode onto the perfboard between pad M1+ on the BAT+ rail and pad M1- (the MOSFET's Drain leg) with the diode's band end pointing at BAT+, on a board that already carries the two bare-copper rails and Q1.",
+   "objects": [
+    "the ~4x5 cm perfboard flat on the mat, the two bare tinned-copper rails already stretched across it: BAT+ along the top, GND along the bottom, each soldered at every third hole down its whole length",
+    "Q1, the IRLB8721 in TO-220: black body with a metal tab, three legs in order G · D · S, printed face turned toward the G1 pad",
+    "the 1N5819 diode being soldered between pad M1+ (on BAT+) and pad M1- (the Drain leg), its painted band at the BAT+ end",
+    "the soldering iron in the student's hand, tip on one joint, and the solder wire fed in from the other hand",
+    "the iron's stand and the wet sponge beside it",
+    "safety goggles on the student's face and on the teacher's",
+    "the 100 ohm (brown-black-brown) and 10k (brown-black-orange) resistors waiting on the mat, not yet placed",
+    "the gap of at least two empty holes left beside Q1, reserved for Q2",
+    "black marker and the words M1 / G1 / FRONT written on the board next to the pads",
+    "the teacher seated beside the student, not walking away"
+   ],
+   "callouts": [
+    {
+     "he": "הטבעת פונה אל BAT+",
+     "anchor": "the band end of the 1N5819 diode"
+    },
+    {
+     "he": "הכיתוב פונה לצד פד G1",
+     "anchor": "the printed face of the IRLB8721 (Q1)"
+    },
+    {
+     "he": "מלחימים בכל חור שלישי",
+     "anchor": "the two bare-copper BAT+ and GND rails"
+    },
+    {
+     "he": "לא יותר מ-3 שניות על כל רגל",
+     "anchor": "the iron tip resting on a component leg"
+    }
+   ],
+   "mustBeCorrect": [
+    "The diode's band (cathode) points at BAT+. A reversed band is a dead short across the battery through the MOSFET — this is the single fact the drawing exists to teach.",
+    "The MOSFET is a TO-220: metal tab at the top, three legs in the order G · D · S, printed face toward the G1 pad. The metal tab IS the Drain.",
+    "At least two empty holes stay clear beside Q1; the four MOSFET tabs on the finished board must never touch each other.",
+    "Both rails are soldered at every third hole along their full length, not only at the two ends — they carry the whole motor current.",
+    "100 ohm goes from pad G1 to the Gate leg; 10k goes from the Gate leg to the GND rail; the Source leg is bent over and soldered flat onto the GND rail.",
+    "Exactly ONE channel exists on the board — the rest of the perfboard is bare holes.",
+    "NO battery, NO motor and NO ESP32 are connected; the channel receives no power in this step.",
+    "The iron is in the hand only while soldering; if a hand is empty the iron must be shown in its stand, never lying on the bench.",
+    "Only one leg of a component is tacked first, so the drawing may show a part still being straightened while its solder is molten.",
+    "The two rails are BARE copper wire (tinned, silver-grey), not insulated hookup wire."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T2_M3_check_channel_1",
+   "titleHe": "בודקים את ערוץ 1 במולטימטר",
+   "action": "The student turns the multimeter dial to the diode symbol and presses the two probe tips onto bare copper on the finished channel — red on pad M1-, black on the BAT+ rail — reads the number off the display, swaps the probes to confirm OL, and writes both results on the card.",
+   "objects": [
+    "the finished single channel on the perfboard: BAT+ and GND rails, Q1 with its tab, D1 with its band toward BAT+, the 100 ohm and 10k resistors, the Source leg soldered flat on the GND rail",
+    "the multimeter body with a clearly readable rotary dial and display",
+    "red probe tip pressed on pad M1-, black probe tip pressed on the BAT+ rail, both touching bare copper",
+    "the display reading 0.28V",
+    "a second small display, or a ghosted repeat, showing OL with the probes swapped",
+    "the three dial positions this card uses marked on the dial face: the continuity/beep symbol, the ohm 20k position and the diode symbol",
+    "the two rails BAT+ and GND with a crossed-out beep icon between them",
+    "the task card and a pencil for writing down the exact G1 and diode numbers"
+   ],
+   "callouts": [
+    {
+     "he": "מחוש אדום על M1− ושחור על BAT+",
+     "anchor": "the two probe tips on the board"
+    },
+    {
+     "he": "בין 0.2V ל-0.35V",
+     "anchor": "the multimeter display"
+    },
+    {
+     "he": "מחליפים בין המחושים — OL",
+     "anchor": "the ghosted swapped-probe repeat and its display"
+    },
+    {
+     "he": "אין צפצוף בין BAT+ ל-GND",
+     "anchor": "the crossed-out beep icon between the two rails"
+    }
+   ],
+   "mustBeCorrect": [
+    "Red probe on M1- and black on BAT+ gives 0.2-0.35 V; swapping them gives OL. The reading is this way round ONLY because the diode's band faces BAT+ — reversing the drawn probes teaches the wrong wiring.",
+    "NO battery, NO motor and NO ESP32 are connected. Every one of these checks happens before the board ever receives power — do not draw a battery on the bench.",
+    "The board carries exactly ONE finished channel; the rest of the perfboard is bare.",
+    "G1 against GND in the 20k ohm range reads about 10k (9-11k); M1- against GND reads OL; BAT+ against GND, tab against GND and tab against BAT+ all give NO beep.",
+    "The multimeter dial must show distinct continuity, ohm-20k and diode positions, because the card moves between all three.",
+    "Probe tips touch bare copper, never solder resist and never a dull cold joint.",
+    "The red probe lead comes out of the V-ohm-mA socket and the black out of COM.",
+    "No lit soldering iron in this frame — the iron is off and out of the scene; this is a meter-only step.",
+    "The MOSFET's metal tab is the same node as pad M1- (Drain); if both are shown they must read as one connection."
+   ],
+   "worthDrawing": true,
+   "reuseOf": "P8_T2_M2_solder_channel_1"
+  },
+  {
+   "id": "P8_T2_M13_signature_flight",
+   "titleHe": "טיסת החתימה — ואז סוגרים הכול",
+   "action": "The student flies one tethered hover with their thumb on the on-screen slider while a goggled spectator watches from behind the tape line, then lands and works the fixed shutdown with their hands: slider to 0, DISARM, phone out of their hands, battery unplugged from the bay, the four props pulled off the shafts into the teacher's boxes, the tether untied from the loop, a back-of-finger heat check on the motors, the MOSFET board and the MT3608.",
+   "objects": [
+    "the finished quadcopter hovering ~20-30 cm over the lift-off mark: 100 mm carbon frame (two 1.5 mm plates), 4x 8520 coreless motors press-fit through rubber grommets, 65 mm props (2 CW + 2 CCW), ESP32 DevKit V1, MPU6050 on foam, MT3608, 4-channel IRLB8721 perfboard, 1S LiPo in the bay",
+    "fishing-line tether, slack, girth-hitched to the 10 mm cord loop hanging under the bottom plate centre and bowlined to the flat floor anchor on its X",
+    "the student's phone held flat in one hand showing the flight page: throttle slider, ARM / DISARM, motor timer reading 3:00",
+    "the taped 3 m circle on the floor, the lift-off mark ~40 cm from the anchor, and the spectator line",
+    "the spectator standing behind the spectator line with safety goggles on",
+    "the teacher standing beside the student holding the two prop boxes and the fireproof battery bag",
+    "safety goggles on every face in frame; hair tied back, sleeves rolled up",
+    "second beat of the same scene: the drone bare on the bench — no battery, no props — four 65 mm props in the teacher's boxes and the phone face-down behind the line",
+    "multimeter probes on the battery leads for the after-flight voltage, and the flight-log card with the drone's name written in"
+   ],
+   "callouts": [
+    {
+     "he": "החוט קשור בלולאה ובעוגן השטוח",
+     "anchor": "the fishing-line tether where it meets the loop under the bottom plate and the flat floor anchor"
+    },
+    {
+     "he": "מטיסים את הרצף שבחרתם פעם אחת",
+     "anchor": "the student's thumb on the throttle slider on the phone page"
+    },
+    {
+     "he": "הצופה נשאר מאחורי קו הצופים",
+     "anchor": "the spectator standing behind the taped spectator line"
+    },
+    {
+     "he": "הסוללה יוצאת ואז המדחפים יורדים",
+     "anchor": "the teacher's hands: the unplugged 1S LiPo and the two open prop boxes"
+    }
+   ],
+   "mustBeCorrect": [
+    "Props appear ON the shafts only in the flying beat. In the shutdown beat the shafts are bare and all four 65 mm props are in the teacher's boxes — never a hand near a prop that is still on an armed drone.",
+    "Shutdown order is fixed and must read left-to-right in the drawing: DISARM, phone leaves the hand, battery out, props off. The battery plug sits UNDER the prop discs, so no hand reaches it while props are fitted.",
+    "The tether is never taut and never crosses a prop circle: 1.2 m line from the flat anchor's X to the loop under the plate centre, lift-off mark ~40 cm from the anchor, drone hovering low inside the 3 m taped circle.",
+    "Every person in frame wears safety goggles, including the spectator and the teacher. Hair tied back, sleeves rolled up.",
+    "No prop guards exist in this build — do not draw rings, cages or bumpers around the props.",
+    "Battery is a 1S LiPo 3.7 V 1000 mAh with a PH2.0 connector; once disarmed it lives in the teacher's fireproof bag, not on the drone.",
+    "Drone hardware is the locked build: 100 mm wheelbase, 8520 motors through the arm-ring grommets, ESP32 DevKit V1 (30-pin), MPU6050 off 3V3 on SDA 21 / SCL 22, one MT3608 at 5.0 V into VIN, IRLB8721 low-side MOSFET board with the motors running direct off the battery.",
+    "Only two phones are out — the student's and the teacher's. Everything else is put away.",
+    "The 3:00 on the phone is the motor timer, the number the teacher calls the landing on, and the same number that gets copied into the log."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  },
+  {
+   "id": "P8_T3_project_planner",
+   "titleHe": "מעצבים הרחבה משלכם לרחפן",
+   "action": "The student wires one new module to a free GPIO on the DevKit with the battery out of the bay and the four props already off, then lifts the whole drone onto the digital kitchen scale and writes the new gram number on the card; afterwards they tilt the bare drone by hand and watch the new number move on the phone page.",
+   "objects": [
+    "the tuned quadcopter with an EMPTY battery bay and bare motor shafts: 100 mm carbon frame, 4x 8520 motors in grommets, ESP32 DevKit V1, MPU6050 on foam tape, MT3608, IRLB8721 4-channel perfboard",
+    "the one new expansion part being fitted — e.g. a BMP280 on the existing SDA 21 / SCL 22 line, or a WS2812 pixel on GPIO 33, or a 100k/100k divider plus a 100 nF ceramic on GPIO 34 — with its thin signal wire running to a free header pin",
+    "the DevKit header with the free pins legible: 33, 34, 32, 23, 19, 18",
+    "digital kitchen scale (1 g resolution) with the drone sitting on the pan, a new gram number on the display",
+    "the four 65 mm props lying in the teacher's open box, off to the side of the bench",
+    "the 1S LiPo out of the drone, on the teacher's side of the bench near the fireproof bag",
+    "laptop on the bench with the Arduino IDE sketch and the Claude Code window open",
+    "the phone propped up showing the flight page with the new field or button the extension adds",
+    "the planner card itself with its written fields, and a pen",
+    "the thrust-test post standing ready in the background, for the >3 g case"
+   ],
+   "callouts": [
+    {
+     "he": "הסוללה בחוץ, המדחפים למטה",
+     "anchor": "the empty battery bay and the four props in the teacher's box"
+    },
+    {
+     "he": "משתמשים רק בפינים הפנויים",
+     "anchor": "the new signal wire landing on a free pin of the DevKit header"
+    },
+    {
+     "he": "שוקלים את הרחפן שוב במאזניים",
+     "anchor": "the drone on the kitchen scale pan"
+    },
+    {
+     "he": "יותר מ-3 גרם — חוזרים על מבחן הדחף",
+     "anchor": "the scale display, arrow pointing to the thrust-test post"
+    }
+   ],
+   "mustBeCorrect": [
+    "The battery is OUT of the bay and the four props are OFF the shafts in every panel where hands touch the hardware. This is the whole point of the step.",
+    "The new wire may only land on a free GPIO: 33, 34, 32, 23, 19, 18. Motor pins 25 (FRONT), 26 (RIGHT), 14 (BACK), 27 (LEFT), the I2C pair 21/22 and 3V3 stay exactly as they are — do not draw a new wire onto any of them.",
+    "A new I2C sensor (BMP280) shares SDA 21 / SCL 22 and is powered from the DevKit 3V3, never from the 5 V boost output.",
+    "The battery-monitor option is a 100k/100k divider from BAT+ to GPIO 34 PLUS a 100 nF ceramic from that pin to GND right next to the DevKit — if the divider is drawn, the cap must be drawn too.",
+    "Power tree is unchanged: one MT3608 with OUT at 5.0 V into VIN (never into 3V3); the motors run direct off the 1S battery with no booster on the motor rail.",
+    "MOSFET board detail stays as built: motor between BAT+ and Drain, flyback Schottky across the motor with the cathode to BAT+, 100 ohm gate resistor, 10 k gate pull-down, one bulk electrolytic across BAT+/GND.",
+    "The scale is a digital kitchen scale at 1 g resolution and the drone is weighed WITH the battery for AUW — so if the scale beat is drawn, the battery is on the drone and the props are still off.",
+    "No prop guards. If any flight is shown at all, it is on the tether inside the taped circle with goggles on every face."
+   ],
+   "worthDrawing": true,
+   "reuseOf": ""
+  }
+ ]
+}

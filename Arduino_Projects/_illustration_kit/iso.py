@@ -137,6 +137,144 @@ def cyl_y(sc, x, y, z, length, r, col, edge=None, cap_col=None, steps=22, layer=
     return body
 
 
+def cyl_z(sc, x, y, z, height, r, col, edge=None, cap_col=None, steps=26, layer=3, hole=0.0):
+    """Cylinder standing on its end (motor cans, standoffs, electrolytics, prop hubs).
+    hole > 0 leaves a visible bore in the top cap."""
+    edge = edge or shade(col, 0.55)
+    ring = [(math.cos(2 * math.pi * i / steps) * r, math.sin(2 * math.pi * i / steps) * r) for i in range(steps)]
+    top = [iso(x + dx, y + dy, z + height) for dx, dy in ring]
+    bot = [iso(x + dx, y + dy, z) for dx, dy in ring]
+    quads = []
+    for i in range(steps):
+        j = (i + 1) % steps
+        a = 2 * math.pi * (i + 0.5) / steps
+        # the camera looks from -y/+x, so the wall facing (1,-1) is the lit one
+        if math.cos(a - math.radians(-45)) < -0.02:
+            continue                                   # back wall, hidden by the top cap
+        f = 0.66 + 0.44 * max(0.0, math.cos(a - math.radians(-30)))
+        quads.append(poly([top[i], top[j], bot[j], bot[i]], shade(col, f), None))
+    s = ''.join(quads)
+    s += poly(top, shade(cap_col or col, F_TOP), edge, 0.3)
+    if hole > 0:
+        hr = [(math.cos(2 * math.pi * i / steps) * hole, math.sin(2 * math.pi * i / steps) * hole)
+              for i in range(steps)]
+        s += poly([iso(x + dx, y + dy, z + height) for dx, dy in hr], shade(col, 0.42), None)
+    sc.add(depth(x, y, z + height / 2), s, layer)
+    return s
+
+
+def disc(sc, x, y, z, r, col, stroke=None, sw=0.35, extra='', layer=3, steps=30, bump=0.0):
+    """A flat circle lying in the xy plane (spin discs, scale pans, drill marks)."""
+    pts = [iso(x + math.cos(2 * math.pi * i / steps) * r, y + math.sin(2 * math.pi * i / steps) * r, z)
+           for i in range(steps)]
+    s = poly(pts, col, stroke, sw, extra)
+    sc.add(depth(x, y, z) + bump, s, layer)
+    return s
+
+
+def ring_z(sc, x, y, z, r_out, r_in, height, col, edge=None, steps=26, layer=3):
+    """An annulus with thickness: the frame's arm rings and their rubber grommets."""
+    edge = edge or shade(col, 0.55)
+    ro = [(math.cos(2 * math.pi * i / steps) * r_out, math.sin(2 * math.pi * i / steps) * r_out) for i in range(steps)]
+    ri = [(math.cos(2 * math.pi * i / steps) * r_in, math.sin(2 * math.pi * i / steps) * r_in) for i in range(steps)]
+    topo = [iso(x + dx, y + dy, z + height) for dx, dy in ro]
+    boto = [iso(x + dx, y + dy, z) for dx, dy in ro]
+    topi = [iso(x + dx, y + dy, z + height) for dx, dy in ri]
+    s = ''
+    for i in range(steps):                                    # outer wall, front half only
+        j = (i + 1) % steps
+        a = 2 * math.pi * (i + 0.5) / steps
+        if math.cos(a - math.radians(-45)) < -0.02:
+            continue
+        f = 0.66 + 0.44 * max(0.0, math.cos(a - math.radians(-30)))
+        s += poly([topo[i], topo[j], boto[j], boto[i]], shade(col, f), None)
+    for i in range(steps):                                    # the flat top, as a fan of quads
+        j = (i + 1) % steps
+        s += poly([topo[i], topo[j], topi[j], topi[i]], shade(col, F_TOP), None)
+    s += poly(topo, 'none', edge, 0.3)
+    s += poly(topi, 'none', edge, 0.3)
+    sc.add(depth(x, y, z + height / 2), s, layer)
+    return s
+
+
+def prism(sc, pts2d, z, height, col, edge=None, layer=3, top_extra='', key=None):
+    """Extrude an arbitrary xy outline upward: the X-shaped carbon plates.
+    Winding is normalised here, so callers may list the outline either way round."""
+    edge = edge or shade(col, 0.55)
+    area = sum(pts2d[i][0] * pts2d[(i + 1) % len(pts2d)][1] - pts2d[(i + 1) % len(pts2d)][0] * pts2d[i][1]
+               for i in range(len(pts2d)))
+    if area > 0:                     # counter-clockwise in world xy -> flip to clockwise
+        pts2d = pts2d[::-1]
+    top = [iso(px, py, z + height) for px, py in pts2d]
+    bot = [iso(px, py, z) for px, py in pts2d]
+    s = ''
+    n = len(pts2d)
+    for i in range(n):
+        j = (i + 1) % n
+        (x1, y1), (x2, y2) = pts2d[i], pts2d[j]
+        nx, ny = (y2 - y1), -(x2 - x1)                 # outward normal for a CW ring
+        if nx + ny <= 0:
+            continue                                    # facing away from the camera
+        f = F_RIGHT if abs(nx) > abs(ny) else F_LEFT
+        s += poly([top[i], top[j], bot[j], bot[i]], shade(col, f), edge, 0.25)
+    s += poly(top, shade(col, F_TOP), edge, 0.3, top_extra)
+    cx = sum(p[0] for p in pts2d) / n
+    cy = sum(p[1] for p in pts2d) / n
+    sc.add(key if key is not None else depth(cx, cy, z + height / 2), s, layer)
+    return s
+
+
+def blade(sc, x, y, z, ang, r_hub, r_tip, col, cw=True, pitch=1.8, layer=3, steps=16, alpha=None):
+    """One propeller blade sweeping out from a hub, with enough twist to read as a real prop.
+    ang is the blade's root direction in degrees; cw flips the sweep and the twist."""
+    sgn = 1.0 if cw else -1.0
+    lead, trail = [], []
+    for i in range(steps + 1):
+        t = i / steps
+        r = r_hub + (r_tip - r_hub) * t
+        # the blade sweeps back as it goes out, and is widest around mid-span
+        a = math.radians(ang + sgn * 26 * t)
+        # chord: widest just inboard of mid-span, tapering to a rounded tip
+        w = (r_tip - r_hub) * 0.155 * math.sin(math.pi * t ** 0.86) ** 0.6 + 0.45
+        p = pitch * math.sin(math.pi * t) * sgn
+        ca, sa = math.cos(a), math.sin(a)
+        px, py = -sa, ca                                # unit normal to the blade axis
+        lead.append(iso(x + ca * r + px * w, y + sa * r + py * w, z + p))
+        trail.append(iso(x + ca * r - px * w, y + sa * r - py * w, z - p))
+    pts = lead + trail[::-1]
+    op = '' if alpha is None else 'fill-opacity:%s' % alpha
+    s = poly(pts, shade(col, 1.0), shade(col, 0.55), 0.28, op)
+    s += ('<path d="M %s" style="fill:none;stroke:%s;stroke-width:0.35;stroke-opacity:0.55"/>'
+          % (' L '.join('%.2f %.2f' % p for p in lead), shade(col, 1.35)))
+    sc.add(depth(x + math.cos(math.radians(ang)) * r_tip * 0.5,
+                 y + math.sin(math.radians(ang)) * r_tip * 0.5, z), s, layer)
+    return s
+
+
+def spin_arc(sc, x, y, z, r, cw=True, col='#5b6470', layer=5, span=210):
+    """The dashed arc + arrowhead that says 'this is turning, and this way round'."""
+    a0 = math.radians(-40)
+    a1 = a0 + math.radians(span) * (1 if cw else -1)
+    pts = []
+    n = 30
+    for i in range(n + 1):
+        a = a0 + (a1 - a0) * i / n
+        pts.append(iso(x + math.cos(a) * r, y + math.sin(a) * r, z))
+    d = 'M ' + ' L '.join('%.2f %.2f' % p for p in pts)
+    s = ('<path d="%s" style="fill:none;stroke:%s;stroke-width:1.1;stroke-linecap:round;'
+         'stroke-dasharray:3.2 2.4"/>' % (d, col))
+    (bx, by), (tx, ty) = pts[-2], pts[-1]
+    dx, dy = tx - bx, ty - by
+    L = math.hypot(dx, dy) or 1
+    ux, uy = dx / L, dy / L
+    hx, hy = -uy, ux
+    s += ('<polygon points="%.2f,%.2f %.2f,%.2f %.2f,%.2f" style="fill:%s"/>'
+          % (tx + ux * 3.4, ty + uy * 3.4, tx - ux * 1.6 + hx * 2.5, ty - uy * 1.6 + hy * 2.5,
+             tx - ux * 1.6 - hx * 2.5, ty - uy * 1.6 - hy * 2.5, col))
+    sc.over(s)
+    return s
+
+
 def plate(sc, z=0.0, thickness=9.0, col='#eef2f6', flutes=True):
     """The polygal chassis plate: 250x150 with 15 mm clipped corners, twin-wall flutes
     running along the car (the template's 'flute direction' arrow)."""

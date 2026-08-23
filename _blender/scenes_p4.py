@@ -225,6 +225,22 @@ def s_track():
 
 
 # ---------------------------------------------------------------- checking only
+def s_toolcheck2():
+    """The chassis-build tools, for checking."""
+    _studio()
+    _bench(0, x0=-20, y0=-20, w=470, d=330)
+    T.ruler(20, 30, 0, ang=4)
+    T.pencil(40, 90, 4, ang=8)
+    T.screwdriver(30, 140, 13, ang=6)
+    T.drill(220, 60, 44, ang=18)
+    T.tape_roll(70, 250, 0, ang=0)
+    T.zip_tie(200, 210, 0, 3, 60, 18)
+    for i in range(3):
+        T.m3_screw(160 + i * 12, 160, 0, 30)
+        T.m3_nut(160 + i * 12, 176, 0)
+    L.camera((208, 132, 24), 760, azimuth=41, elevation=40, lens=56)
+
+
 def s_toolcheck():
     """Not a card figure — every tool side by side, at real scale, so shapes can be judged."""
     _studio()

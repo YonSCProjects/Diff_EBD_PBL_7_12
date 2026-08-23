@@ -36,18 +36,21 @@ import lib as L
 import p4_car
 import tools
 import scenes_p4
+import scenes_p4_m3
 
-for mod in (L, p4_car, tools, scenes_p4):
+for mod in (L, p4_car, tools, scenes_p4, scenes_p4_m3):
     importlib.reload(mod)
 
 L.reset()
 L.ANCHORS.clear()
 p4_car.M = None                          # materials are per-file, so rebuild them
 tools.reset()
-fn = getattr(scenes_p4, scene_name, None)
+fn = getattr(scenes_p4, scene_name, None) or getattr(scenes_p4_m3, scene_name, None)
 if fn is None:
     print('no such scene:', scene_name)
-    print('available:', ', '.join(sorted(n for n in dir(scenes_p4) if n.startswith('s_'))))
+    names = ([n for n in dir(scenes_p4) if n.startswith('s_')]
+             + [n for n in dir(scenes_p4_m3) if n.startswith('s_')])
+    print('available:', ', '.join(sorted(names)))
     sys.exit(2)
 
 fn()

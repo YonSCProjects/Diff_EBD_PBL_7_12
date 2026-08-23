@@ -55,6 +55,18 @@ def materials():
             screen=mat('t_screen', hexcol('#0d1520'), rough=0.14,
                        emission=hexcol('#16283a'), emission_strength=0.7),
             riser_box=mat('t_riser', hexcol('#a8916b'), rough=0.84),
+            ruler_clear=mat('t_ruler', hexcol('#dfe9ee'), rough=0.12, transmission=0.72, ior=1.49),
+            pencil_body=mat('t_pencil', hexcol('#c9a227'), rough=0.44),
+            pencil_wood=mat('t_wood', hexcol('#c9a578'), rough=0.72),
+            eraser=mat('t_eraser', hexcol('#c98f8f'), rough=0.86),
+            sd_handle=mat('t_sd', hexcol('#b02a24'), rough=0.44, clearcoat=0.18),
+            sd_grip=mat('t_sdgrip', hexcol('#20242a'), rough=0.7),
+            drill_body=mat('t_drill', hexcol('#1c5f9c'), rough=0.48, clearcoat=0.12),
+            drill_grey=mat('t_drillg', hexcol('#2b3038'), rough=0.56),
+            chuck=mat('t_chuck', hexcol('#42474e'), rough=0.34, metal=0.8),
+            ziptie=mat('t_ziptie', hexcol('#e8eaec'), rough=0.42),
+            masking=mat('t_masking', hexcol('#d8b874'), rough=0.78),
+            bench_hole=mat('t_hole', hexcol('#8a8172'), rough=0.9),
         )
     return _M
 
@@ -273,3 +285,140 @@ def laptop(x, y, z, ang=0.0, lid=100.0):
     g.rotation_euler = (0, 0, math.radians(ang))
     g.location = (x * MM, y * MM, z * MM)
     return g
+
+
+# ================================================================ the chassis-build tools
+def ruler(x, y, z, ang=0.0, length=200.0):
+    """A clear 200 mm plastic ruler with real graduations — the card has the student check the
+    template's 5 cm strip against it, so the scale has to be legible."""
+    m = materials()
+    parts = [box(0, 0, 0, length + 20, 32, 2.2, m['ruler_clear'], bevel=1.0, name='ruler')]
+    for i in range(0, int(length) + 1, 5):
+        long_ = (i % 50 == 0)
+        h = 11 if long_ else (7 if i % 10 == 0 else 4)
+        parts.append(box(10 + i - 0.25, 32 - h, 2.2, 0.5, h, 0.25,
+                         m['handle_dark'], bevel=0, name='tick'))
+    g = _group(parts, 'ruler_g')
+    g.rotation_euler = (0, 0, math.radians(ang))
+    g.location = (x * MM, y * MM, z * MM)
+    return g
+
+
+def pencil(x, y, z, ang=0.0, tilt=0.0):
+    """A hexagonal HB pencil. revolve() with six segments IS a hex prism, which is neater than
+    trying to extrude one."""
+    m = materials()
+    parts = [
+        revolve([(4.0, 0), (4.0, 150)], 0, 0, 0, m['pencil_body'], axis='x',
+                seg=6, name='pencil_barrel', smooth=False),
+        revolve([(4.0, 0), (2.4, 12), (0.9, 17)], -17, 0, 0, m['pencil_wood'], axis='x',
+                seg=6, name='pencil_cone', smooth=False),
+        revolve([(0.9, 0), (0.15, 4)], -21, 0, 0, m['handle_dark'], axis='x',
+                name='pencil_lead'),
+        revolve([(4.1, 0), (4.1, 9)], 150, 0, 0, m['chrome'], axis='x', seg=6,
+                name='pencil_ferrule', smooth=False),
+        revolve([(3.8, 0), (3.6, 7)], 159, 0, 0, m['eraser'], axis='x', name='pencil_eraser'),
+    ]
+    g = _group(parts, 'pencil')
+    g.rotation_euler = (0, math.radians(tilt), math.radians(ang))
+    g.location = (x * MM, y * MM, z * MM)
+    return g
+
+
+def screwdriver(x, y, z, ang=0.0, tilt=0.0):
+    """A pozidriv driver: steel shaft with a cross tip, and a lathed handle whose grip swells
+    are in the profile rather than bolted on as separate pieces."""
+    m = materials()
+    parts = [
+        revolve([(0, 0), (1.2, 2), (2.6, 6), (2.6, 92)], 0, 0, 0, m['steel'],
+                axis='x', name='sd_shaft'),
+        revolve([(2.6, 0), (7, 3), (11, 10), (12.5, 22), (11.4, 34), (12.6, 44),
+                 (11.4, 56), (12.6, 66), (11.0, 80), (7.5, 92), (4.0, 96)],
+                92, 0, 0, m['sd_handle'], axis='x', name='sd_handle'),
+        revolve([(12.7, 0), (12.7, 4)], 112, 0, 0, m['sd_grip'], axis='x', name='sd_band'),
+    ]
+    g = _group(parts, 'screwdriver')
+    g.rotation_euler = (0, math.radians(tilt), math.radians(ang))
+    g.location = (x * MM, y * MM, z * MM)
+    return g
+
+
+def drill(x, y, z, ang=0.0, bit=60.0, tilt=0.0):
+    """A cordless drill: side profile with a lathed chuck and bit, barrel forward along +x.
+    tilt=-90 stands it on its nose, which is how it looks drilling into a plate — at tilt 0 it
+    reads as lying on the bench pointing sideways."""
+    m = materials()
+    W = 46.0
+    side = [(0, 62), (14, 84), (86, 88), (116, 82), (128, 70), (128, 44), (114, 34),
+            (86, 30), (68, 30), (62, 4), (46, -18), (24, -14), (26, 10), (24, 30), (6, 40)]
+    parts = [
+        prism_xz(side, 0, 0, 0, W, m['drill_body'], name='drill_shell', bevel=2.6),
+        prism_xz([(18, 34), (84, 38), (112, 34), (84, 28), (18, 30)],
+                 0, -0.7, 0, W + 1.4, m['drill_grey'], name='drill_seam', bevel=0.6),
+        # battery pack on the bottom of the grip
+        prism_xz([(0, 0), (44, 0), (44, 22), (0, 22)], 18, 3, -40, W - 6,
+                 m['drill_grey'], name='drill_batt', bevel=2.0),
+        # chuck and bit
+        revolve([(19, 0), (20, 6), (19, 26), (13, 34)], 126, W / 2, 58, m['chuck'],
+                axis='x', name='drill_chuck'),
+        revolve([(2.0, 0), (2.0, bit)], 158, W / 2, 58, m['steel'], axis='x', name='drill_bit'),
+        prism_xz([(0, 0), (10, 2), (12, 18), (2, 20)], 56, 12, 44, W - 20,
+                 m['drill_grey'], name='drill_trigger', bevel=0.8),
+    ]
+    g = _group(parts, 'drill')
+    g.rotation_euler = (0, math.radians(tilt), math.radians(ang))
+    g.location = (x * MM, y * MM, z * MM)
+    return g
+
+
+def m3_screw(x, y, z, length=30.0, axis='z', head=True, down=True):
+    """An M3 machine screw with its HEAD at (x, y, z). `down` runs the shank away from the
+    viewer's side of the plate, which is where a screw actually goes; running it the other way
+    leaves the figure looking like a bed of nails."""
+    m = materials()
+    sgn = -1.0 if down else 1.0
+    parts = []
+    if head:
+        parts.append(revolve([(0, 0), (2.9, 0), (2.9, 2.0 * sgn), (2.4, 2.4 * sgn)],
+                             x, y, z, m['steel'], axis=axis, name='screw_head'))
+    parts.append(revolve([(1.5, 2.0 * sgn), (1.5, (length - 2) * sgn), (0.8, length * sgn)],
+                         x, y, z, m['steel'], axis=axis, name='screw_shank'))
+    return _group(parts, 'm3screw')
+
+
+def m3_nut(x, y, z, axis='z'):
+    m = materials()
+    return revolve([(2.75, 0), (2.75, 2.4)], x, y, z, m['steel'], axis=axis, seg=6,
+                   name='m3nut', smooth=False)
+
+
+def zip_tie(x, y, z, w, d, h, ang=0.0):
+    """A cable tie wrapped around a w x d footprint of height h, head on the near side."""
+    m = materials()
+    parts = [
+        box(0, 0, 0, 2.6, d, 1.2, m['ziptie'], bevel=0.3, name='zt_bottom'),
+        box(0, 0, 0, 2.6, 1.2, h, m['ziptie'], bevel=0.3, name='zt_side_a'),
+        box(0, d - 1.2, 0, 2.6, 1.2, h, m['ziptie'], bevel=0.3, name='zt_side_b'),
+        box(0, 0, h, 2.6, d, 1.2, m['ziptie'], bevel=0.3, name='zt_top'),
+        box(-1.4, d - 4, h - 1, 5.4, 6, 4.4, m['ziptie'], bevel=0.8, name='zt_head'),
+    ]
+    g = _group(parts, 'ziptie')
+    g.rotation_euler = (0, 0, math.radians(ang))
+    g.location = (x * MM, y * MM, z * MM)
+    return g
+
+
+def tape_roll(x, y, z, ang=0.0):
+    """A roll of masking tape on its side. Cylinders, not a self-closing lathe profile —
+    a profile whose last point returns to its first folds in on itself."""
+    m = materials()
+    parts = [
+        cyl(0, 0, 48, 48, 24, m['masking'], axis='y', name='tape_roll'),
+        cyl(0, -0.5, 48, 26, 25, m['paper'], axis='y', name='tape_core'),
+        cyl(0, 1.0, 48, 25.4, 22, m['bench_hole'], axis='y', name='tape_bore'),
+    ]
+    g = _group(parts, 'tape_roll_g')
+    g.rotation_euler = (0, 0, math.radians(ang))
+    g.location = (x * MM, y * MM, z * MM)
+    return g
+

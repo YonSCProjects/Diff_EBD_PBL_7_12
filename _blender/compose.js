@@ -51,8 +51,11 @@ for (const it of spec.items || []) {
   const wch = size * 0.56;                       // Rubik at this weight, Hebrew average
   const bw = Math.max(...lines.map(l => l.length)) * wch + pad * 2;
   const bh = lines.length * lh + pad * 1.25;
-  const cx = a.x + (it.dx || 0) * K;
-  const cy = a.y + (it.dy || 0) * K;
+  // Keep the box inside the frame. An offset that pushes a label off the edge crops the Hebrew
+  // mid-word, which is worse than a slightly tighter placement.
+  const edge = 8 * K;
+  const cx = Math.min(Math.max(a.x + (it.dx || 0) * K, bw / 2 + edge), W - bw / 2 - edge);
+  const cy = Math.min(Math.max(a.y + (it.dy || 0) * K, bh / 2 + edge), H - bh / 2 - edge);
   const bx = cx - bw / 2, by = cy - bh / 2;
 
   // leader: a hairline from the box edge to a ring on the part itself

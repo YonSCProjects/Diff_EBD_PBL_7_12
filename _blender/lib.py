@@ -8,7 +8,7 @@ Run through render.py, never on its own.
 import math
 import os
 import bpy
-from mathutils import Vector
+from mathutils import Vector, Matrix
 
 MM = 0.001                      # model mm -> Blender metres
 
@@ -127,6 +127,17 @@ def hexcol(h):
 
 
 # ---------------------------------------------------------------- primitives
+def _bake(ob, matrix):
+    """Apply a transform to the MESH DATA. bpy.ops.object.transform_apply() acts on whatever is
+    SELECTED, and objects created with bpy.data.objects.new() are not selected — so the operator
+    silently transformed some other object and this one kept its axis unrotated. Baking the
+    matrix into the data has no such dependency."""
+    ob.data.transform(matrix)
+    ob.rotation_euler = (0, 0, 0)
+    ob.scale = (1, 1, 1)
+    return ob
+
+
 def _finish(ob, m, shade_smooth=False, bevel=0.0):
     if m:
         ob.data.materials.append(m)
@@ -155,9 +166,8 @@ def box(x, y, z, w, d, h, m=None, bevel=0.35, name='box'):
     bpy.ops.mesh.primitive_cube_add(size=1)
     ob = bpy.context.object
     ob.name = name
-    ob.scale = (w * MM, d * MM, h * MM)
+    _bake(ob, Matrix.Diagonal((w * MM, d * MM, h * MM, 1.0)))
     ob.location = ((x + w / 2) * MM, (y + d / 2) * MM, (z + h / 2) * MM)
-    bpy.ops.object.transform_apply(scale=True)
     return _finish(ob, m, bevel=bevel)
 
 
@@ -167,14 +177,13 @@ def cyl(x, y, z, r, h, m=None, axis='z', seg=64, name='cyl', bevel=0.0):
     ob = bpy.context.object
     ob.name = name
     if axis == 'x':
-        ob.rotation_euler = (0, math.radians(90), 0)
+        _bake(ob, Matrix.Rotation(math.radians(90), 4, 'Y'))
         ob.location = ((x + h / 2) * MM, y * MM, z * MM)
     elif axis == 'y':
-        ob.rotation_euler = (math.radians(90), 0, 0)
+        _bake(ob, Matrix.Rotation(math.radians(90), 4, 'X'))
         ob.location = (x * MM, (y + h / 2) * MM, z * MM)
     else:
         ob.location = (x * MM, y * MM, (z + h / 2) * MM)
-    bpy.ops.object.transform_apply(rotation=True)
     return _finish(ob, m, shade_smooth=True, bevel=bevel)
 
 
@@ -225,11 +234,10 @@ def revolve(profile, x, y, z, m=None, axis='z', seg=64, name='revolve', smooth=T
     bm.free()
     bpy.context.view_layer.objects.active = ob
     if axis == 'x':
-        ob.rotation_euler = (0, math.radians(90), 0)
+        _bake(ob, Matrix.Rotation(math.radians(90), 4, 'Y'))
     elif axis == 'y':
-        ob.rotation_euler = (math.radians(-90), 0, 0)
+        _bake(ob, Matrix.Rotation(math.radians(-90), 4, 'X'))
     ob.location = (x * MM, y * MM, z * MM)
-    bpy.ops.object.transform_apply(rotation=True)
     return _finish(ob, m, shade_smooth=smooth)
 
 

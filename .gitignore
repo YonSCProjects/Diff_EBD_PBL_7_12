@@ -39,3 +39,9 @@ desktop.ini
 **/images/fritzing/*.spec.tmp.json
 **/images/fritzing/*_preview.png
 **/images/fritzing/_export_*/
+
+# Blender working renders (the published SVGs live under each project's images/)
+_blender/work/
+
+__pycache__/
+*.pyc

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><style>html,body{margin:0;background:#fff;overflow:hidden}canvas{display:block}</style></head>
+<body>
+<script type="importmap">
+{ "imports": {
+  "three": "/node_modules/three/build/three.module.js",
+  "three/addons/": "/node_modules/three/examples/jsm/"
+} }
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { buildDrone, MM, G } from '/_render3d/model.js';
+
+const P = new URLSearchParams(location.search);
+const W = +(P.get('w') || 1600), H = +(P.get('h') || 1200);
+const SS = +(P.get('ss') || 2);                 // supersample factor
+const VIEW = P.get('view') || 'hero';
+const PROPS = P.get('props') === '1';
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(SS);
+renderer.setSize(W, H);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.VSMShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = null;
+
+// studio environment — procedural, so nothing has to be fetched
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+scene.environmentIntensity = 1.15;
+
+// key light with a soft shadow
+const key = new THREE.DirectionalLight(0xffffff, 2.4);
+key.position.set(0.19, 0.30, 0.16);
+key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+key.shadow.radius = 2.5;
+key.shadow.blurSamples = 16;
+const c = key.shadow.camera;
+c.near = 0.05; c.far = 0.8; c.left = -0.10; c.right = 0.10; c.top = 0.10; c.bottom = -0.10;
+scene.add(key);
+const fill = new THREE.DirectionalLight(0xdce6ff, 0.5);
+fill.position.set(-0.22, 0.14, -0.18);
+scene.add(fill);
+
+// shadow-catching ground
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(0.5, 0.5),
+  new THREE.ShadowMaterial({ opacity: 0.30 })
+);
+ground.rotateX(-Math.PI / 2);
+ground.position.y = (G.PLATE_T + 5.2 - G.MOTOR_H - G.FOOT_H) * MM;
+ground.receiveShadow = true;
+scene.add(ground);
+
+const root = new THREE.Group();
+buildDrone(root, { props: PROPS });
+scene.add(root);
+
+// frame the machine
+const bbox = new THREE.Box3().setFromObject(root);
+const centre = bbox.getCenter(new THREE.Vector3());
+const radius = bbox.getSize(new THREE.Vector3()).length() / 2;
+
+const camera = new THREE.PerspectiveCamera(34, W / H, 0.01, 10);
+const VIEWS = {
+  hero:   [1.05, 0.72, 1.25],
+  top:    [0.28, 1.60, 0.42],
+  low:    [1.25, 0.30, 1.05],
+  detail: [0.55, 0.48, 0.80],
+};
+const v = new THREE.Vector3(...(VIEWS[VIEW] || VIEWS.hero)).normalize();
+camera.position.copy(centre).add(v.multiplyScalar(radius * 2.55));
+camera.lookAt(centre);
+
+renderer.render(scene, camera);
+window.__done = true;
+</script>
+</body>
+</html>

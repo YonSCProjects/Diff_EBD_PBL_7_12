@@ -64,9 +64,12 @@ def _usb_aside(z=0.0):
     """The USB cable coiled off to the side, unplugged. In a battery-in scene this is the
     picture of the rule, so it gets drawn rather than implied."""
     m = D.ensure()
-    return [L.ribbon(L.ellipse_pts(330, 24, 44, 30, n=48), 3.0, FLOOR + 3.0,
+    # close enough to the aircraft to survive the crop. Parked out at 330 mm the coil fell
+    # outside every frame, and its callout — the one that says the cable is NOT plugged in —
+    # ended up with its leader pointing at bare bench.
+    return [L.ribbon(L.ellipse_pts(252, 46, 40, 27, n=48), 3.0, FLOOR + 3.0,
                      m['w_black'], name='usbcoil', closed=True, thickness=3.0),
-            box(288, 16, FLOOR, 16, 8, 6, m['alu'], bevel=1.0, name='usbplug')]
+            box(214, 40, FLOOR, 16, 8, 6, m['alu'], bevel=1.0, name='usbplug')]
 
 
 def _spin(which, z=0.0, r=None):
@@ -250,7 +253,7 @@ def s_p8_signal_wiring():
     L.anchor('gates', (D.MOSFET_XY[0] - 6, D.MOSFET_XY[1] + D.PAD_GATE_DY, zf + D.Z_MOSFET + 4))
     L.anchor('i2c', (D.IMU_XY[0] + 8, D.IMU_XY[1] + D.IMU_D, zf + D.Z_DECK + 6))
     L.anchor('bag', _near((300, 260, FLOOR + 20), 0.75))
-    L.anchor('usb', _near((330, 24, FLOOR + 6)))
+    L.anchor('usb', (252, 46, FLOOR + 6))
     L.camera_fit(subject='drone', azimuth=44, elevation=36, lens=60)
 
 
@@ -285,7 +288,7 @@ def s_p8_pre_power():
     L.anchor('meter', _near((376, 316, FLOOR + 38)))
     L.anchor('plug', (D.BAT_XY[0] + D.BAT_W + 10, D.BAT_XY[1] + D.BAT_D / 2, zf + D.Z_BAT + 5))
     L.anchor('propbox', _near((385, 62, FLOOR + 28)))
-    L.anchor('usb', _near((330, 24, FLOOR + 6)))
+    L.anchor('usb', (252, 46, FLOOR + 6))
     L.camera_fit(subject='drone', azimuth=46, elevation=34, lens=58)
 
 
@@ -325,7 +328,7 @@ def s_p8_spin():
     _drone_anchors(zf)
     L.anchor('spinning', (D.POS['front'][0], D.POS['front'][1], zf + D.Z_SHAFT + 6))
     L.anchor('phone', _near((282, 254, FLOOR + 76), 0.7))
-    L.anchor('usb', _near((330, 24, FLOOR + 6)))
+    L.anchor('usb', (252, 46, FLOOR + 6))
     L.anchor('propbox', _near((460, 296, FLOOR + 30)))
     L.camera_fit(subject='drone', azimuth=46, elevation=30, lens=58)
 

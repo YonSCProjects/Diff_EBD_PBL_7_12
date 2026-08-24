@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "anchor": "cam",
+      "he": "הרשת נקראת\nEXPLORER-01",
+      "dx": -250,
+      "dy": -170,
+      "size": 19
+    },
+    {
+      "anchor": "phone",
+      "he": "הווידאו החי\nבדפדפן",
+      "dx": 190,
+      "dy": 190,
+      "size": 19
+    }
+  ],
+  "wifi": [
+    {
+      "anchor": "air",
+      "scale": 1.5,
+      "rot": -32
+    }
+  ]
+}

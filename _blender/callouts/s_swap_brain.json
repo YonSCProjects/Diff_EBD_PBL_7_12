@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "anchor": "uno_off",
+      "he": "ה-Uno יורד\nמהמכונית",
+      "dx": 300,
+      "dy": -90,
+      "size": 20
+    },
+    {
+      "anchor": "esp_down",
+      "he": "ה-ESP32 עולה\nעל אותו סקוץ׳",
+      "dx": -330,
+      "dy": -40,
+      "size": 20
+    },
+    {
+      "anchor": "plate",
+      "he": "אותה מכונית — מוח חדש",
+      "dx": 130,
+      "dy": 270,
+      "size": 21
+    }
+  ],
+  "arrows": [
+    {
+      "from": "esp_down",
+      "to": "velcro",
+      "fdy": 20
+    }
+  ]
+}

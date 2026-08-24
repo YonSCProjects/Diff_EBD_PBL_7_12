@@ -33,6 +33,40 @@ def reset():
     return sc
 
 
+def outlines(thickness=1.5, colour=(0, 0, 0), crease_angle=118.0, on=True):
+    """Freestyle contour lines — what turns a soft product render into a technical illustration.
+
+    A raytraced image already hides what should be hidden, but without an outline every part
+    dissolves into its neighbour wherever their tones are close: a light plate against a light
+    bench, a grey motor can against a grey rim. An ink line drawn exactly on the true silhouette,
+    border and crease edges is what makes each part read as a separate object.
+
+    Blender derives these from the geometry itself, so unlike a painter's-algorithm outline they
+    are guaranteed to sit on real boundaries and only there.
+    """
+    sc = bpy.context.scene
+    sc.render.use_freestyle = on
+    if not on:
+        return
+    sc.render.line_thickness_mode = 'ABSOLUTE'
+    sc.render.line_thickness = thickness
+    for vl in sc.view_layers:
+        vl.use_freestyle = True
+        fs = vl.freestyle_settings
+        fs.crease_angle = math.radians(crease_angle)
+        while fs.linesets:
+            fs.linesets.remove(fs.linesets[0])
+        ls = fs.linesets.new('ink')
+        ls.select_silhouette = True      # the outer edge of every object
+        ls.select_border = True          # open mesh boundaries
+        ls.select_crease = True          # hard folds, e.g. a box corner
+        ls.select_edge_mark = False
+        ls.select_material_boundary = True   # where one material meets another
+        ls.linestyle.color = colour
+        ls.linestyle.thickness = thickness
+        ls.linestyle.caps = 'ROUND'
+
+
 def configure(engine='CYCLES', samples=128, res=(1800, 1350), transparent=True, denoise=True):
     sc = bpy.context.scene
     sc.render.engine = engine
@@ -242,13 +276,22 @@ def revolve(profile, x, y, z, m=None, axis='z', seg=64, name='revolve', smooth=T
 
 
 def helix(x, y, z, r, turns, height, wire_r, m=None, axis='z', name='helix', steps=24):
-    """A coiled spring — the iron stand's holder, chiefly."""
+    """A coiled spring — the iron stand's holder, or wire wound on a reel.
+
+    `axis` is the coil's own axis. It used to be accepted and silently ignored, which meant a
+    coil asked for around Y came out around Z and lay across whatever it was meant to wind on."""
     pts = []
     n = int(turns * steps)
     for i in range(n + 1):
-        t = i / steps
-        a = 2 * math.pi * t
-        pts.append((x + math.cos(a) * r, y + math.sin(a) * r, z + height * (i / max(1, n))))
+        a = 2 * math.pi * (i / steps)
+        c, s = math.cos(a) * r, math.sin(a) * r
+        run = height * (i / max(1, n))
+        if axis == 'z':
+            pts.append((x + c, y + s, z + run))
+        elif axis == 'y':
+            pts.append((x + c, y + run, z + s))
+        else:                                   # 'x'
+            pts.append((x + run, y + c, z + s))
     return tube(pts, wire_r, m, name=name, seg=10)
 
 
@@ -384,3 +427,166 @@ def render(path):
     with open(os.path.splitext(path)[0] + '.anchors.json', 'w', encoding='utf-8') as f:
         json.dump(meta, f, ensure_ascii=False, indent=1)
     return path
+
+
+def ribbon(pts2d, width, z, m=None, name='ribbon', closed=True, thickness=0.3):
+    """A flat strip of constant width following a path — a loop of floor tape, a painted lane.
+
+    Built as ONE mesh on purpose. Laid out as a row of little boxes instead, the Freestyle pass
+    inks every box separately and a smooth loop of tape comes out looking like a bicycle chain.
+    One mesh gives exactly two ink contours: the inner edge and the outer edge.
+    """
+    import bmesh
+    n = len(pts2d)
+    me = bpy.data.meshes.new(name)
+    ob = bpy.data.objects.new(name, me)
+    bpy.context.collection.objects.link(ob)
+    bm = bmesh.new()
+    inner, outer = [], []
+    for i, (x, y) in enumerate(pts2d):
+        if closed:
+            px, py = pts2d[(i - 1) % n]
+            nx, ny = pts2d[(i + 1) % n]
+        else:
+            px, py = pts2d[max(i - 1, 0)]
+            nx, ny = pts2d[min(i + 1, n - 1)]
+        tx, ty = nx - px, ny - py
+        L_ = math.hypot(tx, ty) or 1.0
+        # the normal to the local tangent; offsetting both ways keeps the width constant
+        ux, uy = -ty / L_, tx / L_
+        h = width / 2.0
+        inner.append(bm.verts.new(((x - ux * h) * MM, (y - uy * h) * MM, z * MM)))
+        outer.append(bm.verts.new(((x + ux * h) * MM, (y + uy * h) * MM, z * MM)))
+    last = n if closed else n - 1
+    for i in range(last):
+        j = (i + 1) % n
+        bm.faces.new((inner[i], outer[i], outer[j], inner[j]))
+    if thickness:
+        bmesh.ops.solidify(bm, geom=bm.faces[:] + bm.edges[:] + bm.verts[:],
+                           thickness=-thickness * MM)
+    bm.normal_update()
+    bm.to_mesh(me)
+    bm.free()
+    bpy.context.view_layer.objects.active = ob
+    return _finish(ob, m, bevel=0.0)
+
+
+def ellipse_pts(cx, cy, rx, ry, n=96, rot=0.0):
+    """Points round an ellipse — the path a tape loop follows."""
+    c, s = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+    out = []
+    for i in range(n):
+        a = 2 * math.pi * i / n
+        x, y = rx * math.cos(a), ry * math.sin(a)
+        out.append((cx + x * c - y * s, cy + x * s + y * c))
+    return out
+
+
+def camera_fit(azimuth=44.0, elevation=32.0, lens=56.0, margin=0.075, target=None,
+               subject=None, extra=(), lo=120.0, hi=4000.0, shift=(0.0, 0.0)):
+    """Place the camera far enough back that EVERY registered anchor lands inside the frame.
+
+    Hand-picked distances are the reason callouts kept getting dropped: compose.js refuses to
+    draw a label whose anchor is off-screen, so a bench prop that carries the whole point of a
+    card — the closed prop box, the zipped LiPo bag — silently lost its Hebrew. The anchors are
+    exactly the things that must be visible, so they are the right thing to frame on.
+
+    `margin` is the fraction of the frame kept clear at each edge for the label boxes.
+    `extra` takes further (x, y, z) points in mm that must also be in view.
+    """
+    pts = [tuple(v) for v in ANCHORS.values()] + [tuple(p) for p in extra]
+    if not pts:
+        return camera(target or (0, 0, 0), 600, azimuth, elevation, lens, shift)
+    xs, ys, zs = zip(*pts)
+    mid = ((min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2, (min(zs) + max(zs)) / 2)
+    if target is None and subject is not None:
+        # Aiming straight at the subject wastes half the frame whenever the subject sits at the
+        # edge of the content — a front motor, say, with the rest of the aircraft behind it: the
+        # fit then has to push back far enough to hold a point a whole wheelbase off-axis.
+        # Aiming halfway between the subject and the content's centre keeps the subject
+        # prominent without paying for that.
+        sp = ANCHORS[subject] if isinstance(subject, str) else tuple(subject)
+        target = tuple((a + b) / 2 for a, b in zip(sp, mid))
+    if target is None:
+        target = mid
+
+    # The projection is worked out here rather than through world_to_camera_view on a temporary
+    # camera object. A freshly created object's matrix_world lags the depsgraph, so the search
+    # kept measuring the PREVIOUS candidate and converged on a distance far wider than needed —
+    # which is exactly how a 100 mm drone ended up as a quarter of the frame.
+    sc = bpy.context.scene
+    rx, ry = sc.render.resolution_x, sc.render.resolution_y
+    tan_x = 18.0 / lens                       # Blender's 36 mm sensor, fit to the long side
+    tan_y = tan_x * (ry / rx) if rx >= ry else tan_x
+    if rx < ry:
+        tan_x = tan_y * (rx / ry)
+    tgt = Vector((target[0] * MM, target[1] * MM, target[2] * MM))
+    a, e = math.radians(azimuth), math.radians(elevation)
+    unit = Vector((math.cos(e) * math.cos(a), -math.cos(e) * math.sin(a), math.sin(e)))
+    lim = 1.0 - 2.0 * margin
+
+    def fits(d):
+        loc = tgt + unit * (d * MM)
+        rot = (tgt - loc).to_track_quat('-Z', 'Y').to_matrix().to_4x4()
+        inv = (Matrix.Translation(loc) @ rot).inverted()
+        for p in pts:
+            v = inv @ Vector((p[0] * MM, p[1] * MM, p[2] * MM))
+            depth = -v.z
+            if depth <= 1e-6:
+                return False
+            if abs(v.x) > depth * tan_x * lim or abs(v.y) > depth * tan_y * lim:
+                return False
+        return True
+
+    # 26 halvings put the answer well under a millimetre, and each step is a handful of
+    # matrix multiplies — nothing next to a render
+    if not fits(hi):
+        return camera(target, hi, azimuth, elevation, lens, shift)
+    best = hi
+    for _ in range(26):
+        mid = (lo + best) / 2
+        if fits(mid):
+            best = mid
+        else:
+            lo = mid
+    return camera(target, best, azimuth, elevation, lens, shift)
+
+
+def bbox_pts(x0, y0, z0, x1, y1, z1):
+    """The eight corners of a box in mm — hand this to camera_fit's `extra` so the whole of a
+    subject stays in frame, not just the details that happen to carry a callout."""
+    return [(x, y, z) for x in (x0, x1) for y in (y0, y1) for z in (z0, z1)]
+
+
+def sphere(x, y, z, r, m=None, seg=24, name='sphere'):
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=r * MM, segments=seg, ring_count=seg // 2,
+                                         location=(x * MM, y * MM, z * MM))
+    ob = bpy.context.object
+    ob.name = name
+    return _finish(ob, m, shade_smooth=True)
+
+
+def capsule(p0, p1, r, m=None, seg=20, name='capsule'):
+    """A rounded rod between two 3-D points. Finger bones are capsules; built as bare cylinders
+    they end in hard discs and a hand reads as a bundle of pipes."""
+    import bmesh
+    ax, ay, az = p0
+    bx, by, bz = p1
+    d = Vector(((bx - ax) * MM, (by - ay) * MM, (bz - az) * MM))
+    length = d.length or 1e-6
+    me = bpy.data.meshes.new(name)
+    ob = bpy.data.objects.new(name, me)
+    bpy.context.collection.objects.link(ob)
+    bm = bmesh.new()
+    bmesh.ops.create_cone(bm, cap_ends=True, segments=seg, radius1=r * MM, radius2=r * MM,
+                          depth=length,
+                          matrix=Matrix.Translation((0, 0, length / 2)))
+    bmesh.ops.create_uvsphere(bm, u_segments=seg, v_segments=seg // 2, radius=r * MM)
+    bmesh.ops.create_uvsphere(bm, u_segments=seg, v_segments=seg // 2, radius=r * MM,
+                              matrix=Matrix.Translation((0, 0, length)))
+    bm.to_mesh(me)
+    bm.free()
+    ob.location = (ax * MM, ay * MM, az * MM)
+    ob.rotation_euler = d.to_track_quat('Z', 'Y').to_euler()
+    bpy.context.view_layer.objects.active = ob
+    return _finish(ob, m, shade_smooth=True)

@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "anchor": "phone",
+      "he": "וידאו למעלה,\nכפתורי נהיגה למטה",
+      "dx": 140,
+      "dy": 200,
+      "size": 19
+    },
+    {
+      "anchor": "ahead",
+      "he": "קדימה",
+      "dx": -20,
+      "dy": -140,
+      "size": 20
+    }
+  ],
+  "wifi": [
+    {
+      "anchor": "air",
+      "scale": 1.6,
+      "rot": -36
+    }
+  ],
+  "arrows": [
+    {
+      "from": "plate",
+      "to": "ahead"
+    }
+  ]
+}

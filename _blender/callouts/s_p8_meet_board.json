@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "anchor": "tab",
+      "he": "הלשונית היא ה-Drain",
+      "dx": 210,
+      "dy": -200,
+      "size": 19
+    },
+    {
+      "anchor": "rails",
+      "he": "BAT+ מול GND —\nאין צפצוף",
+      "dx": -230,
+      "dy": -170,
+      "size": 19
+    },
+    {
+      "anchor": "gate_pad",
+      "he": "פד G מול GND —\nבערך 10kΩ",
+      "dx": -240,
+      "dy": 190,
+      "size": 19
+    },
+    {
+      "anchor": "pigtail",
+      "he": "הלוח לא מחובר\nלשום דבר",
+      "dx": 60,
+      "dy": 230,
+      "size": 19
+    }
+  ]
+}

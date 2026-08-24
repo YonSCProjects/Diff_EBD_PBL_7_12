@@ -41,17 +41,21 @@ CENTRE = (148.0, 110.0, 0.0)
 # ---------------------------------------------------------------- materials
 def materials():
     return dict(
-        polygal=mat('polygal', hexcol('#eef4f8'), rough=0.16, transmission=0.88,
-                    ior=1.50, clearcoat=0.35),
-        polygal_rib=mat('polygal_rib', hexcol('#e6eef4'), rough=0.22, transmission=0.80, ior=1.50),
-        motor_yellow=mat('motor_yellow', hexcol('#c99a06'), rough=0.46, clearcoat=0.28),
-        motor_can=mat('motor_can', hexcol('#b9bec6'), rough=0.30, metal=1.0),
+        polygal=mat('polygal', hexcol('#f4f8fb'), rough=0.38, transmission=0.52,
+                    ior=1.50, clearcoat=0.08),
+        polygal_rib=mat('polygal_rib', hexcol('#dde7ee'), rough=0.42, transmission=0.44, ior=1.50),
+        motor_yellow=mat('motor_yellow', hexcol('#d9a808'), rough=0.44, clearcoat=0.20),
+        motor_can=mat('motor_can', hexcol('#a7adb5'), rough=0.34, metal=1.0),
         gearbox_dark=mat('gearbox_dark', hexcol('#2b2f36'), rough=0.5),
-        tyre=mat('tyre', hexcol('#24282e'), rough=0.86),
-        rim=mat('rim', hexcol('#c9ccd1'), rough=0.46, clearcoat=0.22),
+        tyre=mat('tyre', hexcol('#1b1f24'), rough=0.88),
+        rim=mat('rim', hexcol('#e2e5e9'), rough=0.5, clearcoat=0.14),
         pcb_uno=mat('pcb_uno', hexcol('#0d4a57'), rough=0.5, clearcoat=0.35, cc_rough=0.32),
         pcb_drv=mat('pcb_drv', hexcol('#6e1f18'), rough=0.5, clearcoat=0.35, cc_rough=0.32),
         pcb_sens=mat('pcb_sens', hexcol('#1b4890'), rough=0.46, clearcoat=0.45, cc_rough=0.3),
+        pcb_esp=mat('pcb_esp', hexcol('#1d2126'), rough=0.5, clearcoat=0.3, cc_rough=0.32),
+        shield=mat('shield', hexcol('#b4b9c0'), rough=0.36, metal=0.95),
+        led_blue=mat('led_blue', hexcol('#2f6fd0'), rough=0.3, emission=hexcol('#3a7fe0'),
+                     emission_strength=2.5),
         header=mat('header', hexcol('#14171b'), rough=0.44),
         gold=mat('gold', hexcol('#caa03a'), rough=0.3, metal=1.0),
         steel=mat('steel', hexcol('#9aa0a6'), rough=0.3, metal=1.0),
@@ -106,13 +110,17 @@ def sensor_holes(z=0.0):
 
 
 # ---------------------------------------------------------------- motors and wheels
-def tt_motor(side, pos, z=0.0, leads=True):
-    """One TT gear motor glued under the plate: yellow gearbox inboard, silver can outboard,
-    output shaft through the side wall."""
+def tt_motor(side, pos, z=0.0, leads=True, up=False):
+    """One TT gear motor on the plate: yellow gearbox inboard, silver can outboard, output
+    shaft through the side wall.
+
+    up=True mirrors the motor about the plate's mid-plane, which is what you see while the
+    chassis is upside-down on the bench and the motors are going on. Without it a build figure
+    hides its own subject under the plate."""
     m = ensure()
     x = MOTOR_FX if pos == 'front' else MOTOR_RX
     y = PLATE_Y0 if side == 'left' else PLATE_Y1 - MOTOR_D
-    zb = z + Z_MOTOR
+    zb = z + (PLATE_T if up else Z_MOTOR)
     out = [box(x, y, zb, MOTOR_W, MOTOR_D, MOTOR_H, m['motor_yellow'], bevel=1.2, name='gearbox')]
     can_x = x + MOTOR_W - 24 if pos == 'front' else x
     out.append(cyl(can_x, y + MOTOR_D / 2, zb + MOTOR_H / 2, 9.6, 24, m['motor_can'],
@@ -120,10 +128,11 @@ def tt_motor(side, pos, z=0.0, leads=True):
     # the gearbox output boss and the axle through the plate's side wall
     ax = AXLE_F if pos == 'front' else AXLE_R
     ay = PLATE_Y0 - 3 if side == 'left' else PLATE_Y1 + 3
-    out.append(cyl(ax, y + MOTOR_D / 2, z + Z_AXLE, 6.0, MOTOR_D, m['gearbox_dark'],
+    za = z + (PLATE_T - Z_AXLE if up else Z_AXLE)
+    out.append(cyl(ax, y + MOTOR_D / 2, za, 6.0, MOTOR_D, m['gearbox_dark'],
                    axis='y', name='boss'))
     sgn = -1 if side == 'left' else 1
-    out.append(cyl(ax, ay, z + Z_AXLE, 2.6, sgn * 9, m['steel'], axis='y', name='axle'))
+    out.append(cyl(ax, ay, za, 2.6, sgn * 9, m['steel'], axis='y', name='axle'))
     if leads:
         lx = x if pos == 'front' else x + MOTOR_W
         ly = y + MOTOR_D / 2
@@ -179,18 +188,32 @@ def wheels_all(z=0.0):
 
 # ---------------------------------------------------------------- boards
 def _header(x0, y0, z, n, m, along='x'):
+    """A pin header: one black plastic strip with square gold pins standing proud of it.
+
+    Modelled as n solid cubes — which is what this was — a header reads as a row of gold bricks
+    and the board stops looking like a board. The strip carries the shape; the pins are 0.64 mm
+    square, which is what they actually are."""
+    mm = ensure()
+    span = n * 2.54
     out = []
+    if along == 'x':
+        out.append(box(x0 - 0.2, y0 - 0.2, z, span, 2.54, 2.5, m, bevel=0.2, name='hdr_strip'))
+    else:
+        out.append(box(x0 - 0.2, y0 - 0.2, z, 2.54, span, 2.5, m, bevel=0.2, name='hdr_strip'))
     for i in range(n):
         dx, dy = (i * 2.54, 0) if along == 'x' else (0, i * 2.54)
-        out.append(box(x0 + dx, y0 + dy, z, 2.2, 2.2, 2.4, m, bevel=0, name='hdr'))
+        out.append(box(x0 + dx + 0.75, y0 + dy + 0.75, z + 2.5, 0.64, 0.64, 3.0,
+                       mm['gold'], bevel=0, name='hdr_pin'))
     return out
 
 
-def arduino_uno(z=0.0, velcro=True):
+def arduino_uno(z=0.0, velcro=True, dx=0.0, dy=0.0, dz=0.0):
+    """dx/dy/dz shift the whole board off its seat — that is how Project 5's swap figure lifts
+    the Uno clear of the car without moving anything else."""
     m = ensure()
-    x, y = BRAIN_X + 2, BRAIN_Y + 3
+    x, y = BRAIN_X + 2 + dx, BRAIN_Y + 3 + dy
     w, d, t = 68.6, 53.4, 1.6
-    zt = z + PLATE_T
+    zt = z + PLATE_T + dz
     out = []
     if velcro:
         out.append(box(x + 4, y + 5, zt, w - 8, d - 10, 1.2, m['velcro'], bevel=0, name='velcro'))
@@ -273,22 +296,88 @@ def signal_wires(z=0.0):
     """The six driver wires to pins 5-10, plus the thick common ground."""
     m = ensure()
     ux, uy = BRAIN_X + 2, BRAIN_Y + 3
-    cols = ('w_green', 'w_orange', 'w_orange', 'w_orange', 'w_orange', 'w_green')
+    # six distinguishable colours, and each wire gets its own arc height and its own lane so the
+    # bundle reads as six runs rather than one rainbow smear
+    cols = ('w_green', 'w_orange', 'w_yellow', 'w_blue', 'w_orange', 'w_green')
     out = []
     for i in range(6):
+        lane = 66 - i * 3.4
+        arc = z + PLATE_T + 9 + i * 1.6
         out.append(tube([(DRV_X + 12 + i * 2.6, DRV_Y + 2, z + PLATE_T + 6),
-                         (DRV_X - 6, 74 - i * 2, z + PLATE_T + 10),
+                         (DRV_X - 4 - i * 1.5, lane, arc),
+                         (ux + 40, lane - 2, arc - 1),
                          (ux + 22 + i * 2.54, uy + 2.2, z + PLATE_T + 5)],
-                        0.85, m[cols[i]], name='sig'))
+                        0.8, m[cols[i]], name='sig'))
     out.append(tube([(DRV_X + 30, DRV_Y + DRV_D, z + PLATE_T + 8),
                      (DRV_X + 10, 152, z + PLATE_T + 12),
                      (ux + 30, uy + 52, z + PLATE_T + 5)], 1.5, m['w_black'], name='gnd'))
     return out
 
 
+def esp32_devkit(z=0.0, velcro=True, dx=0.0, dy=0.0, dz=0.0):
+    """The 30-pin DOIT DevKit that replaces the Uno in Project 5. It sits on the same velcro
+    patch, which is the whole point of that card — same car, new brain."""
+    m = ensure()
+    x, y = BRAIN_X + 9 + dx, BRAIN_Y + 13 + dy
+    w, d, t = 51.5, 28.3, 1.4
+    zt = z + PLATE_T + dz
+    out = []
+    if velcro:
+        out.append(box(BRAIN_X + 6, BRAIN_Y + 8, zt, 54, 40, 1.2, m['velcro'], bevel=0,
+                       name='velcro'))
+        zt += 1.2
+    out.append(box(x, y, zt, w, d, t, m['pcb_esp'], bevel=0.5, name='esp32'))
+    zb = zt + t
+    # micro-USB at the nose end, with the BOOT and EN buttons flanking it
+    out.append(box(x - 1.0, y + d / 2 - 4.0, zb, 7.5, 8.0, 3.0, m['alu'], bevel=0.4,
+                   name='microusb'))
+    for by in (y + 2.6, y + d - 6.6):
+        out.append(box(x + 9.0, by, zb, 4.0, 4.0, 1.2, m['gearbox_dark'], bevel=0.3,
+                       name='btn_base'))
+        out.append(cyl(x + 11.0, by + 2.0, zb + 1.2, 1.5, 0.9, m['switch'], name='btn'))
+    # the ESP32-WROOM module: black carrier, steel can over the silicon, printed antenna
+    # hanging off the tail. It is the single most recognisable thing on this board.
+    out.append(box(x + 26.0, y + 5.15, zb, 25.5, 18.0, 0.8, m['gearbox_dark'], bevel=0.2,
+                   name='wroom'))
+    out.append(box(x + 26.0, y + 5.15, zb + 0.8, 18.0, 18.0, 2.4, m['shield'], bevel=0.4,
+                   name='can'))
+    for i in range(5):                      # the meander of the PCB antenna
+        out.append(box(x + 45.0, y + 7.5 + i * 2.6, zb + 0.8, 5.0, 1.1, 0.12, m['gold'],
+                       bevel=0, name='ant'))
+    out += _header(x + 5.5, y + 0.6, zt + t, 15, m['header'])
+    out += _header(x + 5.5, y + d - 3.2, zt + t, 15, m['header'])
+    out.append(box(x + 22.0, y + d / 2 - 0.8, zb, 2.4, 1.6, 1.0, m['led_blue'], bevel=0,
+                   name='led'))
+    return out
+
+
+def esp32_signal_wires(z=0.0):
+    """Six wires from the driver header to the ESP32's six-in-a-row, plus 5V/GND."""
+    m = ensure()
+    ex, ey = BRAIN_X + 9, BRAIN_Y + 13
+    cols = ('w_green', 'w_orange', 'w_yellow', 'w_blue', 'w_orange', 'w_green')
+    out = []
+    for i in range(6):
+        lane = 66 - i * 3.4
+        arc = z + PLATE_T + 10 + i * 1.6
+        out.append(tube([(DRV_X + 12 + i * 2.6, DRV_Y + 2, z + PLATE_T + 6),
+                         (DRV_X - 4 - i * 1.5, lane, arc),
+                         (ex + 34, lane - 2, arc - 1),
+                         (ex + 7 + i * 2.9, ey + 1.2, z + PLATE_T + 6)],
+                        0.8, m[cols[i]], name='esp_sig'))
+    for i, col in enumerate(('w_red', 'w_black')):          # 5V -> VIN, GND -> GND
+        out.append(tube([(DRV_X + 26 + i * 6, DRV_Y + DRV_D, z + PLATE_T + 8),
+                         (DRV_X + 6, 150 + i * 5, z + PLATE_T + 13),
+                         (ex + 44 - i * 6, ey + 27, z + PLATE_T + 6)],
+                        1.2, m[col], name='esp_pwr'))
+    return out
+
+
 # ---------------------------------------------------------------- the whole car
 def car(z=0.0, brain='uno', wheels=True, motors=True, sensors=True, battery=True,
         wiring=True, leads=True):
+    """The assembled car. brain='uno' for Project 4, 'esp' for Projects 5 and 7 — the same
+    vehicle either way, which is exactly what those cards are teaching."""
     out = []
     out += chassis(z)
     if sensors:
@@ -299,12 +388,15 @@ def car(z=0.0, brain='uno', wheels=True, motors=True, sensors=True, battery=True
         out += wheels_all(z)
     if brain == 'uno':
         out += arduino_uno(z)
+    elif brain == 'esp':
+        out += esp32_devkit(z)
     out += l298n(z)
     if battery:
         out += battery_box(z)
     if sensors:
         out += ir_sensor('left', z) + ir_sensor('right', z)
     if wiring:
-        out += signal_wires(z) + y_splitter(z)
-        out += motors_all.__wrapped__(z) if False else []
+        out += esp32_signal_wires(z) if brain == 'esp' else signal_wires(z)
+        if brain == 'uno':
+            out += y_splitter(z)
     return out

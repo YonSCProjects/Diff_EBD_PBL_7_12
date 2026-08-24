@@ -137,14 +137,18 @@ def solder_spool(x, y, z, ang=0.0):
     """A 72 mm spool of 1 mm solder on its side, with a free end pulled off."""
     m = materials()
     parts = [
-        cyl(0, 0, 36, 36, 2.5, m['spool'], axis='y', name='spool_flange_a'),
-        cyl(0, 21.5, 36, 36, 2.5, m['spool'], axis='y', name='spool_flange_b'),
+        cyl(0, 0, 36, 34, 2.5, m['spool'], axis='y', name='spool_flange_a'),
+        cyl(0, 21.5, 36, 34, 2.5, m['spool'], axis='y', name='spool_flange_b'),
         cyl(0, 2.5, 36, 13, 19, m['spool'], axis='y', name='spool_hub'),
-        cyl(0, 4.0, 36, 33.0, 16, m['solder'], axis='y', name='spool_wire'),
+        cyl(0, 4.0, 36, 32.0, 16, m['solder'], axis='y', name='spool_wire'),
         cyl(0, -0.5, 36, 6.5, 25, m['handle_dark'], axis='y', name='spool_bore'),
         tube([(0, 12, 69), (18, 13, 62), (44, 14, 26), (62, 15, 3)],
              0.55, m['solder'], name='solder_tail'),
     ]
+    # A smooth cylinder of solder reads as a grey disc. A shallow helix laid over it gives the
+    # wound-wire banding that says 'this is a reel of wire' at a glance, for one extra curve.
+    wound = helix(0, 4.5, 36, 32.4, 15, 15.0, 0.5, m['solder'], axis='y', name='spool_wound')
+    parts.append(wound)
     g = _group(parts, 'spool')
     g.rotation_euler = (0, 0, math.radians(ang))
     g.location = (x * MM, y * MM, z * MM)
@@ -236,15 +240,29 @@ def goggles(x, y, z, ang=0.0):
     # lozenge reads as safety glasses just as well and holds together.
     # the frame is a RIM sitting above the lens, not a box over it — an oversized frame just
     # swallows the glass and the whole thing reads as a blue slab
-    parts = [
-        box(0, 0, 0, 118, 30, 22, m['lens'], bevel=8.0, name='goggle_lens'),
-        box(-2, -1, 20, 122, 32, 4, m['goggle_frame'], bevel=1.8, name='goggle_brow'),
-        box(-2, -1, -1, 122, 32, 3, m['goggle_frame'], bevel=1.8, name='goggle_sill'),
-        box(53, 1, 3, 12, 28, 7, m['goggle_frame'], bevel=2.5, name='goggle_bridge'),
-    ]
-    for sy in (1.0, 33.0):
-        off = -13 if sy < 3 else 13
-        parts.append(tube([(6, sy, 22), (-14, sy + off * 0.6, 19), (-50, sy + off, 11)],
+    # The lens WRAPS. Built as a straight bevelled bar it reads as a blue slab whatever the
+    # material is, because the silhouette is the only thing carrying the shape at bench scale.
+    # An arc band — outer sweep out, inner sweep back — is the whole difference.
+    R, band, half = 58.0, 3.2, math.radians(52)
+    outer, inner = [], []
+    for i in range(19):
+        a = -half + 2 * half * i / 18.0
+        outer.append((R * math.sin(a), R * math.cos(a)))
+        inner.append(((R - band) * math.sin(a), (R - band) * math.cos(a)))
+    ring = outer + inner[::-1]
+    parts = [prism(ring, 0, 30, m['lens'], name='goggle_lens', bevel=0.6)]
+    for zz, hh in ((29.0, 3.2), (-2.4, 2.4)):
+        rim_o, rim_i = [], []
+        for i in range(19):
+            a = -half + 2 * half * i / 18.0
+            rim_o.append(((R + 1.6) * math.sin(a), (R + 1.6) * math.cos(a)))
+            rim_i.append(((R - band - 1.6) * math.sin(a), (R - band - 1.6) * math.cos(a)))
+        parts.append(prism(rim_o + rim_i[::-1], zz, hh, m['goggle_frame'],
+                           name='goggle_rim', bevel=0.5))
+    for sgn in (-1, 1):
+        ex, ey = R * math.sin(sgn * half), R * math.cos(sgn * half)
+        parts.append(tube([(ex, ey, 22), (ex + sgn * 5, ey - 30, 18),
+                           (ex + sgn * 9, ey - 66, 11)],
                           2.4, m['goggle_frame'], name='goggle_arm'))
     g = _group(parts, 'goggles')
     g.rotation_euler = (0, 0, math.radians(ang))
@@ -267,17 +285,33 @@ def riser(x, y, z, w=110, d=88, h=60):
     return box(x, y, z, w, d, h, materials()['riser_box'], bevel=1.6, name='riser')
 
 
-def laptop(x, y, z, ang=0.0, lid=100.0):
-    """Open laptop: base, keyboard well, lid hinged `lid` degrees off the base."""
+def laptop(x, y, z, ang=0.0, lid=100.0, screen='blank'):
+    """Open laptop: base, keyboard well, lid hinged `lid` degrees off the base.
+
+    screen='serial' puts a serial-monitor look on the panel — a title bar and rows of readings.
+    A blank rectangle reads as a mirror, and every card that shows a laptop is showing it
+    BECAUSE of what is on the screen."""
     m = materials()
     parts = [
         box(0, 0, 0, 300, 210, 12, m['laptop_body'], bevel=2.0, name='lt_base'),
         box(24, 34, 12, 252, 110, 0.8, m['handle_dark'], bevel=0.4, name='lt_keys'),
         box(104, 152, 12, 92, 46, 0.6, m['glue_grey'], bevel=0.4, name='lt_pad'),
     ]
-    lid_g = _group([box(0, 0, 0, 300, 200, 8, m['laptop_body'], bevel=2.0, name='lt_lid'),
-                    box(10, 9, 8, 280, 182, 0.6, m['screen'], bevel=0, name='lt_screen')],
-                   'lt_lidg')
+    panel = [box(0, 0, 0, 300, 200, 8, m['laptop_body'], bevel=2.0, name='lt_lid'),
+             box(10, 9, 8, 280, 182, 0.6, m['screen'], bevel=0, name='lt_screen')]
+    if screen == 'serial':
+        panel.append(box(14, 176, 8.6, 272, 12, 0.3, m['glue_grey'], bevel=0, name='lt_bar'))
+        for i in range(9):
+            w = 88 + (i * 37) % 132
+            panel.append(box(22, 158 - i * 15, 8.6, w, 6.5, 0.3,
+                             m['solder'] if i % 3 else m['sponge'], bevel=0, name='lt_row'))
+    elif screen == 'code':
+        panel.append(box(14, 176, 8.6, 272, 12, 0.3, m['glue_grey'], bevel=0, name='lt_bar'))
+        for i in range(10):
+            ind = 16 * (i % 3)
+            panel.append(box(24 + ind, 158 - i * 14, 8.6, 70 + (i * 29) % 120, 5.5, 0.3,
+                             m['solder'], bevel=0, name='lt_code'))
+    lid_g = _group(panel, 'lt_lidg')
     lid_g.location = (0, 0, 12 * MM)
     lid_g.rotation_euler = (math.radians(lid), 0, 0)
     g = _group(parts, 'laptop')

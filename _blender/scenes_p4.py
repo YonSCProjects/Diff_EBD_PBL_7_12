@@ -15,6 +15,7 @@ import math
 import lib as L
 import p4_car as C
 import tools as T
+import hand as H
 from lib import MM, box, cyl, prism, prism_xz, tube, mat, hexcol
 
 CAR_CENTRE = (148.0, 110.0, -10.0)
@@ -24,7 +25,7 @@ def _studio(strength=1.0):
     L.studio(strength=strength)
 
 
-def _bench(z, x0=-40, y0=-30, w=420, d=320, colour='#d8cfbe'):
+def _bench(z, x0=-40, y0=-30, w=420, d=320, colour='#a89a88'):
     """The work surface. Scenes that call this must NOT also add L.ground(): two coplanar
     surfaces z-fight, the shadow catcher wins, and you get a black bench-shaped hole."""
     m = mat('bench', hexcol(colour), rough=0.72)
@@ -50,19 +51,23 @@ def _car_anchors(z=0.0):
 def s_soldering_station():
     """Everything laid out and named before the iron is switched on, the iron parked in its coil."""
     _studio()
-    _bench(0, x0=-10, y0=-10, w=400, d=290)
-    T.heat_mat(20, 24, 0, 250, 190)
-    T.iron_stand(30, 40, 1.4)
-    T.soldering_iron(52, 76, 74, ang=-24, tilt=34)
-    T.solder_spool(214, 132, 1.4)
-    T.goggles(196, 186, 1.4, ang=-16)
-    T.rules_card(238, 66, 1.4, 78, 60, ang=-8)
-    L.anchor('iron', (104, 60, 58))
-    L.anchor('sponge', (40, 108, 12))
-    L.anchor('solder', (214, 132, 62))
-    L.anchor('goggles', (255, 201, 14))
-    L.anchor('rules', (277, 96, 2))
-    L.camera((160, 112, 20), 690, azimuth=44, elevation=36, lens=56)
+    _bench(0, x0=-16, y0=-16, w=350, d=290)
+    T.heat_mat(10, 14, 0, 250, 200)
+    T.iron_stand(30, 70, 1.4)
+    # the iron PARKED IN ITS COIL, which is the safety habit the card is teaching. The coil
+    # runs roughly along -y and tips up, so the iron lies along it: tip high and to the back,
+    # handle coming down toward the front. Standing it on end taught the opposite lesson.
+    T.soldering_iron(86, -5, 75, ang=90, tilt=16)
+    T.solder_spool(232, 52, 1.4)
+    T.goggles(172, 176, 1.4, ang=-20)
+    T.heat_shrink(146, 30, 3.6, ang=18, length=26, r=3.0)
+    T.rules_card(218, 118, 1.4, 76, 60, ang=-7)
+    L.anchor('iron', (86, 70, 52))
+    L.anchor('sponge', (40, 138, 12))
+    L.anchor('solder', (232, 52, 62))
+    L.anchor('goggles', (216, 184, 18))
+    L.anchor('rules', (256, 148, 2))
+    L.camera((140, 104, 20), 560, azimuth=44, elevation=36, lens=58)
 
 
 # ---------------------------------------------------------------- M2 — solder the motor leads
@@ -98,48 +103,73 @@ def s_cut_plate():
     """The template taped to a polygal sheet, knife on the line."""
     _studio()
     L.ground(z=-6.5, shadow_only=True)
-    sheet = mat('polygal_sheet', hexcol('#c9d8e2'), rough=0.28, transmission=0.42, ior=1.5)
-    box(8, 20, -6, 285, 180, 8, sheet, bevel=0.5, name='sheet')
-    paper = mat('paper_t', hexcol('#fffdf7'), rough=0.9)
+    _bench(-6.5, x0=-60, y0=-50, w=470, d=380)
+    sheet = mat('polygal_sheet', hexcol('#bcd0dd'), rough=0.3, transmission=0.34, ior=1.5)
+    box(4, 16, -6, 296, 190, 8, sheet, bevel=0.5, name='sheet')
+    paper = mat('paper_t', hexcol('#fbf7ec'), rough=0.9)
     box(23.5, 35, 2.2, 250, 150, 0.4, paper, bevel=0, name='template')
     ink = mat('ink', hexcol('#15181c'), rough=0.8)
     for i in range(len(C.OUTLINE)):
         (x1, y1), (x2, y2) = C.OUTLINE[i], C.OUTLINE[(i + 1) % len(C.OUTLINE)]
         ln = math.hypot(x2 - x1, y2 - y1)
-        b = box(0, -0.5, 0, ln, 1.0, 0.15, ink, bevel=0, name='cutline')
-        b.location = (x1 * MM, y1 * MM, 2.65 * MM)
+        b = box(0, 0, 0, ln, 1.0, 0.15, ink, bevel=0, name='cutline')
+        # box() bakes the scale into the mesh and puts the origin at the box CENTRE, so a line
+        # placed by its START vertex hangs half its own length past the outline. Place the
+        # midpoint. This is the same bug that once turned the M3 template into stray diagonals.
+        b.location = ((x1 + x2) / 2 * MM, (y1 + y2) / 2 * MM, 2.72 * MM)
         b.rotation_euler = (0, 0, math.atan2(y2 - y1, x2 - x1))
+    # the three zones the template prints — brain, driver, battery
+    zone = mat('zone', hexcol('#8fa8bd'), rough=0.85)
+    for zx, zy, zw, zd in ((C.BRAIN_X, C.BRAIN_Y, C.BRAIN_W, C.BRAIN_D),
+                           (C.DRV_X, C.DRV_Y, C.DRV_W, C.DRV_D),
+                           (C.BAT_X, C.BAT_Y, C.BAT_W, C.BAT_D)):
+        for ex, ey, ew, ed in ((zx, zy, zw, 0.9), (zx, zy + zd, zw, 0.9),
+                               (zx, zy, 0.9, zd), (zx + zw, zy, 0.9, zd)):
+            box(ex, ey, 2.66, ew, ed, 0.1, zone, bevel=0, name='zone')
+    # the 5 cm check strip the card makes the student measure before anything is cut
+    for i in range(6):
+        box(196 + i * 10, 156, 2.66, 0.9, 11 if i % 5 == 0 else 7, 0.1, ink,
+            bevel=0, name='scale')
+    for hx, hy in (C.SENS_L, C.SENS_R):
+        cyl(hx, hy, 2.6, 1.9, 0.16, ink, name='drillmark')
     tape = mat('masking', hexcol('#e0c060'), rough=0.8)
-    for tx, ty in ((28, 40), (244, 40), (28, 166), (244, 166)):
-        box(tx, ty, 2.6, 22, 13, 0.3, tape, bevel=0, name='masktape')
-    T.craft_knife(128, 16, 3.0, ang=8, tilt=-12)
-    L.anchor('knife', (196, 24, 12))
+    for tx, ty in ((26, 38), (240, 38), (26, 164), (240, 164)):
+        box(tx, ty, 2.6, 26, 15, 0.3, tape, bevel=0, name='masktape')
+    T.craft_knife(120, 22, 3.0, ang=10, tilt=-14)
+    T.ruler(24, 206, 0, ang=-3, length=200)
+    L.anchor('knife', (188, 30, 12))
     L.anchor('cutline', (150, 35, 3))
     L.anchor('corner', (23.5, 170, 3))
-    L.anchor('template', (238, 120, 3))
-    L.camera((150, 105, 0), 720, azimuth=40, elevation=44, lens=58)
+    L.anchor('scale', (222, 160, 3))
+    L.anchor('template', (150, 110, 3))
+    L.camera((150, 108, 0), 640, azimuth=40, elevation=46, lens=60)
 
 
 # ---------------------------------------------------------------- M3b — glue the motors
 def s_glue_motors():
-    """The plate turned over, motors going onto what becomes the underside."""
+    """The plate turned over with the motors going on — SCREWED, two M3x30 apiece.
+
+    This figure used to show a hot-glue bead, which contradicted step 4 of the very card it
+    sits in ("screwed, not glued"). A figure that argues with the step above it is worse than
+    no figure. The published filename stays as it is, because that is the name the card
+    embeds and renaming it would silently drop the picture from the page."""
     _studio()
-    _bench(-6.5)
+    _bench(-6.5, x0=-50, y0=-40, w=440, d=340)
     C.ensure()
     C.chassis(z=0.0)
-    glue = mat('glue', hexcol('#f2e0b0'), rough=0.3, transmission=0.4, ior=1.45)
     for pos, side in (('front', 'left'), ('front', 'right'), ('rear', 'left')):
-        C.tt_motor(side, pos, z=0.0, leads=False)
-    mx = C.MOTOR_RX
-    my = C.PLATE_Y1 - C.MOTOR_D
-    for gx in range(int(mx) + 6, int(mx + C.MOTOR_W) - 4, 10):
-        cyl(gx, my + C.MOTOR_D / 2, C.PLATE_T, 3.4, 1.6, glue, name='bead')
-    T.glue_gun(268, 258, C.PLATE_T, ang=-140)
-    L.anchor('gun', (286, 272, C.PLATE_T + 40))
-    L.anchor('beads', (mx + 34, my + 12, C.PLATE_T + 3))
+        C.tt_motor(side, pos, z=0.0, leads=False, up=True)
+    mx, my = C.MOTOR_RX, C.PLATE_Y1 - C.MOTOR_D
+    # the fourth corner still open, its two screws standing in the holes just drilled for them
+    for sx in (mx + 9, mx + C.MOTOR_W - 9):
+        T.m3_screw(sx, my + C.MOTOR_D / 2, C.PLATE_T + 30, 30, down=True)
+    T.screwdriver(mx + C.MOTOR_W - 9, my + C.MOTOR_D / 2, C.PLATE_T + 36, ang=0, tilt=-90)
+    T.pencil(288, 56, 0, ang=104)
+    L.anchor('screws', (mx + 34, my + 12, C.PLATE_T + 32))
+    L.anchor('driver_tool', (mx + C.MOTOR_W - 9, my + 12, C.PLATE_T + 100))
     L.anchor('flipped', (110, 110, C.PLATE_T))
     L.anchor('axles', (C.AXLE_F, C.PLATE_Y0 + 6, -C.MOTOR_H + 6))
-    L.camera((162, 140, 0), 800, azimuth=36, elevation=34, lens=56)
+    L.camera((156, 118, 20), 720, azimuth=38, elevation=30, lens=58)
 
 
 # ---------------------------------------------------------------- M3c — rolling chassis
@@ -179,49 +209,43 @@ def s_wheels_in_air():
 # ---------------------------------------------------------------- M6 — the sensor test
 def s_sensor_test():
     _studio()
-    L.ground(z=C.Z_GROUND, shadow_only=False, colour='#f4f1ea', size=1700)
-    _floor_tape(-90, 101, 460, C.Z_GROUND)
+    L.ground(z=C.Z_GROUND, shadow_only=False, colour='#d6cab6', size=4200)
+    _floor_tape(-140, 98, 620, C.Z_GROUND, 24)
     C.car()
-    T.laptop(300, 250, C.Z_GROUND, ang=-52, lid=98)
+    T.laptop(305, 186, C.Z_GROUND, ang=12, lid=102, screen='serial')
     _car_anchors()
     L.anchor('tape', (10, 110, C.Z_GROUND + 1))
-    L.anchor('laptop', (392, 316, C.Z_GROUND + 52))
-    L.camera((214, 176, -14), 940, azimuth=46, elevation=30, lens=54)
+    L.anchor('laptop', (388, 316, C.Z_GROUND + 96))
+    L.camera((190, 220, -10), 1160, azimuth=48, elevation=28, lens=52)
 
 
 # ---------------------------------------------------------------- M7 — the first run
 def s_first_run():
     _studio()
-    L.ground(z=C.Z_GROUND, shadow_only=False, colour='#f4f1ea', size=1700)
-    _floor_tape(-110, 101, 520, C.Z_GROUND)
+    L.ground(z=C.Z_GROUND, shadow_only=False, colour='#d6cab6', size=4200)
+    _floor_tape(-180, 98, 680, C.Z_GROUND, 24)
     C.car()
     _car_anchors()
     L.anchor('ahead', (-40, 110, C.Z_GROUND + 2))
-    L.camera(CAR_CENTRE, 700, azimuth=52, elevation=18, lens=62)
+    L.camera(CAR_CENTRE, 790, azimuth=52, elevation=20, lens=60)
 
 
 # ---------------------------------------------------------------- M8 — the closed track
 def s_track():
     """A closed loop of black tape with the car on it: wide turns, no sharp corners."""
     _studio()
-    L.ground(z=C.Z_GROUND, shadow_only=False, colour='#f4f1ea', size=2600)
+    L.ground(z=C.Z_GROUND, shadow_only=False, colour='#cec2ad', size=5600)
     tape = mat('tape_black', hexcol('#15181c'), rough=0.7)
-    cx, cy, rx, ry = 150.0, 320.0, 300.0, 190.0
-    n = 96
-    for i in range(n):
-        a0 = 2 * math.pi * i / n
-        a1 = 2 * math.pi * (i + 1) / n
-        x0, y0 = cx + rx * math.cos(a0), cy + ry * math.sin(a0)
-        x1, y1 = cx + rx * math.cos(a1), cy + ry * math.sin(a1)
-        ln = math.hypot(x1 - x0, y1 - y0) * 1.4
-        seg = box(0, -9.5, 0, ln, 19, 0.3, tape, bevel=0, name='tapeseg')
-        seg.location = (x0 * MM, y0 * MM, (C.Z_GROUND + 0.05) * MM)
-        seg.rotation_euler = (0, 0, math.atan2(y1 - y0, x1 - x0))
+    cx, cy, rx, ry = 45.0, 300.0, 268.0, 190.0
+    # thickness 0 keeps the loop a flat strip. Solidified, the ink pass outlines its side wall
+    # too and a piece of tape on the floor comes out looking like a wire hoop.
+    L.ribbon(L.ellipse_pts(cx, cy, rx, ry, n=120), 24.0, C.Z_GROUND + 0.35, tape,
+             name='loop', thickness=0.0)
     C.car()
     _car_anchors()
-    L.anchor('loop', (cx + rx * 0.55, cy + ry * 0.85, C.Z_GROUND + 2))
+    L.anchor('loop', (cx + rx * 0.7, cy + ry * 0.78, C.Z_GROUND + 2))
     L.anchor('turn', (cx - rx, cy, C.Z_GROUND + 2))
-    L.camera((150, 290, -30), 1450, azimuth=48, elevation=40, lens=54)
+    L.camera((90, 280, -30), 1380, azimuth=48, elevation=40, lens=54)
 
 
 # ---------------------------------------------------------------- checking only
@@ -261,3 +285,18 @@ def s_hero():
     L.ground(z=C.Z_GROUND, shadow_only=True)
     C.car()
     L.camera(CAR_CENTRE, 560, azimuth=38, elevation=28, lens=60)
+
+
+# ---------------------------------------------------------------- checking only
+def s_handcheck():
+    """Not a card figure — the hand in every pose, at real scale beside a 65 mm wheel, so the
+    proportions can be judged before it goes anywhere near a card."""
+    _studio(1.05)
+    _bench(0, x0=-60, y0=-60, w=560, d=420)
+    C.ensure()
+    for i, pose in enumerate(('flat', 'point', 'press', 'pinch', 'grip')):
+        H.hand(30 + i * 112, 30, 40, ang=84, pitch=-18, pose=pose)
+        L.anchor(pose, (30 + i * 112, 150, 40))
+    cyl(60, 300, 0, 32.5, 27, C.M['tyre'], axis='y', name='scalecheck', seg=64)
+    L.anchor('wheel', (60, 314, 0))
+    L.camera((260, 150, 26), 980, azimuth=56, elevation=30, lens=52)

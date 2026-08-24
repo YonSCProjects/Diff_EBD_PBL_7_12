@@ -6,6 +6,7 @@ Options after the scene name:
   --eevee            fast preview instead of Cycles
   --samples N        Cycles samples (default 128)
   --res WxH          output resolution (default 1800x1350)
+  --no-ink           skip the Freestyle contour pass
 
 Scenes live in scenes_p4.py. Each returns nothing; it just builds into the current scene.
 """
@@ -34,27 +35,48 @@ if '--res' in argv:
 
 import lib as L
 import p4_car
+import p8_drone
+import hand
 import tools
+import props
 import scenes_p4
 import scenes_p4_m3
+import scenes_p5
+import scenes_p7
+import scenes_p8
 
-for mod in (L, p4_car, tools, scenes_p4, scenes_p4_m3):
+SCENE_MODULES = (scenes_p4, scenes_p4_m3, scenes_p5, scenes_p7, scenes_p8)
+
+for mod in (L, p4_car, p8_drone, hand, tools, props) + SCENE_MODULES:
     importlib.reload(mod)
 
 L.reset()
 L.ANCHORS.clear()
 p4_car.M = None                          # materials are per-file, so rebuild them
+p8_drone.reset()
+hand.reset()
 tools.reset()
-fn = getattr(scenes_p4, scene_name, None) or getattr(scenes_p4_m3, scene_name, None)
+props.reset()
+fn = None
+for mod in SCENE_MODULES:
+    fn = getattr(mod, scene_name, None)
+    if fn is not None:
+        break
 if fn is None:
     print('no such scene:', scene_name)
-    names = ([n for n in dir(scenes_p4) if n.startswith('s_')]
-             + [n for n in dir(scenes_p4_m3) if n.startswith('s_')])
-    print('available:', ', '.join(sorted(names)))
+    names = [n for mod in SCENE_MODULES for n in dir(mod) if n.startswith('s_')]
+    print('available:', ', '.join(sorted(set(names))))
     sys.exit(2)
 
-fn()
+# configure BEFORE the scene builds: camera_fit reads the render resolution to work out the
+# frame's aspect, and with Blender's 1920x1080 default still in place it framed for the wrong
+# shape and pushed the camera back
 L.configure(engine=engine, samples=samples, res=res)
+fn()
+if '--no-ink' not in argv:
+    # the contour pass is what makes these read as technical illustrations rather than
+    # soft product shots; scale the line with the frame so it stays the same visual weight
+    L.outlines(thickness=max(1.4, res[0] / 700.0))
 os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
 L.render(out_path)
 print('RENDERED', out_path)

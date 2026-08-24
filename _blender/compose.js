@@ -30,7 +30,12 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(
 
 // Type is sized as a fraction of the render width, so a callout keeps the same visual weight
 // whatever resolution the frame was rendered at.
-const K = W / 1500;
+//
+// The divisor is set by where these end up, not by how they look on screen. A card embeds the
+// figure at 620 CSS px, so an 1800-wide frame is scaled to about 164 mm on the printed page:
+// at W/1500 a size-19 callout came out around 2 mm per em, roughly 6 pt, well under the card's
+// own body text. W/1100 lands it near 2.8 mm — a caption a student can actually read.
+const K = W / 1100;
 const FONT = "'Rubik','Segoe UI',Arial,sans-serif";
 
 let layer = '';
@@ -92,6 +97,45 @@ for (const ar of spec.arrows || []) {
     + `${(sx + px * head * 0.45).toFixed(1)},${(sy + py * head * 0.45).toFixed(1)} `
     + `${(sx - px * head * 0.45).toFixed(1)},${(sy - py * head * 0.45).toFixed(1)}" `
     + `fill="#e0651a" stroke="#fff" stroke-width="${(1.4 * K).toFixed(2)}" stroke-linejoin="round"/>`;
+}
+
+// Numbered badges: an orange disc with a numeral, for figures that lay a sequence out on the
+// bench. The order is the content there, so it has to be drawn, not implied by position.
+for (const bd of spec.badges || []) {
+  const a = meta.anchors[bd.anchor];
+  if (!a) { console.warn('  no such anchor for badge:', bd.anchor); continue; }
+  if (a.onscreen === false || a.depth <= 0) continue;
+  const bx = a.x + (bd.dx || 0) * K, by = a.y + (bd.dy || 0) * K;
+  const r = (bd.r || 20) * K;
+  layer += `<circle cx="${bx.toFixed(1)}" cy="${by.toFixed(1)}" r="${r.toFixed(1)}" `
+    + `fill="#e0651a" stroke="#ffffff" stroke-width="${(3 * K).toFixed(2)}"/>`;
+  layer += `<text x="${bx.toFixed(1)}" y="${(by + r * 0.36).toFixed(1)}" font-family="${FONT}" `
+    + `font-size="${(r * 1.18).toFixed(1)}" font-weight="800" fill="#ffffff" `
+    + `text-anchor="middle">${esc(bd.n)}</text>`;
+}
+
+// Wi-Fi arcs: three widening arcs over an anchor, meaning "this thing is talking over the air".
+// Drawn here rather than modelled, because radio is not a thing you can render.
+for (const wf of spec.wifi || []) {
+  const a = meta.anchors[wf.anchor];
+  if (!a) { console.warn('  no such anchor for wifi:', wf.anchor); continue; }
+  if (a.onscreen === false || a.depth <= 0) continue;
+  const ox = a.x + (wf.dx || 0) * K, oy = a.y + (wf.dy || 0) * K;
+  const rot = ((wf.rot === undefined ? -40 : wf.rot) * Math.PI) / 180;
+  const s = (wf.scale || 1) * K;
+  const n = wf.n || 3;
+  layer += `<g transform="translate(${ox.toFixed(1)} ${oy.toFixed(1)}) rotate(${(rot * 180 / Math.PI).toFixed(1)})">`;
+  layer += `<circle cx="0" cy="0" r="${(5 * s).toFixed(1)}" fill="${wf.color || '#2f8fd0'}"/>`;
+  for (let i = 0; i < n; i++) {
+    const r = (18 + i * 15) * s;
+    // clockwise (sweep 1) from the top-left point to the top-right one passes over the TOP,
+    // which is the fan you want; sweep 0 draws the same span under the dot instead.
+    layer += `<path d="M ${(-r * 0.71).toFixed(1)} ${(-r * 0.71).toFixed(1)} `
+      + `A ${r.toFixed(1)} ${r.toFixed(1)} 0 0 1 ${(r * 0.71).toFixed(1)} ${(-r * 0.71).toFixed(1)}" `
+      + `fill="none" stroke="${wf.color || '#2f8fd0'}" stroke-width="${(3.4 * s).toFixed(2)}" `
+      + `stroke-linecap="round" stroke-opacity="${(0.92 - i * 0.2).toFixed(2)}"/>`;
+  }
+  layer += `</g>`;
 }
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" `

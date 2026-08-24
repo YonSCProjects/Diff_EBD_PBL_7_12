@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "anchor": "io0",
+      "he": "IO0 אל GND —\nחוט מצב הצריבה",
+      "dx": -230,
+      "dy": -200,
+      "size": 19
+    },
+    {
+      "anchor": "cross",
+      "he": "TX אל U0R, RX אל U0T —\nהחוטים מצטלבים בכוונה",
+      "dx": 40,
+      "dy": -230,
+      "size": 19
+    },
+    {
+      "anchor": "ftdi",
+      "he": "המתכנת FTDI",
+      "dx": 200,
+      "dy": 200,
+      "size": 19
+    },
+    {
+      "anchor": "cam",
+      "he": "מצלמת ESP32-CAM",
+      "dx": -230,
+      "dy": 220,
+      "size": 19
+    }
+  ]
+}

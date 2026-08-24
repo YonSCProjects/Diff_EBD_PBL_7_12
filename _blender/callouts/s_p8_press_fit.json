@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "anchor": "press",
+      "he": "לוחצים באגודל —\nבלי דבק ובלי כלים",
+      "dx": -190,
+      "dy": -220,
+      "size": 19
+    },
+    {
+      "anchor": "leads_cw",
+      "he": "אדום/כחול —\nFRONT ו-BACK",
+      "dx": 250,
+      "dy": 150,
+      "size": 19
+    },
+    {
+      "anchor": "leads_ccw",
+      "he": "שחור/לבן —\nRIGHT ו-LEFT",
+      "dx": 260,
+      "dy": -150,
+      "size": 19
+    },
+    {
+      "anchor": "front_arm",
+      "he": "הזרוע הצבועה\nהיא הקדמית",
+      "dx": -250,
+      "dy": 170,
+      "size": 19
+    }
+  ]
+}

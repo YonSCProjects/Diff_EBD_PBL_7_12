@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "anchor": "phone",
+      "he": "לוחצים ומחזיקים —\nמשחררים והיא עוצרת",
+      "dx": 150,
+      "dy": 210,
+      "size": 20
+    },
+    {
+      "anchor": "ahead",
+      "he": "קדימה",
+      "dx": 0,
+      "dy": -150,
+      "size": 20
+    }
+  ],
+  "wifi": [
+    {
+      "anchor": "air",
+      "scale": 1.6,
+      "rot": -40
+    }
+  ],
+  "arrows": [
+    {
+      "from": "nose",
+      "to": "ahead"
+    }
+  ]
+}

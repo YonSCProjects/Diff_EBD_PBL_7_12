@@ -137,30 +137,36 @@ def s_m3_3_holes():
 
 # ================================================================ step 4
 def s_m3_4_motors():
-    """The plate turned over: mark through the motor's two holes, drill, and screw M3x30.
-    SCREWED, not glued — the card is explicit about it."""
+    """The plate turned over, a bead of hot glue down each motor body, the fourth going on.
+
+    GLUED, not screwed: these 8520-style gearboxes have no mounting holes, so there is nothing
+    to bolt through. The card said "screwed, not glued" and the figure used to agree with it —
+    both were wrong about the hardware."""
     _studio()
     m = _mats()
     _bench(-6.5)
     C.ensure()
     C.chassis(z=0.0)
-    # three already bolted on, the fourth being offered up and marked
+    glue = mat('glue_bead', hexcol('#f2e2b4'), rough=0.28, transmission=0.42, ior=1.46)
+    # three already down, the fourth held over its bead
     for pos, side in (('front', 'left'), ('front', 'right'), ('rear', 'left')):
-        _screwed_motor(side, pos, z=0.0)
+        C.tt_motor(side, pos, z=0.0, leads=False, up=True)
     mx, my = C.MOTOR_RX, C.PLATE_Y1 - C.MOTOR_D
-    box(mx, my, C.PLATE_T + 26, C.MOTOR_W, C.MOTOR_D, C.MOTOR_H, C.M['motor_yellow'],
+    box(mx, my, C.PLATE_T + 30, C.MOTOR_W, C.MOTOR_D, C.MOTOR_H, C.M['motor_yellow'],
         bevel=1.2, name='motor4')
-    for dx in (12, C.MOTOR_W - 12):                      # its two pencil marks on the plate
-        cyl(mx + dx, my + C.MOTOR_D / 2, C.PLATE_T, 1.9, 0.3, m['pencil_mark'], name='mark')
-    T.pencil(mx + 96, my + 8, C.PLATE_T + 6, ang=168, tilt=-16)
-    T.screwdriver(266, 22, 14, ang=26)
-    for i in range(2):
-        T.m3_screw(292 + i * 13, 96, 3, 30, down=False)
-    L.anchor('motor4', (mx + 35, my + 12, C.PLATE_T + 26 + C.MOTOR_H))
-    L.anchor('marks', (mx + 12, my + 12, C.PLATE_T + 1))
-    L.anchor('screws', (298, 96, 6))
-    L.anchor('bolted', (C.MOTOR_FX + 35, C.PLATE_Y0 + 12, C.PLATE_T))
-    L.camera((162, 120, 6), 700, azimuth=36, elevation=36, lens=58)
+    # the bead waiting on the plate, and a bead already squeezed out under each fitted motor
+    for gx in range(int(mx) + 7, int(mx + C.MOTOR_W) - 5, 9):
+        cyl(gx, my + C.MOTOR_D / 2, C.PLATE_T, 3.2, 1.5, glue, name='bead')
+    # the gun goes off to the SIDE at the plate's own depth. Parked at -y it is the
+    # nearest thing to the lens and swells until it covers the motors it is gluing.
+    T.glue_gun(272, 240, C.PLATE_T, ang=-42)
+    L.anchor('motor4', (mx + 35, my + 12, C.PLATE_T + 30 + C.MOTOR_H))
+    L.anchor('bead', (mx + 34, my + 12, C.PLATE_T + 3))
+    L.anchor('gun', (290, 270, C.PLATE_T + 40))
+    L.anchor('glued', (C.MOTOR_FX + 35, C.PLATE_Y0 + 12, C.PLATE_T + 10))
+    L.camera_fit(subject='bead', azimuth=36, elevation=36, lens=58,
+                 extra=L.bbox_pts(C.PLATE_X0 - 6, C.PLATE_Y0 - 6, -8,
+                                  C.PLATE_X1 + 6, C.PLATE_Y1 + 6, C.PLATE_T + 60))
 
 
 # ================================================================ step 5

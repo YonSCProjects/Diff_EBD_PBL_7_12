@@ -59,13 +59,13 @@ def s_soldering_station():
     # handle coming down toward the front. Standing it on end taught the opposite lesson.
     T.soldering_iron(86, -5, 75, ang=90, tilt=16)
     T.solder_spool(232, 52, 1.4)
-    T.goggles(172, 176, 1.4, ang=-20)
+    T.heat_shrink(178, 182, 3.6, ang=-24, length=30, r=3.2)
     T.heat_shrink(146, 30, 3.6, ang=18, length=26, r=3.0)
     T.rules_card(218, 118, 1.4, 76, 60, ang=-7)
     L.anchor('iron', (86, 70, 52))
     L.anchor('sponge', (40, 138, 12))
     L.anchor('solder', (232, 52, 62))
-    L.anchor('goggles', (216, 184, 18))
+    L.anchor('shrink', (192, 186, 6))
     L.anchor('rules', (256, 148, 2))
     L.camera((140, 104, 20), 560, azimuth=44, elevation=36, lens=58)
 
@@ -147,28 +147,28 @@ def s_cut_plate():
 
 # ---------------------------------------------------------------- M3b — glue the motors
 def s_glue_motors():
-    """The plate turned over with the motors going on — SCREWED, two M3x30 apiece.
+    """The plate turned over with the four motors going on, glued with a bead of hot glue.
 
-    This figure used to show a hot-glue bead, which contradicted step 4 of the very card it
-    sits in ("screwed, not glued"). A figure that argues with the step above it is worse than
-    no figure. The published filename stays as it is, because that is the name the card
-    embeds and renaming it would silently drop the picture from the page."""
+    These gearboxes have no mounting holes, so there is nothing to screw through. An earlier
+    version of this figure showed M3 screws because the card's step 4 said so; the card was
+    wrong about the hardware and both have been corrected."""
     _studio()
     _bench(-6.5, x0=-50, y0=-40, w=440, d=340)
     C.ensure()
     C.chassis(z=0.0)
+    glue = mat('glue', hexcol('#f2e2b4'), rough=0.28, transmission=0.42, ior=1.46)
     for pos, side in (('front', 'left'), ('front', 'right'), ('rear', 'left')):
         C.tt_motor(side, pos, z=0.0, leads=False, up=True)
     mx, my = C.MOTOR_RX, C.PLATE_Y1 - C.MOTOR_D
-    # the fourth corner still open, its two screws standing in the holes just drilled for them
-    for sx in (mx + 9, mx + C.MOTOR_W - 9):
-        T.m3_screw(sx, my + C.MOTOR_D / 2, C.PLATE_T + 30, 30, down=True)
-    T.screwdriver(mx + C.MOTOR_W - 9, my + C.MOTOR_D / 2, C.PLATE_T + 36, ang=0, tilt=-90)
-    T.pencil(288, 56, 0, ang=104)
-    L.anchor('screws', (mx + 34, my + 12, C.PLATE_T + 32))
-    L.anchor('driver_tool', (mx + C.MOTOR_W - 9, my + 12, C.PLATE_T + 100))
+    for gx in range(int(mx) + 7, int(mx + C.MOTOR_W) - 5, 9):
+        cyl(gx, my + C.MOTOR_D / 2, C.PLATE_T, 3.2, 1.5, glue, name='bead')
+    # the gun goes off to the SIDE at the plate's own depth. Parked at -y it is the
+    # nearest thing to the lens and swells until it covers the motors it is gluing.
+    T.glue_gun(268, 236, C.PLATE_T, ang=-42)
+    L.anchor('beads', (mx + 34, my + 12, C.PLATE_T + 4))
+    L.anchor('gun', (286, 266, C.PLATE_T + 40))
     L.anchor('flipped', (110, 110, C.PLATE_T))
-    L.anchor('axles', (C.AXLE_F, C.PLATE_Y0 + 6, -C.MOTOR_H + 6))
+    L.anchor('axles', (C.AXLE_F, C.PLATE_Y0 + 6, C.PLATE_T + 12))
     L.camera((156, 118, 20), 720, azimuth=38, elevation=30, lens=58)
 
 
@@ -274,7 +274,6 @@ def s_toolcheck():
     T.solder_spool(176, 96, 0)
     T.craft_knife(250, 40, 0, ang=10)
     T.glue_gun(258, 122, 0, ang=16)
-    T.goggles(40, 236, 0, ang=-12)
     T.heat_shrink(196, 42, 3, ang=24)
     T.rules_card(226, 232, 0, 72, 54, ang=-6)
     L.camera((208, 132, 24), 760, azimuth=41, elevation=40, lens=56)

@@ -58,6 +58,19 @@ soldering-safety "קוראים למורה" line — locked motifs, NEVER trimmed
   2026-08-20_1255 — 8th instance). The informational tail `משתמשים בקלוד קוד כדי לחשוב על הבעיה
   וקוראים למורה כשמרגישים שהולכים במעגלים` was kept — consistent with the sharpened scope.
 
+- P4 T1_M2 soldering stuck box: `תקועים? בהלחמה יש כלל מיוחד: כל שאלה או תקלה בעמדת ההלחמה —
+  קוראים למורה, תמיד. לא מנסים לתקן לבד ליד מלחם חם. חיבור שזז במשיכה עדינה? …` →
+  `תקועים? קוראים למורה.` (feedback 2026-08-25_2340, comment 5: "בטל את הטקסט הזה. השאר רק -
+  תקועים? קוראים למורה" — 9th instance)
+
+> ⚠️ **The protected carve-out no longer matches Yon's own behaviour.** That 9th instance IS the
+> locked soldering motif "קוראים למורה, תמיד", and Yon deleted it himself. It was applied to that
+> one card only. **8 instances survive** (P4 M1, M4, T2_M1, T2_M5, T3 planner, P8 T2_M2, and R4 +
+> R6) and were NOT swept — in the same round he reviewed P4 M1 and left its copy standing, so the
+> single deletion is not yet evidence that the motif is retired. Treat the carve-out as
+> **suspended, not lifted**: do not trim another soldering escalation without asking, and do not
+> reintroduce the long form into new cards either. Needs a decision from Yon.
+
 **Status:** CONFIRMED · **Sweep executed 2026-08-04:** all 13 `קוראים למורה לעזרה.` → `קוראים למורה.`
 across 13 cards (P1 T1_M2/M3/M6/M8; P3 T1_M2/M3/M4/M5, T2_M3; P4 T1_M5/M6/M7, T2_M3). Verified after:
 0 leftovers, the 9 protected soldering `קוראים למורה, תמיד` lines untouched, and every informational
@@ -103,6 +116,12 @@ Trimming teacher scaffolding can orphan a done-when item — re-read the whole c
 (same failure mode as **V3**, but for text rather than figures). Flagged to Yon, not yet resolved.
 
 ---
+
+- `בשלב הזה לומדים לעבוד עם כלי אמיתי חדש: מלחם. עובדים איתו תמיד יחד עם המורה — היום ובכל
+  פעם שמלחימים בפרויקט הזה.` → `בשלב הזה לומדים לעבוד עם כלי אמיתי חדש: מלחם.`
+  (P4 T1_M1, feedback 2026-08-23_1455 / re-exported 2026-08-25_2340). Note the box this sits in is
+  already headed **"שלב ביחד — המורה לידכם לאורך כל השלב"**, so the sentence restated its own
+  heading — the same redundancy T3a names in the planners.
 
 ## Category W — Wording clarity
 
@@ -198,6 +217,12 @@ phrase over the terser one (שום דבר, not כלום).
 **Evidence:** 4 (4 cards) · **Counterexamples:** 0 — no מאתרים/לאתר/איתור left anywhere.
 **Status:** FIRM (watch for more: מבצעים→עושים, מתבוננים→מסתכלים…).
 
+**2026-08-25 addition — jargon a student has not been taught is not "plain".**
+`מלחימים חוט לכל **פד**: אדום לפד העליון…` → `מלחימים חוט לכל **חיבור מתכת**: אדום לחיבור העליון…`
+(P4 T1_M2 caption + figure alt, feedback 2026-08-25_2340 comment 3: "אני לא בטוח שהמילה פד תהיה
+ברורה לתלמידים. בוא נכתוב פשוט חיבור מתכת"). The test is not "is the word short" but "has this
+card taught the word yet" — פד is one syllable and still fails it.
+
 ### W6 — The header lede states what the card does — nothing else
 **Rule:** The subtitle under the card title names the action only. Difficulty warnings, help offers and
 encouragement do not belong there (they live in the warning box or the "תקועים?" box), and the lede is
@@ -224,6 +249,12 @@ the hard one" before they have read a single step.
 **Evidence:** 4 (4 cards) · **Status:** FIRM. The de-duplication logic (say it where it belongs, once)
 matches T1/T3/W2. Ledes carry the action, nothing else — no difficulty warning, no meta-framing,
 no category label.
+
+**2026-08-25 addition — the intro box gets the same treatment as the lede.**
+`…ולכן מחברים אותם בהלחמה: טיפת מתכת חמה שמתקשה לחיבור קבוע וחזק. לפני שנוגעים במכונית,
+מתאמנים על לוח אימון שאין בו מה לקלקל.` → `…ולכן מחברים אותם בהלחמה.` (P4 T1_M1, feedback
+2026-08-23_1455). Two things went: a **definition** of the word just used, and a **preview of what
+the card will do next**. Neither is what the box is for.
 
 ### W7 — No abstract concept-framing — the card teaches the action, not the pattern behind it
 **Rule:** Cards don't name the computer-science abstraction a step illustrates. No "this is the basic
@@ -436,7 +467,12 @@ per-row instinct as V5.
 **Evidence:** 2 explicit edits (2 cards, 2 rounds) + 1 twin sync · **Counterexamples:** 2 weak —
 P2 T2_M2's JS branch messages still open `בחרתם מצב א׳…` (unreviewed card). **Out of scope:**
 done-when items (`בחרתם תבנית (א׳, ב׳, או ג׳)`) — past-tense confirmations, not branch conditions.
-**Status:** TENTATIVE (leaning FIRM) · **Sweep scope:** the 2 P2 JS messages, on approval.
+- First application in a card (not a JS string): `רדיפה (ב) ← כרטיסיית 2b. נשימה (ג) —
+  החיווט שלכם כבר מוכן…` → `אם בחרתם ב׳ (רדיפה) ← כרטיסיית 2b. אם בחרתם ג׳ (נשימה) — …`
+  (P1 T2_M2, feedback 2026-08-23_1455). Yon rewrote the branch line into the exact
+  "אם בחרתם X׳ (שם) ← יעד" shape while adding the gereshim, which is what the rule predicted.
+
+**Status:** FIRM (was TENTATIVE) (leaning FIRM) · **Sweep scope:** the 2 P2 JS messages, on approval.
 
 ### W12 — Enumeration items name the action fully, no one-word shorthand
 **Rule:** In a lede or summary enumeration, each item is a full noun phrase: `ארגון עמדת העבודה,
@@ -449,6 +485,67 @@ done-when items (`בחרתם תבנית (א׳, ב׳, או ג׳)`) — past-tense
 **Evidence:** 1 · **Status:** TENTATIVE.
 
 ---
+
+### V6 — A step's figure sits BELOW the step's text, and is large
+
+**Rule:** In a numbered step, the words come first and the picture follows, at the widest size the
+card allows. A figure placed above its text, or shrunk to fit beside it, gets read as the
+instruction and the text as a caption.
+
+**Why (inferred):** The student reads the step, forms an intention, and *then* wants to check what
+it should look like. Yon repeated this four times in one pass, each time pairing "מתחת לטקסט" with
+"וגדול יותר" — so the two halves are one preference, not two.
+
+**Examples (all P4 T1_M3, feedback 2026-08-25_2340):**
+- step 2 (cutting): "שים את הציור גדול יותר מתחת לטקסט"
+- step 3 (drilling): "הורד את הציור מתחת לטקסט וגדול יותר"
+- step 4 (motors): "הורד את האיור אל מתחת לטקסט וגדול יותר"
+- step 5 (wheels): "הורד את האיור מתחת לטקסט תהגדל אותו"
+
+**Evidence:** 4 instances, all in one card, one sitting. **Counterexamples:** none — but the whole
+program currently puts step figures *inside* the step block after the `<p>`, so a sweep would touch
+every build card with `data-m3="step"` / `data-iso="step"` figures.
+**Status:** TENTATIVE-leaning-FIRM (unambiguous and repeated, but single-card evidence).
+**Sweep scope:** the embed scripts (`_blender/embed_m3_steps.js`, `_illustration_kit/embed_steps.js`)
+and the figure width in the step wrapper — a code change, not a text sweep.
+
+### V7 — Everything the step names must be findable in its figure, and nothing else appears
+
+**Rule:** If the step's text names a part, that part is individually identifiable in the figure —
+distinguishable from its neighbours, not a grey block among grey blocks. Conversely a figure carries
+nothing the step does not mention.
+
+**Why (inferred):** A build figure is read as a checklist against the text. An object that cannot be
+picked out fails the check silently, and an extra object sends the student looking for a step that
+is not there.
+
+**Examples (all P4 T1_M3, feedback 2026-08-25_2340):**
+- step 6: "האיור הזה מבולגן, לא ברור איפה הארדואינו איפה ה L298N ואיפה הסוללות"
+- step 7: "איפה החיישן? איפה החזית? למה יש כאן ציור של מלחם?" — the last clause is the
+  nothing-extra half of the rule
+- step 3: "המקדחה צריכה שיפור שיהיה ברור שזו מקדחה"
+- step 5: "לא רואים בציור את הציר של המנוע"
+- step 2: "הורד את המלבנים הצהובים בפינות" — the masking tape was scenery the step never mentions
+
+**Evidence:** 5 instances, one card, one sitting. **Counterexamples:** none recorded.
+**Status:** FIRM-leaning (5 consistent instances, but a single card — confirm on the next set).
+**Sweep scope:** not a text sweep; it is an acceptance test for every Blender scene. The practical
+form: before publishing a figure, read the step aloud and point at each noun in the render.
+
+### V8 — Summary figures above the numbered steps must read as overview, not as instruction
+
+**Rule:** The figures in a card's opening summary strip show the *finished state* of each phase.
+They must not look like a step the student should be performing yet.
+
+**Why (inferred):** Yon's words: "שלושת האיורים הראשונים בכרטיס זה עלולים להתפרש כהוראות לביצוע
+בעוד שאנחנו רוצים שהתלמיד יתחיל לבצע רק למטה יותר כשמתחילים השלבים הממוספרים" — the numbered steps
+are the contract for when doing starts.
+
+**Evidence:** 1 (P4 T1_M3 cardNote, feedback 2026-08-25_2340). **Counterexamples:** every build card
+in P4/P5/P7/P8 has a summary strip of the same shape.
+**Status:** TENTATIVE. **Open question:** the fix could be visual (a caption style that reads as
+"this is what it will look like"), or structural (drop the strip on cards that have step figures) —
+Yon has not said which.
 
 ## Category C — Choice points and cross-card continuity
 
@@ -531,6 +628,46 @@ pins, resistor values, or part names.
 **Status:** CONFIRMED — the governing principle of every T3 planner and any future planning scaffold.
 
 ---
+
+### C6 — A generic tool or technology introduction is its own intro card, not a project step
+
+**Rule:** Material that teaches a tool rather than advancing the build — meeting the soldering
+bench, meeting the breadboard, meeting the Arduino — lives in a shared family of intro cards that
+projects point at. It does not occupy a numbered step inside a project.
+
+**Why (inferred):** The same introduction serves several projects, and a student who has already
+met the bench should not repeat step 1. Yon: "בוא נוציא את הכרטיסייה הזאת מהפרויקט ונהפוך אותה
+לאחת ממספר כרטיסיות מבוא (נכין גם כרטיסיית מבוא לברדבורד, כרטיסיית מבוא לארדואינו וכו׳)".
+
+**Examples:** P4 T1_M1 (פוגשים את עמדת ההלחמה) — cardNote, feedback 2026-08-25_2340; restated on
+P4 T1_M2 comment 1: "אז השלב הקודם הזה הפך לכרטיסיית מבוא להלחמה שאינה חלק מהפרויקט וזאת היא בעצם
+הכרטיסייה הראשונה של הפרויקט".
+
+**Evidence:** 2 statements, one card pair, one sitting. **Status:** TENTATIVE.
+**Blocked:** applying it renumbers all eight P4 steps ("שלב N מתוך 8"), the progress percentages,
+the generated nav and the bundle, and it needs a home and a naming scheme for the intro family that
+does not exist yet. Not applied — waiting on Yon.
+
+### C7 — R cards are the teacher's; a task card never sends a student to one
+
+**Rule:** Task cards do not name or link reference (R) cards. Whatever the student needs is on the
+task card.
+
+**Why (inferred):** Yon: "כרטיסיות R למינהן מיועדות למורה ולא לתלמיד ולכן יש להימנע באזכור שלהן
+בכרטיסיות המשימה".
+
+**Examples (feedback 2026-08-25_2340, comment 2 on P4 T1_M2):** the safety-reminder box
+`…הם מופיעים בכרטיסים R4 ו-R6` → rewritten without the pointer. Applied to the two other soldering
+cards that carried the same sentence (P4 T1_M1, P4 T2_M1).
+
+**Evidence:** 1 explicit statement, applied to 3 cards. **Status:** TENTATIVE.
+**Interaction with [C4 — Name a card → link the card]:** they compose rather than conflict. C4
+governs *task*-card references; C7 removes R cards from that set entirely.
+**Counterexamples / blocker:** **85 R references survive across 38 cards**, and most are not
+decorative — `בודקים מול כרטיס העזר R1` sends the student to the wiring table, `בכרטיס העזר R5`
+to the sketch list. Deleting those pointers leaves the instruction dangling. A sweep needs a
+*replacement* (inline the table, or a student-facing card), so this rule cannot be swept as a
+deletion. Raised with Yon 2026-08-26.
 
 ## Category I — Interaction integrity (text vs. the controls the card actually has)
 
@@ -680,6 +817,12 @@ characters are word boundaries too. Verified 0 bare labels remain.
 
 ---
 
+**2026-08-23 — the sweep had a third gap.** Three bare letters survived in P1 T2_M2
+(`אפשרות א`, `אפשרות ב או ג`, `רדיפה (ב)`) and Yon caught them himself, re-stating the rule in a
+global note. Re-verified 2026-08-25 after this round: **40 option labels across all dc cards, every
+one carrying ׳, none bare.** The lesson is procedural, not stylistic — a program-wide sweep needs a
+verification pass that counts the surviving pattern, and this one has now needed three.
+
 ## Category P — Punctuation
 
 ### P3 — Background explanations inside a step go in parentheses
@@ -794,6 +937,57 @@ re-export — the standing unreset-console problem ("איפוס הכל").
 
 ---
 
+### H5 — A build step must not assert hardware the kit's actual parts do not have
+
+**Rule:** Before a step names a fastening, a hole, a size or a component, check it against the part
+that is really in the kit. The card is not the authority on the hardware; the hardware is.
+
+**Why:** Three separate corrections in two rounds, all of the same shape — the card described a
+plausible generic part instead of the one Yon buys.
+
+**Examples:**
+- **Motors have no screw holes.** Step 4 of P4 T1_M3 said `קודחים ומבריגים 2 ברגי M3x30`; Yon:
+  "למנועים האלה אין מקום לבורג. אנחנו נדביק אותם עם דבק חם לתחתית הפוליגל" (feedback
+  2026-08-23_1455, restated 2026-08-25_2340 comment 5). **This one cost a round trip**: on
+  2026-08-24 the *figures* were rebuilt from glue to screws precisely because the card's step 4
+  said so — the wrong source was trusted. Both text and figures are back to a glue bead.
+- **Unpowered gearboxes resist rolling.** `דוחפים אותו ביד — הוא מתגלגל ועומד יציב` → Yon: "לא
+  בטוח שהמנועים יאפשרו גלגול של הגלגלים כל עוד הם לא עם חשמל" (2026-08-25_2340 comment 9).
+- **No breadboard on the car.** The M4 wiring figure still shows one; Yon: "אני לא חושב שבמכונית
+  עצמה יהיה breadboard" (2026-08-25_2340). Figure not yet redrawn.
+- **Buyable sizes.** `קדח של 3.5 מ״מ` — Yon: "למה שלושה וחצי מ״מ? אני מניח שיהיה לי קשה להשיג
+  מקדחים של חצאי מילימטר". A dimension a teacher cannot buy is the same defect in another form.
+
+**Evidence:** 4 instances across 2 cards and 2 rounds. **Status:** FIRM.
+**Practical form:** when a step asserts hardware, the card's own text is *not* evidence — ask, or
+cite the part. And when a figure and a step disagree, resolve it against the part before rebuilding
+either one to match the other.
+
+## Category S — Safety proportionality
+
+### S1 — Safety text matches the actual hazard: no ritual PPE, endless repetition of the real risk
+
+**Rule:** Protective equipment is called for only where the task's own hazard requires it. The
+hazard that *is* real gets repeated as often as it takes.
+
+**Why (inferred):** Yon: "הסר כל אזכור של משקפי מגן בפרויקטים הללו. ההלחמות הינן פשוטות ולא מחייבות
+משקפי מגן. כן חשוב לחזור שוב ושוב על אזהרה לא לגעת בראש המלחם ולהסתכל טוב היכן מניחים את המלחם החם."
+Ritual PPE that the task does not need teaches students to discount safety text; the warning that
+matters gets diluted by the one that does not.
+
+**Examples (feedback 2026-08-25_2340, comment 4 on P4 T1_M2):** goggles removed from P4 T1_M1
+(4 mentions, incl. the figure), T1_M2 (1) and T2_M1 (1); the four soldering rules became **three**,
+renumbered, with "לא נוגעים בקצה המתכת … ותמיד מסתכלים היכן מניחים את המלחם" carried in the freed
+slot. The bench figure was re-rendered without a pair on the mat, per [V3].
+
+**Evidence:** 1 explicit instruction, applied to 3 cards + 1 figure. **Status:** TENTATIVE.
+**Carve-out — Project 8 (28 cards, 83 mentions) NOT swept.** There the goggles are a *propeller*
+rule, not a soldering one — "משקפי מגן בכל רגע שמנוע יכול להסתובב", inside the six flight-day
+safety rules — and Yon's stated reason ("the solderings are simple") does not reach it. Stripping
+eye protection from a card set where children spin four 65 mm props needs his explicit word, and
+this is deliberately *not* treated as a silent carve-out under
+[[feedback_global_rules_no_carveouts]]: it is an open question, raised 2026-08-26.
+
 ## Resolved conflicts
 
 ### 2026-08-04 — imperative "קראו" vs the plural-impersonal rule (A1) — RESOLVED, A1 HOLDS
@@ -806,6 +1000,7 @@ and say so, rather than treating it as a style change.
 ## Processed feedback ledger
 | Date learned | Feedback files |
 |---|---|
+| 2026-08-26 | feedback_2026-08-23_1455 · feedback_2026-08-25_2318 · _2318_2 · _2328 · _2340 (4 saves that sitting; _2340 is the superset. **Every *edit* in the 2026-08-25 batch was a stale re-export of the 2026-08-23 round** — console cache not reset; the fresh material was the 17 comments and 2 cardNotes) |
 | 2026-08-20 | feedback_2026-08-19_1436 · _1438 · _1439 · _1447 · _2130 · _2131 (6 saves; _2131 superset — applied in 97ebe36 + b5dc6dd) · feedback_2026-08-20_0806 (single edit, absorbed pre-apply into b5dc6dd) · _1123 · _1129 · _1130 · _1130_2 · _1249 · _1250 · _1250_2 · _1253 · _1255 (superset — applied in 4a21571; the #38 planner edit inside it was a stale re-export of _0806) |
 | 2026-08-10 | feedback_2026-08-06_1325 · feedback_2026-08-10_1512 · _1544 · _1605 · _1607 · _1620 · _1622 (7 saves; _1544 and _1622 are the supersets. _1512 was subsumed by _1544; **_1605 was a pure stale re-export of _1544** — console cache not reset; _1620 subsumed by _1622) |
 | 2026-08-04 (4th run) | feedback_2026-08-04_1429 · _1435 · _1442 · _1443 · _1446 · _1451 · _1451_2 · _1452 … _1452_9 (16 saves; _1452_9 is the superset) |
@@ -816,6 +1011,23 @@ and say so, rather than treating it as a style change.
 | 2026-07-13 | feedback_2026-07-05_2141 · feedback_2026-07-08_1726 · feedback_2026-07-08_1749 · feedback_2026-07-08_1749_2 · feedback_2026-07-08_1755 |
 
 ## Changelog
+- **2026-08-26 (learn run 7)** — 5 feedback files ingested (the 2026-08-23 round, never learned,
+  plus the 2026-08-25 sitting). **6 new rules:** **V6** (a step's figure goes below the text and
+  large — 4 instances in one card), **V7** (everything the step names must be findable in the
+  figure, and nothing else appears — 5 instances, the general form of Yon's repeated figure
+  complaints), **V8** (summary figures read as overview, not instruction), **C6** (generic tool
+  introductions are their own intro cards, not project steps — blocked on renumbering P4),
+  **C7** (R cards are the teacher's; blocked because 85 surviving references are substantive),
+  and a new **Category S** with **S1** (safety text matches the real hazard — goggles out of the
+  soldering cards, P8's propeller rule deliberately left alone pending Yon). **1 new hazard:**
+  **H5** (a build step must not assert hardware the kit lacks — FIRM on 4 instances, and the one
+  that cost a round trip when the figures were rebuilt to match a wrong step). **Strengthened:**
+  **T1** +1 (9th instance), **T2** +1, **W3** +1 (jargon test sharpened: "has this card taught the
+  word", not "is it short"), **W6** +1 (intro box, not just the lede), **X5** (third sweep gap;
+  re-verified clean), **W11** TENTATIVE → **FIRM** (first real card application).
+  **⚠ Conflict surfaced:** T1's protected carve-out — the soldering motif "קוראים למורה, תמיד" —
+  was deleted by Yon himself on P4 T1_M2. 8 instances survive and were NOT swept; the carve-out is
+  recorded as **suspended, not lifted**, pending his decision.
 - **2026-08-20 (learn run 6)** — 16 feedback files ingested (the 2026-08-19 round + all of today's).
   **7 new rules:** **X5** (geresh on option/example/section letters — CONFIRMED, 190 sites swept,
   incl. a JS-string gap found and fixed after; documents the quote-boundary lesson and the U+05F3

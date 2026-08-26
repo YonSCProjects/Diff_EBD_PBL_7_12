@@ -1,0 +1,52 @@
+- [Session handoff](project_session_handoff.md) — read first when resuming this project
+- [Illustration kit](reference_illustration_kit.md) — `Arduino_Projects/_illustration_kit/` draws every step illustration (P4/P5/P7 done, P8 parts done); read its READMEs before drawing anything new
+- [One figure per step](feedback_step_figures_from_card_text.md) — build cards want a figure inside each numbered step, and the step's own Hebrew is the authority on what it shows
+- [Figures must reach the cards](feedback_figures_must_reach_the_cards.md) — publish over the filename the card already embeds, then screenshot the card to prove it
+- [Step figures rebuilt in Blender](project_step_figures_blender_rebuild.md) — 2026-08-24: P4/P5/P7/P8 step figures re-modelled with ink outlines + auto-framing; open items inside
+- [Blender pipeline](reference_blender_pipeline.md) — `_blender/` renders the P4 step figures in Cycles with Hebrew callouts composited as SVG; portable Blender lives under the user tools folder; read its README first
+- [P4-P7 built](project_car_projects_built.md) — 2026-08-20/22: P4 polygal adjust + P5/P6/P7 card sets + template + sketches; 8×AA (12V) battery decision + real wiring figures (2026-08-22); pin maps + deferrals inside
+- [P8 quadcopter authored](project_p8_quadcopter_built.md) — 2026-08-23: locked MOSFET/DevKit hardware, brief + firmware + 6 figures, both mandatory review passes, 27 of 28 Hebrew cards
+- [Fritzing kit — real-part figures](reference_fritzing_kit.md) — `Arduino_Projects/_fritzing_kit/` builds every P4–P7 wiring figure (bundled community parts + CLI export + composited wires); read its README before any new figure
+- [Wiring figures are mandatory](feedback_wiring_figures_not_optional.md) — every card set ships with real Fritzing-quality circuit images (use the kit); never defer them
+- [Ask components, then build](feedback_ask_components_then_build.md) — for a new project card set: one batch of concrete hardware questions first (AskUserQuestion), then the whole process autonomously; repeated terse directives are firm decisions
+- [Chassis + P8 frame research](reference_chassis_frame_research.md) — 2026-08-20 hardware research: battery + chassis results complete, Felchao-frame agent interrupted (re-run brief inside), P8 doc-edit worklist mapped
+- [Card authoring process doc](reference_card_authoring_process.md) — card_authoring_process.md at repo root = the full 6-step task-card creation process (incl. GPT Hebrew pass); read it, don't re-assemble
+- [Hebrew cards = sole dev target](feedback_hebrew_cards_sole_dev_target.md) — since 2026-08-05 all card work/references mean the HE .dc.html cards; English cards are stale, don't cite them
+- [Card nav (prev/next)](project_card_nav_feature.md) — build_card_nav.js generates card_nav.js per project; 3 guards keep it out of print/bundles/console; re-run after adding or renaming a card
+- [Yonatan Lev El - Robotics Workshop Educator](user_profile.md) — runs robotics workshop for 4-8 EBD students (grades 7-12), individual projects
+- [Differential PBL Research Project](project_diff_pbl.md) — research framework for DI in PBL for EBD students in robotics
+- [GitHub repo](reference_github.md) — YonSCProjects/Diff_EBD_PBL_7_12
+- [Research standards](feedback_research_standards.md) — only cite 100% verified, real research with real DOIs and authors
+- [Article verifier agent + hook](project_verifier_agent.md) — article-verifier subagent + PostToolUse hook auto-verifies new citations in project .md files
+- [Editorial-coherence agent](project_editorial_coherence_agent.md) — editorial-coherence subagent + Editorial_Preferences_Log.md; learns Yon's editorial voice and proposes consistent revisions
+- [Hebrew translation reviewer agent](project_hebrew_reviewer_agent.md) — hebrew-translation-reviewer subagent + Hebrew_Translation_Preferences_Log.md; catches English-to-Hebrew translation drifts on new Hebrew drafts
+- [Pedagogical card reviewer agent](project_pedagogical_card_reviewer_agent.md) — pedagogical-card-reviewer subagent; applies the 9 design principles + EBD simplicity criteria to student-facing navigation cards and reference cards
+- [Visual design reviewer agent](project_visual_design_reviewer_agent.md) — visual-design-reviewer subagent; typography, page layout, tables, icons, color/contrast, print-ready quality for HTML cards + stylesheet
+- [Overview cards-insertion marker](project_cards_insert_marker.md) — build_overview_with_cards.js splits overview MD at `<!-- INSERT_CARDS_HERE -->` to interleave card PDFs
+- [Arduino PBL submission metadata](project_arduino_pbl_submission.md) — PSGA Nahariya submission 206874, supervisor Michal Shilo, date 2026-04-13; cover fields on HE overview title page
+- [Academic design reviewer agent](project_academic_design_reviewer_agent.md) — academic-design-reviewer subagent; title pages, headings, APA-7 references, pagination, cross-doc consistency for master + EN/HE overview docs
+- [Arduino PBL Program](project_arduino_pbl_program.md) — 8-project Arduino workshop program + funder proposal; Phase A+B+C+D.1+E complete, D.2-D.8 deferred; 10-page overview (EN+HE) created
+- [Arduino Project 2 built](project_arduino_project2_built.md) — Reaction-Time Game full card set built+committed 110aa19 (D.2); pin map, build invocation, deferred Fritzing renders + stylesheet suggestions
+- [Arduino Project 3 built](project_arduino_project3_built.md) — Don't Get Too Close (proximity alarm, HC-SR04); full HE card set built+committed 66b55d0 (D.3); pin map, build invocation, deferred Fritzing + English parallel
+- [Arduino Project 4 built](project_arduino_project4_built.md) — Line-Following Car (first soldering, L298N); full HE set + new R6 soldering card built+committed 2eb45a2 (D.4); pin map D5-D10, stylesheet fixes needing backport decision
+- [English retroactive pass (deferred)](feedback_english_retroactive_pass.md) — Project 1 English HTML cards need visual polish (badge, icons, R-ref circles); Yon wants a complete English version alongside Hebrew
+- [Interactive checkbox pattern (card.js)](project_card_js_interactive_pattern.md) — nickname-keyed localStorage persistence for Hebrew navigation cards; print-safe (hides under @media print)
+- [Autonomous batch execution](feedback_autonomous_batch_execution.md) — for reviewer-driven batch fixes across many cards, Yon prefers one end-to-end run + one consolidated commit over per-proposal confirmations
+- [Fritzing MCP server](reference_fritzing_mcp.md) — project-scoped MCP at C:\Fritzing mcp for generating breadboard diagrams; configured in .mcp.json
+- [Fritzing canonical Step files](reference_fritzing_canonical_steps.md) — Project 1 w1–w4 .fzz canonical sources live in fritzing_steps/Step*.fzz; copy + export, don't hand-build
+- [Fritzing SVG-compositing](reference_fritzing_svg_compositing.md) — draw missing new-part wires (buzzer/2nd button) onto the exported breadboard SVG via puppeteer coord-extract + wire-inject; unblocks the "new parts need GUI" limitation
+- [Channel C — spoken-companion mode](project_channel_c_spoken_companion.md) — 3rd Claude Code channel: voice-in/out for students with reading/writing difficulty; pilot in Project 1 (Hebrew, Tier 1, M1–M8)
+- [Hooks need absolute paths](feedback_hook_cwd_absolute_path.md) — $CLAUDE_PROJECT_DIR, not relative paths; Bash `cd` persists the cwd across tool calls so hooks can fire from any directory
+- [Build outputs must reflect content changes](feedback_build_output_must_reflect_changes.md) — every edit must end with build_output/ regenerated; Arduino_Principles.md is NOT a direct build source, its changes must propagate to 3 restate-carrying docs
+- [Principle 10 + lecture integration](project_principle_10_lecture_integration.md) — 9 → 10 design principles; Michal & Smadar 2025 staff lecture on flexibility in participation styles; anchor log + acknowledgment scripts for teachers
+- [Fritzing LED color export bug](reference_fritzing_led_color_bug.md) — CLI silently drops non-"Red (633nm)" LEDs from SVG; set all LEDs Red or use per-colour parts
+- [New card reviewer workflow](feedback_new_card_reviewer_workflow.md) — for every new card: pedagogical + visual reviewers in parallel on EN, then hebrew reviewer on HE
+- [Chromium break-inside: avoid unreliable](feedback_chromium_break_inside_avoid.md) — Chromium violates break-inside: avoid in tight layouts even with !important; use deterministic page-break-before sibling rules — for reviewer-driven batch fixes across many cards, Yon prefers one end-to-end run + one consolidated commit over per-proposal confirmations
+- [Global rules: no carve-outs](feedback_global_rules_no_carveouts.md) — when Yon says "use X in all cards", apply literally; don't invent semantic exceptions from your own reasoning
+- [HE breadboard vocab](feedback_breadboard_vocab_he.md) — numbered strips (1-30) = "טורים", lettered strips (a-j) = "שורות"; LED legs go into different "טורים", never "שורות"
+- [GPT Hebrew pass](project_gpt_hebrew_pass.md) — improve_hebrew_gpt.js sends .dc.html cards to OpenAI API for proposals; manual trigger, Claude vets+applies; needs OPENAI_API_KEY (not yet set as of 2026-07-05)
+- [Card-review console](project_review_console.md) — start_review.bat → in-browser review of HE task cards; READ THIS before applying review_feedback/*.json ("apply the feedback" contract); P1+P2 dc-only (WIP), P3+P4 have BOTH classic and dc
+- [/learn-changes skill](project_learn_changes_skill.md) — learns Yon's card-editing style from review feedback into Card_Editing_Preferences_Log.md; run after each apply round; sweeps only on approval
+- [P3+P4 dc redesign](project_dc_redesign_p3_p4.md) — 27 .dc.html cards built locally ae31f60, text-verbatim gate; dc_design_spec.md + check_text.js at repo root = P5-P8 authoring kit
+- [dc build architecture](project_dc_build_architecture.md) — cc4607c: builds source .dc.html, classic HE task cards retired; render_cards_lib.js (JS+settle, break-tag, snapshot, scopeCss); dc is now the single canonical HE task-card source
+- [DesignSync tool](reference_designsync.md) — file-sync for claude.ai/design design-system projects ONLY (not a Claude Design chat channel); auth blocked in VSCode env, unlock via terminal /design-login

@@ -1,0 +1,33 @@
+---
+name: Research must be 100% verified and real
+description: Yon requires all cited research to be real, verifiable studies with real researchers — no hallucinated or unverifiable citations
+type: feedback
+originSessionId: 3d210c3a-c0bd-44fd-9c8b-2b5b6675b02f
+---
+Only cite research that is 100% real with verifiable authors, journals, and DOIs/links.
+
+**Why:** Yon explicitly requested "100% real research that really took place with real researchers that can be verified." Academic credibility is critical for this project.
+
+**How to apply:** When compiling bibliographies or summaries, always verify articles have real DOIs, real journal names, and identifiable authors. Never fabricate or guess citations. When uncertain, flag it rather than invent details.
+
+**Verifier reliability pattern (learned during Phase A/B of the Arduino PBL program, 2026-04-10):** The article-verifier subagent is reliable when it has a DOI to feed to Crossref — every Crossref-derived correction in the initial sweep checked out on Phase B re-audit (P3, P5, P6, P7, P8, P9, P10). It is **unreliable when it has to infer authorship from WebSearch or guess** — two of the initial corrections (P2 "Meltzer et al." and P11 "Whitaker et al.") were authoritatively wrong and had to be re-corrected in Phase A (actually Rosen, Boyle, Cariss, Forchelli 2014 per ERIC EJ1168865; and Kathy Gibbs 2023 single-author per Crossref DOI 10.1080/13632752.2023.2194131). The failure mode is **inventing plausible-looking authors where the original entry had none**, rather than leaving authorship blank or flagging for human review. **Rule:** before finalizing any reference list, run every citation through Crossref and treat Crossref as the source of truth; for entries without DOIs (books, dissertations, grey literature), require a web-verified authoritative source (publisher page, ERIC, WorldCat, ProQuest) — never accept an unverified "approximate author list" from a WebSearch. Also note: the same research group may publish multiple overlapping papers; don't assume a file named `author_year.txt` corresponds to the specific paper cited elsewhere — verify by title and DOI (Phase B caught a case where `cumming_2024.txt` contained a DIFFERENT Cumming paper than the one cited in the Bibliography, both real, both by the same group).
+
+**Verifier incremental-pass false-positive pattern (learned 2026-04-11 during Phase D.0 of the Arduino PBL program):** When the article-verifier runs in incremental mode on a single section of a file, it may scan only the main "Verified" table of `Verification_Log.md` and miss citations that are actually present in the "Partial / Corrected" table. Example: during §4 Principle 7 re-verification, the verifier reported that Smith, Langberg, Cusick, Green & Becker (2020) was "not in the log" and recommended adding it, when in fact the paper was already logged at row P7 of the Partial/Corrected table with the correct DOI (10.1007/s10802-019-00601-x). **Rule:** before acting on a verifier's "citation not in log" recommendation, grep the Verification_Log.md for the first author surname to check **both** tables (Verified and Partial/Corrected) — a citation that appears in either is already logged. The false positive is recoverable (just don't add a duplicate row) but can create spurious log edits if acted on without checking.
+
+**Full Phase B re-audit lessons (wave two, 2026-04-10/11):** After the initial Barker/Morsink error was caught during §2 drafting, Yon authorised a full re-audit of all 9 principles' citations against source files. The audit found 9 misattributions across ~55 load-bearing claims (~16% error rate). The most dangerous patterns:
+
+1. **Tested-but-failed hypotheses cited as confirmed findings** (3 instances: Barker, Morsink, Kuzmina). When a paper says "we tested X," always find out what the test actually found. Kuzmina & Romero 2025 in particular had ALL FIVE quantitative hypotheses fail statistically, yet the Phase B principle distillation cited it as if the hypotheses were confirmed. Only a narrow qualitative think-aloud observation is defensible from that paper.
+
+2. **Fabricated effect sizes**. Belland et al. 2017a was cited as "g = 0.71 for scaffolding in PBL contexts." That number does not appear anywhere in the paper. The actual overall effect is g = 0.46, with the PBL directional finding reported as z = 6.08 (p < .01), not a subset g. **Rule:** any specific numerical claim must be grep-verified in the source file, not trusted from synthesis notes.
+
+3. **Theoretical framing quoted from secondary sources mistaken for the paper's own view** (Barker's "rebel against manipulation" sentence was quoting Barkley & Benton 2013 as theoretical background, not Barker's own empirical conclusion).
+
+4. **Papers that document a problem cited as if they prescribed a solution** (Abramovitch 2024 and Colbert 2025 documented OCD burden and staff-knowledge gap respectively; neither prescribed the specific workshop design rules they were cited for).
+
+5. **Cluster summary files are navigation aids, not source of truth.** Every load-bearing claim in a final deliverable must be traced back to the actual source file, not to the Phase A cluster synthesis.
+
+6. **Source file headers can be wrong.** During the Kuzmina reframe, the `kuzmina_2025.txt` file header said the journal was "Technology, Pedagogy and Education" but Crossref (authoritative via direct DOI lookup) said *Australian Journal of Learning Difficulties*. Always trust Crossref over extracted file metadata.
+
+7. **"Partial Verification" flags must be honored.** When an audit agent reports PARTIAL VERIFICATION because a paper's full text is truncated or paywalled, the claim from that paper must be softened to what the abstract alone supports, not written as if fully verified. Gilmour 2022 was caught on this pattern during §3.1 drafting.
+
+**Resulting editorial pattern (Pattern 10 in Editorial_Preferences_Log):** When citing research, verify the claim is what the paper's own authors actually conclude, not a sentence the paper quotes from another source as framing, or a hypothesis the paper tested but did not support. Before attributing a claim, open the paper's own full-text source file (not just a synthesis summary) and confirm: (1) the claim is what the paper's authors themselves conclude, not a secondary-source quote; (2) if the paper reviews empirical studies, the claim is consistent with what those studies actually found, not a hypothesis the paper tested and failed to support; (3) the claim is not an oversimplification; (4) effect sizes and statistics come from the specific paper being cited.

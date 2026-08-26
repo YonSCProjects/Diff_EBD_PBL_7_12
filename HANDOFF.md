@@ -36,10 +36,11 @@ improvements."*
 About 60 Blender step figures, 22 Fritzing wiring figures, a 428 KB master document, and roughly
 310 MB of project assets.
 
-**Before you transfer the repository, run `git gc`.** The object store is **1.53 GiB in 3,627
-completely unpacked objects — zero packs.** A clone or a copy will be painfully slow until it is
-packed. Most of that weight is the committed card bundles in `build_output/` (18 tracked files,
-~397 MB), which inline every figure as base64.
+**Repository weight.** `git gc` was run on 2026-08-26 and took the object store from 1.53 GiB in
+3,627 loose objects to **658 MB packed**. Most of the remaining weight is the committed card
+bundles in `build_output/` (18 tracked files, ~397 MB), which inline every figure as base64. If
+those bundles do not need to be in git, dropping them would shrink the repository by more than
+half — worth asking Yon, since he works from `build_output/`.
 
 ---
 
@@ -47,19 +48,25 @@ packed. Most of that weight is the committed card bundles in `build_output/` (18
 
 Read these before touching anything.
 
-**1. Words are final.** `dc_design_spec.md` §0 is the Prime Directive: when converting or
+### 2.1 Words are final
+
+`dc_design_spec.md` §0 is the Prime Directive: when converting or
 laying out a card, you reflow text into components — you never reword it. `check_text.js` exists
 as a gate because a previous tool silently reworded and condensed a whole project's cards. If a
 sentence must change, it changes because Yon said so, in his words.
 
-**2. A figure must be published over the filename the card already embeds.** Every Blender build
+### 2.2 A figure must be published over the filename the card already embeds
+
+Every Blender build
 script carries a `PUBLISH` map of `scene:figure_name`. The right-hand side is not a label — it is
 the exact filename in `task_cards_he/assets/` that a card's `<img src>` points at. Publishing
 under a fresh name once produced a folder of beautiful renders that no student ever saw, because
 the cards kept showing the old artwork. `node _blender/shot_cards.js <project-dir>` exists to make
 that impossible to repeat: it opens every card and exits non-zero if any image failed to load.
 
-**3. The card source is not what the student sees.** `.dc.html` files are React templates. The
+### 2.3 The card source is not what the student sees
+
+`.dc.html` files are React templates. The
 runtime in `support.js` boots, replaces `<x-dc>` with a rendered tree, resolves `{{ }}` holes,
 drops `<sc-if>` branches whose condition is false, and hoists `<helmet>` into `<head>`. Measured
 on one card: **24 visible ✓ marks with JavaScript off, 4 with it on.** So — any tool that edits a
@@ -68,14 +75,18 @@ runtime and wait for it to settle**. `render_cards_lib.js` does the settling; `b
 does *not* (it disables JS) and should not be used for dc cards despite what
 `card_authoring_process.md` step 6 says.
 
-**4. Two review artefacts are cumulative, and one of them lies.** The review console exports the
+### 2.4 Review exports are cumulative, and they re-export applied edits
+
+The review console exports the
 *entire* localStorage state on every save, so same-sitting saves are supersets — process the
 newest. But it also re-exports edits that were applied in earlier rounds, because the console
 cache is not reset. **Every edit in the 2026-08-25 round was a stale re-export of the 2026-08-23
 round.** Always verify: if `beforeText` is absent from the card and `afterText` is present, the
 edit is already applied — skip it. And remind Yon to press **"איפוס הכל"** in the console.
 
-**5. Hardware beats the card.** A build step is not evidence about the hardware. On 2026-08-24 a
+### 2.5 Hardware beats the card
+
+A build step is not evidence about the hardware. On 2026-08-24 a
 figure was rebuilt from hot-glue to screws because the card's own step 4 said "screwed, not
 glued" — and the motors have no screw holes at all. Both were wrong; the figure had been made to
 match a wrong instruction. This is rule **H5** in the preferences log. When a figure and a step
@@ -128,7 +139,18 @@ No `.github/`, no pipeline. Everything is local hooks plus hand-run scripts. The
 guards are the two hooks and `shot_cards.js` / `build_card_nav.js --check` when you remember to
 run them.
 
-### 3.5 Smoke test — prove the environment works
+### 3.5 What does not travel in `.claude/`
+
+`settings.local.json` is **untracked**. On the new machine it takes with it
+`enabledMcpjsonServers: ["fritzing"]` and the whole permission allowlist — so the MCP will not
+auto-enable and permission prompts come back. Recreate it or accept the prompts.
+
+Also outside the repo and therefore gone: the global `~/.claude/CLAUDE.md` (which held the
+Fritzing MCP rules), the user-level `/save` and `/end-session` commands, and the memory directory
+— whose key encodes the absolute path, so **it is orphaned by moving the folder even on the same
+machine**. That memory is archived in `docs/context-archive/` (§10).
+
+### 3.6 Smoke test — prove the environment works
 
 ```bash
 npm install
@@ -139,6 +161,37 @@ node build_cards_only.js he 4                        # → build_output/Project_
 ```
 
 If all four pass, you have a working environment.
+
+### 3.7 How to actually look at a card
+
+There are three obvious ways and two of them are wrong.
+
+- ❌ Opening the `.dc.html` over `file://` — `support.js` needs the network and
+  `--allow-file-access-from-files`; you get the raw template.
+- ❌ `node build_single_card.js <card>` — it disables JavaScript, so every checkbox renders
+  pre-ticked (§2.3).
+- ✅ **`start_review.bat`, then `http://127.0.0.1:8765`** — the review console, which is also
+  where Yon works.
+- ✅ Or a settled render through `render_cards_lib.js` — which is what `build_cards_only.js` and
+  `_blender/shot_cards.js` both do.
+
+### 3.8 What a green build means
+
+After editing a card, three checks close the loop. There is no CI, so they are yours to run:
+
+```bash
+node build_card_nav.js --check                       # nav in sync?          exit 1 on drift
+node _blender/shot_cards.js <project-dir>            # every image loads?    exit 1 on broken
+node build_cards_only.js he <N>                      # bundle regenerates?
+```
+
+Add `node check_text.js <source> <target>` whenever text was carried from another file — that is
+the verbatim gate (§2.1).
+
+**Wall-clock, so you do not start an hour-long job thinking it is quick:** a Cycles figure is
+**~2–2.5 minutes**, so a whole-project re-render is 15 min (P5/P7) to **70 min (P8's 28 figures)**.
+`--eevee` previews are seconds. `--compose-only` re-labels in about a second per figure. A cards
+bundle takes a few minutes and can produce a 50–90 MB PDF.
 
 ---
 
@@ -173,6 +226,18 @@ _render3d/                   abandoned WebGL experiment — ignore
 `render_cards_lib.js` (library, not a CLI), `check_text.js`, `svg_to_png.js`,
 `fix_wiring_svgs.js`, `improve_hebrew_gpt.js`, `review_server.js` + `review_console.html` +
 `start_review.bat`.
+
+**Two asset conventions, and nothing states this anywhere else.** A **task** card references
+`./assets/<name>.svg`; a **reference** card references `../images/<name>.svg`. The `assets/`
+folder is a copy of what lives in `images/`. This is why an orphan check restricted to
+`./assets/` produces false positives, and why deleting an "unused" asset can be wrong.
+
+**Card file naming.** `P<n>_T<t>_M<m>_<slug>_he.dc.html` — project, **tier**, milestone.
+`build_card_nav.js` parses it. The tier is not a version number: it is the differentiation axis,
+and it governs how much scaffolding a card carries. The tiers are defined in
+`Robotics_Workshop_DI_PBL_Framework.md` part 3 — read that before authoring, because you cannot
+pick the right register without it. Project 1's cards omit the `P1_` prefix; every other project
+carries it.
 
 **Root documents.** `dc_design_spec.md` and `card_authoring_process.md` are the two authoring
 contracts. `Arduino_PBL_Program.md` is the 428 KB master. `Arduino_Principles.md` holds the ten
@@ -393,18 +458,22 @@ next tasks:
 6. Rules **V6** and **V7** in the preferences log are the general statements of 1–4. V7 is worth
    using as an acceptance test: read the step aloud and point at each noun in the render.
 
-### 9.2 Five Project 8 figures were rendered against an older drone model
+### 9.2 Five Project 8 figures are probably stale — re-render them
 
-The 28 P8 step figures were written in three runs on 2026-08-24, and one of them is stale.
-`p8_drone.py` — the shared quadcopter model **every** P8 figure draws — was last edited at
-**20:21**. Five figures were rendered *before* that and never re-rendered:
+**This is a suspicion, not a proven fact — treat it as such.** The 28 P8 step figures were
+written in three runs on 2026-08-24. `p8_drone.py` — the shared quadcopter model **every** P8
+figure draws — was last written at **20:21**, which is after five of the figures were rendered
+and before the other twenty-three. That *could* mean those five draw an older model; it could
+equally have been a comment change or a no-op save. `p8_drone.py` has a single commit, so git
+cannot tell you, and Cycles output is stochastic, so re-rendering and comparing bytes cannot
+either. The cheap move is simply to re-render them and stop wondering:
 
 ```
 s_p8_parts   s_p8_press_fit   s_p8_mount   s_p8_t2_solder1   s_p8_t2_solder24
 ```
 
-Git shows one coherent state (all 28 were committed together); only the file mtimes reveal it.
-The fix is cheap — about twelve minutes, not a full rebuild:
+Git shows one coherent state — all 28 were committed together; only the mtimes hint at the split.
+About twelve minutes:
 
 ```bash
 bash _blender/build_p8.sh s_p8_parts
@@ -445,8 +514,14 @@ briefs call for one — not in two figures out of sixty. Check poses with the `s
 - **Safety goggles in Project 8.** Yon asked for every mention removed "in these projects",
   justified by soldering being simple. Done for the soldering cards. In P8, goggles are a
   *propeller* rule — "משקפי מגן בכל רגע שמנוע יכול להסתובב", inside the six flight-day safety
-  rules — so **68 mentions across all 28 P8 cards** were left standing pending his explicit word.
-  There are now no goggles mentions anywhere else in the programme.
+  rules — so **68 mentions across all 28 P8 task cards** were left standing pending his word.
+
+  **This left a live inconsistency that needs fixing either way.** Goggles survive in **31 card
+  files**, not 28: the 28 P8 task cards *plus three reference cards* —
+  `P8/reference_cards_he/R1_flight_safety_he`, and **`P4/reference_cards_he/R4_safety_reminder_he`
+  and `R6_soldering_basics_he`**. Those last two are P4's own soldering cards. P4's task cards now
+  say there are three safety rules and no goggles; P4's reference cards still say four rules with
+  goggles. Whichever way Yon decides, R4 and R6 must be brought into line with the task cards.
 - **The soldering motif** — see §6.2.
 - **The gershayim convention** — see §6.1.
 
@@ -492,7 +567,16 @@ there are no `TODO`/`FIXME` markers anywhere in the repo, by convention.
   scenes, 60 `PUBLISH` entries, 60 callout JSONs, no orphans in either direction.
 - Both `_blender/` and `_illustration_kit/` contain files named `scenes_p4.py`, `scenes_p5.py`,
   `scenes_p7.py`, `scenes_p8.py`. Only the `_blender/` ones are live. Check your path.
-- `_render3d/` is an abandoned experiment and can be deleted.
+- `_render3d/` is an abandoned WebGL experiment, superseded by `_blender/`. Deletable.
+- **`build_overview_with_cards.js en` is silently broken.** It splits the overview at
+  `<!-- INSERT_CARDS_HERE -->`; that marker appears once in
+  `Arduino_PBL_Program_Overview_he.md` and **zero times in the English one**, so the English build
+  falls through to appending the cards at the end instead of at Appendix 1. No error is raised.
+- `support.js` is a **vendored build artifact**. Its own header says it is generated from a
+  `dc-runtime/src/*.ts` tree with `bun run build` — and that tree is not in this repo. All 156
+  cards depend on it, and it hard-codes a pinned React 18.3.1 UMD URL from unpkg with an SRI
+  hash. If unpkg or that pin ever goes stale, every card stops rendering and there is no
+  documented way to rebuild. Worth finding the source tree, or vendoring React locally.
 
 ---
 
@@ -513,8 +597,7 @@ repository.
 
 ## 11. How not to break this
 
-1. **Do not rename the repo folder** without fixing both hook matchers (§3.2). And run `git gc`
-   before moving it (§1).
+1. **Do not rename the repo folder** without fixing both hook matchers (§3.2).
 2. **Do not publish a figure under a new filename.** Overwrite the name the card embeds, then run
    `shot_cards.js`.
 3. **Do not hand-edit `card_nav.js`** — it is generated. Re-run `node build_card_nav.js` after
@@ -534,9 +617,9 @@ repository.
 
 ## 12. A suggested first week
 
-1. Stand the environment up and pass the four smoke tests in §3.5.
+1. Stand the environment up and pass the smoke tests in §3.6, and read §3.7 so you look at cards the right way.
 2. Read `_blender/README.md`, `dc_design_spec.md` §0–3, and `card_authoring_process.md`.
-3. Re-render the five stale P8 figures (§9.2) — it is mechanical, twelve minutes, it exercises
+3. Re-render the five suspect P8 figures (§9.2) — it is mechanical, twelve minutes, it exercises
    the whole pipeline end to end, and it clears a known inconsistency.
 4. Do the Project 4 figure work in §9.1. Preview with `preview.sh`, verify with `shot_cards.js`,
    rebuild the bundle, one commit.

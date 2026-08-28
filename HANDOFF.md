@@ -130,7 +130,9 @@ matcher; if you drop them, know what they did (see §7.4).
 
 - `support.js` fetches **React 18.3.1 + ReactDOM UMD from unpkg.com** on every card render.
   Offline, no dc card renders. This is why `render_cards_lib.js` waits for `networkidle0`.
-- `render_cards_lib.js` and `_blender/compose.js` pull Rubik and JetBrains Mono from Google Fonts.
+- `render_cards_lib.js` pulls Rubik and JetBrains Mono from Google Fonts. (`_blender/compose.js`
+  no longer does — since `76377a3` it embeds Rubik subsets from `_blender/fonts/` as `data:` URIs,
+  because an SVG loaded through `<img src>` cannot reach the page's webfonts.)
 - `improve_hebrew_gpt.js` calls the OpenAI API and needs `OPENAI_API_KEY` (never set here).
 
 ### 3.4 There is no CI
@@ -257,8 +259,21 @@ They are complementary, not competing. A single P4 card can carry figures from t
 
 ### 5.1 `_blender/` — step figures
 
-Read `_blender/README.md` first; it is current and detailed. The two ideas that make the output
-work:
+> **Moved on after this document was written.** Commit `76377a3` (2026-08-26, a concurrent
+> session) reworked a large part of this pipeline: four new modules — `cadparts.py` and `wrl.py`
+> (real components read from KiCad's published VRML CAD library, instead of boxes and cylinders),
+> `pcb.py` (boards with generated silkscreen so a student can read the pin numbers), and
+> `quality.py` (the shading half — world lighting and layered materials) — plus a `fonts/`
+> directory and a heavily rewritten `compose.js`. **`_blender/README.md` is the authority on the
+> current pipeline; where this section and that README disagree, believe the README.**
+>
+> Two of its newer lessons are worth knowing before you touch a figure: callout text is now drawn
+> in Rubik subsets **embedded in each SVG as `data:` URIs**, because an SVG loaded through
+> `<img src>` renders in a restricted mode where the page's webfonts never reach it — every
+> published callout had silently been Arial; and an anchor that *projects* inside the frame is
+> not necessarily *visible*, so anchors are now occlusion-tested rather than only bounds-tested.
+
+The two ideas that make the output work:
 
 **Ink outlines.** `lib.outlines()` runs a Freestyle contour pass over silhouette, border, crease
 and material-boundary edges. A raytraced image already hides what should be hidden, but without
@@ -285,6 +300,7 @@ bash _blender/build_p8.sh --compose-only     # re-label, no re-render
 bash _blender/build_p5.sh --eevee            # fast preview
 bash _blender/preview.sh s_wiring s_track    # contact sheet, look-and-fix loop
 node _blender/shot_cards.js <project-dir>    # prove it reached the cards
+node _blender/review/make_review.js > build_output/figure_review.html   # all figures at card width
 ```
 
 Roughly two minutes per Cycles frame at 1800×1350 on CPU.

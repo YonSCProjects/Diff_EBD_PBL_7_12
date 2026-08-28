@@ -45,3 +45,11 @@ _blender/work/
 
 __pycache__/
 *.pyc
+
+# Staging area for files on their way out — 1.1 GB of old renders, previous
+# build_output copies and zips. Never commit this.
+_to_delete/
+
+# Silkscreen textures are a CACHE: pcb.py regenerates them with PIL on every run
+# (Silk.save writes unconditionally), same class as _blender/work/.
+_blender/textures/

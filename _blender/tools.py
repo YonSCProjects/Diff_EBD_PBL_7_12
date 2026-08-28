@@ -218,9 +218,14 @@ def glue_gun(x, y, z, ang=0.0, stand=True):
                 axis='x', name='glue_shroud'),
         prism_xz([(0, 0), (7, 2), (9, 20), (2, 22), (0, 16)], 62, 9, 14, W - 18,
                  m['glue_grey'], name='glue_trigger', bevel=1.0),
-        revolve([(5.6, 0), (5.6, 66)], -4, W / 2, 60, m['glue_stick'],
+        # The stick feeds in through the BACK of the barrel and stands proud of it; built
+        # forward from x=-4 it ended up entirely inside the shell, so the gun had no stick.
+        revolve([(5.6, 0), (5.6, 62)], -54, W / 2, 60, m['glue_stick'],
                 axis='x', name='glue_stick'),
-        tube([(-62, W / 2, 60), (-92, W / 2 + 14, 48), (-124, W / 2 + 44, 22)],
+        # ...and the mains lead leaves from the bottom of the grip, not from a point 62 mm
+        # behind the gun, where it read as a black worm floating in mid-air.
+        tube([(44, W / 2, 5), (10, W / 2 + 10, 4), (-34, W / 2 + 30, 3),
+              (-78, W / 2 + 62, 3)],
              2.4, m['cable'], name='glue_cable'),
     ]
     if stand:

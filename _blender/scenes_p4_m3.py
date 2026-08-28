@@ -4,9 +4,10 @@ The card runs seven numbered steps and now gets seven figures, one per step. The
 their own module because they share a lot of staging (the plate at various stages of completion)
 that the other P4 scenes do not need.
 
-The card's own wording is the authority. Two things it says that earlier figures got wrong:
-  * the motors are SCREWED to the plate with 2x M3x30 each — NOT hot-glued
-  * the sensors are screwed with M3x20 and TWO NUTS as a spacer, so they sit ~1 cm off the floor
+The HARDWARE is the authority, not the card — rule H5. The card once said the motors are
+"screwed, not glued" and these figures were rebuilt to match it; the 8520-style gearboxes have no
+mounting holes at all, so both were wrong. The motors are hot-glued. The sensors really are
+screwed, with M3x20 and TWO NUTS as a spacer, so they sit ~1 cm off the floor.
 """
 import math
 import lib as L
@@ -63,15 +64,22 @@ def _template(z=2.2, marks=True):
     box(200, 24, z + 0.42, 50, 3.5, 0.14, m['ink'], bevel=0, name='checkstrip')
 
 
-def _screwed_motor(side, pos, z=0.0, screws=True):
-    """A motor bolted under the plate, with the two M3x30 heads showing on the top face."""
+def _glued_motor(side, pos, z=0.0, bead=True):
+    """A motor hot-glued under the plate, with the bead showing along the joint.
+
+    This used to fit two M3x30 heads through the plate because step 4 of the card said so. The
+    motors have nowhere to take a screw, so the heads were drawn into a part that cannot receive
+    them — H5. The bead is what a student actually sees from above once the plate is the right
+    way up: a thin fillet of glue squeezed out along each side of the motor body."""
     C.tt_motor(side, pos, z=z, leads=False)
-    if not screws:
+    if not bead:
         return
     x = C.MOTOR_FX if pos == 'front' else C.MOTOR_RX
     y = C.PLATE_Y0 if side == 'left' else C.PLATE_Y1 - C.MOTOR_D
-    for dx in (12, C.MOTOR_W - 12):
-        T.m3_screw(x + dx, y + C.MOTOR_D / 2, z + C.PLATE_T, 30)
+    glue = mat('glue_fillet', hexcol('#f2e2b4'), rough=0.3, transmission=0.4, ior=1.46)
+    for edge_y in (y - 0.8, y + C.MOTOR_D + 0.8):
+        box(x + 4, edge_y - 1.1, z - 1.4, C.MOTOR_W - 8, 2.2, 2.0, glue,
+            bevel=0.7, name='gluefillet')
 
 
 # ================================================================ step 1
@@ -104,13 +112,15 @@ def s_m3_2_cut():
     for fy in range(26, 196, 7):
         box(10, fy, -5.2, 281, 0.5, 6.4, m['sheet'], bevel=0, name='flute')
     _template(marks=False)
-    for tx, ty in ((28, 40), (244, 40), (28, 166), (244, 166)):
-        box(tx, ty, 2.6, 22, 13, 0.3, m['masking'], bevel=0, name='masktape')
+    # No masking tape here. It is not in this step's text, and four saturated yellow rectangles
+    # read as labelled parts of the job — V7: a figure carries nothing the step does not mention.
     T.craft_knife(112, 14, 3.0, ang=8, tilt=-12)
     L.anchor('blade', (150, 35, 4))
     L.anchor('cross', (258.5, 60, 3))
     L.anchor('corner', (26, 168, 3))
-    L.anchor('flutes', (60, 100, -2))
+    # z=-2 put the flute anchor INSIDE the sheet, so the callout named a feature the reader
+    # could not see. The flutes are visible on the cut edge; anchor it there.
+    L.anchor('flutes', (60, 100, 2.4))
     L.camera((150, 98, 0), 590, azimuth=40, elevation=46, lens=62)
 
 
@@ -123,16 +133,21 @@ def s_m3_3_holes():
     C.ensure()
     C.chassis(z=0.0)
     _template(z=C.PLATE_T + 0.1)
-    T.drill(C.SENS_R[0], C.SENS_R[1], C.PLATE_T + 6, ang=16, tilt=-90)
+    # tilt=-90 pointed the barrel UP, so the chuck and bit sat at the top of the frame and the
+    # grip hung under them: the shape stopped reading as a drill at all. +90 stands it on its
+    # bit, and the height puts the tip 2 mm into the plate at the drill cross it is making.
+    T.drill(C.SENS_R[0], C.SENS_R[1], C.PLATE_T + 201, ang=16, tilt=90, bit=45)
     for hx, hy in (C.SENS_L, C.SENS_R):
         cyl(hx, hy, -0.2, 1.75, C.PLATE_T + 0.6, m['ink'], name='hole')
     for sx in (C.BAT_X + 6, C.BAT_X + C.BAT_W - 12):
         for sy in (C.BAT_Y - 4, C.BAT_Y + C.BAT_D + 1):
             box(sx, sy, -0.2, 4, 3, C.PLATE_T + 0.6, m['ink'], bevel=0, name='slit')
-    L.anchor('drill', (C.SENS_R[0] + 6, C.SENS_R[1] + 10, C.PLATE_T + 130))
+    L.anchor('drill', (C.SENS_R[0] + 8, C.SENS_R[1] + 12, C.PLATE_T + 58))
     L.anchor('hole', (C.SENS_L[0], C.SENS_L[1], C.PLATE_T + 2))
     L.anchor('slot', (C.BAT_X + 8, C.BAT_Y - 3, C.PLATE_T + 2))
-    L.camera((132, 104, 46), 760, azimuth=40, elevation=34, lens=58)
+    L.camera_fit(azimuth=40, elevation=30, lens=58,
+                 extra=L.bbox_pts(C.PLATE_X0 - 4, C.PLATE_Y0 - 4, -4,
+                                  C.PLATE_X1 + 4, C.PLATE_Y1 + 4, C.PLATE_T + 104))
 
 
 # ================================================================ step 4
@@ -152,18 +167,28 @@ def s_m3_4_motors():
     for pos, side in (('front', 'left'), ('front', 'right'), ('rear', 'left')):
         C.tt_motor(side, pos, z=0.0, leads=False, up=True)
     mx, my = C.MOTOR_RX, C.PLATE_Y1 - C.MOTOR_D
-    box(mx, my, C.PLATE_T + 30, C.MOTOR_W, C.MOTOR_D, C.MOTOR_H, C.M['motor_yellow'],
-        bevel=1.2, name='motor4')
+    # The motor being placed used to be a bare yellow box: no can, no gearbox boss and no output
+    # shaft. It is the one motor the reader looks at, and it was the only one with nothing on it
+    # to recognise. Lift the real part instead, 30 mm above its bead.
+    for ob in C.tt_motor('right', 'rear', z=0.0, leads=False, up=True):
+        ob.location.z += 48 * MM
+        ob.location.y += 20 * MM
     # the bead waiting on the plate, and a bead already squeezed out under each fitted motor
     for gx in range(int(mx) + 7, int(mx + C.MOTOR_W) - 5, 9):
         cyl(gx, my + C.MOTOR_D / 2, C.PLATE_T, 3.2, 1.5, glue, name='bead')
     # the gun goes off to the SIDE at the plate's own depth. Parked at -y it is the
     # nearest thing to the lens and swells until it covers the motors it is gluing.
-    T.glue_gun(272, 240, C.PLATE_T, ang=-42)
-    L.anchor('motor4', (mx + 35, my + 12, C.PLATE_T + 30 + C.MOTOR_H))
+    # ang matters more than position here: the gun's shape only exists in side view (barrel,
+    # trigger, grip), and at -42 deg its axis sat almost exactly along the camera's view
+    # direction, so the reader was looking straight down the barrel at an orange lozenge.
+    # 54 deg is perpendicular to the azimuth-36 view, which is what puts the profile on screen.
+    T.glue_gun(338, 292, C.PLATE_T, ang=-126)
+    L.anchor('motor4', (mx + 35, my + 32, C.PLATE_T + 48 + C.MOTOR_H))
     L.anchor('bead', (mx + 34, my + 12, C.PLATE_T + 3))
-    L.anchor('gun', (290, 270, C.PLATE_T + 40))
-    L.anchor('glued', (C.MOTOR_FX + 35, C.PLATE_Y0 + 12, C.PLATE_T + 10))
+    L.anchor('gun', (330, 286, C.PLATE_T + 50))
+    # ...and this one sat inside the gearbox it was labelling. Put it on the motor's top
+    # face, which is the surface the reader is looking at.
+    L.anchor('glued', (C.MOTOR_FX + 35, C.PLATE_Y0 + 12, C.PLATE_T + C.MOTOR_H + 1.5))
     L.camera_fit(subject='bead', azimuth=36, elevation=36, lens=58,
                  extra=L.bbox_pts(C.PLATE_X0 - 6, C.PLATE_Y0 - 6, -8,
                                   C.PLATE_X1 + 6, C.PLATE_Y1 + 6, C.PLATE_T + 60))
@@ -178,7 +203,7 @@ def s_m3_5_wheels():
     C.chassis()
     for s in ('left', 'right'):
         for p in ('front', 'rear'):
-            _screwed_motor(s, p)
+            _glued_motor(s, p)
     for s, p in (('left', 'rear'), ('right', 'front'), ('right', 'rear')):
         C.wheel(s, p)
     # the fourth still coming onto its axle
@@ -188,7 +213,11 @@ def s_m3_5_wheels():
     L.anchor('wheel_on', (C.AXLE_F, C.PLATE_Y0 - 40, C.Z_AXLE))
     L.anchor('axle', (C.AXLE_F, C.PLATE_Y0 - 4, C.Z_AXLE))
     L.anchor('seated', (C.AXLE_R, C.PLATE_Y1 + 20, C.Z_AXLE))
-    L.camera((148, 100, -12), 720, azimuth=34, elevation=26, lens=56)
+    # No subject= here: aiming halfway to the outboard wheel pushed the car into the top of the
+    # frame and left a third of the picture as empty bench. The anchor bbox centres it.
+    L.camera_fit(azimuth=34, elevation=24, lens=56,
+                 extra=L.bbox_pts(C.PLATE_X0 - 6, C.PLATE_Y0 - 44, C.Z_GROUND,
+                                  C.PLATE_X1 + 6, C.PLATE_Y1 + 10, C.PLATE_T + 6))
 
 
 # ================================================================ step 6
@@ -200,7 +229,7 @@ def s_m3_6_boards():
     C.chassis()
     for s in ('left', 'right'):
         for p in ('front', 'rear'):
-            _screwed_motor(s, p)
+            _glued_motor(s, p)
     C.wheels_all()
     C.battery_box()
     C.l298n()
@@ -214,7 +243,12 @@ def s_m3_6_boards():
     L.anchor('driver', (C.DRV_X + 22, C.DRV_Y + 22, C.PLATE_T + 16))
     L.anchor('uno', (C.BRAIN_X + 36, C.BRAIN_Y + 30, C.PLATE_T + 6))
     L.anchor('ziptie', (C.BAT_X + 7, C.BAT_Y - 3, C.PLATE_T + 16))
-    L.camera((150, 110, -6), 630, azimuth=44, elevation=34, lens=58)
+    # Review: "can't tell where the Arduino is, where the L298N is, where the batteries are."
+    # At 34 degrees the three parts overlap into one dark mass down the middle of the deck. From
+    # higher up each keeps its own footprint on the plate and the ink outline closes around it,
+    # which is what makes them separable — V7.
+    L.camera_fit(azimuth=46, elevation=54, lens=60, only=('driver','switch','uno','ziptie'),
+                 extra=L.bbox_pts(C.PLATE_X0 - 2, C.PLATE_Y0 - 2, C.PLATE_T - 4, C.PLATE_X1 + 2, C.PLATE_Y1 + 2, C.PLATE_T + 24))
 
 
 # ================================================================ step 7
@@ -226,7 +260,7 @@ def s_m3_7_sensors():
     C.chassis()
     for s in ('left', 'right'):
         for p in ('front', 'rear'):
-            _screwed_motor(s, p)
+            _glued_motor(s, p)
     C.wheels_all()
     C.battery_box()
     C.l298n()
@@ -238,9 +272,17 @@ def s_m3_7_sensors():
     T.m3_screw(hx, hy, C.PLATE_T, 20, axis='z')  # head on top, shank down to the sensor
     T.m3_nut(hx, hy, -3.0)
     T.m3_nut(hx, hy, -6.0)
-    T.screwdriver(250, 26, 14, ang=24)
-    L.anchor('sensor', (C.SENS_R[0] - 8, C.SENS_R[1], -14))
+    T.screwdriver(196, 4, -26, ang=64, tilt=-24)
+    # The camera sits in front of the nose at -y, so the LEFT sensor stands between the lens
+    # and the right one. Anchoring on the right sensor's outboard face clears it.
+    L.anchor('sensor', (C.SENS_R[0] - 15, C.SENS_R[1] + 8, -13.0))
     L.anchor('nuts', (hx, hy, -4.5))
     L.anchor('eye', (C.SENS_L[0] - 12, C.SENS_L[1], -17))
     L.anchor('bolt', (hx, hy, C.PLATE_T + 2))
-    L.camera((120, 106, -14), 560, azimuth=28, elevation=22, lens=62)
+    # Review: "where is the sensor? where is the front?" Both sensors were built and both were
+    # invisible: they bolt UNDER a 9 mm opaque plate, and the camera sat at +22 degrees looking
+    # down on it. Three of the four anchors were behind the plate while all four reported
+    # onscreen, so compose.js drew every label onto bare plastic. A low view from in front of
+    # the nose shows the sensors, their bolts and the spacer nuts, and gives the plate a front.
+    L.camera((C.SENS_L[0] + 26, (C.SENS_L[1] + C.SENS_R[1]) / 2, -2), 330,
+             azimuth=152, elevation=7, lens=52)

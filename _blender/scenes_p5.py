@@ -32,12 +32,17 @@ def _bench(z, x0=-40, y0=-30, w=420, d=320, colour='#a89a88'):
 
 
 def _car_anchors(z=0.0):
-    L.anchor('esp32', (ESP_X + 26, ESP_Y + 14, z + C.PLATE_T + 6))
-    L.anchor('driver', (C.DRV_X + 22, C.DRV_Y + 22, z + C.PLATE_T + 16))
+    L.anchor('esp32', (ESP_X + 26, ESP_Y + 14, z + C.PLATE_T + 6 + C.ESP_STANDOFF))
+    # +22/+16 lands inside the L298N's heatsink, the tallest thing on that board.
+    L.anchor('driver', (C.DRV_X + 8, C.DRV_Y + 30, z + C.PLATE_T + 20))
     L.anchor('battery', (C.BAT_X + 55, C.BAT_Y + 30, z + C.PLATE_T + 17))
-    L.anchor('plate', (150, 110, z + C.PLATE_T))
-    L.anchor('wheel_front', (C.AXLE_F, C.PLATE_Y0 - 20, z + C.Z_AXLE))
-    L.anchor('sensor_left', (C.SENS_L[0], C.SENS_L[1], z - 10.0))
+    # Not the plate's centre: the Uno, the driver and the battery box all sit there, so a
+    # whole-vehicle label pointed at a board instead of at the plate. This corner stays bare.
+    L.anchor('plate', (C.PLATE_X0 + 26, C.PLATE_Y0 + 20, z + C.PLATE_T))
+    # at the axle centre this sat inside its own tyre
+    L.anchor('wheel_front', (C.AXLE_F, 1.0, z + C.Z_AXLE - 10))
+    # the sensors bolt under a 9 mm opaque deck; anchor on the nose above them
+    L.anchor('sensor_left', (C.SENS_L[0] - 14, C.SENS_L[1], z + C.PLATE_T + 1))
 
 
 # ---------------------------------------------------------------- M1 — meet the ESP32
@@ -49,14 +54,16 @@ def s_meet_esp32():
     T.heat_mat(6, 10, 0, 190, 150)
     C.ensure()
     # the board on its own, rotated off-axis so it reads as an object rather than a diagram
+    # the pins now hang below the board, as they do on the real DevKit, so the board has to
+    # stand on them rather than lie flat on the mat
     g = C.esp32_devkit(z=0.0, velcro=False, dx=42 - C.BRAIN_X - 9, dy=72 - C.BRAIN_Y - 13,
                        dz=-C.PLATE_T + 1.4)
-    ex, ey, ez = 42.0, 72.0, 1.4
+    ex, ey, ez = 42.0, 72.0, 9.9   # 1.4 board z + the 8.5 mm pin stand-off
     L.anchor('usb', (ex + 6, ey + 14, ez + 6))
     L.anchor('six', (ex + 6 + 8 * 2.9, ey + 1.6, ez + 4))
     L.anchor('can', (ex + 26, ey + 14, ez + 4))
     L.anchor('board', (ex + 26, ey + 14, ez + 2))
-    L.camera((ex + 24, ey + 13, 5), 218, azimuth=57, elevation=29, lens=74)
+    L.camera((ex + 24, ey + 13, 10), 218, azimuth=57, elevation=29, lens=74)
 
 
 # ---------------------------------------------------------------- M2 — swap the brain
@@ -82,10 +89,20 @@ def s_swap_brain():
     # the ESP32, on its way down onto the same velcro
     C.esp32_devkit(z=0.0, velcro=False, dx=-2, dy=0, dz=46)
     L.anchor('uno_off', (C.BRAIN_X + 40, C.BRAIN_Y - 74 + 30, C.PLATE_T + 92 + 8))
-    L.anchor('esp_down', (ESP_X + 24, ESP_Y + 14, C.PLATE_T + 46 + 4))
+    # the board is held 46 mm up AND stands 8.5 mm on its own pins, so +4 was underneath it
+    L.anchor('esp_down', (ESP_X + 24, ESP_Y + 14, C.PLATE_T + 46 + C.ESP_STANDOFF + 8.5))
     L.anchor('velcro', (C.BRAIN_X + 12, C.BRAIN_Y + 12, C.PLATE_T + 1.2))
-    L.anchor('plate', (200, 110, C.PLATE_T))
-    L.camera((150, 84, 30), 630, azimuth=44, elevation=28, lens=58)
+    # (200, 110) is the middle of the deck, which is exactly where the driver and the battery
+    # box sit -- the 'same car' label pointed straight into them. The bare nose corner is the
+    # one patch of plate that stays plate in every P5 figure.
+    L.anchor('plate', (C.PLATE_X0 + 26, C.PLATE_Y0 + 20, C.PLATE_T))
+    # The lifted Uno is a 68 mm board hanging off one anchor point, so fitting on the anchors
+    # alone cropped half of it away. Its footprint has to be in the must-see set.
+    L.camera_fit(azimuth=44, elevation=28, lens=58, only=('esp_down','plate','uno_off'),
+                 extra=L.bbox_pts(C.BRAIN_X + 2, C.BRAIN_Y - 76, C.PLATE_T + 90,
+                                  C.BRAIN_X + 72, C.BRAIN_Y - 20, C.PLATE_T + 104)
+                       + L.bbox_pts(C.PLATE_X0, C.PLATE_Y0, C.PLATE_T - 2,
+                                    C.PLATE_X1, C.PLATE_Y1, C.PLATE_T + 20))
 
 
 # ---------------------------------------------------------------- M3 — rewire to the ESP32
@@ -96,9 +113,10 @@ def s_rewire():
     L.ground(z=C.Z_GROUND, shadow_only=True)
     C.car(brain='esp', wiring=True, leads=True)
     _car_anchors()
-    L.anchor('six_wires', (ESP_X + 18, 62, C.PLATE_T + 14))
-    L.anchor('power_pair', (ESP_X + 40, 150, C.PLATE_T + 13))
-    L.camera(CAR_CENTRE, 700, azimuth=44, elevation=36, lens=60)
+    L.anchor('six_wires', (ESP_X + 18, 62, C.PLATE_T + 14 + C.ESP_STANDOFF))
+    L.anchor('power_pair', (ESP_X + 40, 150, C.PLATE_T + 13 + C.ESP_STANDOFF))
+    L.camera_fit(azimuth=44, elevation=36, lens=60, only=('power_pair','sensor_left','six_wires'),
+                 extra=L.bbox_pts(C.PLATE_X0 - 2, C.PLATE_Y0 - 2, C.PLATE_T - 4, C.PLATE_X1 + 2, C.PLATE_Y1 + 2, C.PLATE_T + 26))
 
 
 # ---------------------------------------------------------------- M4 — upload over USB
@@ -126,8 +144,10 @@ def s_upload():
           (340, 300, -88)], 1.7, C.M['w_black'], name='usb')
     _car_anchors()
     L.anchor('usb_cable', (250, 60, -46))
-    L.anchor('laptop', (400, 330, 26))
-    L.anchor('riser', (150, 108, -50))
+    # behind the open lid at (400, 330): the callout names what is ON the screen
+    L.anchor('laptop', (296, 180, 10))
+    # on the near block's front face, not on the seam between the two where the plate hides it
+    L.anchor('riser', (125, 60, -50))
     L.camera((190, 190, -14), 1080, azimuth=52, elevation=28, lens=52)
 
 

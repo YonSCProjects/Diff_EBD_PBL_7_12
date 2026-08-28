@@ -38,13 +38,28 @@ def _floor_tape(x0, y, length, z, width=19.0):
 
 
 def _car_anchors(z=0.0):
-    L.anchor('uno', (C.BRAIN_X + 36, C.BRAIN_Y + 30, z + C.PLATE_T + 4))
-    L.anchor('driver', (C.DRV_X + 22, C.DRV_Y + 22, z + C.PLATE_T + 16))
+    # +4 sat inside the ATmega's DIP body once the board carried real CAD parts instead of
+    # low primitives, so the controller's own callout reported visible and drew onto the chip.
+    L.anchor('uno', (C.BRAIN_X + 36, C.BRAIN_Y + 30, z + C.PLATE_T + 11))
+    # +22/+16 was inside the L298N's heatsink, the tallest thing on the board.
+    L.anchor('driver', (C.DRV_X + 8, C.DRV_Y + 30, z + C.PLATE_T + 20))
     L.anchor('battery', (C.BAT_X + 55, C.BAT_Y + 30, z + C.PLATE_T + 17))
-    L.anchor('plate', (150, 110, z + C.PLATE_T))
-    L.anchor('motor_rear', (C.MOTOR_RX + 35, C.PLATE_Y1 - 12, z - C.MOTOR_H / 2))
-    L.anchor('wheel_front', (C.AXLE_F, C.PLATE_Y0 - 20, z + C.Z_AXLE))
-    L.anchor('sensor_left', (C.SENS_L[0], C.SENS_L[1], z - 10.0))
+    # Not the plate's centre: the Uno, the driver and the battery box all sit there, so a
+    # whole-vehicle label pointed at a board instead of at the plate. This corner stays bare.
+    L.anchor('plate', (C.PLATE_X0 + 26, C.PLATE_Y0 + 20, z + C.PLATE_T))
+    # Every camera in this set orbits to -y, so PLATE_Y1 is the car's FAR side: a rear-motor
+    # anchor there projected past the plate's silhouette and its leader ended in bare bench.
+    # The near-side rear motor is the one the reader can actually see under the deck.
+    # mid-can, just under the deck: the only spot on the rear motor that no wheel covers
+    # from any of the six cameras that share these anchors.
+    L.anchor('motor_rear', (178, C.PLATE_Y0 - 1.0, z - 4.0))
+    # at the axle centre this sat INSIDE its own tyre; on the outboard face, below the hub,
+    # it lands on rubber the reader can see.
+    L.anchor('wheel_front', (C.AXLE_F, 1.0, z + C.Z_AXLE - 10))
+    # The sensors bolt UNDER a 9 mm opaque deck, so from any camera above the plate the part
+    # itself cannot be seen. Anchor on the nose deck just above them -- what the reader can
+    # actually find -- rather than on a point the plate hides.
+    L.anchor('sensor_left', (C.SENS_L[0] - 14, C.SENS_L[1], z + C.PLATE_T + 1))
 
 
 # ---------------------------------------------------------------- M1 — the soldering station
@@ -63,7 +78,10 @@ def s_soldering_station():
     T.heat_shrink(146, 30, 3.6, ang=18, length=26, r=3.0)
     T.rules_card(218, 118, 1.4, 76, 60, ang=-7)
     L.anchor('iron', (86, 70, 52))
-    L.anchor('sponge', (40, 138, 12))
+    # on the sponge's top face at its centre, not buried in its side
+    # the iron's coil holder stands between the lens and most of the tray; this corner of
+    # the sponge is the part that is actually in view.
+    L.anchor('sponge', (88, 140, 17.2))
     L.anchor('solder', (232, 52, 62))
     L.anchor('shrink', (192, 186, 6))
     L.anchor('rules', (256, 148, 2))
@@ -132,9 +150,8 @@ def s_cut_plate():
             bevel=0, name='scale')
     for hx, hy in (C.SENS_L, C.SENS_R):
         cyl(hx, hy, 2.6, 1.9, 0.16, ink, name='drillmark')
-    tape = mat('masking', hexcol('#e0c060'), rough=0.8)
-    for tx, ty in ((26, 38), (240, 38), (26, 164), (240, 164)):
-        box(tx, ty, 2.6, 26, 15, 0.3, tape, bevel=0, name='masktape')
+    # No masking tape. Four saturated yellow rectangles at the corners read as parts of the job
+    # and this step never mentions them — V7, and asked for directly in review.
     T.craft_knife(120, 22, 3.0, ang=10, tilt=-14)
     T.ruler(24, 206, 0, ang=-3, length=200)
     L.anchor('knife', (188, 30, 12))
@@ -164,9 +181,13 @@ def s_glue_motors():
         cyl(gx, my + C.MOTOR_D / 2, C.PLATE_T, 3.2, 1.5, glue, name='bead')
     # the gun goes off to the SIDE at the plate's own depth. Parked at -y it is the
     # nearest thing to the lens and swells until it covers the motors it is gluing.
-    T.glue_gun(268, 236, C.PLATE_T, ang=-42)
+    # Same correction as the M3 card: at -42 deg the gun's axis lay along the azimuth-38 view
+    # direction, so the reader saw an orange lozenge end-on. -128 deg is perpendicular to that
+    # view, which shows the barrel, trigger and grip -- and pointing it back at the plate keeps
+    # the body off to the far corner instead of over the motors it is gluing.
+    T.glue_gun(306, 268, C.PLATE_T, ang=-128)
     L.anchor('beads', (mx + 34, my + 12, C.PLATE_T + 4))
-    L.anchor('gun', (286, 266, C.PLATE_T + 40))
+    L.anchor('gun', (292, 252, C.PLATE_T + 40))
     L.anchor('flipped', (110, 110, C.PLATE_T))
     L.anchor('axles', (C.AXLE_F, C.PLATE_Y0 + 6, C.PLATE_T + 12))
     L.camera((156, 118, 20), 720, azimuth=38, elevation=30, lens=58)
@@ -192,7 +213,8 @@ def s_wiring():
     _car_anchors()
     L.anchor('splitter', (94, 68, C.PLATE_T + 8))
     L.anchor('common_gnd', (C.DRV_X + 20, 150, C.PLATE_T + 11))
-    L.camera(CAR_CENTRE, 600, azimuth=42, elevation=34, lens=60)
+    L.camera_fit(azimuth=42, elevation=34, lens=60, only=('battery','common_gnd','sensor_left','splitter','uno'),
+                 extra=L.bbox_pts(C.PLATE_X0 - 2, C.PLATE_Y0 - 2, C.Z_GROUND + 6, C.PLATE_X1 + 2, C.PLATE_Y1 + 2, C.PLATE_T + 26))
 
 
 # ---------------------------------------------------------------- M5 — wheels in the air
@@ -214,9 +236,13 @@ def s_sensor_test():
     C.car()
     T.laptop(305, 186, C.Z_GROUND, ang=12, lid=102, screen='serial')
     _car_anchors()
-    L.anchor('tape', (10, 110, C.Z_GROUND + 1))
-    L.anchor('laptop', (388, 316, C.Z_GROUND + 96))
-    L.camera((190, 220, -10), 1160, azimuth=48, elevation=28, lens=52)
+    # x=10 is the stretch of tape the car is standing on, so the plate hid it. Point at the
+    # run of line between the car and the lens instead.
+    L.anchor('tape', (340, 110, C.Z_GROUND + 1))
+    # this sat BEHIND the open lid; the callout names what is on the screen, so it has to be
+    # on the face the reader is reading.
+    L.anchor('laptop', (290, 168, C.Z_GROUND + 80))
+    L.camera_fit(azimuth=48, elevation=28, lens=52, only=('plate','sensor_left','tape','uno','laptop'))
 
 
 # ---------------------------------------------------------------- M7 — the first run
@@ -226,7 +252,7 @@ def s_first_run():
     _floor_tape(-180, 98, 680, C.Z_GROUND, 24)
     C.car()
     _car_anchors()
-    L.anchor('ahead', (-40, 110, C.Z_GROUND + 2))
+    L.anchor('ahead', (-90, 110, C.Z_GROUND + 2))
     L.camera(CAR_CENTRE, 790, azimuth=52, elevation=20, lens=60)
 
 
@@ -299,3 +325,22 @@ def s_handcheck():
     cyl(60, 300, 0, 32.5, 27, C.M['tyre'], axis='y', name='scalecheck', seg=64)
     L.anchor('wheel', (60, 314, 0))
     L.camera((260, 150, 26), 980, azimuth=56, elevation=30, lens=52)
+
+
+def s_partcheck():
+    """Not a card figure — the electronic parts side by side at real scale, so each can be judged
+    against the part a student actually holds."""
+    _studio()
+    _bench(0, x0=-20, y0=-20, w=300, d=200)
+    C.ensure()
+    import pcb as PCB
+    PCB.uno(10, 60, 0, name='pc_uno')
+    PCB.l298n_board(95, 60, 0, name='pc_l298')
+    PCB.esp32(150, 66, 0, name='pc_esp')
+    PCB.tcrt(150, 22, 0, name='pc_ir')
+    L.anchor('uno', (44, 86, 6))
+    L.anchor('l298', (116, 81, 6))
+    L.anchor('esp', (175, 78, 6))
+    L.anchor('ir', (166, 29, 2))
+    L.camera_fit(azimuth=40, elevation=62, lens=50,
+                 extra=L.bbox_pts(8, 20, 0, 202, 116, 12))

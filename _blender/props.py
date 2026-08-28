@@ -14,6 +14,7 @@ scale beside a 250 mm chassis is the fastest way to make a figure read as a cart
 """
 import math
 import lib as L
+import pcb as PCB
 from lib import MM, box, cyl, prism_xz, tube, revolve, mat, hexcol
 
 _M = None
@@ -135,6 +136,8 @@ def ftdi(x, y, z, ang=0.0):
     """A USB-to-serial adapter — the thing that makes an ESP32-CAM uploadable at all."""
     m = materials()
     parts = [box(0, 0, 0, 36.0, 18.0, 1.4, m['ftdi_pcb'], bevel=0.5, name='ftdi'),
+             PCB.face(0, 0, 1.42, 36.0, 18.0, PCB.tex_mat('silk_ftdi', PCB.silk_ftdi()),
+                      name='ftdi_silk'),
              box(1.5, 3.0, 1.4, 13.0, 12.0, 6.5, m['chrome'], bevel=0.6, name='ftdi_usb'),
              box(25.0, 2.0, 1.4, 4.5, 14.0, 2.4, m['dark'], bevel=0.3, name='ftdi_jmp')]
     for i in range(6):
@@ -154,6 +157,8 @@ def esp32_cam(x, y, z, ang=0.0, tilt=0.0, ribbon_up=True):
     and every Project 7 card asks the student to aim it."""
     m = materials()
     parts = [box(0, 0, 0, 40.5, 27.0, 1.4, m['cam_pcb'], bevel=0.5, name='cam_pcb'),
+             PCB.face(0, 0, 1.42, 40.5, 27.0, PCB.tex_mat('silk_cam', PCB.silk_esp32cam()),
+                      name='cam_silk'),
              box(4.0, 4.0, 1.4, 22.0, 19.0, 2.4, m['chrome'], bevel=0.3, name='cam_can'),
              box(27.0, 3.0, 1.4, 12.0, 14.0, 2.0, m['grey'], bevel=0.3, name='cam_sd')]
     for i in range(8):

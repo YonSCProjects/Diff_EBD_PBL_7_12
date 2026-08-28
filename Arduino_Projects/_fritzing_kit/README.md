@@ -78,3 +78,20 @@ idempotent (`figure_plan_p5p6p7.json` is the plan used on 2026-08-22).
 
 Core parts used: `breadboard2` (RSR03MB102 full-size), `arduino_Uno_Rev3(fix)`, `LED-generic-5mm`,
 `resistor`, `capacitor_electrolytic_small`, `servo`, `SparkFun-Electromechanical-BUZZER-PTH-NS-KIT`.
+
+## Print polish (`polish_for_print.js`)
+
+`compose.js` draws its callout labels at a fixed size in sketch units, but the dc cards render
+every figure at the same 640 px whatever extent the sketch spans. A figure 14 500 units wide
+therefore lands its labels at ~3 px on the card — unreadable in print — while a 2 000-unit
+figure gets 19 px. Fritzing's own watermark also sits on top of real parts on several figures.
+
+    node Arduino_Projects/_fritzing_kit/polish_for_print.js <figure>_breadboard.svg [...]
+
+Run it on the composited SVGs after `build_figure.js`. It removes the watermark group and
+scales each label about its own centre toward ~8 px on-card (capped at 2.2x), reducing any
+label that would then collide with a neighbour it was clear of, and grows the viewBox and its
+white backdrop so a widened tag near the edge is not sliced. Rewrites in place, and is
+idempotent — polished labels carry `data-print-scaled` and are skipped on a second run.
+
+Applied to all 14 P4/P5/P7 wiring figures on 2026-08-28.

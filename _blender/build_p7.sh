@@ -9,6 +9,7 @@
 #   bash _blender/build_p7.sh s_power_rails   # just one scene
 #   bash _blender/build_p7.sh --compose-only  # re-label without re-rendering
 set -u
+failed=0
 
 BLENDER="${BLENDER:-/c/Users/Yon/tools/blender-4.5.12-windows-x64/blender.exe}"
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -50,9 +51,18 @@ for pair in $PUBLISH; do
   [ -n "$ONLY" ] && [ "$scene" != "$ONLY" ] && continue
   echo "--- $scene -> $name"
   if [ -z "$COMPOSE_ONLY" ]; then
+    rm -f "$WORK/$name.png" "$WORK/$name.anchors.json"
     "$BLENDER" --background --factory-startup --python "$HERE/render.py" -- \
         "$scene" "$WORK/$name.png" --samples "$SAMPLES" --res 1800x1350 $EXTRA \
-        2>&1 | grep -E "RENDERED|Error|Traceback" || true
+        > "$WORK/$name.render.log" 2>&1
+    rc=$?
+    grep -hE "RENDERED|OCCLUDED|Error|Traceback" "$WORK/$name.render.log" || true
+    if [ $rc -ne 0 ] || [ ! -f "$WORK/$name.png" ]; then
+      echo "FAILED to render $scene (rc=$rc) — see $WORK/$name.render.log"
+      echo "  NOT publishing $name: the old figure stays in place rather than being"
+      echo "  overwritten by a re-composite of the previous run's PNG."
+      failed=$((failed+1)); continue
+    fi
   elif [ ! -f "$WORK/$name.png" ]; then
     echo "    (no render yet — skipping)"; continue
   fi
@@ -64,4 +74,6 @@ done
 
 echo
 echo "published into $OUT and $ASSETS"
+[ "$failed" -eq 0 ] || echo "$failed figure(s) FAILED and were not published."
+exit $(( failed > 0 ? 1 : 0 ))
 echo "now rebuild the bundle:  node build_cards_only.js he 7"

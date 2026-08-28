@@ -48,6 +48,9 @@ that impossible to repeat — it opens every card and fails on any image that di
 | `render.py` | the CLI every build script drives |
 | `preview.sh` | EEVEE contact sheets |
 | `shot_cards.js` | screenshots the cards and fails on a missing image |
+| `embed_m3_steps.js` | inserts the seven M3 step figures into the P4 chassis card, one per step |
+| `fonts/` | the Rubik 700 subsets `compose.js` embeds, plus the glyph-advance table |
+| `onwhite.py` | flattens a transparent render onto white |
 
 ## The two ideas that make the figures work
 
@@ -99,3 +102,43 @@ while its callout still lands on it.
   `bpy.context.view_layer.update()` runs.
 - Bash heredocs in this environment corrupt escapes and occasionally drop a character. Write
   patch scripts to a file and run them.
+
+## What the callout layer does now
+
+`compose.js` used to name `'Rubik','Segoe UI',Arial` in `font-family` and stop there. The cards
+load these figures through `<img src>`, and an `<img>`-loaded SVG renders in a restricted mode
+where the *document's* webfonts do not reach it — so every callout in every published figure was
+actually being drawn in Segoe UI or Arial while the card body around it was Rubik. Both Rubik
+subsets are now embedded in each SVG as `data:` URIs, which IS honoured inside `<img>`. That is
+why `fonts/` exists; `fonts/rubik700-widths.json` carries the real per-glyph advances, so a label
+box is measured rather than estimated from an average character width.
+
+Placement is solved rather than hand-tuned. The renders have a transparent background, so the
+alpha channel is an exact mask of where the hardware is: a label is scored against how much
+hardware it covers, whether it overlaps another label or buries another callout's ring, how long
+its leader is and whether that leader crosses someone else's. The author's `dx`/`dy` in the
+callout JSON is still the strong prior and wins whenever it does not collide — it only moves when
+it has to.
+
+## Anchors: on-screen is not the same as visible
+
+`project_anchors()` used to report only whether an anchor projected inside the frame. A line
+sensor bolted under a 9 mm plate projects perfectly well into a frame shot from above, and the
+plate hides it — which is exactly how a figure shipped with four confident callouts pointing at
+bare plastic. Every anchor is now ray-cast from the camera and carries a `visible` flag as well.
+An anchor inside its own part does not count as occluded (a wheel's rim is not hiding the wheel),
+and neither does a translucent part like the polygal sheet, whose flutes are meant to show
+through. When something really is hidden the render prints
+
+    OCCLUDED anchors (labelled but hidden behind geometry): sensor, nuts, eye
+
+and `compose.js` repeats it per label. **That is a camera problem, not a label problem** — move
+the camera until the part is visible, rather than nudging `dx`/`dy`.
+
+## A failed render no longer publishes
+
+`build_p*.sh` used to pipe Blender through `grep ... || true` under `set -u` alone, so a crashed
+render was invisible: `compose.js` then ran on whatever PNG the previous run had left in `work/`
+and republished stale artwork over the live figure name, printing `published` as it went. Each
+render is now checked, its log kept at `work/<name>.render.log`, and a failure leaves the existing
+figure alone and is counted into the script's exit code.

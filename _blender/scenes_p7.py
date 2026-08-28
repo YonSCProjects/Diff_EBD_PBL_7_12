@@ -45,6 +45,17 @@ def _car_body(z=0.0, sensors=False):
         C.ir_sensor('right', z)
 
 
+def _phone_extent(x, y, z, w=86.0, h=170.0):
+    """The phone's real footprint, for camera_fit.
+
+    camera_fit frames on ANCHOR POINTS, and a phone carries a single anchor somewhere on its
+    screen. A tall handset tilted back therefore reached well outside the fitted frame and got
+    cropped to a sliver at the edge -- on the two cards whose whole point is that the driver
+    watches the phone rather than the car.
+    """
+    return L.bbox_pts(x - w, y - w, z - 6, x + w, y + w, z + h)
+
+
 def _car_extent(z=0.0):
     """The car's real outline, for camera_fit. Without it the fit frames the three boards on
     the deck and crops the wheels off the picture."""
@@ -67,10 +78,14 @@ def _near(pt, k=0.55, c=(148.0, 110.0)):
 
 
 def _car_anchors(z=0.0):
-    L.anchor('camera', (CAM_X + 16, CAM_Y + 5, z + C.PLATE_T + 12))
-    L.anchor('driver', (C.DRV_X + 22, C.DRV_Y + 22, z + C.PLATE_T + 16))
+    # +12 is inside the module's own perch bracket from the rear-quarter cameras
+    L.anchor('camera', (CAM_X + 16, CAM_Y + 5, z + C.PLATE_T + 24))
+    # +22/+16 lands inside the L298N's heatsink, the tallest thing on that board.
+    L.anchor('driver', (C.DRV_X + 8, C.DRV_Y + 30, z + C.PLATE_T + 20))
     L.anchor('battery', (C.BAT_X + 55, C.BAT_Y + 30, z + C.PLATE_T + 17))
-    L.anchor('plate', (150, 110, z + C.PLATE_T))
+    # Not the plate's centre: the Uno, the driver and the battery box all sit there, so a
+    # whole-vehicle label pointed at a board instead of at the plate. This corner stays bare.
+    L.anchor('plate', (C.PLATE_X0 + 26, C.PLATE_Y0 + 20, z + C.PLATE_T))
 
 
 # ---------------------------------------------------------------- M1 — the programmer
@@ -155,8 +170,10 @@ def s_mount_camera():
     P.esp32_cam(CAM_X - 4, CAM_Y - 8, C.PLATE_T + lift, ribbon_up=True)
     L.anchor('cam', (CAM_X + 16, CAM_Y + 5, C.PLATE_T + lift + 14))
     L.anchor('perch', (CAM_X + 20, CAM_Y + 9, C.PLATE_T + 1))
-    L.anchor('lens', (CAM_X + 10, CAM_Y - 4, C.PLATE_T + lift + 20))
-    L.anchor('plate', (200, 110, C.PLATE_T))
+    # the lens barrel itself blocked a point directly above it; come forward and down instead
+    L.anchor('lens', (CAM_X + 8, CAM_Y - 12, C.PLATE_T + lift + 10))
+    # mid-deck is where the boards are; the bare nose corner is the one patch that stays plate
+    L.anchor('plate', (C.PLATE_X0 + 26, C.PLATE_Y0 + 20, C.PLATE_T))
     L.camera_fit(subject='perch', azimuth=48, elevation=30, lens=60, extra=_nose_extent())
 
 
@@ -191,8 +208,9 @@ def s_power_rails():
     L.anchor('buck', (BUCK_X + 21, BUCK_Y + 10, zt + 11))
     L.anchor('cap', (78, 74, zt + 13))
     L.anchor('motor_rail', (C.DRV_X + 24, C.DRV_Y + C.DRV_D + 10, zt + 9))
-    L.anchor('plate', (150, 108, zt))
-    L.camera_fit(subject='plate', azimuth=44, elevation=38, lens=58, extra=_car_extent())
+    L.anchor('plate', (C.PLATE_X0 + 26, C.PLATE_Y0 + 20, zt))
+    L.camera_fit(azimuth=44, elevation=38, lens=58, only=('buck','cap','motor_rail','plate'),
+                 extra=L.bbox_pts(C.PLATE_X0 - 2, C.PLATE_Y0 - 2, C.PLATE_T - 4, C.PLATE_X1 + 2, C.PLATE_Y1 + 2, C.PLATE_T + 30))
 
 
 # ---------------------------------------------------------------- M6 — CAM to the driver
@@ -216,7 +234,8 @@ def s_cam_to_driver():
     L.anchor('cam', (CAM_X + 16, CAM_Y + 5, zt + 12))
     L.anchor('four', (CAM_X + 30, 40, zt + 14))
     L.anchor('jumpers', (C.DRV_X + 19, C.DRV_Y + 3, zt + 8))
-    L.camera_fit(subject='cam', azimuth=48, elevation=34, lens=60, extra=_nose_extent())
+    L.camera_fit(azimuth=48, elevation=34, lens=60, only=('four','jumpers'),
+                 extra=L.bbox_pts(C.PLATE_X0 + 10, C.PLATE_Y0, C.PLATE_T - 2, C.PLATE_X1 - 10, C.PLATE_Y1, C.PLATE_T + 34))
 
 
 # ---------------------------------------------------------------- M7 — drive from the page
@@ -234,7 +253,8 @@ def s_drive_from_page():
     L.anchor('phone', _near((320, 118, C.Z_GROUND + 78), 0.8))
     L.anchor('air', (CAM_X + 16, CAM_Y + 5, C.PLATE_T + 46))
     L.anchor('ahead', (C.PLATE_X0 - 110, 110, C.Z_GROUND + 2))
-    L.camera_fit(subject='plate', azimuth=50, elevation=26, lens=56, extra=_car_extent())
+    L.camera_fit(subject='plate', azimuth=50, elevation=26, lens=56,
+                 extra=_car_extent() + _phone_extent(286, 176, C.Z_GROUND))
 
 
 # ---------------------------------------------------------------- M8 — drive by video only
@@ -258,4 +278,5 @@ def s_drive_by_video():
     L.anchor('wall', (150, 221, C.Z_GROUND + 124))
     L.anchor('phone', _near((268, 200, C.Z_GROUND + 150), 0.75))
     L.anchor('air', (CAM_X + 16, CAM_Y + 5, C.PLATE_T + 46))
-    L.camera_fit(subject='plate', azimuth=74, elevation=28, lens=52, extra=_car_extent())
+    L.camera_fit(subject='plate', azimuth=74, elevation=28, lens=52,
+                 extra=_car_extent() + _phone_extent(232, 258, C.Z_GROUND + 76))

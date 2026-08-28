@@ -30,11 +30,11 @@ const FIGS = {
        cap: '<strong>מנקבים וקודחים:</strong> בחריצי האזיקונים שתי דקירות סכין לכל חריץ, ובסימוני הקדיחה קדח של <strong>3.5 מ״מ</strong>.',
        alt: 'הלוח החתוך על השולחן, מקדחה נטענת קודחת חור בסימון הקדיחה, ובצד נראים חריצי האזיקונים שנפתחו בדקירות סכין.' },
   4: { svg: 'w_p4_m3_step4',
-       cap: '<strong>מבריגים — לא מדביקים:</strong> מצמידים כל מנוע לפינה שלו, מסמנים בעיפרון דרך שני החורים, קודחים ומבריגים <strong>2 ברגי M3x30</strong>. ככה ארבע פעמים.',
-       alt: 'הלוח על השולחן ושלושה מנועים כבר מוברגים אליו. המנוע הרביעי מוחזק מעל פינתו, שני סימוני עיפרון מסומנים מתחתיו, ולידם עיפרון, מברג וברגי M3.' },
+       cap: '<strong>מדביקים בדבק חם:</strong> פס דבק חם לאורך גוף המנוע, מצמידים אותו לפינה שלו ולוחצים <strong>30 שניות</strong>. ככה ארבע פעמים.',
+       alt: 'הלוח על השולחן ושלושה מנועים כבר מודבקים אליו. המנוע הרביעי מוחזק מעל פינתו ומתחתיו פס דבק חם, ואקדח הדבק החם מונח בצד.' },
   5: { svg: 'w_p4_m3_step5',
        cap: '<strong>גלגלים על הצירים:</strong> דוחפים כל גלגל עד הסוף — הגלגלים בחוץ, צמודים ללוח.',
-       alt: 'השלדה עם ארבעת המנועים המוברגים. שלושה גלגלים כבר על הצירים והרביעי נדחף אל הציר שלו מבחוץ.' },
+       alt: 'השלדה עם ארבעת המנועים המודבקים. שלושה גלגלים כבר על הצירים והרביעי נדחף אל הציר שלו מבחוץ.' },
   6: { svg: 'w_p4_m3_step6',
        cap: '<strong>שלושה חלקים על הלוח:</strong> בית הסוללות בשני אזיקונים דרך החריצים והמתג פונה אחורה, ה-<span dir="ltr">L298N</span> מוברג, וה-<span dir="ltr">Uno</span> על סקוץ׳ באזור הירוק של התבנית.',
        alt: 'השלדה המתגלגלת ועליה בית הסוללות מהודק בשני אזיקונים, בקר המנועים מוברג ללוח ולוח הארדואינו מודבק בסקוץ׳ באזור המסומן.' },
@@ -45,9 +45,9 @@ const FIGS = {
 
 function figure(f) {
   return `
-        <div ${MARK} style="margin:12px 0 2px; border:1px solid oklch(0.93 0.006 85); border-radius:12px; overflow:hidden; background:oklch(0.985 0.004 85);">
+        <div ${MARK} style="flex:0 0 100%; margin:14px 0 2px; border:1px solid oklch(0.93 0.006 85); border-radius:12px; overflow:hidden; background:oklch(0.985 0.004 85);">
           <div dir="ltr" style="padding:14px 14px 8px; display:flex; justify-content:center;">
-            <img src="./assets/${f.svg}.svg" alt="${f.alt}" style="width:560px; max-width:100%; height:auto;" />
+            <img src="./assets/${f.svg}.svg" alt="${f.alt}" style="width:100%; max-width:100%; height:auto;" />
           </div>
           <div style="padding:9px 14px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13px; line-height:1.55; color:oklch(0.5 0.012 260);">${f.cap}</div>
         </div>`;
@@ -66,6 +66,18 @@ for (const [n, f] of Object.entries(FIGS)) {
   if (after < 0) { console.warn('step', n, '- no paragraph after the badge'); continue; }
   const at = after + 4;
   html = html.slice(0, at) + figure(f) + html.slice(at);
+  // The step is a flex row, so a figure appended after the <p> becomes a fourth flex item and
+  // lays out BESIDE the text — which is why it could never reach even its declared width, and
+  // why review kept asking for it "below the text and larger". Letting the row wrap lets the
+  // 100%-basis figure drop onto its own line at the full width of the step card.
+  const rowStart = html.lastIndexOf('<div style="display:flex; gap:13px; align-items:flex-start;', m.index);
+  if (rowStart >= 0) {
+    const head = html.slice(rowStart, rowStart + 120);
+    if (!head.includes('flex-wrap')) {
+      html = html.slice(0, rowStart) + head.replace('display:flex; gap:13px;', 'display:flex; flex-wrap:wrap; gap:13px;')
+           + html.slice(rowStart + 120);
+    }
+  }
   added++;
 }
 

@@ -404,6 +404,72 @@ def camera(target, distance, azimuth=38.0, elevation=27.0, lens=58.0, shift=(0.0
     return ob
 
 
+def anchor_visible(point, cam_loc, bias=0.6):
+    """Is this world point actually SEEN by the camera, or is something in front of it?
+
+    `onscreen` only ever asked whether a point projects inside the frame. That is not the same
+    question. A line sensor bolted under a 9 mm plate projects perfectly well into a frame shot
+    from above — and the plate hides it. compose.js drew the label anyway, so the figure carried
+    a confident callout pointing at bare plastic, which is exactly the "where is the sensor?"
+    complaint that came back from review.
+
+    So: cast a ray from the camera towards the anchor and see what it hits first. `bias` is in
+    millimetres and forgives a hit on the anchor's own surface, since anchors are placed ON parts
+    rather than floating in front of them.
+    """
+    scene = bpy.context.scene
+    dg = bpy.context.evaluated_depsgraph_get()
+    target = Vector((point[0] * MM, point[1] * MM, point[2] * MM))
+    direction = target - cam_loc
+    dist = direction.length
+    if dist < 1e-6:
+        return True
+    direction.normalize()
+    origin = cam_loc.copy()
+    for _ in range(12):
+        remaining = dist - (origin - cam_loc).length
+        if remaining <= bias * MM:
+            return True
+        hit, loc, _n, _i, ob, _m = scene.ray_cast(dg, origin, direction, distance=remaining * 0.999)
+        if not hit:
+            return True
+        if _passes_through(ob, target):
+            # Either the anchor sits inside this object — anchors are placed ON parts, so the
+            # ray reaching a wheel's own rim before its centre is not an occlusion — or the
+            # object is translucent, like the polygal sheet whose flutes are meant to show
+            # through it. Step past the surface and keep looking for a real blocker.
+            origin = loc + direction * (0.4 * MM)
+            continue
+        return False
+    return True
+
+
+def _passes_through(ob, target):
+    """Should this object be ignored as an occluder for an anchor at `target`?"""
+    if ob is None:
+        return True
+    try:
+        corners = [ob.matrix_world @ Vector(c) for c in ob.bound_box]
+    except Exception:
+        return True
+    pad = 1.0 * MM
+    lo = Vector((min(c.x for c in corners) - pad, min(c.y for c in corners) - pad,
+                 min(c.z for c in corners) - pad))
+    hi = Vector((max(c.x for c in corners) + pad, max(c.y for c in corners) + pad,
+                 max(c.z for c in corners) + pad))
+    if lo.x <= target.x <= hi.x and lo.y <= target.y <= hi.y and lo.z <= target.z <= hi.z:
+        return True                       # the anchor is inside this part: it IS this part
+    for slot in getattr(ob, 'material_slots', []):
+        m = slot.material
+        if not m or not m.use_nodes:
+            continue
+        for n in m.node_tree.nodes:
+            inp = n.inputs.get('Transmission Weight') or n.inputs.get('Transmission')
+            if inp is not None and getattr(inp, 'default_value', 0) > 0.2:
+                return True               # see-through, e.g. the polygal sheet or a glue bead
+    return False
+
+
 def project_anchors():
     """World mm -> pixel coordinates in the rendered image, y measured from the top."""
     from bpy_extras.object_utils import world_to_camera_view
@@ -411,11 +477,20 @@ def project_anchors():
     cam = sc.camera
     w = int(sc.render.resolution_x * sc.render.resolution_percentage / 100)
     h = int(sc.render.resolution_y * sc.render.resolution_percentage / 100)
+    cam_loc = cam.matrix_world.translation.copy()
     out = {}
+    hidden = []
     for name, (x, y, z) in ANCHORS.items():
         v = world_to_camera_view(sc, cam, Vector((x * MM, y * MM, z * MM)))
+        onscreen = 0.0 <= v.x <= 1.0 and 0.0 <= v.y <= 1.0
+        vis = anchor_visible((x, y, z), cam_loc) if onscreen and v.z > 0 else False
+        if onscreen and v.z > 0 and not vis:
+            hidden.append(name)
         out[name] = {'x': round(v.x * w, 1), 'y': round((1.0 - v.y) * h, 1),
-                     'depth': round(v.z, 4), 'onscreen': 0.0 <= v.x <= 1.0 and 0.0 <= v.y <= 1.0}
+                     'depth': round(v.z, 4), 'onscreen': onscreen, 'visible': bool(vis)}
+    if hidden:
+        # Loud on stdout, because build_p*.sh greps the render output and this must survive it.
+        print('OCCLUDED anchors (labelled but hidden behind geometry): ' + ', '.join(hidden))
     return {'width': w, 'height': h, 'anchors': out}
 
 
@@ -483,7 +558,7 @@ def ellipse_pts(cx, cy, rx, ry, n=96, rot=0.0):
 
 
 def camera_fit(azimuth=44.0, elevation=32.0, lens=56.0, margin=0.075, target=None,
-               subject=None, extra=(), lo=120.0, hi=4000.0, shift=(0.0, 0.0)):
+               subject=None, extra=(), lo=120.0, hi=4000.0, shift=(0.0, 0.0), only=None):
     """Place the camera far enough back that EVERY registered anchor lands inside the frame.
 
     Hand-picked distances are the reason callouts kept getting dropped: compose.js refuses to
@@ -494,7 +569,12 @@ def camera_fit(azimuth=44.0, elevation=32.0, lens=56.0, margin=0.075, target=Non
     `margin` is the fraction of the frame kept clear at each edge for the label boxes.
     `extra` takes further (x, y, z) points in mm that must also be in view.
     """
-    pts = [tuple(v) for v in ANCHORS.values()] + [tuple(p) for p in extra]
+    # `only` restricts the fit to the anchors this figure actually labels. Scenes register a
+    # standing set of anchors on the car — a rear motor, a front wheel — and an unlabelled one
+    # still pushed the camera back to hold it, which is why a figure about three boards on a
+    # deck was framed as a whole vehicle with the boards too small to recognise.
+    src = ANCHORS if only is None else {k: v for k, v in ANCHORS.items() if k in set(only)}
+    pts = [tuple(v) for v in src.values()] + [tuple(p) for p in extra]
     if not pts:
         return camera(target or (0, 0, 0), 600, azimuth, elevation, lens, shift)
     xs, ys, zs = zip(*pts)

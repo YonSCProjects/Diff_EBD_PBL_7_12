@@ -12,6 +12,7 @@ If the template moves, both move together.
 """
 import math
 import lib as L
+import pcb as PCB
 from lib import MM, box, cyl, prism, tube, torus, mat, hexcol
 
 # ---------------------------------------------------------------- canonical geometry (mm)
@@ -47,6 +48,8 @@ def materials():
         motor_yellow=mat('motor_yellow', hexcol('#d9a808'), rough=0.44, clearcoat=0.20),
         motor_can=mat('motor_can', hexcol('#a7adb5'), rough=0.34, metal=1.0),
         gearbox_dark=mat('gearbox_dark', hexcol('#2b2f36'), rough=0.5),
+        gearbox_seam=mat('gearbox_seam', hexcol('#a67f06'), rough=0.55),
+        shaft_white=mat('shaft_white', hexcol('#e8e6df'), rough=0.42, clearcoat=0.10),
         tyre=mat('tyre', hexcol('#1b1f24'), rough=0.88),
         rim=mat('rim', hexcol('#e2e5e9'), rough=0.5, clearcoat=0.14),
         pcb_uno=mat('pcb_uno', hexcol('#0d4a57'), rough=0.5, clearcoat=0.35, cc_rough=0.32),
@@ -111,35 +114,84 @@ def sensor_holes(z=0.0):
 
 # ---------------------------------------------------------------- motors and wheels
 def tt_motor(side, pos, z=0.0, leads=True, up=False):
-    """One TT gear motor on the plate: yellow gearbox inboard, silver can outboard, output
-    shaft through the side wall.
+    """One TT ("yellow") gear motor, modelled as the real part rather than a yellow brick.
+
+    The part students hold is a two-shell yellow ABS gearbox about 47 mm long with a visible
+    moulding seam round its middle, a bare nickel motor can sticking out of the back, a white
+    double-D output shaft through the gearbox near the front, two mounting ears with M3 holes,
+    and two solder tabs on the end of the can where the red and black leads go. A single
+    bevelled box with a dark disc on one face reads as a Lego brick, which is exactly the
+    complaint: it has to be identifiable next to the real motor on the bench.
+
+    Geometry runs along +x. `pos` picks which end of the plate the shaft is at, so the can
+    always points inboard and the shaft always lines up with AXLE_F / AXLE_R.
 
     up=True mirrors the motor about the plate's mid-plane, which is what you see while the
     chassis is upside-down on the bench and the motors are going on. Without it a build figure
-    hides its own subject under the plate."""
+    hides its own subject under the plate.
+    """
     m = ensure()
-    x = MOTOR_FX if pos == 'front' else MOTOR_RX
-    y = PLATE_Y0 if side == 'left' else PLATE_Y1 - MOTOR_D
-    zb = z + (PLATE_T if up else Z_MOTOR)
-    out = [box(x, y, zb, MOTOR_W, MOTOR_D, MOTOR_H, m['motor_yellow'], bevel=1.2, name='gearbox')]
-    can_x = x + MOTOR_W - 24 if pos == 'front' else x
-    out.append(cyl(can_x, y + MOTOR_D / 2, zb + MOTOR_H / 2, 9.6, 24, m['motor_can'],
-                   axis='x', name='can'))
-    # the gearbox output boss and the axle through the plate's side wall
     ax = AXLE_F if pos == 'front' else AXLE_R
-    ay = PLATE_Y0 - 3 if side == 'left' else PLATE_Y1 + 3
-    za = z + (PLATE_T - Z_AXLE if up else Z_AXLE)
-    out.append(cyl(ax, y + MOTOR_D / 2, za, 6.0, MOTOR_D, m['gearbox_dark'],
-                   axis='y', name='boss'))
-    sgn = -1 if side == 'left' else 1
-    out.append(cyl(ax, ay, za, 2.6, sgn * 9, m['steel'], axis='y', name='axle'))
+    y = PLATE_Y0 if side == 'left' else PLATE_Y1 - MOTOR_D
+    yc = y + MOTOR_D / 2
+    zb = z + (PLATE_T if up else Z_MOTOR)
+    zc = zb + MOTOR_H / 2                      # mid-height of the gearbox == can axis
+    sgn = 1 if pos == 'front' else -1          # +1: gearbox at the low-x end, can runs +x
+
+    GB_L, CAN_L, CAN_R = 47.0, 25.0, 10.2
+    # the gearbox front face sits 9 mm outboard of the shaft, as on the real part
+    gb_x0 = ax - 9.0 if sgn > 0 else ax + 9.0 - GB_L
+
+    out = []
+    # ---- gearbox: two moulded shells with a seam, not one solid block
+    half = MOTOR_H / 2 - 0.35
+    out.append(box(gb_x0, y, zb, GB_L, MOTOR_D, half,
+                   m['motor_yellow'], bevel=1.1, name='gearbox_lower'))
+    out.append(box(gb_x0, y, zb + half + 0.7, GB_L, MOTOR_D, half,
+                   m['motor_yellow'], bevel=1.1, name='gearbox_upper'))
+    # the seam itself, a shade darker so it catches at any size
+    out.append(box(gb_x0 + 0.3, y - 0.15, zb + half, GB_L - 0.6, MOTOR_D + 0.3, 0.7,
+                   m['gearbox_seam'], bevel=0.0, name='gearbox_seam'))
+
+    # NO mounting ears. The card's own hardware note is explicit -- these gearboxes have no
+    # mounting holes, which is exactly why the build glues them to the plate instead of bolting
+    # them. Modelling ears with M3 holes would put the figure at odds with the part in the
+    # student's hand and invite the obvious question: why glue it if it has holes?
+
+    # ---- motor can: nickel, exposed, with the crimped rim and end bell of a real RF-130
+    can_x0 = gb_x0 + GB_L if sgn > 0 else gb_x0 - CAN_L
+    out.append(cyl(can_x0, yc, zc, CAN_R, CAN_L, m['motor_can'],
+                   axis='x', name='can', seg=56, bevel=0.6))
+    for f in (1.5, CAN_L - 2.8):               # the two rolled crimp rings
+        out.append(cyl(can_x0 + (f if sgn > 0 else CAN_L - f - 1.3), yc, zc,
+                       CAN_R + 0.28, 1.3, m['motor_can'], axis='x',
+                       name='can_crimp', seg=56))
+    # flats: the can is not a plain tube, it is pinched on two sides
+    for s_ in (-1, 1):
+        out.append(box(min(can_x0, can_x0 + CAN_L) + 2.0,
+                       yc + s_ * (CAN_R - 0.55) - 1.1, zc - 6.2,
+                       CAN_L - 4.0, 2.2, 12.4, m['motor_can'], bevel=0.4, name='can_flat'))
+    end_x = can_x0 + CAN_L if sgn > 0 else can_x0
+    out.append(cyl(end_x - (0.0 if sgn > 0 else 1.8), yc, zc, CAN_R - 1.4, 1.8,
+                   m['gearbox_dark'], axis='x', name='can_endbell', seg=44))
+
+    # ---- output shaft: white double-D through the gearbox, proud on both sides
+    out.append(cyl(ax, y - 1.0, zc + 3.0, 5.4 / 2, MOTOR_D + 2.0, m['gearbox_dark'],
+                   axis='y', name='shaft_boss', seg=32))
+    sh_y0 = y - 11.0 if side == 'left' else y + MOTOR_D + 1.0
+    out.append(cyl(ax, sh_y0, zc + 3.0, 2.7, 10.0, m['shaft_white'],
+                   axis='y', name='shaft', seg=32))
+
     if leads:
-        lx = x if pos == 'front' else x + MOTOR_W
-        ly = y + MOTOR_D / 2
+        lx = end_x
+        ly = yc
         for i, col in enumerate(('w_red', 'w_black')):
             o = (i - 0.5) * 4
-            out.append(tube([(lx, ly + o, zb + 13),
-                             (lx + (-16 if pos == 'front' else 16), ly + o + 4, zb + 17),
+            # solder tab on the end bell, then the lead away to the driver
+            out.append(box(lx - (0.0 if sgn > 0 else 1.0), ly + o - 1.1, zc - 0.9,
+                           1.0, 2.2, 4.6, m['steel'], bevel=0.15, name='tab'))
+            out.append(tube([(lx + sgn * 1.2, ly + o, zc + 1.6),
+                             (lx + sgn * 15, ly + o + 4, zc + 6),
                              (DRV_X + 8 + i * 6, DRV_Y + (4 if side == 'left' else DRV_D - 4), z + 3)],
                             1.1, m[col], name='lead'))
     return out
@@ -209,40 +261,26 @@ def _header(x0, y0, z, n, m, along='x'):
 
 def arduino_uno(z=0.0, velcro=True, dx=0.0, dy=0.0, dz=0.0):
     """dx/dy/dz shift the whole board off its seat — that is how Project 5's swap figure lifts
-    the Uno clear of the car without moving anything else."""
+    the Uno clear of the car without moving anything else.
+
+    The board itself is built in pcb.py: real outline, real silkscreen with the pin numbers, the
+    silver USB-B can, the barrel jack, the DIP ATmega and the two black female header runs. It
+    used to be a teal slab with four blocks on it, which no student could match to the part in
+    their hand."""
     m = ensure()
-    x, y = BRAIN_X + 2 + dx, BRAIN_Y + 3 + dy
-    w, d, t = 68.6, 53.4, 1.6
+    x, y = BRAIN_X + dx, BRAIN_Y + dy
     zt = z + PLATE_T + dz
     out = []
     if velcro:
-        out.append(box(x + 4, y + 5, zt, w - 8, d - 10, 1.2, m['velcro'], bevel=0, name='velcro'))
+        out.append(box(x + 4, y + 5, zt, 60.6, 43.4, 1.2, m['velcro'], bevel=0, name='velcro'))
         zt += 1.2
-    out.append(box(x, y, zt, w, d, t, m['pcb_uno'], bevel=0.5, name='uno'))
-    out.append(box(x + 3, y + 4, zt + t, 12, 16, 11, m['alu'], bevel=0.4, name='usb'))
-    out.append(box(x + 2, y + 34, zt + t, 13, 12, 11, m['gearbox_dark'], bevel=0.6, name='barrel'))
-    out.append(box(x + 26, y + 20, zt + t, 22, 14, 2.6, m['header'], bevel=0.2, name='mcu'))
-    out += _header(x + 20, y + 1.2, zt + t, 10, m['header'])
-    out += _header(x + 20, y + d - 3.4, zt + t, 8, m['header'])
-    out.append(box(x + 52, y + 22, zt + t, 3, 1.6, 1.2, m['led_red'], bevel=0, name='led'))
+    out += PCB.uno(x, y, zt, name='uno')
     return out
 
 
 def l298n(z=0.0):
-    m = ensure()
-    x, y = DRV_X, DRV_Y
-    w, d, t = DRV_W, DRV_D, 1.6
-    zt = z + PLATE_T
-    out = [box(x, y, zt, w, d, t, m['pcb_drv'], bevel=0.5, name='l298n')]
-    out.append(box(x + 14, y + 8, zt + t, 16, 26, 12, m['heatsink'], bevel=0.4, name='sink'))
-    for i in range(6):
-        out.append(box(x + 15 + i * 2.6, y + 8, zt + t + 12, 1.3, 26, 3.0, m['heatsink'],
-                       bevel=0, name='fin'))
-    out.append(box(x - 1.5, y + 6, zt + t, 5, 14, 9, m['terminal'], bevel=0.3, name='out12'))
-    out.append(box(x + w - 3.5, y + 6, zt + t, 5, 14, 9, m['terminal'], bevel=0.3, name='out34'))
-    out.append(box(x + 10, y + d - 4.5, zt + t, 20, 6, 9, m['terminal'], bevel=0.3, name='pwr'))
-    out += _header(x + 11, y + 1.2, zt + t, 6, m['header'])
-    return out
+    """The red L298N carrier — heatsink, three screw terminals, ENA/IN1..IN4/ENB header."""
+    return PCB.l298n_board(DRV_X, DRV_Y, z + PLATE_T, name='l298n')
 
 
 def battery_box(z=0.0, switch=True):
@@ -263,17 +301,10 @@ def battery_box(z=0.0, switch=True):
 
 
 def ir_sensor(side, z=0.0):
-    """A TCRT5000 board bolted under the nose, eyes pointing at the floor."""
-    m = ensure()
+    """A TCRT5000 carrier bolted under the nose, lens pair pointing at the floor."""
     hx, hy = SENS_L if side == 'left' else SENS_R
-    w, d, t = 32.0, 12.0, 1.5
-    zb = z - 12.0
-    out = [box(hx - 22, hy - d / 2, zb, w, d, t, m['pcb_sens'], bevel=0.4, name='ir')]
-    for dx in (-6, 0):
-        out.append(box(hx - 14 + dx, hy - 2.6, zb - 4.4, 5, 5.2, 4.4, m['gearbox_dark'],
-                       bevel=0.3, name='eye'))
-    out.append(cyl(hx, hy, zb, 1.6, PLATE_T + 12, m['steel'], name='bolt'))
-    out.append(box(hx - 22 + w - 9, hy - 1.4, zb + t, 6, 2.8, 2.6, m['header'], bevel=0, name='pins'))
+    out = PCB.tcrt(hx - 22.0, hy - 7.0, z - 12.0, name='ir_' + side)
+    out.append(cyl(hx, hy, z - 12.0, 1.6, PLATE_T + 12, ensure()['steel'], name='bolt'))
     return out
 
 
@@ -314,40 +345,27 @@ def signal_wires(z=0.0):
     return out
 
 
+ESP_STANDOFF = 8.5      # how far the DevKit's downward header pins hold it off a surface
+
+
 def esp32_devkit(z=0.0, velcro=True, dx=0.0, dy=0.0, dz=0.0):
     """The 30-pin DOIT DevKit that replaces the Uno in Project 5. It sits on the same velcro
-    patch, which is the whole point of that card — same car, new brain."""
+    patch, which is the whole point of that card — same car, new brain.
+
+    Built in pcb.py so it carries its silkscreen: every one of the thirty pin names is printed
+    down the two edges, which is what a student reads when the card says "connect to 32"."""
     m = ensure()
-    x, y = BRAIN_X + 9 + dx, BRAIN_Y + 13 + dy
-    w, d, t = 51.5, 28.3, 1.4
+    x, y = BRAIN_X + 9 + dx, BRAIN_Y + 14 + dy
     zt = z + PLATE_T + dz
     out = []
     if velcro:
         out.append(box(BRAIN_X + 6, BRAIN_Y + 8, zt, 54, 40, 1.2, m['velcro'], bevel=0,
                        name='velcro'))
         zt += 1.2
-    out.append(box(x, y, zt, w, d, t, m['pcb_esp'], bevel=0.5, name='esp32'))
-    zb = zt + t
-    # micro-USB at the nose end, with the BOOT and EN buttons flanking it
-    out.append(box(x - 1.0, y + d / 2 - 4.0, zb, 7.5, 8.0, 3.0, m['alu'], bevel=0.4,
-                   name='microusb'))
-    for by in (y + 2.6, y + d - 6.6):
-        out.append(box(x + 9.0, by, zb, 4.0, 4.0, 1.2, m['gearbox_dark'], bevel=0.3,
-                       name='btn_base'))
-        out.append(cyl(x + 11.0, by + 2.0, zb + 1.2, 1.5, 0.9, m['switch'], name='btn'))
-    # the ESP32-WROOM module: black carrier, steel can over the silicon, printed antenna
-    # hanging off the tail. It is the single most recognisable thing on this board.
-    out.append(box(x + 26.0, y + 5.15, zb, 25.5, 18.0, 0.8, m['gearbox_dark'], bevel=0.2,
-                   name='wroom'))
-    out.append(box(x + 26.0, y + 5.15, zb + 0.8, 18.0, 18.0, 2.4, m['shield'], bevel=0.4,
-                   name='can'))
-    for i in range(5):                      # the meander of the PCB antenna
-        out.append(box(x + 45.0, y + 7.5 + i * 2.6, zb + 0.8, 5.0, 1.1, 0.12, m['gold'],
-                       bevel=0, name='ant'))
-    out += _header(x + 5.5, y + 0.6, zt + t, 15, m['header'])
-    out += _header(x + 5.5, y + d - 3.2, zt + t, 15, m['header'])
-    out.append(box(x + 22.0, y + d / 2 - 0.8, zb, 2.4, 1.6, 1.0, m['led_blue'], bevel=0,
-                   name='led'))
+    # The DevKit's two pin strips point DOWN, so the board stands on them rather than lying on
+    # the velcro. Without the stand-off the pins pass straight through the deck and the board
+    # sits 8.5 mm lower than it does on the real car.
+    out += PCB.esp32(x, y, zt + ESP_STANDOFF, name='esp32')
     return out
 
 
@@ -359,16 +377,16 @@ def esp32_signal_wires(z=0.0):
     out = []
     for i in range(6):
         lane = 66 - i * 3.4
-        arc = z + PLATE_T + 10 + i * 1.6
+        arc = z + PLATE_T + 10 + ESP_STANDOFF + i * 1.6
         out.append(tube([(DRV_X + 12 + i * 2.6, DRV_Y + 2, z + PLATE_T + 6),
                          (DRV_X - 4 - i * 1.5, lane, arc),
                          (ex + 34, lane - 2, arc - 1),
-                         (ex + 7 + i * 2.9, ey + 1.2, z + PLATE_T + 6)],
+                         (ex + 7 + i * 2.9, ey + 1.2, z + PLATE_T + 6 + ESP_STANDOFF)],
                         0.8, m[cols[i]], name='esp_sig'))
     for i, col in enumerate(('w_red', 'w_black')):          # 5V -> VIN, GND -> GND
         out.append(tube([(DRV_X + 26 + i * 6, DRV_Y + DRV_D, z + PLATE_T + 8),
                          (DRV_X + 6, 150 + i * 5, z + PLATE_T + 13),
-                         (ex + 44 - i * 6, ey + 27, z + PLATE_T + 6)],
+                         (ex + 44 - i * 6, ey + 27, z + PLATE_T + 6 + ESP_STANDOFF)],
                         1.2, m[col], name='esp_pwr'))
     return out
 

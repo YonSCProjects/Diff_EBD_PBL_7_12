@@ -33,28 +33,60 @@ const PAIR = /<rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="([\d.]+
 
 const MARK = 'data-print-scaled';
 
+// Undo a previous polish so the script can be re-tuned in place. Without this a second run is a
+// no-op, and the only way to change the scaling was a full Fritzing rebuild of the figure — slow,
+// and impossible at all on a machine without Fritzing installed. The label wrapper holds nothing
+// but the rect+text pair, so a non-greedy match to the first </g> is exact; the pre-growth
+// viewBox is recorded on the <svg> below when it grows.
+function unpolish(s) {
+  if (!s.includes(MARK)) return s;
+  s = s.replace(new RegExp('<g ' + MARK + '="1" transform="[^"]*">([\\s\\S]*?)<\\/g>', 'g'), '$1');
+  const m = s.match(/\sdata-print-vb0="([^"]+)"/);
+  if (m) {
+    const [x, y, ww, hh] = m[1].trim().split(/\s+/);
+    s = s.replace(/viewBox="[^"]+"/, `viewBox="${m[1]}"`);
+    s = s.replace(/<rect x="[-\d.]+" y="[-\d.]+" width="[\d.]+" height="[\d.]+" fill="#ffffff"\/>/,
+      `<rect x="${x}" y="${y}" width="${ww}" height="${hh}" fill="#ffffff"/>`);
+    s = s.replace(/\sdata-print-vb0="[^"]*"/, '');
+  }
+  return s;
+}
+
 function polish(file) {
   let s = fs.readFileSync(file, 'utf8');
   const w = stripWatermark(s); s = w.s;
   // Already polished: the label pairs still match PAIR (the scale lives on a wrapper, not on
-  // font-size), so without this guard a second run would scale them again and grow the
-  // viewBox a second time.
-  if (s.includes(MARK)) return { s, cut: w.cut, k: 1, n: 0, px: null, grew: false, done: true };
+  // font-size), so scaling again on top would compound. Undo the previous pass instead of
+  // bailing out, which makes the script re-runnable and its constants re-tunable.
+  const wasPolished = s.includes(MARK);
+  s = unpolish(s);
   const vw = Number(s.match(/viewBox="([-\d.]+)\s+([-\d.]+)\s+([\d.]+)\s+([\d.]+)"/)[3]);
   const first = new RegExp(PAIR.source).exec(s);
-  if (!first) return { s, cut: w.cut, k: 1, n: 0, px: null };
+  if (!first) return { s, cut: w.cut, n: 0, px: null, wasPolished };
   const px = Number(first[5]) / vw * CARD_PX;
-  const k = Math.min(MAX_K, TARGET_PX / px);
-  if (k <= 1.02) return { s, cut: w.cut, k: 1, n: 0, px };
   // Collect the labels first: a tag with room around it can take the full scale, but a tight
   // cluster (the IN1..IN4 pins on an L298N, say) has to settle for less or it just becomes a
   // pile. Each label gets the largest scale that does not push it into a neighbour it was
   // clear of at 1x.
+  //
+  // Each label is scaled from ITS OWN font-size. Deriving one factor from the FIRST label and
+  // applying it to all of them is what left the small tags unreadable: on w_p4_01_driver_wiring
+  // the first label is "LEFT MOTORS" at size 80, which needs only 2.2x to clear the target, so
+  // the size-54 pin tags beside it were handed 2.2x as well and stayed under 3 px on the card.
+  // A label that starts smaller has to grow MORE, not the same.
   const labels = [];
-  s.replace(PAIR, (whole, x, y, ww, hh) => {
-    labels.push({ x: Number(x), y: Number(y), w: Number(ww), h: Number(hh), k });
+  s.replace(PAIR, (whole, x, y, ww, hh, fsz) => {
+    const ownPx = Number(fsz) / vw * CARD_PX;
+    labels.push({
+      x: Number(x), y: Number(y), w: Number(ww), h: Number(hh), px: ownPx,
+      k: Math.min(MAX_K, Math.max(1, TARGET_PX / ownPx)),
+    });
     return whole;
   });
+  if (!labels.some(L => L.k > 1.02)) {
+    return { s, cut: w.cut, n: labels.length, px, wasPolished, kmin: 1, kmax: 1,
+             worst: Math.min(...labels.map(L => L.px)) };
+  }
   const boxAt = (L, kk) => {
     const cx = L.x + L.w / 2, cy = L.y + L.h / 2;
     return [cx - L.w / 2 * kk, cy - L.h / 2 * kk, cx + L.w / 2 * kk, cy + L.h / 2 * kk];
@@ -96,6 +128,10 @@ function polish(file) {
   const nx1 = Math.max(vx + vwid, box.x1 + pad), ny1 = Math.max(vy + vhgt, box.y1 + pad);
   const grew = (nx !== vx || ny !== vy || nx1 !== vx + vwid || ny1 !== vy + vhgt);
   if (grew) {
+    // remember what it was, so unpolish() can put it back on a re-run
+    if (!/data-print-vb0=/.test(s)) {
+      s = s.replace(/<svg /, `<svg data-print-vb0="${vx} ${vy} ${vwid} ${vhgt}" `);
+    }
     const nvb = `viewBox="${nx.toFixed(1)} ${ny.toFixed(1)} ${(nx1 - nx).toFixed(1)} ${(ny1 - ny).toFixed(1)}"`;
     s = s.replace(/viewBox="[^"]+"/, nvb);
     // the white backdrop rect must grow with it or the page shows through at the new edges
@@ -104,12 +140,16 @@ function polish(file) {
   }
   const ks = labels.map(L => L.k);
   const kmin = ks.length ? Math.min(...ks) : 1, kmax = ks.length ? Math.max(...ks) : 1;
-  return { s, cut: w.cut, k, n, px, grew, kmin, kmax };
+  // the on-card size the smallest label actually ends up at — the number that decides whether
+  // this figure is readable, and the one to watch when re-tuning
+  const worst = Math.min(...labels.map(L => L.px * L.k));
+  return { s, cut: w.cut, n, px, grew, kmin, kmax, worst, wasPolished };
 }
 
 // usage: node polish_for_print.js <figure_breadboard.svg> [more.svg ...]
-// Rewrites each file in place. Idempotent: a figure already polished has no watermark left
-// and its labels already measure at the target, so a second run is a no-op.
+// Rewrites each file in place. Re-runnable: a previously polished figure is unpolished first and
+// scaled again from scratch, so the constants at the top of this file can be re-tuned and the
+// script re-run over the published SVGs without rebuilding anything in Fritzing.
 if (process.argv.length < 3) {
   console.error('usage: node polish_for_print.js <figure_breadboard.svg> [...]');
   process.exit(1);
@@ -117,9 +157,11 @@ if (process.argv.length < 3) {
 for (const f of process.argv.slice(2)) {
   const r = polish(f);
   fs.writeFileSync(f, r.s);
-  if (r.done) { console.log(require('path').basename(f).replace('_breadboard.svg','') + '  already polished' + (r.cut ? ' (watermark cut)' : '')); continue; }
-  console.log([require('path').basename(f).replace('_breadboard.svg',''), 'wm:' + (r.cut ? 'cut' : '--'),
-    'labels:' + r.n, 'was ' + (r.px ? r.px.toFixed(1) : '-') + 'px',
+  // "worst" is the on-card size of the smallest label after scaling — the readability number.
+  console.log([require('path').basename(f).replace('_breadboard.svg', ''),
+    'wm:' + (r.cut ? 'cut' : '--'), r.wasPolished ? 're-polished' : 'polished',
+    'labels:' + r.n,
     'x' + (r.n ? r.kmin.toFixed(2) + '-' + r.kmax.toFixed(2) : '1.00'),
+    'smallest:' + (r.worst ? r.worst.toFixed(1) : '-') + 'px',
     r.grew ? 'viewBox grown' : ''].join('  '));
 }

@@ -7,7 +7,7 @@
       "id": "drv",
       "part": "L298N-DC-motor-driver-improved",
       "x": 110,
-      "y": -70,
+      "y": 20,
       "title": "L298N"
     },
     {
@@ -98,77 +98,81 @@
       "dx": -190,
       "dy": 170,
       "text": "12V",
-      "size": 60
+      "size": 145
     },
     {
       "ref": "drv.GND",
       "dx": 190,
       "dy": 170,
       "text": "GND",
-      "size": 60
+      "size": 145
     },
     {
       "ref": "buck.Vin1",
-      "dx": -260,
+      "dx": -420,
       "dy": -140,
       "text": "IN +",
-      "size": 50,
+      "size": 140,
       "color": "#cc1414",
       "stroke": "#cc1414"
     },
     {
       "ref": "buck.GND1",
-      "dx": -260,
+      "dx": -420,
       "dy": 140,
       "text": "IN −",
-      "size": 50
+      "size": 140
     },
     {
       "ref": "buck.Vout1",
-      "dx": 280,
+      "dx": 460,
       "dy": -140,
       "text": "OUT 5V",
-      "size": 50,
+      "size": 140,
       "color": "#cc1414",
       "stroke": "#cc1414"
     },
     {
       "ref": "buck.GND1*",
-      "dx": 280,
+      "dx": 460,
       "dy": 140,
       "text": "OUT −",
-      "size": 50
+      "size": 140
     },
     {
       "ref": "buck.@b",
-      "dy": 120,
+      "dy": 380,
       "text": "buck converter  12V → 5V",
-      "size": 50
+      "size": 140
     },
     {
       "ref": "cam.5V",
-      "dx": 230,
+      "dx": -744,
       "text": "5V",
-      "size": 50
+      "size": 140,
+      "dy": -160,
+      "leader": true
     },
     {
       "ref": "cam.GND",
-      "dx": 250,
+      "dx": -400,
       "text": "GND",
-      "size": 46
+      "size": 140,
+      "dy": 700,
+      "leader": true
     },
     {
       "ref": "cap.@t",
-      "dy": -100,
+      "dy": -300,
       "text": "470 µF\nstripe → GND",
-      "size": 42
+      "size": 130
     },
     {
       "ref": "bat.+",
       "dx": -90,
       "dy": -120,
       "text": "+",
-      "size": 80,
+      "size": 200,
       "color": "#cc1414",
       "stroke": "#cc1414"
     },
@@ -177,19 +181,19 @@
       "dx": -90,
       "dy": 120,
       "text": "−",
-      "size": 80
+      "size": 200
     },
     {
       "ref": "drv.@t",
       "dy": -110,
       "text": "L298N — motors only",
-      "size": 54
+      "size": 150
     },
     {
       "ref": "cam.@b",
       "dy": 120,
       "text": "camera — its own 5V rail",
-      "size": 50
+      "size": 145
     }
   ]
 }

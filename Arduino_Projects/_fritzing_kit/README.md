@@ -63,8 +63,18 @@ idempotent (`figure_plan_p5p6p7.json` is the plan used on 2026-08-22).
 * **Bendable-leg parts (LED, electrolytic cap)** export their legs as anonymous paths, so only the
   body-side pin is extractable; place them with `snap.offset` = leg length (LED: −30.8 px).
 * `partID` in the export = `modelIndex × 10`; `make_fzz.py` assigns modelIndex 1001 + instance index.
-* Label sizes: a full-map figure is ~10 000 units wide and prints at ~170 mm — tags need size ≥ 80
-  (staggered in two columns at 100-unit pin pitch); narrow figures are fine at 50–60.
+* **Author label sizes from the figure's width, and do it in the spec.** The dc cards render every
+  figure at 640 px whatever the sketch spans, so what a student sees is
+  `size × 640 / viewBoxWidth`. Solve it for the ~8 px a label needs: **`size = 8 × viewBoxWidth / 640`**
+  — about 145 on a 11 000-unit figure, 90 on a 7 000-unit one. Don't author small and expect
+  `polish_for_print.js` to rescue it: the polish can only grow a label that has empty space to grow
+  into, and on a dense figure it has none. (`build_figure.js` prints the viewBox; author, rebuild,
+  re-read, adjust.)
+* **Two tags on one wire is one tag too many.** A wire labelled at both ends (`IN1` on the driver,
+  `9` on the Uno) puts two tags into the two densest spots on the figure. One tag on the run
+  saying `IN1 → 9` states the whole connection and has room to be legible.
+* Wide figures cost legibility; tall ones don't — the card constrains width only. Given a choice,
+  stack vertically.
 * Wire crossings that are topologically forced (TX↔RX on the FTDI figure; the two-lead battery
   feeding two loads; the ESP32 5V/GND pair) are left as clean right-angle crossings — don't fight them.
 
@@ -91,7 +101,26 @@ figure gets 19 px. Fritzing's own watermark also sits on top of real parts on se
 Run it on the composited SVGs after `build_figure.js`. It removes the watermark group and
 scales each label about its own centre toward ~8 px on-card (capped at 2.2x), reducing any
 label that would then collide with a neighbour it was clear of, and grows the viewBox and its
-white backdrop so a widened tag near the edge is not sliced. Rewrites in place, and is
-idempotent — polished labels carry `data-print-scaled` and are skipped on a second run.
+white backdrop so a widened tag near the edge is not sliced. Rewrites in place.
 
-Applied to all 14 P4/P5/P7 wiring figures on 2026-08-28.
+**It is a safety net, not the plan.** Two limits decide what it can do:
+
+* A label only grows into empty space. On a dense figure the collision pass shrinks it straight
+  back, so a tag authored at 54 on a 14 500-unit figure stays under 3 px no matter what the
+  script does. Author the size (see the sizing rule above); a healthy figure reports `x1.00-1.00`.
+* Until 2026-08-29 it derived one factor from the **first** label and applied it to all of them,
+  so a figure led by a big heading handed that heading's modest factor to every small tag beside
+  it. Now each label is scaled from its own size. Re-polishing the existing figures under the fix
+  lifted P6 from 4.4 px to 6.9 px and `w_p4_02` from 5.0 to 7.1 with no other change.
+
+**Re-runnable:** a polished figure is unpolished first (label wrappers stripped, pre-growth viewBox
+restored from `data-print-vb0` on the `<svg>`) and rescaled from scratch, so the constants at the
+top of the script can be re-tuned and re-applied to the published SVGs without Fritzing. Figures
+polished before 2026-08-29 carry no `data-print-vb0`; their growth was ~0.5 % and is not recovered.
+
+`measure_labels`-style verification: on-card size is `font-size × transform-scale × 640 / viewBoxWidth`.
+Reading `font-size` alone reports nonsense, because the polish scales via a wrapper `transform` and
+never touches `font-size`.
+
+Applied to all 14 P4/P5/P7 wiring figures on 2026-08-28; per-label fix plus P4/P6/P7 re-polish and
+the three dense figures re-authored on 2026-08-29.

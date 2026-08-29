@@ -37,7 +37,7 @@
       "id": "mD",
       "part": "Getriebemotor",
       "x": 582,
-      "y": 25,
+      "y": 60,
       "title": "Rear-right motor"
     },
     {
@@ -50,8 +50,8 @@
     {
       "id": "cam",
       "part": "ESP32-CAM_FRONT-fixed",
-      "x": 575.7,
-      "y": 230,
+      "x": 555.922,
+      "y": 320,
       "rotation": 90,
       "title": "ESP32-CAM",
       "snap": {
@@ -64,7 +64,7 @@
       "id": "buck",
       "part": "Mini560 buck module",
       "x": 700,
-      "y": 320,
+      "y": 410,
       "rotation": 180,
       "title": "Buck 5V"
     },
@@ -72,7 +72,7 @@
       "id": "cap",
       "core": "capacitor_electrolytic_small",
       "x": 575,
-      "y": 180,
+      "y": 270,
       "title": "470 uF",
       "properties": {
         "capacitance": "470µF"
@@ -259,73 +259,27 @@
   ],
   "labels": [
     {
-      "ref": "cam.IO14",
-      "dy": 300,
-      "text": "14",
-      "size": 52
-    },
-    {
-      "ref": "cam.IO15",
-      "dy": 440,
-      "text": "15",
-      "size": 52
-    },
-    {
-      "ref": "cam.IO13",
-      "dy": 300,
-      "text": "13",
-      "size": 52
-    },
-    {
-      "ref": "cam.IO12",
-      "dy": 440,
-      "text": "12",
-      "size": 52
-    },
-    {
-      "ref": "drv.IN1",
-      "dy": -200,
-      "text": "IN1",
-      "size": 60
-    },
-    {
-      "ref": "drv.IN2",
-      "dy": -360,
-      "text": "IN2",
-      "size": 60
-    },
-    {
-      "ref": "drv.IN3",
-      "dy": -200,
-      "text": "IN3",
-      "size": 60
-    },
-    {
-      "ref": "drv.IN4",
-      "dy": -360,
-      "text": "IN4",
-      "size": 60
-    },
-    {
       "ref": "drv.12V",
-      "dx": -150,
-      "dy": 260,
+      "dx": -911,
+      "dy": 1211,
       "text": "12V",
-      "size": 64
+      "size": 145,
+      "leader": true
     },
     {
       "ref": "drv.GND",
-      "dx": 150,
-      "dy": 260,
+      "dx": -1100,
+      "dy": 1544,
       "text": "GND",
-      "size": 64
+      "size": 145,
+      "leader": true
     },
     {
       "ref": "bat.+",
       "dx": -90,
       "dy": -120,
       "text": "+",
-      "size": 90,
+      "size": 200,
       "color": "#cc1414",
       "stroke": "#cc1414"
     },
@@ -334,48 +288,81 @@
       "dx": -90,
       "dy": 120,
       "text": "−",
-      "size": 90
+      "size": 200
     },
     {
       "ref": "mA.@b",
       "dy": 230,
       "text": "LEFT MOTORS",
-      "size": 80
+      "size": 175
     },
     {
       "ref": "mC.@b",
-      "dy": 260,
+      "dy": 230,
       "text": "RIGHT MOTORS",
-      "size": 80
+      "size": 175
     },
     {
       "ref": "buck.@b",
       "dy": 120,
       "text": "buck 12V → 5V",
-      "size": 56
+      "size": 145
     },
     {
       "ref": "cam.@b",
-      "dy": 120,
+      "dy": 350,
       "text": "ESP32-CAM",
-      "size": 56
+      "size": 145
     },
     {
       "ref": "cap.@t",
       "dx": 250,
       "dy": -60,
       "text": "470 µF",
-      "size": 46
+      "size": 140
     },
     {
       "ref": "drv.+5V-J2",
       "dx": 2750,
       "dy": 1420,
       "text": "ENA / ENB caps ON",
-      "size": 50,
+      "size": 145,
       "leader": true,
       "fill": "#fff8d6",
       "stroke": "#b08900"
+    },
+    {
+      "ref": "drv.IN1",
+      "dx": -422,
+      "dy": 367,
+      "text": "IN1 → 14",
+      "size": 145,
+      "leader": true
+    },
+    {
+      "ref": "drv.IN2",
+      "dx": -522,
+      "dy": 700,
+      "text": "IN2 → 15",
+      "size": 145,
+      "leader": true
+    },
+    {
+      "ref": "drv.IN3",
+      "dx": -622,
+      "dy": 1033,
+      "text": "IN3 → 13",
+      "size": 145,
+      "leader": true
+    },
+    {
+      "ref": "drv.IN4",
+      "dx": -722,
+      "dy": 1367,
+      "text": "IN4 → 12",
+      "size": 145,
+      "leader": true
     }
-  ]
+  ],
+  "_note": "Label sizes are authored to land at ~8px on a 640px card (size*640/viewBoxWidth). Do not shrink them back; polish_for_print.js can only rescue a label that has room to grow, and a figure this dense has none."
 }

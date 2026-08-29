@@ -2,6 +2,7 @@
   "name": "w_p4_01_driver_wiring",
   "out_dir": "..",
   "assets_dir": "../../task_cards_he/assets",
+  "_note": "Label sizes are authored to land at ~8px on a 640px card (size*640/viewBoxWidth). Do not shrink them back; polish_for_print.js can only rescue a label that has room to grow, and this figure has none.",
   "instances": [
     {
       "id": "drv",
@@ -44,14 +45,14 @@
       "id": "bat",
       "part": "8xAA_box",
       "x": -170,
-      "y": 300,
+      "y": 228,
       "title": "8 x AA battery box"
     },
     {
       "id": "uno",
       "core": "arduino_Uno_Rev3(fix)",
       "x": 332.191,
-      "y": 250,
+      "y": 330,
       "title": "Arduino Uno",
       "snap": {
         "pin": "c53",
@@ -62,15 +63,15 @@
     {
       "id": "sL",
       "part": "TCRT5000 line sensor",
-      "x": 720,
-      "y": 520,
+      "x": 388,
+      "y": 633,
       "title": "LEFT line sensor"
     },
     {
       "id": "sR",
       "part": "TCRT5000 line sensor",
-      "x": 1020,
-      "y": 520,
+      "x": 658,
+      "y": 633,
       "title": "RIGHT line sensor"
     }
   ],
@@ -267,164 +268,146 @@
       "ref": "mA.@b",
       "dy": 230,
       "text": "LEFT MOTORS",
-      "size": 80
+      "size": 175
     },
     {
       "ref": "mC.@b",
       "dy": 230,
       "text": "RIGHT MOTORS",
-      "size": 80
+      "size": 175
     },
     {
       "ref": "bat.+",
       "dx": -90,
-      "dy": -120,
+      "dy": -190,
       "text": "+",
-      "size": 90,
+      "size": 200,
       "color": "#cc1414",
       "stroke": "#cc1414"
     },
     {
       "ref": "bat.-",
       "dx": -90,
-      "dy": 120,
+      "dy": 190,
       "text": "−",
-      "size": 90
+      "size": 200
     },
     {
       "ref": "drv.12V",
-      "dx": -150,
-      "dy": 260,
+      "dx": -1133,
+      "dy": 1378,
       "text": "12V",
-      "size": 64
+      "size": 145,
+      "leader": true
     },
     {
       "ref": "drv.GND",
-      "dx": 150,
-      "dy": 260,
+      "dx": -1322,
+      "dy": 1711,
       "text": "GND",
-      "size": 64
+      "size": 145,
+      "leader": true
     },
     {
       "ref": "uno.c89",
       "dx": 120,
-      "dy": 260,
+      "dy": 300,
       "text": "★ common ground",
-      "size": 64,
+      "size": 145,
       "fill": "#fff8d6",
       "stroke": "#b08900"
     },
     {
       "ref": "uno.c87",
-      "dx": -260,
-      "dy": 420,
+      "dx": -700,
+      "dy": 460,
       "text": "5V",
-      "size": 56
+      "size": 140,
+      "leader": true
     },
     {
       "ref": "drv.ENA",
-      "dy": -200,
-      "text": "ENA",
-      "size": 60
+      "dx": -489,
+      "dy": 311,
+      "text": "ENA → 10",
+      "size": 150,
+      "leader": true
     },
     {
       "ref": "drv.IN1",
-      "dy": -360,
-      "text": "IN1",
-      "size": 60
+      "dx": -589,
+      "dy": 600,
+      "text": "IN1 → 9",
+      "size": 150,
+      "leader": true
     },
     {
       "ref": "drv.IN2",
-      "dy": -200,
-      "text": "IN2",
-      "size": 60
+      "dx": -689,
+      "dy": 889,
+      "text": "IN2 → 8",
+      "size": 150,
+      "leader": true
     },
     {
       "ref": "drv.IN3",
-      "dy": -360,
-      "text": "IN3",
-      "size": 60
+      "dx": -789,
+      "dy": 1178,
+      "text": "IN3 → 7",
+      "size": 150,
+      "leader": true
     },
     {
       "ref": "drv.IN4",
-      "dy": -200,
-      "text": "IN4",
-      "size": 60
+      "dx": -889,
+      "dy": 1467,
+      "text": "IN4 → 6",
+      "size": 150,
+      "leader": true
     },
     {
       "ref": "drv.ENB",
-      "dy": -360,
-      "text": "ENB",
-      "size": 60
-    },
-    {
-      "ref": "uno.c53",
-      "dy": 300,
-      "text": "10",
-      "size": 60
-    },
-    {
-      "ref": "uno.c52",
-      "dy": 440,
-      "text": "9",
-      "size": 60
-    },
-    {
-      "ref": "uno.c51",
-      "dy": 300,
-      "text": "8",
-      "size": 60
-    },
-    {
-      "ref": "uno.c68",
-      "dy": 440,
-      "text": "7",
-      "size": 60
-    },
-    {
-      "ref": "uno.c67",
-      "dy": 300,
-      "text": "6",
-      "size": 60
-    },
-    {
-      "ref": "uno.c66",
-      "dy": 440,
-      "text": "5",
-      "size": 60
+      "dx": -989,
+      "dy": 1756,
+      "text": "ENB → 5",
+      "size": 150,
+      "leader": true
     },
     {
       "ref": "sL.@b",
-      "dy": 110,
+      "dy": 150,
       "text": "LEFT sensor → 11",
-      "size": 56
+      "size": 145
     },
     {
       "ref": "sR.@b",
-      "dy": 110,
+      "dy": 150,
       "text": "RIGHT sensor → 12",
-      "size": 56
+      "size": 145
     },
     {
       "ref": "uno.c54",
-      "dx": -160,
-      "dy": -110,
+      "dx": -778,
+      "dy": -156,
       "text": "11",
-      "size": 56
+      "size": 140,
+      "leader": true
     },
     {
       "ref": "uno.c55",
-      "dx": 160,
-      "dy": -110,
+      "dx": -1178,
+      "dy": -156,
       "text": "12",
-      "size": 56
+      "size": 140,
+      "leader": true
     },
     {
       "ref": "uno.5V.3",
-      "dx": 340,
-      "dy": 710,
+      "dx": -2200,
+      "dy": 760,
       "text": "Y-splitter: soldered + heat-shrink",
-      "size": 54
+      "size": 140,
+      "leader": true
     }
   ]
 }

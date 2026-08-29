@@ -1,4 +1,4 @@
-- [HANDOFF to Claude Cowork](project_handoff_to_cowork.md) — 2026-08-26: the project left this environment; **HANDOFF.md at the repo root is the authority and supersedes these files**
+- [Cowork round trip](project_handoff_to_cowork.md) — 2026-08-26 to 08-29, **closed, the project is back here**; read BOTH `HANDOFF.md` and `HANDOFF_COWORK_TO_CLAUDE_CODE.md` at the repo root — they are complementary
 - [Session handoff](project_session_handoff.md) — read first when resuming this project
 - [Illustration kit](reference_illustration_kit.md) — `Arduino_Projects/_illustration_kit/` draws every step illustration (P4/P5/P7 done, P8 parts done); read its READMEs before drawing anything new
 - [One figure per step](feedback_step_figures_from_card_text.md) — build cards want a figure inside each numbered step, and the step's own Hebrew is the authority on what it shows

@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 23475edf-dbb3-4a71-8074-6f8e659f8622
-  modified: 2026-08-24T13:15:57.056Z
+  modified: 2026-08-29T08:01:42.770Z
 ---
 
 `_blender/` is the source of every **step** figure for Projects 4, 5, 7 and 8. It replaced
@@ -32,6 +32,26 @@ Portable Blender 4.5.12 LTS lives at `C:\Users\Yon\tools\blender-4.5.12-windows-
 - `render.py` — the CLI. `preview.sh` — fast EEVEE contact sheets for the look-and-fix loop.
 - `shot_cards.js` — screenshots every card in a project and **fails** on any `<img>` that did
   not load. This is the only honest check that a figure reached the student.
+
+**Setting it up on Yon's machine (route A, the `build_p*.sh` path).** Those scripts drive the
+installed Blender, so the interpreter that runs the scenes is **Blender's bundled Python**, not
+the system one. `pcb.py` imports PIL at module scope and `p4_car.py` / `props.py` / `scenes_p4.py`
+all import `pcb`, so without Pillow *in that interpreter* every P4/P5/P7 scene dies at import:
+
+    "/c/Users/Yon/tools/blender-4.5.12-windows-x64/4.5/python/bin/python.exe" -m pip install pillow
+
+Installed 2026-08-29 (pillow 12.3.0). Smoke test, which also proves the silkscreen font search
+resolves — it was Linux-only paths until 2026-08-29 and degraded *silently* to an 11 px bitmap:
+
+    "$BLENDER" --background --factory-startup --python-expr "import sys; sys.path.insert(0,'_blender'); import pcb; print('font:', pcb._FONT)"
+
+A path means good; `None` plus a warning means the font fix has not taken. On Windows it resolves
+to `C:/Windows/Fonts/arialbd.ttf`.
+
+**One lineset, one owner.** Freestyle keeps exactly one lineset per view layer, so a second
+`outlines()`-style call does not add to the first — it replaces it. `quality.apply()` owns the ink
+now and `render.py` guards it with `_quality_owns_ink`. See [[project_handoff_to_cowork]] for how
+this shipped a heavy black sticker outline on every figure for two rounds without anyone seeing it.
 
 **Build**: `bash _blender/build_p4.sh` (also `build_p4_m3.sh`, `build_p5.sh`, `build_p7.sh`,
 `build_p8.sh`). Flags: `--eevee`, `--samples N`, `--compose-only` (re-label without re-rendering),

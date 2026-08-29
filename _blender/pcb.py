@@ -29,12 +29,29 @@ from lib import MM, box, cyl, mat, hexcol
 HERE = os.path.dirname(os.path.abspath(__file__))
 TEX = os.path.join(HERE, 'textures')
 PXMM = 24                                   # silkscreen resolution
-_FONT = '/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf'
-_FONT_R = '/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf'
-for _f in (_FONT, _FONT_R):
-    if not os.path.exists(_f):
-        _FONT = _FONT_R = None
+# The silkscreen is drawn with a real TrueType face at 24 px/mm. If none is found PIL falls
+# back to its bitmap default -- about 11 px, non-scalable -- and every pin label on every board
+# comes out an unreadable blob WITHOUT raising, so the search covers all three platforms and
+# says so out loud when it fails. (This was Linux-only paths until 2026-08-29, which meant the
+# pipeline degraded silently the moment it ran anywhere but the container it was written in.)
+_FONT_CANDIDATES = (
+    ('/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf',
+     '/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf'),
+    ('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',
+     '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'),
+    ('C:/Windows/Fonts/arialbd.ttf', 'C:/Windows/Fonts/arial.ttf'),
+    ('C:/Windows/Fonts/segoeuib.ttf', 'C:/Windows/Fonts/segoeui.ttf'),
+    ('/System/Library/Fonts/Supplemental/Arial Bold.ttf',
+     '/System/Library/Fonts/Supplemental/Arial.ttf'),
+)
+_FONT = _FONT_R = None
+for _b, _r in _FONT_CANDIDATES:
+    if os.path.exists(_b) and os.path.exists(_r):
+        _FONT, _FONT_R = _b, _r
         break
+if _FONT is None:
+    print('pcb.py WARNING: no TrueType face found; silkscreen will use PIL\'s bitmap default '
+          'and pin labels will be illegible. Add a path to _FONT_CANDIDATES.')
 
 _cache = {}
 

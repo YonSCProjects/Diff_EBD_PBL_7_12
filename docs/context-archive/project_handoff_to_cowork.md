@@ -1,12 +1,18 @@
 ---
 name: project_handoff_to_cowork
-description: 2026-08-26 — the project is moving out of Claude Code to Claude Cowork; HANDOFF.md at the repo root is the authoritative brief and supersedes these memories
+description: the Cowork round trip, 2026-08-26 to 2026-08-29 — what it changed and what it left; the project is back in Claude Code
 metadata: 
   node_type: memory
   type: project
   originSessionId: 23475edf-dbb3-4a71-8074-6f8e659f8622
   modified: 2026-08-28T21:23:38.436Z
 ---
+
+> **CLOSED 2026-08-29 — the project came back.** Yon worked in Cowork for three days and
+> returned to Claude Code. The return leg is `HANDOFF_COWORK_TO_CLAUDE_CODE.md` at the repo root:
+> it covers toolchain setup, what commits `76377a3` and after changed, and the traps of that
+> phase. **Read both handoff files; they are complementary, not versions of each other.** What
+> follows is the outbound record, kept for the reasoning.
 
 2026-08-26. Yon moved this project out of Claude Code to **Claude Cowork**, because the work is
 now dominated by design and 3-D modelling.
@@ -48,3 +54,27 @@ this repo to have more than one session in it.
 
 Related: [[reference_blender_pipeline]], [[project_step_figures_blender_rebuild]],
 [[project_review_console]], [[reference_github]].
+
+
+## What the Cowork phase actually produced (2026-08-29)
+
+- **The "look like toys" verdict had one cause, and it was not geometry or shading.**
+  `quality.apply()` installed a light silhouette-only ink line and then `render.py` called the
+  legacy `lib.outlines()` four lines later. Freestyle keeps exactly **one lineset per view
+  layer**, so the second call wiped the first — every figure had a 2.4 px black outline on
+  silhouette *and* crease *and* material boundary, over correctly rendered CAD geometry. Two
+  rounds of work chased the wrong cause first. Now guarded by `_quality_owns_ink` in
+  `render.py`; ink is 0.80 px, silhouette and border only, set in `quality.ink()`.
+  **If you add any Freestyle call to the render path, check that guard.**
+- 32 P4/P5/P7 step figures re-rendered with CAD parts from KiCad's VRML library; 14 wiring
+  figures polished with the new `_fritzing_kit/polish_for_print.js`.
+- The wide wiring diagrams are still unreadable — labels land at 3–5 px on a card because the
+  *sketch layout* is spread out, not because of padding. Fixing it needs the parts moved in the
+  `.fzz` and a re-run of `build_figure.js`, which needs Fritzing installed. **Fritzing and its
+  core parts library are present on Yon's machine**, so this is work for Claude Code.
+
+## Decision: print PDFs wait (2026-08-29)
+
+Projects 1–3 have `Project_N_Task_Cards_he_print.pdf` via `tools/print/`; P4–P8 do not. Yon:
+**"we will do the pdfs at the end when all 8 projects are ready. no need to waste printing
+materials before."** Do not offer them again until all eight card sets are finished.

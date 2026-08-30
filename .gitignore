@@ -53,3 +53,9 @@ _to_delete/
 # Silkscreen textures are a CACHE: pcb.py regenerates them with PIL on every run
 # (Silk.save writes unconditionally), same class as _blender/work/.
 _blender/textures/
+
+# build_overview_with_cards.js intermediates
+*.part1.md
+*.part2.md
+*.part1.pdf
+*.part2.pdf

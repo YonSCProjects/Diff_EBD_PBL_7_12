@@ -291,69 +291,85 @@
   "labels": [
     {
       "ref": "esp.D25",
-      "dx": 230,
+      "dx": -611,
       "text": "25",
-      "size": 52
+      "size": 82,
+      "dy": 0,
+      "leader": true
     },
     {
       "ref": "esp.D26",
-      "dx": 230,
+      "dx": -1167,
       "text": "26",
-      "size": 52
+      "size": 82,
+      "dy": 0,
+      "leader": true
     },
     {
       "ref": "esp.D14",
-      "dx": 230,
+      "dx": -2278,
       "text": "14",
-      "size": 52
+      "size": 82,
+      "dy": 0,
+      "leader": true
     },
     {
       "ref": "esp.D27",
-      "dx": 230,
+      "dx": -1722,
       "text": "27",
-      "size": 52
+      "size": 82,
+      "dy": 0,
+      "leader": true
     },
     {
       "ref": "esp.D21",
       "dx": -230,
       "text": "21",
-      "size": 52
+      "size": 82,
+      "dy": 0
     },
     {
       "ref": "esp.D22",
       "dx": -230,
       "text": "22",
-      "size": 52
+      "size": 82,
+      "dy": 0
     },
     {
       "ref": "mt.@t",
       "dy": -110,
       "text": "MT3608 → 5.0 V → VIN",
-      "size": 50
+      "size": 82,
+      "dx": 0
     },
     {
       "ref": "mF.@t",
-      "dy": -90,
+      "dy": -200,
       "text": "FRONT\nCW",
-      "size": 42
+      "size": 82,
+      "dx": 0
     },
     {
       "ref": "mR.@t",
-      "dy": -90,
+      "dy": -200,
       "text": "RIGHT\nCCW",
-      "size": 42
+      "size": 82,
+      "dx": 0
     },
     {
       "ref": "mB.@t",
-      "dy": -90,
+      "dy": -200,
       "text": "BACK\nCW",
-      "size": 42
+      "size": 82,
+      "dx": 0
     },
     {
       "ref": "mL.@t",
-      "dy": -90,
+      "dy": -200,
       "text": "LEFT\nCCW",
-      "size": 42
+      "size": 82,
+      "dx": 0
     }
-  ]
+  ],
+  "_note": "Label sizes authored for ~8px on a 640px card (size*640/viewBoxWidth). The four gate-pin tags are staggered horizontally along their own wire runs; stacked at one x they cannot grow past the 9px pin pitch."
 }

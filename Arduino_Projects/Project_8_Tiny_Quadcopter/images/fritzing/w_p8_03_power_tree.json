@@ -118,76 +118,93 @@
       "dx": -60,
       "dy": -120,
       "text": "IN",
-      "size": 48
+      "size": 92
     },
     {
       "ref": "mt.Vout",
       "dx": 60,
       "dy": -120,
       "text": "OUT 5.0 V",
-      "size": 48
+      "size": 92
     },
     {
       "ref": "esp.VIN",
       "dx": -230,
       "text": "VIN",
-      "size": 54
+      "size": 92,
+      "dy": 278,
+      "leader": true
     },
     {
       "ref": "esp.GND",
-      "dx": -240,
+      "dx": -230,
       "text": "GND",
-      "size": 54
+      "size": 92,
+      "dy": -256,
+      "leader": true
     },
     {
       "ref": "esp.3V3",
       "dx": 230,
       "text": "3V3",
-      "size": 52
+      "size": 92,
+      "dy": 278,
+      "leader": true
     },
     {
       "ref": "esp.GND.2",
-      "dx": 450,
+      "dx": 230,
       "text": "GND",
-      "size": 52
+      "size": 92,
+      "dy": -256,
+      "leader": true
     },
     {
       "ref": "mpu.VCC",
-      "dx": -200,
+      "dx": -260,
       "text": "VCC",
-      "size": 44
+      "size": 92,
+      "dy": -278,
+      "leader": true
     },
     {
       "ref": "mpu.GND",
-      "dx": -200,
+      "dx": -260,
       "text": "GND",
-      "size": 44
+      "size": 92,
+      "dy": 278,
+      "leader": true
     },
     {
       "ref": "b.BAT+",
-      "dx": -260,
+      "dx": -300,
       "text": "BAT+",
-      "size": 54,
+      "size": 92,
       "color": "#cc1414",
-      "stroke": "#cc1414"
+      "stroke": "#cc1414",
+      "dy": 0
     },
     {
       "ref": "b.GND",
-      "dx": -260,
+      "dx": -300,
       "text": "GND",
-      "size": 54
+      "size": 92,
+      "dy": 0
     },
     {
       "ref": "mt.@t",
-      "dy": -110,
+      "dy": -330,
       "text": "MT3608 — pre-tuned to 5.0 V",
-      "size": 50
+      "size": 92,
+      "dx": 0
     },
     {
       "ref": "lipo.@b",
       "dy": 120,
       "text": "1S LiPo · PH2.0",
-      "size": 50
+      "size": 92,
+      "dx": 0
     }
-  ]
+  ],
+  "_note": "Label sizes authored for ~8px on a 640px card (size*640/viewBoxWidth). Tight pin pairs are fanned apart with leaders - do not restack them."
 }

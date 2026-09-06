@@ -63,3 +63,7 @@ _blender/textures/
 # generated student website (rebuild with: node build_site.js)
 site/
 .vendor-cache/
+
+# poster build: per-poster PNGs are regenerable from src/ (node Arduino_Projects/_posters/build_posters.js)
+Arduino_Projects/_posters/out/poster_p*.png
+Arduino_Projects/_posters/out/_tmp*

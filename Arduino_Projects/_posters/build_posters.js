@@ -14,7 +14,11 @@ const path = require('path');
 const puppeteer = require('puppeteer');
 
 const HERE = __dirname;
-const SRC = path.join(HERE, 'src');
+// --variant bright  ->  reads src_bright/ and writes *_bright outputs
+const vi = process.argv.indexOf('--variant');
+const VARIANT = vi > 0 ? process.argv[vi + 1] : '';
+const SUFFIX = VARIANT ? '_' + VARIANT : '';
+const SRC = path.join(HERE, VARIANT ? 'src_' + VARIANT : 'src');
 const OUT = path.join(HERE, 'out');
 fs.mkdirSync(OUT, { recursive: true });
 
@@ -70,53 +74,53 @@ const HTML = (body) => `<!DOCTYPE html><html lang="he"><head><meta charset="utf-
   for (const p of POSTERS) {
     const img = path.join(SRC, 'p' + p.n + '.png');
     if (!fs.existsSync(img)) { console.log('  MISSING src/p' + p.n + '.png — skipped'); continue; }
-    const uri = '../src/p' + p.n + '.png';
-    const tmp = path.join(OUT, '_tmp_p' + p.n + '.html');
+    const uri = '../' + path.basename(SRC) + '/p' + p.n + '.png';
+    const tmp = path.join(OUT, '_tmp_p' + p.n + SUFFIX + '.html');
     fs.writeFileSync(tmp, HTML(page(p, uri)));
     const pg = await b.newPage();
     await pg.setViewport({ width: W, height: H, deviceScaleFactor: 1 });
     await pg.goto('file:///' + tmp.split(path.sep).join('/'), { waitUntil: 'networkidle0' });
     await new Promise((r) => setTimeout(r, 700));   // let Rubik land
-    await pg.screenshot({ path: path.join(OUT, 'poster_p' + p.n + '.png') });
+    await pg.screenshot({ path: path.join(OUT, 'poster_p' + p.n + SUFFIX + '.png') });
     await pg.close();
     fs.unlinkSync(tmp);
-    console.log('  poster_p' + p.n + '.png  ' + p.name);
+    console.log('  poster_p' + p.n + SUFFIX + '.png  ' + p.name);
   }
 
   // one PDF with all posters — the page must live on the file:// origin to read the images
   const all = POSTERS
     .filter((p) => fs.existsSync(path.join(SRC, 'p' + p.n + '.png')))
-    .map((p) => page(p, '../src/p' + p.n + '.png'))
+    .map((p) => page(p, '../' + path.basename(SRC) + '/p' + p.n + '.png'))
     .join('\n');
-  const tmpAll = path.join(OUT, '_tmp_all.html');
+  const tmpAll = path.join(OUT, '_tmp_all' + SUFFIX + '.html');
   fs.writeFileSync(tmpAll, HTML(all));
   const pg = await b.newPage();
   await pg.setViewport({ width: W, height: H, deviceScaleFactor: 1 });
   await pg.goto('file:///' + tmpAll.split(path.sep).join('/'), { waitUntil: 'networkidle0' });
   await new Promise((r) => setTimeout(r, 900));
-  await pg.pdf({ path: path.join(OUT, 'Posters_A4.pdf'), width: W + 'px', height: H + 'px',
+  await pg.pdf({ path: path.join(OUT, 'Posters_A4' + SUFFIX + '.pdf'), width: W + 'px', height: H + 'px',
                  printBackground: true, pageRanges: '1-' + POSTERS.length });
   await pg.close();
   fs.unlinkSync(tmpAll);
-  console.log('  Posters_A4.pdf');
+  console.log('  Posters_A4' + SUFFIX + '.pdf');
 
   // contact sheet for a quick look
   const thumbs = POSTERS.map((p) => {
-    const f = path.join(OUT, 'poster_p' + p.n + '.png');
+    const f = path.join(OUT, 'poster_p' + p.n + SUFFIX + '.png');
     return fs.existsSync(f)
-      ? '<img style="width:24%;margin:0.5%" src="poster_p' + p.n + '.png">'
+      ? '<img style="width:24%;margin:0.5%" src="poster_p' + p.n + SUFFIX + '.png">'
       : '';
   }).join('');
-  const tmpCs = path.join(OUT, '_tmp_cs.html');
+  const tmpCs = path.join(OUT, '_tmp_cs' + SUFFIX + '.html');
   fs.writeFileSync(tmpCs, '<body style="margin:0;background:#111;display:flex;flex-wrap:wrap;">' + thumbs);
   const cs = await b.newPage();
   await cs.setViewport({ width: 2200, height: 1560, deviceScaleFactor: 1 });
   await cs.goto('file:///' + tmpCs.split(path.sep).join('/'), { waitUntil: 'networkidle0' });
   await new Promise((r) => setTimeout(r, 600));
-  await cs.screenshot({ path: path.join(OUT, 'contact_sheet.png'), fullPage: true });
+  await cs.screenshot({ path: path.join(OUT, 'contact_sheet' + SUFFIX + '.png'), fullPage: true });
   await cs.close();
   fs.unlinkSync(tmpCs);
-  console.log('  contact_sheet.png');
+  console.log('  contact_sheet' + SUFFIX + '.png');
 
   await b.close();
 })();

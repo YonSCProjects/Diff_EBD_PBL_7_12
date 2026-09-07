@@ -7,10 +7,19 @@ node build_site.js                 # everything -> site/
 node build_site.js --projects 1,2  # only the projects you have taught
 ```
 
-Then drag the `site/` folder onto **Cloudflare Pages** (`pages.cloudflare.com`) or
-**Netlify** (`app.netlify.com/drop`). Both are free, both give you a link like
-`arduino-pbl.pages.dev` to hand to students. No account setup is needed on Netlify Drop;
-Cloudflare wants a free account but gives you a stable name you can reuse on every upload.
+The site lives on **Netlify**: <https://tubular-selkie-f5570d.netlify.app>
+
+To push card changes to it (the Netlify CLI is installed and logged in on this machine):
+
+```bash
+node build_site.js
+netlify deploy --dir site --prod --site e736f266-b32d-42e0-8654-16e2d870a0e6
+```
+
+Netlify only uploads files whose content changed, so an update after a card edit takes
+seconds. Note its "pretty URLs" setting 301-redirects `/p1/CARD.dc.html` to a lowercased
+`/p1/card.dc` — transparent in a browser, but scripts checking the live site must follow
+redirects. Drag-and-drop onto the site's Deploys tab at app.netlify.com still works too.
 
 To preview locally first:
 

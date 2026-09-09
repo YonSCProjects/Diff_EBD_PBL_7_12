@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.9.4" moduleId="pmw3360_module_yon_2026">
+    <author>Yon (drawn for the Arduino PBL program, 2026)</author>
+    <title>PMW3360 optical sensor module</title>
+    <label>P</label>
+    <date>2026-09-07</date>
+    <tags><tag>mouse</tag></tags>
+    <properties><property name="family">PMW3360 optical sensor module</property></properties>
+    <description>PixArt PMW3360DM-T2QU breakout with LM19 lens (lens faces down). 8-pin header: MOT RST GND VCC MI MO SC CS. 3.3V SPI.</description>
+    <views>
+        <iconView><layers image="icon/pmw3360_module_icon.svg"><layer layerId="icon"/></layers></iconView>
+        <schematicView><layers image="schematic/pmw3360_module_schematic.svg"><layer layerId="schematic"/></layers></schematicView>
+        <pcbView><layers image="pcb/pmw3360_module_pcb.svg"><layer layerId="copper0"/></layers></pcbView>
+        <breadboardView><layers image="breadboard/pmw3360_module_breadboard.svg"><layer layerId="breadboard"/></layers></breadboardView>
+    </views>
+    <connectors>
+        <connector id="connector0" type="male" name="MOT">
+            <description>MOT</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector0pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector0pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector0pin"/></pcbView>
+            </views>
+        </connector>
+        <connector id="connector1" type="male" name="RST">
+            <description>RST</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector1pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector1pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector1pin"/></pcbView>
+            </views>
+        </connector>
+        <connector id="connector2" type="male" name="GND">
+            <description>GND</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector2pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector2pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector2pin"/></pcbView>
+            </views>
+        </connector>
+        <connector id="connector3" type="male" name="VCC">
+            <description>VCC</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector3pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector3pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector3pin"/></pcbView>
+            </views>
+        </connector>
+        <connector id="connector4" type="male" name="MI">
+            <description>MI</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector4pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector4pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector4pin"/></pcbView>
+            </views>
+        </connector>
+        <connector id="connector5" type="male" name="MO">
+            <description>MO</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector5pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector5pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector5pin"/></pcbView>
+            </views>
+        </connector>
+        <connector id="connector6" type="male" name="SC">
+            <description>SC</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector6pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector6pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector6pin"/></pcbView>
+            </views>
+        </connector>
+        <connector id="connector7" type="male" name="CS">
+            <description>CS</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector7pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector7pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector7pin"/></pcbView>
+            </views>
+        </connector>
+    </connectors>
+</module>

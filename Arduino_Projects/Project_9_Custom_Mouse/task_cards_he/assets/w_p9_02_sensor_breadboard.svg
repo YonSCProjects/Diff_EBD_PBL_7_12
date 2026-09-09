@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (https://fritzing.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" baseProfile="tiny" height="3.195in" version="1.2" viewBox="-100.0 -100.0 3515.8 3195.3" width="3.516in" x="0in"  xmlns:svg="http://www.w3.org/2000/svg" y="0in">
+<rect x="-100.0" y="-100.0" width="3515.8" height="3195.3" fill="#ffffff"/>
+ 
+ <g partID="10020">
+  <g transform="translate(1181.1,1611.11)">
+   <g transform="matrix(0,1,-1,0,0,0)">
+    <g id="breadboard" >
+     <rect fill="#1d2430" height="1157.48" rx="47.2418" stroke="#000" stroke-width="11.8105" width="842.479" x="11.8105"  y="11.811"/>
+     <circle cx="83.0669" cy="82.677" fill="#e9c46a" r="31.4945" stroke="#8a6f3c" stroke-width="9.84205" />
+     <circle cx="83.0669" cy="82.677" fill="#3a3a3a" r="11.8105" stroke="none" />
+     <rect fill="none" height="47.244" id="connector0pin" stroke="none" width="47.2418" x="59.446"  y="59.055"/>
+     <text fill="#c9ccd1" font-size="49.2102" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="83.0669"  y="192.913">MOT</text>
+     <circle cx="183.062" cy="82.677" fill="#e9c46a" r="31.4945" stroke="#8a6f3c" stroke-width="9.84205" />
+     <circle cx="183.062" cy="82.677" fill="#3a3a3a" r="11.8105" stroke="none" />
+     <rect fill="none" height="47.244" id="connector1pin" stroke="none" width="47.2418" x="159.441"  y="59.055"/>
+     <text fill="#c9ccd1" font-size="49.2102" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="183.062"  y="259.842">RST</text>
+     <circle cx="283.057" cy="82.677" fill="#e9c46a" r="31.4945" stroke="#8a6f3c" stroke-width="9.84205" />
+     <circle cx="283.057" cy="82.677" fill="#3a3a3a" r="11.8105" stroke="none" />
+     <rect fill="none" height="47.244" id="connector2pin" stroke="none" width="47.2418" x="259.436"  y="59.055"/>
+     <text fill="#c9ccd1" font-size="49.2102" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="283.057"  y="192.913">GND</text>
+     <circle cx="383.052" cy="82.677" fill="#e9c46a" r="31.4945" stroke="#8a6f3c" stroke-width="9.84205" />
+     <circle cx="383.052" cy="82.677" fill="#3a3a3a" r="11.8105" stroke="none" />
+     <rect fill="none" height="47.244" id="connector3pin" stroke="none" width="47.2418" x="359.432"  y="59.055"/>
+     <text fill="#c9ccd1" font-size="49.2102" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="383.052"  y="259.842">VCC</text>
+     <circle cx="483.048" cy="82.677" fill="#e9c46a" r="31.4945" stroke="#8a6f3c" stroke-width="9.84205" />
+     <circle cx="483.048" cy="82.677" fill="#3a3a3a" r="11.8105" stroke="none" />
+     <rect fill="none" height="47.244" id="connector4pin" stroke="none" width="47.2418" x="459.427"  y="59.055"/>
+     <text fill="#c9ccd1" font-size="49.2102" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="483.048"  y="192.913">MI</text>
+     <circle cx="583.043" cy="82.677" fill="#e9c46a" r="31.4945" stroke="#8a6f3c" stroke-width="9.84205" />
+     <circle cx="583.043" cy="82.677" fill="#3a3a3a" r="11.8105" stroke="none" />
+     <rect fill="none" height="47.244" id="connector5pin" stroke="none" width="47.2418" x="559.422"  y="59.055"/>
+     <text fill="#c9ccd1" font-size="49.2102" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="583.043"  y="259.842">MO</text>
+     <circle cx="683.038" cy="82.677" fill="#e9c46a" r="31.4945" stroke="#8a6f3c" stroke-width="9.84205" />
+     <circle cx="683.038" cy="82.677" fill="#3a3a3a" r="11.8105" stroke="none" />
+     <rect fill="none" height="47.244" id="connector6pin" stroke="none" width="47.2418" x="659.417"  y="59.055"/>
+     <text fill="#c9ccd1" font-size="49.2102" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="683.038"  y="192.913">SC</text>
+     <circle cx="783.033" cy="82.677" fill="#e9c46a" r="31.4945" stroke="#8a6f3c" stroke-width="9.84205" />
+     <circle cx="783.033" cy="82.677" fill="#3a3a3a" r="11.8105" stroke="none" />
+     <rect fill="none" height="47.244" id="connector7pin" stroke="none" width="47.2418" x="759.412"  y="59.055"/>
+     <text fill="#c9ccd1" font-size="49.2102" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="783.033"  y="259.842">CS</text>
+     <rect fill="#14161a" height="452.755" rx="23.6209" stroke="#000" stroke-width="9.84205" width="354.314" x="255.893"  y="433.07"/>
+     <circle cx="433.05" cy="657.479" fill="#2b2d33" r="129.915" stroke="#4a4d55" stroke-width="11.8105" />
+     <circle cx="433.05" cy="657.479" fill="#3f4450" r="62.9891" stroke="none" />
+     <text fill="#c9ccd1" font-size="78.7364" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="433.05"  y="1055.12">PMW3360</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g partID="10010">
+  <g transform="translate(2292.21,0)">
+   <g id="breadboard" >
+    <rect fill="#14161a" height="2476.38" rx="55.1169" stroke="#000" stroke-width="13.7792" width="999.978" x="11.8108"  y="11.811"/>
+    <rect fill="#2b2d33" height="133.858" stroke="#000" stroke-width="7.87385" width="535.422" x="244.089"  y="43.3071"/>
+    <rect fill="#4a4d55" height="86.6142" stroke="none" width="55.1169" x="275.585"  y="66.9291"/>
+    <rect fill="#4a4d55" height="86.6142" stroke="none" width="55.1169" x="374.008"  y="66.9291"/>
+    <rect fill="#4a4d55" height="86.6142" stroke="none" width="55.1169" x="472.431"  y="66.9291"/>
+    <rect fill="#4a4d55" height="86.6142" stroke="none" width="55.1169" x="570.854"  y="66.9291"/>
+    <rect fill="#4a4d55" height="86.6142" stroke="none" width="55.1169" x="669.277"  y="66.9291"/>
+    <rect fill="#b9bcc2" height="492.126" rx="23.6215" stroke="#6f737a" stroke-width="13.7792" width="535.422" x="244.089"  y="177.165"/>
+    <text fill="#3b3e43" font-size="90.5492" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="511.8"  y="377.953">ESP32-S3</text>
+    <text fill="#3b3e43" font-size="74.8015" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="511.8"  y="496.063">WROOM-1</text>
+    <text fill="#c9ccd1" font-size="74.8015" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="511.8"  y="787.402">DevKitC-1</text>
+    <rect fill="#dfe2e6" height="102.362" rx="15.7477" stroke="#8a8d92" stroke-width="7.87385" width="102.36" x="460.62"  y="1039.37"/>
+    <text fill="#c9ccd1" font-size="55.1169" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="511.8"  y="1244.09">RGB</text>
+    <rect fill="#c8ccd1" height="125.984" rx="19.6846" stroke="#7d8288" stroke-width="11.8108" width="165.351" x="275.585"  y="2110.24"/>
+    <circle cx="358.26" cy="2173.23" fill="#e9ecef" r="35.4323" stroke="#7d8288" stroke-width="9.84231" />
+    <text fill="#c9ccd1" font-size="59.0538" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="358.26"  y="2078.74">RST</text>
+    <rect fill="#c8ccd1" height="125.984" rx="19.6846" stroke="#7d8288" stroke-width="11.8108" width="165.351" x="614.16"  y="2110.24"/>
+    <circle cx="696.835" cy="2173.23" fill="#e9ecef" r="35.4323" stroke="#7d8288" stroke-width="9.84231" />
+    <text fill="#c9ccd1" font-size="59.0538" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="696.835"  y="2078.74">BOOT</text>
+    <rect fill="#b9bcc2" height="141.732" rx="47.2431" stroke="#6f737a" stroke-width="11.8108" width="251.963" x="212.594"  y="2346.46"/>
+    <rect fill="#3a3d42" height="62.9921" rx="31.4954" stroke="none" width="188.972" x="244.089"  y="2385.83"/>
+    <text fill="#c9ccd1" font-size="55.1169" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="338.575"  y="2322.83">USB</text>
+    <rect fill="#b9bcc2" height="141.732" rx="47.2431" stroke="#6f737a" stroke-width="11.8108" width="251.963" x="574.791"  y="2346.46"/>
+    <rect fill="#3a3d42" height="62.9921" rx="31.4954" stroke="none" width="188.972" x="606.286"  y="2385.83"/>
+    <text fill="#c9ccd1" font-size="55.1169" style="font-family:Arial;font-weight:bold;text-anchor:middle" x="700.772"  y="2322.83">COM</text>
+    <circle cx="61.8097" cy="299.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="299.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector0pin" stroke="none" width="47.2431" x="38.1882"  y="275.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="322.835">3V3</text>
+    <circle cx="61.8097" cy="399.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="399.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector1pin" stroke="none" width="47.2431" x="38.1882"  y="375.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="422.835">3V3</text>
+    <circle cx="61.8097" cy="499.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="499.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector2pin" stroke="none" width="47.2431" x="38.1882"  y="475.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="522.835">RST</text>
+    <circle cx="61.8097" cy="599.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="599.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector3pin" stroke="none" width="47.2431" x="38.1882"  y="575.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="622.835">4</text>
+    <circle cx="61.8097" cy="699.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="699.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector4pin" stroke="none" width="47.2431" x="38.1882"  y="675.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="722.835">5</text>
+    <circle cx="61.8097" cy="799.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="799.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector5pin" stroke="none" width="47.2431" x="38.1882"  y="775.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="822.835">6</text>
+    <circle cx="61.8097" cy="899.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="899.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector6pin" stroke="none" width="47.2431" x="38.1882"  y="875.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="922.835">7</text>
+    <circle cx="61.8097" cy="999.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="999.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector7pin" stroke="none" width="47.2431" x="38.1882"  y="975.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1022.83">15</text>
+    <circle cx="61.8097" cy="1099.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1099.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector8pin" stroke="none" width="47.2431" x="38.1882"  y="1075.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1122.83">16</text>
+    <circle cx="61.8097" cy="1199.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1199.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector9pin" stroke="none" width="47.2431" x="38.1882"  y="1175.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1222.83">17</text>
+    <circle cx="61.8097" cy="1299.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1299.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector10pin" stroke="none" width="47.2431" x="38.1882"  y="1275.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1322.83">18</text>
+    <circle cx="61.8097" cy="1399.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1399.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector11pin" stroke="none" width="47.2431" x="38.1882"  y="1375.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1422.83">8</text>
+    <circle cx="61.8097" cy="1499.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1499.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector12pin" stroke="none" width="47.2431" x="38.1882"  y="1475.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1522.83">3</text>
+    <circle cx="61.8097" cy="1599.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1599.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector13pin" stroke="none" width="47.2431" x="38.1882"  y="1575.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1622.83">46</text>
+    <circle cx="61.8097" cy="1699.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1699.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector14pin" stroke="none" width="47.2431" x="38.1882"  y="1675.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1722.83">9</text>
+    <circle cx="61.8097" cy="1799.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1799.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector15pin" stroke="none" width="47.2431" x="38.1882"  y="1775.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1822.83">10</text>
+    <circle cx="61.8097" cy="1899.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1899.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector16pin" stroke="none" width="47.2431" x="38.1882"  y="1875.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="1922.83">11</text>
+    <circle cx="61.8097" cy="1999.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="1999.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector17pin" stroke="none" width="47.2431" x="38.1882"  y="1975.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="2022.83">12</text>
+    <circle cx="61.8097" cy="2099.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="2099.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector18pin" stroke="none" width="47.2431" x="38.1882"  y="2075.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="2122.83">13</text>
+    <circle cx="61.8097" cy="2199.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="2199.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector19pin" stroke="none" width="47.2431" x="38.1882"  y="2175.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="2222.83">14</text>
+    <circle cx="61.8097" cy="2299.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="2299.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector20pin" stroke="none" width="47.2431" x="38.1882"  y="2275.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="2322.83">5V</text>
+    <circle cx="61.8097" cy="2399.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="61.8097" cy="2399.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector21pin" stroke="none" width="47.2431" x="38.1882"  y="2375.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:start" x="125.982"  y="2422.83">G</text>
+    <circle cx="961.79" cy="299.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="299.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector22pin" stroke="none" width="47.2431" x="938.169"  y="275.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="322.835">G</text>
+    <circle cx="961.79" cy="399.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="399.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector23pin" stroke="none" width="47.2431" x="938.169"  y="375.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="422.835">TX</text>
+    <circle cx="961.79" cy="499.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="499.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector24pin" stroke="none" width="47.2431" x="938.169"  y="475.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="522.835">RX</text>
+    <circle cx="961.79" cy="599.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="599.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector25pin" stroke="none" width="47.2431" x="938.169"  y="575.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="622.835">1</text>
+    <circle cx="961.79" cy="699.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="699.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector26pin" stroke="none" width="47.2431" x="938.169"  y="675.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="722.835">2</text>
+    <circle cx="961.79" cy="799.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="799.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector27pin" stroke="none" width="47.2431" x="938.169"  y="775.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="822.835">42</text>
+    <circle cx="961.79" cy="899.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="899.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector28pin" stroke="none" width="47.2431" x="938.169"  y="875.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="922.835">41</text>
+    <circle cx="961.79" cy="999.213" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="999.213" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector29pin" stroke="none" width="47.2431" x="938.169"  y="975.591"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1022.83">40</text>
+    <circle cx="961.79" cy="1099.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1099.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector30pin" stroke="none" width="47.2431" x="938.169"  y="1075.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1122.83">39</text>
+    <circle cx="961.79" cy="1199.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1199.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector31pin" stroke="none" width="47.2431" x="938.169"  y="1175.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1222.83">38</text>
+    <circle cx="961.79" cy="1299.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1299.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector32pin" stroke="none" width="47.2431" x="938.169"  y="1275.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1322.83">37</text>
+    <circle cx="961.79" cy="1399.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1399.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector33pin" stroke="none" width="47.2431" x="938.169"  y="1375.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1422.83">36</text>
+    <circle cx="961.79" cy="1499.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1499.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector34pin" stroke="none" width="47.2431" x="938.169"  y="1475.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1522.83">35</text>
+    <circle cx="961.79" cy="1599.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1599.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector35pin" stroke="none" width="47.2431" x="938.169"  y="1575.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1622.83">0</text>
+    <circle cx="961.79" cy="1699.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1699.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector36pin" stroke="none" width="47.2431" x="938.169"  y="1675.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1722.83">45</text>
+    <circle cx="961.79" cy="1799.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1799.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector37pin" stroke="none" width="47.2431" x="938.169"  y="1775.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1822.83">48</text>
+    <circle cx="961.79" cy="1899.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1899.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector38pin" stroke="none" width="47.2431" x="938.169"  y="1875.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="1922.83">47</text>
+    <circle cx="961.79" cy="1999.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="1999.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector39pin" stroke="none" width="47.2431" x="938.169"  y="1975.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="2022.83">21</text>
+    <circle cx="961.79" cy="2099.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="2099.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector40pin" stroke="none" width="47.2431" x="938.169"  y="2075.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="2122.83">20</text>
+    <circle cx="961.79" cy="2199.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="2199.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector41pin" stroke="none" width="47.2431" x="938.169"  y="2175.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="2222.83">19</text>
+    <circle cx="961.79" cy="2299.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="2299.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector42pin" stroke="none" width="47.2431" x="938.169"  y="2275.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="2322.83">G</text>
+    <circle cx="961.79" cy="2399.21" fill="#e9c46a" r="33.4638" stroke="#8a6f3c" stroke-width="9.84231" />
+    <circle cx="961.79" cy="2399.21" fill="#3a3a3a" r="12.5982" stroke="none" />
+    <rect fill="none" height="47.2441" id="connector43pin" stroke="none" width="47.2431" x="938.169"  y="2375.59"/>
+    <text fill="#d8d8d8" font-size="62.9908" style="font-family:Arial;font-weight:bold;text-anchor:end" x="897.618"  y="2422.83">G</text>
+   </g>
+  </g>
+ </g>
+<g id="composited-shapes">
+
+</g>
+<g id="composited-wires">
+<polyline points="1098.4,1994.2 1038.4,1994.2 1038.4,299.2 2354.0,299.2" fill="none" stroke="#222" stroke-opacity="0.30" stroke-linecap="round" stroke-linejoin="round" stroke-width="46"/><polyline points="1098.4,1994.2 1038.4,1994.2 1038.4,299.2 2354.0,299.2" fill="none" stroke="#cc1414" stroke-linecap="round" stroke-linejoin="round" stroke-width="34"/><polyline points="1098.4,1994.2 1038.4,1994.2 1038.4,299.2 2354.0,299.2" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.2"/><circle cx="1098.42" cy="1994.16" r="23.799999999999997" fill="#cc1414" stroke="#222" stroke-opacity="0.5" stroke-width="4"/><circle cx="2354.02" cy="299.21" r="23.799999999999997" fill="#cc1414" stroke="#222" stroke-opacity="0.5" stroke-width="4"/>
+<polyline points="1098.4,1894.2 1068.4,1894.2 1068.4,2399.2 2354.0,2399.2" fill="none" stroke="#222" stroke-opacity="0.30" stroke-linecap="round" stroke-linejoin="round" stroke-width="46"/><polyline points="1098.4,1894.2 1068.4,1894.2 1068.4,2399.2 2354.0,2399.2" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="34"/><polyline points="1098.4,1894.2 1068.4,1894.2 1068.4,2399.2 2354.0,2399.2" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.2"/><circle cx="1098.42" cy="1894.17" r="23.799999999999997" fill="#000000" stroke="#222" stroke-opacity="0.5" stroke-width="4"/><circle cx="2354.02" cy="2399.21" r="23.799999999999997" fill="#000000" stroke="#222" stroke-opacity="0.5" stroke-width="4"/>
+<polyline points="1098.4,2194.2 1138.4,2194.2 1138.4,1899.2 2354.0,1899.2" fill="none" stroke="#222" stroke-opacity="0.30" stroke-linecap="round" stroke-linejoin="round" stroke-width="42"/><polyline points="1098.4,2194.2 1138.4,2194.2 1138.4,1899.2 2354.0,1899.2" fill="none" stroke="#f28a00" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/><polyline points="1098.4,2194.2 1138.4,2194.2 1138.4,1899.2 2354.0,1899.2" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/><circle cx="1098.42" cy="2194.15" r="21" fill="#f28a00" stroke="#222" stroke-opacity="0.5" stroke-width="4"/><circle cx="2354.02" cy="1899.21" r="21" fill="#f28a00" stroke="#222" stroke-opacity="0.5" stroke-width="4"/>
+<polyline points="1098.4,2094.2 1168.4,2094.2 1168.4,2099.2 2354.0,2099.2" fill="none" stroke="#222" stroke-opacity="0.30" stroke-linecap="round" stroke-linejoin="round" stroke-width="42"/><polyline points="1098.4,2094.2 1168.4,2094.2 1168.4,2099.2 2354.0,2099.2" fill="none" stroke="#25cc35" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/><polyline points="1098.4,2094.2 1168.4,2094.2 1168.4,2099.2 2354.0,2099.2" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/><circle cx="1098.42" cy="2094.16" r="21" fill="#25cc35" stroke="#222" stroke-opacity="0.5" stroke-width="4"/><circle cx="2354.02" cy="2099.21" r="21" fill="#25cc35" stroke="#222" stroke-opacity="0.5" stroke-width="4"/>
+<polyline points="1098.4,2294.2 1153.4,2294.2 1153.4,1999.2 2354.0,1999.2" fill="none" stroke="#222" stroke-opacity="0.30" stroke-linecap="round" stroke-linejoin="round" stroke-width="42"/><polyline points="1098.4,2294.2 1153.4,2294.2 1153.4,1999.2 2354.0,1999.2" fill="none" stroke="#2158c7" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/><polyline points="1098.4,2294.2 1153.4,2294.2 1153.4,1999.2 2354.0,1999.2" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/><circle cx="1098.42" cy="2294.15" r="21" fill="#2158c7" stroke="#222" stroke-opacity="0.5" stroke-width="4"/><circle cx="2354.02" cy="1999.21" r="21" fill="#2158c7" stroke="#222" stroke-opacity="0.5" stroke-width="4"/>
+<polyline points="1098.4,2394.1 1123.4,2394.1 1123.4,1799.2 2354.0,1799.2" fill="none" stroke="#222" stroke-opacity="0.30" stroke-linecap="round" stroke-linejoin="round" stroke-width="42"/><polyline points="1098.4,2394.1 1123.4,2394.1 1123.4,1799.2 2354.0,1799.2" fill="none" stroke="#8a2bc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/><polyline points="1098.4,2394.1 1123.4,2394.1 1123.4,1799.2 2354.0,1799.2" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/><circle cx="1098.42" cy="2394.14" r="21" fill="#8a2bc9" stroke="#222" stroke-opacity="0.5" stroke-width="4"/><circle cx="2354.02" cy="1799.21" r="21" fill="#8a2bc9" stroke="#222" stroke-opacity="0.5" stroke-width="4"/>
+<polyline points="1098.4,1694.2 1183.4,1694.2 1183.4,2199.2 2354.0,2199.2" fill="none" stroke="#222" stroke-opacity="0.30" stroke-linecap="round" stroke-linejoin="round" stroke-width="42"/><polyline points="1098.4,1694.2 1183.4,1694.2 1183.4,2199.2 2354.0,2199.2" fill="none" stroke="#0e8a8a" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/><polyline points="1098.4,1694.2 1183.4,1694.2 1183.4,2199.2 2354.0,2199.2" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/><circle cx="1098.42" cy="1694.18" r="21" fill="#0e8a8a" stroke="#222" stroke-opacity="0.5" stroke-width="4"/><circle cx="2354.02" cy="2199.21" r="21" fill="#0e8a8a" stroke="#222" stroke-opacity="0.5" stroke-width="4"/>
+</g>
+<g id="composited-labels">
+<rect x="1993.26" y="190.10999999999999" width="281.52" height="78.19999999999999" rx="16.099999999999998" fill="#ffffff" stroke="#333" stroke-width="8" opacity="0.96"/><text x="2134.02" y="252.20999999999998" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#222" text-anchor="middle">VCC - 3V3</text>
+<rect x="2073.3" y="2450.11" width="121.44" height="78.19999999999999" rx="16.099999999999998" fill="#ffffff" stroke="#333" stroke-width="8" opacity="0.96"/><text x="2134.02" y="2512.21" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#222" text-anchor="middle">GND</text>
+<rect x="1939.94" y="1700.1100000000001" width="228.16" height="78.19999999999999" rx="16.099999999999998" fill="#ffffff" stroke="#333" stroke-width="8" opacity="0.96"/><text x="2054.02" y="1762.21" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#222" text-anchor="middle">CS - 10</text>
+<rect x="1819.94" y="1800.1100000000001" width="228.16" height="78.19999999999999" rx="16.099999999999998" fill="#ffffff" stroke="#333" stroke-width="8" opacity="0.96"/><text x="1934.02" y="1862.21" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#222" text-anchor="middle">MO - 11</text>
+<rect x="1699.94" y="1900.1100000000001" width="228.16" height="78.19999999999999" rx="16.099999999999998" fill="#ffffff" stroke="#333" stroke-width="8" opacity="0.96"/><text x="1814.02" y="1962.21" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#222" text-anchor="middle">SC - 12</text>
+<rect x="1579.94" y="2000.1100000000001" width="228.16" height="78.19999999999999" rx="16.099999999999998" fill="#ffffff" stroke="#333" stroke-width="8" opacity="0.96"/><text x="1694.02" y="2062.21" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#222" text-anchor="middle">MI - 13</text>
+<rect x="1446.6" y="2100.11" width="254.84" height="78.19999999999999" rx="16.099999999999998" fill="#ffffff" stroke="#333" stroke-width="8" opacity="0.96"/><text x="1574.02" y="2162.21" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#222" text-anchor="middle">MOT - 14</text>
+<rect x="182.98999999999995" y="2526.3" width="815.12" height="78.19999999999999" rx="16.099999999999998" fill="#ffffff" stroke="#333" stroke-width="8" opacity="0.96"/><text x="590.55" y="2588.4" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#222" text-anchor="middle">PMW3360 - the eye (lens down)</text>
+<rect x="2676.59" y="2589.09" width="254.84" height="78.19999999999999" rx="16.099999999999998" fill="#ffffff" stroke="#333" stroke-width="8" opacity="0.96"/><text x="2804.01" y="2651.19" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="bold" fill="#222" text-anchor="middle">ESP32-S3</text>
+</g>
+</svg>

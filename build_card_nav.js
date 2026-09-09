@@ -25,6 +25,7 @@ const PROJECTS = [
   'Project_6_ESP32_WiFi_Controller',
   'Project_7_Camera_Explorer',
   'Project_8_Tiny_Quadcopter',
+  'Project_9_Custom_Mouse',
 ];
 
 // Branch points: a card whose NEXT depends on the pattern/mode the student

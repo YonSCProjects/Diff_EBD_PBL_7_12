@@ -22,9 +22,9 @@ const { resolveCardFile, renderCardPdf, snapshotCardHtml, DC_FONTS_LINK, scopeCs
 // `node build_cards_only.js he` invocation still builds Project 1.
 const args = process.argv.slice(2);
 const lang = args.find((a) => ['en', 'he'].includes(a));
-const projectKey = args.find((a) => ['1', '2', '3', '4', '5', '6', '7', '8'].includes(a)) || '1';
+const projectKey = args.find((a) => ['1', '2', '3', '4', '5', '6', '7', '8', '9'].includes(a)) || '1';
 if (!lang) {
-  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3|4|5|6|7|8]');
+  console.error('Usage: node build_cards_only.js <en|he> [project: 1|2|3|4|5|6|7|8|9]');
   process.exit(1);
 }
 
@@ -83,6 +83,12 @@ const PROJECTS = {
     outBase: 'Project_8_Cards',
     titleHe: 'פרויקט 8 — רחפן זעיר: חוברת כרטיסיות (משימה)',
     titleEn: 'Project 8 — Tiny ESP32 Quadcopter: Cards Bundle (Task)',
+  },
+  '9': {
+    dir: 'Project_9_Custom_Mouse',
+    outBase: 'Project_9_Cards',
+    titleHe: 'פרויקט 9 — עכבר אישי: חוברת כרטיסיות (עזר ומשימה)',
+    titleEn: 'Project 9 — Custom Mouse: Cards Bundle (Reference + Task)',
   },
 };
 
@@ -259,6 +265,28 @@ const CARD_STEMS = {
     'T:T2_M11_tethered_hover_tuning',
     'T:T2_M12_flight_sequence',
     'T:T2_M13_signature_flight',
+    'T:T3_project_planner',
+  ],
+  '9': [
+    'R:R1_battery_soldering_safety',
+    'T:T1_M1_meet_parts_contract',
+    'T:T1_M2_board_alive',
+    'T:T1_M3_first_click',
+    'T:T1_M4_wire_the_eye',
+    'T:T1_M5_cursor_moves',
+    'T:T1_M6_scroll_wheel',
+    'T:T1_M7_speed_roller',
+    'T:T1_M8_side_buttons_layer',
+    'T:T1_M9_solder_power_board',
+    'T:T1_M10_battery_day',
+    'T:T1_M11_bluetooth',
+    'T:T1_M12_mattress_test_celebrate',
+    'T:T2_M1_startup',
+    'T:T2_M2_your_speeds',
+    'T:T2_M3_your_buttons',
+    'T:T2_M4_bed_mode',
+    'T:T2_M5_shell_mockup',
+    'T:T2_M6_signature_demo',
     'T:T3_project_planner',
   ],
 };

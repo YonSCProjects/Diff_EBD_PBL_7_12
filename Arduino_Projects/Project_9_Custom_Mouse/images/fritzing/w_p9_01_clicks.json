@@ -1,0 +1,26 @@
+{
+  "name": "w_p9_01_clicks",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    { "id": "esp", "part": "esp32_s3_devkitc", "x": 40, "y": 20, "title": "ESP32-S3 DevKitC-1" },
+    { "id": "swl", "part": "gm80_switch", "x": 250, "y": 55, "title": "Left click" },
+    { "id": "swr", "part": "gm80_switch", "x": 315, "y": 150, "title": "Right click" }
+  ],
+  "shapes": [],
+  "wires": [
+    { "from": "esp.1", "to": "swl.1", "color": "#f28a00", "route": "hv", "out": ["right", 120] },
+    { "from": "esp.2", "to": "swr.1", "color": "#25cc35", "route": "hv", "out": ["right", 180] },
+    { "from": "swl.2", "to": "esp.G.3", "color": "#000000", "route": "vh", "out": ["down", 60] },
+    { "from": "swr.2", "to": "esp.G.4", "color": "#000000", "route": "vh", "out": ["down", 80] }
+  ],
+  "labels": [
+    { "ref": "swl.1", "dx": -430, "dy": -110, "text": "GPIO 1", "size": 48 },
+    { "ref": "swr.1", "dx": -430, "dy": -110, "text": "GPIO 2", "size": 48 },
+    { "ref": "esp.G.4", "dx": 130, "dy": 150, "text": "GND", "size": 48 },
+    { "ref": "swl.@t", "dy": -90, "dx": 0, "text": "L", "size": 48 },
+    { "ref": "swr.@t", "dy": -90, "dx": 0, "text": "R", "size": 48 },
+    { "ref": "esp.@b", "dy": 140, "dx": 0, "text": "ESP32-S3", "size": 48 }
+  ],
+  "_note": "Label sizes authored for ~8px on a 640px card (size*640/viewBoxWidth); adjust after first build prints the viewBox."
+}

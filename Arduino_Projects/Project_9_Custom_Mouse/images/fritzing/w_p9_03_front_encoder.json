@@ -1,0 +1,25 @@
+{
+  "name": "w_p9_03_front_encoder",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    { "id": "esp", "part": "esp32_s3_devkitc", "x": 40, "y": 20, "title": "ESP32-S3 DevKitC-1" },
+    { "id": "enc", "part": "kailh_enc_11", "x": -70, "y": 110, "title": "Front 11 mm encoder" }
+  ],
+  "shapes": [],
+  "wires": [
+    { "from": "enc.A", "to": "esp.4", "color": "#f28a00", "route": "vh", "out": ["left", 45] },
+    { "from": "enc.B", "to": "esp.5", "color": "#25cc35", "route": "vh", "out": ["left", 75] },
+    { "from": "enc.PUSH", "to": "esp.6", "color": "#8a2bc9", "route": "vh", "out": ["right", 270] },
+    { "from": "enc.GND", "to": "esp.G", "color": "#000000", "route": "vh", "out": ["left", 105] }
+  ],
+  "labels": [
+    { "ref": "esp.4", "dx": -420, "dy": -60, "text": "A - 4", "size": 34 },
+    { "ref": "esp.5", "dx": -260, "dy": -60, "text": "B - 5", "size": 34 },
+    { "ref": "esp.6", "dx": -130, "dy": -60, "text": "PUSH - 6", "size": 34 },
+    { "ref": "esp.G", "dx": -260, "dy": -60, "text": "GND", "size": 34 },
+    { "ref": "enc.@b", "dy": 90, "dx": 0, "text": "11 mm - scroll", "size": 34 },
+    { "ref": "esp.@b", "dy": 140, "dx": 0, "text": "ESP32-S3", "size": 34 }
+  ],
+  "_note": "Front scroll encoder: A=4 B=5 PUSH=6 GND common."
+}

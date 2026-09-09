@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0.7874in" height="0.2756in" viewBox="0 0 20.0 7.0">
+<g id="icon">
+<circle cx="1.00" cy="4.00" r="0.75" style="fill:#e9c46a;stroke:#8a6f3c;stroke-width:0.25"/><circle cx="1.00" cy="4.00" r="0.29" style="fill:#3a3a3a;stroke:none"/>
+<line x1="1.4" y1="4.0" x2="3.4" y2="4.0" style="stroke:#b5b5b5;stroke-width:0.6"/>
+<rect x="3.4" y="2.90" width="4.6" height="2.2" rx="0.9" style="fill:#e8d2a8;stroke:#8a6f3c;stroke-width:0.25"/>
+<rect x="4.20" y="2.90" width="0.55" height="2.2" style="fill:#f28a00;stroke:none"/>
+<rect x="5.30" y="2.90" width="0.55" height="2.2" style="fill:#f28a00;stroke:none"/>
+<rect x="6.40" y="2.90" width="0.55" height="2.2" style="fill:#7b3f00;stroke:none"/>
+<text x="5.70" y="1.90" style="font-family:Arial;font-size:1.5px;font-weight:bold;fill:#5a4a2a;text-anchor:middle">330</text>
+<line x1="8.0" y1="4.0" x2="10.6" y2="4.0" style="stroke:#b5b5b5;stroke-width:0.6"/>
+<circle cx="13.2" cy="4.0" r="2.6" style="fill:#cc2222;stroke:#7a1414;stroke-width:0.35"/>
+<circle cx="12.4" cy="3.20" r="0.7" style="fill:#e86a6a;stroke:none"/>
+<line x1="15.8" y1="4.0" x2="18.2" y2="4.0" style="stroke:#b5b5b5;stroke-width:0.6"/>
+<circle cx="19.00" cy="4.00" r="0.75" style="fill:#e9c46a;stroke:#8a6f3c;stroke-width:0.25"/><circle cx="19.00" cy="4.00" r="0.29" style="fill:#3a3a3a;stroke:none"/>
+<rect id="connector0pin" x="0.40" y="3.40" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+<rect id="connector1pin" x="18.40" y="3.40" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+</g></svg>

@@ -1,0 +1,38 @@
+{
+  "name": "w_p9_04_speed_roller",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    { "id": "esp", "part": "esp32_s3_devkitc", "x": 40, "y": 20, "title": "ESP32-S3 DevKitC-1" },
+    { "id": "enc", "part": "kailh_enc_9", "x": -65, "y": 150, "title": "Rear 9 mm encoder" },
+    { "id": "led3", "part": "led_330", "x": 215, "y": 60, "title": "LED level 3" },
+    { "id": "led2", "part": "led_330", "x": 215, "y": 100, "title": "LED level 2" },
+    { "id": "led1", "part": "led_330", "x": 215, "y": 140, "title": "LED level 1" }
+  ],
+  "shapes": [],
+  "wires": [
+    { "from": "enc.A", "to": "esp.15", "color": "#f28a00", "route": "vh", "out": ["left", 45] },
+    { "from": "enc.B", "to": "esp.16", "color": "#25cc35", "route": "vh", "out": ["left", 75] },
+    { "from": "enc.PUSH", "to": "esp.17", "color": "#8a2bc9", "route": "vh", "out": ["right", 280] },
+    { "from": "enc.GND", "to": "esp.G", "color": "#000000", "route": "vh", "out": ["left", 105] },
+    { "from": "esp.41", "to": "led3.S", "color": "#f2c200", "route": "vh", "out": ["right", 25] },
+    { "from": "esp.40", "to": "led2.S", "color": "#f2c200", "route": "vh", "out": ["right", 55] },
+    { "from": "esp.39", "to": "led1.S", "color": "#f2c200", "route": "vh", "out": ["right", 85] },
+    { "from": "led3.GND", "to": "esp.G.2", "color": "#000000", "route": "vh", "out": ["right", 30] },
+    { "from": "led2.GND", "to": "esp.G.3", "color": "#000000", "route": "vh", "out": ["right", 60] },
+    { "from": "led1.GND", "to": "esp.G.4", "color": "#000000", "route": "vh", "out": ["right", 90] }
+  ],
+  "labels": [
+    { "ref": "esp.15", "dx": -420, "dy": -60, "text": "A - 15", "size": 62 },
+    { "ref": "esp.16", "dx": -260, "dy": -60, "text": "B - 16", "size": 62 },
+    { "ref": "esp.17", "dx": -130, "dy": -60, "text": "PUSH - 17", "size": 62 },
+    { "ref": "esp.G", "dx": -260, "dy": -60, "text": "GND", "size": 62 },
+    { "ref": "led3.S", "dx": -160, "dy": -60, "text": "41", "size": 62 },
+    { "ref": "led2.S", "dx": -160, "dy": -60, "text": "40", "size": 62 },
+    { "ref": "led1.S", "dx": -160, "dy": -60, "text": "39", "size": 62 },
+    { "ref": "led1.@b", "dy": 70, "dx": 0, "text": "LED + 330", "size": 62 },
+    { "ref": "enc.@b", "dy": 90, "dx": 0, "text": "9 mm - speed", "size": 62 },
+    { "ref": "esp.@b", "dy": 140, "dx": 0, "text": "ESP32-S3", "size": 62 }
+  ],
+  "_note": "Rear speed roller A=15 B=16 PUSH=17 + three LED units on 39/40/41."
+}

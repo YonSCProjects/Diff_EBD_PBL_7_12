@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./card_nav.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @media print {
+    .tc-page { background: #fff !important; padding: 0 !important; }
+    .tc-card { box-shadow: none !important; border: 1px solid #e6e2d8 !important; }
+  }
+</style>
+</helmet>
+
+<div class="tc-page" dir="rtl" style="font-family:'Rubik',sans-serif; background:oklch(0.972 0.008 85); min-height:100vh; padding:40px 20px; display:flex; justify-content:center; color:oklch(0.28 0.012 260); -webkit-font-smoothing:antialiased;">
+  <div class="tc-card" style="width:100%; max-width:760px; background:#fff; border-radius:22px; box-shadow:0 1px 2px rgba(40,35,20,0.04), 0 18px 50px -28px rgba(40,35,20,0.30); overflow:hidden;">
+
+    <div style="position:relative; background:oklch(0.45 0.11 248); color:#fff; padding:30px 34px 26px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div style="display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.22); padding:7px 14px; border-radius:999px; font-size:13.5px; font-weight:600;">
+          <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.78 0.16 90); display:inline-block;"></span>
+          פרויקט 9 · עכבר אישי
+        </div>
+        <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.78);">מסלול 1 · כרטיסייה V1</div>
+      </div>
+
+      <div style="margin-top:16px; font-size:12.5px; font-weight:600; color:rgba(255,255,255,0.65);">פרויקט #9 — עכבר אישי: שלב 4 מתוך 12</div>
+      <h1 style="margin:10px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מחווטים את העין</h1>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;"><strong style="color:#fff;">שבעה חוטים מחברים את העין של העכבר — חיישן ה-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">PMW3360</span> — אל לוח ה-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">ESP32-S3</span>.</strong></p>
+
+      <div style="margin-top:22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
+          <span>שלב 4 מתוך 12</span><span>33%</span>
+        </div>
+        <div style="height:8px; border-radius:999px; background:rgba(255,255,255,0.18); overflow:hidden;">
+          <div style="height:100%; width:33.3%; border-radius:999px; background:oklch(0.78 0.16 90);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:30px 34px 34px;">
+
+      <!-- WARNING -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">לא נוגעים בעדשה — אף פעם</div>
+          <p style="margin:0 0 7px; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">העדשה השקופה שמתחת לחיישן היא העין של העכבר. <strong>טביעת אצבע אחת מטשטשת לה את הראייה</strong> — מחזיקים את המודול תמיד מהצדדים.</p>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">כבל ה-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">USB</span> מנותק כל זמן שמחווטים. בכרטיסייה הזו לא מעלים שום קוד — קודם חיווט מושלם ורק אחר כך חשמל.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">תרשים החיווט</h2>
+      </div>
+
+      <div style="border:1px solid oklch(0.93 0.006 85); border-radius:14px; overflow:hidden; background:oklch(0.985 0.004 85); margin-bottom:18px;">
+        <div dir="ltr" style="padding:22px 18px 14px; display:flex; justify-content:center;">
+          <img src="./assets/w_p9_02_sensor_breadboard.svg" alt="תרשים חיווט: מודול חיישן ה-PMW3360 יושב בקצה הברדבורד ושבעה חוטים מחברים אותו אל לוח ה-ESP32-S3 — VCC אל 3V3, GND אל GND, MOSI אל GPIO 11, MISO אל GPIO 13, SCK אל GPIO 12, CS אל GPIO 10 ו-MOTION אל GPIO 14" style="width:640px; max-width:100%; height:auto;" />
+        </div>
+        <div style="padding:11px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13.5px; line-height:1.6; color:oklch(0.5 0.012 260);"><strong>שבעת חוטי החיישן:</strong> שני חוטי חשמל (<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">VCC</span> אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">3V3</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GND</span> אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GND</span>) וחמישה חוטי אות. הסוללה עוד אצל המורה — היא נכנסת לתמונה רק בשלב 10.</div>
+      </div>
+
+      <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:30px;">
+        <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
+          <span style="font-size:13px;">👁️</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Sensor Map — 7 wires</span>
+        </div>
+        <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.82 0.13 90);">VCC     --&gt;  3V3
+GND     --&gt;  GND
+
+</span><span style="color:oklch(0.88 0.01 260);">MOSI    --&gt;  GPIO 11
+MISO    --&gt;  GPIO 13
+SCK     --&gt;  GPIO 12
+CS      --&gt;  GPIO 10
+MOTION  --&gt;  GPIO 14
+
+</span><span style="color:oklch(0.7 0.01 260);">MOSI is 11, MISO is 13 — not the same wire!</span></pre>
+      </div>
+
+      <!-- STEPS -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 16px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">📋</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">מה עושים</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:26px;">
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מציבים את מודול החיישן בקצה הברדבורד, <strong>העדשה כלפי מטה ומעבר לקצה</strong> — כך העין רואה את השולחן. מחזיקים מהצדדים בלבד ולא נוגעים בעדשה.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.04 35); border:1px solid oklch(0.85 0.07 35); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.08 35); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.58 0.16 35); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים <strong>שבעה חוטים, חוט אחד בכל פעם</strong> — בדיוק לפי התרשים שלמעלה ולפי ספירת החוטים שבהמשך הכרטיסייה. בוחרים חוטים קצרים ומסדרים אותם שטוח וצמוד ללוח — זה אוטובוס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">SPI</span> מהיר וחוטים ארוכים מבלבלים אותו.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">עוקבים באצבע אחרי כל חוט מול האיור, מהחיישן עד הפין בלוח, חוט אחרי חוט — ועל כל חוט שנבדק מסמנים ✓ בספירת החוטים שבהמשך הכרטיסייה. שבעה חוטים, שבעה סימונים.</p>
+        </div>
+
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.96 0.03 300); border:1px solid oklch(0.85 0.06 300); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.06 300); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.5 0.12 300); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">קוראים למורה לבדוק את החיווט. <strong>שום דבר לא מקבל חשמל</strong> — לא כבל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">USB</span> ולא סוללה — לפני שהמורה עבר על שבעת החוטים וחתם.</p>
+        </div>
+
+      </div>
+
+      <!-- WIRE CHECKLIST -->
+      <div style="display:flex; align-items:center; gap:12px; margin:0 0 8px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔢</span>
+        <h2 style="margin:0; font-size:18px; font-weight:700; color:oklch(0.32 0.02 260);">ספירת החוטים — 7 חוטים</h2>
+      </div>
+      <p style="margin:0 0 16px; font-size:14.5px; line-height:1.5; color:oklch(0.55 0.012 260);">עוברים חוט-חוט, עוקבים באצבע מהחיישן עד הפין בלוח ומסמנים ✓. בסוף כל שבע המשבצות מסומנות.</p>
+
+      <div style="border:1px solid oklch(0.92 0.006 85); border-radius:14px; background:oklch(0.985 0.004 85); padding:16px 18px; margin-bottom:16px; display:flex; flex-direction:column; gap:15px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:9px; font-size:14px; font-weight:700; color:oklch(0.45 0.11 248);">חוטי החיישן<span dir="ltr" style="background:oklch(0.94 0.03 248); border-radius:999px; padding:2px 9px; font-family:'JetBrains Mono',monospace; font-size:12.5px;">7</span></div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span onClick="{{ toggle5 }}" style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:999px; padding:6px 13px; font-size:14px; line-height:1.4; color:oklch(0.4 0.012 260); cursor:pointer;" style-hover="border-color:oklch(0.62 0.14 150)"><span style="position:relative; flex:none; width:20px; height:20px; border-radius:6px; border:2px solid oklch(0.82 0.02 150); background:#fff; display:flex; align-items:center; justify-content:center;"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:6px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">✓</span></sc-if></span><span><span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">VCC</span> בחיישן אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">3V3</span> בלוח</span></span>
+          <span onClick="{{ toggle6 }}" style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:999px; padding:6px 13px; font-size:14px; line-height:1.4; color:oklch(0.4 0.012 260); cursor:pointer;" style-hover="border-color:oklch(0.62 0.14 150)"><span style="position:relative; flex:none; width:20px; height:20px; border-radius:6px; border:2px solid oklch(0.82 0.02 150); background:#fff; display:flex; align-items:center; justify-content:center;"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:6px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">✓</span></sc-if></span><span><span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GND</span> בחיישן אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GND</span> בלוח</span></span>
+          <span onClick="{{ toggle7 }}" style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:999px; padding:6px 13px; font-size:14px; line-height:1.4; color:oklch(0.4 0.012 260); cursor:pointer;" style-hover="border-color:oklch(0.62 0.14 150)"><span style="position:relative; flex:none; width:20px; height:20px; border-radius:6px; border:2px solid oklch(0.82 0.02 150); background:#fff; display:flex; align-items:center; justify-content:center;"><sc-if value="{{ check7 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:6px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">✓</span></sc-if></span><span><span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">MOSI</span> אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GPIO 11</span></span></span>
+          <span onClick="{{ toggle8 }}" style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:999px; padding:6px 13px; font-size:14px; line-height:1.4; color:oklch(0.4 0.012 260); cursor:pointer;" style-hover="border-color:oklch(0.62 0.14 150)"><span style="position:relative; flex:none; width:20px; height:20px; border-radius:6px; border:2px solid oklch(0.82 0.02 150); background:#fff; display:flex; align-items:center; justify-content:center;"><sc-if value="{{ check8 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:6px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">✓</span></sc-if></span><span><span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">MISO</span> אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GPIO 13</span></span></span>
+          <span onClick="{{ toggle9 }}" style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:999px; padding:6px 13px; font-size:14px; line-height:1.4; color:oklch(0.4 0.012 260); cursor:pointer;" style-hover="border-color:oklch(0.62 0.14 150)"><span style="position:relative; flex:none; width:20px; height:20px; border-radius:6px; border:2px solid oklch(0.82 0.02 150); background:#fff; display:flex; align-items:center; justify-content:center;"><sc-if value="{{ check9 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:6px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">✓</span></sc-if></span><span><span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">SCK</span> אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GPIO 12</span></span></span>
+          <span onClick="{{ toggle10 }}" style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:999px; padding:6px 13px; font-size:14px; line-height:1.4; color:oklch(0.4 0.012 260); cursor:pointer;" style-hover="border-color:oklch(0.62 0.14 150)"><span style="position:relative; flex:none; width:20px; height:20px; border-radius:6px; border:2px solid oklch(0.82 0.02 150); background:#fff; display:flex; align-items:center; justify-content:center;"><sc-if value="{{ check10 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:6px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">✓</span></sc-if></span><span><span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">CS</span> אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GPIO 10</span></span></span>
+          <span onClick="{{ toggle11 }}" style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid oklch(0.92 0.006 85); border-radius:999px; padding:6px 13px; font-size:14px; line-height:1.4; color:oklch(0.4 0.012 260); cursor:pointer;" style-hover="border-color:oklch(0.62 0.14 150)"><span style="position:relative; flex:none; width:20px; height:20px; border-radius:6px; border:2px solid oklch(0.82 0.02 150); background:#fff; display:flex; align-items:center; justify-content:center;"><sc-if value="{{ check11 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:6px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; font-weight:800;">✓</span></sc-if></span><span><span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">MOTION</span> אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GPIO 14</span></span></span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; border:1.5px dashed oklch(0.72 0.06 248); border-radius:14px; background:#fff; padding:15px 18px; margin-bottom:30px;">
+        <span style="display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:700; color:oklch(0.4 0.1 248);"><span style="font-size:18px;">✍️</span>החיווט נבדק</span>
+        <span style="font-size:14.5px; line-height:1.5; color:oklch(0.5 0.012 260);">המורה עובר על שבעת החוטים יחד אתכם וחותם כאן:</span>
+        <span style="flex:1; min-width:150px; border-bottom:1.5px solid oklch(0.85 0.02 248); height:24px;"></span>
+      </div>
+
+      <!-- EXPECTED -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.96 0.05 90); border:1px solid oklch(0.88 0.07 90); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <span style="flex:none; font-size:22px; line-height:1;">👀</span>
+        <div>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:4px; color:oklch(0.42 0.07 75);">מה רואים אם הכול תקין</div>
+          <p style="margin:0; font-size:16px; line-height:1.55; color:oklch(0.4 0.03 75);">שבעה חוטים קצרים ושטוחים שיושבים בדיוק כמו באיור, העדשה מביטה למטה מעבר לקצה הברדבורד — ושום דבר עוד לא מחובר לחשמל.</p>
+        </div>
+      </div>
+
+      <!-- DONE WHEN -->
+      <div style="background:oklch(0.96 0.04 150); border:1px solid oklch(0.86 0.06 150); border-radius:16px; padding:18px 20px; margin-bottom:14px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.42 0.08 150); margin-bottom:12px;">
+          <span style="font-size:20px;">✅</span>סיימתם כש:
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>כל שבעת החוטים נבדקו באצבע מול האיור וכל שבע המשבצות בספירת החוטים מסומנות</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>העדשה פונה למטה מעבר לקצה הברדבורד ואף אצבע לא נגעה בה</span></div>
+          <div style="display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:oklch(0.36 0.04 150);"><span style="flex:none; color:oklch(0.55 0.12 150); font-weight:700;">✓</span><span>המורה בדק את החיווט וחתם על המשבצת "החיווט נבדק"</span></div>
+        </div>
+      </div>
+
+      <!-- STUCK -->
+      <div style="background:oklch(0.96 0.03 300); border:1px dashed oklch(0.78 0.07 300); border-radius:16px; padding:16px 20px;">
+        <div style="display:flex; align-items:center; gap:10px; font-weight:700; font-size:15.5px; color:oklch(0.45 0.12 300); margin-bottom:11px;">
+          <span style="font-size:20px;">🪄</span>תקועים?
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>קוראים למורה.</span></div>
+        </div>
+      </div>
+
+      <!-- SAFETY FOOTER (brief: the short version on every card) -->
+      <div style="display:flex; gap:11px; align-items:flex-start; margin-top:26px; padding-top:16px; border-top:1px solid oklch(0.92 0.006 85);">
+        <span style="flex:none; font-size:16px; line-height:1.5;">🛡️</span>
+        <p style="margin:0; font-size:12.5px; line-height:1.6; color:oklch(0.55 0.012 260);">בפרויקט הזה שני דברים דורשים כבוד — <strong>המלחם והסוללה</strong>. מלחימים רק כשהמורה ליד ולא נוגעים בקצה המתכת של המלחם — והסוללה נכנסת למחזיק רק אחרי שהמורה בדק את הכיוון שלה. סוללה חמה, נפוחה או פגועה עוברת למורה מיד. כל הכללים בכרטיסיית <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:11.5px;">R1</span>.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:3000}}">
+class Component extends DCLogic {
+  state = { checked: {} };
+  KEY = 'tc_p9t1m4_checks';
+  componentDidMount() {
+    try { const s = localStorage.getItem(this.KEY); if (s) this.setState({ checked: JSON.parse(s) }); } catch (e) {}
+  }
+  toggle(i) {
+    this.setState(s => {
+      const n = { ...s.checked, [i]: !s.checked[i] };
+      try { localStorage.setItem(this.KEY, JSON.stringify(n)); } catch (e) {}
+      return { checked: n };
+    });
+  }
+  renderVals() {
+    const v = {};
+    for (let i = 1; i <= 20; i++) { v['check' + i] = !!this.state.checked[i]; v['toggle' + i] = () => this.toggle(i); }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

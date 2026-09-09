@@ -1,0 +1,31 @@
+{
+  "name": "w_p9_02_sensor",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    { "id": "esp", "part": "esp32_s3_devkitc", "x": 40, "y": 20, "title": "ESP32-S3 DevKitC-1" },
+    { "id": "pmw", "part": "pmw3360_module", "x": -60, "y": 165, "rotation": 90, "title": "PMW3360" }
+  ],
+  "shapes": [],
+  "wires": [
+    { "from": "pmw.VCC", "to": "esp.3V3", "color": "#cc1414", "width": 34, "route": "vh", "out": ["left", 60] },
+    { "from": "pmw.GND", "to": "esp.G", "color": "#000000", "width": 34, "route": "vh", "out": ["left", 30] },
+    { "from": "pmw.MO", "to": "esp.11", "color": "#f28a00", "route": "vh", "out": ["right", 40] },
+    { "from": "pmw.MI", "to": "esp.13", "color": "#25cc35", "route": "vh", "out": ["right", 70] },
+    { "from": "pmw.SC", "to": "esp.12", "color": "#2158c7", "route": "vh", "out": ["right", 55] },
+    { "from": "pmw.CS", "to": "esp.10", "color": "#8a2bc9", "route": "vh", "out": ["right", 25] },
+    { "from": "pmw.MOT", "to": "esp.14", "color": "#0e8a8a", "route": "vh", "out": ["right", 85] }
+  ],
+  "labels": [
+    { "ref": "esp.3V3", "dx": -220, "dy": -70, "text": "VCC - 3V3", "size": 46 },
+    { "ref": "esp.G", "dx": -220, "dy": 90, "text": "GND", "size": 46 },
+    { "ref": "esp.10", "dx": -300, "dy": -60, "text": "CS - 10", "size": 46 },
+    { "ref": "esp.11", "dx": -420, "dy": -60, "text": "MO - 11", "size": 46 },
+    { "ref": "esp.12", "dx": -540, "dy": -60, "text": "SC - 12", "size": 46 },
+    { "ref": "esp.13", "dx": -660, "dy": -60, "text": "MI - 13", "size": 46 },
+    { "ref": "esp.14", "dx": -780, "dy": -60, "text": "MOT - 14", "size": 46 },
+    { "ref": "pmw.@b", "dy": 100, "dx": 0, "text": "PMW3360 - the eye (lens down)", "size": 46 },
+    { "ref": "esp.@b", "dy": 140, "dx": 0, "text": "ESP32-S3", "size": 46 }
+  ],
+  "_note": "pmw rotated 90 CW so its header faces the ESP32 left column; label sizes for ~8px at 640px card width."
+}

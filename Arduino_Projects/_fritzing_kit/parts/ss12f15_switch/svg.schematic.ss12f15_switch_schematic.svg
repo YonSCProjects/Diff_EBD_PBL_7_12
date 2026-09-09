@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0.3937in" height="0.3150in" viewBox="0 0 10.0 8.0">
+<g id="schematic">
+<rect x="0.6" y="2.6" width="8.8" height="3.6" rx="0.5" style="fill:#b9bcc2;stroke:#6f737a;stroke-width:0.3"/>
+<rect x="1.6" y="0.7" width="2.6" height="2.0" rx="0.3" style="fill:#3a3d42;stroke:#1d1f22;stroke-width:0.25"/>
+<text x="5.00" y="5.20" style="font-family:Arial;font-size:1.3px;font-weight:bold;fill:#3b3e43;text-anchor:middle">ON/OFF</text>
+<line x1="2.5" y1="6.2" x2="2.5" y2="7.0" style="stroke:#b5b5b5;stroke-width:0.6"/>
+<circle cx="2.50" cy="7.00" r="0.7" style="fill:#e9c46a;stroke:#8a6f3c;stroke-width:0.25"/><circle cx="2.50" cy="7.00" r="0.27" style="fill:#3a3a3a;stroke:none"/>
+<rect id="connector0pin" x="1.90" y="6.40" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+<line x1="5.0" y1="6.2" x2="5.0" y2="7.0" style="stroke:#b5b5b5;stroke-width:0.6"/>
+<circle cx="5.00" cy="7.00" r="0.7" style="fill:#e9c46a;stroke:#8a6f3c;stroke-width:0.25"/><circle cx="5.00" cy="7.00" r="0.27" style="fill:#3a3a3a;stroke:none"/>
+<rect id="connector1pin" x="4.40" y="6.40" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+<line x1="7.5" y1="6.2" x2="7.5" y2="7.0" style="stroke:#b5b5b5;stroke-width:0.6"/>
+<circle cx="7.50" cy="7.00" r="0.7" style="fill:#e9c46a;stroke:#8a6f3c;stroke-width:0.25"/><circle cx="7.50" cy="7.00" r="0.27" style="fill:#3a3a3a;stroke:none"/>
+<rect id="connector2pin" x="6.90" y="6.40" width="1.2" height="1.2" style="fill:none;stroke:none"/>
+</g></svg>

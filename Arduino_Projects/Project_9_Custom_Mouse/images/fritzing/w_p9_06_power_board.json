@@ -1,0 +1,37 @@
+{
+  "name": "w_p9_06_power_board",
+  "out_dir": "..",
+  "assets_dir": "../../task_cards_he/assets",
+  "instances": [
+    { "id": "tp", "part": "tp4056_usb_c", "x": 0, "y": 40, "title": "TP4056 USB-C" },
+    { "id": "bat", "part": "holder_18650", "x": -30, "y": 170, "rotation": 90, "title": "18650 holder" },
+    { "id": "sw", "part": "ss12f15_switch", "x": -1, "y": 190, "title": "Power switch" },
+    { "id": "mt", "part": "mt3608_module", "x": 60, "y": 300, "title": "MT3608 - 5.0 V" },
+    { "id": "esp", "part": "esp32_s3_devkitc", "x": 320, "y": 40, "title": "ESP32-S3 DevKitC-1" }
+  ],
+  "shapes": [],
+  "wires": [
+    { "from": "bat.+", "to": "tp.B+", "color": "#cc1414", "width": 34, "route": "hv", "out": ["up", 150] },
+    { "from": "bat.-", "to": "tp.B-", "color": "#000000", "width": 34, "route": "hv", "out": ["up", 300] },
+    { "from": "tp.OUT+", "to": "sw.1", "color": "#cc1414", "width": 34, "route": "vh", "out": ["down", 200] },
+    { "from": "sw.COM", "to": "mt.Vin", "color": "#cc1414", "width": 34, "route": "vh", "out": ["down", 300] },
+    { "from": "tp.OUT-", "to": "mt.GND", "color": "#000000", "width": 34, "route": "vh", "out": ["down", 800] },
+    { "from": "mt.Vout", "to": "esp.5V", "color": "#cc1414", "width": 34, "route": "vh", "out": ["right", 300] },
+    { "from": "mt.GND*", "to": "esp.G", "color": "#000000", "width": 34, "route": "vh", "out": ["right", 600] }
+  ],
+  "labels": [
+    { "ref": "tp.B+", "dx": 0, "dy": 420, "text": "B+", "size": 68, "color": "#cc1414", "stroke": "#cc1414" },
+    { "ref": "tp.B-", "dx": 250, "dy": 220, "text": "B-", "size": 68 },
+    { "ref": "tp.OUT+", "dx": -320, "dy": 0, "text": "OUT+", "size": 68, "color": "#cc1414", "stroke": "#cc1414" },
+    { "ref": "tp.OUT-", "dx": 320, "dy": 0, "text": "OUT-", "size": 68 },
+    { "ref": "sw.@b", "dx": 200, "dy": 140, "text": "ON / OFF", "size": 68 },
+    { "ref": "mt.Vin", "dx": -80, "dy": -140, "text": "IN", "size": 68 },
+    { "ref": "mt.Vout", "dx": 100, "dy": -140, "text": "OUT 5.0 V", "size": 68 },
+    { "ref": "esp.5V", "dx": -250, "dy": -70, "text": "5V", "size": 68, "color": "#cc1414", "stroke": "#cc1414" },
+    { "ref": "esp.G", "dx": -300, "dy": 80, "text": "GND", "size": 68 },
+    { "ref": "bat.@b", "dy": 100, "dx": 0, "text": "NCR18650B protected", "size": 68 },
+    { "ref": "tp.@t", "dy": -100, "dx": 0, "text": "TP4056 USB-C", "size": 68 },
+    { "ref": "esp.@b", "dy": 150, "dx": 0, "text": "ESP32-S3", "size": 68 }
+  ],
+  "_note": "Battery (vertical holder) -> TP4056 B pads from below; load on OUT: OUT+ -> switch -> MT3608 IN; MT3608 pre-tuned 5.0V -> DevKit 5V/GND. out/label offsets are EXPORT units."
+}

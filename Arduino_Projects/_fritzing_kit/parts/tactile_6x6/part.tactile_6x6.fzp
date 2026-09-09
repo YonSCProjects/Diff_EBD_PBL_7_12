@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.9.4" moduleId="tactile_6x6_yon_2026">
+    <author>Yon (drawn for the Arduino PBL program, 2026)</author>
+    <title>6x6 tactile switch</title>
+    <label>P</label>
+    <date>2026-09-07</date>
+    <tags><tag>mouse</tag></tags>
+    <properties><property name="family">6x6 tactile switch</property></properties>
+    <description>6x6x5 mm through-hole tactile switch; the two legs on each side are joined internally, drawn as one effective leg per side.</description>
+    <views>
+        <iconView><layers image="icon/tactile_6x6_icon.svg"><layer layerId="icon"/></layers></iconView>
+        <schematicView><layers image="schematic/tactile_6x6_schematic.svg"><layer layerId="schematic"/></layers></schematicView>
+        <pcbView><layers image="pcb/tactile_6x6_pcb.svg"><layer layerId="copper0"/></layers></pcbView>
+        <breadboardView><layers image="breadboard/tactile_6x6_breadboard.svg"><layer layerId="breadboard"/></layers></breadboardView>
+    </views>
+    <connectors>
+        <connector id="connector0" type="male" name="1">
+            <description>1</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector0pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector0pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector0pin"/></pcbView>
+            </views>
+        </connector>
+        <connector id="connector1" type="male" name="2">
+            <description>2</description>
+            <views>
+                <breadboardView><p layer="breadboard" svgId="connector1pin"/></breadboardView>
+                <schematicView><p layer="schematic" svgId="connector1pin"/></schematicView>
+                <pcbView><p layer="copper0" svgId="connector1pin"/></pcbView>
+            </views>
+        </connector>
+    </connectors>
+</module>

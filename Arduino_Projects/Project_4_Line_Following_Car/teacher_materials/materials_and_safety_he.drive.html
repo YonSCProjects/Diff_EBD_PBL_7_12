@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<title>פרויקט 4 — חומרים ובטיחות (למורה)</title></head>
+<body dir="rtl" style="direction:rtl;text-align:right;font-family:Arial,sans-serif">
+<h1 style="font-size:18pt;color:#0f4c81">פרויקט 4 — מכונית עוקבת קו · חומרים ובטיחות</h1>
+<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-09</p>
+<p style="background:#eaf1f8;padding:9px 12px">ההסלמה הראשונה בתוכנית. החשמל עדיין 5 וולט ובטוח — מה שחדש הוא <strong>חום ותנועה</strong>: מלחם חם, גלגלים מסתובבים ובית סוללות. זה הפרויקט הראשון עם הלחמה.</p>
+<h2 style="font-size:13pt;color:#0f4c81">1. חומרים לכל תלמיד</h2>
+<table dir="rtl" style="border-collapse:collapse;width:100%">
+<tr><th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">כמות</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">פריט</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">הערה</th></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">לוחית שלדה מפוליגל, חתוכה מהתבנית</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">‎chassis_template_he.pdf‎ מודפס 1:1 — בודקים את סרגל הכיול 50 מ"מ לפני החיתוך</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">4</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מנועי TT + 4 גלגלים 65 מ"מ</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">שני זוגות, אחד בכל צד. הרגליים מולחמות במיילסטון 2</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">בקר מנועים L298N</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">מקבל את מתח הסוללות ומזין 5V חזרה לארדואינו</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">2</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חיישני קו IR (מסוג TCRT5000)</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">מותקנים בחזית, 26 מ"מ זה מזה, כ-1 ס"מ מעל הרצפה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">בית סוללות 8×AA עם מתג + סוללות</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">12 וולט למנועים. הסוללות הן מתכלה — מלאי טעון בכל מפגש</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">ארדואינו Uno R3 + כבל USB</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">בשימוש חוזר. הנסיעה עצמה מתבצעת על סוללות, בלי כבל</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מטריצה</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">תפקיד חדש: מרכז החשמל של המכונית — 5V ו-GND לשני החיישנים</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">~10</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חוטי גישור M-M ו-M-F</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">בקר ↔ ארדואינו ↔ פסי המטריצה ↔ חיישנים</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">—</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חומרת M3 ואזיקוני פלסטיק</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">חיבור המנועים והלוחות לשלדה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">גליל איזולירבנד שחור</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">משותף — הקו על הרצפה</td></tr>
+</table>
+<h2 style="font-size:13pt;color:#0f4c81">2. ציוד משותף לחדר</h2>
+<ul>
+<li>עמדת הלחמה אחת לחדר: מלחם + מעמד + ספוג לח + בדיל + <strong>משקפי מגן</strong>. המורה מלווה כל חיבור ראשון.</li>
+<li>לוח תרגול וחוטי גרוטאה לתרגול ההלחמה במיילסטון 1.</li>
+<li>חותך צד, מקלף חוטים, מברג קטן, מזרן/מחצלת עמידת חום.</li>
+<li>מסלול קו שחור מודבק על הרצפה — קו ישר לתחילת העבודה, מסלול מלא לחגיגה.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">3. מה המורה מכין לפני המפגש</h2>
+<ul>
+<li>הדפסת תבנית השלדה בקנה מידה 1:1 וחיתוך לוחיות הפוליגל מראש (או הכנת החיתוך למפגש עם המורה).</li>
+<li>עמדת ההלחמה מורכבת, נבדקת וכבויה עד הרגע שבו מתחילים — ומשקפי מגן זמינים לכל מי שיושב בה.</li>
+<li>סוללות AA טעונות; בודקים שמתג בית הסוללות עובד.</li>
+<li>הסקיצות ‎01_drive_forward‎, ‎02_sensor_test‎, ‎03_line_follow‎ בתיקיית התלמיד.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">4. נקודות בטיחות</h2>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">1. עמדת ההלחמה — שלושת הכללים</span><br>המלחם גר על המעמד שלו כשהוא לא ביד; מנקים את הקצה על הספוג הלח ואף פעם לא באצבעות; לא נוגעים בקצה המתכת — הוא חם עוד דקות אחרי הכיבוי. <strong>מלחימים רק כשהמורה בעמדה.</strong> נגיעה בטעות: מים קרים מהברז מיד, ואז קוראים למורה.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">2. מנועים וגלגלים מסתובבים</span><br>אצבעות רחוקות מגלגל שמסתובב. בבדיקות שולחן מגביהים את המכונית (קופסה קטנה) כך שהגלגלים באוויר. מעבירים את המכונית ממקום למקום רק כשהמתג כבוי.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">3. בית הסוללות</span><br>לא מחברים את שני חוטי בית הסוללות זה לזה — זה קצר והסוללות מתחממות. כשהמכונית לא נוסעת, המתג כבוי.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">4. החשמל עצמו עדיין בטוח</span><br>הארדואינו, החיישנים וה-L298N עובדים כולם על 5 וולט. מה שהשתנה בפרויקט הזה הוא חום ותנועה, לא חשמל.</p>
+<p style="background:#fdf7e6;padding:10px 13px"><span style="color:#7a5a12;font-weight:700">מה אומרים לתלמיד</span><br>"החשמל כאן בטוח בדיוק כמו בשלושת הפרויקטים הקודמים — 5 וולט. שני הדברים החדשים שדורשים כבוד הם המלחם החם והגלגלים המסתובבים. כללי הבטיחות על כרטיסייה R4, ובהלחמה אני תמיד לידכם."</p>
+<hr>
+<p style="color:#5b6b7c;font-size:10pt"><b>כרטיסיות עזר:</b> R4 (תזכורת בטיחות) · R6 (מדריך הלחמה) · R1 (חיווט) · R2 (פרוטוקול תקיעות)<br>
+<b>הסקיצות בדרייב:</b> Arduino_Projects \ &lt;nickname&gt; \ Project_4_Line_Following_Car \ ino_files \ &lt;sketch&gt;
+— במקום &lt;nickname&gt; הכינוי שהתלמיד בחר; בתוך ino_files יש תיקייה לכל סקיצה, ובתוכה הקובץ באותו שם.<br>
+הדף נבנה מ-build_teacher_materials.js. הגרסה להדפסה: materials_and_safety_he.html במאגר.</p>
+</body></html>

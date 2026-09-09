@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<title>פרויקט 6 — חומרים ובטיחות (למורה)</title></head>
+<body dir="rtl" style="direction:rtl;text-align:right;font-family:Arial,sans-serif">
+<h1 style="font-size:18pt;color:#0f4c81">פרויקט 6 — תחנת מזג אוויר ב-ESP32 · חומרים ובטיחות</h1>
+<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-09</p>
+<p style="background:#eaf1f8;padding:9px 12px">חזרה לשולחן ולמטריצה: אין מנועים, אין סוללות ואין הלחמה. מעטפת הבטיחות נמוכה כמו בפרויקטים 1–3, עם הבדל אחד — המודולים כאן עובדים על 3.3 וולט.</p>
+<h2 style="font-size:13pt;color:#0f4c81">1. חומרים לכל תלמיד</h2>
+<table dir="rtl" style="border-collapse:collapse;width:100%">
+<tr><th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">כמות</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">פריט</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">הערה</th></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">לוח ESP32 DevKit</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">אותו לוח של פרויקט 5, חוזר למטריצה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חיישן DHT22 — חדש</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">שלוש רגליים: 3.3V, DATA, GND. טמפרטורה ולחות</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מסך OLED SSD1306 בגודל 0.96" — חדש</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">ארבע רגליים: 3.3V, GND, SDA, SCL. כתובת I2C‏ 0x3C</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מטריצה + חוטי גישור</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">פסי הכוח של המטריצה מפצלים את רגל ה-3.3V היחידה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">כבל Micro-USB</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">הזנה והעלאה מהמחשב</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">פלט אחד לבחירה — טייר 2 בלבד</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">נורית + נגד 220Ω, או זמזם, או סרוו קטן</td></tr>
+</table>
+<h2 style="font-size:13pt;color:#0f4c81">2. ציוד משותף לחדר</h2>
+<ul>
+<li>מלאי חיישני DHT22 ומסכי OLED חלופיים.</li>
+<li>סרוואים קטנים, זמזמים ונוריות במגש הבחירה של טייר 2.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">3. מה המורה מכין לפני המפגש</h2>
+<ul>
+<li>התקנת הספריות דרך ה-Library Manager בכל עמדה: DHT sensor library + Adafruit Unified Sensor, ו-Adafruit SSD1306 + Adafruit GFX. זו ההתקנה הראשונה בתוכנית — עושים אותה מראש כדי שהמפגש לא יתחיל בהורדות.</li>
+<li>לכל עמדה שם רשת (WEATHER-xx) וסיסמה, רשומים בדף המורה.</li>
+<li>הסקיצות ‎01_dht_serial‎, ‎02_dht_oled‎, ‎03_weather_web‎ ו-‎T2_smart_device_starter‎ בתיקיית התלמיד.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">4. נקודות בטיחות</h2>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">1. המודולים עובדים על 3.3 וולט</span><br>גם ה-DHT22 וגם המסך מוזנים מפס ה-3.3V של המטריצה, לא מ-5V. זה השינוי היחיד במעטפת החשמל מאז פרויקט 1.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">2. מנתקים את ה-USB לפני כל שינוי חיווט</span><br>מוסיפים ומזיזים חוטים כשהלוח לא מוזן, ורק אז מחברים שוב.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">3. סרוו — רק קטן, ולא מחזיקים את הזרוע</span><br>בטייר 2 שבוחר סרוו: לא עוצרים את הזרוע ביד בזמן שהיא זזה, ולא מחברים סרוו גדול שמושך יותר ממה שהלוח יכול לתת.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">4. אין חלקים חמים ואין סוללות</span><br>אין מלחם, אין מנועים ואין תא ליתיום בפרויקט הזה — מי שמגיע לכאן אחרי פרויקטים 4–5 יכול לנשום.</p>
+<p style="background:#fdf7e6;padding:10px 13px"><span style="color:#7a5a12;font-weight:700">מה אומרים לתלמיד</span><br>"כאן אין מלחם, אין מנועים ואין סוללות. הדבר היחיד שצריך לזכור: המודולים עובדים על 3.3 וולט, ומחברים חוטים רק כשה-USB מנותק."</p>
+<hr>
+<p style="color:#5b6b7c;font-size:10pt"><b>כרטיסיות עזר:</b> משתמשים בכרטיסיות העזר של פרויקטים 1–4 (R4 בטיחות, R2 פרוטוקול תקיעות) — לפרויקט 6 אין סט עזר משלו.<br>
+<b>הסקיצות בדרייב:</b> Arduino_Projects \ &lt;nickname&gt; \ Project_6_ESP32_WiFi_Controller \ ino_files \ &lt;sketch&gt;
+— במקום &lt;nickname&gt; הכינוי שהתלמיד בחר; בתוך ino_files יש תיקייה לכל סקיצה, ובתוכה הקובץ באותו שם.<br>
+הדף נבנה מ-build_teacher_materials.js. הגרסה להדפסה: materials_and_safety_he.html במאגר.</p>
+</body></html>

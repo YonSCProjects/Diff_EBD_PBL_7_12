@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<title>פרויקט 8 — חומרים ובטיחות (למורה)</title></head>
+<body dir="rtl" style="direction:rtl;text-align:right;font-family:Arial,sans-serif">
+<h1 style="font-size:18pt;color:#0f4c81">פרויקט 8 — רחפן זעיר · חומרים ובטיחות</h1>
+<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-09</p>
+<p style="background:#eaf1f8;padding:9px 12px"><strong>הפרויקט היחיד בתוכנית שבו החומרה יכולה לפגוע בתלמיד</strong> — המדחפים והסוללה. שניהם נמצאים אצל המורה, יוצאים אחד-אחד, וכל שאר הכללים נגזרים מזה. יום שיש בו טיסה מוכרז כ"יום טיסה" במפגש הפתיחה.</p>
+<h2 style="font-size:13pt;color:#0f4c81">1. חומרים לכל תלמיד</h2>
+<table dir="rtl" style="border-collapse:collapse;width:100%">
+<tr><th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">כמות</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">פריט</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">הערה</th></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">ערכת שלדת פחמן FEICHAO/JMT 100 מ"מ</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">שני לוחות 1.5 מ"מ, סטנדאופים, 4 גומיות מנוע, 4 כיפות (רגלי נחיתה), טבעות סוללה. המורה מבריג מראש</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">4</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מנועי 8520 חלולים</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">שניים CW (אדום/כחול → קדימה ואחורה) ושניים CCW (שחור/לבן → ימין ושמאל)</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">4 (+8 רזרבה)</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מדחפים 65 מ"מ, קדח 1.0 מ"מ</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">שניים CW ושניים CCW. מדחפים נשברים — קופסת רזרבה על שולחן המורה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">ESP32 DevKit V1 (30 פינים)</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">אותו לוח של פרויקטים 5–6</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מודול MT3608 להעלאת מתח (בוסטר)</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c"><strong>מכויל מראש ל-5.00V ונעול בלק</strong>. מזין רק את ה-VIN של הלוח</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חיישן MPU6050 / GY-521</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">מוזן מרגל ה-3V3 של הלוח. כתובת I2C‏ 0x68</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">לוח MOSFET</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">פרפבורד, 4× IRLB8721, 4× דיודות 1N5819, 4× 100Ω, 4× 10kΩ, קבל 220µF. בטייר 1 מולחם מראש על ידי המורה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">סוללת LiPo 1S ‏3.7V ‏1000mAh, מחבר PH2.0</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">חיה בשקית החסינה על שולחן המורה. סוללה אחת מחוץ לשקית בכל רגע נתון</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">—</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חוטים, קלטת קצף, שכבת בידוד, אזיקונים, חוט קשירה</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">לוחות הפחמן מוליכים — מתחת לכל לוח יש שכבת בידוד</td></tr>
+</table>
+<h2 style="font-size:13pt;color:#0f4c81">2. ציוד משותף לחדר</h2>
+<ul>
+<li>עמדת הלחמה (מפרויקט 4), שני מודדים, משקל מטבח דיגיטלי ברזולוציית 1 גרם.</li>
+<li>עמוד בדיקת דחף (בלוק עץ יציב) עם שתי גומיות וחוט גיבוי — הרחפן יושב עליו <strong>הפוך</strong>.</li>
+<li>מטען USB לתא 1S (מסוג TP4056, ניתוק ב-4.20V) על אריח קרמיקה.</li>
+<li><strong>שתי שקיות חסינות אש</strong> — אחת מסומנת "אחסון" (סגורה) ואחת "טעינה" (תא אחד בכל פעם), במרחק מטר זו מזו.</li>
+<li>דלי חול יבש (5 ליטר לפחות) עם יעה, ליד עמדת הטעינה.</li>
+<li><strong>משקפי מגן לכל מי שנמצא בחדר</strong> — לא רק לטייס.</li>
+<li>סרט סימון לרצפה (מעגל טיסה, קו צופים, סימן המראה), חוט דיג 0.35–0.40 מ"מ (עמידות 6 ק"ג ומעלה) ועוגן שטוח 2–3 ק"ג בגובה עד 10 ס"מ.</li>
+<li>קופסת חלפים: מדחפים, מנועים, MOSFET, מודול MT3608 מכויל אחד, ערכת שלדה לכל ארבעה רחפנים.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">3. מה המורה מכין לפני המפגש</h2>
+<ul>
+<li>שלדה מוברגת, גומיות מותקנות, שכבת בידוד על אזור הלוחות, לולאת קשירה מותקנת, חץ FRONT מסומן.</li>
+<li><strong>MT3608 מכויל ל-5.00V ונעול</strong> — מודד על המוצא, לא מניחים כיוון סיבוב, עוצרים ב-4.95–5.05V, מוודאים אחרי כיבוי והדלקה, טיפת לק, תאריך על המודול. לוח לא מתחבר למודול שלא נבדק פעמיים.</li>
+<li>לוח MOSFET מולחם ומסומן M1–M4 / G1–G4 לערכות טייר 1, כולל בדיקת זיוף לכל טרנזיסטור (V_DS של 20–50 מיליוולט בכ-1 אמפר).</li>
+<li>סוללות בטעינת אחסון (3.8V), מסומנות B1…Bn, בשקית ה"אחסון". ביום טיסה מעלים ל-4.1–4.2V במהלך בלוק הבנייה.</li>
+<li>מנועים ומדחפים ממוינים CW/CCW בקופסאות נפרדות — מדחפים מחולקים רק בקו הטיסה.</li>
+<li>אזור הטיסה מסומן פעם אחת: מעגל 3 מטר, קו צופים, סימן המראה, עוגן.</li>
+<li>הסקיצות מועתקות לתיקיית התלמיד כשמספר התחנה (STATION) כבר מוגדר בכל עותק.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">4. נקודות בטיחות</h2>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">1. משקפי מגן — לכולם, מהדקה הראשונה</span><br>ביום טיסה: משקפיים על העיניים מהרגע הראשון ועד שהסוללה האחרונה חזרה לשקית, שיער אסוף ושרוולים מופשלים. לא רק הטייס — כל מי שנמצא בחדר.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">2. מדחפים אחרונים, מדחפים ראשונים</span><br>המדחפים עולים אחרונים לפני שהסוללה נכנסת, ויורדים ראשונים אחרי שהיא יוצאת. יד נוגעת במדחפים, בחיווט או במנועים רק במצב בטוח — כלומר כשהסוללה מנותקת.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">3. סוללה אחת = רחפן חי אחד</span><br>רק המורה מוציא סוללה מהשקית ורק המורה מחלק מדחפים. סוללה מחוברת פירושה רחפן שיכול להתחיל לזוז, גם אם כתוב עליו DISARMED. רק הוצאת הסוללה מחזירה למצב בטוח.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">4. אף אחד לא בתוך המעגל כשרחפן חמוש</span><br>הצופים מאחורי קו הצופים; בתוך המעגל נמצאים הטייס והמורה בלבד.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">5. תמיד על חוט הקשירה</span><br>כל סיבוב של מדחף הוא סיבוב קשור — בקו הטיסה ובעמדת בדיקת הדחף. החוט הוא גדר, לא רצועה: הוא קובע עד לאן הרחפן יכול להגיע. אין "רק לרגע".</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">6. כל אחד רשאי להגיד STOP</span><br>מי שאומר STOP — מכל סיבה — עוצר את הטיסה: מחוון לאפס, DISARM, ידיים בצד. אין דיון על זה תוך כדי.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">7. כללי יום טיסה</span><br>עמדת ההלחמה כבויה ומנותקת לכל בלוק הטיסה; אין טעינה בזמן שרחפן חי בחדר; אין כבל USB מחובר לרחפן בזמן שרחפן חי בקו; כל טלפון חוץ משל הטייס ושל המורה נמצא בתיק. במפגש הפתיחה המורה מכריז בשם על סופר-הראשים ועל מחליף.</p>
+<p style="background:#fdf7e6;padding:10px 13px"><span style="color:#7a5a12;font-weight:700">מה אומרים לתלמיד</span><br>"זה הפרויקט היחיד שבו החומרה יכולה לפגוע בכם — המדחפים והסוללה. בגלל זה שניהם אצלי, בגלל זה כולם עם משקפיים ברגע שמנוע יכול להסתובב, בגלל זה הרחפן תמיד על חוט, ובגלל זה כל אחד כאן רשאי להגיד STOP."</p>
+<hr>
+<p style="color:#5b6b7c;font-size:10pt"><b>כרטיסיות עזר:</b> R1 (בטיחות טיסה) — נקראת בקול בקו הטיסה לפני כל טיסה ובכל סוללה.<br>
+<b>הסקיצות בדרייב:</b> Arduino_Projects \ &lt;nickname&gt; \ Project_8_Tiny_Quadcopter \ ino_files \ &lt;sketch&gt;
+— במקום &lt;nickname&gt; הכינוי שהתלמיד בחר; בתוך ino_files יש תיקייה לכל סקיצה, ובתוכה הקובץ באותו שם.<br>
+הדף נבנה מ-build_teacher_materials.js. הגרסה להדפסה: materials_and_safety_he.html במאגר.</p>
+</body></html>

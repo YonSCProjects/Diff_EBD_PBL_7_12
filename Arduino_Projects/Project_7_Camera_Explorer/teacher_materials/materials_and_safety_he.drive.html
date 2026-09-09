@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<title>פרויקט 7 — חומרים ובטיחות (למורה)</title></head>
+<body dir="rtl" style="direction:rtl;text-align:right;font-family:Arial,sans-serif">
+<h1 style="font-size:18pt;color:#0f4c81">פרויקט 7 — סייר עם מצלמה · חומרים ובטיחות</h1>
+<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-09</p>
+<p style="background:#eaf1f8;padding:9px 12px">המכונית של פרויקטים 4–5 עם מצלמה. הסיכונים זהים לפרויקט 5 — גלגלים וסוללות — ובנוסף שני פסי כוח נפרדים שהמורה מכייל לפני המפגש.</p>
+<h2 style="font-size:13pt;color:#0f4c81">1. חומרים לכל תלמיד</h2>
+<table dir="rtl" style="border-collapse:collapse;width:100%">
+<tr><th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">כמות</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">פריט</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">הערה</th></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">המכונית הפוליגל של פרויקטים 4–5</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">שלדה, 4 מנועים, L298N, בית סוללות 8×AA (12V)</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מודול ESP32-CAM (AI-Thinker) — חדש</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">מחליף את המוח; רק ארבעה פינים חופשיים למנועים</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מתאם FTDI + חוטים</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">להעלאה בלבד — ה-ESP32-CAM אינו מתחבר ישירות ב-USB</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">ממיר מוריד MP1584 או LM2596 — חדש</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">מכויל ל-5.0–5.2V, פס הכוח הנקי של המצלמה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">קבל 470–1000µF</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">מותקן לפי כיוון — הפס המסומן אל GND</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">~10</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חוטי גישור</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">ארבעה חוטי אות למנועים + זוגות כוח</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">טלפון עם דפדפן</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">לצפייה בווידאו ולנהיגה</td></tr>
+</table>
+<h2 style="font-size:13pt;color:#0f4c81">2. ציוד משותף לחדר</h2>
+<ul>
+<li>מודולי ESP32-CAM ומתאמי FTDI חלופיים — המודול רגיש להזנה ומודול שנשרף מחליף מודול.</li>
+<li>מודד מולטימטר לכיול הממיר.</li>
+<li>ג'מפר קצר ל-IO0–GND בכל עמדה.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">3. מה המורה מכין לפני המפגש</h2>
+<ul>
+<li><strong>מכיילים את הממיר ל-5.0–5.2V ובודקים במודד לפני שמחברים אותו למצלמה.</strong> ממיר לא מכויל שורף את המודול.</li>
+<li>הקבל מולחם או מחובר לפי כיוון — הפס המסומן ל-GND.</li>
+<li>טקס ההעלאה מתורגל מראש: ג'מפר IO0–GND, לחיצת RST, העלאה, הסרת הג'מפר.</li>
+<li>הסקיצות ‎01_camera_explorer‎ ו-‎T2_explorer_starter‎ בתיקיית התלמיד.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">4. נקודות בטיחות</h2>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">1. שני פסי כוח נפרדים — זה השיעור של הפרויקט</span><br>המצלמה מקבלת 5V משלה מהממיר עם הקבל; המנועים מקבלים את שלהם מה-L298N. פס משותף גורם לצניחת מתח והמצלמה מתאתחלת באמצע הנסיעה. הגראונד כן משותף.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">2. מתג הסוללות כבוי בכל העלאה ובכל שינוי חיווט</span><br>העלאה נעשית כשהמתג כבוי והגלגלים באוויר; אחרי ההעלאה מסירים את ג'מפר ה-IO0 לפני שמדליקים.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">3. גלגלים באוויר בבדיקות שולחן</span><br>אותו כלל מפרויקט 4: אצבעות רחוקות, מגביהים את המכונית, ולא תופסים אותה תוך כדי נסיעה.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">4. בית הסוללות</span><br>לא מקצרים את החוטים, ומכבים את המתג כשלא נוסעים.</p>
+<p style="background:#fdf7e6;padding:10px 13px"><span style="color:#7a5a12;font-weight:700">מה אומרים לתלמיד</span><br>"הסייר הוא המכונית שאתם כבר מכירים, ולכן גם הכללים מוכרים: גלגלים באוויר בבדיקות, מתג כבוי כשנוגעים בחוטים. החדש כאן הוא שלמצלמה יש קו חשמל משלה — בגלל זה היא לא נופלת כשהמנועים מתחילים לעבוד."</p>
+<hr>
+<p style="color:#5b6b7c;font-size:10pt"><b>כרטיסיות עזר:</b> משתמשים בכרטיסיות העזר של פרויקטים 1–4 (R4 בטיחות, R2 פרוטוקול תקיעות) — לפרויקט 7 אין סט עזר משלו.<br>
+<b>הסקיצות בדרייב:</b> Arduino_Projects \ &lt;nickname&gt; \ Project_7_Camera_Explorer \ ino_files \ &lt;sketch&gt;
+— במקום &lt;nickname&gt; הכינוי שהתלמיד בחר; בתוך ino_files יש תיקייה לכל סקיצה, ובתוכה הקובץ באותו שם.<br>
+הדף נבנה מ-build_teacher_materials.js. הגרסה להדפסה: materials_and_safety_he.html במאגר.</p>
+</body></html>

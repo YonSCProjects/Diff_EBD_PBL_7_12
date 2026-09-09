@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<title>פרויקט 9 — חומרים ובטיחות (למורה)</title></head>
+<body dir="rtl" style="direction:rtl;text-align:right;font-family:Arial,sans-serif">
+<h1 style="font-size:18pt;color:#0f4c81">פרויקט 9 — עכבר אישי · חומרים ובטיחות</h1>
+<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-09</p>
+<p style="background:#eaf1f8;padding:9px 12px">שני דברים דורשים כבוד: <strong>המלחם והסוללה</strong>. אין מדחפים ואין משקפי מגן — הסכנות כאן הן מלחם חם אחד ותא ליתיום אחד.</p>
+<h2 style="font-size:13pt;color:#0f4c81">1. חומרים לכל תלמיד</h2>
+<table dir="rtl" style="border-collapse:collapse;width:100%">
+<tr><th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">כמות</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">פריט</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">הערה</th></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">ESP32-S3 DevKitC-1 N8R2, 44 פינים</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">הלוח שמדריכי החיווט מניחים. לוחות ה-S3 Mini הם חלפים, לא לוח הבנייה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חיישן PMW3360DM-T2QU עם עדשת LM19</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">העין של העכבר. SPI, 3.3V</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">2</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">אנקודרים Kailh</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">11 מ"מ קדמי (גלילה + לחיצת גלגל), 9 מ"מ אחורי (גלגל המהירות; לחיצתו מחליפה שכבה). לא EC11</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">2</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מתגי Kailh GM 8.0 ללחיצות הראשיות</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">אלה המתגים שנקנו — הם <strong>קליקיים, לא שקטים</strong>. הכרטיסיות לא מבטיחות לחיצה שקטה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">3</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מתגים זעירים 6×6×5 מ"מ</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">כפתורי הצד; שכבת התפקוד שלהם מתחלפת בלחיצת הגלגל האחורי</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">תא NCR18650B מוגן + מחזיק קפיצי</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">תא מוגן באורך כ-68 מ"מ — המחזיק חייב להכיל אותו</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מודול טעינה TP4056 USB-C עם הגנת DW01A+8205A</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">הדרך היחידה שבה התא נטען בפרויקט</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מתג הזזה SS12F15</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">מתג ההפעלה הראשי</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">4</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">נוריות 5 מ"מ + נגדי 330Ω</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">שלוש לרמת המהירות ואחת לשכבה. מהמלאי — רכיבי ה-SMD שנקנו אינם משימה לתלמיד</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מודול MT3608 מהמלאי, מכויל ל-5.0V</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">מחלפי פרויקט 8</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">—</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">יריעת PTFE, חוטים, כבל USB-C</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">ה-PTFE הוא פסי ההחלקה — העכבר חייב לעבוד על מזרן</td></tr>
+</table>
+<h2 style="font-size:13pt;color:#0f4c81">2. ציוד משותף לחדר</h2>
+<ul>
+<li>עמדת הלחמה (מפרויקט 4) עם כל כלליה.</li>
+<li>מודד מולטימטר לבדיקת קוטביות לפני הכנסת התא הראשונה.</li>
+<li>אחסון חסין אש לתא הליתיום ומגש חלקים אישי לכל תלמיד.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">3. מה המורה מכין לפני המפגש</h2>
+<ul>
+<li>מודול MT3608 מכויל ל-5.0V ונעול (אותו נוהל של פרויקט 8).</li>
+<li>התא בטעינת חצי, במגש החלקים, <strong>והמורה בודק פלוס ומינוס מול הסימונים לפני ההכנסה הראשונה</strong>.</li>
+<li>עמדת ההלחמה מוכנה ובדוקה למיילסטון 9 (לוח הכוח) ולמיילסטון 10 (יום הסוללה).</li>
+<li>הסקיצות ‎00_hello_blink‎ עד ‎06_bt_mouse‎ ו-‎T2_mouse_starter‎ בתיקיית התלמיד.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">4. נקודות בטיחות</h2>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">1. שלושת כללי ההלחמה</span><br>המלחם גר על המעמד שלו; מנקים את הקצה על הספוג הלח ואף פעם לא באצבעות; לא נוגעים בקצה המתכת — הוא חם עוד דקות אחרי הכיבוי. מלחימים רק כשהמורה ליד. נגיעה בטעות: מים קרים מיד ואז קוראים למורה.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">2. רק התא של המורה</span><br>משתמשים רק בתא NCR18650B המוגן שהמורה נותן — אף פעם לא תא מהבית או ממכשיר ישן. בתוך התא המוגן יושב מעגל הגנה שעוצר טעינת יתר, פריקת יתר וקצר; תא אחר נראה זהה מבחוץ, בלי ההגנה בפנים.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">3. טוענים רק על לוח ה-TP4056 של הפרויקט</span><br>הלוח עוצר בדיוק ב-4.2V ומאט לקראת הסוף. מטען בלי שבב הגנה לא יודע לעצור.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">4. פלוס ומינוס — המורה בודק</span><br>התא נכנס למחזיק רק אחרי שהמורה בדק את הקוטביות מול הסימונים — לפני הפעם הראשונה ובכל פעם שהתא חוזר. תא הפוך שולח מתח הפוך לכל המעגל והורס לוחות בשנייה.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">5. לא יורדים מתחת ל-3.0V</span><br>כשהסמן מתחיל לדלג והחיבור נופל — זו הסוללה שמבקשת טעינה. מכבים ומחברים לטעינה, לא ממשיכים "עוד קצת".</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">6. אחסון בחצי טעינה, במגש</span><br>בסוף כל מפגש התא חוזר למגש החלקים; לפני הפסקה ארוכה בערך בחצי טעינה. אף פעם לא חופשי בתיק ליד מפתחות או מטבעות. תא חם, נפוח או פגום — ישר למורה.</p>
+<p style="background:#fdf7e6;padding:10px 13px"><span style="color:#7a5a12;font-weight:700">מה אומרים לתלמיד</span><br>"מלחימים רק כשאני לידכם, לא נוגעים בקצה המתכת של המלחם — והסוללה נכנסת אחרונה, אחרי שבדקתי את הכיוון שלה."</p>
+<hr>
+<p style="color:#5b6b7c;font-size:10pt"><b>כרטיסיות עזר:</b> R1 (בטיחות סוללה והלחמה) — נקראת בקול לפני כל מפגש הלחמה ולפני כל עבודה עם הסוללה.<br>
+<b>הסקיצות בדרייב:</b> Arduino_Projects \ &lt;nickname&gt; \ Project_9_Custom_Mouse \ ino_files \ &lt;sketch&gt;
+— במקום &lt;nickname&gt; הכינוי שהתלמיד בחר; בתוך ino_files יש תיקייה לכל סקיצה, ובתוכה הקובץ באותו שם.<br>
+הדף נבנה מ-build_teacher_materials.js. הגרסה להדפסה: materials_and_safety_he.html במאגר.</p>
+</body></html>

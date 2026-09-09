@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<title>פרויקט 5 — חומרים ובטיחות (למורה)</title></head>
+<body dir="rtl" style="direction:rtl;text-align:right;font-family:Arial,sans-serif">
+<h1 style="font-size:18pt;color:#0f4c81">פרויקט 5 — מכונית נשלטת מרחוק · חומרים ובטיחות</h1>
+<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-09</p>
+<p style="background:#eaf1f8;padding:9px 12px">אותה מכונית של פרויקט 4 עם מוח חדש. אין רכיבי כוח חדשים ואין הלחמה חדשה — הסיכונים הם אלה של פרויקט 4: גלגלים מסתובבים ובית סוללות.</p>
+<h2 style="font-size:13pt;color:#0f4c81">1. חומרים לכל תלמיד</h2>
+<table dir="rtl" style="border-collapse:collapse;width:100%">
+<tr><th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">כמות</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">פריט</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">הערה</th></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">המכונית של פרויקט 4, שלמה</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">שלדה, 4 מנועים, L298N ובית הסוללות 8×AA — הכול נשאר</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">לוח ESP32 DevKit — חדש</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">מחליף את הארדואינו באזור המוח, על אותו סקוץ' בדיוק</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">כבל Micro-USB</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">להעלאה בלבד; הנהיגה מתבצעת על סוללות</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">~8</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חוטי גישור לחיווט מחדש</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">שישה חוטי אות + VIN ו-GND</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">טלפון עם דפדפן</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">של התלמיד או של המורה — לא צריך אפליקציה ולא חשבון</td></tr>
+</table>
+<h2 style="font-size:13pt;color:#0f4c81">2. ציוד משותף לחדר</h2>
+<ul>
+<li>לוחות ESP32 חלופיים וכבלי Micro-USB בארון החלקים.</li>
+<li>אין צורך ברכיבי כוח חדשים: כניסות ה-L298N מקבלות לוגיקת 3.3V ישירות, ויציאת ה-5V של הבקר מזינה את ה-VIN של ה-ESP32.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">3. מה המורה מכין לפני המפגש</h2>
+<ul>
+<li>חבילת הלוחות esp32 (Espressif) מותקנת ב-Arduino IDE בכל עמדה ונבדקה עם ‎00_esp32_test‎.</li>
+<li>לכל עמדה נקבע מספר תחנה, שם רשת וסיסמה — נרשמים בדף המורה ועל כרטיס העמדה.</li>
+<li>סוללות AA טעונות; רצפה פנויה למסלול הנהיגה.</li>
+<li>הסקיצות ‎00_esp32_test‎, ‎01_wifi_drive‎ ו-‎T2_wifi_drive_starter‎ בתיקיית התלמיד.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">4. נקודות בטיחות</h2>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">1. הגלגלים באוויר בכל בדיקה על השולחן</span><br>מגביהים את המכונית לפני כל העלאה ובדיקה. מעבירים אותה ממקום למקום רק כשהמתג כבוי.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">2. מתג הסוללות כבוי לפני כל שינוי חיווט</span><br>גם החלפת המוח מ-Uno ל-ESP32 וגם כל תיקון חוט נעשים כשהמתג כבוי וה-USB מנותק.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">3. בית הסוללות</span><br>לא מקצרים את שני החוטים; כשהמכונית לא נוסעת — מכבים את המתג. אותו כלל מפרויקט 4.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">4. נוהגים ברצפה, לא על השולחן</span><br>מסלול פנוי, הרחק מקצה שולחן, ולא תופסים מכונית תוך כדי נסיעה. כפתור העצור בדף נשאר אדום — צבעי בטיחות לא מחליפים גם כשמעצבים את הדף בטייר 2.</p>
+<p style="background:#fdf7e6;padding:10px 13px"><span style="color:#7a5a12;font-weight:700">מה אומרים לתלמיד</span><br>"החשמל לא השתנה מפרויקט 4 והוא בטוח. מה שדורש תשומת לב זה אותם שני דברים: גלגלים שמסתובבים ומתג שצריך להיות כבוי כשעובדים על החיווט. כשבודקים על השולחן — הגלגלים באוויר."</p>
+<hr>
+<p style="color:#5b6b7c;font-size:10pt"><b>כרטיסיות עזר:</b> משתמשים בכרטיסיות העזר של פרויקט 4 (R4 בטיחות, R2 פרוטוקול תקיעות) — לפרויקט 5 אין סט עזר משלו.<br>
+<b>הסקיצות בדרייב:</b> Arduino_Projects \ &lt;nickname&gt; \ Project_5_Remote_Controlled_Car \ ino_files \ &lt;sketch&gt;
+— במקום &lt;nickname&gt; הכינוי שהתלמיד בחר; בתוך ino_files יש תיקייה לכל סקיצה, ובתוכה הקובץ באותו שם.<br>
+הדף נבנה מ-build_teacher_materials.js. הגרסה להדפסה: materials_and_safety_he.html במאגר.</p>
+</body></html>

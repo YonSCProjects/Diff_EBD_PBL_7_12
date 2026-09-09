@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>פרויקט 2 — חומרים ובטיחות (למורה)</title>
+<style>
+:root{
+  --ink:#1f2933; --muted:#5b6b7c; --line:#d7dee6; --bg:#ffffff;
+  --band:#0f4c81; --band-soft:#eaf1f8;
+  --warn:#a8321f; --warn-soft:#fdf0ec; --warn-line:#f0c4b8;
+  --say:#7a5a12; --say-soft:#fdf7e6; --say-line:#ecd9a4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Segoe UI","Noto Sans Hebrew",Arial,sans-serif;
+  font-size:11.4pt;line-height:1.55;direction:rtl}
+.sheet{max-width:820px;margin:0 auto;padding:18px 22px 26px}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+  border-bottom:3px solid var(--band);padding-bottom:8px;margin-bottom:14px}
+.top h1{margin:0;font-size:19pt;line-height:1.25;font-weight:700}
+.top h1 span{color:var(--band)}
+.top .kind{font-size:10pt;color:var(--muted);white-space:nowrap;padding-bottom:3px}
+.envelope{background:var(--band-soft);border-inline-start:4px solid var(--band);
+  padding:9px 12px;border-radius:4px;margin:0 0 16px;font-size:11pt}
+h2{font-size:12.5pt;margin:18px 0 7px;padding-bottom:3px;border-bottom:1px solid var(--line)}
+h2 .n{display:inline-block;min-width:1.5em;color:var(--band);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:10.4pt}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:right;vertical-align:top}
+th{background:#f4f7fa;font-weight:600;font-size:10pt}
+td.qty{white-space:nowrap;width:4.5em;text-align:center;font-variant-numeric:tabular-nums}
+td.item{width:34%;font-weight:600}
+td.note{color:var(--muted)}
+ul{margin:6px 0 0;padding-inline-start:20px}
+li{margin:3px 0}
+ol.safety{list-style:none;margin:8px 0 0;padding:0;counter-reset:s}
+ol.safety li{counter-increment:s;position:relative;padding:8px 42px 8px 12px;margin:0 0 6px;
+  background:var(--warn-soft);border:1px solid var(--warn-line);border-radius:5px}
+ol.safety li::before{content:counter(s);position:absolute;inset-inline-start:10px;top:8px;
+  width:22px;height:22px;border-radius:50%;background:var(--warn);color:#fff;
+  font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
+.say{background:var(--say-soft);border:1px solid var(--say-line);border-radius:5px;
+  padding:10px 13px;margin-top:10px}
+.say .lbl{font-size:9.5pt;color:var(--say);font-weight:700;letter-spacing:.02em;margin-bottom:3px}
+.say p{margin:0;font-size:11pt}
+.foot{margin-top:18px;padding-top:9px;border-top:1px solid var(--line);
+  font-size:9.6pt;color:var(--muted)}
+.foot b{color:var(--ink)}
+.path{font-family:Consolas,"Courier New",monospace;direction:ltr;unicode-bidi:embed;
+  display:inline-block;background:#f4f7fa;border:1px solid var(--line);border-radius:3px;
+  padding:1px 5px;font-size:9.2pt}
+@media print{
+  @page{size:A4;margin:12mm}
+  body{font-size:10.4pt}
+  .sheet{max-width:none;padding:0}
+  ol.safety li,tr,.say{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="top">
+    <h1>פרויקט 2 — <span>משחק זמן תגובה</span><br>חומרים ובטיחות</h1>
+    <div class="kind">דף למורה · עודכן 2026-09-09</div>
+  </div>
+
+  <p class="envelope">מעטפת בטיחות זהה לפרויקט 1 — 5 וולט, בלי הלחמה, מנועים או סוללות. הרכיב החדש היחיד הוא זמזם פיאזו.</p>
+
+  <h2><span class="n">1</span>חומרים לכל תלמיד</h2>
+  <table>
+    <thead><tr><th class="qty">כמות</th><th>פריט</th><th>הערה</th></tr></thead>
+    <tbody>
+      <tr><td class="qty">1</td><td class="item">ארדואינו Uno R3 + כבל USB</td><td class="note">בשימוש חוזר מפרויקט 1</td></tr>
+      <tr><td class="qty">1</td><td class="item">מטריצה מלאה</td><td class="note">בשימוש חוזר</td></tr>
+      <tr><td class="qty">1</td><td class="item">נורית LED 5 מ"מ + נגד 220Ω</td><td class="note">נורית ה"צא" — במצב שלוש הנוריות של טייר 2 היא המחוון המהיר</td></tr>
+      <tr><td class="qty">1</td><td class="item">לחצן זעיר + נגד 10kΩ</td><td class="note">הלחצן של השחקן</td></tr>
+      <tr><td class="qty">1</td><td class="item">זמזם פיאזו פסיבי קטן — חדש</td><td class="note">מופעל מפין דיגיטלי עם ‎tone()‎. רגל אחת לפין, רגל אחת ל-GND</td></tr>
+      <tr><td class="qty">2</td><td class="item">נוריות + 2 נגדים 220Ω נוספים</td><td class="note">רק למצב שלוש הנוריות בטייר 2 — צהוב ואדום מומלצים</td></tr>
+      <tr><td class="qty">1</td><td class="item">לחצן שני + נגד 10kΩ שני</td><td class="note">רק לגרסת שני השחקנים בטייר 3</td></tr>
+      <tr><td class="qty">~15</td><td class="item">חוטי גישור M-M</td><td class="note"></td></tr>
+    </tbody>
+  </table>
+
+  <h2><span class="n">2</span>ציוד משותף לחדר</h2>
+  <ul>
+      <li>קופסת זמזמים חלופיים ומלאי נוריות/נגדים בארון החלקים.</li>
+      <li>תוספת העלות מול פרויקט 1: כ-2–3 דולר לתלמיד (זמזם, לחצן שני, נגד שני).</li>
+  </ul>
+
+  <h2><span class="n">3</span>מה המורה מכין לפני המפגש</h2>
+  <ul>
+      <li>העמדות של פרויקט 1 נשארות כפי שהן — רק הזמזם מתווסף למגש.</li>
+      <li>כרטיסיות R1/R2/R4 מעודכנות לפרויקט 2 בכל עמדה.</li>
+      <li>הסקיצות ‎01_wait_flash_measure‎ ו-‎02_wait_flash_measure_buzzer‎ בתיקיית התלמיד.</li>
+  </ul>
+
+  <h2><span class="n">4</span>נקודות בטיחות</h2>
+  <ol class="safety">
+      <li><b>לא מקצרים 5V ל-GND</b>בפרויקט הזה הגורם הרגיל הוא לחצן שחוּבַּר בלי נגד ה-pull-down שלו, או חוט תועה על המטריצה.</li>
+      <li><b>לכל נורית נגד 220Ω</b>גם לנורית ה"צא" וגם לשתי נוריות המחוון של טייר 2.</li>
+      <li><b>את הזמזם מפעילים מפין, אף פעם לא ישירות מ-5V</b>זמזם פיאזו פסיבי בטוח לגמרי כשהוא מופעל מפין 8 עם ‎tone()‎. זמזם שמחובר ישירות בין 5V ל-GND יצפצף ברצף וימשוך יותר זרם מהמתוכנן.</li>
+  </ol>
+
+  <div class="say">
+    <div class="lbl">מה אומרים לתלמיד</div>
+    <p>"הארדואינו עובד על 5 וולט — מתח נמוך מכדי לפגוע בכם. גם הזמזם בטוח, אבל תמיד מפעילים אותו מפין ולא ישירות מ-5 וולט. אם משהו מפסיק לעבוד — עוצרים וקוראים לי."</p>
+  </div>
+
+  <p class="foot">
+    <b>כרטיסיות עזר:</b> R4 (תזכורת בטיחות) · R1 (חיווט) · R2 (פרוטוקול תקיעות)<br>
+    <b>הסקיצות בדרייב:</b>
+    <span class="path">G:\My Drive\Arduino_Projects\&lt;nickname&gt;\Project_2_Reaction_Time_Game\ino_files\</span>
+    — במקום <span class="path">&lt;nickname&gt;</span> הכינוי שהתלמיד בחר; בתוך <span class="path">ino_files</span> יש תיקייה לכל סקיצה, ובתוכה הקובץ באותו שם.<br>
+    הדף נבנה מ-<b>build_teacher_materials.js</b>; מקורות: כרטיסיות הכיתה בעברית, קובצי המקור של הפרויקטים ו-Arduino_PBL_Program.md.
+  </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<title>פרויקט 3 — חומרים ובטיחות (למורה)</title></head>
+<body dir="rtl" style="direction:rtl;text-align:right;font-family:Arial,sans-serif">
+<h1 style="font-size:18pt;color:#0f4c81">פרויקט 3 — לא להתקרב יותר מדי · חומרים ובטיחות</h1>
+<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-09</p>
+<p style="background:#eaf1f8;padding:9px 12px">מעטפת בטיחות זהה לפרויקטים 1–2 — 5 וולט, בלי הלחמה, מנועים או סוללות. הרכיב החדש הוא חיישן מרחק אולטרסוני.</p>
+<h2 style="font-size:13pt;color:#0f4c81">1. חומרים לכל תלמיד</h2>
+<table dir="rtl" style="border-collapse:collapse;width:100%">
+<tr><th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">כמות</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">פריט</th>
+<th style="border:1px solid #d7dee6;padding:5px 8px;background:#f4f7fa">הערה</th></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">ארדואינו Uno R3 + כבל USB</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">בשימוש חוזר</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">מטריצה מלאה</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">בשימוש חוזר</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חיישן מרחק HC-SR04 — חדש</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">ארבע רגליים: VCC, Trig, Echo, GND. עובד על 5V</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">נורית LED + נגד 220Ω</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">נורית האזעקה — אדום מומלץ</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">1</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">זמזם פיאזו פסיבי</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">בשימוש חוזר מפרויקט 2</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">2</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">נורית + נגד נוספים</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">רק לאזעקה הדו-שלבית של טייר 3 — נורית "מתקרבים" צהובה</td></tr>
+<tr><td style="border:1px solid #d7dee6;padding:5px 8px;text-align:center">~8</td><td style="border:1px solid #d7dee6;padding:5px 8px;font-weight:600">חוטי גישור M-M</td><td style="border:1px solid #d7dee6;padding:5px 8px;color:#5b6b7c">החיישן לבדו דורש ארבעה</td></tr>
+</table>
+<h2 style="font-size:13pt;color:#0f4c81">2. ציוד משותף לחדר</h2>
+<ul>
+<li>חיישני HC-SR04 חלופיים בארון החלקים.</li>
+<li>תוספת העלות מול פרויקט 2: כ-2 דולר לתלמיד (החיישן).</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">3. מה המורה מכין לפני המפגש</h2>
+<ul>
+<li>העמדות של פרויקטים 1–2 נשארות; רק החיישן מתווסף למגש.</li>
+<li>הסקיצות ‎01_distance_to_serial‎, ‎02_distance_led_alarm‎, ‎03_distance_full_alarm‎ בתיקיית התלמיד.</li>
+<li>משטח בדיקה פנוי מול החיישן (קיר או ספר) לכיול הסף.</li>
+</ul>
+<h2 style="font-size:13pt;color:#0f4c81">4. נקודות בטיחות</h2>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">1. לא מקצרים 5V ל-GND</span><br>כאן הגורם הנפוץ הוא VCC ו-GND של החיישן שמתגשרים בטעות.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">2. לנורית האזעקה נגד 220Ω בטור</span><br>כמו בכל פרויקט עד כה.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">3. הזמזם מופעל מפין 8 עם ‎tone()‎</span><br>אותו כלל של פרויקט 2 — לא ישירות בין 5V ל-GND.</p>
+<p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">4. רגלי החיישן</span><br>החלפה בין Trig ל-Echo רק מפסיקה את הקריאה. היפוך VCC/GND לזמן קצר לא הורס חיישן מודרני, אבל מתקנים ברגע שהקריאה נופלת. אין סכנת חום ואין סכנת התחשמלות.</p>
+<p style="background:#fdf7e6;padding:10px 13px"><span style="color:#7a5a12;font-weight:700">מה אומרים לתלמיד</span><br>"הארדואינו והחיישן עובדים שניהם על 5 וולט — מתח נמוך מכדי לפגוע בכם. את הזמזם מפעילים מפין, אף פעם לא ישירות מ-5 וולט. אם משהו מפסיק לעבוד — עוצרים וקוראים לי."</p>
+<hr>
+<p style="color:#5b6b7c;font-size:10pt"><b>כרטיסיות עזר:</b> R4 (תזכורת בטיחות) · R1 (חיווט) · R2 (פרוטוקול תקיעות)<br>
+<b>הסקיצות בדרייב:</b> Arduino_Projects \ &lt;nickname&gt; \ Project_3_Dont_Get_Too_Close \ ino_files \ &lt;sketch&gt;
+— במקום &lt;nickname&gt; הכינוי שהתלמיד בחר; בתוך ino_files יש תיקייה לכל סקיצה, ובתוכה הקובץ באותו שם.<br>
+הדף נבנה מ-build_teacher_materials.js. הגרסה להדפסה: materials_and_safety_he.html במאגר.</p>
+</body></html>

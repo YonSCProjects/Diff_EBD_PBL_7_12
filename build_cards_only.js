@@ -168,7 +168,6 @@ const CARD_STEMS = {
     'R:R4_safety_reminder',
     'R:R5_sketch_index',
     'R:R6_soldering_basics',
-    'T:T1_M1_meet_soldering',
     'T:T1_M2_solder_motor_leads',
     'T:T1_M3_assemble_chassis',
     'T:T1_M4_wire_driver_and_sensors',

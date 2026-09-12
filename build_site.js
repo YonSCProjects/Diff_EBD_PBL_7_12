@@ -36,6 +36,11 @@ const only = (() => {
   return i > 0 ? new Set(process.argv[i + 1].split(',').map(Number)) : null;
 })();
 
+// Project 9 (the personal mouse) stays off the student site — Yon's call on 2026-09-12,
+// keeping the site aligned with the eight-project Tnufa proposal. An explicit
+// --projects list overrides this if it ever needs to go back up.
+const EXCLUDE = new Set([9]);
+
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
   .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -62,7 +67,7 @@ function discover() {
       const cards = path.join(SRC, d, 'task_cards_he');
       return { n, dir: d, cards, ok: fs.existsSync(cards) };
     })
-    .filter((p) => p.ok && (!only || only.has(p.n)))
+    .filter((p) => p.ok && (only ? only.has(p.n) : !EXCLUDE.has(p.n)))
     .sort((a, b) => a.n - b.n);
 }
 

@@ -37,7 +37,7 @@
       <div style="margin-top:16px; font-size:12.5px; font-weight:600; color:rgba(255,255,255,0.68);">פרויקט #6 — תחנת מזג אוויר: שלב 1 מתוך 8</div>
 
       <h1 style="margin:10px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מכינים את המחשב — ספריות ראשונות</h1>
-      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;"><strong style="color:#fff;">בודקים שה-ESP32 עדיין מדבר עם המחשב ומתקינים שתי ספריות חדשות.</strong></p>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:56ch;"><strong style="color:#fff;">בודקים שה-ESP32 עדיין מדבר עם המחשב ושתי הספריות של הפרויקט כבר במקומן.</strong></p>
 
       <div style="margin-top:22px;">
         <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
@@ -74,13 +74,7 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">נכנסים ל-<span dir="ltr">Sketch → Include Library → Manage Libraries</span>, כותבים בחיפוש <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">DHT sensor library</code> ומתקינים את זו שכתוב עליה <strong>by Adafruit</strong>. כשנפתח חלון ששואל על ספרייה נוספת (<span dir="ltr">Adafruit Unified Sensor</span>) — לוחצים <strong dir="ltr">Install all</strong>. עושים את זה יחד עם המורה בפעם הראשונה.</p>
-        </div>
-
-        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
-          <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">באותו חלון כותבים בחיפוש <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">Adafruit SSD1306</code> ומתקינים. גם כאן נפתח חלון על ספרייה נוספת (<span dir="ltr">Adafruit GFX Library</span>) — לוחצים <strong dir="ltr">Install all</strong>.<span style="display:block; margin-top:6px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);">ליד כל ספרייה שהותקנה מופיעה התווית <span dir="ltr">INSTALLED</span>.</span></p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">נכנסים ל-<span dir="ltr">Sketch → Include Library → Manage Libraries</span> ובודקים ששתי הספריות של הפרויקט כבר כאן: מחפשים <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">DHT sensor library</code> (זו שכתוב עליה <strong>by Adafruit</strong>) ואחר כך <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px; background:oklch(0.96 0.01 248); color:oklch(0.42 0.1 248); border-radius:6px; padding:2px 7px; display:inline-block;">Adafruit SSD1306</code> — ליד שתיהן כתוב <span dir="ltr">INSTALLED</span>.<span style="display:block; margin-top:6px; font-size:13.5px; line-height:1.6; color:oklch(0.55 0.012 260);">המורה כבר התקין את הספריות בכל עמדה. חסרה אחת? קוראים למורה.</span></p>
         </div>
 
       </div>
@@ -89,18 +83,16 @@
       <div dir="ltr" style="border-radius:14px; overflow:hidden; background:oklch(0.22 0.012 260); box-shadow:0 14px 36px -22px rgba(20,20,40,0.7); margin-bottom:22px;">
         <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; background:oklch(0.27 0.015 260); border-bottom:1px solid oklch(0.32 0.015 260);">
           <span style="font-size:13px;">🔍</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Library Manager — what to click</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:oklch(0.7 0.01 260);">Library Manager — what you should see</span>
         </div>
         <pre style="margin:0; padding:16px 20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; color:oklch(0.88 0.01 260); overflow-x:auto;"><span style="color:oklch(0.7 0.01 260);">search: [ DHT sensor library        ]
 </span><span style="color:oklch(0.7 0.01 260);">────────────────────────────────────────────────
-</span><span style="color:oklch(0.88 0.01 260);">DHT sensor library  </span><span style="color:oklch(0.82 0.13 90);">by Adafruit</span><span style="color:oklch(0.88 0.01 260);">      [ INSTALL ]  </span><span style="color:oklch(0.82 0.13 90);">◄ this one
-</span><span style="color:oklch(0.7 0.01 260);">DHT sensor library for ESPx  by beegee   [ INSTALL ]    not this
-</span><span style="color:oklch(0.7 0.01 260);">SimpleDHT  by Winlin                     [ INSTALL ]    not this
+</span><span style="color:oklch(0.88 0.01 260);">DHT sensor library  </span><span style="color:oklch(0.82 0.13 90);">by Adafruit</span><span style="color:oklch(0.88 0.01 260);">      </span><span style="color:oklch(0.78 0.15 145);">INSTALLED</span><span style="color:oklch(0.82 0.13 90);">  ◄ this one
+</span><span style="color:oklch(0.7 0.01 260);">DHT sensor library for ESPx  by beegee                 not this
+</span><span style="color:oklch(0.7 0.01 260);">SimpleDHT  by Winlin                                   not this
 </span><span style="color:oklch(0.7 0.01 260);">────────────────────────────────────────────────
-</span><span style="color:oklch(0.88 0.01 260);">Install "Adafruit Unified Sensor" too?
-</span><span style="color:oklch(0.88 0.01 260);">      </span><span style="color:oklch(0.78 0.15 145);">[ INSTALL ALL ]</span><span style="color:oklch(0.7 0.01 260);">   [ Install without dependencies ]
-</span><span style="color:oklch(0.7 0.01 260);">────────────────────────────────────────────────
-</span><span style="color:oklch(0.88 0.01 260);">DHT sensor library  by Adafruit      </span><span style="color:oklch(0.78 0.15 145);">INSTALLED</span></pre>
+</span><span style="color:oklch(0.7 0.01 260);">search: [ Adafruit SSD1306          ]
+</span><span style="color:oklch(0.88 0.01 260);">Adafruit SSD1306  </span><span style="color:oklch(0.82 0.13 90);">by Adafruit</span><span style="color:oklch(0.88 0.01 260);">        </span><span style="color:oklch(0.78 0.15 145);">INSTALLED</span></pre>
       </div>
 
       <!-- what a library is -->
@@ -137,7 +129,6 @@
         </div>
         <div style="display:flex; flex-direction:column; gap:9px; font-size:15px; line-height:1.55; color:oklch(0.4 0.04 300);">
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם החיפוש מראה הרבה שמות דומים:</strong> בוחרים את זו שכתוב עליה <span dir="ltr">by Adafruit</span>.</span></div>
-          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם ההתקנה נראית תקועה:</strong> מחכים — היא מורידה קבצים מהאינטרנט. <strong>זה תקין, לא תקלה.</strong></span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span><strong>אם ההעלאה תקועה על <span dir="ltr">Connecting...</span>:</strong> מחזיקים את כפתור ה-BOOT לחוץ עד שהנקודות מתחילות לזוז.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>עדיין תקועים? קוראים למורה.</span></div>
         </div>

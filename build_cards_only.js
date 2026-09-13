@@ -237,6 +237,8 @@ const CARD_STEMS = {
   ],
   '8': [
     'R:R1_flight_safety',
+    'R:R3_safety_contract',
+    'R:R4_preflight_checklist',
     'T:T1_M1_meet_parts_contract',
     'T:T1_M2_press_fit_motors',
     'T:T1_M3_meet_mosfet_board',

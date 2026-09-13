@@ -39,6 +39,13 @@ ol.safety li::before{content:counter(s);position:absolute;inset-inline-start:10p
   width:22px;height:22px;border-radius:50%;background:var(--warn);color:#fff;
   font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
 ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
+ol.brief{list-style:none;margin:8px 0 0;padding:0;counter-reset:b}
+ol.brief li{counter-increment:b;position:relative;padding:8px 42px 8px 12px;margin:0 0 6px;
+  background:var(--band-soft);border:1px solid var(--line);border-radius:5px}
+ol.brief li::before{content:counter(b);position:absolute;inset-inline-start:10px;top:8px;
+  width:22px;height:22px;border-radius:50%;background:var(--band);color:#fff;
+  font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.brief b{display:block;color:var(--band);font-size:11pt;margin-bottom:2px}
 .say{background:var(--say-soft);border:1px solid var(--say-line);border-radius:5px;
   padding:10px 13px;margin-top:10px}
 .say .lbl{font-size:9.5pt;color:var(--say);font-weight:700;letter-spacing:.02em;margin-bottom:3px}
@@ -53,7 +60,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
   @page{size:A4;margin:12mm}
   body{font-size:10.4pt}
   .sheet{max-width:none;padding:0}
-  ol.safety li,tr,.say{break-inside:avoid}
+  ol.safety li,ol.brief li,tr,.say{break-inside:avoid}
 }
 </style>
 </head>
@@ -61,7 +68,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
 <div class="sheet">
   <div class="top">
     <h1>פרויקט 2 — <span>משחק זמן תגובה</span><br>חומרים ובטיחות</h1>
-    <div class="kind">דף למורה · עודכן 2026-09-09</div>
+    <div class="kind">דף למורה · עודכן 2026-09-13</div>
   </div>
 
   <p class="envelope">מעטפת בטיחות זהה לפרויקט 1 — 5 וולט, בלי הלחמה, מנועים או סוללות. הרכיב החדש היחיד הוא זמזם פיאזו.</p>
@@ -99,6 +106,13 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
       <li><b>לא מקצרים 5V ל-GND</b>בפרויקט הזה הגורם הרגיל הוא לחצן שחוּבַּר בלי נגד ה-pull-down שלו, או חוט תועה על המטריצה.</li>
       <li><b>לכל נורית נגד 220Ω</b>גם לנורית ה"צא" וגם לשתי נוריות המחוון של טייר 2.</li>
       <li><b>את הזמזם מפעילים מפין, אף פעם לא ישירות מ-5V</b>זמזם פיאזו פסיבי בטוח לגמרי כשהוא מופעל מפין 8 עם ‎tone()‎. זמזם שמחובר ישירות בין 5V ל-GND יצפצף ברצף וימשוך יותר זרם מהמתוכנן.</li>
+  </ol>
+
+  <h2><span class="n">5</span>תדריכים עם התלמיד</h2>
+  <p style="margin:6px 0 0;color:var(--muted);font-size:10.4pt">כרטיסיות התלמיד נושאות רק משפט שער («כדי להתקדם לשלב הזה עוברים קודם עם המורה על…») — התוכן המלא של כל תדריך נמצא כאן, אצל המורה.</p>
+  <ol class="brief">
+      <li><b>קצר של רכיב באותו טור</b>בתדריך החיווט מדגימים את הכלל: כל רכיב — שתי רגליים בשני טורים שונים. רכיב ששתי רגליו באותו טור מקוצר על עצמו: הוא לא יעבוד, ובמקרה של לד או כפתור זה עלול גם לאפס את הארדואינו.</li>
+      <li><b>נגד ההורדה בצד הלא נכון</b>נגד ההורדה של 10kΩ חייב להיות בין חיבור דיגיטלי 2 ל-GND — לא בין 5V ל-GND. בצד הלא נכון, כל לחיצה על הכפתור יוצרת קצר ומאפסת את הארדואינו. בדיקת האצבע שמדגימים: הנגד מחבר את חיבור דיגיטלי 2 ל-GND.</li>
   </ol>
 
   <div class="say">

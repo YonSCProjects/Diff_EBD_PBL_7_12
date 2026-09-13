@@ -56,12 +56,12 @@
         <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.42 0.06 285);">ערוץ 1 כבר מולחם ועבר בדיקה. הידיים שלכם כבר יודעות את הסדר — הכרטיס הזה נותן את מה שחייב לצאת נכון ואת הבדיקה שמוכיחה את זה.</p>
       </div>
 
-      <!-- WARNING -->
-      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
-        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+      <!-- BUILD NOTE -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:24px; line-height:1;">ℹ️</span>
         <div>
-          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">שתי הטעויות ששורפות את הלוח</div>
-          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">דיודה הפוכה היא קצר על הסוללה דרך המוספט ברגע שהשער עולה — והרכיב נשרף. הטבעת פונה אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</span>, תמיד. ולשונית שנוגעת בלשונית מחברת שני מנועים למנוע אחד — ולכן <strong>לפחות שני חורים ריקים</strong> בין מוספט למוספט.</p>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.38 0.012 260);">שני דברים שבודקים פעמיים</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.012 260);">הטבעת של כל דיודה פונה אל <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</span>, תמיד — משווים לתרשים לפני שמלחימים. ולשונית שנוגעת בלשונית מחברת שני מנועים למנוע אחד — ולכן <strong>לפחות שני חורים ריקים</strong> בין מוספט למוספט.</p>
         </div>
       </div>
 
@@ -94,14 +94,8 @@
       <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:26px;">
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
-          <span onClick="{{ toggle1 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check1 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">אומרים בקול את שלושת כללי ההלחמה מפרויקט 4. רק אחר כך מדליקים את המלחם.</p>
-        </div>
-
-        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle2 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check2 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">1</span>
           <div style="padding-top:3px;">
             <p style="margin:0 0 9px; font-size:16px; line-height:1.55;">בכל ערוץ חוזרים על אותו סדר שעבד בערוץ 1:</p>
             <div style="display:flex; flex-direction:column; gap:7px; font-size:15px; line-height:1.5;">
@@ -118,25 +112,25 @@
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">2</span>
           <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;"><strong>ערוץ 2</strong> — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">Q2</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">D2</span> על הפדים <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M2+</span>, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M2−</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">G2</span>. זה המנוע ה<strong>ימני</strong> — מסמנים <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M2 / G2 / RIGHT</span>.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
           <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;"><strong>ערוץ 3</strong> — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">Q3</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">D3</span> על הפדים <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M3+</span>, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M3−</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">G3</span>. זה המנוע ה<strong>אחורי</strong> — מסמנים <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M3 / G3 / BACK</span>.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle5 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check5 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
           <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;"><strong>ערוץ 4</strong> — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">Q4</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">D4</span> על הפדים <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M4+</span>, <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M4−</span> ו-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">G4</span>. זה המנוע ה<strong>שמאלי</strong> — מסמנים <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M4 / G4 / LEFT</span>.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle6 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check6 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
           <div style="padding-top:3px;">
             <p style="margin:0; font-size:16px; line-height:1.55;">מכסים בשרוול מתכווץ את <strong>ארבע הלשוניות</strong> של המוספטים.</p>
             <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">הלשונית היא ה-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">Drain</span> של המוספט ולוח הפחמן של השלדה מוליך חשמל ויושב מילימטר מתחת ללוח.</p>
@@ -145,7 +139,7 @@
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.04 35); border:1px solid oklch(0.85 0.07 35); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle7 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.08 35); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check7 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.58 0.16 35); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">7</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.58 0.16 35); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">6</span>
           <div style="padding-top:3px;">
             <p style="margin:0; font-size:16px; line-height:1.55;">מלחימים את הקבל 220µF על שני הפסים: <strong>הרגל הארוכה אל פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</span></strong> והצד עם הפס המסומן על הגוף אל פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</span>.</p>
             <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.42 0.08 32);">קבל הפוך הוא אחת משלוש הסיבות לצפצוף בין <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">BAT+</span> ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">GND</span> בבדיקה שבסוף הכרטיס.</p>
@@ -154,13 +148,13 @@
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle8 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check8 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">8</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">7</span>
           <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מוסיפים <strong>שני פדים</strong> — אחד על פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</span> ואחד על פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</span>. מהם ייצאו בהמשך שני החוטים אל הממיר <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">MT3608</span>.</p>
         </div>
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.97 0.03 300); border:1px solid oklch(0.9 0.04 300); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle9 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.05 300); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check9 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.52 0.12 300); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">9</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.52 0.12 300); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">8</span>
           <div style="padding-top:3px;">
             <p style="margin:0; font-size:16px; line-height:1.55;">קוראים למורה: <strong>המורה מלחים את מחבר הסוללה</strong> (<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">PH2.0</span>) אל פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</span> ואל פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</span>.</p>
             <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.5 0.05 300);">זה החיבור היחיד בלוח שנושא את כל זרם הסוללה — ולכן הוא נשאר של המורה גם במסלול 2.</p>
@@ -168,7 +162,7 @@
         </div>
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle10 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check10 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">10</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">9</span>
           <div style="padding-top:3px;">
             <p style="margin:0; font-size:16px; line-height:1.55;">מכבים את המלחם ומושכים <strong>משיכה עדינה</strong> בכל חיבור חדש — שלושת הערוצים, הקבל ושני הפדים.</p>
             <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">חיבור טוב לא זז. מה שזז — מלחימים מחדש עכשיו, לפני שמתחילים לבדוק.</p>
@@ -191,7 +185,7 @@
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle11 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check11 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">11</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">10</span>
           <div style="padding-top:3px;">
             <p style="margin:0; font-size:16px; line-height:1.55;">מולטימטר ב<strong>מצב רציפות</strong> — זה שמצפצף: פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</span> מול פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</span> — <strong>אין צפצוף</strong>.</p>
             <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">צפצוף כאן = קצר. עוצרים, לא מחברים ללוח כלום וקוראים למורה.</p>
@@ -200,7 +194,7 @@
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle12 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check12 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">12</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">11</span>
           <div style="padding-top:3px;">
             <p style="margin:0 0 9px; font-size:16px; line-height:1.55;">באותו מצב עוברים על הלשוניות של ארבעת המוספטים. בכל שלוש הבדיקות <strong>אין צפצוף</strong>:</p>
             <div style="display:flex; flex-direction:column; gap:7px; font-size:15px; line-height:1.5;">
@@ -214,7 +208,7 @@
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle13 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check13 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">13</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">12</span>
           <div style="padding-top:3px;">
             <p style="margin:0 0 9px; font-size:16px; line-height:1.55;">מעבירים ל<strong>מצב אוהם</strong> בטווח <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">20k</span> ועושים שתי בדיקות על כל ארבעת הערוצים:</p>
             <div style="display:flex; flex-direction:column; gap:7px; font-size:15px; line-height:1.5;">
@@ -226,7 +220,7 @@
 
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle14 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check14 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">14</span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">13</span>
           <div style="padding-top:3px;">
             <p style="margin:0; font-size:16px; line-height:1.55;">עוברים ל<strong>מצב בדיקת דיודה</strong> ובודקים את ארבע הדיודות, אחת אחרי השנייה: מחוש אדום על פד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">M−</span> ומחוש שחור על פס <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">BAT+</span> — בין 0.2V ל-0.35V. מחליפים מחושים — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">OL</span>.</p>
             <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.55 0.012 260);">זו הבדיקה שתופסת טבעת בכיוון ההפוך — אותה בדיקה שעשיתם בערוץ 1, עכשיו על כל ארבעת הערוצים.</p>
@@ -294,12 +288,6 @@ Diode test mode
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>פד <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">G</span> מראה <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">OL</span> — כנראה הטווח: מכוונים ל-<span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13.5px;">20k</span> ומוודאים שהמחוש נוגע בנחושת ולא בציפוי.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>כל תוצאה שלא נראית כמו אף אחת מהאפשרויות כאן — לא ממשיכים לשלב הבא וקוראים למורה.</span></div>
         </div>
-      </div>
-
-      <!-- SAFETY FOOTER (brief: the short version on every card) -->
-      <div style="display:flex; gap:11px; align-items:flex-start; margin-top:26px; padding-top:16px; border-top:1px solid oklch(0.92 0.006 85);">
-        <span style="flex:none; font-size:16px; line-height:1.5;">🛡️</span>
-        <p style="margin:0; font-size:12.5px; line-height:1.6; color:oklch(0.55 0.012 260);">זה הפרויקט האחד שבו החומרה יכולה לפגוע בכם — <strong>המדחפים והסוללה</strong>. בגלל זה המורה מחזיק את שניהם, בגלל זה חובשים משקפי מגן בכל רגע שמנוע יכול להסתובב, בגלל זה הרחפן תמיד על חוט ובגלל זה כל אחד רשאי להגיד <span dir="ltr">STOP</span>. כל הכללים בכרטיסיית <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:11.5px;">R1</span>.</p>
       </div>
 
     </div>

@@ -3,7 +3,7 @@
 <title>פרויקט 2 — חומרים ובטיחות (למורה)</title></head>
 <body dir="rtl" style="direction:rtl;text-align:right;font-family:Arial,sans-serif">
 <h1 style="font-size:18pt;color:#0f4c81">פרויקט 2 — משחק זמן תגובה · חומרים ובטיחות</h1>
-<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-09</p>
+<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-13</p>
 <p style="background:#eaf1f8;padding:9px 12px">מעטפת בטיחות זהה לפרויקט 1 — 5 וולט, בלי הלחמה, מנועים או סוללות. הרכיב החדש היחיד הוא זמזם פיאזו.</p>
 <h2 style="font-size:13pt;color:#0f4c81">1. חומרים לכל תלמיד</h2>
 <table dir="rtl" style="border-collapse:collapse;width:100%">
@@ -34,6 +34,10 @@
 <p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">1. לא מקצרים 5V ל-GND</span><br>בפרויקט הזה הגורם הרגיל הוא לחצן שחוּבַּר בלי נגד ה-pull-down שלו, או חוט תועה על המטריצה.</p>
 <p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">2. לכל נורית נגד 220Ω</span><br>גם לנורית ה"צא" וגם לשתי נוריות המחוון של טייר 2.</p>
 <p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">3. את הזמזם מפעילים מפין, אף פעם לא ישירות מ-5V</span><br>זמזם פיאזו פסיבי בטוח לגמרי כשהוא מופעל מפין 8 עם ‎tone()‎. זמזם שמחובר ישירות בין 5V ל-GND יצפצף ברצף וימשוך יותר זרם מהמתוכנן.</p>
+<h2 style="font-size:13pt;color:#0f4c81">5. תדריכים עם התלמיד</h2>
+<p style="color:#5b6b7c;font-size:10pt">כרטיסיות התלמיד נושאות רק משפט שער («כדי להתקדם לשלב הזה עוברים קודם עם המורה על…») — התוכן המלא של כל תדריך נמצא כאן, אצל המורה.</p>
+<p style="background:#eaf1f8;padding:8px 10px"><span style="color:#0f4c81;font-weight:700">1. קצר של רכיב באותו טור</span><br>בתדריך החיווט מדגימים את הכלל: כל רכיב — שתי רגליים בשני טורים שונים. רכיב ששתי רגליו באותו טור מקוצר על עצמו: הוא לא יעבוד, ובמקרה של לד או כפתור זה עלול גם לאפס את הארדואינו.</p>
+<p style="background:#eaf1f8;padding:8px 10px"><span style="color:#0f4c81;font-weight:700">2. נגד ההורדה בצד הלא נכון</span><br>נגד ההורדה של 10kΩ חייב להיות בין חיבור דיגיטלי 2 ל-GND — לא בין 5V ל-GND. בצד הלא נכון, כל לחיצה על הכפתור יוצרת קצר ומאפסת את הארדואינו. בדיקת האצבע שמדגימים: הנגד מחבר את חיבור דיגיטלי 2 ל-GND.</p>
 <p style="background:#fdf7e6;padding:10px 13px"><span style="color:#7a5a12;font-weight:700">מה אומרים לתלמיד</span><br>"הארדואינו עובד על 5 וולט — מתח נמוך מכדי לפגוע בכם. גם הזמזם בטוח, אבל תמיד מפעילים אותו מפין ולא ישירות מ-5 וולט. אם משהו מפסיק לעבוד — עוצרים וקוראים לי."</p>
 <hr>
 <p style="color:#5b6b7c;font-size:10pt"><b>כרטיסיות עזר:</b> R4 (תזכורת בטיחות) · R1 (חיווט) · R2 (פרוטוקול תקיעות)<br>

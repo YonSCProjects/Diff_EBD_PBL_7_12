@@ -48,15 +48,11 @@
         <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.42 0.06 285);">מתכננים, בונים, בודקים ומראים. הבסיס הוא הקוד המכוונן שלכם מסוף מסלול 2 — כל הרחבה נבנית עליו. הכול נשמר במחשב הזה — אפשר לחזור ולערוך בכל רגע.</p>
       </div>
 
-      <!-- governing safety box -->
-      <div style="background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
+      <!-- free-pins info box -->
+      <div style="background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:18px 20px; margin-bottom:28px;">
         <div style="display:flex; gap:14px; align-items:flex-start;">
-          <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
-          <div>
-            <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">גם הרחבה חדשה עוברת את אותם כללים</div>
-            <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);"><strong>מלחימים רק כשהמורה ליד</strong> ולא נוגעים בקצה המתכת של המלחם. לפני שמחברים או מנתקים חוט — מכבים את המתג. סוללה חמה, נפוחה או פגועה עוברת למורה מיד. כל הכללים בכרטיסיית <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R1</span>.</p>
-            <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:oklch(0.5 0.06 32);">חומרה חדשה מתחברת רק לפינים הפנויים — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">18, 21, 38, 47</span>. כל שאר הפינים שייכים לעכבר העובד ולא נוגעים בהם.</p>
-          </div>
+          <span style="flex:none; font-size:24px; line-height:1;">ℹ️</span>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.012 260);">חומרה חדשה מתחברת רק לפינים הפנויים — <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:13px;">18, 21, 38, 47</span>; שאר הפינים שייכים לעכבר העובד.</p>
         </div>
       </div>
 
@@ -177,12 +173,11 @@
           </div>
         </div>
 
-        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:14px; padding:15px 16px;">
-          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.12 35); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.16 35)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.55 0.16 35); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
+        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
+          <span onClick="{{ toggle3 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check3 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
+          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">3</span>
           <div style="padding-top:3px; flex:1; min-width:0;">
-            <p style="margin:0; font-size:16px; line-height:1.55; color:oklch(0.38 0.08 32);">אם ההרחבה דורשת הלחמה — <strong>מלחימים רק כשהמורה ליד</strong>.</p>
-            <p style="margin:6px 0 0; font-size:13.5px; line-height:1.5; color:oklch(0.5 0.05 35);">אומרים את שלושת כללי ההלחמה בקול לפני שהמלחם נדלק — והמלחם חוזר למעמד בין הלחמה להלחמה.</p>
+            <p style="margin:0; font-size:16px; line-height:1.55;">אם ההרחבה דורשת הלחמה — עוברים קודם עם המורה על <strong>הדרכת ההלחמה</strong>, והמורה לידכם בזמן ההלחמה.</p>
           </div>
         </div>
       </div>
@@ -333,11 +328,6 @@
         <p style="margin:0; font-size:15.5px; line-height:1.6; color:rgba(255,255,255,0.92); max-width:58ch;">רעיון שבחרתם, תוכנית שכתבתם, חומרה שחיברתם וקוד שבניתם עם קלוד קוד על גבי הקוד שכיווננתם בעצמכם — עכבר אחד בעולם, בדיוק בשביל היד שלכם.</p>
       </div>
 
-      <!-- SAFETY FOOTER (brief: the short version on every card) -->
-      <div style="display:flex; gap:11px; align-items:flex-start; margin-top:26px; padding-top:16px; border-top:1px solid oklch(0.92 0.006 85);">
-        <span style="flex:none; font-size:16px; line-height:1.5;">🛡️</span>
-        <p style="margin:0; font-size:12.5px; line-height:1.6; color:oklch(0.55 0.012 260);">בפרויקט הזה שני דברים דורשים כבוד — <strong>המלחם והסוללה</strong>. מלחימים רק כשהמורה ליד ולא נוגעים בקצה המתכת של המלחם — והסוללה נכנסת למחזיק רק אחרי שהמורה בדק את הכיוון שלה. סוללה חמה, נפוחה או פגועה עוברת למורה מיד. כל הכללים בכרטיסיית <span dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:11.5px;">R1</span>.</p>
-      </div>
 
     </div>
   </div>

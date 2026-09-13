@@ -36,7 +36,7 @@
 
       <div style="margin-top:16px; font-size:12.5px; font-weight:600; color:rgba(255,255,255,0.65);">פרויקט #4 — מכונית עוקבת קו: שלב 3 מתוך 7</div>
       <h1 style="margin:10px 0 0; font-size:30px; line-height:1.22; font-weight:700; letter-spacing:-0.01em; max-width:30ch;">מחווטים את בקר המנועים ואת החיישנים</h1>
-      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:58ch;">אחרי ההלחמה וההרכבה — מחברים הכול יחד. זהו שלב החיווט הגדול של המכונית: המנועים, הסוללות, בקר המנועים <strong dir="ltr" style="color:#fff; font-family:'JetBrains Mono',monospace; font-size:14px;">L298N</strong> ושני חיישני הקו. הרבה חוטים, אבל כל אחד מהם פשוט — עובדים לאט, חוט אחר חוט, מול כרטיס העזר <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R1</span>. בשלב הזה אין מלחם ואין קוד: בסוף השלב שום דבר עדיין לא זז וזה בכוונה — הקוד שמניע את הגלגלים מגיע בשלב הבא.</p>
+      <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.85); max-width:58ch;">אחרי ההלחמה וההרכבה — מחברים הכול יחד. זהו שלב החיווט הגדול של המכונית: המנועים, הסוללות, בקר המנועים <strong dir="ltr" style="color:#fff; font-family:'JetBrains Mono',monospace; font-size:14px;">L298N</strong> ושני חיישני הקו. הרבה חוטים, אבל כל אחד מהם פשוט — עובדים לאט, חוט אחר חוט, מול כרטיס העזר <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R1</span>. בשלב הזה אין קוד: בסוף השלב שום דבר עדיין לא זז וזה בכוונה — הקוד שמניע את הגלגלים מגיע בשלב הבא.</p>
 
       <div style="margin-top:22px;">
         <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:8px;">
@@ -136,20 +136,14 @@
           <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים חוט בין <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> של הבקר ל-<strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> של הארדואינו — זהו <strong>חוט ההארקה המשותפת</strong>. לארדואינו יש שלושה חיבורי <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> — החוט הזה תופס את הראשון מהם.</p>
         </div>
 
-        <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.95 0.04 35); border:1px solid oklch(0.85 0.07 35); border-radius:14px; padding:15px 16px;">
-          <span onClick="{{ toggle10 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.78 0.08 35); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check10 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
-          <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.58 0.16 35); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">5</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;"><strong>שני חוטי הסוללות אף פעם לא נוגעים זה בזה ישירות</strong> — זה קצר חשמלי (הכלל המלא בכרטיס <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R4</span>).</p>
-        </div>
-
       </div>
 
-      <!-- WARNING -->
-      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
-        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+      <!-- INFO -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:24px; line-height:1;">ℹ️</span>
         <div>
-          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">החוט שהכי קל לשכוח — ההארקה המשותפת</div>
-          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">לבקר המנועים יש חשמל מהסוללות ולארדואינו יש חשמל משלו. בלי חוט משותף בין <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> ל-<strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> הם לא מדברים באותה "שפה חשמלית" — ואז שום דבר לא יזוז אחרי ההעלאה, בלי שום הודעת שגיאה. זו הטעות הנפוצה ביותר בפרויקט הזה ולכן בודקים את חוט ההארקה פעמיים.</p>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.38 0.012 260);">החוט שהכי קל לשכוח — ההארקה המשותפת</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.012 260);">לבקר המנועים יש חשמל מהסוללות ולארדואינו יש חשמל משלו. בלי חוט משותף בין <strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> ל-<strong dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:14px;">GND</strong> הם לא מדברים באותה "שפה חשמלית" — ואז שום דבר לא יזוז אחרי ההעלאה, בלי שום הודעת שגיאה. זו הטעות הנפוצה ביותר בפרויקט הזה ולכן בודקים את חוט ההארקה פעמיים.</p>
         </div>
       </div>
 
@@ -339,7 +333,7 @@ Battery (−) black ───  GND
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>הרבה חוטים בשלב אחד — מאטים ועובדים חוט אחר חוט: מחברים חוט, מסמנים אותו מול <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R1</span> וממשיכים לחוט הבא.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>לא בטוחים לאן מחברים חוט? מחפשים אותו בטבלה של <span dir="ltr" style="display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; border-radius:999px; background:oklch(0.94 0.03 248); border:1.5px solid oklch(0.45 0.11 248); color:oklch(0.45 0.11 248); font-family:'JetBrains Mono',monospace; font-size:12.5px; font-weight:700; padding:0 6px; vertical-align:middle;">R1</span> — כל חוט של המכונית מופיע שם.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>חוט לא מחזיק בהדק הבורג — משחררים את הבורג, מכניסים את החוט עמוק יותר ומהדקים שוב.</span></div>
-          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>אם חוט מולחם השתחרר או נשבר — <strong>קוראים למורה, תמיד</strong>. כל תיקון הלחמה נעשה יחד עם המורה בעמדת ההלחמה.</span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>אם חוט מולחם השתחרר או נשבר — <strong>קוראים למורה</strong>.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>כשמסיימים והכול נראה נכון, קוראים למורה לבדיקה המשותפת — זה חלק מהשלב.</span></div>
         </div>
       </div>

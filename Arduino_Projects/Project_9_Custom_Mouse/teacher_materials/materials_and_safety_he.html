@@ -39,6 +39,13 @@ ol.safety li::before{content:counter(s);position:absolute;inset-inline-start:10p
   width:22px;height:22px;border-radius:50%;background:var(--warn);color:#fff;
   font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
 ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
+ol.brief{list-style:none;margin:8px 0 0;padding:0;counter-reset:b}
+ol.brief li{counter-increment:b;position:relative;padding:8px 42px 8px 12px;margin:0 0 6px;
+  background:var(--band-soft);border:1px solid var(--line);border-radius:5px}
+ol.brief li::before{content:counter(b);position:absolute;inset-inline-start:10px;top:8px;
+  width:22px;height:22px;border-radius:50%;background:var(--band);color:#fff;
+  font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.brief b{display:block;color:var(--band);font-size:11pt;margin-bottom:2px}
 .say{background:var(--say-soft);border:1px solid var(--say-line);border-radius:5px;
   padding:10px 13px;margin-top:10px}
 .say .lbl{font-size:9.5pt;color:var(--say);font-weight:700;letter-spacing:.02em;margin-bottom:3px}
@@ -53,7 +60,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
   @page{size:A4;margin:12mm}
   body{font-size:10.4pt}
   .sheet{max-width:none;padding:0}
-  ol.safety li,tr,.say{break-inside:avoid}
+  ol.safety li,ol.brief li,tr,.say{break-inside:avoid}
 }
 </style>
 </head>
@@ -61,7 +68,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
 <div class="sheet">
   <div class="top">
     <h1>פרויקט 9 — <span>עכבר אישי</span><br>חומרים ובטיחות</h1>
-    <div class="kind">דף למורה · עודכן 2026-09-09</div>
+    <div class="kind">דף למורה · עודכן 2026-09-13</div>
   </div>
 
   <p class="envelope">שני דברים דורשים כבוד: <strong>המלחם והסוללה</strong>. אין מדחפים ואין משקפי מגן — הסכנות כאן הן מלחם חם אחד ותא ליתיום אחד.</p>
@@ -107,6 +114,18 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
       <li><b>פלוס ומינוס — המורה בודק</b>התא נכנס למחזיק רק אחרי שהמורה בדק את הקוטביות מול הסימונים — לפני הפעם הראשונה ובכל פעם שהתא חוזר. תא הפוך שולח מתח הפוך לכל המעגל והורס לוחות בשנייה.</li>
       <li><b>לא יורדים מתחת ל-3.0V</b>כשהסמן מתחיל לדלג והחיבור נופל — זו הסוללה שמבקשת טעינה. מכבים ומחברים לטעינה, לא ממשיכים "עוד קצת".</li>
       <li><b>אחסון בחצי טעינה, במגש</b>בסוף כל מפגש התא חוזר למגש החלקים; לפני הפסקה ארוכה בערך בחצי טעינה. אף פעם לא חופשי בתיק ליד מפתחות או מטבעות. תא חם, נפוח או פגום — ישר למורה.</li>
+  </ol>
+
+  <h2><span class="n">5</span>תדריכים עם התלמיד</h2>
+  <p style="margin:6px 0 0;color:var(--muted);font-size:10.4pt">כרטיסיות התלמיד נושאות רק משפט שער («כדי להתקדם לשלב הזה עוברים קודם עם המורה על…») — התוכן המלא של כל תדריך נמצא כאן, אצל המורה.</p>
+  <ol class="brief">
+      <li><b>טקס פתיחת הפרויקט (משפט השער של כרטיס 1 מפנה לכאן)</b>המורה והתלמיד קוראים בקול יחד את שלושת כללי ההלחמה ואת כללי הסוללה מכרטיסיית R1, ואז שניהם חותמים על חוזה הבטיחות — "החתימה אומרת: הכרנו את הכללים ובונים לפיהם". דף החוזה נשמר אצל המורה.</li>
+      <li><b>הצגת הסוללה במפגש הראשון</b>המורה מראה את הסוללה ולא מוסר אותה לידיים — היא נשארת אצלו עד שלב 10, יום הסוללה.</li>
+      <li><b>טקס לפני כל הדלקת מלחם</b>התלמיד — לא המורה — אומר בקול את שלושת כללי ההלחמה: "אלה אותם שלושה כללים מפרויקטים 4 ו-8. אתם כבר יודעים אותם — לכן אתם אומרים אותם, לא המורה." המלחם נדלק רק כשהמורה יושב ליד.</li>
+      <li><b>בדיקת עמדה לפני הלחמה</b>לפני שמדליקים — הספוג רטוב, המעמד במקום והלוח מונח ישר לפני התלמיד.</li>
+      <li><b>גבול ההשגחה בהלחמה</b>המורה יושב ליד התלמיד מהרגע שהמלחם נדלק ועד שהוא מכובה — ולא יוצא מהעמדה באמצע. בהלחמה אין ניסיונות לבד: כל תקיעה עוברת מיד למורה.</li>
+      <li><b>סגירת יום הסוללה</b>בסוף יום הסוללה, אחרי שהמתג חוזר ל-OFF, המורה מוביל קריאה בקול של כללי הסוללה מכרטיסיית R1 — פעם אחת נוספת, כחתימת היום.</li>
+      <li><b>הרחבות מסלול 3</b>גם הרחבה חדשה עוברת את אותם כללים: הלחמה רק ליד המורה ואחרי הדרכת ההלחמה, מכבים את המתג לפני חיבור או ניתוק חוט, חומרה חדשה מתחברת רק לפינים הפנויים 18, 21, 38, 47 — והמורה עובר על תוכנית החיווט של ההרחבה לפני שהיא מקבלת חשמל.</li>
   </ol>
 
   <div class="say">

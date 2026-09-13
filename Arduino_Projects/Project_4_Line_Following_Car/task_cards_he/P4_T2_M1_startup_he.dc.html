@@ -118,7 +118,7 @@
 
         <div style="background:oklch(0.99 0.003 85); border:1px solid oklch(0.9 0.006 85); border-radius:14px; padding:16px 18px;">
           <div style="font-weight:700; font-size:15.5px; color:oklch(0.32 0.02 260); margin-bottom:6px;">בונים מהתחלה?</div>
-          <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.4 0.012 260);">עוברים יחד עם המורה על כרטיסי הבנייה של גרסה 1 — שלבים 1 עד 4 (עמדת ההלחמה, הלחמת המנועים, הרכבת השלדה, החיווט) — וחוזרים לכאן. מלחימים רק יחד עם המורה, לא נוגעים בקצה המתכת של המלחם ומסתכלים היכן מניחים אותו.</p>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:oklch(0.4 0.012 260);">עוברים יחד עם המורה על כרטיסי הבנייה של גרסה 1 — שלבים 1 עד 4 (עמדת ההלחמה, הלחמת המנועים, הרכבת השלדה, החיווט) — וחוזרים לכאן.</p>
         </div>
 
       </div>
@@ -215,12 +215,12 @@
         <div style="padding:12px 16px; background:#fff; border-top:1px solid oklch(0.94 0.006 85); font-size:13.5px; line-height:1.6; color:oklch(0.45 0.012 260);"><strong>המכונית המלאה:</strong> הבקר עם המנועים ומחזיק הסוללות, חיישני הקו מלפנים ומפצל ה-Y שמחלק להם את ה-5V. החוט השחור <strong>העבה</strong> הוא ★ <strong>ההארקה המשותפת</strong> — <span dir="ltr">L298N GND ↔ Arduino GND</span>.</div>
       </div>
 
-      <!-- common-ground warning -->
-      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
-        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
+      <!-- common-ground info -->
+      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:18px 20px; margin-bottom:28px;">
+        <span style="flex:none; font-size:24px; line-height:1;">ℹ️</span>
         <div>
-          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">החוט החשוב ביותר במכונית — הארקה משותפת</div>
-          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">בקר המנועים והארדואינו חייבים לחלוק חוט GND משותף (<span dir="ltr">L298N GND ↔ Arduino GND</span>). בלעדיו המכונית לא נוסעת, או מתנהגת מוזר בלי הסבר — וזו הטעות הנפוצה ביותר בפרויקט הזה. אם משהו לא עובד, בודקים קודם כול את החוט הזה.</p>
+          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.38 0.012 260);">החוט החשוב ביותר במכונית — הארקה משותפת</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.012 260);">בקר המנועים והארדואינו חייבים לחלוק חוט GND משותף (<span dir="ltr">L298N GND ↔ Arduino GND</span>). בלעדיו המכונית לא נוסעת, או מתנהגת מוזר בלי הסבר — וזו הטעות הנפוצה ביותר בפרויקט הזה. אם משהו לא עובד, בודקים קודם כול את החוט הזה.</p>
         </div>
       </div>
 
@@ -289,7 +289,7 @@
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>המכונית לא זזה בכלל? בודקים את מתג הסוללות, את הסוללות עצמן — ואת חוט ההארקה המשותפת (הטעות הנפוצה ביותר).</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>גלגל אחד מסתובב אחורה? מחליפים בין שני החוטים של אותו מנוע בהדקי ה-OUT של בקר המנועים — 30 שניות וזה מסודר.</span></div>
           <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>המכונית בורחת מהקו במקום לעקוב אחריו? כנראה ההגדרה <code dir="ltr" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; background:oklch(0.95 0.006 260); border-radius:5px; padding:1px 6px; display:inline-block;">LINE_IS_HIGH</code> הפוכה. מבקשים מקלוד קוד לעזור להפוך אותה ומעלים מחדש — ואם רוצים, קוראים גם למורה.</span></div>
-          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>חיבור הלחמה התרופף מאז גרסה 1? זו תחזוקה, לא כישלון. כל דבר שקשור להלחמה — <strong>קוראים למורה, תמיד.</strong></span></div>
+          <div style="display:flex; gap:9px;"><span style="flex:none; color:oklch(0.6 0.12 300);">●</span><span>חיבור הלחמה התרופף מאז גרסה 1? זו תחזוקה, לא כישלון — <strong>קוראים למורה</strong> ומתקנים יחד.</span></div>
         </div>
       </div>
 

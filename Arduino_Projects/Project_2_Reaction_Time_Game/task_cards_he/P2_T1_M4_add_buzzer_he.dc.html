@@ -51,15 +51,6 @@
 
       <p style="margin:0 0 22px; font-size:16.5px; line-height:1.6; color:oklch(0.46 0.012 260);">הלד והכפתור נשארים בדיוק כמו קודם — רק מוסיפים זמזם.</p>
 
-      <!-- WARNING -->
-      <div style="display:flex; gap:14px; align-items:flex-start; background:oklch(0.95 0.05 35); border:1.5px solid oklch(0.78 0.12 35); border-radius:16px; padding:18px 20px; margin-bottom:28px;">
-        <span style="flex:none; font-size:24px; line-height:1;">⚠️</span>
-        <div>
-          <div style="font-weight:700; font-size:15.5px; margin-bottom:5px; color:oklch(0.48 0.15 32);">לא לחבר ישר ל-5V</div>
-          <p style="margin:0; font-size:15.5px; line-height:1.6; color:oklch(0.42 0.08 32);">אסור לחבר את הזמזם ישירות בין <strong>5V ל-GND</strong>. תמיד מפעילים אותו מ<strong>חיבור דיגיטלי 8 של הארדואינו</strong>, כדי שהארדואינו ישלוט בו. זמזם ישר ל-5V יזמזם בלי הפסקה וימשוך זרם גדול מדי. עוקבים באצבע: רגל אחת לחיבור דיגיטלי 8? ✓</p>
-        </div>
-      </div>
-
       <!-- DIAGRAM -->
       <div style="display:flex; align-items:center; gap:12px; margin:0 0 14px;">
         <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:oklch(0.94 0.03 248); color:oklch(0.45 0.11 248); font-size:16px;">🔌</span>
@@ -105,7 +96,7 @@
         <div style="display:flex; gap:13px; align-items:flex-start; background:oklch(0.985 0.004 85); border:1px solid oklch(0.92 0.006 85); border-radius:14px; padding:15px 16px;">
           <span onClick="{{ toggle4 }}" style="position:relative; flex:none; width:26px; height:26px; border-radius:7px; border:2px solid oklch(0.82 0.02 150); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-top:2px;" style-hover="border-color:oklch(0.62 0.14 150)"><sc-if value="{{ check4 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; inset:-2px; border-radius:7px; background:oklch(0.62 0.14 150); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:800;">✓</span></sc-if></span>
           <span style="flex:none; width:30px; height:30px; border-radius:50%; background:oklch(0.45 0.11 248); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">4</span>
-          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את הרגל השנייה ל-<strong>GND</strong>. הזמזם הקטן לא צריך נגד ואין לו צד חיובי או שלילי — כל רגל לכל צד.</p>
+          <p style="margin:0; font-size:16px; line-height:1.55; padding-top:3px;">מחברים את הרגל השנייה ל-<strong>GND</strong>. הזמזם הקטן לא צריך נגד ואין לו צד חיובי או שלילי — כל רגל לכל צד. עוקבים באצבע: רגל אחת לחיבור דיגיטלי 8, השנייה ל-GND ✓</p>
         </div>
 
       </div>

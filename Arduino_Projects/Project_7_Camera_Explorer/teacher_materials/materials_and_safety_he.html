@@ -39,6 +39,13 @@ ol.safety li::before{content:counter(s);position:absolute;inset-inline-start:10p
   width:22px;height:22px;border-radius:50%;background:var(--warn);color:#fff;
   font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
 ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
+ol.brief{list-style:none;margin:8px 0 0;padding:0;counter-reset:b}
+ol.brief li{counter-increment:b;position:relative;padding:8px 42px 8px 12px;margin:0 0 6px;
+  background:var(--band-soft);border:1px solid var(--line);border-radius:5px}
+ol.brief li::before{content:counter(b);position:absolute;inset-inline-start:10px;top:8px;
+  width:22px;height:22px;border-radius:50%;background:var(--band);color:#fff;
+  font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.brief b{display:block;color:var(--band);font-size:11pt;margin-bottom:2px}
 .say{background:var(--say-soft);border:1px solid var(--say-line);border-radius:5px;
   padding:10px 13px;margin-top:10px}
 .say .lbl{font-size:9.5pt;color:var(--say);font-weight:700;letter-spacing:.02em;margin-bottom:3px}
@@ -53,7 +60,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
   @page{size:A4;margin:12mm}
   body{font-size:10.4pt}
   .sheet{max-width:none;padding:0}
-  ol.safety li,tr,.say{break-inside:avoid}
+  ol.safety li,ol.brief li,tr,.say{break-inside:avoid}
 }
 </style>
 </head>
@@ -61,7 +68,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
 <div class="sheet">
   <div class="top">
     <h1>פרויקט 7 — <span>סייר עם מצלמה</span><br>חומרים ובטיחות</h1>
-    <div class="kind">דף למורה · עודכן 2026-09-09</div>
+    <div class="kind">דף למורה · עודכן 2026-09-13</div>
   </div>
 
   <p class="envelope">המכונית של פרויקטים 4–5 עם מצלמה. הסיכונים זהים לפרויקט 5 — גלגלים וסוללות — ובנוסף שני פסי כוח נפרדים שהמורה מכייל לפני המפגש.</p>
@@ -101,6 +108,16 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
       <li><b>מתג הסוללות כבוי בכל העלאה ובכל שינוי חיווט</b>העלאה נעשית כשהמתג כבוי והגלגלים באוויר; אחרי ההעלאה מסירים את ג'מפר ה-IO0 לפני שמדליקים.</li>
       <li><b>גלגלים באוויר בבדיקות שולחן</b>אותו כלל מפרויקט 4: אצבעות רחוקות, מגביהים את המכונית, ולא תופסים אותה תוך כדי נסיעה.</li>
       <li><b>בית הסוללות</b>לא מקצרים את החוטים, ומכבים את המתג כשלא נוסעים.</li>
+  </ol>
+
+  <h2><span class="n">5</span>תדריכים עם התלמיד</h2>
+  <p style="margin:6px 0 0;color:var(--muted);font-size:10.4pt">כרטיסיות התלמיד נושאות רק משפט שער («כדי להתקדם לשלב הזה עוברים קודם עם המורה על…») — התוכן המלא של כל תדריך נמצא כאן, אצל המורה.</p>
+  <ol class="brief">
+      <li><b>תדריך בטיחות הרכב (משפט השער של שלב 4 מפנה לכאן)</b>רענון הכללים המוכרים מפרויקטים 4–5: מתג סוללות כבוי בכל שינוי חיווט, גלגלים באוויר בבדיקות שולחן, וכבל ה-USB והסוללות אף פעם לא ביחד.</li>
+      <li><b>תקרת המהירות — 200</b>המהירות בקוד לא עוברת 200 — אף פעם, גם בעיצוב אישי; סוללות 8×AA ‏(12V) טעונות חזקות מדי בשביל יותר. במסלול 3 המורה מוודא שהתלמיד ביקש מקלוד קוד לשמור על הגבול ובודק את הערכים לפני ההעלאה.</li>
+      <li><b>כבל הסרט של ה-ESP32-CAM</b>כבל הסרט הזהוב של המצלמה דק ועדין: בודקים במבט שהוא יושב עד הסוף בתפס — מסתכלים, לא מושכים. כבל משוחרר או עקום — המורה מתקן, לא התלמיד. (זו גם הסיבה השכיחה ל-Camera init FAILED בצג הטורי.)</li>
+      <li><b>סחרחורת בנהיגה לפי מסך</b>נהיגה כשהגב למכונית והעיניים על הווידאו עלולה לגרום סחרחורת קלה אצל חלק מהתלמידים. ההנחיה: עוצרים, מורידים את המבט מהמסך לרגע, ואם זה נמשך — מפסיקים וקוראים למורה. מתכננים הפסקות קצרות במשימות 8–9.</li>
+      <li><b>כפתור העצור נשאר אדום</b>עיקרון עיצוב שנשמר בקוד גם כשהתלמיד מחליף את צבעי הדף: כפתור עצירה מזהים בצבע אחד קבוע. אם תלמיד שואל למה — זה ההסבר.</li>
   </ol>
 
   <div class="say">

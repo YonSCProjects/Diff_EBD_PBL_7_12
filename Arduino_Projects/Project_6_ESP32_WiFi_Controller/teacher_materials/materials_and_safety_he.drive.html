@@ -3,7 +3,7 @@
 <title>פרויקט 6 — חומרים ובטיחות (למורה)</title></head>
 <body dir="rtl" style="direction:rtl;text-align:right;font-family:Arial,sans-serif">
 <h1 style="font-size:18pt;color:#0f4c81">פרויקט 6 — תחנת מזג אוויר ב-ESP32 · חומרים ובטיחות</h1>
-<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-09</p>
+<p style="color:#5b6b7c">דף למורה · עודכן 2026-09-13</p>
 <p style="background:#eaf1f8;padding:9px 12px">חזרה לשולחן ולמטריצה: אין מנועים, אין סוללות ואין הלחמה. מעטפת הבטיחות נמוכה כמו בפרויקטים 1–3, עם הבדל אחד — המודולים כאן עובדים על 3.3 וולט.</p>
 <h2 style="font-size:13pt;color:#0f4c81">1. חומרים לכל תלמיד</h2>
 <table dir="rtl" style="border-collapse:collapse;width:100%">
@@ -33,6 +33,12 @@
 <p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">2. מנתקים את ה-USB לפני כל שינוי חיווט</span><br>מוסיפים ומזיזים חוטים כשהלוח לא מוזן, ורק אז מחברים שוב.</p>
 <p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">3. סרוו — רק קטן, ולא מחזיקים את הזרוע</span><br>בטייר 2 שבוחר סרוו: לא עוצרים את הזרוע ביד בזמן שהיא זזה, ולא מחברים סרוו גדול שמושך יותר ממה שהלוח יכול לתת.</p>
 <p style="background:#fdf0ec;padding:8px 10px"><span style="color:#a8321f;font-weight:700">4. אין חלקים חמים ואין סוללות</span><br>אין מלחם, אין מנועים ואין תא ליתיום בפרויקט הזה — מי שמגיע לכאן אחרי פרויקטים 4–5 יכול לנשום.</p>
+<h2 style="font-size:13pt;color:#0f4c81">5. תדריכים עם התלמיד</h2>
+<p style="color:#5b6b7c;font-size:10pt">כרטיסיות התלמיד נושאות רק משפט שער («כדי להתקדם לשלב הזה עוברים קודם עם המורה על…») — התוכן המלא של כל תדריך נמצא כאן, אצל המורה.</p>
+<p style="background:#eaf1f8;padding:8px 10px"><span style="color:#0f4c81;font-weight:700">1. הזנת התחנה — רק דרך USB</span><br>מהמחשב, ממטען טלפון או מסוללת גיבוי (power bank). לא מחברים סוללות ישירות ל-ESP32 או ל-VIN בפרויקט הזה.</p>
+<p style="background:#eaf1f8;padding:8px 10px"><span style="color:#0f4c81;font-weight:700">2. חריג ה-5V היחיד — הסרוו</span><br>הסרוו מוזן מחיבור VIN של ה-ESP32 ‏(5V) ולא מפס הפלוס של 3.3V: חוט חום/שחור לפס המינוס, אדום ל-VIN, כתום (אות) לחיבור 14. כל שאר המודולים נשארים על 3.3V בלבד — חשוב לבדיקת החיווט של מי שבחר סרוו במסלול 2.</p>
+<p style="background:#eaf1f8;padding:8px 10px"><span style="color:#0f4c81;font-weight:700">3. התקנת ספריות ראשונה — מודרכת</span><br>במיילסטון 1 התלמידים מתקינים את הספריות בעצמם, יחד עם המורה בפעם הראשונה: DHT sensor library (Adafruit) עם Adafruit Unified Sensor, ו-Adafruit SSD1306 עם Adafruit GFX — ובחלון התלות לוחצים Install all.</p>
+<p style="background:#eaf1f8;padding:8px 10px"><span style="color:#0f4c81;font-weight:700">4. פיקוח על מסלול 3 (המתכנן)</span><br>כשקלוד קוד מציע חומרה חדשה, המורה בודק שהשרטוט מזין כל תוספת מפסי החשמל של הברדבורד (3.3V) ולא מ-5V.</p>
 <p style="background:#fdf7e6;padding:10px 13px"><span style="color:#7a5a12;font-weight:700">מה אומרים לתלמיד</span><br>"כאן אין מלחם, אין מנועים ואין סוללות. הדבר היחיד שצריך לזכור: המודולים עובדים על 3.3 וולט, ומחברים חוטים רק כשה-USB מנותק."</p>
 <hr>
 <p style="color:#5b6b7c;font-size:10pt"><b>כרטיסיות עזר:</b> משתמשים בכרטיסיות העזר של פרויקטים 1–4 (R4 בטיחות, R2 פרוטוקול תקיעות) — לפרויקט 6 אין סט עזר משלו.<br>

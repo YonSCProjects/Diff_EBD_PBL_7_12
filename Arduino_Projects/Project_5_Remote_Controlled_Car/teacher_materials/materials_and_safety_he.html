@@ -39,6 +39,13 @@ ol.safety li::before{content:counter(s);position:absolute;inset-inline-start:10p
   width:22px;height:22px;border-radius:50%;background:var(--warn);color:#fff;
   font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
 ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
+ol.brief{list-style:none;margin:8px 0 0;padding:0;counter-reset:b}
+ol.brief li{counter-increment:b;position:relative;padding:8px 42px 8px 12px;margin:0 0 6px;
+  background:var(--band-soft);border:1px solid var(--line);border-radius:5px}
+ol.brief li::before{content:counter(b);position:absolute;inset-inline-start:10px;top:8px;
+  width:22px;height:22px;border-radius:50%;background:var(--band);color:#fff;
+  font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.brief b{display:block;color:var(--band);font-size:11pt;margin-bottom:2px}
 .say{background:var(--say-soft);border:1px solid var(--say-line);border-radius:5px;
   padding:10px 13px;margin-top:10px}
 .say .lbl{font-size:9.5pt;color:var(--say);font-weight:700;letter-spacing:.02em;margin-bottom:3px}
@@ -53,7 +60,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
   @page{size:A4;margin:12mm}
   body{font-size:10.4pt}
   .sheet{max-width:none;padding:0}
-  ol.safety li,tr,.say{break-inside:avoid}
+  ol.safety li,ol.brief li,tr,.say{break-inside:avoid}
 }
 </style>
 </head>
@@ -61,7 +68,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
 <div class="sheet">
   <div class="top">
     <h1>פרויקט 5 — <span>מכונית נשלטת מרחוק</span><br>חומרים ובטיחות</h1>
-    <div class="kind">דף למורה · עודכן 2026-09-09</div>
+    <div class="kind">דף למורה · עודכן 2026-09-13</div>
   </div>
 
   <p class="envelope">אותה מכונית של פרויקט 4 עם מוח חדש. אין רכיבי כוח חדשים ואין הלחמה חדשה — הסיכונים הם אלה של פרויקט 4: גלגלים מסתובבים ובית סוללות.</p>
@@ -98,6 +105,14 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
       <li><b>מתג הסוללות כבוי לפני כל שינוי חיווט</b>גם החלפת המוח מ-Uno ל-ESP32 וגם כל תיקון חוט נעשים כשהמתג כבוי וה-USB מנותק.</li>
       <li><b>בית הסוללות</b>לא מקצרים את שני החוטים; כשהמכונית לא נוסעת — מכבים את המתג. אותו כלל מפרויקט 4.</li>
       <li><b>נוהגים ברצפה, לא על השולחן</b>מסלול פנוי, הרחק מקצה שולחן, ולא תופסים מכונית תוך כדי נסיעה. כפתור העצור בדף נשאר אדום — צבעי בטיחות לא מחליפים גם כשמעצבים את הדף בטייר 2.</li>
+  </ol>
+
+  <h2><span class="n">5</span>תדריכים עם התלמיד</h2>
+  <p style="margin:6px 0 0;color:var(--muted);font-size:10.4pt">כרטיסיות התלמיד נושאות רק משפט שער («כדי להתקדם לשלב הזה עוברים קודם עם המורה על…») — התוכן המלא של כל תדריך נמצא כאן, אצל המורה.</p>
+  <ol class="brief">
+      <li><b>כלל העלאת קוד</b>כבל ה-USB והסוללות — אף פעם לא ביחד: לפני שמחברים את כבל ה-USB מכבים את מתג הסוללות, המתג נשאר כבוי לאורך כל ההעלאה, ואחרי ההעלאה מנתקים את הכבל ורק אז מדליקים.</li>
+      <li><b>תקרת המהירות — 200</b>המהירות בקוד לא עוברת 200 — אף פעם, גם במצבים חדשים; הסוללות הטעונות חזקות מדי בשביל יותר. הכלל חל על שלושת פרופילי המהירות (רגוע 130/110, מאוזן 170/150, ספורטיבי 200/170), על המחוון בפריסה ג׳ (נעצר ב-200) ועל כל קוד שנכתב עם קלוד קוד — מנחים את התלמיד לומר לקלוד קוד לשמור על הגבול.</li>
+      <li><b>תדריך הנסיעה הראשונה (משפט השער של שלב 6 מפנה לכאן)</b>בודקים כל כיוון באוויר לפני הרצפה — כך אם צד מסתובב הפוך רואים את זה מיד בלי שהמכונית בורחת. על הרצפה נוסעים באזור פתוח, רחוק משולחנות, מתיקים ומרגליים. מתחילים בלחיצות קצרות — לחיצה קצרה = תזוזה קצרה, ושחרור האצבע הוא תמיד העצירה.</li>
   </ol>
 
   <div class="say">

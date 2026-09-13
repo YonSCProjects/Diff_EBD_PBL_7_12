@@ -39,6 +39,13 @@ ol.safety li::before{content:counter(s);position:absolute;inset-inline-start:10p
   width:22px;height:22px;border-radius:50%;background:var(--warn);color:#fff;
   font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
 ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
+ol.brief{list-style:none;margin:8px 0 0;padding:0;counter-reset:b}
+ol.brief li{counter-increment:b;position:relative;padding:8px 42px 8px 12px;margin:0 0 6px;
+  background:var(--band-soft);border:1px solid var(--line);border-radius:5px}
+ol.brief li::before{content:counter(b);position:absolute;inset-inline-start:10px;top:8px;
+  width:22px;height:22px;border-radius:50%;background:var(--band);color:#fff;
+  font-size:10pt;font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.brief b{display:block;color:var(--band);font-size:11pt;margin-bottom:2px}
 .say{background:var(--say-soft);border:1px solid var(--say-line);border-radius:5px;
   padding:10px 13px;margin-top:10px}
 .say .lbl{font-size:9.5pt;color:var(--say);font-weight:700;letter-spacing:.02em;margin-bottom:3px}
@@ -53,7 +60,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
   @page{size:A4;margin:12mm}
   body{font-size:10.4pt}
   .sheet{max-width:none;padding:0}
-  ol.safety li,tr,.say{break-inside:avoid}
+  ol.safety li,ol.brief li,tr,.say{break-inside:avoid}
 }
 </style>
 </head>
@@ -61,7 +68,7 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
 <div class="sheet">
   <div class="top">
     <h1>פרויקט 4 — <span>מכונית עוקבת קו</span><br>חומרים ובטיחות</h1>
-    <div class="kind">דף למורה · עודכן 2026-09-09</div>
+    <div class="kind">דף למורה · עודכן 2026-09-13</div>
   </div>
 
   <p class="envelope">ההסלמה הראשונה בתוכנית. החשמל עדיין 5 וולט ובטוח — מה שחדש הוא <strong>חום ותנועה</strong>: מלחם חם, גלגלים מסתובבים ובית סוללות. זה הפרויקט הראשון עם הלחמה.</p>
@@ -105,6 +112,15 @@ ol.safety b{display:block;color:var(--warn);font-size:11pt;margin-bottom:2px}
       <li><b>מנועים וגלגלים מסתובבים</b>אצבעות רחוקות מגלגל שמסתובב. בבדיקות שולחן מגביהים את המכונית (קופסה קטנה) כך שהגלגלים באוויר. מעבירים את המכונית ממקום למקום רק כשהמתג כבוי.</li>
       <li><b>בית הסוללות</b>לא מחברים את שני חוטי בית הסוללות זה לזה — זה קצר והסוללות מתחממות. כשהמכונית לא נוסעת, המתג כבוי.</li>
       <li><b>החשמל עצמו עדיין בטוח</b>הארדואינו, החיישנים וה-L298N עובדים כולם על 5 וולט. מה שהשתנה בפרויקט הזה הוא חום ותנועה, לא חשמל.</li>
+  </ol>
+
+  <h2><span class="n">5</span>תדריכים עם התלמיד</h2>
+  <p style="margin:6px 0 0;color:var(--muted);font-size:10.4pt">כרטיסיות התלמיד נושאות רק משפט שער («כדי להתקדם לשלב הזה עוברים קודם עם המורה על…») — התוכן המלא של כל תדריך נמצא כאן, אצל המורה.</p>
+  <ol class="brief">
+      <li><b>הדרכת ההלחמה — לפני שלב 1 (משפט השער על כרטיס התלמיד מפנה לכאן)</b>אומרים יחד את שלושת כללי הבטיחות של ההלחמה; המורה מדגים חיבור אחד על לוח האימון — מחממים את נקודת החיבור, מצמידים את הבדיל לנקודה, מרחיקים קודם את הבדיל ואז את המלחם, ולא מזיזים כלום 3 שניות עד שהחיבור מתקשה; התלמיד מלחים 3–4 חיבורים על לוח האימון, בקצב שלו, עם המורה ליד; בודקים חיבור אחד במשיכה עדינה — חיבור טוב מחזיק ולא זז. מסגור מרגיע לסיום: חיבור טוב נראה מבריק, חלק, יושב כמו אוהל קטן סביב נקודת החיבור; החיבורים הראשונים לא חייבים להיות יפים — הם חייבים להחזיק, ויופי מגיע עם אימון.</li>
+      <li><b>טקס פתיחה וסגירה של עמדת ההלחמה</b>לפני שמדליקים — מלחם על המעמד, ספוג לח, בדיל ומחצלת עמידה בחום במקומם; בסיום העבודה — המלחם חוזר למעמד ומכבים אותו יחד עם התלמיד.</li>
+      <li><b>כבל ה-USB והסוללות — אף פעם לא ביחד (נמסר בתדריך של שלב 4)</b>לפני שמדליקים את מתג הסוללות מנתקים את ה-USB; לפני שמחברים את ה-USB מכבים את מתג הסוללות.</li>
+      <li><b>הכנת לשוניות המנוע מראש</b>אם הלשוניות של המנוע קשות להלחמה, מכינים אותן מראש בטיפת בדיל קטנה (pre-tinning) — זה לא משנה את צעדי התלמיד.</li>
   </ol>
 
   <div class="say">

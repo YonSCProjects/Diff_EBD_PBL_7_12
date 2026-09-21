@@ -274,6 +274,17 @@ function projectPage(p) {
       }
     }
 
+    // Turn on card_nav.js's home buttons. They link to ./index.html (this
+    // project's card list) and ../index.html (all projects) — pages that exist
+    // only here, which is why the generator ships the flag off by default.
+    const np = path.join(dest, 'card_nav.js');
+    if (fs.existsSync(np)) {
+      const before = fs.readFileSync(np, 'utf8');
+      const after = before.replace('var SITE = false;', 'var SITE = true;');
+      if (after === before) console.log('  ! p' + p.n + ': card_nav.js SITE flag not found');
+      else fs.writeFileSync(np, after);
+    }
+
     // Two asset conventions exist: most cards use ./assets/, but Project 1's wiring figures
     // are referenced as ../images/. Copy those in too or they 404 on the site.
     const extra = new Set();

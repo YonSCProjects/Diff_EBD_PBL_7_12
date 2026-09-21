@@ -15,13 +15,31 @@
   if (window.self !== window.top) return;
   try { if (window.matchMedia && window.matchMedia('print').matches) return; } catch (e) {}
 
+  // build_site.js flips this to true in the copy it publishes. The two home
+  // buttons point at ./index.html (the project's card list) and ../index.html
+  // (all projects), which exist only on the student site — in the repo, in the
+  // print bundles and in the review console they would be dead links.
+  var SITE = false;
+
   var NAV = {"P8_T1_M1_meet_parts_contract_he.dc.html":{"prev":null,"next":"P8_T1_M2_press_fit_motors_he.dc.html"},"P8_T1_M2_press_fit_motors_he.dc.html":{"prev":"P8_T1_M1_meet_parts_contract_he.dc.html","next":"P8_T1_M3_meet_mosfet_board_he.dc.html"},"P8_T1_M3_meet_mosfet_board_he.dc.html":{"prev":"P8_T1_M2_press_fit_motors_he.dc.html","next":"P8_T1_M4_mount_electronics_he.dc.html"},"P8_T1_M4_mount_electronics_he.dc.html":{"prev":"P8_T1_M3_meet_mosfet_board_he.dc.html","next":"P8_T1_M5_power_tree_he.dc.html"},"P8_T1_M5_power_tree_he.dc.html":{"prev":"P8_T1_M4_mount_electronics_he.dc.html","next":"P8_T1_M6_motor_wiring_he.dc.html"},"P8_T1_M6_motor_wiring_he.dc.html":{"prev":"P8_T1_M5_power_tree_he.dc.html","next":"P8_T1_M7_signal_wiring_he.dc.html"},"P8_T1_M7_signal_wiring_he.dc.html":{"prev":"P8_T1_M6_motor_wiring_he.dc.html","next":"P8_T1_M8_pre_power_check_he.dc.html"},"P8_T1_M8_pre_power_check_he.dc.html":{"prev":"P8_T1_M7_signal_wiring_he.dc.html","next":"P8_T1_M9_upload_motor_test_he.dc.html"},"P8_T1_M9_upload_motor_test_he.dc.html":{"prev":"P8_T1_M8_pre_power_check_he.dc.html","next":"P8_T1_M10_spin_no_props_he.dc.html"},"P8_T1_M10_spin_no_props_he.dc.html":{"prev":"P8_T1_M9_upload_motor_test_he.dc.html","next":"P8_T1_M11_thrust_test_he.dc.html"},"P8_T1_M11_thrust_test_he.dc.html":{"prev":"P8_T1_M10_spin_no_props_he.dc.html","next":"P8_T1_M12_upload_flight_he.dc.html"},"P8_T1_M12_upload_flight_he.dc.html":{"prev":"P8_T1_M11_thrust_test_he.dc.html","next":"P8_T1_M13_tethered_hover_he.dc.html"},"P8_T1_M13_tethered_hover_he.dc.html":{"prev":"P8_T1_M12_upload_flight_he.dc.html","next":"P8_T1_M14_post_flight_celebrate_he.dc.html"},"P8_T1_M14_post_flight_celebrate_he.dc.html":{"prev":"P8_T1_M13_tethered_hover_he.dc.html","next":null},"P8_T2_M1_startup_he.dc.html":{"prev":null,"next":"P8_T2_M2_solder_channel_1_he.dc.html"},"P8_T2_M2_solder_channel_1_he.dc.html":{"prev":"P8_T2_M1_startup_he.dc.html","next":"P8_T2_M3_check_channel_1_he.dc.html"},"P8_T2_M3_check_channel_1_he.dc.html":{"prev":"P8_T2_M2_solder_channel_1_he.dc.html","next":"P8_T2_M4_solder_channels_2_4_he.dc.html"},"P8_T2_M4_solder_channels_2_4_he.dc.html":{"prev":"P8_T2_M3_check_channel_1_he.dc.html","next":"P8_T2_M5_tune_mt3608_he.dc.html"},"P8_T2_M5_tune_mt3608_he.dc.html":{"prev":"P8_T2_M4_solder_channels_2_4_he.dc.html","next":"P8_T2_M6_mount_and_wire_he.dc.html"},"P8_T2_M6_mount_and_wire_he.dc.html":{"prev":"P8_T2_M5_tune_mt3608_he.dc.html","next":"P8_T2_M7_pre_power_check_he.dc.html"},"P8_T2_M7_pre_power_check_he.dc.html":{"prev":"P8_T2_M6_mount_and_wire_he.dc.html","next":"P8_T2_M8_upload_and_spin_he.dc.html"},"P8_T2_M8_upload_and_spin_he.dc.html":{"prev":"P8_T2_M7_pre_power_check_he.dc.html","next":"P8_T2_M9_thrust_test_he.dc.html"},"P8_T2_M9_thrust_test_he.dc.html":{"prev":"P8_T2_M8_upload_and_spin_he.dc.html","next":"P8_T2_M10_choices_and_claude_he.dc.html"},"P8_T2_M10_choices_and_claude_he.dc.html":{"prev":"P8_T2_M9_thrust_test_he.dc.html","next":"P8_T2_M11_tethered_hover_tuning_he.dc.html"},"P8_T2_M11_tethered_hover_tuning_he.dc.html":{"prev":"P8_T2_M10_choices_and_claude_he.dc.html","next":"P8_T2_M12_flight_sequence_he.dc.html"},"P8_T2_M12_flight_sequence_he.dc.html":{"prev":"P8_T2_M11_tethered_hover_tuning_he.dc.html","next":"P8_T2_M13_signature_flight_he.dc.html"},"P8_T2_M13_signature_flight_he.dc.html":{"prev":"P8_T2_M12_flight_sequence_he.dc.html","next":null}};
   var LBL = {"P8_T1_M1_meet_parts_contract_he.dc.html":{"title":"פוגשים את הרכיבים ופותחים את הפרויקט","label":"שלב 1"},"P8_T1_M2_press_fit_motors_he.dc.html":{"title":"מכניסים את ארבעת המנועים למסגרת","label":"שלב 2"},"P8_T1_M3_meet_mosfet_board_he.dc.html":{"title":"מכירים את לוח ה-MOSFET ובודקים אותו","label":"שלב 3"},"P8_T1_M4_mount_electronics_he.dc.html":{"title":"מרכיבים את האלקטרוניקה על המסגרת","label":"שלב 4"},"P8_T1_M5_power_tree_he.dc.html":{"title":"מחווטים את עץ החשמל","label":"שלב 5"},"P8_T1_M6_motor_wiring_he.dc.html":{"title":"כל מנוע לערוץ שלו","label":"שלב 6"},"P8_T1_M7_signal_wiring_he.dc.html":{"title":"חוטי האות — ארבעה שערים וחיישן","label":"שלב 7"},"P8_T1_M8_pre_power_check_he.dc.html":{"title":"בדיקת מולטימטר וההדלקה הראשונה","label":"שלב 8"},"P8_T1_M9_upload_motor_test_he.dc.html":{"title":"מעלים את קוד בדיקת המנועים","label":"שלב 9"},"P8_T1_M10_spin_no_props_he.dc.html":{"title":"מסובבים את המנועים — בלי מדחפים","label":"שלב 10"},"P8_T1_M11_thrust_test_he.dc.html":{"title":"מדחפים ומדידת הדחף על המאזניים","label":"שלב 11"},"P8_T1_M12_upload_flight_he.dc.html":{"title":"מעלים את קוד התעופה ובודקים את החיישן","label":"שלב 12"},"P8_T1_M13_tethered_hover_he.dc.html":{"title":"ממריאים — הריחוף הראשון על החוט","label":"שלב 13"},"P8_T1_M14_post_flight_celebrate_he.dc.html":{"title":"סוגרים בסדר הנכון — וחוגגים","label":"שלב 14"},"P8_T2_M1_startup_he.dc.html":{"title":"התחלה — ארבע ערימות ומנועים במסגרת","label":"שלב 1"},"P8_T2_M2_solder_channel_1_he.dc.html":{"title":"מלחימים את ערוץ 1","label":"שלב 2"},"P8_T2_M3_check_channel_1_he.dc.html":{"title":"בודקים את ערוץ 1 במולטימטר","label":"שלב 3"},"P8_T2_M4_solder_channels_2_4_he.dc.html":{"title":"מלחימים את ערוצים 2–4 ואת הקבל","label":"שלב 4"},"P8_T2_M5_tune_mt3608_he.dc.html":{"title":"מכוונים את הממיר ל-5V","label":"שלב 5"},"P8_T2_M6_mount_and_wire_he.dc.html":{"title":"מרכיבים ומחווטים את כל הרחפן","label":"שלב 6"},"P8_T2_M7_pre_power_check_he.dc.html":{"title":"מוכיחים שהרחפן בטוח ומדליקים","label":"שלב 7"},"P8_T2_M8_upload_and_spin_he.dc.html":{"title":"מעלים את קוד הבדיקה ומסובבים את המנועים","label":"שלב 8"},"P8_T2_M9_thrust_test_he.dc.html":{"title":"מודדים דחף ומחליטים לפי מספרים","label":"שלב 9"},"P8_T2_M10_choices_and_claude_he.dc.html":{"title":"ההחלטות שהופכות את קוד ההתחלה לרחפן שלכם","label":"שלב 10"},"P8_T2_M11_tethered_hover_tuning_he.dc.html":{"title":"ריחוף ראשון על החוט ולולאת הכוונון","label":"שלב 11"},"P8_T2_M12_flight_sequence_he.dc.html":{"title":"בוחרים רצף טיסה וטסים אותו","label":"שלב 12"},"P8_T2_M13_signature_flight_he.dc.html":{"title":"טיסת החתימה — ואז סוגרים הכול","label":"שלב 13"}};
 
   var file = '';
   try { file = decodeURIComponent(location.pathname.split('/').pop() || ''); } catch (e) { return; }
+
+  // Netlify's pretty-URL rewriting serves the card as /p4/p4_t1_m4_....dc —
+  // extension dropped AND the whole path lower-cased — so an exact key lookup
+  // finds nothing there. Match on a normalised name so the strip works the same
+  // whether the page came from Netlify, a plain static server or file://.
+  function norm(s) { return String(s).toLowerCase().replace(/\.html$/, ''); }
   var entry = NAV[file];
-  if (!entry) return;
+  if (!entry) {
+    var want = norm(file);
+    for (var key in NAV) {
+      if (Object.prototype.hasOwnProperty.call(NAV, key) && norm(key) === want) { entry = NAV[key]; break; }
+    }
+  }
+  entry = entry || {};
 
   function resolve(spec) {
     if (!spec) return null;
@@ -33,7 +51,9 @@
 
   var prev = resolve(entry.prev);
   var next = resolve(entry.next);
-  if (!prev && !next) return;
+  // A standalone card (the tier-3 planner) has no chain, but on the site it
+  // still gets the home row — otherwise it is a dead end.
+  if (!prev && !next && !SITE) return;
 
   function chip(target, kind) {
     var meta = LBL[target] || {};
@@ -57,12 +77,27 @@
     return a;
   }
 
+  function homeBtn(href, icon, text) {
+    var a = document.createElement('a');
+    a.className = 'cn-hb';
+    a.href = href;
+    var i = document.createElement('span');
+    i.className = 'cn-i';
+    i.setAttribute('aria-hidden', 'true');
+    i.textContent = icon;
+    var s = document.createElement('span');
+    s.textContent = text;
+    a.appendChild(i);
+    a.appendChild(s);
+    return a;
+  }
+
   function mount() {
     if (document.getElementById('card-nav-root')) return;
     var css = document.createElement('style');
     css.textContent =
       '#card-nav-root{background:oklch(0.972 0.008 85);padding:0 20px 44px;display:flex;' +
-      'justify-content:center;font-family:Rubik,sans-serif;}' +
+      'flex-direction:column;align-items:center;gap:12px;font-family:Rubik,sans-serif;}' +
       '#card-nav-root .cn-bar{width:100%;max-width:760px;display:flex;gap:14px;align-items:stretch;}' +
       '#card-nav-root .cn-chip{flex:1 1 0;display:flex;flex-direction:column;gap:4px;' +
       'text-decoration:none;background:#fff;border:1px solid oklch(0.9 0.006 85);border-radius:14px;' +
@@ -78,21 +113,43 @@
       '#card-nav-root .cn-a{font-size:15px;color:oklch(0.55 0.09 248);}' +
       '#card-nav-root .cn-t{font-size:15px;font-weight:700;line-height:1.35;' +
       'color:oklch(0.42 0.11 248);}' +
+      '#card-nav-root .cn-home{width:100%;max-width:760px;display:flex;gap:10px;' +
+      'justify-content:center;flex-wrap:wrap;}' +
+      '#card-nav-root .cn-hb{display:inline-flex;align-items:center;gap:8px;text-decoration:none;' +
+      'background:#fff;border:1px solid oklch(0.9 0.006 85);border-radius:999px;padding:10px 18px;' +
+      'font-size:14.5px;font-weight:600;color:oklch(0.42 0.11 248);' +
+      'box-shadow:0 1px 2px rgba(40,35,20,0.04);' +
+      'transition:border-color .15s ease,box-shadow .15s ease;}' +
+      '#card-nav-root .cn-hb:hover{border-color:oklch(0.62 0.1 248);' +
+      'box-shadow:0 2px 10px -4px rgba(40,35,20,0.20);}' +
+      '#card-nav-root .cn-i{font-size:16px;line-height:1;}' +
       '@media print{#card-nav-root{display:none !important;}}';
     document.head.appendChild(css);
 
     var root = document.createElement('div');
     root.id = 'card-nav-root';
     root.setAttribute('dir', 'rtl');
-    var bar = document.createElement('nav');
-    bar.className = 'cn-bar';
-    bar.setAttribute('aria-label', 'ניווט בין כרטיסיות');
-    // DOM order is prev-then-next; in RTL that puts הקודמת on the right.
-    if (prev) bar.appendChild(chip(prev, 'prev'));
-    else { var g1 = document.createElement('span'); g1.className = 'cn-gap'; bar.appendChild(g1); }
-    if (next) bar.appendChild(chip(next, 'next'));
-    else { var g2 = document.createElement('span'); g2.className = 'cn-gap'; bar.appendChild(g2); }
-    root.appendChild(bar);
+    if (prev || next) {
+      var bar = document.createElement('nav');
+      bar.className = 'cn-bar';
+      bar.setAttribute('aria-label', 'ניווט בין כרטיסיות');
+      // DOM order is prev-then-next; in RTL that puts הקודמת on the right.
+      if (prev) bar.appendChild(chip(prev, 'prev'));
+      else { var g1 = document.createElement('span'); g1.className = 'cn-gap'; bar.appendChild(g1); }
+      if (next) bar.appendChild(chip(next, 'next'));
+      else { var g2 = document.createElement('span'); g2.className = 'cn-gap'; bar.appendChild(g2); }
+      root.appendChild(bar);
+    }
+    if (SITE) {
+      var home = document.createElement('nav');
+      home.className = 'cn-home';
+      home.setAttribute('aria-label', 'חזרה לדפים הראשיים');
+      // First child sits rightmost in RTL: the project's own list is the
+      // nearer way back, all-projects is the step above it.
+      home.appendChild(homeBtn('./index.html', '\uD83D\uDCCB', 'כל הכרטיסיות בפרויקט'));
+      home.appendChild(homeBtn('../index.html', '\uD83C\uDFE0', 'כל הפרויקטים'));
+      root.appendChild(home);
+    }
     document.body.appendChild(root);
   }
 

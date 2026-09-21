@@ -15,13 +15,31 @@
   if (window.self !== window.top) return;
   try { if (window.matchMedia && window.matchMedia('print').matches) return; } catch (e) {}
 
+  // build_site.js flips this to true in the copy it publishes. The two home
+  // buttons point at ./index.html (the project's card list) and ../index.html
+  // (all projects), which exist only on the student site — in the repo, in the
+  // print bundles and in the review console they would be dead links.
+  var SITE = false;
+
   var NAV = {"P9_T1_M1_meet_parts_contract_he.dc.html":{"prev":null,"next":"P9_T1_M2_board_alive_he.dc.html"},"P9_T1_M2_board_alive_he.dc.html":{"prev":"P9_T1_M1_meet_parts_contract_he.dc.html","next":"P9_T1_M3_first_click_he.dc.html"},"P9_T1_M3_first_click_he.dc.html":{"prev":"P9_T1_M2_board_alive_he.dc.html","next":"P9_T1_M4_wire_the_eye_he.dc.html"},"P9_T1_M4_wire_the_eye_he.dc.html":{"prev":"P9_T1_M3_first_click_he.dc.html","next":"P9_T1_M5_cursor_moves_he.dc.html"},"P9_T1_M5_cursor_moves_he.dc.html":{"prev":"P9_T1_M4_wire_the_eye_he.dc.html","next":"P9_T1_M6_scroll_wheel_he.dc.html"},"P9_T1_M6_scroll_wheel_he.dc.html":{"prev":"P9_T1_M5_cursor_moves_he.dc.html","next":"P9_T1_M7_speed_roller_he.dc.html"},"P9_T1_M7_speed_roller_he.dc.html":{"prev":"P9_T1_M6_scroll_wheel_he.dc.html","next":"P9_T1_M8_side_buttons_layer_he.dc.html"},"P9_T1_M8_side_buttons_layer_he.dc.html":{"prev":"P9_T1_M7_speed_roller_he.dc.html","next":"P9_T1_M9_solder_power_board_he.dc.html"},"P9_T1_M9_solder_power_board_he.dc.html":{"prev":"P9_T1_M8_side_buttons_layer_he.dc.html","next":"P9_T1_M10_battery_day_he.dc.html"},"P9_T1_M10_battery_day_he.dc.html":{"prev":"P9_T1_M9_solder_power_board_he.dc.html","next":"P9_T1_M11_bluetooth_he.dc.html"},"P9_T1_M11_bluetooth_he.dc.html":{"prev":"P9_T1_M10_battery_day_he.dc.html","next":"P9_T1_M12_mattress_test_celebrate_he.dc.html"},"P9_T1_M12_mattress_test_celebrate_he.dc.html":{"prev":"P9_T1_M11_bluetooth_he.dc.html","next":null},"P9_T2_M1_startup_he.dc.html":{"prev":null,"next":"P9_T2_M2_your_speeds_he.dc.html"},"P9_T2_M2_your_speeds_he.dc.html":{"prev":"P9_T2_M1_startup_he.dc.html","next":"P9_T2_M3_your_buttons_he.dc.html"},"P9_T2_M3_your_buttons_he.dc.html":{"prev":"P9_T2_M2_your_speeds_he.dc.html","next":"P9_T2_M4_bed_mode_he.dc.html"},"P9_T2_M4_bed_mode_he.dc.html":{"prev":"P9_T2_M3_your_buttons_he.dc.html","next":"P9_T2_M5_shell_mockup_he.dc.html"},"P9_T2_M5_shell_mockup_he.dc.html":{"prev":"P9_T2_M4_bed_mode_he.dc.html","next":"P9_T2_M6_signature_demo_he.dc.html"},"P9_T2_M6_signature_demo_he.dc.html":{"prev":"P9_T2_M5_shell_mockup_he.dc.html","next":null}};
   var LBL = {"P9_T1_M1_meet_parts_contract_he.dc.html":{"title":"פוגשים את החלקים","label":"שלב 1"},"P9_T1_M2_board_alive_he.dc.html":{"title":"הלוח מתעורר לחיים","label":"שלב 2"},"P9_T1_M3_first_click_he.dc.html":{"title":"הקליק הראשון","label":"שלב 3"},"P9_T1_M4_wire_the_eye_he.dc.html":{"title":"מחווטים את העין","label":"שלב 4"},"P9_T1_M5_cursor_moves_he.dc.html":{"title":"הסמן זז","label":"שלב 5"},"P9_T1_M6_scroll_wheel_he.dc.html":{"title":"גלגלת הגלילה","label":"שלב 6"},"P9_T1_M7_speed_roller_he.dc.html":{"title":"גלגלת המהירות","label":"שלב 7"},"P9_T1_M8_side_buttons_layer_he.dc.html":{"title":"כפתורי הצד ושכבת הקסם","label":"שלב 8"},"P9_T1_M9_solder_power_board_he.dc.html":{"title":"מלחימים את לוח הכוח","label":"שלב 9"},"P9_T1_M10_battery_day_he.dc.html":{"title":"יום הסוללה","label":"שלב 10"},"P9_T1_M11_bluetooth_he.dc.html":{"title":"הכבל יורד","label":"שלב 11"},"P9_T1_M12_mattress_test_celebrate_he.dc.html":{"title":"מבחן המזרן וחוגגים","label":"שלב 12"},"P9_T2_M1_startup_he.dc.html":{"title":"מעירים את העכבר","label":"שלב 1"},"P9_T2_M2_your_speeds_he.dc.html":{"title":"המהירויות שלך","label":"שלב 2"},"P9_T2_M3_your_buttons_he.dc.html":{"title":"הכפתורים שלך ושם משלו","label":"שלב 3"},"P9_T2_M4_bed_mode_he.dc.html":{"title":"מצב מיטה","label":"שלב 4"},"P9_T2_M5_shell_mockup_he.dc.html":{"title":"הקליפה מתחילה","label":"שלב 5"},"P9_T2_M6_signature_demo_he.dc.html":{"title":"הדגמת החתימה","label":"שלב 6"}};
 
   var file = '';
   try { file = decodeURIComponent(location.pathname.split('/').pop() || ''); } catch (e) { return; }
+
+  // Netlify's pretty-URL rewriting serves the card as /p4/p4_t1_m4_....dc —
+  // extension dropped AND the whole path lower-cased — so an exact key lookup
+  // finds nothing there. Match on a normalised name so the strip works the same
+  // whether the page came from Netlify, a plain static server or file://.
+  function norm(s) { return String(s).toLowerCase().replace(/\.html$/, ''); }
   var entry = NAV[file];
-  if (!entry) return;
+  if (!entry) {
+    var want = norm(file);
+    for (var key in NAV) {
+      if (Object.prototype.hasOwnProperty.call(NAV, key) && norm(key) === want) { entry = NAV[key]; break; }
+    }
+  }
+  entry = entry || {};
 
   function resolve(spec) {
     if (!spec) return null;
@@ -33,7 +51,9 @@
 
   var prev = resolve(entry.prev);
   var next = resolve(entry.next);
-  if (!prev && !next) return;
+  // A standalone card (the tier-3 planner) has no chain, but on the site it
+  // still gets the home row — otherwise it is a dead end.
+  if (!prev && !next && !SITE) return;
 
   function chip(target, kind) {
     var meta = LBL[target] || {};
@@ -57,12 +77,27 @@
     return a;
   }
 
+  function homeBtn(href, icon, text) {
+    var a = document.createElement('a');
+    a.className = 'cn-hb';
+    a.href = href;
+    var i = document.createElement('span');
+    i.className = 'cn-i';
+    i.setAttribute('aria-hidden', 'true');
+    i.textContent = icon;
+    var s = document.createElement('span');
+    s.textContent = text;
+    a.appendChild(i);
+    a.appendChild(s);
+    return a;
+  }
+
   function mount() {
     if (document.getElementById('card-nav-root')) return;
     var css = document.createElement('style');
     css.textContent =
       '#card-nav-root{background:oklch(0.972 0.008 85);padding:0 20px 44px;display:flex;' +
-      'justify-content:center;font-family:Rubik,sans-serif;}' +
+      'flex-direction:column;align-items:center;gap:12px;font-family:Rubik,sans-serif;}' +
       '#card-nav-root .cn-bar{width:100%;max-width:760px;display:flex;gap:14px;align-items:stretch;}' +
       '#card-nav-root .cn-chip{flex:1 1 0;display:flex;flex-direction:column;gap:4px;' +
       'text-decoration:none;background:#fff;border:1px solid oklch(0.9 0.006 85);border-radius:14px;' +
@@ -78,21 +113,43 @@
       '#card-nav-root .cn-a{font-size:15px;color:oklch(0.55 0.09 248);}' +
       '#card-nav-root .cn-t{font-size:15px;font-weight:700;line-height:1.35;' +
       'color:oklch(0.42 0.11 248);}' +
+      '#card-nav-root .cn-home{width:100%;max-width:760px;display:flex;gap:10px;' +
+      'justify-content:center;flex-wrap:wrap;}' +
+      '#card-nav-root .cn-hb{display:inline-flex;align-items:center;gap:8px;text-decoration:none;' +
+      'background:#fff;border:1px solid oklch(0.9 0.006 85);border-radius:999px;padding:10px 18px;' +
+      'font-size:14.5px;font-weight:600;color:oklch(0.42 0.11 248);' +
+      'box-shadow:0 1px 2px rgba(40,35,20,0.04);' +
+      'transition:border-color .15s ease,box-shadow .15s ease;}' +
+      '#card-nav-root .cn-hb:hover{border-color:oklch(0.62 0.1 248);' +
+      'box-shadow:0 2px 10px -4px rgba(40,35,20,0.20);}' +
+      '#card-nav-root .cn-i{font-size:16px;line-height:1;}' +
       '@media print{#card-nav-root{display:none !important;}}';
     document.head.appendChild(css);
 
     var root = document.createElement('div');
     root.id = 'card-nav-root';
     root.setAttribute('dir', 'rtl');
-    var bar = document.createElement('nav');
-    bar.className = 'cn-bar';
-    bar.setAttribute('aria-label', 'ניווט בין כרטיסיות');
-    // DOM order is prev-then-next; in RTL that puts הקודמת on the right.
-    if (prev) bar.appendChild(chip(prev, 'prev'));
-    else { var g1 = document.createElement('span'); g1.className = 'cn-gap'; bar.appendChild(g1); }
-    if (next) bar.appendChild(chip(next, 'next'));
-    else { var g2 = document.createElement('span'); g2.className = 'cn-gap'; bar.appendChild(g2); }
-    root.appendChild(bar);
+    if (prev || next) {
+      var bar = document.createElement('nav');
+      bar.className = 'cn-bar';
+      bar.setAttribute('aria-label', 'ניווט בין כרטיסיות');
+      // DOM order is prev-then-next; in RTL that puts הקודמת on the right.
+      if (prev) bar.appendChild(chip(prev, 'prev'));
+      else { var g1 = document.createElement('span'); g1.className = 'cn-gap'; bar.appendChild(g1); }
+      if (next) bar.appendChild(chip(next, 'next'));
+      else { var g2 = document.createElement('span'); g2.className = 'cn-gap'; bar.appendChild(g2); }
+      root.appendChild(bar);
+    }
+    if (SITE) {
+      var home = document.createElement('nav');
+      home.className = 'cn-home';
+      home.setAttribute('aria-label', 'חזרה לדפים הראשיים');
+      // First child sits rightmost in RTL: the project's own list is the
+      // nearer way back, all-projects is the step above it.
+      home.appendChild(homeBtn('./index.html', '\uD83D\uDCCB', 'כל הכרטיסיות בפרויקט'));
+      home.appendChild(homeBtn('../index.html', '\uD83C\uDFE0', 'כל הפרויקטים'));
+      root.appendChild(home);
+    }
     document.body.appendChild(root);
   }
 

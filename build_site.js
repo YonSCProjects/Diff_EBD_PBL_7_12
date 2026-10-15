@@ -171,29 +171,54 @@ const SHELL = (title, body) => `<!DOCTYPE html>
   .step{display:flex;align-items:center;gap:13px}
   .badge{flex:none;min-width:62px;font-size:13px;font-weight:600;color:oklch(0.45 0.11 248)}
   .foot{margin-top:34px;font-size:13.5px;color:oklch(0.55 0.012 260);text-align:center;line-height:1.7}
+  /* home page: one image tile per project — the picture, the number, the name, nothing else */
+  .pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  @media (max-width:640px){.pgrid{grid-template-columns:1fr}}
+  a.ptile{display:flex;flex-direction:column;background:#fff;border:1px solid oklch(0.92 0.006 85);
+          border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;
+          box-shadow:0 1px 2px rgba(40,35,20,0.04);transition:border-color .15s,box-shadow .15s,transform .15s}
+  a.ptile:hover{border-color:oklch(0.45 0.11 248);box-shadow:0 12px 30px -16px rgba(40,35,20,0.38);transform:translateY(-2px)}
+  a.ptile:focus-visible{outline:3px solid oklch(0.45 0.11 248);outline-offset:3px}
+  .pimg{aspect-ratio:16/9;background:oklch(0.93 0.02 248);overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .pimg img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+  a.ptile:hover .pimg img{transform:scale(1.03)}
+  .pimg .pnone{font-size:64px;font-weight:700;color:oklch(0.45 0.11 248)}
+  .pbody{display:flex;align-items:center;padding:14px 16px 15px}
+  @media (prefers-reduced-motion:reduce){a.ptile,.pimg img{transition:none}
+    a.ptile:hover,a.ptile:hover .pimg img{transform:none}}
 </style>
 </head>
 <body><div class="wrap">${body}</div></body>
 </html>
 `;
 
+// The tile picture is the same "final product" hero that opens the project's first card
+// (Arduino_Projects/_posters/build_card_heroes.py), so the student meets one image twice.
+// A project without one gets its number on a plain panel instead of a broken image.
 function indexPage(projects) {
-  const tiles = projects.map((p) => `
-    <a class="tile" href="p${p.n}/index.html">
-      <div class="row">
+  const tiles = projects.map((p) => {
+    const thumb = 'p' + p.n + '/assets/hero_final_product_thumb.jpg';
+    const img = fs.existsSync(path.join(OUT, thumb))
+      ? `<img src="${thumb}" alt="" loading="lazy">`
+      : `<span class="pnone">${p.n}</span>`;
+    return `
+    <a class="ptile" href="p${p.n}/index.html">
+      <div class="pimg">${img}</div>
+      <div class="pbody">
         <span class="num">${p.n}</span>
         <div>
           <div class="name">${esc(p.name || ('פרויקט ' + p.n))}</div>
           <div class="meta">${p.count} כרטיסיות</div>
         </div>
       </div>
-    </a>`).join('');
+    </a>`;
+  }).join('');
   return SHELL('הפרויקטים שלנו', `
     <div class="top">
       <h1>הפרויקטים שלנו</h1>
       <div class="sub">בוחרים פרויקט, ואז עוברים על הכרטיסיות לפי הסדר. אפשר לסמן ✓ בכל שלב שמסיימים.</div>
     </div>
-    <div class="grid">${tiles}</div>
+    <div class="pgrid">${tiles}</div>
     <div class="foot">סדנת רובוטיקה</div>`);
 }
 

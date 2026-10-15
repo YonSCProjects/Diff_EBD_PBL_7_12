@@ -4,6 +4,8 @@
 
 ---
 
+[איור: הפרויקט המוגמר: ארדואינו מחובר בחוטים צבעוניים למטריצה, ועליה נוריות צבעוניות דולקות.]
+🏁 כך ייראה הפרויקט שלכם בסוף
 פרויקט 1 · אותות אור
 כרטיסייה V1
 מחברים את הארדואינו ומכינים את עמדת העבודה
@@ -38,17 +40,17 @@ Alt
 📂 File Explorer
 ✕
 ⭐ Quick
-☁ ️ Drive
+☁️ Drive
 💻 PC
 החלון נפתח ✨
 4. בסרגל הצד לוחצים על Google Drive ואז נכנסים אל My Drive\Arduino_Projects
 📂 File Explorer
 ✕
-☁ ️ Google Drive (G:)›
+☁️ Google Drive (G:)›
 My Drive›
 Arduino_Projects
 ⭐ Quick access
-☁ ️ Google Drive (G:) 👆
+☁️ Google Drive (G:) 👆
 💻 This PC
 📁 Noa
 📁 Adam
@@ -56,7 +58,7 @@ Arduino_Projects
 5. מוצאים את התיקייה האישית שלכם. אם אין — יוצרים אותה.
 📂 File Explorer
 ✕
-☁ ️ Google Drive (G:)›
+☁️ Google Drive (G:)›
 My Drive›
 Arduino_Projects
 📁
@@ -67,7 +69,7 @@ Adam
 השם שלכם 👆
 📁
 Maya
-🖱 ️
+🖱️
 Paste
 New ▸
 📁 Folder
@@ -76,7 +78,7 @@ New ▸
 6. בתוך התיקייה האישית יוצרים תיקייה חדשה בשם Project_1_Light_Signals
 📂 File Explorer
 ✕
-🖱 ️
+🖱️
 View ▸
 Sort by ▸
 Refresh
@@ -88,12 +90,12 @@ Properties
 📄 Text Document
 קליק ימני בתוך התיקייה ובוחרים New ▸ Folder
 7. קוראים למורה. יחד פותחים את Claude Code ומגדירים אותו לעבוד בתיקייה Project_1_Light_Signals
-⚙ ️
+⚙️
 חלק ג׳ · מגדירים את Arduino IDE (התוכנה שאיתה מתכנתים את הארדואינו)
 8. פותחים את Arduino IDE דרך הקיצור שעל שולחן העבודה.
 [איור: סמל Arduino IDE]
 Arduino IDE
-🖱 ️
+🖱️
 לחיצה כפולה על הסמל כדי לפתוח
 9. בתפריט Tools בוחרים Board → Arduino Uno
 ToolsHelp

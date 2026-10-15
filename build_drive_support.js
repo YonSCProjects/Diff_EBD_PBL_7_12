@@ -69,7 +69,7 @@ function cardText(html) {
     .replace(/<[^>]+>/g, '');
   t = ent(t);
   const lines = t.split('\n').map((l) => l.replace(/\s+/g, ' ').trim()).filter(Boolean)
-    .map((l) => l.replace(/^(\p{Extended_Pictographic}️?)(?=[^\s\p{Extended_Pictographic}])/u, '$1 '));
+    .map((l) => l.replace(/^(\p{Extended_Pictographic}️?)(?=[^\s\p{Extended_Pictographic}️])/u, '$1 '));
   // a numbered-step circle is its own line in the HTML — fold it into the step text
   const out = [];
   for (let i = 0; i < lines.length; i++) {

@@ -260,9 +260,29 @@ const SETTINGS = {
     deny: ['Bash(rm *)', 'Bash(del *)', 'Bash(git *)', 'WebFetch', 'WebSearch'],
   },
 };
-function writeSettings(dir) {
+// In a student folder a SessionStart hook prints progress.md, so the student's place is already
+// in Claude's context before the first message. Left to the model, a bare "hi" got a generic
+// reply instead of "last time we stopped at...". (Claude Code on Windows runs hooks in Git Bash.)
+const PROGRESS_HOOK = {
+  SessionStart: [{ hooks: [{ type: 'command',
+    command: "[ -f progress.md ] && { echo '=== progress.md (this student) ==='; cat progress.md; } || true" }] }],
+};
+
+function writeSettings(dir, extra) {
   fs.mkdirSync(path.join(dir, '.claude'), { recursive: true });
-  fs.writeFileSync(path.join(dir, '.claude', 'settings.json'), JSON.stringify(SETTINGS, null, 2) + '\n', 'utf8');
+  const s = extra ? { permissions: { ...SETTINGS.permissions, ...extra }, hooks: PROGRESS_HOOK } : SETTINGS;
+  fs.writeFileSync(path.join(dir, '.claude', 'settings.json'), JSON.stringify(s, null, 2) + '\n', 'utf8');
+}
+
+// Claude Code reads settings from the folder it is opened in, not from its parents. A student
+// folder (Project_N_.../<nickname>/) therefore needs its own copy, which also opens the project
+// folder above it — that is where claude_support/ lives. Only this one file is ever written
+// into a student folder; their sketches and progress.md are never touched.
+const PROJECT_OWN = new Set(['ino_files', 'claude_support', '.claude']);
+function studentFolders(projectDir) {
+  return fs.readdirSync(projectDir, { withFileTypes: true })
+    .filter((e) => e.isDirectory() && !PROJECT_OWN.has(e.name) && !e.name.startsWith('_') && !e.name.startsWith('.'))
+    .map((e) => e.name);
 }
 
 function install(projects) {
@@ -275,6 +295,8 @@ function install(projects) {
     if (!fs.existsSync(dst)) { console.log('  ! ' + dir + ' not on the Drive — skipped'); continue; }
     fs.copyFileSync(path.join(OUT, dir, 'CLAUDE.md'), path.join(dst, 'CLAUDE.md'));
     writeSettings(dst);
+    const students = studentFolders(dst);
+    for (const s of students) writeSettings(path.join(dst, s), { additionalDirectories: ['..'] });
     fs.rmSync(path.join(dst, 'claude_support'), { recursive: true, force: true });
     copyDir(path.join(OUT, dir, 'claude_support'), path.join(dst, 'claude_support'));
 
@@ -304,7 +326,8 @@ function install(projects) {
       if (dup) { fs.rmSync(path.join(ino, d.name), { recursive: true, force: true }); notes.push('-' + d.name + ' (belonged to another project)'); }
       else notes.push('?' + d.name + ' (unknown sketch — left alone)');
     }
-    console.log('  Drive/' + dir + (notes.length ? '   ino_files: ' + notes.join(', ') : ''));
+    console.log('  Drive/' + dir + (students.length ? '   students: ' + students.join(', ') : '') +
+      (notes.length ? '   ino_files: ' + notes.join(', ') : ''));
   }
 }
 
